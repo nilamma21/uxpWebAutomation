@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="36559" started-at="2021-08-25T05:49:47Z" finished-at="2021-08-25T05:50:23Z">
+  <suite name="Suite" duration-ms="52295" started-at="2021-08-25T12:39:54Z" finished-at="2021-08-25T12:40:46Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="36559" started-at="2021-08-25T05:49:47Z" finished-at="2021-08-25T05:50:23Z">
-      <class name="uxpframework.uxpWebAutomation.LoginPageTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:uxpframework.uxpWebAutomation.LoginPageTest@6f7fd0e6]" name="initialize" is-config="true" duration-ms="36548" started-at="2021-08-25T11:19:47Z" finished-at="2021-08-25T11:20:23Z">
+    <test name="Test" duration-ms="52295" started-at="2021-08-25T12:39:54Z" finished-at="2021-08-25T12:40:46Z">
+      <class name="lasvegasmarket.MPLoginPageTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.MPLoginPageTest@59fa1d9b]" name="initialize" is-config="true" duration-ms="8611" started-at="2021-08-25T18:09:54Z" finished-at="2021-08-25T18:10:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-      </class> <!-- uxpframework.uxpWebAutomation.LoginPageTest -->
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerPageTest()[pri:0, instance:lasvegasmarket.MPLoginPageTest@59fa1d9b]" name="TS001_VerifyMarketPlannerPageTest" duration-ms="43651" started-at="2021-08-25T18:10:02Z" finished-at="2021-08-25T18:10:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyMarketPlannerPageTest -->
+      </class> <!-- lasvegasmarket.MPLoginPageTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

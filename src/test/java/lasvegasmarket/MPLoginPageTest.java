@@ -1,7 +1,9 @@
-package uxpframework.uxpWebAutomation;
+package lasvegasmarket;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -9,6 +11,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -21,7 +24,7 @@ import resources.GenerateData;
 import resources.Utility;
 import resources.base;
 
-public class LoginPageTest extends base {
+public class MPLoginPageTest extends base {
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;
@@ -33,7 +36,24 @@ public class LoginPageTest extends base {
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
-		utl.verifyLoginFunctionality(); //requires for Parallel text execution
 	}
 
+	@Test(priority=01)
+	public void TS001_VerifyMarketPlannerPageTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-001: To verify the Market Planner overview and it's functionality
+		
+		lap = new UXPLandingPage(driver);
+		lp = new UXPLoginPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		//Login to Market Planner
+		utl.verifyMPLoginFunctionality();
+		
+		//Verify that Market Planner Home page should be displayed
+		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
+	}
+	
 }

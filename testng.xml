@@ -2,12 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
     <listners>
-		<listner class-name="uxpframework.uxpWebAutomation.TestListeners" />
+		<listner class-name="lasvegasmarket.TestListeners" />
 	</listners>
 	
   <test thread-count="5" name="Test">
    <classes>
-      <class name="uxpframework.uxpWebAutomation.LoginPageTest"/>
+      <class name="lasvegasmarket.MPLoginPageTest"/>
     </classes>
   </test> 
 </suite> 

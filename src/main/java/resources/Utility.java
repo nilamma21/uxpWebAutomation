@@ -30,10 +30,10 @@ public class Utility extends base {
 	}
 
 	
-	public void verifyLoginFunctionality() throws IOException, InterruptedException {
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
 		// The purpose of this test case to verify:-
-		// TS1- Login to UXP Application
+		// TS1- Login to Market Planner
 
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
@@ -44,8 +44,10 @@ public class Utility extends base {
 		lap.getLogin().click();
 
 		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-		lp.getPassword().sendKeys((prop.getProperty("password")));
+		//lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+		lp.getEmailAddress().sendKeys((System.getenv("username")));
+		//lp.getPassword().sendKeys((prop.getProperty("password")));
+		lp.getPassword().sendKeys((System.getenv("password")));
 		lp.getSignInBtn().click();
 
 	}
