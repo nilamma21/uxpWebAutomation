@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="41031" started-at="2021-08-23T12:00:10Z" finished-at="2021-08-23T12:00:51Z">
+  <suite name="Suite" duration-ms="36559" started-at="2021-08-25T05:49:47Z" finished-at="2021-08-25T05:50:23Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="41031" started-at="2021-08-23T12:00:10Z" finished-at="2021-08-23T12:00:51Z">
+    <test name="Test" duration-ms="36559" started-at="2021-08-25T05:49:47Z" finished-at="2021-08-25T05:50:23Z">
       <class name="uxpframework.uxpWebAutomation.LoginPageTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:uxpframework.uxpWebAutomation.LoginPageTest@ae45eb6]" name="initialize" is-config="true" duration-ms="41004" started-at="2021-08-23T17:30:10Z" finished-at="2021-08-23T17:30:51Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:uxpframework.uxpWebAutomation.LoginPageTest@6f7fd0e6]" name="initialize" is-config="true" duration-ms="36548" started-at="2021-08-25T11:19:47Z" finished-at="2021-08-25T11:20:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
