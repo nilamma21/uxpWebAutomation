@@ -44,10 +44,9 @@ public class Utility extends base {
 		lap.getLogin().click();
 
 		// Enter the credentials on Login Page and click
-		//lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-		lp.getEmailAddress().sendKeys((System.getenv("username")));
-		//lp.getPassword().sendKeys((prop.getProperty("password")));
-		lp.getPassword().sendKeys((System.getenv("password")));
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+		lp.getPassword().sendKeys((prop.getProperty("password")));
+		
 		lp.getSignInBtn().click();
 
 	}

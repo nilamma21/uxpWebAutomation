@@ -24,7 +24,7 @@ import resources.GenerateData;
 import resources.Utility;
 import resources.base;
 
-public class MPLoginPageTest extends base {
+public class MarketPlannerPageTest extends base {
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;
@@ -39,7 +39,7 @@ public class MPLoginPageTest extends base {
 	}
 
 	@Test(priority=01)
-	public void TS001_VerifyMarketPlannerPageTest() throws InterruptedException, IOException
+	public void TS001_VerifyMarketPlannerTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-001: To verify the Market Planner overview and it's functionality
