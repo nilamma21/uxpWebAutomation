@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="52295" started-at="2021-08-25T12:39:54Z" finished-at="2021-08-25T12:40:46Z">
+  <suite name="SmokeTestSuite" duration-ms="81311" started-at="2021-08-27T11:31:14Z" finished-at="2021-08-27T11:32:35Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="52295" started-at="2021-08-25T12:39:54Z" finished-at="2021-08-25T12:40:46Z">
-      <class name="lasvegasmarket.MPLoginPageTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.MPLoginPageTest@59fa1d9b]" name="initialize" is-config="true" duration-ms="8611" started-at="2021-08-25T18:09:54Z" finished-at="2021-08-25T18:10:02Z">
+    <test name="Test" duration-ms="81311" started-at="2021-08-27T11:31:14Z" finished-at="2021-08-27T11:32:35Z">
+      <class name="lasvegasmarket.MarketPlannerPageTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@3ffc5af1]" name="initialize" is-config="true" duration-ms="28557" started-at="2021-08-27T17:01:14Z" finished-at="2021-08-27T17:01:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerPageTest()[pri:0, instance:lasvegasmarket.MPLoginPageTest@59fa1d9b]" name="TS001_VerifyMarketPlannerPageTest" duration-ms="43651" started-at="2021-08-25T18:10:02Z" finished-at="2021-08-25T18:10:46Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerTest()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@3ffc5af1]" name="TS001_VerifyMarketPlannerTest" duration-ms="52704" started-at="2021-08-27T17:01:42Z" finished-at="2021-08-27T17:02:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyMarketPlannerPageTest -->
-      </class> <!-- lasvegasmarket.MPLoginPageTest -->
+        </test-method> <!-- TS001_VerifyMarketPlannerTest -->
+      </class> <!-- lasvegasmarket.MarketPlannerPageTest -->
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- SmokeTestSuite -->
 </testng-results>

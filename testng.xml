@@ -7,7 +7,7 @@
 
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="lasvegasmarket.MPLoginPageTest" />
+			<class name="lasvegasmarket.MarketPlannerPageTest" />
 			<methods>
 				<include name="TS001_VerifyMarketPlannerTest" />
 			</methods>

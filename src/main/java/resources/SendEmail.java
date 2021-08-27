@@ -57,19 +57,19 @@ public class SendEmail extends base{
 			// Set To: header field of the header.
 			message.setRecipients(Message.RecipientType.TO,
 					InternetAddress.parse(to2));
-			message.setRecipients(Message.RecipientType.TO,
+			/*message.setRecipients(Message.RecipientType.TO,
 					InternetAddress.parse(to3));
 			message.setRecipients(Message.RecipientType.CC,
-					InternetAddress.parse(cc));
+					InternetAddress.parse(cc));*/
 			
 			// Set Subject: header field
-			message.setSubject("CRM Automation Test Results");
+			message.setSubject("UXP Automation Test Results");
 
 			// Create the message part
 			BodyPart messageBodyPart = new MimeBodyPart();
 
 			// Now set the actual message
-			messageBodyPart.setText("CRM App- UAT Test execution");
+			messageBodyPart.setText("UXP App- Smoke Test execution");
 
 			// Create a multi-part message
 			Multipart multipart = new MimeMultipart();
@@ -79,8 +79,8 @@ public class SendEmail extends base{
 
 			// Part two is attachment
 			messageBodyPart = new MimeBodyPart();
-			String filename = "IMCTestResults.html";
-			String filepath = System.getProperty("user.dir")+"/crmAutomation/reports/";
+			String filename = "UXPTestResults.html";
+			String filepath = System.getProperty("user.dir")+"/reports/";
 			DataSource source = new FileDataSource(filepath+filename);
 			messageBodyPart.setDataHandler(new DataHandler(source));
 			messageBodyPart.setFileName(filename);

@@ -4,32 +4,27 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.ITestContext;
-import org.testng.ITestListener;
-import org.testng.ITestResult;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 
 import pgeObjects.UXPLandingPage;
 import pgeObjects.UXPLoginPage;
-import resources.ExtendReporterNG;
 import resources.GenerateData;
+import resources.SendEmail;
 import resources.Utility;
 import resources.base;
 
+@Listeners({TestListeners.class})
 public class MarketPlannerPageTest extends base {
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;
 	UXPLandingPage lap;
 	UXPLoginPage lp;
+	SendEmail se;
 	
 	@BeforeTest
 	public void initialize() throws IOException, InterruptedException
@@ -54,6 +49,13 @@ public class MarketPlannerPageTest extends base {
 		
 		//Verify that Market Planner Home page should be displayed
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
+	}
+	
+	@AfterSuite
+	public void sendEmail()
+	{
+		se = new SendEmail();
+		se.sendEmailWithAttachment();
 	}
 	
 }
