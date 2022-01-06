@@ -51,11 +51,11 @@ public class MarketPlannerPageTest extends base {
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
 	
-	@AfterSuite
+/*	@AfterSuite
 	public void sendEmail()
 	{
 		se = new SendEmail();
 		se.sendEmailWithAttachment();
-	}
+	}*/
 	
 }

@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="81311" started-at="2021-08-27T11:31:14Z" finished-at="2021-08-27T11:32:35Z">
+  <suite name="SmokeTestSuite" duration-ms="58431" started-at="2022-01-06T05:47:04Z" finished-at="2022-01-06T05:48:03Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="81311" started-at="2021-08-27T11:31:14Z" finished-at="2021-08-27T11:32:35Z">
+    <test name="Test" duration-ms="58431" started-at="2022-01-06T05:47:04Z" finished-at="2022-01-06T05:48:03Z">
       <class name="lasvegasmarket.MarketPlannerPageTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@3ffc5af1]" name="initialize" is-config="true" duration-ms="28557" started-at="2021-08-27T17:01:14Z" finished-at="2021-08-27T17:01:42Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@3ffc5af1]" name="initialize" is-config="true" duration-ms="8414" started-at="2022-01-06T11:17:04Z" finished-at="2022-01-06T11:17:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerTest()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@3ffc5af1]" name="TS001_VerifyMarketPlannerTest" duration-ms="52704" started-at="2021-08-27T17:01:42Z" finished-at="2021-08-27T17:02:35Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerTest()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@3ffc5af1]" name="TS001_VerifyMarketPlannerTest" duration-ms="49954" started-at="2022-01-06T11:17:13Z" finished-at="2022-01-06T11:18:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_VerifyMarketPlannerTest -->

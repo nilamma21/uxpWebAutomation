@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
+<suite name="Failed suite [SmokeTestSuite]">
   <test name="Test(failed)">
     <classes>
-      <class name="lasvegasmarket.MPLoginPageTest">
+      <class name="lasvegasmarket.MarketPlannerPageTest">
         <methods>
-          <include name="TS001_VerifyMarketPlannerPageTest"/>
+          <include name="TS001_VerifyMarketPlannerTest"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- lasvegasmarket.MPLoginPageTest -->
+      </class> <!-- lasvegasmarket.MarketPlannerPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+</suite> <!-- Failed suite [SmokeTestSuite] -->

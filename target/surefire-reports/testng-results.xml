@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="54401" started-at="2021-08-27T12:16:45Z" finished-at="2021-08-27T12:17:40Z">
+  <suite name="SmokeTestSuite" duration-ms="64279" started-at="2021-08-27T14:29:37Z" finished-at="2021-08-27T14:30:42Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="54401" started-at="2021-08-27T12:16:45Z" finished-at="2021-08-27T12:17:40Z">
+    <test name="Test" duration-ms="64279" started-at="2021-08-27T14:29:37Z" finished-at="2021-08-27T14:30:42Z">
       <class name="lasvegasmarket.MarketPlannerPageTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@4439f31e]" name="initialize" is-config="true" duration-ms="9625" started-at="2021-08-27T17:46:45Z" finished-at="2021-08-27T17:46:55Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@4439f31e]" name="initialize" is-config="true" duration-ms="10833" started-at="2021-08-27T19:59:37Z" finished-at="2021-08-27T19:59:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerTest()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@4439f31e]" name="TS001_VerifyMarketPlannerTest" duration-ms="44703" started-at="2021-08-27T17:46:55Z" finished-at="2021-08-27T17:47:40Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerTest()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@4439f31e]" name="TS001_VerifyMarketPlannerTest" duration-ms="53297" started-at="2021-08-27T19:59:48Z" finished-at="2021-08-27T20:00:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_VerifyMarketPlannerTest -->
-        <test-method status="PASS" signature="sendEmail()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@4439f31e]" name="sendEmail" is-config="true" duration-ms="13057" started-at="2021-08-27T17:47:42Z" finished-at="2021-08-27T17:47:55Z">
+        <test-method status="PASS" signature="sendEmail()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@4439f31e]" name="sendEmail" is-config="true" duration-ms="13042" started-at="2021-08-27T20:00:45Z" finished-at="2021-08-27T20:00:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendEmail -->
