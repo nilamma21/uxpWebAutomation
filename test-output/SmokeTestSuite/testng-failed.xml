@@ -3,12 +3,12 @@
 <suite name="Failed suite [SmokeTestSuite]">
   <test name="Test(failed)">
     <classes>
-      <class name="lasvegasmarket.MarketPlannerPageTest">
+      <class name="lasvegasmarket.LagVegasMarketSmokeTest">
         <methods>
-          <include name="TS001_VerifyMarketPlannerTest"/>
+          <include name="TS002_VerifExhibitTest"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- lasvegasmarket.MarketPlannerPageTest -->
+      </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [SmokeTestSuite] -->

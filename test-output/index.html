@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +101,12 @@
                     <div class="method-list-content passed suite-SmokeTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="lasvegasmarket.MarketPlannerPageTest" hash-for-method="TS001_VerifyMarketPlannerTest">TS001_VerifyMarketPlannerTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="lasvegasmarket.LagVegasMarketSmokeTest" hash-for-method="TS001_VerifyMarketPlannerTest">TS001_VerifyMarketPlannerTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="lasvegasmarket.LagVegasMarketSmokeTest" hash-for-method="TS002_VerifExhibitTest">TS002_VerifExhibitTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-SmokeTestSuite -->
@@ -119,7 +124,7 @@
           <div class="suite-SmokeTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">lasvegasmarket.MarketPlannerPageTest</span>
+              <span class="class-name">lasvegasmarket.LagVegasMarketSmokeTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -127,6 +132,13 @@
                   <a name="TS001_VerifyMarketPlannerTest">
                   </a> <!-- TS001_VerifyMarketPlannerTest -->
                   <span class="method-name">TS001_VerifyMarketPlannerTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS002_VerifExhibitTest">
+                  </a> <!-- TS002_VerifExhibitTest -->
+                  <span class="method-name">TS002_VerifExhibitTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -143,11 +155,7 @@
 &lt;suite name=&quot;SmokeTestSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;lasvegasmarket.MarketPlannerPageTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;TS001_VerifyMarketPlannerTest&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- lasvegasmarket.MarketPlannerPageTest --&gt;
+      &lt;class name=&quot;lasvegasmarket.LagVegasMarketSmokeTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- SmokeTestSuite --&gt;
@@ -187,16 +195,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS001_VerifyMarketPlannerTest')
-data.setCell(0, 2, 'lasvegasmarket.MarketPlannerPageTest')
-data.setCell(0, 3, 49954);
+data.setCell(0, 1, 'TS002_VerifExhibitTest')
+data.setCell(0, 2, 'lasvegasmarket.LagVegasMarketSmokeTest')
+data.setCell(0, 3, 67965);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TS001_VerifyMarketPlannerTest')
+data.setCell(1, 2, 'lasvegasmarket.LagVegasMarketSmokeTest')
+data.setCell(1, 3, 54829);
 window.suiteTableData['SmokeTestSuite']= { tableData: data, tableDiv: 'times-div-SmokeTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 49 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-SmokeTestSuite">
               </div> <!-- times-div-SmokeTestSuite -->
             </div> <!-- times-div -->
@@ -222,14 +234,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">lasvegasmarket.MarketPlannerPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">lasvegasmarket.LagVegasMarketSmokeTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">TS001_VerifyMarketPlannerTest</span>
-                <span class="method-start">8433 ms</span>
+                <span class="method-start">10922 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS002_VerifExhibitTest</span>
+                <span class="method-start">65766 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
