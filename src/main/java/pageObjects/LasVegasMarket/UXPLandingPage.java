@@ -21,7 +21,7 @@ public class UXPLandingPage {
 	
 	public WebElement getLogin() {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(loginbtn));
+		wait.until(ExpectedConditions.elementToBeClickable(loginbtn));
 		return driver.findElement(loginbtn);		
 	}
 	
