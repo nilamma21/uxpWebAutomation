@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="133745" started-at="2022-01-07T10:23:51Z" finished-at="2022-01-07T10:26:05Z">
+  <suite name="SmokeTestSuite" duration-ms="207791" started-at="2022-01-07T12:59:58Z" finished-at="2022-01-07T13:03:26Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="133745" started-at="2022-01-07T10:23:51Z" finished-at="2022-01-07T10:26:05Z">
+    <test name="Test" duration-ms="207791" started-at="2022-01-07T12:59:58Z" finished-at="2022-01-07T13:03:26Z">
       <class name="lasvegasmarket.LagVegasMarketSmokeTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest@523884b2]" name="initialize" is-config="true" duration-ms="10904" started-at="2022-01-07T15:53:51Z" finished-at="2022-01-07T15:54:02Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest@523884b2]" name="initialize" is-config="true" duration-ms="7005" started-at="2022-01-07T18:29:58Z" finished-at="2022-01-07T18:30:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest@523884b2]" name="TS001_VerifyMarketPlannerTest" duration-ms="54829" started-at="2022-01-07T15:54:02Z" finished-at="2022-01-07T15:54:57Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest@523884b2]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="57217" started-at="2022-01-07T18:30:05Z" finished-at="2022-01-07T18:31:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyMarketPlannerTest -->
-        <test-method status="PASS" signature="TS002_VerifExhibitTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest@523884b2]" name="TS002_VerifExhibitTest" duration-ms="67965" started-at="2022-01-07T15:54:57Z" finished-at="2022-01-07T15:56:05Z">
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifAllLinksUnderExhibitTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest@523884b2]" name="TS002_VerifAllLinksUnderExhibitTabTest" duration-ms="70650" started-at="2022-01-07T18:31:02Z" finished-at="2022-01-07T18:32:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifExhibitTest -->
+        </test-method> <!-- TS002_VerifAllLinksUnderExhibitTabTest -->
+        <test-method status="PASS" signature="TS001_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest@523884b2]" name="TS001_VerifyAllLinksUnderExhibitorsAndProductsTabTest" duration-ms="72830" started-at="2022-01-07T18:32:13Z" finished-at="2022-01-07T18:33:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
       </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest -->
     </test> <!-- Test -->
   </suite> <!-- SmokeTestSuite -->
