@@ -7,8 +7,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import pgeObjects.UXPLandingPage;
-import pgeObjects.UXPLoginPage;
+import pageObjects.LasVegasMarket.UXPLandingPage;
+import pageObjects.LasVegasMarket.UXPLoginPage;
 
 public class Utility extends base {
 
@@ -34,12 +34,16 @@ public class Utility extends base {
 
 		// The purpose of this test case to verify:-
 		// TS1- Login to Market Planner
-
-		driver.get(prop.getProperty("url"));
-		driver.manage().window().maximize();
+		
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
 
+		//Navigate to LVM Site
+		driver.get(prop.getProperty("url"));	
+		driver.manage().window().maximize();
+
+		lap.getIUnderstandBtn().click();
+		
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
 

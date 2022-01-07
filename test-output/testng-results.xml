@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="58431" started-at="2022-01-06T05:47:04Z" finished-at="2022-01-06T05:48:03Z">
+  <suite name="SmokeTestSuite" duration-ms="133745" started-at="2022-01-07T10:23:51Z" finished-at="2022-01-07T10:26:05Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="58431" started-at="2022-01-06T05:47:04Z" finished-at="2022-01-06T05:48:03Z">
-      <class name="lasvegasmarket.MarketPlannerPageTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@3ffc5af1]" name="initialize" is-config="true" duration-ms="8414" started-at="2022-01-06T11:17:04Z" finished-at="2022-01-06T11:17:13Z">
+    <test name="Test" duration-ms="133745" started-at="2022-01-07T10:23:51Z" finished-at="2022-01-07T10:26:05Z">
+      <class name="lasvegasmarket.LagVegasMarketSmokeTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest@523884b2]" name="initialize" is-config="true" duration-ms="10904" started-at="2022-01-07T15:53:51Z" finished-at="2022-01-07T15:54:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerTest()[pri:0, instance:lasvegasmarket.MarketPlannerPageTest@3ffc5af1]" name="TS001_VerifyMarketPlannerTest" duration-ms="49954" started-at="2022-01-06T11:17:13Z" finished-at="2022-01-06T11:18:03Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest@523884b2]" name="TS001_VerifyMarketPlannerTest" duration-ms="54829" started-at="2022-01-07T15:54:02Z" finished-at="2022-01-07T15:54:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_VerifyMarketPlannerTest -->
-      </class> <!-- lasvegasmarket.MarketPlannerPageTest -->
+        <test-method status="PASS" signature="TS002_VerifExhibitTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest@523884b2]" name="TS002_VerifExhibitTest" duration-ms="67965" started-at="2022-01-07T15:54:57Z" finished-at="2022-01-07T15:56:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifExhibitTest -->
+      </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest -->
     </test> <!-- Test -->
   </suite> <!-- SmokeTestSuite -->
 </testng-results>

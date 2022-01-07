@@ -1,4 +1,4 @@
-package pgeObjects;
+package pageObjects.LasVegasMarket;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

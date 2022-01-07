@@ -7,10 +7,10 @@
 
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="lasvegasmarket.MarketPlannerPageTest" />
-			<methods>
-				<include name="TS001_VerifyMarketPlannerTest" />
-			</methods>
+			<class name="lasvegasmarket.LagVegasMarketSmokeTest" />
+			<!-- <methods>
+				<exclude name="TS001_VerifyMarketPlannerTest" />
+			</methods> -->
 		</classes>
 	</test>
 </suite> 

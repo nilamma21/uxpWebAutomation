@@ -1,4 +1,4 @@
-package pgeObjects;
+package pageObjects.LasVegasMarket;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,8 @@ public class UXPLandingPage {
 	
 	By loginbtn= By.xpath("//a[contains(text(),'Login')]"); //Locator for Login button on app landing Page
 	By marketplannerlinktext = By.xpath("//span[contains(text(),'s Market Planner')]"); //Locator for Market Planner link text
-	
+	By iunderstandbtn = By.xpath("//button[@id='gdpr-btn']"); //Locator for I Understand button
+			
 	public UXPLandingPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -29,5 +30,11 @@ public class UXPLandingPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(marketplannerlinktext));
 		return driver.findElement(marketplannerlinktext);		
 	}	
+	
+	public WebElement getIUnderstandBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(iunderstandbtn));
+		return driver.findElement(iunderstandbtn);		
+	}
 	
 }
