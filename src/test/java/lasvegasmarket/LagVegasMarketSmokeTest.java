@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPExploreMarketPage;
+import pageObjects.LasVegasMarket.UXPGlobalSearchPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import pageObjects.LasVegasMarket.UXPMarketInfoPage;
@@ -34,6 +35,7 @@ public class LagVegasMarketSmokeTest extends base {
 	UXPProfileAndSettingsPage ps;
 	UXPMarketInfoPage mi;
 	UXPExploreMarketPage expmrkt;
+	UXPGlobalSearchPage gs;
 	SendEmail se;
 
 	@BeforeTest
@@ -437,6 +439,28 @@ public class LagVegasMarketSmokeTest extends base {
 		Assert.assertTrue(driver.getTitle().contains("Social Media | Las Vegas Market"));
 	}
 
+	@Test(priority=07)
+	public void TS007_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T63: To verify global search functionality
+
+		lap = new UXPLandingPage(driver);
+		lp = new UXPLoginPage(driver);
+		ps = new UXPProfileAndSettingsPage(driver);
+		gs = new UXPGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click Profile and Settings tab under Market Planner and verify result
+		
+		
+		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		gs.getSearchButton().click();
+		Assert.assertTrue(gs.getVerifyGlobalSeacrh().getText().contains(prop.getProperty("globalsearchinput")));
+		System.out.println("Global Search functionality is working properly.");
+
+	}
 	/*@AfterSuite
 	public void sendEmail()
 	{
