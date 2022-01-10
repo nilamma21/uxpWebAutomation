@@ -39,10 +39,12 @@ public class Utility extends base {
 		lp = new UXPLoginPage(driver);
 
 		//Navigate to LVM Site
-		driver.get(prop.getProperty("url"));	
 		driver.manage().window().maximize();
+		driver.get(prop.getProperty("url"));
+		Thread.sleep(15000);
 
 		lap.getIUnderstandBtn().click();
+		Thread.sleep(15000);
 		
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
