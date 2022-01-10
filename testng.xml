@@ -10,7 +10,7 @@
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest" />
 			<methods>
 				<include name="TS001_VerifyMarketPlannerLoginTest" />
-				<include name="TS003_VerifyMarketPlannerProfileAndSettingsOptionTest" />
+				<include name="TS006_VerifyAllLinksUnderExploreMarketTabTest" />
 			</methods> 
 		</classes>
 	</test>
