@@ -31,18 +31,27 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi">0</td><td class="numi">207.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">134.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">lasvegasmarket.LagVegasMarketSmokeTest</td><td><a href="#m1"><b>TS003_VerifyMarketPlannerProfileAndSettingsOptionTest</b>  </a></td><td class="numi">1</td><td>1641787418074</td><td class="numi">24731</td></tr>
 <tr><th colspan="4">Test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="3">lasvegasmarket.LagVegasMarketSmokeTest</td><td><a href="#m1"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1641560405483</td><td class="numi">57217</td></tr><tr class="passedodd"><td><a href="#m2"><b>TS002_VerifAllLinksUnderExhibitTabTest</b>  </a></td><td class="numi">1</td><td>1641560462733</td><td class="numi">70650</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS001_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b>  </a></td><td class="numi">1</td><td>1641560533396</td><td class="numi">72830</td></tr>
+<tr class="passedodd"><td rowspan="1">lasvegasmarket.LagVegasMarketSmokeTest</td><td><a href="#m2"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1641787352650</td><td class="numi">65417</td></tr>
 </table>
 <h1>Test</h1>
-<h2 id="m1">lasvegasmarket.LagVegasMarketSmokeTest:TS002_VerifAllLinksUnderExhibitTabTest</h2>
+<h2 id="m1">lasvegasmarket.LagVegasMarketSmokeTest:TS003_VerifyMarketPlannerProfileAndSettingsOptionTest</h2>
+<div style="padding-left:3em">
+<p>expected:&lt;[[ChromeDriver: chrome on ANY (8ff0ea9e51f2cfb5db7b200c30d47015)] -&gt; xpath: //ul[@class = &apos;imc-breadcrumb&apos;]/li[2]/a[1]]&gt; but was:&lt;My profile&gt;</p>
+org.junit.Assert.fail(Assert.java:88)
+<br/>at org.junit.Assert.failNotEquals(Assert.java:834)
+<br/>at org.junit.Assert.assertEquals(Assert.java:118)
+<br/>at org.junit.Assert.assertEquals(Assert.java:144)
+<br/>at lasvegasmarket.LagVegasMarketSmokeTest.TS003_VerifyMarketPlannerProfileAndSettingsOptionTest(LagVegasMarketSmokeTest.java:195)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">lasvegasmarket.LagVegasMarketSmokeTest:TS001_VerifyAllLinksUnderExhibitorsAndProductsTabTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">lasvegasmarket.LagVegasMarketSmokeTest:TS001_VerifyMarketPlannerLoginTest</h2>
+<h2 id="m2">lasvegasmarket.LagVegasMarketSmokeTest:TS001_VerifyMarketPlannerLoginTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

@@ -14,6 +14,8 @@ import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
+import pageObjects.LasVegasMarket.UXPMarketInfoPage;
+import pageObjects.LasVegasMarket.UXPProfileAndSettingsPage;
 import resources.GenerateData;
 import resources.SendEmail;
 import resources.Utility;
@@ -28,6 +30,8 @@ public class LagVegasMarketSmokeTest extends base {
 	UXPLoginPage lp;
 	UXPExhibitPage exh;
 	UXPExhibitorsAndProductsTabPage exhp;
+	UXPProfileAndSettingsPage ps;
+	UXPMarketInfoPage mi;
 	SendEmail se;
 
 	@BeforeTest
@@ -35,6 +39,8 @@ public class LagVegasMarketSmokeTest extends base {
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
+		driver.get(prop.getProperty("url"));
+		Thread.sleep(15000);
 	}
 
 	@Test(priority=01)
@@ -171,10 +177,31 @@ public class LagVegasMarketSmokeTest extends base {
 	}
 
 	@Test(priority=03)
-	public void TS001_VerifyAllLinksUnderExhibitorsAndProductsTabTest() throws InterruptedException, IOException
+	public void TS003_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-003: To verify the Exhibitors & Products overview and it's functionality
+
+		lap = new UXPLandingPage(driver);
+		lp = new UXPLoginPage(driver);
+		ps = new UXPProfileAndSettingsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click Profile and Settings tab under Market Planner and verify result
+
+		ps.getWelcomeText().click();
+		ps.getProfileAndSettings().click();
+		Assert.assertEquals(ps.getVerifyProfile().getText(), "My profile");
+		System.out.println("Profile and Settings section options are displayed properly");
+
+	}
+	
+	@Test(priority=04)
+	public void TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-004: To verify Profile and Settings option in Market Planner
 
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
@@ -230,6 +257,91 @@ public class LagVegasMarketSmokeTest extends base {
 		System.out.println("Categories section is displayed properly");
 
 	}
+	
+	@Test(priority=05)
+	public void TS005_VerifyAllLinksUnderMarketInfoTabTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T60: To verify links for Market info tab at Header
+
+		lap = new UXPLandingPage(driver);
+		lp = new UXPLoginPage(driver);
+		mi = new UXPMarketInfoPage(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click Market Info tab at Header
+
+		mi.getMarketInfoHeader().click();
+		Assert.assertTrue(mi.getVerifyMarketInfoSection().isDisplayed());
+		System.out.println("Market Info section options are displayed properly");
+
+		//Click About Las Vegas Market option under Market Info
+
+		mi.getAboutLasVegasMarket().click();
+		Assert.assertTrue(mi.getVerifyAboutLasVegasMarket().isDisplayed());
+		System.out.println("About Las Vegas Market section is displayed properly");
+		mi.getMarketInfoHeader().click();
+
+		//Click Market Dates and Hours option under Market Info
+
+		mi.getMarketDatesAndHrs().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market Dates and Hours");
+		System.out.println("Market Dates and Hours section is displayed properly");
+		mi.getMarketInfoHeader().click();
+
+		//Click Registration Details option under Market Info
+
+		mi.getRegistrationDetails().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Registration Details");
+		System.out.println("Registration Details section is displayed properly");
+		mi.getMarketInfoHeader().click();
+
+		//Click Admission Policies option under Market Info
+
+		mi.getAdmissionPolicies().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Admission Policies");
+		System.out.println("Admission Policies section is displayed properly");
+		mi.getMarketInfoHeader().click();
+
+		//Click Industry Partners option under Market Info
+
+		mi.getIndustryPartners().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Industry Partners");
+		System.out.println("Industry Partners section is displayed properly");
+		mi.getMarketInfoHeader().click();
+
+		//Click FAQs option under Market Info
+
+		mi.getFAQs().click();
+		Assert.assertEquals(mi.getVerifyFAQs().getText(), "Frequently Asked Questions");
+		System.out.println("Frequently Asked Questions section is displayed properly");
+		driver.get(prop.getProperty("url"));
+		mi.getMarketInfoHeader().click();
+		
+		//Click Contact s option under Market Info
+
+		mi.getContactUs().click();
+		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Contact Us");
+		System.out.println("Contact Us section is displayed properly");
+		mi.getMarketInfoHeader().click();
+				
+		//Click Market Recap option under Market Info
+
+		mi.getMarketRecap().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market Recap");
+		System.out.println("Market Recap section is displayed properly");
+		mi.getMarketInfoHeader().click();
+				
+		//Click Press Center option under Market Info
+
+		mi.getMediaAndPress().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Press Center");
+		System.out.println("Press Center section is displayed properly");
+		
+	}
+
 
 	/*@AfterSuite
 	public void sendEmail()
