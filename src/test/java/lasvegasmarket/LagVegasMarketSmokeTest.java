@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
+import pageObjects.LasVegasMarket.UXPExploreMarketPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import pageObjects.LasVegasMarket.UXPMarketInfoPage;
@@ -32,6 +33,7 @@ public class LagVegasMarketSmokeTest extends base {
 	UXPExhibitorsAndProductsTabPage exhp;
 	UXPProfileAndSettingsPage ps;
 	UXPMarketInfoPage mi;
+	UXPExploreMarketPage expmrkt;
 	SendEmail se;
 
 	@BeforeTest
@@ -180,10 +182,8 @@ public class LagVegasMarketSmokeTest extends base {
 	public void TS003_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-003: To verify the Exhibitors & Products overview and it's functionality
+		//UXP-003: To verify Profile and Settings option in Market Planner
 
-		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);
 		ps = new UXPProfileAndSettingsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -196,15 +196,13 @@ public class LagVegasMarketSmokeTest extends base {
 		System.out.println("Profile and Settings section options are displayed properly");
 
 	}
-	
+
 	@Test(priority=04)
 	public void TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-004: To verify Profile and Settings option in Market Planner
+		//UXP-004: To verify the Exhibitors & Products menu overview and it's functionality
 
-		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -257,18 +255,15 @@ public class LagVegasMarketSmokeTest extends base {
 		System.out.println("Categories section is displayed properly");
 
 	}
-	
+
 	@Test(priority=05)
 	public void TS005_VerifyAllLinksUnderMarketInfoTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-T60: To verify links for Market info tab at Header
+		//UXP-T005: To verify links for Market info tab at Header
 
-		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);
 		mi = new UXPMarketInfoPage(driver);
-		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Market Info tab at Header
@@ -319,29 +314,128 @@ public class LagVegasMarketSmokeTest extends base {
 		System.out.println("Frequently Asked Questions section is displayed properly");
 		driver.get(prop.getProperty("url"));
 		mi.getMarketInfoHeader().click();
-		
+
 		//Click Contact s option under Market Info
 
 		mi.getContactUs().click();
 		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Contact Us");
 		System.out.println("Contact Us section is displayed properly");
 		mi.getMarketInfoHeader().click();
-				
+
 		//Click Market Recap option under Market Info
 
 		mi.getMarketRecap().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market Recap");
 		System.out.println("Market Recap section is displayed properly");
 		mi.getMarketInfoHeader().click();
-				
+
 		//Click Press Center option under Market Info
 
 		mi.getMediaAndPress().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Press Center");
 		System.out.println("Press Center section is displayed properly");
-		
 	}
 
+	@Test(priority=06)
+	public void TS006_VerifyAllLinksUnderExploreMarketTabTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T006: To verify links for Explore Market tab at Header
+
+		expmrkt = new UXPExploreMarketPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click on Explore Market tab
+		expmrkt.getExploreMarketTab().click();
+
+		//Click on Explore Las Vegas Market sub-menu
+		expmrkt.getExploreLVMMenu().click();
+
+		Thread.sleep(6000);
+		//Verify that 'Explore LVM' page should be displayed
+		Assert.assertTrue(driver.getTitle().contains("Explore | Las Vegas Market"));
+
+		//Click on Explore Market tab
+		expmrkt.getExploreMarketTab().click();
+
+		//Click on Webinars & Events sub-menu
+		expmrkt.getWebinarsnEventsMenu().click();
+
+		Thread.sleep(6000);
+		//Verify that 'Events and Webinars' page should be displayed
+		Assert.assertTrue(driver.getTitle().contains("Events and Webinars | Las Vegas Market"));
+
+		//Click on Explore Market tab
+		expmrkt.getExploreMarketTab().click();
+
+		//Click on Show Specials sub-menu
+		expmrkt.getShowSpecialsMenu().click();
+
+		Thread.sleep(6000);
+		//Verify that 'Show Specials' page should be displayed
+		Assert.assertTrue(driver.getTitle().contains("Show Specials | Las Vegas Market"));
+
+		//Click on Explore Market tab
+		expmrkt.getExploreMarketTab().click();
+
+		//Click on Virtual Resources sub-menu
+		expmrkt.getVirtualResourcesMenu().click();
+
+		Thread.sleep(6000);
+		//Verify that 'Virtual Resources' page should be displayed
+		Assert.assertTrue(driver.getTitle().contains("Virtual Tools | Las Vegas Market"));
+
+		//Click on Explore Market tab
+		expmrkt.getExploreMarketTab().click();
+
+		//Click on Key Destinations sub-menu
+		expmrkt.getKeyDestinationsMenu().click();
+
+		Thread.sleep(6000);
+		//Verify that 'Key Destinations' page should be displayed
+		Assert.assertTrue(driver.getTitle().contains("Key Destinations | Las Vegas Market"));
+
+		//Click on Explore Market tab
+		expmrkt.getExploreMarketTab().click();
+		
+		//Click on News & Trends sub-menu
+		expmrkt.getNewsnTrendsMenu().click();
+		
+		Thread.sleep(6000);
+		//Verify that 'News & Trends' page should be displayed
+		Assert.assertTrue(driver.getTitle().contains("News and Trends | Las Vegas Market"));
+
+		//Click on Explore Market tab
+		expmrkt.getExploreMarketTab().click();
+		
+		//Click on Market Recap sub-menu
+		expmrkt.getMarketRecapMenu().click();
+		
+		Thread.sleep(6000);
+		//Verify that 'Market Recap' page should be displayed
+		Assert.assertTrue(driver.getTitle().contains("Market Recap | Las Vegas Market"));
+		
+		//Click on Explore Market tab
+		expmrkt.getExploreMarketTab().click();
+		
+		//Click on Things To Do sub-menu
+		expmrkt.getThingsToDoMenu().click();
+
+		Thread.sleep(6000);
+		//Verify that 'Things To Do' page should be displayed
+		Assert.assertTrue(driver.getTitle().contains("Things To Do | Las Vegas Market"));
+		
+		//Click on Explore Market tab
+		expmrkt.getExploreMarketTab().click();
+		
+		//Click on Social Media sub-menu
+		expmrkt.getSocialMediaMenu().click();
+		
+		Thread.sleep(6000);
+		//Verify that 'Social Media' page should be displayed
+		Assert.assertTrue(driver.getTitle().contains("Social Media | Las Vegas Market"));
+	}
 
 	/*@AfterSuite
 	public void sendEmail()
