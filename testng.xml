@@ -9,8 +9,8 @@
 		<classes>
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest" />
 			<methods>
-				<!-- <include name="TS001_VerifyMarketPlannerLoginTest" />-->
-				<include name="TS007_VerifyGlobalSearchFunctionalityTest" />
+				<exclude name="TS001_VerifyMarketPlannerLoginTest" />
+				<exclude name="TS003_VerifyMarketPlannerProfileAndSettingsOptionTest" />
 			</methods> 
 		</classes>
 	</test>

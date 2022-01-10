@@ -11,7 +11,7 @@ public class UXPExhibitPage {
 	public WebDriverWait wait;
 	
 	By exhibittab = By.xpath("(//a[contains(text(),'Exhibit')])[2]"); //Locator for Exhibit tab
-	By whyexhibitmenu = By.xpath("//a[contains(text(),'Why Exhibit?')]"); //Locator for Why Exhibit sub-menu
+	By whyexhibitmenu = By.xpath("//div[@class = 'imc-navigation-col']/div[1]/a[1]"); //Locator for Why Exhibit sub-menu
 	By exhibitoppt = By.xpath("//a[contains(text(),'Exhibit Opportunities')]"); //Locator for Exhibit Opportunities sub-menu
 	By advnspnrshp = By.xpath("//a[contains(text(),'Advertising & Sponsorships')]"); //Locator for Advertising & Sponsorships sub-menu
 	By tipsforexhibitors = By.xpath("//a[contains(text(),'Tips for Exhibitors')]"); //Locator for Tips for exhibitors sub-menu
@@ -30,7 +30,8 @@ public class UXPExhibitPage {
 		return driver.findElement(exhibittab);		
 	}
 	
-	public WebElement getWhyExhibitMenu() {
+	public WebElement getWhyExhibitMenu() throws InterruptedException {
+		Thread.sleep(5000);
 		return driver.findElement(whyexhibitmenu);		
 	}
 	public WebElement getExhibitOpptMenu() {

@@ -44,7 +44,7 @@ public class LagVegasMarketSmokeTest extends base {
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
 		driver.get(prop.getProperty("url"));
-		Thread.sleep(15000);
+		//Thread.sleep(15000);
 	}
 
 	@Test(priority=01)
@@ -374,7 +374,7 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on Show Specials sub-menu
 		expmrkt.getShowSpecialsMenu().click();
 
-		Thread.sleep(6000);
+		Thread.sleep(1000);
 		//Verify that 'Show Specials' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Show Specials | Las Vegas Market"));
 
