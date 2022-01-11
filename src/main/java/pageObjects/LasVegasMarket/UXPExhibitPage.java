@@ -31,7 +31,8 @@ public class UXPExhibitPage {
 	}
 	
 	public WebElement getWhyExhibitMenu() throws InterruptedException {
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(exhibittab));
 		return driver.findElement(whyexhibitmenu);		
 	}
 	public WebElement getExhibitOpptMenu() {

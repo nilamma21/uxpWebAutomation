@@ -82,7 +82,7 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on 'Why Exhibit?' sub-menu
 		exh.getWhyExhibitMenu().click();
 
-		Thread.sleep(6000);
+		Thread.sleep(10000);
 		//Verify that 'Exhibit' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Exhibit | Las Vegas Market"));
 
@@ -92,7 +92,7 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on 'Exhibit Opportunities' sub-menu
 		exh.getExhibitOpptMenu().click();
 
-		Thread.sleep(6000);
+		Thread.sleep(10000);
 		//Verify that 'Exhibit Opportunities' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Exhibit Opportunities | Las Vegas Market"));
 
@@ -102,7 +102,7 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on 'Advertising & Sponsorships' link
 		exh.getAdvertisingnSponsershipsMenu().click();
 
-		Thread.sleep(6000);
+		Thread.sleep(10000);
 		//Verify that 'Advertising & Sponsorships' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Marketing and Sponsorship Opportunities | Las Vegas Market"));
 
@@ -112,7 +112,7 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on 'Tips for Exhibitors' sub-menu
 		exh.getTipsForExhibitorsMenu().click();
 
-		Thread.sleep(6000);
+		Thread.sleep(10000);
 		//Verify that 'Tips for Exhibitors' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Tips for Exhibitors | Las Vegas Market"));
 
@@ -130,7 +130,7 @@ public class LagVegasMarketSmokeTest extends base {
 			driver.switchTo().window(winHandle);
 		}
 
-		Thread.sleep(6000);
+		Thread.sleep(10000);
 		//Verify that 'LVM Registration' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas Market Summer 2021 - Inquiry Request"));
 
@@ -166,7 +166,7 @@ public class LagVegasMarketSmokeTest extends base {
 			driver.switchTo().window(winHandle);
 		}
 
-		Thread.sleep(6000);
+		Thread.sleep(10000);
 		//Verify that 'Juniper' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
 
@@ -354,7 +354,7 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on Explore Las Vegas Market sub-menu
 		expmrkt.getExploreLVMMenu().click();
 
-		Thread.sleep(6000);
+		Thread.sleep(10000);
 		//Verify that 'Explore LVM' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Explore | Las Vegas Market"));
 
@@ -364,7 +364,7 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on Webinars & Events sub-menu
 		expmrkt.getWebinarsnEventsMenu().click();
 
-		Thread.sleep(6000);
+		Thread.sleep(10000);
 		//Verify that 'Events and Webinars' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Events and Webinars | Las Vegas Market"));
 
@@ -374,7 +374,7 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on Show Specials sub-menu
 		expmrkt.getShowSpecialsMenu().click();
 
-		Thread.sleep(1000);
+		Thread.sleep(10000);
 		//Verify that 'Show Specials' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Show Specials | Las Vegas Market"));
 
@@ -384,7 +384,7 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on Virtual Resources sub-menu
 		expmrkt.getVirtualResourcesMenu().click();
 
-		Thread.sleep(6000);
+		Thread.sleep(10000);
 		//Verify that 'Virtual Resources' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Virtual Tools | Las Vegas Market"));
 
@@ -451,13 +451,11 @@ public class LagVegasMarketSmokeTest extends base {
 		gs = new UXPGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		//Click Profile and Settings tab under Market Planner and verify result
-		
-		
+			
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
-		Assert.assertTrue(gs.getVerifyGlobalSeacrh().getText().contains(prop.getProperty("globalsearchinput")));
+		String searchterm = gs.getVerifyGlobalSeacrh().getText();
+		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
 
 	}

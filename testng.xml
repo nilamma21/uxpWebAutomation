@@ -8,10 +8,10 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest" />
-			<methods>
+			<!-- <methods>
 				<exclude name="TS001_VerifyMarketPlannerLoginTest" />
 				<exclude name="TS003_VerifyMarketPlannerProfileAndSettingsOptionTest" />
-			</methods> 
+			</methods>  -->
 		</classes>
 	</test>
 </suite> 

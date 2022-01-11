@@ -6,7 +6,9 @@
       <class name="lasvegasmarket.LagVegasMarketSmokeTest">
         <methods>
           <include name="TS006_VerifyAllLinksUnderExploreMarketTabTest"/>
+          <include name="TS007_VerifyGlobalSearchFunctionalityTest"/>
           <include name="TS002_VerifAllLinksUnderExhibitTabTest"/>
+          <include name="TS005_VerifyAllLinksUnderMarketInfoTabTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest -->
