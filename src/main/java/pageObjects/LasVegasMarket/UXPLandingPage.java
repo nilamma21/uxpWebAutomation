@@ -31,9 +31,8 @@ public class UXPLandingPage {
 		return driver.findElement(marketplannerlinktext);		
 	}	
 	
-	public WebElement getIUnderstandBtn() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(iunderstandbtn));
+	public WebElement getIUnderstandBtn() throws InterruptedException {
+		Thread.sleep(15000);
 		return driver.findElement(iunderstandbtn);		
 	}
 	

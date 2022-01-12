@@ -77,15 +77,11 @@ public class LagVegasMarketSmokeTest extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//Navigate to LVM Site
+		/*//Navigate to LVM Site
 				driver.manage().window().maximize();
 				driver.get(prop.getProperty("url"));
-				Thread.sleep(15000);
-
-				lap.getIUnderstandBtn().click();
-				Thread.sleep(15000);
-		
-		
+				lap.getIUnderstandBtn().click();*/
+						
 		
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
@@ -377,7 +373,8 @@ public class LagVegasMarketSmokeTest extends base {
 
 		Thread.sleep(10000);
 		//Verify that 'Explore LVM' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Explore | Las Vegas Market"));
+		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Explore Market");
+		System.out.println("Explore Market page is displayed properly");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
@@ -387,17 +384,18 @@ public class LagVegasMarketSmokeTest extends base {
 
 		Thread.sleep(10000);
 		//Verify that 'Events and Webinars' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Events and Webinars | Las Vegas Market"));
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Events and Seminars");
+		System.out.println("Events and Seminars page is displayed properly");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
 
 		//Click on Show Specials sub-menu
 		expmrkt.getShowSpecialsMenu().click();
-
-		Thread.sleep(10000);
+		
 		//Verify that 'Show Specials' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Show Specials | Las Vegas Market"));
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Show Specials");
+		System.out.println("Show Specials page is displayed properly");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
@@ -405,9 +403,9 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on Virtual Resources sub-menu
 		expmrkt.getVirtualResourcesMenu().click();
 
-		Thread.sleep(10000);
 		//Verify that 'Virtual Resources' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Virtual Tools | Las Vegas Market"));
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Virtual Resources");
+		System.out.println("Virtual Resources page is displayed properly");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
@@ -415,9 +413,9 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on Key Destinations sub-menu
 		expmrkt.getKeyDestinationsMenu().click();
 
-		Thread.sleep(6000);
 		//Verify that 'Key Destinations' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Key Destinations | Las Vegas Market"));
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Key Destinations");
+		System.out.println("Key Destinations page is displayed properly");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
@@ -425,9 +423,9 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on News & Trends sub-menu
 		expmrkt.getNewsnTrendsMenu().click();
 		
-		Thread.sleep(6000);
 		//Verify that 'News & Trends' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("News and Trends | Las Vegas Market"));
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "News and Trends");
+		System.out.println("News and Trends page is displayed properly");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
@@ -435,9 +433,9 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on Market Recap sub-menu
 		expmrkt.getMarketRecapMenu().click();
 		
-		Thread.sleep(6000);
 		//Verify that 'Market Recap' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Market Recap | Las Vegas Market"));
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market Recap");
+		System.out.println("Market Recap page is displayed properly");
 		
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
@@ -445,9 +443,9 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on Things To Do sub-menu
 		expmrkt.getThingsToDoMenu().click();
 
-		Thread.sleep(6000);
 		//Verify that 'Things To Do' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Things To Do | Las Vegas Market"));
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Things To Do in Las Vegas");
+		System.out.println("Things To Do in Las Vegas page is displayed properly");
 		
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
@@ -455,9 +453,9 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on Social Media sub-menu
 		expmrkt.getSocialMediaMenu().click();
 		
-		Thread.sleep(6000);
 		//Verify that 'Social Media' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Social Media | Las Vegas Market"));
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Social Media");
+		System.out.println("Social Media page is displayed properly");
 	}
 
 	@Test(priority=07)

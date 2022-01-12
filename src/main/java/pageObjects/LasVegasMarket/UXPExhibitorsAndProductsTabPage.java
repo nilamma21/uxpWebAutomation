@@ -60,19 +60,18 @@ public class UXPExhibitorsAndProductsTabPage {
 		return driver.findElement(Categories);
 	}
 
-	public WebElement getVerifyExhibitorsAndProductsSection() {
+	public WebElement getVerifyExhibitorsAndProductsSection() throws InterruptedException {
+		Thread.sleep(5000);
 		return driver.findElement(VerifyExhibitorsAndProductsSection);
 	}
 
 	public WebElement getVerifyExhibitorDirectory() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyExhibitorDirectory));
+		Thread.sleep(10000);
 		return driver.findElement(VerifyExhibitorDirectory);
 	}
 
 	public WebElement getVerifyFloorPlans() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyFloorPlans));
+		Thread.sleep(10000);
 		return driver.findElement(VerifyFloorPlans);
 	}
 }
