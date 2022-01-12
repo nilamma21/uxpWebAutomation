@@ -11,8 +11,10 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import pageObjects.LasVegasMarket.UXPExhibitPage;
+import pageObjects.LasVegasMarket.UXPExhibitorDirectoryPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPExploreMarketPage;
+import pageObjects.LasVegasMarket.UXPFooterLinksNavigationPage;
 import pageObjects.LasVegasMarket.UXPGlobalSearchPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
@@ -36,6 +38,8 @@ public class LagVegasMarketSmokeTest extends base {
 	UXPMarketInfoPage mi;
 	UXPExploreMarketPage expmrkt;
 	UXPGlobalSearchPage gs;
+	UXPFooterLinksNavigationPage fl;
+	UXPExhibitorDirectoryPage ed;
 	SendEmail se;
 
 	@BeforeTest
@@ -476,8 +480,181 @@ public class LagVegasMarketSmokeTest extends base {
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
+}
+	
+	
+	@Test(priority= 8)
+	public void TS008_VerifyFooterLinksTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T69: To verify Footer Links Navigation
 
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		mi = new UXPMarketInfoPage(driver);
+		fl = new UXPFooterLinksNavigationPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Scroll till footer links
+		
+		utl.scrollToElement(fl.getHighPointMarket());
+		
+		//Click High Point Market link and verify results
+
+		fl.getHighPointMarket().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("http://www.imchighpointmarket.com/"));
+		System.out.println("High Point Market page opened properly");
+		driver.get(prop.getProperty("url"));
+		utl.scrollToElement(fl.getHighPointMarket());
+		
+		
+		//Click Atlanta Market link and verify results
+
+		fl.getAtlantaMarket().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
+		System.out.println("Atlanta Market page opened properly");
+		driver.get(prop.getProperty("url"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//Click Atlanta Apparel link and verify results
+
+		fl.getAtlantaApparel().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
+		System.out.println("Atlanta Apparel page opened properly");
+		driver.get(prop.getProperty("url"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//Click Americas Mart link and verify results
+
+		fl.getAmericasMart().click();
+		fl.getClosePopUpAmericasmart().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
+		System.out.println("Americas Mart page opened properly");
+		driver.get(prop.getProperty("url"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//Click International Market Centers link and verify results
+
+		fl.getInternationalMarketCenters().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
+		System.out.println("International Market Centers page opened properly");
+		driver.get(prop.getProperty("url"));
+		utl.scrollToElement(fl.getHighPointMarket());
+		
+		//Click Download The App link and verify results
+
+		fl.getDownloadTheApp().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Market App");
+		System.out.println("International Market Centers page opened properly");
+		driver.get(prop.getProperty("url"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//Click Download The App link and verify results
+
+		fl.getDownloadTheApp().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Market App");
+		System.out.println("Download App page opened properly");
+		driver.get(prop.getProperty("url"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//Click Contact Us link and verify results
+
+		fl.getContactUs().click();
+		Assert.assertEquals(mi.getVerifyContactUs().getText(),"Contact Us");
+		System.out.println("Contact Us page opened properly");
+		driver.get(prop.getProperty("url"));
+		utl.scrollToElement(fl.getHighPointMarket());
+		
+		//Click Careers link and verify results
+
+		fl.getCareers().click();
+		
+		//Switch to new My Imports tab
+	
+		String winHandleBefore = driver.getWindowHandle();
+		
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);}
+			
+		Assert.assertEquals(fl.getVerifyCareers().getText(),"Careers");
+		System.out.println("Careers page opened properly");
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
+		
+		//Click Terms of Use link and verify results
+		
+		//driver.get(prop.getProperty("url"));
+
+		fl.getTermsAndConditions().click();
+				
+		//Switch to new My Imports tab
+		//Set<String> win1 = driver.getWindowHandles();
+		//Iterator<String>it1 = windows1.iterator();
+		//String parentId1 = it1.next();
+		//String childId1 = it1.next();
+		//driver.switchTo().window(childId);
+		
+		String winHandleBefore1 = driver.getWindowHandle();
+		
+		for(String winHandle1 : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle1);}
+			
+		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(),"TERMS OF USE");
+		System.out.println("Terms of Use page opened properly");
+		driver.close();
+		driver.switchTo().window(winHandleBefore1);
+		//Click Terms of Use link and verify results
+		
+		//driver.get(prop.getProperty("url"));
+
+		fl.getPrivacyPolicy().click();
+				
+		//Switch to new My Imports tab
+		/*Set<String> win2 = driver.getWindowHandles();
+		Iterator<String>it2 = windows1.iterator();
+		String parentId2 = it2.next();
+		String childId2 = it2.next();
+		driver.switchTo().window(childId2);*/
+		
+		String winHandleBefore2 = driver.getWindowHandle();
+		
+		for(String winHandle2 : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle2);}
+	
+		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(),"WEB PRIVACY STATEMENT");
+		System.out.println("Privacy Policy page opened properly");
+		driver.close();
+		driver.switchTo().window(winHandleBefore2);
+	
 	}
+	
+	@Test(priority=9)
+	public void TS009_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T64: To verify Exhibitor Directory
+
+		lap = new UXPLandingPage(driver);
+		lp = new UXPLoginPage(driver);
+		ps = new UXPProfileAndSettingsPage(driver);
+		gs = new UXPGlobalSearchPage(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		ed = new UXPExhibitorDirectoryPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		//Verify exhibitor data is displayed or not as per search criteria
+		
+		ed.getExhibitorDirectory().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor & Product Directory");
+		System.out.println("Exhibitor Directory is opened properly.");
+		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
+		gs.getSearchButton().click();
+		String searchterm = gs.getVerifyGlobalSeacrh().getText();
+		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
+		System.out.println("Exhibitor Directory page is working properly.");
+}
+	
 	/*@AfterSuite
 	public void sendEmail()
 	{
@@ -485,4 +662,7 @@ public class LagVegasMarketSmokeTest extends base {
 		se.sendEmailWithAttachment();
 	}*/
 
-}
+		}
+		
+	
+	
