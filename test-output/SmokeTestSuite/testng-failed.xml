@@ -10,6 +10,7 @@
           <include name="TS002_VerifAllLinksUnderExhibitTabTest"/>
           <include name="TS005_VerifyAllLinksUnderMarketInfoTabTest"/>
           <include name="initialize"/>
+          <include name="TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>
         </methods>
       </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest -->
     </classes>
