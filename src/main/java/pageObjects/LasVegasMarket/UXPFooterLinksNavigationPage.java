@@ -26,7 +26,7 @@ public class UXPFooterLinksNavigationPage {
 	By PrivacyPolicy = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[5]/div[1]/a[1]"); // Locator for Privacy Policy in footer links
 	By VerifyCareers = By.xpath("//div[@id = 'content']/div[1]/div[1]/h1[1]"); //Locator for verify Careers
 	By ClosePopUpAmericasmart = By.xpath("//div[@class = ' contact-exit']"); //Locatory for Close Pop Up after opening Americas Mart footer link
-	By VerifyTermsOfUse = By.xpath("//div[@id = 'page']/div[2]/div[1]/div[1]div[1]/h1[1]"); //Locator for Terms of Use
+	By VerifyTermsOfUse = By.xpath("//div[@id = 'primary']"); //Locator for Terms of Use
 	By VerifyPrivacyPolicy = By.xpath("//*[contains (text(), 'WEB PRIVACY STATEMENT']"); //Locator for porivacy Policy
 	
 	public UXPFooterLinksNavigationPage(WebDriver driver) {
