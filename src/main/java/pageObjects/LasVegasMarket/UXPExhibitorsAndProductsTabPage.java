@@ -33,65 +33,47 @@ public class UXPExhibitorsAndProductsTabPage {
 	} 
 
 	public WebElement getExhibitorsAndProducts() {
-		//Wait till Sign In page is displayed
 		return driver.findElement(ExhibitorsAndProducts);
-
 	}
 
 	public WebElement getExhibitorDirectory() {
-		//Wait till Sign In page is displayed
 		return driver.findElement(ExhibitorDirectory);
-
 	}
 
 	public WebElement getFloorPlans() {
-		//Wait till Sign In page is displayed
 		return driver.findElement(FloorPlans);
-
 	}
 
 	public WebElement getShowSpecials() {
-		//Wait till Sign In page is displayed
 		return driver.findElement(ShowSpecials);
-
 	}
 
 	public WebElement getTemporaries() {
-		//Wait till Sign In page is displayed
 		return driver.findElement(Temporaries);
-
 	}
 
 	public WebElement getNewProductIntroductions() {
-		//Wait till Sign In page is displayed
 		return driver.findElement(NewProductIntroductions);
-
 	}
 
 	public WebElement getCategories() {
-		//Wait till Sign In page is displayed
 		return driver.findElement(Categories);
-
 	}
 
 	public WebElement getVerifyExhibitorsAndProductsSection() {
-		//Wait till Sign In page is displayed
 		return driver.findElement(VerifyExhibitorsAndProductsSection);
-
 	}
 
 	public WebElement getVerifyExhibitorDirectory() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyExhibitorDirectory));
 		return driver.findElement(VerifyExhibitorDirectory);
-
 	}
 
 	public WebElement getVerifyFloorPlans() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyFloorPlans));
 		return driver.findElement(VerifyFloorPlans);
-
 	}
 }
 

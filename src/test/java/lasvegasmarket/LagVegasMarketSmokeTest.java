@@ -63,6 +63,7 @@ public class LagVegasMarketSmokeTest extends base {
 
 		//Verify that Market Planner Home page should be displayed
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
+		Thread.sleep(6000);
 	}
 
 	@Test(priority=02)
@@ -76,6 +77,16 @@ public class LagVegasMarketSmokeTest extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+		//Navigate to LVM Site
+				driver.manage().window().maximize();
+				driver.get(prop.getProperty("url"));
+				Thread.sleep(15000);
+
+				lap.getIUnderstandBtn().click();
+				Thread.sleep(15000);
+		
+		
+		
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
 
@@ -102,9 +113,8 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on 'Advertising & Sponsorships' link
 		exh.getAdvertisingnSponsershipsMenu().click();
 
-		Thread.sleep(10000);
 		//Verify that 'Advertising & Sponsorships' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Marketing and Sponsorship Opportunities | Las Vegas Market"));
+		Assert.assertTrue(exh.getAdvertisingnSponsershipsTitle().isDisplayed());
 
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
@@ -112,9 +122,8 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on 'Tips for Exhibitors' sub-menu
 		exh.getTipsForExhibitorsMenu().click();
 
-		Thread.sleep(10000);
 		//Verify that 'Tips for Exhibitors' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Tips for Exhibitors | Las Vegas Market"));
+		Assert.assertTrue(exh.getExhibitorTipsTitle().isDisplayed());
 
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
@@ -132,14 +141,19 @@ public class LagVegasMarketSmokeTest extends base {
 
 		Thread.sleep(10000);
 		//Verify that 'LVM Registration' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Las Vegas Market Summer 2021 - Inquiry Request"));
+		Assert.assertTrue(driver.getTitle().contains("Inquiry Request"));
 
 		// Close the new window, if that window no more required
-		driver.close();
+		//driver.close();
 
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore);
+		//driver.switchTo().window(winHandleBefore);
 
+		driver.get(prop.getProperty("url"));
+		Thread.sleep(6000);
+		//Click on Exhibit tab
+		exh.getExhibitTab().click();
+				
 		//Click on Exhibitor Portal Login' sub-menu
 		exh.getExhibitorPortalLoginMenu().click();
 
@@ -148,16 +162,21 @@ public class LagVegasMarketSmokeTest extends base {
 			driver.switchTo().window(winHandle);
 		}
 
-		Thread.sleep(15000);
+		Thread.sleep(20000);
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Sign In to IMC"));
 
 		// Close the new window, if that window no more required
-		driver.close();
+		//driver.close();
 
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore);
+		//driver.switchTo().window(winHandleBefore);
 
+		driver.get(prop.getProperty("url"));
+		Thread.sleep(6000);
+		//Click on Exhibit tab
+		exh.getExhibitTab().click();
+		
 		//Click on Juniper sub-menu
 		exh.getJuniperMenu().click();
 
@@ -171,13 +190,15 @@ public class LagVegasMarketSmokeTest extends base {
 		Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
 
 		// Close the new window, if that window no more required
-		driver.close();
+		//driver.close();
 
+		driver.get(prop.getProperty("url"));
+		
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore);
+		//driver.switchTo().window(winHandleBefore);
 
 		//Click on Exhibit tab
-		exh.getExhibitTab().click();
+		//exh.getExhibitTab().click();
 	}
 
 	@Test(priority=03)
