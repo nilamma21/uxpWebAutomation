@@ -10,7 +10,7 @@
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest" />
 			<methods>
 				<!-- <exclude name="TS001_VerifyMarketPlannerLoginTest" />-->
-				<include name="TS009_VerifyExhibitorDirectoryTest" />
+				<!-- <include name="TS009_VerifyExhibitorDirectoryTest" />-->
 			</methods>
 		</classes>
 	</test>

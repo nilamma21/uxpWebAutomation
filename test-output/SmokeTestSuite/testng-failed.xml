@@ -5,8 +5,11 @@
     <classes>
       <class name="lasvegasmarket.LagVegasMarketSmokeTest">
         <methods>
+          <include name="TS002_VerifAllLinksUnderExhibitTabTest"/>
+          <include name="TS005_VerifyAllLinksUnderMarketInfoTabTest"/>
           <include name="TS008_VerifyFooterLinksTest"/>
           <include name="initialize"/>
+          <include name="TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>
         </methods>
       </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest -->
     </classes>

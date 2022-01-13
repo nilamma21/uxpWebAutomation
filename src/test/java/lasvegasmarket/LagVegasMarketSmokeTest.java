@@ -164,7 +164,7 @@ public class LagVegasMarketSmokeTest extends base {
 
 		Thread.sleep(20000);
 		//Verify that 'EXP Login' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Sign In to IMC"));
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("exhibitorportalurl")));
 
 		// Close the new window, if that window no more required
 		//driver.close();
@@ -173,7 +173,7 @@ public class LagVegasMarketSmokeTest extends base {
 		//driver.switchTo().window(winHandleBefore);
 
 		driver.get(prop.getProperty("url"));
-		Thread.sleep(6000);
+		
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
 		

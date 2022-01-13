@@ -38,21 +38,33 @@ public class UXPExhibitPage {
 		return driver.findElement(whyexhibitmenu);		
 	}
 	public WebElement getExhibitOpptMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibittab));
 		return driver.findElement(exhibitoppt);		
 	}
 	public WebElement getAdvertisingnSponsershipsMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibittab));
 		return driver.findElement(advnspnrshp);		
 	}
 	public WebElement getTipsForExhibitorsMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibittab));
 		return driver.findElement(tipsforexhibitors);		
 	}
 	public WebElement getExhibitorRegtnMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibittab));
 		return driver.findElement(exhibitorregtn);		
 	}
 	public WebElement getExhibitorPortalLoginMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibittab));
 		return driver.findElement(explogin);		
 	}
 	public WebElement getJuniperMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibittab));
 		return driver.findElement(junipersubmenu);		
 	}
 	public WebElement getAdvertisingnSponsershipsTitle() {
