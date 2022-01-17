@@ -84,7 +84,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		exh = new UXPExhibitPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);						
-		
+
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
 
@@ -144,7 +144,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
-		
+
 		//Click on Exhibitor Portal Login' sub-menu
 		exh.getExhibitorPortalLoginMenu().click();
 
@@ -161,7 +161,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
-		
+
 		//Click on Juniper sub-menu
 		exh.getJuniperMenu().click();
 
@@ -176,7 +176,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		// Close the new window, if that window no more required
 		driver.close();
-		
+
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 
@@ -379,7 +379,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		//Click on Show Specials sub-menu
 		expmrkt.getShowSpecialsMenu().click();
-		
+
 		//Verify that 'Show Specials' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Show Specials");
 		System.out.println("Show Specials page is displayed properly");
@@ -406,40 +406,40 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-		
+
 		//Click on News & Trends sub-menu
 		expmrkt.getNewsnTrendsMenu().click();
-		
+
 		//Verify that 'News & Trends' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "News and Trends");
 		System.out.println("News and Trends page is displayed properly");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-		
+
 		//Click on Market Recap sub-menu
 		expmrkt.getMarketRecapMenu().click();
-		
+
 		//Verify that 'Market Recap' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market Recap");
 		System.out.println("Market Recap page is displayed properly");
-		
+
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-		
+
 		//Click on Things To Do sub-menu
 		expmrkt.getThingsToDoMenu().click();
 
 		//Verify that 'Things To Do' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Things To Do in Las Vegas");
 		System.out.println("Things To Do in Las Vegas page is displayed properly");
-		
+
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-		
+
 		//Click on Social Media sub-menu
 		expmrkt.getSocialMediaMenu().click();
-		
+
 		//Verify that 'Social Media' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Social Media");
 		System.out.println("Social Media page is displayed properly");
@@ -457,15 +457,15 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		gs = new UXPGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			
+
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
-}
-	
-	
+	}
+
+
 	@Test(priority= 8)
 	public void TS008_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
@@ -479,9 +479,9 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Scroll till footer links
-		
+
 		utl.scrollToElement(fl.getHighPointMarket());
-		
+
 		//Click High Point Market link and verify results
 
 		fl.getHighPointMarket().click();
@@ -489,8 +489,8 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		System.out.println("High Point Market page opened properly");
 		driver.get(prop.getProperty("url"));
 		utl.scrollToElement(fl.getHighPointMarket());
-		
-		
+
+
 		//Click Atlanta Market link and verify results
 
 		fl.getAtlantaMarket().click();
@@ -523,7 +523,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		System.out.println("International Market Centers page opened properly");
 		driver.get(prop.getProperty("url"));
 		utl.scrollToElement(fl.getHighPointMarket());
-		
+
 		//Click Download The App link and verify results
 
 		fl.getDownloadTheApp().click();
@@ -547,70 +547,70 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		System.out.println("Contact Us page opened properly");
 		driver.get(prop.getProperty("url"));
 		utl.scrollToElement(fl.getHighPointMarket());
-		
+
 		//Click Careers link and verify results
 
 		fl.getCareers().click();
-		
+
 		//Switch to new My Imports tab
-	
+
 		String winHandleBefore = driver.getWindowHandle();
-		
+
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);}
-			
+
 		Assert.assertEquals(fl.getVerifyCareers().getText(),"Careers");
 		System.out.println("Careers page opened properly");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
-		
+
 		//Click Terms of Use link and verify results
-		
+
 		//driver.get(prop.getProperty("url"));
 
 		fl.getTermsAndConditions().click();
-				
+
 		//Switch to new My Imports tab
 		//Set<String> win1 = driver.getWindowHandles();
 		//Iterator<String>it1 = windows1.iterator();
 		//String parentId1 = it1.next();
 		//String childId1 = it1.next();
 		//driver.switchTo().window(childId);
-		
+
 		String winHandleBefore1 = driver.getWindowHandle();
-		
+
 		for(String winHandle1 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle1);}
-			
+
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(),"TERMS OF USE");
 		System.out.println("Terms of Use page opened properly");
 		driver.close();
 		driver.switchTo().window(winHandleBefore1);
 		//Click Terms of Use link and verify results
-		
+
 		//driver.get(prop.getProperty("url"));
 
 		fl.getPrivacyPolicy().click();
-				
+
 		//Switch to new My Imports tab
 		/*Set<String> win2 = driver.getWindowHandles();
 		Iterator<String>it2 = windows1.iterator();
 		String parentId2 = it2.next();
 		String childId2 = it2.next();
 		driver.switchTo().window(childId2);*/
-		
+
 		String winHandleBefore2 = driver.getWindowHandle();
-		
+
 		for(String winHandle2 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle2);}
-	
+
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(),"WEB PRIVACY STATEMENT");
 		System.out.println("Privacy Policy page opened properly");
 		driver.close();
 		driver.switchTo().window(winHandleBefore2);
-	
+
 	}
-	
+
 	@Test(priority=9)
 	public void TS009_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
@@ -623,11 +623,11 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		gs = new UXPGlobalSearchPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		ed = new UXPExhibitorDirectoryPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		//Verify exhibitor data is displayed or not as per search criteria
-		
+
 		ed.getExhibitorDirectory().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor & Product Directory");
 		System.out.println("Exhibitor Directory is opened properly.");
@@ -636,8 +636,8 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");
-}
-	
+	}
+
 	@Test(priority=10)
 	public void TS010_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
@@ -647,7 +647,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		mi = new UXPMarketInfoPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		at = new UXPAttendPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Attend tab at Header
@@ -671,7 +671,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		at.getAttend().click();
 
 		//Click International tab under Attend section
-		
+
 		at.getInternational().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "International");
 		System.out.println("International section is displayed properly");
@@ -719,15 +719,15 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Accessibility and ADA Information");
 		System.out.println("Accessibility and ADA Information section is displayed properly");
 		at.getAttend().click();
-		
+
 		//Click Download the App tab at Header
 
 		at.getDownloadApp().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market App");
 		System.out.println("Market App section is displayed properly");
-		
+
 	}
-	
+
 
 	@Test(priority=11)
 	public void TS011_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
@@ -738,7 +738,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		mi = new UXPMarketInfoPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		yr = new UXPYearRoundPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Year Round tab at Header
@@ -786,10 +786,129 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		yr.getShopzio().click();
 		Assert.assertTrue(yr.getVerifyShopzio().isDisplayed());
-		System.out.println("Shopzio Exhibitors section is displayed properly");
-		
+		System.out.println("Shopzio Exhibitors section is displayed properly");	
 	}
-	
+
+	@Test(priority=013)
+	public void TS013_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-013: To verify the all social media links and it's redirection
+
+		fl = new UXPFooterLinksNavigationPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Store the current window handle
+		String winHandleBefore = driver.getWindowHandle();
+
+		//Scroll till footer links
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//In app footer click on 'Facebook' icon and verify results
+		fl.getFacebookIcon().click();
+
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(10000);
+		//Verify that 'LVM Facebook' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/lvmarket"));
+
+		// Close the new window, if that window no more required
+		driver.close();
+
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);
+
+/*		//Click on Instagram icon
+		fl.getInstagramIcon().click();
+
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(10000);
+		//Verify that 'LVM Instagram' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.instagram.com/lasvegasmarket/"));
+
+		// Close the new window, if that window no more required
+		driver.close();
+
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);*/
+
+		//Click on You Tube icon
+		fl.getYouTubeIcon().click();
+
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(10000);
+		//Verify that 'LVM You Tube' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.youtube.com"));
+
+		// Close the new window, if that window no more required
+		driver.close();
+
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);
+
+/*		//Click on Pinterest icon
+		fl.getPinterestIcon().click();
+
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(10000);
+		//Verify that 'LVM You Tube' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.pinterest.com/lasvegasmarket/"));
+
+		// Close the new window, if that window no more required
+		driver.close();
+
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);
+
+		//Click on Twitter icon
+		fl.getTwitterIcon().click();
+
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(10000);
+		//Verify that 'LVM Twitter' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.twitter.com/lasvegasmarket/"));
+
+		// Close the new window, if that window no more required
+		driver.close();
+
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);*/
+
+		//Click on LinkedIn icon
+		fl.getLinkedInIcon().click();
+
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(10000);
+		//Verify that 'LVM Twitter' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.linkedin.com/"));
+
+		// Close the new window, if that window no more required
+		driver.close();
+
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);
+	}
+
+
 	/*@AfterSuite
 	public void sendEmail()
 	{
@@ -797,7 +916,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		se.sendEmailWithAttachment();
 	}*/
 
-		}
-		
-	
-	
+}
+
+
+

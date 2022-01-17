@@ -5,8 +5,8 @@
     <classes>
       <class name="lasvegasmarket.LagVegasMarketSmokeTest_UAT">
         <methods>
+          <include name="TS001_VerifyMarketPlannerLoginTest"/>
           <include name="initialize"/>
-          <include name="TS010_VerifyAllLinksUnderAttendTabTest"/>
         </methods>
       </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest_UAT -->
     </classes>

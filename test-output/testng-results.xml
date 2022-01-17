@@ -1,24 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="222430" started-at="2022-01-17T08:47:57Z" finished-at="2022-01-17T08:51:39Z">
+  <suite name="SmokeTestSuite" duration-ms="469385" started-at="2022-01-17T13:37:47Z" finished-at="2022-01-17T13:45:36Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="222430" started-at="2022-01-17T08:47:57Z" finished-at="2022-01-17T08:51:39Z">
+    <test name="Test" duration-ms="469385" started-at="2022-01-17T13:37:47Z" finished-at="2022-01-17T13:45:36Z">
       <class name="lasvegasmarket.LagVegasMarketSmokeTest_UAT">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_UAT@5e5792a0]" name="initialize" is-config="true" duration-ms="31049" started-at="2022-01-17T14:17:57Z" finished-at="2022-01-17T14:18:28Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_UAT@5e5792a0]" name="initialize" is-config="true" duration-ms="56222" started-at="2022-01-17T19:07:47Z" finished-at="2022-01-17T19:08:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS010_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_UAT@5e5792a0]" name="TS010_VerifyAllLinksUnderAttendTabTest" duration-ms="106306" started-at="2022-01-17T14:18:28Z" finished-at="2022-01-17T14:20:14Z">
+        <test-method status="FAIL" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_UAT@5e5792a0]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="308139" started-at="2022-01-17T19:08:43Z" finished-at="2022-01-17T19:13:51Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='signInName']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir21608_783770319}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61455}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=97.0.4692.71, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 109ff5393a1a1453a3bef60519a254b3
+*** Element info: {Using=xpath, value=//input[@id='signInName']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='signInName']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir21608_783770319}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61455}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=97.0.4692.71, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 109ff5393a1a1453a3bef60519a254b3
+*** Element info: {Using=xpath, value=//input[@id='signInName']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.LasVegasMarket.UXPLoginPage.getEmailAddress(UXPLoginPage.java:24)
+	at resources.Utility.verifyMPLoginFunctionality(Utility.java:53)
+	at lasvegasmarket.LagVegasMarketSmokeTest_UAT.TS001_VerifyMarketPlannerLoginTest(LagVegasMarketSmokeTest_UAT.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS010_VerifyAllLinksUnderAttendTabTest -->
-        <test-method status="PASS" signature="TS011_VerifyAllLinksUnderYearRoundTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_UAT@5e5792a0]" name="TS011_VerifyAllLinksUnderYearRoundTabTest" duration-ms="85040" started-at="2022-01-17T14:20:14Z" finished-at="2022-01-17T14:21:39Z">
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS013_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_UAT@5e5792a0]" name="TS013_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="103968" started-at="2022-01-17T19:13:52Z" finished-at="2022-01-17T19:15:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS011_VerifyAllLinksUnderYearRoundTabTest -->
+        </test-method> <!-- TS013_VerifyAllSocialMediaLinksOnFooterTest -->
       </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest_UAT -->
     </test> <!-- Test -->
   </suite> <!-- SmokeTestSuite -->

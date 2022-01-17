@@ -28,6 +28,12 @@ public class UXPFooterLinksNavigationPage {
 	By ClosePopUpAmericasmart = By.xpath("//div[@class = ' contact-exit']"); //Locatory for Close Pop Up after opening Americas Mart footer link
 	By VerifyTermsOfUse = By.xpath("//div[@id = 'primary']"); //Locator for Terms of Use
 	By VerifyPrivacyPolicy = By.xpath("//*[contains (text(), 'WEB PRIVACY STATEMENT']"); //Locator for porivacy Policy
+	By facebookicon = By.xpath("//a[@href='https://www.facebook.com/lvmarket']//div//*[name()='svg']"); //Locator for Facebook link in footer
+	By instagramicon =  By.xpath("//a[@href='https://www.instagram.com/lasvegasmarket/']//div//*[name()='svg']"); //Locator for Instagram link in footer
+	By youtubeicon = By.xpath("//a[@href='https://www.youtube.com/channel/UCh8pZYxnmh7Wjrnf3d_OsWg']//div//*[name()='svg']"); //Locator You Tube icon
+	By pinteresticon = By.xpath("//a[@href='https://www.pinterest.com/lasvegasmarket/']//div//*[name()='svg']"); //Locator for Pinterest icon
+	By twittericon = By.xpath("//a[@href='https://twitter.com/lasvegasmarket']//div//*[name()='svg']"); //Locator for Twitter icon
+	By linkedinicon = By.xpath("//a[@href='https://www.linkedin.com/company/las-vegas-market']//div//*[name()='svg']"); //Locator for LinkedIn icon
 	
 	public UXPFooterLinksNavigationPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -129,7 +135,31 @@ public class UXPFooterLinksNavigationPage {
 		//Wait till Sign In page is displayed
 		Thread.sleep(10000);
 		return driver.findElement(VerifyPrivacyPolicy);
-
+	}
+	
+	public WebElement getFacebookIcon() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(facebookicon);
+	}
+	public WebElement getInstagramIcon() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(instagramicon);
+	}
+	public WebElement getYouTubeIcon() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(youtubeicon);
+	}
+	public WebElement getPinterestIcon() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(pinteresticon);
+	}
+	public WebElement getTwitterIcon() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(twittericon);
+	}
+	public WebElement getLinkedInIcon() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(linkedinicon);
 	}
 }
 
