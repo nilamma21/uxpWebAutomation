@@ -92,7 +92,7 @@ public class UXPExhibitPage {
 		return driver.findElement(exhibitopprbrdcrumb);		
 	}
 	public WebElement getEXPLoginPageTitle() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exploginpagetitle));
 		return driver.findElement(exploginpagetitle);		
 	}
