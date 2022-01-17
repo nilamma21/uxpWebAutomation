@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="222430" started-at="2022-01-17T08:47:57Z" finished-at="2022-01-17T08:51:39Z">
+  <suite name="SmokeTestSuite" duration-ms="85384" started-at="2022-01-17T12:25:58Z" finished-at="2022-01-17T12:27:23Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="222430" started-at="2022-01-17T08:47:57Z" finished-at="2022-01-17T08:51:39Z">
+    <test name="Test" duration-ms="85384" started-at="2022-01-17T12:25:58Z" finished-at="2022-01-17T12:27:23Z">
       <class name="lasvegasmarket.LagVegasMarketSmokeTest_UAT">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_UAT@5e5792a0]" name="initialize" is-config="true" duration-ms="31049" started-at="2022-01-17T14:17:57Z" finished-at="2022-01-17T14:18:28Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_UAT@5e5792a0]" name="initialize" is-config="true" duration-ms="34138" started-at="2022-01-17T17:55:58Z" finished-at="2022-01-17T17:56:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS010_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_UAT@5e5792a0]" name="TS010_VerifyAllLinksUnderAttendTabTest" duration-ms="106306" started-at="2022-01-17T14:18:28Z" finished-at="2022-01-17T14:20:14Z">
+        <test-method status="PASS" signature="TS012_VerifyHeaderChannelLinksTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_UAT@5e5792a0]" name="TS012_VerifyHeaderChannelLinksTest" duration-ms="51219" started-at="2022-01-17T17:56:32Z" finished-at="2022-01-17T17:57:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS010_VerifyAllLinksUnderAttendTabTest -->
-        <test-method status="PASS" signature="TS011_VerifyAllLinksUnderYearRoundTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_UAT@5e5792a0]" name="TS011_VerifyAllLinksUnderYearRoundTabTest" duration-ms="85040" started-at="2022-01-17T14:20:14Z" finished-at="2022-01-17T14:21:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_VerifyAllLinksUnderYearRoundTabTest -->
+        </test-method> <!-- TS012_VerifyHeaderChannelLinksTest -->
       </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest_UAT -->
     </test> <!-- Test -->
   </suite> <!-- SmokeTestSuite -->
