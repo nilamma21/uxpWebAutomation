@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import pageObjects.LasVegasMarket.UXPAttendPage;
 import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorDirectoryPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
@@ -20,6 +21,7 @@ import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import pageObjects.LasVegasMarket.UXPMarketInfoPage;
 import pageObjects.LasVegasMarket.UXPProfileAndSettingsPage;
+import pageObjects.LasVegasMarket.UXPYearRoundPage;
 import resources.GenerateData;
 import resources.SendEmail;
 import resources.Utility;
@@ -40,6 +42,8 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 	UXPGlobalSearchPage gs;
 	UXPFooterLinksNavigationPage fl;
 	UXPExhibitorDirectoryPage ed;
+	UXPAttendPage at;
+	UXPYearRoundPage yr;
 	SendEmail se;
 
 	@BeforeTest
@@ -48,7 +52,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
 		driver.get(prop.getProperty("url"));
-		//Thread.sleep(15000);
+		Thread.sleep(15000);
 	}
 
 	@Test(priority=01)
@@ -633,6 +637,158 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");
 }
+	
+	@Test(priority=10)
+	public void TS010_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T005: To verify links for Market info tab at Header
+
+		mi = new UXPMarketInfoPage(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		at = new UXPAttendPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click Attend tab at Header
+
+		at.getAttend().click();
+		Assert.assertTrue(at.getVerifyAttendSection().isDisplayed());
+		System.out.println("Attend section options are displayed properly");
+
+		//Click Why Attend tab under Attend section
+
+		at.getWhyAttend().click();
+		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Attend");
+		System.out.println("Why Attend section is displayed properly");
+		at.getAttend().click();
+
+		//Click Registration tab under Attend section
+
+		at.getRegistration().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market Dates and Hours");
+		System.out.println("Registration section is displayed properly");
+		at.getAttend().click();
+
+		//Click International tab under Attend section
+		
+		at.getInternational().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "International");
+		System.out.println("International section is displayed properly");
+		at.getAttend().click();
+
+		//Click Hotels tab at Header
+
+		at.getHotels().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Hotels");
+		System.out.println("Hotels section is displayed properly");
+		at.getAttend().click();
+
+
+		//Click Travel tab at Header
+
+		at.getTravel().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Travel");
+		System.out.println("Travel section is displayed properly");
+		at.getAttend().click();
+
+		//Click Market Planner tab at Header
+
+		at.getMarketPlanner().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market Planner");
+		System.out.println("Market Planner section is displayed properly");
+		at.getAttend().click();
+
+		//Click Dining tab at Header
+
+		at.getDining().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Dining");
+		System.out.println("Dining section is displayed properly");
+		at.getAttend().click();
+
+		//Click Amenities and Services tab at Header
+
+		at.getAmenities().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Amenities and Services");
+		System.out.println("Amenities and Services section is displayed properly");
+		at.getAttend().click();
+
+		//Click Accessibility and ADA Information tab at Header
+
+		at.getAccessibility().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Accessibility and ADA Information");
+		System.out.println("Accessibility and ADA Information section is displayed properly");
+		at.getAttend().click();
+		
+		//Click Download the App tab at Header
+
+		at.getDownloadApp().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market App");
+		System.out.println("Market App section is displayed properly");
+		
+	}
+	
+
+	@Test(priority=11)
+	public void TS011_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T005: To verify links for Market info tab at Header
+
+		mi = new UXPMarketInfoPage(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		yr = new UXPYearRoundPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click Year Round tab at Header
+
+		yr.getYearRoundTab().click();
+		Assert.assertTrue(yr.getVerifyYearRoundSection().isDisplayed());
+		System.out.println("Year round section options are displayed properly");
+
+		//Click Why Year Round tab under Year Round section
+
+		yr.getYearRound().click();
+		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Year Round");
+		System.out.println("Year Round section is displayed properly");
+		yr.getYearRoundTab().click();
+
+		//Click LVDC tab under Year Round section
+
+		yr.getLasVegasDesignCenter().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "LVDC");
+		System.out.println("LVDC section is displayed properly");
+		yr.getYearRoundTab().click();
+
+		//Click The Expo tab under Year Round section
+
+		yr.getExpo().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "The Expo");
+		System.out.println("The Expo section is displayed properly");
+		yr.getYearRoundTab().click();
+
+		//Click Off-Market Events tab under Year Round section
+
+		yr.getMarketEvents().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Off-Market Events");
+		System.out.println("Off-Market Events section is displayed properly");
+		yr.getYearRoundTab().click();
+
+		//Click Venue Rental tab under Year Round section
+
+		yr.getVenueRental().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Venue Rental");
+		System.out.println("Venue Rental section is displayed properly");
+		yr.getYearRoundTab().click();
+
+		//Click LVDC tab under Year Round section
+
+		yr.getShopzio().click();
+		Assert.assertTrue(yr.getVerifyShopzio().isDisplayed());
+		System.out.println("Shopzio Exhibitors section is displayed properly");
+		
+	}
 	
 	/*@AfterSuite
 	public void sendEmail()
