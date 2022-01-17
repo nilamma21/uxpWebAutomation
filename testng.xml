@@ -7,11 +7,11 @@
 
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="lasvegasmarket.LagVegasMarketSmokeTest" />
-			<methods>
-				<!-- <exclude name="TS001_VerifyMarketPlannerLoginTest" />-->
-				<!-- <include name="TS009_VerifyExhibitorDirectoryTest" />-->
-			</methods>
+			<class name="lasvegasmarket.LagVegasMarketSmokeTest_UAT" />
+<!-- 			<methods>
+				<include name="TS001_VerifyMarketPlannerLoginTest" />
+				<include name="TS002_VerifAllLinksUnderExhibitTabTest" />
+			</methods> -->
 		</classes>
 	</test>
 </suite> 

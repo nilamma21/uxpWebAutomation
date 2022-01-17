@@ -26,7 +26,7 @@ import resources.Utility;
 import resources.base;
 
 @Listeners({TestListeners.class})
-public class LagVegasMarketSmokeTest extends base {
+public class LagVegasMarketSmokeTest_QA extends base {
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;
@@ -48,7 +48,6 @@ public class LagVegasMarketSmokeTest extends base {
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
 		driver.get(prop.getProperty("url"));
-		//Thread.sleep(15000);
 	}
 
 	@Test(priority=01)
@@ -79,13 +78,7 @@ public class LagVegasMarketSmokeTest extends base {
 		lap = new UXPLandingPage(driver);
 		exh = new UXPExhibitPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		/*//Navigate to LVM Site
-				driver.manage().window().maximize();
-				driver.get(prop.getProperty("url"));
-				lap.getIUnderstandBtn().click();*/
-						
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);						
 		
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
@@ -93,9 +86,8 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on 'Why Exhibit?' sub-menu
 		exh.getWhyExhibitMenu().click();
 
-		Thread.sleep(10000);
 		//Verify that 'Exhibit' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Exhibit | Las Vegas Market"));
+		Assert.assertTrue(exh.getExhibitBrdcrumb().isDisplayed());
 
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
@@ -103,9 +95,8 @@ public class LagVegasMarketSmokeTest extends base {
 		//Click on 'Exhibit Opportunities' sub-menu
 		exh.getExhibitOpptMenu().click();
 
-		Thread.sleep(10000);
 		//Verify that 'Exhibit Opportunities' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Exhibit Opportunities | Las Vegas Market"));
+		Assert.assertTrue(exh.getExhibitOpprBrdcrumb().isDisplayed());
 
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
@@ -143,14 +134,9 @@ public class LagVegasMarketSmokeTest extends base {
 		//Verify that 'LVM Registration' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Inquiry Request"));
 
-		// Close the new window, if that window no more required
-		//driver.close();
-
-		// Switch back to original browser (first window)
-		//driver.switchTo().window(winHandleBefore);
-
 		driver.get(prop.getProperty("url"));
 		Thread.sleep(6000);
+		
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
 				
@@ -162,15 +148,8 @@ public class LagVegasMarketSmokeTest extends base {
 			driver.switchTo().window(winHandle);
 		}
 
-		Thread.sleep(20000);
 		//Verify that 'EXP Login' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("exhibitorportalurl")));
-
-		// Close the new window, if that window no more required
-		//driver.close();
-
-		// Switch back to original browser (first window)
-		//driver.switchTo().window(winHandleBefore);
+		Assert.assertTrue(exh.getEXPLoginPageTitle().isDisplayed());
 
 		driver.get(prop.getProperty("url"));
 		
@@ -189,16 +168,7 @@ public class LagVegasMarketSmokeTest extends base {
 		//Verify that 'Juniper' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
 
-		// Close the new window, if that window no more required
-		//driver.close();
-
 		driver.get(prop.getProperty("url"));
-		
-		// Switch back to original browser (first window)
-		//driver.switchTo().window(winHandleBefore);
-
-		//Click on Exhibit tab
-		//exh.getExhibitTab().click();
 	}
 
 	@Test(priority=03)

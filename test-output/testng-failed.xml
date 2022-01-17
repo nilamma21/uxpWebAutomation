@@ -3,15 +3,12 @@
 <suite name="Failed suite [SmokeTestSuite]">
   <test name="Test(failed)">
     <classes>
-      <class name="lasvegasmarket.LagVegasMarketSmokeTest">
+      <class name="lasvegasmarket.LagVegasMarketSmokeTest_UAT">
         <methods>
-          <include name="TS002_VerifAllLinksUnderExhibitTabTest"/>
-          <include name="TS005_VerifyAllLinksUnderMarketInfoTabTest"/>
-          <include name="TS008_VerifyFooterLinksTest"/>
           <include name="initialize"/>
-          <include name="TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>
+          <include name="TS002_VerifAllLinksUnderExhibitTabTest"/>
         </methods>
-      </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest -->
+      </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest_UAT -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [SmokeTestSuite] -->
