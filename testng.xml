@@ -9,9 +9,15 @@
 		<classes>
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest_UAT" />
 		<methods>
+
+				<include name="TS001_VerifyMarketPlannerLoginTest" />
+				<include name="TS013_VerifyAllSocialMediaLinksOnFooterTest" />
+			</methods>
+
 				<include name="TS012_VerifyHeaderChannelLinksTest" />
 				<!-- <include name="TS011_VerifyAllLinksUnderYearRoundTabTest" />-->
 			</methods> 
+
 		</classes>
 	</test>
 </suite> 

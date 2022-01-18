@@ -41,7 +41,7 @@ public class Utility extends base {
 		//Navigate to LVM Site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("url"));
-		Thread.sleep(15000);
+		Thread.sleep(10000);
 
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(15000);
