@@ -17,6 +17,7 @@ import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPExploreMarketPage;
 import pageObjects.LasVegasMarket.UXPFooterLinksNavigationPage;
 import pageObjects.LasVegasMarket.UXPGlobalSearchPage;
+import pageObjects.LasVegasMarket.UXPHeaderChannelLinksPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import pageObjects.LasVegasMarket.UXPMarketInfoPage;
@@ -44,6 +45,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 	UXPExhibitorDirectoryPage ed;
 	UXPAttendPage at;
 	UXPYearRoundPage yr;
+	UXPHeaderChannelLinksPage hd;
 	SendEmail se;
 
 	@BeforeTest
@@ -907,8 +909,53 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 	}
+	
+	@Test(priority=12)
+	public void TS012_VerifyHeaderChannelLinksTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-: To verify header channel links
 
+		hd = new UXPHeaderChannelLinksPage(driver);
 
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click Atlanta Market channel link and verify result
+
+		hd.getAtlantaMarket().click();
+		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
+		System.out.println("Atlanta Market channel link is working properly.");
+		driver.get(prop.getProperty("url"));
+		
+		//Click Atlanta Apparel channel link and verify result
+
+		hd.getAtlantaApparel().click();
+		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Apparel at AmericasMart"));
+		System.out.println("Atlanta Apparel channel link is working properly.");
+		driver.get(prop.getProperty("url"));
+				
+		//Click Americas Mart channel link and verify result
+
+		hd.getAmericasMart().click();
+		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Wholesale Gift, Home, Rug and Apparel Markets"));
+		System.out.println("Americas Mart channel link is working properly.");
+		driver.get(prop.getProperty("url"));
+				
+		/*//Click IMC High Point Market channel link and verify result
+
+		hd.getAtlantaMarket().click();
+		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
+		System.out.println("Atlanta Market channel link is working properly.");
+		driver.get(prop.getProperty("url"));*/
+				
+		//Click Lav Vegas Market channel link and verify result
+
+		hd.getLasVegas().click();
+		Assert.assertTrue(driver.getTitle().contains("Las Vegas"));
+		System.out.println("Las Vegas Market channel link is working properly.");
+		
+	}
+	
 	/*@AfterSuite
 	public void sendEmail()
 	{

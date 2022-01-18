@@ -7,6 +7,9 @@
         <methods>
           <include name="TS001_VerifyMarketPlannerLoginTest"/>
           <include name="initialize"/>
+
+          <include name="TS012_VerifyHeaderChannelLinksTest"/>
+
         </methods>
       </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest_UAT -->
     </classes>
