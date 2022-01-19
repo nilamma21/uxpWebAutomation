@@ -7,6 +7,7 @@
 
 	<test thread-count="5" name="Test">
 		<classes>
+
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest_UAT" />
 <!-- 		<methods>
 
@@ -17,6 +18,14 @@
 				<include name="TS012_VerifyHeaderChannelLinksTest" />
 				<include name="TS011_VerifyAllLinksUnderYearRoundTabTest" />
 			</methods>  -->
+
+			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
+		<methods>
+
+				<!-- <exclude name="TS010_VerifyAllLinksUnderAttendTabTest" />-->
+			
+			</methods> 
+
 
 		</classes>
 	</test>

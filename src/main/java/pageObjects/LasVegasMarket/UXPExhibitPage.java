@@ -24,6 +24,7 @@ public class UXPExhibitPage {
 	By exhibitopprbrdcrumb = By.xpath("//ul[@class='imc-breadcrumb']/li[3]/a"); //Locator for Exhibit Opportunities menu
 	By exploginpagetitle = By.xpath("//h2[contains(text(),'Sign in with your existing account')]"); //Locator for Exhibitor Portals Login page title
 	By advnspnshpbrdcrumbuat = By.xpath("//a[contains(text(),'Marketing and Sponsorship Opportunities')]"); //UAT_Locator for Advertising & Sponsorships page title
+	By exhibitorresourcesprod = By.xpath("//div[@class = 'imc-section']/div[1]/div[5]/div[2]/div[3]/div[1]/a[1]"); // Locator for Exhibitor Resources option in Exhibit menu
 	
 	public UXPExhibitPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -100,6 +101,11 @@ public class UXPExhibitPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(advnspnshpbrdcrumbuat));
 		return driver.findElement(advnspnshpbrdcrumbuat);		
+	}
+	public WebElement getexhibitorresourcesprod() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitorresourcesprod));
+		return driver.findElement(exhibitorresourcesprod);		
 	}
 
 }

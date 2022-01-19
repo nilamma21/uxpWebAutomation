@@ -28,99 +28,124 @@ public class UXPMarketInfoPage {
 	By VerifyFAQs = By.xpath("//div[@class = 'imc-section--content-with-image']/div[1]/div[1]/h2[1]"); // Locator for verification of FAQs page
 	By VerifyContactUs = By.xpath("//ul[@class = 'imc-breadcrumb']/li[2]/a[1]"); // Locator for verification of Contact Us page
 	By VerifyMarketInfoSection = By.xpath("//div[@class = 'imc-section']/div[1]/div[1]/div[2]"); //Locator for verification of Market Info section
-	
-	
+	By VerifyRegistrationDetailsProd = By.xpath("//a[@title = 'Register Now']"); //Locator for verification of Registration Details
+	By VerifyFAQsProd = By.xpath("//div[@class = 'imc-section--content-with-image']/div[1]/div[1]/h1[1]"); // Locator for verification of FAQs page on Prod
+	By MarketInfoHeaderProd = By.xpath("//div[@class ='imc-section']/div[1]/div[1]/div[2]/a[1]"); //Locator for Mrket Info tab in header
+
 	public UXPMarketInfoPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getMarketInfoHeader() throws InterruptedException{
-		//Wait till Sign In page is displayed
 		Thread.sleep(10000);
 		return driver.findElement(MarketInfoHeader);
 
 	}
 	
 	public WebElement getAboutLasVegasMarket(){
-		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(AboutLasVegasMarket));
 		return driver.findElement(AboutLasVegasMarket);
 
 	}
 
 	public WebElement getMarketDatesAndHrs() {
-		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(MarketDatesAndHrs));
 		return driver.findElement(MarketDatesAndHrs);
 
 	}
 	
 	public WebElement getRegistrationDetails() throws InterruptedException {
-		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(RegistrationDetails));
 		return driver.findElement(RegistrationDetails);
 
 	}
 	
 	public WebElement getAdmissionPolicies() {
-		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(AdmissionPolicies));
 		return driver.findElement(AdmissionPolicies);
 
 	}
 	
 	public WebElement getIndustryPartners() {
-		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(IndustryPartners));
 		return driver.findElement(IndustryPartners);
 
 	}
 	
 	public WebElement getFAQs() {
-		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(FAQs));
 		return driver.findElement(FAQs);
 
 	}
 	
 	public WebElement getContactUs() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(ContactUs));
 		return driver.findElement(ContactUs);
 
 	}
 	
 	public WebElement getMarketRecap() {
-		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(MarketRecap));
 		return driver.findElement(MarketRecap);
 
 	}
 	
 	public WebElement getMediaAndPress() {
-		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(MediaAndPress));
 		return driver.findElement(MediaAndPress);
 
 	}
 	
 	public WebElement getVerifyAboutLasVegasMarket() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyAboutLasVegasMarket));
 		return driver.findElement(VerifyAboutLasVegasMarket);
 		
 	}
 	
 	public WebElement getVerifyFAQs() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyFAQs));
 		return driver.findElement(VerifyFAQs);
 		
 	}
 	
 	public WebElement getVerifyContactUs() throws InterruptedException {
-		//Wait till Sign In page is displayed
 		Thread.sleep(10000);
 		return driver.findElement(VerifyContactUs);
 		
 	}
 	
-	public WebElement getVerifyMarketInfoSection(){
-		//Wait till Sign In page is displayed
+	public WebElement getVerifyMarketInfoSection() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyRegistrationDetailsProd));
 		return driver.findElement(VerifyMarketInfoSection);
 		
 	}
+	
+	public WebElement getVerifyRegistrationDetailsProd(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyRegistrationDetailsProd));
+		return driver.findElement(VerifyRegistrationDetailsProd);
+		
+	}
+	
+	public WebElement getVerifyFAQsProd(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyFAQsProd));
+		return driver.findElement(VerifyFAQsProd);
+		
+	}
+	
+	
 }
