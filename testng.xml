@@ -8,15 +8,15 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest_UAT" />
-		<methods>
+<!-- 		<methods>
 
 				<include name="TS001_VerifyMarketPlannerLoginTest" />
 				<include name="TS013_VerifyAllSocialMediaLinksOnFooterTest" />
 			</methods>
 
 				<include name="TS012_VerifyHeaderChannelLinksTest" />
-				<!-- <include name="TS011_VerifyAllLinksUnderYearRoundTabTest" />-->
-			</methods> 
+				<include name="TS011_VerifyAllLinksUnderYearRoundTabTest" />
+			</methods>  -->
 
 		</classes>
 	</test>
