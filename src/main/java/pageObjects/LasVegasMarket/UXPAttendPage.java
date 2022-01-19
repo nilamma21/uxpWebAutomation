@@ -33,86 +33,74 @@ public class UXPAttendPage {
 		this.driver = driver; 			
 	} 
 
-	public WebElement getWhyAttend() throws InterruptedException{
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(WhyAttend));
+	public WebElement getWhyAttend() throws InterruptedException {
+		Thread.sleep(5000);
 		return driver.findElement(WhyAttend);
 
 	}
 	
-	public WebElement getRegistration(){
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(Registration));
+	public WebElement getRegistration() throws InterruptedException{
+		Thread.sleep(5000);
 		return driver.findElement(Registration);
 
 	}
 
-	public WebElement getInternational() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(International));
+	public WebElement getInternational() throws InterruptedException {
+		Thread.sleep(5000);
 		return driver.findElement(International);
 
 	}
 	
 	public WebElement getHotels() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(Hotels));
+		Thread.sleep(5000);
 		return driver.findElement(Hotels);
 
 	}
 	
-	public WebElement getTravel() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(Travel));
+	public WebElement getTravel() throws InterruptedException {
+		Thread.sleep(5000);
 		return driver.findElement(Travel);
 
 	}
 	
-	public WebElement getMarketPlanner() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(MarketPlanner));
+	public WebElement getMarketPlanner() throws InterruptedException {
+		Thread.sleep(5000);
 		return driver.findElement(MarketPlanner);
 
 	}
 	
-	public WebElement getDining() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(Dining));
+	public WebElement getDining() throws InterruptedException {
+		Thread.sleep(5000);
 		return driver.findElement(Dining);
 
 	}
 	
 	public WebElement getAmenities() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(Amenities));
+		Thread.sleep(5000);
 		return driver.findElement(Amenities);
 
 	}
 	
-	public WebElement getAccessibility() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(Accessibility));
+	public WebElement getAccessibility() throws InterruptedException {
+		Thread.sleep(5000);
 		return driver.findElement(Accessibility);
 
 	}
 	
-	public WebElement getDownloadApp() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(DownloadApp));
+	public WebElement getDownloadApp() throws InterruptedException {
+		Thread.sleep(5000);
 		return driver.findElement(DownloadApp);
 
 	}
 	
-	public WebElement getAttend() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(Attend));
+	public WebElement getAttend() throws InterruptedException{
+		Thread.sleep(5000);
 		return driver.findElement(Attend);
 
 	}
 	
-	public WebElement getVerifyAttendSection() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyAttendSection));
+	public WebElement getVerifyAttendSection() throws InterruptedException {
+		Thread.sleep(5000);;
 		return driver.findElement(VerifyAttendSection);
 
 	}
