@@ -16,11 +16,12 @@ public class UXPExhibitorsAndProductsTabPage {
 
 	By ExhibitorsAndProducts = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[1]/a[1]"); //Locator for Exhibitors and Products header tab
 	By ExhibitorDirectory = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[1]/div[1]/a[1]"); //Locator for ExhibitorDirectory header tab
-	By FloorPlans = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[1]/a[1]"); //Locator for Floor Plans header tab
-	By ShowSpecials = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[2]/a[1]"); //Locator for ShowSpecials header tab
-	By Temporaries = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[3]/a[1]"); //Locator for Temporaries header tab
-	By NewProductIntroductions = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[4]/a[1]"); //Locator for NoProductIntroductions header tab
-	By Categories = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[3]/div[1]/a[1]"); //Locator for Categories header tab
+	By FloorPlans = By.xpath("//a[contains(text(), 'Floor Plans')]"); //Locator for Floor Plans header tab
+	By ShowSpecials = By.xpath("//a[contains(text(), 'Show Specials')]"); //Locator for ShowSpecials header tab
+	By Temporaries = By.xpath("//a[contains(text(), 'Temporaries')]"); //Locator for Temporaries header tab
+	By NewProductIntroductions = By.xpath("//a[contains(text(), 'New Product Introductions')]"); //Locator for NoProductIntroductions header tab
+	By Categories = By.xpath("//a[contains(text(), 'Categories')]"); //Locator for Categories header tab
+	By JuniperMarketProd = By.xpath("//a[contains(text(), 'JuniperMarket')]"); //Locator for Juniper Market header tab
 	By VerifyExhibitorsAndProductsSection = By.xpath("//div[@class = 'imc-section']/div[1]/div[2]/div[2]"); //Locator for verification of Exhibitors and Products section
 	By VerifyExhibitorDirectory = By.xpath("//ul[@class = 'imc-breadcrumb']/li[3]/a[1]"); // Locator for Exhibitor Directory text
 	By VerifyFloorPlans = By.xpath("//div[@class = 'imc-campus-view']"); // Locator for floor plans map
@@ -73,6 +74,12 @@ public class UXPExhibitorsAndProductsTabPage {
 	public WebElement getVerifyFloorPlans() throws InterruptedException {
 		Thread.sleep(10000);
 		return driver.findElement(VerifyFloorPlans);
+	}
+
+	public WebElement getJuniperMarketProd() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(JuniperMarketProd));
+		return driver.findElement(JuniperMarketProd);
 	}
 }
 
