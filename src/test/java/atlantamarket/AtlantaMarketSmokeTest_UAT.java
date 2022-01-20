@@ -5,24 +5,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import pageObjects.LasVegasMarket.UXPAttendPage;
-import pageObjects.LasVegasMarket.UXPExhibitPage;
-import pageObjects.LasVegasMarket.UXPExhibitorDirectoryPage;
-import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
-import pageObjects.LasVegasMarket.UXPExploreMarketPage;
-import pageObjects.LasVegasMarket.UXPFooterLinksNavigationPage;
-import pageObjects.LasVegasMarket.UXPGlobalSearchPage;
-import pageObjects.LasVegasMarket.UXPHeaderChannelLinksPage;
+import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
-import pageObjects.LasVegasMarket.UXPMarketInfoPage;
 import pageObjects.LasVegasMarket.UXPProfileAndSettingsPage;
-import pageObjects.LasVegasMarket.UXPYearRoundPage;
 import resources.GenerateData;
 import resources.SendEmail;
 import resources.Utility;
@@ -35,6 +25,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	public Utility utl;
 	UXPLandingPage lap;
 	UXPLoginPage lp;
+	ATLProfileAndSettingsPage atlps;
 	SendEmail se;
 
 	@BeforeTest
@@ -42,6 +33,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
+		lap = new UXPLandingPage(driver);
 		
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
@@ -67,10 +59,28 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 
 		//Verify that Market Planner Home page should be displayed
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
-		Thread.sleep(6000);
 	}
 	
-	
+	@Test(priority=02)
+	public void TS002_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-002: To verify Profile and Settings option in Market Planner
+		
+		lap = new UXPLandingPage(driver);
+		atlps = new ATLProfileAndSettingsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click Profile and Settings tab under Market Planner and verify result
+		atlps.getATLWelcomeText().click();
+		atlps.getATLProfileAndSettings().click();
+		Thread.sleep(6000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-atlmkt.imcmvdp.com/Profile"));
+		System.out.println("Profile and Settings section options are displayed properly");
+
+	}
+
 	
 	/*@AfterSuite
 	public void sendEmail()

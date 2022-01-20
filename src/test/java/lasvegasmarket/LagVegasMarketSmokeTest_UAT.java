@@ -53,7 +53,8 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
-
+		lap = new UXPLandingPage(driver);
+		
 		//Navigate to LVM Site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl"));
@@ -78,7 +79,6 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		//Verify that Market Planner Home page should be displayed
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
-		Thread.sleep(6000);
 	}
 
 	@Test(priority=02)

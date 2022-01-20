@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_SmokeTestSuite" duration-ms="108651" started-at="2022-01-20T07:16:14Z" finished-at="2022-01-20T07:18:02Z">
+  <suite name="ATLMrkt_SmokeTestSuite" duration-ms="112222" started-at="2022-01-20T08:35:47Z" finished-at="2022-01-20T08:37:39Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="108651" started-at="2022-01-20T07:16:14Z" finished-at="2022-01-20T07:18:02Z">
+    <test name="Test" duration-ms="112222" started-at="2022-01-20T08:35:47Z" finished-at="2022-01-20T08:37:39Z">
       <class name="atlantamarket.AtlantaMarketSmokeTest_UAT">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="initialize" is-config="true" duration-ms="36368" started-at="2022-01-20T12:46:14Z" finished-at="2022-01-20T12:46:50Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="initialize" is-config="true" duration-ms="62373" started-at="2022-01-20T14:05:47Z" finished-at="2022-01-20T14:06:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="72184" started-at="2022-01-20T12:46:50Z" finished-at="2022-01-20T12:48:02Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="37038" started-at="2022-01-20T14:06:49Z" finished-at="2022-01-20T14:07:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="12760" started-at="2022-01-20T14:07:26Z" finished-at="2022-01-20T14:07:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyMarketPlannerProfileAndSettingsOptionTest -->
       </class> <!-- atlantamarket.AtlantaMarketSmokeTest_UAT -->
     </test> <!-- Test -->
   </suite> <!-- ATLMrkt_SmokeTestSuite -->
