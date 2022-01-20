@@ -11,7 +11,7 @@ public class UXPLandingPage {
 	public WebDriverWait wait;
 	
 	By loginbtn= By.xpath("//a[contains(text(),'Login')]"); //Locator for Login button on app landing Page
-	By marketplannerlinktext = By.xpath("//span[contains(text(),'s Market Planner')]"); //Locator for Market Planner link text
+	By marketplannerlinktext = By.xpath("//span[contains(text(),'s Market Planner')][1]"); //Locator for Market Planner link text
 	By iunderstandbtn = By.xpath("//button[@id='gdpr-btn']"); //Locator for I Understand button
 			
 	public UXPLandingPage(WebDriver driver) {

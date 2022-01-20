@@ -53,8 +53,13 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
+
+		//Navigate to LVM Site
+		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl"));
-		Thread.sleep(15000);
+		Thread.sleep(8000);
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(10000);
 	}
 
 	@Test(priority=01)
@@ -824,7 +829,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 
-/*		//Click on Instagram icon
+		/*		//Click on Instagram icon
 		fl.getInstagramIcon().click();
 
 		// Switch to new window opened
@@ -858,7 +863,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 
-/*		//Click on Pinterest icon
+		/*		//Click on Pinterest icon
 		fl.getPinterestIcon().click();
 
 		// Switch to new window opened
@@ -909,7 +914,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 	}
-	
+
 	@Test(priority=12)
 	public void TS012_VerifyHeaderChannelLinksTest() throws InterruptedException, IOException
 	{
@@ -926,36 +931,36 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
 		System.out.println("Atlanta Market channel link is working properly.");
 		driver.get(prop.getProperty("url"));
-		
+
 		//Click Atlanta Apparel channel link and verify result
 
 		hd.getAtlantaApparel().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Apparel at AmericasMart"));
 		System.out.println("Atlanta Apparel channel link is working properly.");
 		driver.get(prop.getProperty("url"));
-				
+
 		//Click Americas Mart channel link and verify result
 
 		hd.getAmericasMart().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Wholesale Gift, Home, Rug and Apparel Markets"));
 		System.out.println("Americas Mart channel link is working properly.");
 		driver.get(prop.getProperty("url"));
-				
+
 		/*//Click IMC High Point Market channel link and verify result
 
 		hd.getAtlantaMarket().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
 		System.out.println("Atlanta Market channel link is working properly.");
 		driver.get(prop.getProperty("url"));*/
-				
+
 		//Click Lav Vegas Market channel link and verify result
 
 		hd.getLasVegas().click();
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas"));
 		System.out.println("Las Vegas Market channel link is working properly.");
-		
+
 	}
-	
+
 	/*@AfterSuite
 	public void sendEmail()
 	{
