@@ -33,6 +33,8 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;
+	UXPLandingPage lap;
+	UXPLoginPage lp;
 	SendEmail se;
 
 	@BeforeTest
@@ -40,10 +42,33 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
+		
+		//Navigate to Atlanta Market site
+		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
-		Thread.sleep(15000);
+		Thread.sleep(8000);
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(10000);
 	}
 
+	@Test(priority=01)
+	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-001: To verify the Market Planner overview and it's functionality
+
+		lap = new UXPLandingPage(driver);
+		lp = new UXPLoginPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Login to Market Planner
+		utl.verifyMPLoginFunctionality();
+
+		//Verify that Market Planner Home page should be displayed
+		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
+		Thread.sleep(6000);
+	}
 	
 	
 	

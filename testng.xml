@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="SmokeTestSuite">
+
+<!-- <suite name="LVM_SmokeTestSuite">
 	<listners>
 		<listner class-name="lasvegasmarket.TestListeners" />
 	</listners>
 
 	<test thread-count="5" name="Test">
 		<classes>
+			<class name="lasvegasmarket.LagVegasMarketSmokeTest_UAT"/>
+			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD"/>
+		</classes>
+	</test>
+</suite> --> 
 
-			<!-- <class name="lasvegasmarket.LagVegasMarketSmokeTest_UAT" /> -->
-<!-- 		<methods>
+<suite name="ATLMrkt_SmokeTestSuite">
+	<listners>
+		<listner class-name="atlantamarket.TestListeners" />
+	</listners>
 
-				<include name="TS001_VerifyMarketPlannerLoginTest" />
-				<include name="TS013_VerifyAllSocialMediaLinksOnFooterTest" />
-			</methods>
-
-				<include name="TS012_VerifyHeaderChannelLinksTest" />
-				<include name="TS011_VerifyAllLinksUnderYearRoundTabTest" />
-			</methods>  -->
-
-			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
-	<!-- 	<methods>
-
-				<exclude name="TS010_VerifyAllLinksUnderAttendTabTest" />
-			
-			</methods>  -->
-
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT"/>
 
 		</classes>
 	</test>

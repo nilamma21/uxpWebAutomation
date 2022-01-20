@@ -36,15 +36,7 @@ public class Utility extends base {
 		// TS1- Login to Market Planner
 		
 		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);
-
-		//Navigate to LVM Site
-		driver.manage().window().maximize();
-		driver.get(prop.getProperty("url"));
-		Thread.sleep(10000);
-
-		lap.getIUnderstandBtn().click();
-		Thread.sleep(15000);
+		lp = new UXPLoginPage(driver);		
 		
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
