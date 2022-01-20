@@ -8,7 +8,7 @@
 	<test thread-count="5" name="Test">
 		<classes>
 
-			<class name="lasvegasmarket.LagVegasMarketSmokeTest_UAT" />
+			<!-- <class name="lasvegasmarket.LagVegasMarketSmokeTest_UAT" /> -->
 <!-- 		<methods>
 
 				<include name="TS001_VerifyMarketPlannerLoginTest" />
@@ -20,11 +20,11 @@
 			</methods>  -->
 
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
-		<methods>
+	<!-- 	<methods>
 
-				<!-- <exclude name="TS010_VerifyAllLinksUnderAttendTabTest" />-->
+				<exclude name="TS010_VerifyAllLinksUnderAttendTabTest" />
 			
-			</methods> 
+			</methods>  -->
 
 
 		</classes>

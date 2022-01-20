@@ -53,7 +53,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("lvmurl"));
 		//Thread.sleep(15000);
 	}
 
