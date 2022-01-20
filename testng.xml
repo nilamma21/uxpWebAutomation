@@ -14,8 +14,8 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
-<!-- 			<methods>
-				<include name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" />
+ 			<!-- <methods>
+				<include name="TS004_VerifyExhibitorDirectoryTest" />
 			</methods> -->
 		</classes>
 	</test>

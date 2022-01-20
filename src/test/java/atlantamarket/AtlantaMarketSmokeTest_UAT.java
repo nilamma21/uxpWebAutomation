@@ -9,10 +9,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import pageObjects.AtlantaMarket.ATLExhibitorDirectoryPage;
+import pageObjects.AtlantaMarket.ATLExhibitorsAndProductsTabPage;
+import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
-import pageObjects.LasVegasMarket.UXPProfileAndSettingsPage;
 import resources.GenerateData;
 import resources.SendEmail;
 import resources.Utility;
@@ -26,6 +28,9 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	UXPLandingPage lap;
 	UXPLoginPage lp;
 	ATLProfileAndSettingsPage atlps;
+	ATLGlobalSearchPage atlgs;
+	ATLExhibitorsAndProductsTabPage atlexhp;
+	ATLExhibitorDirectoryPage atled;
 	SendEmail se;
 
 	@BeforeTest
@@ -34,7 +39,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
-		
+
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
@@ -60,13 +65,13 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		//Verify that Market Planner Home page should be displayed
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
-	
+
 	@Test(priority=02)
 	public void TS002_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-002: To verify Profile and Settings option in Market Planner
-		
+
 		lap = new UXPLandingPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
 
@@ -78,10 +83,49 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		Thread.sleep(6000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-atlmkt.imcmvdp.com/Profile"));
 		System.out.println("Profile and Settings section options are displayed properly");
+	}
+	@Test(priority=03)
+	public void TS003_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T003: To verify global search functionality
 
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
+		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
+		System.out.println("Global Search functionality is working properly.");
+	}
+	
+	@Test(priority=4)
+	public void TS004_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T004: To verify Exhibitor Directory
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atled = new ATLExhibitorDirectoryPage(driver);
+		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Verify exhibitor data is displayed or not as per search criteria
+
+		atled.getATLExhibitorDirectory().click();
+		Assert.assertEquals(atlexhp.getVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
+		System.out.println("Exhibitor Directory is opened properly.");
+		
+		atled.getATLExhDirtSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
+		atled.getATLExhDirtSearchBtn().click();
+		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
+		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
+		System.out.println("Exhibitor Directory page is working properly.");
 	}
 
-	
 	/*@AfterSuite
 	public void sendEmail()
 	{

@@ -6,6 +6,7 @@
       <class name="atlantamarket.AtlantaMarketSmokeTest_UAT">
         <methods>
           <include name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest"/>
+          <include name="TS004_VerifyExhibitorDirectoryTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket.AtlantaMarketSmokeTest_UAT -->
