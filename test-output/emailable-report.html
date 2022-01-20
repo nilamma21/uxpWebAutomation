@@ -31,16 +31,73 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">112.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">183.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="2">atlantamarket.AtlantaMarketSmokeTest_UAT</td><td><a href="#m1"><b>TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</b>  </a></td><td class="numi">1</td><td>1642675972398</td><td class="numi">30367</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS004_VerifyExhibitorDirectoryTest</b>  </a></td><td class="numi">1</td><td>1642676015189</td><td class="numi">42156</td></tr>
 <tr><th colspan="4">Test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="2">atlantamarket.AtlantaMarketSmokeTest_UAT</td><td><a href="#m1"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1642667809870</td><td class="numi">37038</td></tr><tr class="passedodd"><td><a href="#m2"><b>TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</b>  </a></td><td class="numi">1</td><td>1642667846930</td><td class="numi">12760</td></tr>
+<tr class="passedodd"><td rowspan="2">atlantamarket.AtlantaMarketSmokeTest_UAT</td><td><a href="#m3"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1642675932000</td><td class="numi">40379</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS003_VerifyGlobalSearchFunctionalityTest</b>  </a></td><td class="numi">1</td><td>1642676003853</td><td class="numi">11333</td></tr>
 </table>
 <h1>Test</h1>
-<h2 id="m1">atlantamarket.AtlantaMarketSmokeTest_UAT:TS001_VerifyMarketPlannerLoginTest</h2>
+<h2 id="m1">atlantamarket.AtlantaMarketSmokeTest_UAT:TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class = &apos;imc-header-user-icon--links-settings&apos;]/a[1]&quot;}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir22108_1935032640}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:52246}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=97.0.4692.71, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 0f4fa4572dccb5233967a0bd8eb83a2a
+*** Element info: {Using=xpath, value=//div[@class = &apos;imc-header-user-icon--links-settings&apos;]/a[1]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at pageObjects.AtlantaMarket.ATLProfileAndSettingsPage.getATLProfileAndSettings(ATLProfileAndSettingsPage.java:32)
+<br/>at atlantamarket.AtlantaMarketSmokeTest_UAT.TS002_VerifyMarketPlannerProfileAndSettingsOptionTest(AtlantaMarketSmokeTest_UAT.java:82)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">atlantamarket.AtlantaMarketSmokeTest_UAT:TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</h2>
+<h2 id="m2">atlantamarket.AtlantaMarketSmokeTest_UAT:TS004_VerifyExhibitorDirectoryTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: (//input[@id=&apos;input-1&apos;])[position()=2] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLExhibitorDirectoryPage.getATLExhDirtSearchBox(ATLExhibitorDirectoryPage.java:32)
+<br/>at atlantamarket.AtlantaMarketSmokeTest_UAT.TS004_VerifyExhibitorDirectoryTest(AtlantaMarketSmokeTest_UAT.java:122)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: (//input[@id=&apos;input-1&apos;])[position()=2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLExhibitorDirectoryPage.getATLExhDirtSearchBox(ATLExhibitorDirectoryPage.java:32)
+<br/>at atlantamarket.AtlantaMarketSmokeTest_UAT.TS004_VerifyExhibitorDirectoryTest(AtlantaMarketSmokeTest_UAT.java:122)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">atlantamarket.AtlantaMarketSmokeTest_UAT:TS001_VerifyMarketPlannerLoginTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">atlantamarket.AtlantaMarketSmokeTest_UAT:TS003_VerifyGlobalSearchFunctionalityTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
