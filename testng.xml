@@ -13,7 +13,7 @@
 
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
+			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
  			<!-- <methods>
 				<include name="TS004_VerifyExhibitorDirectoryTest" />
 			</methods> -->
