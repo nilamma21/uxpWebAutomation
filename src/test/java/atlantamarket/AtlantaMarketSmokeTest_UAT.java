@@ -13,6 +13,7 @@ import pageObjects.AtlantaMarket.ATLExhibitorDirectoryPage;
 import pageObjects.AtlantaMarket.ATLExhibitorsAndProductsTabPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
+import pageObjects.AtlantaMarket.ATLRegistrationsPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import resources.GenerateData;
@@ -31,6 +32,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	ATLGlobalSearchPage atlgs;
 	ATLExhibitorsAndProductsTabPage atlexhp;
 	ATLExhibitorDirectoryPage atled;
+	ATLRegistrationsPage atlregp;
 	SendEmail se;
 
 	@BeforeTest
@@ -124,6 +126,28 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");
+	}
+	
+	@Test(priority=05)
+	public void TS005_VerifyMarketPlannerRegistrationsOptionTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-005: To verify Registrations option in Top Header
+
+		lap = new UXPLandingPage(driver);
+		atlps = new ATLProfileAndSettingsPage(driver);
+		atlregp = new ATLRegistrationsPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click on Welcome text
+		atlps.getATLWelcomeText().click();
+		
+		//Click Registrations option in Top Header
+		atlregp.getATLRegistrationsOptn().click();
+		
+		//Verify that user should redirect to the 'Registration Info' page.
+		Assert.assertTrue(atlregp.getATLRegistrationsInfoTab().isDisplayed());
 	}
 
 	/*@AfterSuite
