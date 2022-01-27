@@ -14,17 +14,20 @@ public class ATLExhibitorsAndProductsTabPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By ExhibitorsAndProducts = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[1]/a[1]"); //Locator for Exhibitors and Products header tab
-	By atlexhibitordirectory = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[1]/div[1]/a[1]"); //Locator for ExhibitorDirectory header tab
-	By FloorPlans = By.xpath("//a[contains(text(), 'Floor Plans')]"); //Locator for Floor Plans header tab
-	By ShowSpecials = By.xpath("//a[contains(text(), 'Show Specials')]"); //Locator for ShowSpecials header tab
-	By Temporaries = By.xpath("//a[contains(text(), 'Temporaries')]"); //Locator for Temporaries header tab
-	By NewProductIntroductions = By.xpath("//a[contains(text(), 'New Product Introductions')]"); //Locator for NoProductIntroductions header tab
-	By Categories = By.xpath("//a[contains(text(), 'Categories')]"); //Locator for Categories header tab
+	By atlexhibitorsnproducts = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[1]/a[1]"); //Locator for Exhibitors and Products header tab
+	By atlexhibitordirectory = By.xpath("(//a[contains(@href,'/exhibitor/exhibitor-directory')])[position()=2]"); //Locator for ExhibitorDirectory header tab
+	By atlfloorplans = By.xpath("//a[contains(text(), 'Floor Plans')]"); //Locator for Floor Plans header tab
+	By atltemporaries = By.xpath("//a[contains(text(), 'Temporaries')]"); //Locator for Temporaries header tab
+	By atlcategories = By.xpath("//a[contains(text(), 'Categories')]"); //Locator for Categories header tab
+	By atlverifyexhibitorsnproductssection = By.xpath("//div[@class = 'imc-section']/div[1]/div[2]/div[2]"); //Locator for verification of Exhibitors and Products section
+	By atlverifyexhibitordirectory = By.xpath("//ul[@class = 'imc-breadcrumb']/li[3]/a[1]"); // Locator for Exhibitor Directory text
+	By atlverifyfloorplans = By.xpath("//div[@class = 'imc-campus-view']"); // Locator for floor plans map
+	By atlshopzio = By.xpath("//a[contains(text(), 'ShopZio')]"); //Locator for ShopZio sub-menu
+	By atlcatalogconnection = By.xpath("//a[contains(text(), 'Catalog ConneXion')]"); //Locator for Catalog Connection sub-menu
+	By atljunipermarketuat = By.xpath("(//a[contains(text(), 'JuniperMarket')])[position()=2]"); //Locator for Juniper Market sub-menu
+	By atlverifycatalogconnectpage = By.xpath("//h4[contains(text(), 'Welcome to Catalog Connexion!')]"); //Locator for Catalog Connection page validation
+	By atlverifyjunipermrktpage = By.xpath("//img[@alt='JuniperMarket-Logo_Horiz-RGB-500']"); //Locator for Juniper Market page
 	By JuniperMarketProd = By.xpath("//a[contains(text(), 'JuniperMarket')]"); //Locator for Juniper Market header tab
-	By VerifyExhibitorsAndProductsSection = By.xpath("//div[@class = 'imc-section']/div[1]/div[2]/div[2]"); //Locator for verification of Exhibitors and Products section
-	By VerifyExhibitorDirectory = By.xpath("//ul[@class = 'imc-breadcrumb']/li[3]/a[1]"); // Locator for Exhibitor Directory text
-	By VerifyFloorPlans = By.xpath("//div[@class = 'imc-campus-view']"); // Locator for floor plans map
 
 
 
@@ -33,53 +36,70 @@ public class ATLExhibitorsAndProductsTabPage {
 		this.driver = driver; 			
 	} 
 
-	public WebElement getExhibitorsAndProducts() {
-		return driver.findElement(ExhibitorsAndProducts);
+	public WebElement getATLExhibitorsAndProducts() {
+		return driver.findElement(atlexhibitorsnproducts);
 	}
 
 	public WebElement getATLExhibitorDirectory() {
 		return driver.findElement(atlexhibitordirectory);
 	}
 
-	public WebElement getFloorPlans() {
-		return driver.findElement(FloorPlans);
+	public WebElement getATLFloorPlans() {
+		return driver.findElement(atlfloorplans);
 	}
 
-	public WebElement getShowSpecials() {
-		return driver.findElement(ShowSpecials);
+	public WebElement getATLTemporaries() {
+		return driver.findElement(atltemporaries);
 	}
 
-	public WebElement getTemporaries() {
-		return driver.findElement(Temporaries);
+	public WebElement getATLCategories() {
+		return driver.findElement(atlcategories);
 	}
 
-	public WebElement getNewProductIntroductions() {
-		return driver.findElement(NewProductIntroductions);
+	public WebElement getATLVerifyExhibitorsAndProductsSection() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifyexhibitorsnproductssection));
+		return driver.findElement(atlverifyexhibitorsnproductssection);
 	}
 
-	public WebElement getCategories() {
-		return driver.findElement(Categories);
-	}
-
-	public WebElement getVerifyExhibitorsAndProductsSection() throws InterruptedException {
-		Thread.sleep(5000);
-		return driver.findElement(VerifyExhibitorsAndProductsSection);
-	}
-
-	public WebElement getVerifyExhibitorDirectory() throws InterruptedException {
+	public WebElement getATLVerifyExhibitorDirectory() throws InterruptedException {
 		Thread.sleep(10000);
-		return driver.findElement(VerifyExhibitorDirectory);
+		return driver.findElement(atlverifyexhibitordirectory);
 	}
 
-	public WebElement getVerifyFloorPlans() throws InterruptedException {
-		Thread.sleep(10000);
-		return driver.findElement(VerifyFloorPlans);
+	public WebElement getATLVerifyFloorPlans() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifyfloorplans));
+		return driver.findElement(atlverifyfloorplans);
 	}
 
+	public WebElement getATLVerifyCatalogsConnectPage() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifycatalogconnectpage));
+		return driver.findElement(atlverifycatalogconnectpage);
+	}
+	
 	public WebElement getJuniperMarketProd() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(JuniperMarketProd));
 		return driver.findElement(JuniperMarketProd);
+	}
+	public WebElement getATLShopZioLink() {
+		return driver.findElement(atlshopzio);
+	}
+
+	public WebElement getATLCatalogConnection() {
+		return driver.findElement(atlcatalogconnection);
+	}
+
+	public WebElement getATLJunpiperMrktUAT() {
+		return driver.findElement(atljunipermarketuat);
+	}
+	
+	public WebElement getATLVerifyJuniperMarketUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifyjunipermrktpage));
+		return driver.findElement(atlverifyjunipermrktpage);
 	}
 }
 
