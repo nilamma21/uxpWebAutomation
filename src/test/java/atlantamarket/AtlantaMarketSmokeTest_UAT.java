@@ -12,10 +12,12 @@ import org.testng.annotations.Test;
 import pageObjects.AtlantaMarket.ATLExhibitorDirectoryPage;
 import pageObjects.AtlantaMarket.ATLExhibitorsAndProductsTabPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
+import pageObjects.AtlantaMarket.ATLMarketInfoPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.AtlantaMarket.ATLRegistrationsPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
+import pageObjects.LasVegasMarket.UXPMarketInfoPage;
 import resources.GenerateData;
 import resources.SendEmail;
 import resources.Utility;
@@ -33,6 +35,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	ATLExhibitorsAndProductsTabPage atlexhp;
 	ATLExhibitorDirectoryPage atled;
 	ATLRegistrationsPage atlregp;
+	ATLMarketInfoPage atlmi;
 	SendEmail se;
 
 	@BeforeTest
@@ -66,6 +69,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 
 		//Verify that Market Planner Home page should be displayed
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
+		Thread.sleep(6000);
 	}
 
 	@Test(priority=02)
@@ -103,8 +107,30 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		System.out.println("Global Search functionality is working properly.");
 	}
 	
-	@Test(priority=4)
-	public void TS004_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	@Test(priority=04)
+	public void TS004_VerifyMarketPlannerRegistrationsOptionTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-005: To verify Registrations option in Top Header
+
+		lap = new UXPLandingPage(driver);
+		atlps = new ATLProfileAndSettingsPage(driver);
+		atlregp = new ATLRegistrationsPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click on Welcome text
+		atlps.getATLWelcomeText().click();
+		
+		//Click Registrations option in Top Header
+		atlregp.getATLRegistrationsOptn().click();
+		
+		//Verify that user should redirect to the 'Registration Info' page.
+		Assert.assertTrue(atlregp.getATLRegistrationsInfoTab().isDisplayed());
+	}
+
+	@Test(priority=5)
+	public void TS005_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T004: To verify Exhibitor Directory
@@ -128,28 +154,80 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		System.out.println("Exhibitor Directory page is working properly.");
 	}
 	
-	@Test(priority=05)
-	public void TS005_VerifyMarketPlannerRegistrationsOptionTest() throws InterruptedException, IOException
+	@Test(priority=06)
+	public void TS006_VerifyAllLinksUnderMarketInfoTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-005: To verify Registrations option in Top Header
+		//UXP-T006: To verify links for Market info tab at Header
 
-		lap = new UXPLandingPage(driver);
-		atlps = new ATLProfileAndSettingsPage(driver);
-		atlregp = new ATLRegistrationsPage(driver);
-		
+		atlmi = new ATLMarketInfoPage(driver);
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//Click on Welcome text
-		atlps.getATLWelcomeText().click();
+		//Click Market Info tab at Header
+		atlmi.getATLMarketInfoHeader().click();
 		
-		//Click Registrations option in Top Header
-		atlregp.getATLRegistrationsOptn().click();
+		//Click on About sub-menu
+		atlmi.getATLAboutSubMenu().click();
 		
-		//Verify that user should redirect to the 'Registration Info' page.
-		Assert.assertTrue(atlregp.getATLRegistrationsInfoTab().isDisplayed());
+		//Verify that About Us page should be displayed
+		Assert.assertTrue(atlmi.getATLAboutUsPageHeader().isDisplayed());
+		
+		//Click Market Info tab at Header
+		atlmi.getATLMarketInfoHeader().click();
+				
+		//Click on Dates & Hours sub-menu
+		atlmi.getATLDatesAndHrsSubMenu().click();
+		
+		//Verify that Dates & Hours page should be displayed
+		Assert.assertTrue(atlmi.getATLMrketDatesHrsPageHeader().isDisplayed());
+		
+		//Click Market Info tab at Header
+		atlmi.getATLMarketInfoHeader().click();
+		
+		//Click on Registration sub-menu
+		atlmi.getATLRegistrationsSubMenu().click();
+		
+		//Verify that Registration  page should be displayed
+		Assert.assertTrue(atlmi.getATLRegstnPageHeader().isDisplayed());
+		
+		//Click Market Info tab at Header
+		atlmi.getATLMarketInfoHeader().click();
+		
+		//Click on Press Center sub-menu
+		atlmi.getATLPressCenterSubMenu().click();
+		
+		//Verify that Press Releases page should be displayed
+		Assert.assertTrue(atlmi.getATLPressCenterPageHeader().isDisplayed());
+		
+		//Click Market Info tab at Header
+		atlmi.getATLMarketInfoHeader().click();
+		
+		//Click on Atlanta Next sub-menu
+		atlmi.getAtlantaNextSubMenu().click();
+		
+		//Verify that Atlanta Next page should be displayed
+		Assert.assertTrue(atlmi.getATLAtlantaNextPageHeader().isDisplayed());
+		
+		//Click Market Info tab at Header
+		atlmi.getATLMarketInfoHeader().click();
+		
+		//Click on Video Gallery sub-menu
+		atlmi.getATLVideoGallerySubMenu().click();
+		
+		//Verify that Video Gallery page should be displayed
+		Assert.assertTrue(atlmi.getATLVideoGalleryPageHeader().isDisplayed());
+		
+		//Click Market Info tab at Header
+		atlmi.getATLMarketInfoHeader().click();
+		
+		//Click on Industry Partners sub-menu
+		atlmi.getATLIndustryPartSubMenu().click();
+		
+		//Verify that Video Gallery page should be displayed
+		Assert.assertTrue(atlmi.getATLIndusPartPageHeader().isDisplayed());		
 	}
-
+	
 	/*@AfterSuite
 	public void sendEmail()
 	{
