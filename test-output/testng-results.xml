@@ -1,69 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="13" passed="13">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="LVM_SmokeTestSuite" duration-ms="1635574" started-at="2022-01-25T05:51:52Z" finished-at="2022-01-25T06:19:08Z">
+  <suite name="ATLMrkt_SmokeTestSuite" duration-ms="397983" started-at="2022-01-27T12:09:25Z" finished-at="2022-01-27T12:16:03Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="1635574" started-at="2022-01-25T05:51:52Z" finished-at="2022-01-25T06:19:08Z">
-      <class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="32079" started-at="2022-01-25T11:21:52Z" finished-at="2022-01-25T11:22:25Z">
+    <test name="Test" duration-ms="397983" started-at="2022-01-27T12:09:25Z" finished-at="2022-01-27T12:16:03Z">
+      <class name="atlantamarket.AtlantaMarketSmokeTest_UAT">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="initialize" is-config="true" duration-ms="61681" started-at="2022-01-27T17:39:25Z" finished-at="2022-01-27T17:40:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="50820" started-at="2022-01-25T11:22:25Z" finished-at="2022-01-25T11:23:15Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="44973" started-at="2022-01-27T17:40:26Z" finished-at="2022-01-27T17:41:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="PASS" signature="TS002_VerifAllLinksUnderExhibitTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS002_VerifAllLinksUnderExhibitTabTest" duration-ms="52890" started-at="2022-01-25T11:23:16Z" finished-at="2022-01-25T11:24:08Z">
+        <test-method status="PASS" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="11750" started-at="2022-01-27T17:41:11Z" finished-at="2022-01-27T17:41:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifAllLinksUnderExhibitTabTest -->
-        <test-method status="PASS" signature="TS003_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS003_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="31511" started-at="2022-01-25T11:24:08Z" finished-at="2022-01-25T11:24:40Z">
+        </test-method> <!-- TS002_VerifyMarketPlannerProfileAndSettingsOptionTest -->
+        <test-method status="PASS" signature="TS003_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS003_VerifyGlobalSearchFunctionalityTest" duration-ms="10956" started-at="2022-01-27T17:41:23Z" finished-at="2022-01-27T17:41:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS003_VerifyMarketPlannerProfileAndSettingsOptionTest -->
-        <test-method status="PASS" signature="TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest" duration-ms="96695" started-at="2022-01-25T11:24:40Z" finished-at="2022-01-25T11:26:17Z">
+        </test-method> <!-- TS003_VerifyGlobalSearchFunctionalityTest -->
+        <test-method status="PASS" signature="TS004_VerifyMarketPlannerRegistrationsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS004_VerifyMarketPlannerRegistrationsOptionTest" duration-ms="7924" started-at="2022-01-27T17:41:34Z" finished-at="2022-01-27T17:41:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
-        <test-method status="PASS" signature="TS005_VerifyAllLinksUnderMarketInfoTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS005_VerifyAllLinksUnderMarketInfoTabTest" duration-ms="179489" started-at="2022-01-25T11:26:17Z" finished-at="2022-01-25T11:29:16Z">
+        </test-method> <!-- TS004_VerifyMarketPlannerRegistrationsOptionTest -->
+        <test-method status="PASS" signature="TS005_VerifyExhibitorDirectoryTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS005_VerifyExhibitorDirectoryTest" duration-ms="22754" started-at="2022-01-27T17:41:42Z" finished-at="2022-01-27T17:42:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyAllLinksUnderMarketInfoTabTest -->
-        <test-method status="PASS" signature="TS006_VerifyAllLinksUnderExploreMarketTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS006_VerifyAllLinksUnderExploreMarketTabTest" duration-ms="139684" started-at="2022-01-25T11:29:16Z" finished-at="2022-01-25T11:31:36Z">
+        </test-method> <!-- TS005_VerifyExhibitorDirectoryTest -->
+        <test-method status="PASS" signature="TS006_VerifyAllLinksUnderMarketInfoTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS006_VerifyAllLinksUnderMarketInfoTabTest" duration-ms="121175" started-at="2022-01-27T17:42:05Z" finished-at="2022-01-27T17:44:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS006_VerifyAllLinksUnderExploreMarketTabTest -->
-        <test-method status="PASS" signature="TS007_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS007_VerifyGlobalSearchFunctionalityTest" duration-ms="14443" started-at="2022-01-25T11:31:36Z" finished-at="2022-01-25T11:31:50Z">
+        </test-method> <!-- TS006_VerifyAllLinksUnderMarketInfoTabTest -->
+        <test-method status="PASS" signature="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest" duration-ms="116703" started-at="2022-01-27T17:44:06Z" finished-at="2022-01-27T17:46:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyGlobalSearchFunctionalityTest -->
-        <test-method status="PASS" signature="TS008_VerifyFooterLinksTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS008_VerifyFooterLinksTest" duration-ms="565250" started-at="2022-01-25T11:31:50Z" finished-at="2022-01-25T11:41:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifyFooterLinksTest -->
-        <test-method status="PASS" signature="TS009_VerifyExhibitorDirectoryTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS009_VerifyExhibitorDirectoryTest" duration-ms="22556" started-at="2022-01-25T11:41:16Z" finished-at="2022-01-25T11:41:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifyExhibitorDirectoryTest -->
-        <test-method status="PASS" signature="TS010_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS010_VerifyAllLinksUnderAttendTabTest" duration-ms="205670" started-at="2022-01-25T11:41:38Z" finished-at="2022-01-25T11:45:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_VerifyAllLinksUnderAttendTabTest -->
-        <test-method status="PASS" signature="TS011_VerifyAllLinksUnderYearRoundTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS011_VerifyAllLinksUnderYearRoundTabTest" duration-ms="88286" started-at="2022-01-25T11:45:04Z" finished-at="2022-01-25T11:46:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_VerifyAllLinksUnderYearRoundTabTest -->
-        <test-method status="PASS" signature="TS013_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS013_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="85761" started-at="2022-01-25T11:46:32Z" finished-at="2022-01-25T11:47:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS013_VerifyAllSocialMediaLinksOnFooterTest -->
-        <test-method status="PASS" signature="TS012_VerifyHeaderChannelLinksTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS012_VerifyHeaderChannelLinksTest" duration-ms="70198" started-at="2022-01-25T11:47:58Z" finished-at="2022-01-25T11:49:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS012_VerifyHeaderChannelLinksTest -->
-      </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest_PROD -->
+        </test-method> <!-- TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
+      </class> <!-- atlantamarket.AtlantaMarketSmokeTest_UAT -->
     </test> <!-- Test -->
-  </suite> <!-- LVM_SmokeTestSuite -->
+  </suite> <!-- ATLMrkt_SmokeTestSuite -->
 </testng-results>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="LVM_SmokeTestSuite">
+<!-- <suite name="LVM_SmokeTestSuite">
 	<listners>
 		<listner class-name="lasvegasmarket.TestListeners" />
 	</listners>
@@ -10,9 +10,9 @@
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
 		</classes>
 	</test>
-</suite>
+</suite> -->
 
-<!-- <suite name="ATLMrkt_SmokeTestSuite">
+<suite name="ATLMrkt_SmokeTestSuite">
 	<listners>
 		<listner class-name="atlantamarket.TestListeners" />
 	</listners>
@@ -20,9 +20,9 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
-			<methods> 
-				<include name="TS006_VerifyAllLinksUnderMarketInfoTabTest" /> 
-			</methods>
+<!-- 			<methods> 
+				<include name="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest" /> 
+			</methods> -->
 		</classes>
 	</test>
-</suite>  -->
+</suite>

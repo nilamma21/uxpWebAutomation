@@ -15,6 +15,7 @@ import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLMarketInfoPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.AtlantaMarket.ATLRegistrationsPage;
+import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import pageObjects.LasVegasMarket.UXPMarketInfoPage;
@@ -106,7 +107,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
 	}
-	
+
 	@Test(priority=04)
 	public void TS004_VerifyMarketPlannerRegistrationsOptionTest() throws InterruptedException, IOException
 	{
@@ -116,15 +117,15 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		lap = new UXPLandingPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
 		atlregp = new ATLRegistrationsPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on Welcome text
 		atlps.getATLWelcomeText().click();
-		
+
 		//Click Registrations option in Top Header
 		atlregp.getATLRegistrationsOptn().click();
-		
+
 		//Verify that user should redirect to the 'Registration Info' page.
 		Assert.assertTrue(atlregp.getATLRegistrationsInfoTab().isDisplayed());
 	}
@@ -138,22 +139,22 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atled = new ATLExhibitorDirectoryPage(driver);
 		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Verify exhibitor data is displayed or not as per search criteria
 
 		atled.getATLExhibitorDirectory().click();
-		Assert.assertEquals(atlexhp.getVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
+		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
 		System.out.println("Exhibitor Directory is opened properly.");
-		
+
 		atled.getATLExhDirtSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		atled.getATLExhDirtSearchBtn().click();
 		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");
 	}
-	
+
 	@Test(priority=06)
 	public void TS006_VerifyAllLinksUnderMarketInfoTabTest() throws InterruptedException, IOException
 	{
@@ -166,68 +167,137 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-		
+
 		//Click on About sub-menu
 		atlmi.getATLAboutSubMenu().click();
-		
+
 		//Verify that About Us page should be displayed
 		Assert.assertTrue(atlmi.getATLAboutUsPageHeader().isDisplayed());
-		
+
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-				
+
 		//Click on Dates & Hours sub-menu
 		atlmi.getATLDatesAndHrsSubMenu().click();
-		
+
 		//Verify that Dates & Hours page should be displayed
 		Assert.assertTrue(atlmi.getATLMrketDatesHrsPageHeader().isDisplayed());
-		
+
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-		
+
 		//Click on Registration sub-menu
 		atlmi.getATLRegistrationsSubMenu().click();
-		
+
 		//Verify that Registration  page should be displayed
 		Assert.assertTrue(atlmi.getATLRegstnPageHeader().isDisplayed());
-		
+
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-		
+
 		//Click on Press Center sub-menu
 		atlmi.getATLPressCenterSubMenu().click();
-		
+
 		//Verify that Press Releases page should be displayed
 		Assert.assertTrue(atlmi.getATLPressCenterPageHeader().isDisplayed());
-		
+
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-		
+
 		//Click on Atlanta Next sub-menu
 		atlmi.getAtlantaNextSubMenu().click();
-		
+
 		//Verify that Atlanta Next page should be displayed
 		Assert.assertTrue(atlmi.getATLAtlantaNextPageHeader().isDisplayed());
-		
+
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-		
+
 		//Click on Video Gallery sub-menu
 		atlmi.getATLVideoGallerySubMenu().click();
-		
+
 		//Verify that Video Gallery page should be displayed
 		Assert.assertTrue(atlmi.getATLVideoGalleryPageHeader().isDisplayed());
-		
+
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-		
+
 		//Click on Industry Partners sub-menu
 		atlmi.getATLIndustryPartSubMenu().click();
-		
+
 		//Verify that Video Gallery page should be displayed
 		Assert.assertTrue(atlmi.getATLIndusPartPageHeader().isDisplayed());		
 	}
-	
+
+	@Test(priority=07)
+	public void TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-007: To verify the Exhibitors & Products menu overview and it's functionality
+
+		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click ExhibitorsAndProductsTab at Header
+
+		atlexhp.getATLExhibitorsAndProducts().click();
+		Assert.assertTrue(atlexhp.getATLVerifyExhibitorsAndProductsSection().isDisplayed());
+		System.out.println("Exhibitors and Products section options are displayed properly");
+
+		//Click Exhibitor Directory option under Exhibitors and Products
+
+		atlexhp.getATLExhibitorDirectory().click();
+		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
+		System.out.println("Exhibitory Directory section is displayed properly");
+		atlexhp.getATLExhibitorsAndProducts().click();
+
+		//Click Floor Plans option under Exhibitors and Products
+
+		atlexhp.getATLFloorPlans().click();
+		Assert.assertTrue(atlexhp.getATLVerifyFloorPlans().isDisplayed());
+		System.out.println("Floor Plans section is displayed properly");
+		atlexhp.getATLExhibitorsAndProducts().click();
+
+		//Click Temporaries option under Exhibitors and Products
+
+		atlexhp.getATLTemporaries().click();
+		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Temporaries");
+		System.out.println("Temporaries section is displayed properly");
+		atlexhp.getATLExhibitorsAndProducts().click();
+
+		//Click Categories option under Exhibitors and Products
+
+		atlexhp.getATLCategories().click();
+		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Categories");
+		System.out.println("Categories section is displayed properly");
+
+		//Click on ShopZio sub-menu
+		atlexhp.getATLExhibitorsAndProducts().click();
+		atlexhp.getATLShopZioLink().click();
+		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
+		System.out.println("Exhibitor Directory page is displayed properly");
+		driver.get(prop.getProperty("atlmrkturl"));
+		Thread.sleep(6000);
+		
+		//Click on Catalog Connection sub-menu
+		atlexhp.getATLExhibitorsAndProducts().click();
+		atlexhp.getATLCatalogConnection().click();
+		Assert.assertTrue(atlexhp.getATLVerifyCatalogsConnectPage().isDisplayed());
+		System.out.println("Catalogs Connection page is displayed properly");
+		driver.get(prop.getProperty("atlmrkturl"));
+		Thread.sleep(6000);
+		
+		//Click on Juniper sub-menu
+		atlexhp.getATLExhibitorsAndProducts().click();
+		atlexhp.getATLJunpiperMrktUAT().click();
+		Assert.assertTrue(atlexhp.getATLVerifyJuniperMarketUAT().isDisplayed());
+		System.out.println("Juniper Market page is displayed properly");
+		driver.get(prop.getProperty("atlmrkturl"));
+		Thread.sleep(6000);
+	}
+
+
 	/*@AfterSuite
 	public void sendEmail()
 	{
