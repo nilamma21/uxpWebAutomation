@@ -5,8 +5,8 @@
     <classes>
       <class name="atlantamarket.AtlantaMarketSmokeTest_UAT">
         <methods>
-          <include name="TS008_VerifAllLinksUnderExhibitTabTest"/>
           <include name="initialize"/>
+          <include name="TS010_VerifyAllSocialMediaLinksOnFooterTest"/>
         </methods>
       </class> <!-- atlantamarket.AtlantaMarketSmokeTest_UAT -->
     </classes>

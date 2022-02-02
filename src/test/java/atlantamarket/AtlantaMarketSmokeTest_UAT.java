@@ -9,15 +9,19 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import pageObjects.AtlantaMarket.ATLAllChannelsLinksPage;
 import pageObjects.AtlantaMarket.ATLExhibitPage;
 import pageObjects.AtlantaMarket.ATLExhibitorDirectoryPage;
 import pageObjects.AtlantaMarket.ATLExhibitorsAndProductsTabPage;
+import pageObjects.AtlantaMarket.ATLFooterLinksNavigationPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLMarketInfoPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.AtlantaMarket.ATLRegistrationsPage;
 import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
+import pageObjects.LasVegasMarket.UXPFooterLinksNavigationPage;
+import pageObjects.LasVegasMarket.UXPHeaderChannelLinksPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import pageObjects.LasVegasMarket.UXPMarketInfoPage;
@@ -40,6 +44,8 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	ATLRegistrationsPage atlregp;
 	ATLMarketInfoPage atlmi;
 	ATLExhibitPage atlexh;
+	ATLAllChannelsLinksPage atlch;
+	ATLFooterLinksNavigationPage atlfl;
 	SendEmail se;
 
 	@BeforeTest
@@ -387,6 +393,103 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
 
 		driver.get(prop.getProperty("atlmrkturl"));
+	}
+
+	@Test(priority=9)
+	public void TS009_VerifyAllChannelsLinksTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-TS009: To verify all channels links in Header
+	
+		atlch = new ATLAllChannelsLinksPage(driver);
+	
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
+		//Click Atlanta Market channel link and verify result
+		atlch.getAtlantaMarket().click();
+		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
+		System.out.println("Atlanta Market channel link is working properly.");
+		driver.get(prop.getProperty("atlmrkturl"));
+	
+		//Click Atlanta Apparel channel link and verify result
+		atlch.getAtlantaApparel().click();
+		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Apparel at AmericasMart"));
+		System.out.println("Atlanta Apparel channel link is working properly.");
+		driver.get(prop.getProperty("atlmrkturl"));
+	
+		//Click Americas Mart channel link and verify result
+		atlch.getAmericasMart().click();
+		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Wholesale Gift, Home, Rug and Apparel Markets"));
+		System.out.println("Americas Mart channel link is working properly.");
+		driver.get(prop.getProperty("atlmrkturl"));
+	
+		//Click IMC High Point Market channel link and verify result
+		atlch.getHighPoint().click();
+		Assert.assertTrue(driver.getTitle().contains("High Point"));
+		System.out.println("High Point Market channel link is working properly.");
+		driver.get(prop.getProperty("atlmrkturl"));
+	
+		//Click Lav Vegas Market channel link and verify result
+		atlch.getLasVegas().click();
+		Assert.assertTrue(driver.getTitle().contains("Las Vegas"));
+		System.out.println("Las Vegas Market channel link is working properly.");
+		driver.get(prop.getProperty("atlmrkturl"));
+	}
+
+	@Test(priority=10)
+	public void TS010_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T010: To verify the all social media links and it's redirection
+	
+		atlfl = new ATLFooterLinksNavigationPage(driver);
+	
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
+		//Scroll till footer links
+		utl.scrollToElement(atlfl.getHighPointMarket());
+	
+		//In app footer click on 'Facebook' icon and verify results
+		atlfl.getFacebookIcon().click();
+
+		Thread.sleep(10000);
+		//Verify that 'ATL Facebook' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/AmericasmartAtl"));
+	
+		driver.get(prop.getProperty("atlmrkturl"));
+	
+		/*		//Click on Instagram icon
+		fl.getInstagramIcon().click();
+	
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(10000);
+		//Verify that 'ATL Instagram' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.instagram.com/americasmartatl/"));
+		
+		driver.get(prop.getProperty("atlmrkturl"));
+		 */
+	
+		//Click on You Tube icon
+		atlfl.getYouTubeIcon().click();
+
+		Thread.sleep(10000);
+		//Verify that 'ATL You Tube' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.youtube.com"));
+	
+		driver.get(prop.getProperty("atlmrkturl"));
+	
+		/*//Click on Twitter icon
+		fl.getTwitterIcon().click();
+	
+		Thread.sleep(10000);
+		//Verify that 'ATL Twitter' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.twitter.com/americasmartatl")); 
+		
+		driver.get(prop.getProperty("atlmrkturl"));
+		*/
 	}
 
 	/*@AfterSuite
