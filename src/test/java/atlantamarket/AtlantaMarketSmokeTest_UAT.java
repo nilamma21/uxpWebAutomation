@@ -9,12 +9,14 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import pageObjects.AtlantaMarket.ATLExhibitPage;
 import pageObjects.AtlantaMarket.ATLExhibitorDirectoryPage;
 import pageObjects.AtlantaMarket.ATLExhibitorsAndProductsTabPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLMarketInfoPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.AtlantaMarket.ATLRegistrationsPage;
+import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
@@ -37,6 +39,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	ATLExhibitorDirectoryPage atled;
 	ATLRegistrationsPage atlregp;
 	ATLMarketInfoPage atlmi;
+	ATLExhibitPage atlexh;
 	SendEmail se;
 
 	@BeforeTest
@@ -54,7 +57,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		Thread.sleep(10000);
 	}
 
-	@Test(priority=01)
+	@Test(priority=1)
 	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -73,7 +76,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		Thread.sleep(6000);
 	}
 
-	@Test(priority=02)
+	@Test(priority=2)
 	public void TS002_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -91,7 +94,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-atlmkt.imcmvdp.com/Profile"));
 		System.out.println("Profile and Settings section options are displayed properly");
 	}
-	@Test(priority=03)
+	@Test(priority=3)
 	public void TS003_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -108,7 +111,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		System.out.println("Global Search functionality is working properly.");
 	}
 
-	@Test(priority=04)
+	@Test(priority=4)
 	public void TS004_VerifyMarketPlannerRegistrationsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -155,7 +158,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		System.out.println("Exhibitor Directory page is working properly.");
 	}
 
-	@Test(priority=06)
+	@Test(priority=6)
 	public void TS006_VerifyAllLinksUnderMarketInfoTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -229,7 +232,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		Assert.assertTrue(atlmi.getATLIndusPartPageHeader().isDisplayed());		
 	}
 
-	@Test(priority=07)
+	@Test(priority=7)
 	public void TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -279,7 +282,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		System.out.println("Exhibitor Directory page is displayed properly");
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(6000);
-		
+
 		//Click on Catalog Connection sub-menu
 		atlexhp.getATLExhibitorsAndProducts().click();
 		atlexhp.getATLCatalogConnection().click();
@@ -287,7 +290,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		System.out.println("Catalogs Connection page is displayed properly");
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(6000);
-		
+
 		//Click on Juniper sub-menu
 		atlexhp.getATLExhibitorsAndProducts().click();
 		atlexhp.getATLJunpiperMrktUAT().click();
@@ -297,6 +300,94 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		Thread.sleep(6000);
 	}
 
+	@Test(priority=8)
+	public void TS008_VerifAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-008: To verify the Exhibit menu overview and it's functionality
+
+		lap = new UXPLandingPage(driver);
+		atlexh = new ATLExhibitPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);						
+
+		//Click on Exhibit tab
+		atlexh.getATLExhibitTab().click();
+		
+		//Click on Exhibit at Atlanta Market sub-menu
+		atlexh.getATLExhibitAtAtlanta().click();
+		
+		//Verify that Exhibit page should be displayed
+		Assert.assertTrue(atlexh.getATLExhibitBrdcrumb().isDisplayed());
+		
+		//Click on Exhibit tab
+		atlexh.getATLExhibitTab().click();
+
+		//Click on 'Why Exhibit?' sub-menu
+		atlexh.getATLWhyExhibitMenu().click();
+
+		//Verify that 'Exhibit' page should be displayed
+		Assert.assertTrue(atlexh.getATLExhibitBrdcrumb().isDisplayed());
+
+		//Click on Exhibit tab
+		atlexh.getATLExhibitTab().click();
+
+		//Click on 'Apply to Exhibit' sub-menu
+		atlexh.getATLApplyToExhibit().click();
+
+		//Verify that 'Apply to exhibit' page should be displayed
+		Assert.assertEquals(atlexh.getATLApplyToExhibitBrdcrmb().getText(), "Apply to Exhibit");
+
+		//Click on Exhibit tab
+		atlexh.getATLExhibitTab().click();
+
+		//Click on 'Exhibitor Registration' link
+		atlexh.getATLExhibitorRegtnMenu().click();
+
+		//Verify that Exhibitor Registration page should be displayed
+		Assert.assertTrue(atlexh.getATLExhRegstnBrdcrmb().getText().contains("Exhibitor Registration"));
+		
+		//Click on Exhibit tab
+		atlexh.getATLExhibitTab().click();
+				
+		// Store the current window handle
+		String winHandleBefore = driver.getWindowHandle();
+				
+		//Click on Exhibitor Portal Login' sub-menu
+		atlexh.getATLExhibitorPortalLoginMenu().click();
+
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+
+		//Verify that 'EXP Login' page should be displayed
+		Assert.assertTrue(atlexh.getATLEXPLoginPageTitle().isDisplayed());
+
+		// Close the new window, if that window no more required
+		driver.close();
+
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);
+
+		//Click on Exhibitor Resources sub-menu
+		atlexh.getATLExhibitorResources().click();
+		
+		//Verify that Exhibitor Resources page should be displayed
+		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Exhibitor Resources"));
+		
+		//Click on Exhibit tab
+		atlexh.getATLExhibitTab().click();
+		
+		//Click on Juniper sub-menu
+		atlexh.getATLJuniperMenu().click();
+
+		Thread.sleep(10000);
+		//Verify that 'Juniper' page should be displayed
+		Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
+
+		driver.get(prop.getProperty("atlmrkturl"));
+	}
 
 	/*@AfterSuite
 	public void sendEmail()
