@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
 <!-- <suite name="LVM_SmokeTestSuite">
 	<listners>
 		<listner class-name="lasvegasmarket.TestListeners" />
@@ -20,9 +19,9 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
-<!-- 			<methods> 
-				<include name="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest" /> 
-			</methods> -->
+			<methods> 
+				<include name="TS008_VerifAllLinksUnderExhibitTabTest" /> 
+			</methods>
 		</classes>
 	</test>
 </suite>

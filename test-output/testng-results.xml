@@ -1,44 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_SmokeTestSuite" duration-ms="397983" started-at="2022-01-27T12:09:25Z" finished-at="2022-01-27T12:16:03Z">
+  <suite name="ATLMrkt_SmokeTestSuite" duration-ms="145878" started-at="2022-02-02T06:13:11Z" finished-at="2022-02-02T06:15:36Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="397983" started-at="2022-01-27T12:09:25Z" finished-at="2022-01-27T12:16:03Z">
+    <test name="Test" duration-ms="145878" started-at="2022-02-02T06:13:11Z" finished-at="2022-02-02T06:15:36Z">
       <class name="atlantamarket.AtlantaMarketSmokeTest_UAT">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="initialize" is-config="true" duration-ms="61681" started-at="2022-01-27T17:39:25Z" finished-at="2022-01-27T17:40:26Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5e5792a0]" name="initialize" is-config="true" duration-ms="56564" started-at="2022-02-02T11:43:11Z" finished-at="2022-02-02T11:44:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="44973" started-at="2022-01-27T17:40:26Z" finished-at="2022-01-27T17:41:11Z">
+        <test-method status="PASS" signature="TS008_VerifAllLinksUnderExhibitTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5e5792a0]" name="TS008_VerifAllLinksUnderExhibitTabTest" duration-ms="89238" started-at="2022-02-02T11:44:07Z" finished-at="2022-02-02T11:45:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="PASS" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="11750" started-at="2022-01-27T17:41:11Z" finished-at="2022-01-27T17:41:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyMarketPlannerProfileAndSettingsOptionTest -->
-        <test-method status="PASS" signature="TS003_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS003_VerifyGlobalSearchFunctionalityTest" duration-ms="10956" started-at="2022-01-27T17:41:23Z" finished-at="2022-01-27T17:41:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyGlobalSearchFunctionalityTest -->
-        <test-method status="PASS" signature="TS004_VerifyMarketPlannerRegistrationsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS004_VerifyMarketPlannerRegistrationsOptionTest" duration-ms="7924" started-at="2022-01-27T17:41:34Z" finished-at="2022-01-27T17:41:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyMarketPlannerRegistrationsOptionTest -->
-        <test-method status="PASS" signature="TS005_VerifyExhibitorDirectoryTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS005_VerifyExhibitorDirectoryTest" duration-ms="22754" started-at="2022-01-27T17:41:42Z" finished-at="2022-01-27T17:42:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyExhibitorDirectoryTest -->
-        <test-method status="PASS" signature="TS006_VerifyAllLinksUnderMarketInfoTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS006_VerifyAllLinksUnderMarketInfoTabTest" duration-ms="121175" started-at="2022-01-27T17:42:05Z" finished-at="2022-01-27T17:44:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyAllLinksUnderMarketInfoTabTest -->
-        <test-method status="PASS" signature="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@523884b2]" name="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest" duration-ms="116703" started-at="2022-01-27T17:44:06Z" finished-at="2022-01-27T17:46:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
+        </test-method> <!-- TS008_VerifAllLinksUnderExhibitTabTest -->
       </class> <!-- atlantamarket.AtlantaMarketSmokeTest_UAT -->
     </test> <!-- Test -->
   </suite> <!-- ATLMrkt_SmokeTestSuite -->

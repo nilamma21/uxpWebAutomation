@@ -319,7 +319,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click Registration Details option under Market Info
 
 		mi.getRegistrationDetails().click();
-		Assert.assertTrue(mi.getVerifyRegistrationDetailsProd().isDisplayed());
+		Thread.sleep(4000);
+		Assert.assertEquals(driver.getCurrentUrl(), "https://www.lasvegasmarket.com/Market-Info/Registration-Details");
 		System.out.println("Registration Details section is displayed properly");
 		mi.getMarketInfoHeader().click();
 
@@ -693,14 +694,14 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click Registration tab under Attend section
 
 		at.getRegistration().click();
-		Assert.assertTrue(mi.getVerifyRegistrationDetailsProd().isDisplayed());
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Market-Info/Registration-Details"));
 		System.out.println("Registration section is displayed properly");
 		at.getAttend().click();
 
 		//Click International tab under Attend section
 
 		at.getInternational().click();
-		Assert.assertTrue(mi.getVerifyRegistrationDetailsProd().isDisplayed());
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend/International"));
 		System.out.println("International section is displayed properly");
 		at.getAttend().click();
 

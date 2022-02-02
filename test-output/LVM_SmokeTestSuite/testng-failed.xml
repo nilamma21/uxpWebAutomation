@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [LVM_SmokeTestSuite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS010_VerifyAllLinksUnderAttendTabTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest_PROD -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [LVM_SmokeTestSuite] -->
