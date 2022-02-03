@@ -1,56 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_SmokeTestSuite" duration-ms="745966" started-at="2022-02-02T09:24:22Z" finished-at="2022-02-02T09:36:48Z">
+  <suite name="ATLMrkt_SmokeTestSuite" duration-ms="1048011" started-at="2022-02-03T11:01:23Z" finished-at="2022-02-03T11:18:51Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="745966" started-at="2022-02-02T09:24:22Z" finished-at="2022-02-02T09:36:48Z">
+    <test name="Test" duration-ms="1048011" started-at="2022-02-03T11:01:23Z" finished-at="2022-02-03T11:18:51Z">
       <class name="atlantamarket.AtlantaMarketSmokeTest_UAT">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="initialize" is-config="true" duration-ms="58285" started-at="2022-02-02T14:54:22Z" finished-at="2022-02-02T14:55:20Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5e5792a0]" name="initialize" is-config="true" duration-ms="92472" started-at="2022-02-03T16:31:23Z" finished-at="2022-02-03T16:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="39060" started-at="2022-02-02T14:55:20Z" finished-at="2022-02-02T14:55:59Z">
+        <test-method status="PASS" signature="TS011_VerifyFooterLinksTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5e5792a0]" name="TS011_VerifyFooterLinksTest" duration-ms="955409" started-at="2022-02-03T16:32:56Z" finished-at="2022-02-03T16:48:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="PASS" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="11455" started-at="2022-02-02T14:55:59Z" finished-at="2022-02-02T14:56:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyMarketPlannerProfileAndSettingsOptionTest -->
-        <test-method status="PASS" signature="TS003_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS003_VerifyGlobalSearchFunctionalityTest" duration-ms="11269" started-at="2022-02-02T14:56:11Z" finished-at="2022-02-02T14:56:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyGlobalSearchFunctionalityTest -->
-        <test-method status="PASS" signature="TS004_VerifyMarketPlannerRegistrationsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS004_VerifyMarketPlannerRegistrationsOptionTest" duration-ms="10577" started-at="2022-02-02T14:56:22Z" finished-at="2022-02-02T14:56:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyMarketPlannerRegistrationsOptionTest -->
-        <test-method status="PASS" signature="TS005_VerifyExhibitorDirectoryTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS005_VerifyExhibitorDirectoryTest" duration-ms="27471" started-at="2022-02-02T14:56:33Z" finished-at="2022-02-02T14:57:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyExhibitorDirectoryTest -->
-        <test-method status="PASS" signature="TS006_VerifyAllLinksUnderMarketInfoTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS006_VerifyAllLinksUnderMarketInfoTabTest" duration-ms="154563" started-at="2022-02-02T14:57:00Z" finished-at="2022-02-02T14:59:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyAllLinksUnderMarketInfoTabTest -->
-        <test-method status="PASS" signature="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest" duration-ms="156833" started-at="2022-02-02T14:59:35Z" finished-at="2022-02-02T15:02:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
-        <test-method status="PASS" signature="TS008_VerifAllLinksUnderExhibitTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS008_VerifAllLinksUnderExhibitTabTest" duration-ms="93349" started-at="2022-02-02T15:02:11Z" finished-at="2022-02-02T15:03:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifAllLinksUnderExhibitTabTest -->
-        <test-method status="PASS" signature="TS009_VerifyAllChannelsLinksTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS009_VerifyAllChannelsLinksTest" duration-ms="108509" started-at="2022-02-02T15:03:45Z" finished-at="2022-02-02T15:05:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifyAllChannelsLinksTest -->
-        <test-method status="PASS" signature="TS010_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS010_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="74499" started-at="2022-02-02T15:05:33Z" finished-at="2022-02-02T15:06:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_VerifyAllSocialMediaLinksOnFooterTest -->
+        </test-method> <!-- TS011_VerifyFooterLinksTest -->
       </class> <!-- atlantamarket.AtlantaMarketSmokeTest_UAT -->
     </test> <!-- Test -->
   </suite> <!-- ATLMrkt_SmokeTestSuite -->
