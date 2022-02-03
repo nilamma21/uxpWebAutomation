@@ -19,9 +19,9 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
-<!-- 			<methods> 
+ 			<methods> 
 				<include name="TS010_VerifyAllSocialMediaLinksOnFooterTest" /> 
-			</methods> -->
+			</methods>
 		</classes>
 	</test>
 </suite>
