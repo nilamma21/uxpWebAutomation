@@ -100,7 +100,7 @@ public class UXPAttendPage {
 	}
 	
 	public WebElement getVerifyAttendSection() throws InterruptedException {
-		Thread.sleep(5000);;
+		Thread.sleep(5000);
 		return driver.findElement(VerifyAttendSection);
 
 	}
