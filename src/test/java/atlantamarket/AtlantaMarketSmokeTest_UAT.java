@@ -16,6 +16,7 @@ import pageObjects.AtlantaMarket.ATLExhibitorsAndProductsTabPage;
 import pageObjects.AtlantaMarket.ATLFooterLinksNavigationPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLMarketInfoPage;
+import pageObjects.AtlantaMarket.ATLNewsAndTrendsTabPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.AtlantaMarket.ATLRegistrationsPage;
 import pageObjects.LasVegasMarket.UXPExhibitPage;
@@ -46,6 +47,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	ATLExhibitPage atlexh;
 	ATLAllChannelsLinksPage atlch;
 	ATLFooterLinksNavigationPage atlfl;
+	ATLNewsAndTrendsTabPage atlnt;
 	SendEmail se;
 
 	@BeforeTest
@@ -58,7 +60,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
-		Thread.sleep(8000);
+		Thread.sleep(3000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
 	}
@@ -490,6 +492,97 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		
 		driver.get(prop.getProperty("atlmrkturl"));
 		*/
+	}
+
+	@Test(priority=11)
+	public void TS011_VerifyAllNewsAndTrendsMenuTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T011: To verify the all News & Trends tap Menu and it's redirection
+	
+		atlnt = new ATLNewsAndTrendsTabPage(driver);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		//Click on News And Tredns Tap
+		atlnt.getATLNewsAndTrendsTap().click();
+		//Click on News And Trends and Verify Page
+		atlnt.getATLNewsAndTrends().click();
+		Assert.assertTrue(atlnt.getATLNewsAndTrendsPageHeader().getText().contains("News & Trends"));
+		System.out.println("News And Trends page");
+		
+		atlnt.getATLNewsAndTrendsTap().click();
+		//Click on News And Tredns Tap
+		System.out.println("News And Trends tap");
+		atlnt.getATLatlMarketSnapshot().click();
+		//Click on MarketSnapshot and Verify Page
+		Assert.assertTrue(atlnt.getATLMarketSnapshotPageHeader().getText().contains("Market Snapshot"));
+		System.out.println("Market Snapshot page");
+				
+		atlnt.getATLNewsAndTrendsTap().click();
+		//Click on News And Tredns Tap
+		System.out.println("News And Trends tap");
+		atlnt.getATLWebinarAndEducation().click();
+		//Click on Webinar And Education and Verify Page
+		Assert.assertTrue(atlnt.getATLWebinarAndEducationPageHeader().getText().contains("Webinars & Education"));
+		System.out.println("Webinars & Education page");
+						
+		atlnt.getATLNewsAndTrendsTap().click();
+		//Click on News And Tredns Tap
+		System.out.println("News And Trends tap");
+		atlnt.getATLatlAheadCurve().click();
+		//Click on Webinar And Education and Verify Page
+		Assert.assertTrue(atlnt.getATLAheadCurvePageHeader().getText().contains("Ahead of the Curve"));
+		System.out.println("Ahead of the Curve page");
+		
+		atlnt.getATLNewsAndTrendsTap().click();
+		//Click on News And Tredns Tap
+		System.out.println("News And Trends tap");
+		atlnt.getATLShopTheShow().click();
+		//Click on Shop the and Verify Page
+		Assert.assertTrue(atlnt.getATLShopTheShowPageHeader().getText().contains("Shop the "));
+		System.out.println("Shop the show page header");
+		
+		atlnt.getATLNewsAndTrendsTap().click();
+		//Click on News And Tredns Tap
+		System.out.println("News And Trends tap");
+		atlnt.getATLPressReleases().click();
+		//Click on Press Releases and Verify Page
+		Assert.assertTrue(atlnt.getATLPressReleasesPageHeader().getText().contains("Press Releases"));
+		System.out.println("Press Releases page");
+		
+		atlnt.getATLNewsAndTrendsTap().click();
+		//Click on News And Tredns Tap
+		System.out.println("News And Trends tap");
+		atlnt.getATLPublicationsLibrary().click();
+		//Click on Publications Library and Verify Page
+		Assert.assertTrue(atlnt.getATLPublicationsLibraryPageHeader().getText().contains("Publications Library"));
+		System.out.println("Publications Library page");
+		
+		atlnt.getATLNewsAndTrendsTap().click();
+		//Click on News And Tredns Tap
+		System.out.println("News And Trends tap");
+		atlnt.getATLInTheNews().click();
+		//Click on In the News and Verify Page
+		Assert.assertTrue(atlnt.getATLInTheNewsPageHeader().getText().contains("In the News"));
+		System.out.println("In The News page");
+		
+		atlnt.getATLNewsAndTrendsTap().click();
+		//Click on News And Tredns Tap
+		System.out.println("News And Trends tap");
+		atlnt.getATLAtlantaNext().click();
+		//Click on Atlanta Next and Verify Page
+		Assert.assertTrue(atlnt.getATLAtlantaNextHeader().getText().contains("Atlanta Next"));
+		System.out.println("In Atlanta Next page");
+		
+		atlnt.getATLNewsAndTrendsTap().click();
+		//Click on News And Tredns Tap
+		System.out.println("News And Trends tap");
+		atlnt.getATLPortmanPeachtree().click();
+		//Click on Portman Peachtree and Verify Page
+		Assert.assertTrue(atlnt.getATLPortmanPeachtreetHeader().isDisplayed());
+		System.out.println("In Portman Peachtreet page");
+		
+		
 	}
 
 	/*@AfterSuite
