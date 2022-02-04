@@ -20,8 +20,13 @@
 		<classes>
 			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
 			<methods> 
+
 				<include name="TS011_VerifyAllNewsAndTrendsMenuTest" /> 
 			</methods>
+
+				<include name="TS011_VerifyFooterLinksTest" /> 
+			</methods> 
+
 		</classes>
 	</test>
 </suite>

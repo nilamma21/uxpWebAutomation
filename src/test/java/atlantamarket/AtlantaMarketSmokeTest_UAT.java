@@ -48,6 +48,11 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	ATLAllChannelsLinksPage atlch;
 	ATLFooterLinksNavigationPage atlfl;
 	ATLNewsAndTrendsTabPage atlnt;
+
+	UXPExhibitorsAndProductsTabPage exhp;
+	UXPMarketInfoPage mi;
+	UXPFooterLinksNavigationPage fl;
+
 	SendEmail se;
 
 	@BeforeTest
@@ -288,7 +293,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		atlexhp.getATLShopZioLink().click();
 		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
 		System.out.println("Exhibitor Directory page is displayed properly");
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 		Thread.sleep(6000);
 
 		//Click on Catalog Connection sub-menu
@@ -296,7 +301,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		atlexhp.getATLCatalogConnection().click();
 		Assert.assertTrue(atlexhp.getATLVerifyCatalogsConnectPage().isDisplayed());
 		System.out.println("Catalogs Connection page is displayed properly");
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 		Thread.sleep(6000);
 
 		//Click on Juniper sub-menu
@@ -304,7 +309,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		atlexhp.getATLJunpiperMrktUAT().click();
 		Assert.assertTrue(atlexhp.getATLVerifyJuniperMarketUAT().isDisplayed());
 		System.out.println("Juniper Market page is displayed properly");
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 		Thread.sleep(6000);
 	}
 
@@ -394,7 +399,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		//Verify that 'Juniper' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
 
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 	}
 
 	@Test(priority=9)
@@ -411,31 +416,31 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		atlch.getAtlantaMarket().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
 		System.out.println("Atlanta Market channel link is working properly.");
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 	
 		//Click Atlanta Apparel channel link and verify result
 		atlch.getAtlantaApparel().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Apparel at AmericasMart"));
 		System.out.println("Atlanta Apparel channel link is working properly.");
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 	
 		//Click Americas Mart channel link and verify result
 		atlch.getAmericasMart().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Wholesale Gift, Home, Rug and Apparel Markets"));
 		System.out.println("Americas Mart channel link is working properly.");
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 	
 		//Click IMC High Point Market channel link and verify result
 		atlch.getHighPoint().click();
 		Assert.assertTrue(driver.getTitle().contains("High Point"));
 		System.out.println("High Point Market channel link is working properly.");
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 	
 		//Click Lav Vegas Market channel link and verify result
 		atlch.getLasVegas().click();
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas"));
 		System.out.println("Las Vegas Market channel link is working properly.");
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 	}
 
 	@Test(priority=10)
@@ -458,7 +463,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		//Verify that 'ATL Facebook' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/AmericasmartAtl"));
 	
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 	
 		/*		//Click on Instagram icon
 		fl.getInstagramIcon().click();
@@ -469,9 +474,9 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		}
 		Thread.sleep(10000);
 		//Verify that 'ATL Instagram' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.instagram.com/americasmartatl/"));
+		Assert.assertTrue(driver.getCurrentatlmrkturl().contains("https://www.instagram.com/americasmartatl/"));
 		
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 		 */
 	
 		//Click on You Tube icon
@@ -481,18 +486,120 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		//Verify that 'ATL You Tube' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.youtube.com"));
 	
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 	
 		/*//Click on Twitter icon
 		fl.getTwitterIcon().click();
 	
 		Thread.sleep(10000);
 		//Verify that 'ATL Twitter' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.twitter.com/americasmartatl")); 
+		Assert.assertTrue(driver.getCurrentatlmrkturl().contains("https://www.twitter.com/americasmartatl")); 
 		
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("atlmrktatlmrkturl"));
 		*/
 	}
+	
+	@Test(priority= 11)
+	public void TS011_VerifyFooterLinksTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T69: To verify Footer Links Navigation
+
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		mi = new UXPMarketInfoPage(driver);
+		fl = new UXPFooterLinksNavigationPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Scroll till footer links
+
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//Click Americas Mart link and verify results
+
+		fl.getHighPointMarket().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
+		System.out.println("Americas Mart page opened properly");
+		driver.get(prop.getProperty("atlmrkturl"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+
+		//Click Atlanta Apparel link and verify results
+
+		fl.getAtlantaMarket().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
+		System.out.println("Atlanta Apparel page opened properly");
+		driver.get(prop.getProperty("atlmrkturl"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//Click IMC Highpoint link and verify results
+
+		fl.getAtlantaApparel().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("http://www.imchighpointmarket.com/"));
+		System.out.println("IMC High Point page opened properly");
+		driver.get(prop.getProperty("atlmrkturl"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//Click Las Vegas market link and verify results
+
+		fl.getAmericasMart().click();
+		
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
+		System.out.println("Las Vegas Market page opened properly");
+		driver.get(prop.getProperty("atlmrkturl"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//Click International Market Centers link and verify results
+
+		fl.getInternationalMarketCenters().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
+		System.out.println("International Market Centers page opened properly");
+		driver.get(prop.getProperty("atlmrkturl"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//Click Download The App link and verify results
+
+		fl.getDownloadTheApp().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"App");
+		System.out.println("Download the app page opened properly");
+		driver.get(prop.getProperty("atlmrkturl"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		
+		//Click Careers link and verify results
+
+		fl.getContactUs().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Careers");
+		System.out.println("Careers page opened properly");
+		driver.get(prop.getProperty("atlmrkturl"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//Click Media and Press Releases link and verify results
+
+		fl.getCareers().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Press Releases");
+		System.out.println("Media and Pres Releases page opened properly");
+		driver.get(prop.getProperty("atlmrkturl"));
+		utl.scrollToElement(fl.getHighPointMarket());
+
+		//Click Contact Us link and verify results
+
+		fl.getTermsAndConditions().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Contact Us");
+		System.out.println("Contact Us page opened properly");
+		driver.get(prop.getProperty("atlmrkturl"));
+		utl.scrollToElement(fl.getHighPointMarket());
+		
+		//Click Terms of Use link and verify results
+
+		//driver.get(prop.getProperty("atlmrkturl"));
+
+		fl.getPrivacyPolicy().click();
+		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(),"IMC PRIVACY STATEMENT");
+		System.out.println("Privacy Policy page opened properly");
+	
+	}
+
 
 	@Test(priority=11)
 	public void TS011_VerifyAllNewsAndTrendsMenuTest() throws InterruptedException, IOException

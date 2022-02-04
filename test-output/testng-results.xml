@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="ATLMrkt_SmokeTestSuite" duration-ms="94546" started-at="2022-02-04T07:40:43Z" finished-at="2022-02-04T07:42:17Z">
     <groups>
     </groups>
@@ -15,6 +16,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS011_VerifyAllNewsAndTrendsMenuTest -->
+=======
+  <suite name="ATLMrkt_SmokeTestSuite" duration-ms="1048011" started-at="2022-02-03T11:01:23Z" finished-at="2022-02-03T11:18:51Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="1048011" started-at="2022-02-03T11:01:23Z" finished-at="2022-02-03T11:18:51Z">
+      <class name="atlantamarket.AtlantaMarketSmokeTest_UAT">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5e5792a0]" name="initialize" is-config="true" duration-ms="92472" started-at="2022-02-03T16:31:23Z" finished-at="2022-02-03T16:32:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS011_VerifyFooterLinksTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5e5792a0]" name="TS011_VerifyFooterLinksTest" duration-ms="955409" started-at="2022-02-03T16:32:56Z" finished-at="2022-02-03T16:48:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyFooterLinksTest -->
+>>>>>>> 8ec832b32e2826238bc6466295e5c299a0cc13b0
       </class> <!-- atlantamarket.AtlantaMarketSmokeTest_UAT -->
     </test> <!-- Test -->
   </suite> <!-- ATLMrkt_SmokeTestSuite -->

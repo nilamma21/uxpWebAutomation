@@ -6,7 +6,11 @@
       <class name="atlantamarket.AtlantaMarketSmokeTest_UAT">
         <methods>
           <include name="initialize"/>
+<<<<<<< HEAD
           <include name="TS011_VerifyAllNewsAndTrendsMenuTest"/>
+=======
+          <include name="TS011_VerifyFooterLinksTest"/>
+>>>>>>> 8ec832b32e2826238bc6466295e5c299a0cc13b0
         </methods>
       </class> <!-- atlantamarket.AtlantaMarketSmokeTest_UAT -->
     </classes>
