@@ -34,7 +34,7 @@ import resources.Utility;
 import resources.base;
 
 @Listeners({TestListeners.class})
-public class AtlantaMarketSmokeTest_UAT extends base {
+public class AmericasMartSmokeTest_UAT extends base {
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;
