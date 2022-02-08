@@ -18,9 +18,9 @@
 
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
+			<class name="americasmart.AmericasMartSmokeTest_UAT" />
 			<methods> 
-				<include name="TS012_VerifyAllLinksUnderAttendTabTest" /> 
+				<include name="TS001_VerifyMarketPlannerLoginTest" /> 
 			</methods> 
 		</classes>
 	</test>

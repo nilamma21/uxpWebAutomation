@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import pageObjects.AmericasMart.AMHeaderLinksPage;
 import pageObjects.AtlantaMarket.ATLAllChannelsLinksPage;
 import pageObjects.AtlantaMarket.ATLAttendPage;
 import pageObjects.AtlantaMarket.ATLExhibitPage;
@@ -54,6 +55,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 	UXPFooterLinksNavigationPage fl;
 	ATLAttendPage atat;
 	ATLNewsAndTrendsTabPage atlnt;
+	AMHeaderLinksPage amhe;
 	SendEmail se;
 
 	@BeforeTest
@@ -65,7 +67,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("atlmrkturl"));
+		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
@@ -75,6 +77,23 @@ public class AmericasMartSmokeTest_UAT extends base {
 	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		
+		//The purpose of this test case to verify:-
+		//UXP-T101: To verify the Market Planner overview and it's functionality
+
+				lap = new UXPLandingPage(driver);
+				lp = new UXPLoginPage(driver);
+				amhe = new AMHeaderLinksPage(driver);
+
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				
+				//Close americas mart prompt on home page
+				amhe.getClosePrompt().click();
+
+				//Login to Market Planner
+				utl.verifyMPLoginFunctionality();
+
+				//Verify that Market Planner Home page should be displayed
+				Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
 
 	

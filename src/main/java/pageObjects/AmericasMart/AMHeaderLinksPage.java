@@ -9,22 +9,22 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class UXPExhibitorDirectoryPage {
+public class AMHeaderLinksPage {
 
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By ExhibitorDirectory = By.xpath("//a[@title='Exhibitor & Product Directory']"); // Locator for Exhibitor Directory on Home Page
+	By ClosePrompt = By.xpath("//div[@class=' contact-exit']"); // Locator for Close Prompt on Home Page
 	
 	
-	public UXPExhibitorDirectoryPage(WebDriver driver) {
+	public AMHeaderLinksPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
-	public WebElement getExhibitorDirectory() throws InterruptedException {
+	public WebElement getClosePrompt() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		return driver.findElement(ExhibitorDirectory);
+		return driver.findElement(ClosePrompt);
 
 	}
 
