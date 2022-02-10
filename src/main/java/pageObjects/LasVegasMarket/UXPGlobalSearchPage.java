@@ -24,7 +24,8 @@ public class UXPGlobalSearchPage {
 	} 
 
 	public WebElement getGlobalSearchTextBox() throws InterruptedException {
-		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(GlobalSearchTextBox));
 		return driver.findElement(GlobalSearchTextBox);
 
 	}
