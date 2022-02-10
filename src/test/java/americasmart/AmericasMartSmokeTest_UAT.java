@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import pageObjects.AmericasMart.AMFooterLinksNavigationPage;
 import pageObjects.AmericasMart.AMHeaderLinksPage;
 import pageObjects.AtlantaMarket.ATLAllChannelsLinksPage;
 import pageObjects.AtlantaMarket.ATLAttendPage;
@@ -23,8 +24,10 @@ import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.AtlantaMarket.ATLRegistrationsPage;
 import pageObjects.LasVegasMarket.UXPAttendPage;
 import pageObjects.LasVegasMarket.UXPExhibitPage;
+import pageObjects.LasVegasMarket.UXPExhibitorDirectoryPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPFooterLinksNavigationPage;
+import pageObjects.LasVegasMarket.UXPGlobalSearchPage;
 import pageObjects.LasVegasMarket.UXPHeaderChannelLinksPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
@@ -56,6 +59,9 @@ public class AmericasMartSmokeTest_UAT extends base {
 	ATLAttendPage atat;
 	ATLNewsAndTrendsTabPage atlnt;
 	AMHeaderLinksPage amhe;
+	UXPExhibitorDirectoryPage ed;
+	UXPGlobalSearchPage gs;
+	AMFooterLinksNavigationPage amfl;
 	SendEmail se;
 
 	@BeforeTest
@@ -64,6 +70,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
+		amhe = new AMHeaderLinksPage(driver);
 
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
@@ -71,6 +78,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 		Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
+		amhe.getClosePrompt().click();
 	}
 
 	@Test(priority=1)
@@ -83,12 +91,10 @@ public class AmericasMartSmokeTest_UAT extends base {
 				lap = new UXPLandingPage(driver);
 				lp = new UXPLoginPage(driver);
 				amhe = new AMHeaderLinksPage(driver);
+				
 
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				
-				//Close americas mart prompt on home page
-				amhe.getClosePrompt().click();
-
 				//Login to Market Planner
 				utl.verifyMPLoginFunctionality();
 
@@ -96,6 +102,97 @@ public class AmericasMartSmokeTest_UAT extends base {
 				Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
 
+	@Test(priority=2)
+	public void TS002_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	{
+		
+		//The purpose of this test case to verify:-
+		//UXP-T121: To verify Exhibitor Directory
+
+				lap = new UXPLandingPage(driver);
+				lp = new UXPLoginPage(driver);
+				amhe = new AMHeaderLinksPage(driver);
+				ed = new UXPExhibitorDirectoryPage(driver);
+				gs = new UXPGlobalSearchPage(driver);
+				exhp = new UXPExhibitorsAndProductsTabPage(driver);
+				mi = new UXPMarketInfoPage(driver);
+
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+								
+				//Verify exhibitor directory page is successfully opened
+				
+				ed.getExhibitorDirectory().click();
+				Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
+				
+				//Scroll till exhibitor directory
+				
+				utl.scrollToElement(exhp.getVerifyExhibitorDirectory());
+				
+				//Verify exhibitor data is displayed or not as per search criteria
+				
+				System.out.println("Exhibitor Directory is opened properly.");
+				gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
+				gs.getSearchButton().click();
+				
+				utl.scrollToElement(mi.getVerifyContactUs());
+				amhe.getExhbAndProdsTab().click();
+				gs.getSearchButton().click();
+				utl.scrollToElement(mi.getVerifyContactUs());
+				String searchterm = gs.getVerifyGlobalSeacrh().getText();
+				Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
+				System.out.println("Exhibitor Directory page is working properly.");
+	}
+	
+	@Test(priority=3)
+	public void TS003_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-013: To verify the all social media links and it's redirection
+
+		amfl = new AMFooterLinksNavigationPage(driver);
+		utl = new Utility(driver); 
+		fl = new UXPFooterLinksNavigationPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Scroll till footer links
+		utl.scrollToElement(fl.getHighPointMarket());
+		Thread.sleep(5000);
+
+		//In app footer click on 'Facebook' icon and verify results
+		amfl.getFacebookIcon().click();
+
+		//Verify that 'AMC Facebook' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/AmericasmartAtl"));
+		System.out.println("Facebook opened successfully");
+		driver.get(prop.getProperty("ammarturl"));
+
+	/*	//In app footer click on 'Twitter' icon and verify results
+		amfl.getTwitterIcon().click();
+
+		//Verify that 'AMC Twitter' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://twitter.com/americasmartatl"));
+		System.out.println("Twitter opened successfully");
+		driver.get(prop.getProperty("ammarturl"));
+
+				
+		//Click on Instagram icon
+		amfl.getInstagramIcon().click();
+
+		//Verify that 'AMC Instagram' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.instagram.com/americasmartatl/"));
+		System.out.println("Instagram opened successfully");
+		driver.get(prop.getProperty("ammarturl"));*/
+
+		
+		//Click on Youtube icon
+		amfl.getYoutubeIcon().click();
+
+		//Verify that 'AMC Instagram' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.youtube.com/user/AmericasMart"));
+		System.out.println("Instagram opened successfully");
+		driver.get(prop.getProperty("ammarturl"));
+	}
 	
 	/*@AfterSuite
 	public void sendEmail()

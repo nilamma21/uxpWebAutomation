@@ -7,7 +7,10 @@
         <methods>
           <include name="TS013_VerifyAllNewsAndTrendsMenuTest"/>
           <include name="initialize"/>
+
           <include name="TS012_VerifyAllLinksUnderAttendTabTest"/>
+
+          <include name="TS002_VerifyExhibitorDirectoryTest"/>
         </methods>
       </class> <!-- atlantamarket.AtlantaMarketSmokeTest_UAT -->
     </classes>
