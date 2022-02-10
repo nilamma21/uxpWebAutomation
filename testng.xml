@@ -18,10 +18,13 @@
 
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="americasmart.AmericasMartSmokeTest_UAT" />
-			<methods> 
-				<include name="TS001_VerifyMarketPlannerLoginTest" /> 
-			</methods> 
+			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
+			<!-- <methods> 
+				<include name="TS001_VerifyMarketPlannerLoginTest"/>
+				<include name="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/> 
+				<include name="TS012_VerifyAllLinksUnderAttendTabTest"/>  
+				<include name="TS013_VerifyAllNewsAndTrendsMenuTest"/> 
+			</methods> -->
 		</classes>
 	</test>
 </suite>

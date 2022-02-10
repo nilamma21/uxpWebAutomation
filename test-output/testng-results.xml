@@ -1,21 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" total="13" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_SmokeTestSuite" duration-ms="77443" started-at="2022-02-08T09:02:31Z" finished-at="2022-02-08T09:03:49Z">
+  <suite name="ATLMrkt_SmokeTestSuite" duration-ms="1227368" started-at="2022-02-10T13:22:33Z" finished-at="2022-02-10T13:43:00Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="77443" started-at="2022-02-08T09:02:31Z" finished-at="2022-02-08T09:03:49Z">
-      <class name="americasmart.AmericasMartSmokeTest_UAT">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:americasmart.AmericasMartSmokeTest_UAT@3ffc5af1]" name="initialize" is-config="true" duration-ms="50800" started-at="2022-02-08T14:32:31Z" finished-at="2022-02-08T14:33:22Z">
+    <test name="Test" duration-ms="1227368" started-at="2022-02-10T13:22:33Z" finished-at="2022-02-10T13:43:00Z">
+      <class name="atlantamarket.AtlantaMarketSmokeTest_UAT">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="initialize" is-config="true" duration-ms="59456" started-at="2022-02-10T18:52:33Z" finished-at="2022-02-10T18:53:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_UAT@3ffc5af1]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="26593" started-at="2022-02-08T14:33:22Z" finished-at="2022-02-08T14:33:49Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="43355" started-at="2022-02-10T18:53:32Z" finished-at="2022-02-10T18:54:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-      </class> <!-- americasmart.AmericasMartSmokeTest_UAT -->
+        <test-method status="PASS" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="10973" started-at="2022-02-10T18:54:15Z" finished-at="2022-02-10T18:54:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyMarketPlannerProfileAndSettingsOptionTest -->
+        <test-method status="PASS" signature="TS003_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS003_VerifyGlobalSearchFunctionalityTest" duration-ms="11305" started-at="2022-02-10T18:54:26Z" finished-at="2022-02-10T18:54:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyGlobalSearchFunctionalityTest -->
+        <test-method status="PASS" signature="TS004_VerifyMarketPlannerRegistrationsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS004_VerifyMarketPlannerRegistrationsOptionTest" duration-ms="6194" started-at="2022-02-10T18:54:38Z" finished-at="2022-02-10T18:54:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyMarketPlannerRegistrationsOptionTest -->
+        <test-method status="PASS" signature="TS005_VerifyExhibitorDirectoryTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS005_VerifyExhibitorDirectoryTest" duration-ms="22540" started-at="2022-02-10T18:54:44Z" finished-at="2022-02-10T18:55:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyExhibitorDirectoryTest -->
+        <test-method status="PASS" signature="TS006_VerifyAllLinksUnderMarketInfoTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS006_VerifyAllLinksUnderMarketInfoTabTest" duration-ms="102598" started-at="2022-02-10T18:55:06Z" finished-at="2022-02-10T18:56:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyAllLinksUnderMarketInfoTabTest -->
+        <test-method status="PASS" signature="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest" duration-ms="112889" started-at="2022-02-10T18:56:49Z" finished-at="2022-02-10T18:58:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
+        <test-method status="PASS" signature="TS008_VerifAllLinksUnderExhibitTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS008_VerifAllLinksUnderExhibitTabTest" duration-ms="80811" started-at="2022-02-10T18:58:42Z" finished-at="2022-02-10T19:00:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifAllLinksUnderExhibitTabTest -->
+        <test-method status="PASS" signature="TS009_VerifyAllChannelsLinksTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS009_VerifyAllChannelsLinksTest" duration-ms="107242" started-at="2022-02-10T19:00:03Z" finished-at="2022-02-10T19:01:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyAllChannelsLinksTest -->
+        <test-method status="PASS" signature="TS010_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS010_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="76648" started-at="2022-02-10T19:01:50Z" finished-at="2022-02-10T19:03:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyAllSocialMediaLinksOnFooterTest -->
+        <test-method status="PASS" signature="TS011_VerifyFooterLinksTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS011_VerifyFooterLinksTest" duration-ms="479944" started-at="2022-02-10T19:03:07Z" finished-at="2022-02-10T19:11:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyFooterLinksTest -->
+        <test-method status="FAIL" signature="TS012_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS012_VerifyAllLinksUnderAttendTabTest" duration-ms="46531" started-at="2022-02-10T19:11:07Z" finished-at="2022-02-10T19:11:53Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='/Attend/Why-Attend']"}
+  (Session info: chrome=98.0.4758.81)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18616_461692904}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53831}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=98.0.4758.81, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 2285b61fbcbe5ba22ce62d091d61c1ba
+*** Element info: {Using=xpath, value=//a[@href='/Attend/Why-Attend']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='/Attend/Why-Attend']"}
+  (Session info: chrome=98.0.4758.81)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18616_461692904}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53831}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=98.0.4758.81, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 2285b61fbcbe5ba22ce62d091d61c1ba
+*** Element info: {Using=xpath, value=//a[@href='/Attend/Why-Attend']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.AtlantaMarket.ATLAttendPage.getATLWhyAttend(ATLAttendPage.java:46)
+	at atlantamarket.AtlantaMarketSmokeTest_UAT.TS012_VerifyAllLinksUnderAttendTabTest(AtlantaMarketSmokeTest_UAT.java:621)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyAllLinksUnderAttendTabTest -->
+        <test-method status="FAIL" signature="TS013_VerifyAllNewsAndTrendsMenuTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_UAT@5b275dab]" name="TS013_VerifyAllNewsAndTrendsMenuTest" duration-ms="64858" started-at="2022-02-10T19:11:54Z" finished-at="2022-02-10T19:12:59Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(text(),'Publications Library')] (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(text(),'Publications Library')] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLNewsAndTrendsTabPage.getATLPublicationsLibraryPageHeader(ATLNewsAndTrendsTabPage.java:119)
+	at atlantamarket.AtlantaMarketSmokeTest_UAT.TS013_VerifyAllNewsAndTrendsMenuTest(AtlantaMarketSmokeTest_UAT.java:729)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[contains(text(),'Publications Library')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS013_VerifyAllNewsAndTrendsMenuTest -->
+      </class> <!-- atlantamarket.AtlantaMarketSmokeTest_UAT -->
     </test> <!-- Test -->
   </suite> <!-- ATLMrkt_SmokeTestSuite -->
 </testng-results>

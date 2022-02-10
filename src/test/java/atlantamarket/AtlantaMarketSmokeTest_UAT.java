@@ -294,7 +294,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		atlexhp.getATLShopZioLink().click();
 		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
 		System.out.println("Exhibitor Directory page is displayed properly");
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(6000);
 
 		//Click on Catalog Connection sub-menu
@@ -302,7 +302,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		atlexhp.getATLCatalogConnection().click();
 		Assert.assertTrue(atlexhp.getATLVerifyCatalogsConnectPage().isDisplayed());
 		System.out.println("Catalogs Connection page is displayed properly");
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(6000);
 
 		//Click on Juniper sub-menu
@@ -310,7 +310,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		atlexhp.getATLJunpiperMrktUAT().click();
 		Assert.assertTrue(atlexhp.getATLVerifyJuniperMarketUAT().isDisplayed());
 		System.out.println("Juniper Market page is displayed properly");
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(6000);
 	}
 
@@ -400,7 +400,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		//Verify that 'Juniper' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
 
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 	}
 
 	@Test(priority=9)
@@ -417,31 +417,31 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		atlch.getAtlantaMarket().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
 		System.out.println("Atlanta Market channel link is working properly.");
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 	
 		//Click Atlanta Apparel channel link and verify result
 		atlch.getAtlantaApparel().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Apparel at AmericasMart"));
 		System.out.println("Atlanta Apparel channel link is working properly.");
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 	
 		//Click Americas Mart channel link and verify result
 		atlch.getAmericasMart().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Wholesale Gift, Home, Rug and Apparel Markets"));
 		System.out.println("Americas Mart channel link is working properly.");
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 	
 		//Click IMC High Point Market channel link and verify result
 		atlch.getHighPoint().click();
 		Assert.assertTrue(driver.getTitle().contains("High Point"));
 		System.out.println("High Point Market channel link is working properly.");
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 	
 		//Click Lav Vegas Market channel link and verify result
 		atlch.getLasVegas().click();
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas"));
 		System.out.println("Las Vegas Market channel link is working properly.");
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 	}
 
 	@Test(priority=10)
@@ -464,7 +464,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		//Verify that 'ATL Facebook' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/AmericasmartAtl"));
 	
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 	
 		/*		//Click on Instagram icon
 		fl.getInstagramIcon().click();
@@ -477,7 +477,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		//Verify that 'ATL Instagram' page should be displayed
 		Assert.assertTrue(driver.getCurrentatlmrkturl().contains("https://www.instagram.com/americasmartatl/"));
 		
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 		 */
 	
 		//Click on You Tube icon
@@ -487,7 +487,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		//Verify that 'ATL You Tube' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.youtube.com"));
 	
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 	
 		/*//Click on Twitter icon
 		fl.getTwitterIcon().click();
@@ -496,7 +496,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		//Verify that 'ATL Twitter' page should be displayed
 		Assert.assertTrue(driver.getCurrentatlmrkturl().contains("https://www.twitter.com/americasmartatl")); 
 		
-		driver.get(prop.getProperty("atlmrktatlmrkturl"));
+		driver.get(prop.getProperty("atlmrkturl"));
 		*/
 	}
 	
@@ -598,6 +598,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		fl.getPrivacyPolicy().click();
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(),"IMC PRIVACY STATEMENT");
 		System.out.println("Privacy Policy page opened properly");
+		driver.get(prop.getProperty("atlmrkturl"));
 	
 	}
 
@@ -605,7 +606,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	public void TS012_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-T005: To verify links for Market info tab at Header
+		//UXP-T012: To verify links for Attend tab at Header
 
 		mi = new UXPMarketInfoPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
@@ -614,13 +615,9 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Attend tab at Header
-
 		atat.getATLAttendTab().click();
-		Assert.assertTrue(atat.getVerifyATLAttendSection().isDisplayed());
-		System.out.println("Attend section options are displayed properly");
 
 		//Click Why Attend tab under Attend section
-
 		atat.getATLWhyAttend().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Why Attend?");
 		System.out.println("Why Attend section is displayed properly");
@@ -673,7 +670,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		atat.getATLTogetherSafely().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
 		System.out.println("Together Safely section is displayed properly");
-		
+		driver.get(prop.getProperty("atlmrkturl"));
 	}
 	
 	@Test(priority=13)
@@ -684,87 +681,74 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	
 		atlnt = new ATLNewsAndTrendsTabPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-		//Click on News And Tredns Tap
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Trends and Verify Page
+
 		atlnt.getATLNewsAndTrends().click();
-		Assert.assertTrue(atlnt.getATLNewsAndTrendsPageHeader().getText().contains("News & Trends"));
-		System.out.println("News And Trends page");
 		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		//Click on News And Trends and Verify Page
+		atlnt.getATLNewsAndTrendsSubmenu().click();
+		Assert.assertTrue(atlnt.getATLNewsAndTrendsPageHeader().getText().contains("News & Trends"));
+		
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLatlMarketSnapshot().click();
 		//Click on MarketSnapshot and Verify Page
 		Assert.assertTrue(atlnt.getATLMarketSnapshotPageHeader().getText().contains("Market Snapshot"));
 		System.out.println("Market Snapshot page");
-				
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLWebinarAndEducation().click();
 		//Click on Webinar And Education and Verify Page
 		Assert.assertTrue(atlnt.getATLWebinarAndEducationPageHeader().getText().contains("Webinars & Education"));
 		System.out.println("Webinars & Education page");
-						
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLatlAheadCurve().click();
-		//Click on Webinar And Education and Verify Page
 		Assert.assertTrue(atlnt.getATLAheadCurvePageHeader().getText().contains("Ahead of the Curve"));
 		System.out.println("Ahead of the Curve page");
 		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLShopTheShow().click();
 		//Click on Shop the and Verify Page
 		Assert.assertTrue(atlnt.getATLShopTheShowPageHeader().getText().contains("Shop the "));
 		System.out.println("Shop the show page header");
 		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLPressReleases().click();
 		//Click on Press Releases and Verify Page
 		Assert.assertTrue(atlnt.getATLPressReleasesPageHeader().getText().contains("Press Releases"));
 		System.out.println("Press Releases page");
-		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+	
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLPublicationsLibrary().click();
 		//Click on Publications Library and Verify Page
 		Assert.assertTrue(atlnt.getATLPublicationsLibraryPageHeader().getText().contains("Publications Library"));
 		System.out.println("Publications Library page");
 		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLInTheNews().click();
 		//Click on In the News and Verify Page
 		Assert.assertTrue(atlnt.getATLInTheNewsPageHeader().getText().contains("In the News"));
 		System.out.println("In The News page");
 		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		//Click on News And Trends Tap
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLAtlantaNext().click();
 		//Click on Atlanta Next and Verify Page
 		Assert.assertTrue(atlnt.getATLAtlantaNextHeader().getText().contains("Atlanta Next"));
 		System.out.println("In Atlanta Next page");
 		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLPortmanPeachtree().click();
 		//Click on Portman Peachtree and Verify Page
 		Assert.assertTrue(atlnt.getATLPortmanPeachtreetHeader().isDisplayed());
 		System.out.println("In Portman Peachtreet page");
-		
-		
 	}
 
 
