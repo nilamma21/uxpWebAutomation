@@ -13,7 +13,7 @@ public class ATLNewsAndTrendsTabPage
 	public WebDriverWait wait;
 	
 	By atlNewsAndTrends = By.xpath("//a[contains(text(),'News & Trends')]"); //Locator for News & Trends under header tab
-	By atlsewsntrendssubmenu = By.xpath("(//a[contains(text(),'News & Trends')])[position()=2]"); ////Locator for News & Trends sub menu
+	By atlsewsntrendssubmenu = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[1]/div[1]/a"); ////Locator for News & Trends sub menu
 	By atlNewsAndTrendsPageHeader = By.xpath("(//a[contains(text(),'News & Trends')])[2]"); //Locator for News & Trends page Header
 	By atlMarketSnapshot = By.xpath("//a[@href='/News-and-Trends/Market-Snapshot' and contains(text(),'Market Snapshot')]"); //Locator for Market Snapshot
 	By atlMarketSnapshotPageHeader = By.xpath("//a[contains(text(),'Market Snapshot')]"); //Locator for Market Snapshot page Header
@@ -47,7 +47,7 @@ public class ATLNewsAndTrendsTabPage
 	
 	public WebElement getATLNewsAndTrendsSubmenu() {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(atlsewsntrendssubmenu));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlsewsntrendssubmenu));
 		return driver.findElement(atlsewsntrendssubmenu);
 	}
 	

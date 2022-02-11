@@ -15,8 +15,8 @@ public class ATLAttendPage {
 	public WebDriverWait wait;
 
 	By ATLDownloadApp = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[2]/div[3]/a[1]"); // Locator for Download the App link
-	By ATLAttendTab = By.xpath("(//a[contains(text(),'Attend')])[position()=1]"); // Locator for Attend tab in header
-	By ATLWhyAttend = By.xpath("//a[@href='/Attend/Why-Attend']"); //Locator for Why Attend link
+	By ATLAttendTab = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[1]/a[1]"); // Locator for Attend tab in header
+	By ATLWhyAttend = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[1]/div[1]/a"); //Locator for Why Attend link
 	By ATLRegistration = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[2]/div[1]/a[1]"); //Locator for Registration link
 	By ATLAdmissionPolicies = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[2]/div[2]/a[1]"); //Locator for Admission Policies link
 	By ATLTravel = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[3]/div[1]/a[1]"); //Locator for Travel link

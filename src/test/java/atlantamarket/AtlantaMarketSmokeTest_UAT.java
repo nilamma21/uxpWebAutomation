@@ -129,7 +129,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	public void TS004_VerifyMarketPlannerRegistrationsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-005: To verify Registrations option in Top Header
+		//UXP-004: To verify Registrations option in Top Header
 
 		lap = new UXPLandingPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
@@ -151,7 +151,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	public void TS005_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-T004: To verify Exhibitor Directory
+		//UXP-T005: To verify Exhibitor Directory
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atled = new ATLExhibitorDirectoryPage(driver);
@@ -677,7 +677,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	public void TS013_VerifyAllNewsAndTrendsMenuTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-T011: To verify the all News & Trends tap Menu and it's redirection
+		//UXP-T013: To verify the all News & Trends tap Menu and it's redirection
 	
 		atlnt = new ATLNewsAndTrendsTabPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
