@@ -128,7 +128,7 @@ public class UXPMarketInfoPage {
 	
 	public WebElement getVerifyMarketInfoSection() {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(VerifyRegistrationDetailsProd));
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyMarketInfoSection));
 		return driver.findElement(VerifyMarketInfoSection);
 		
 	}

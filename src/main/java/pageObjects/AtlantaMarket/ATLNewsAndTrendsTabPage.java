@@ -12,8 +12,9 @@ public class ATLNewsAndTrendsTabPage
 	public WebDriver driver;
 	public WebDriverWait wait;
 	
-	By atlNewsAndTrendsTap = By.xpath("//a[@class='imc-navigation__tier1Link' and contains(text(),'News & Trends')]"); //Locator for News & Trends header tab
-	By atlNewsAndTrends = By.xpath("//a[@href='/News-and-Trends' and @class='imc-link imc-link--invert imc-navigation__tier2Link']"); //Locator for News & Trends under header tab
+	By atlNewsAndTrendsTap = By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[1]/a[1]"); //Locator for News & Trends header tab
+	By VerifyNewsSection = By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[2]"); //Locator for verification of news and trends section
+	By atlNewsAndTrends = By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[2]/div[1]/div[1]/a[1]"); //Locator for News & Trends under header tab
 	By atlNewsAndTrendsPageHeader = By.xpath("(//a[contains(text(),'News & Trends')])[2]"); //Locator for News & Trends page Header
 	By atlMarketSnapshot = By.xpath("//a[@href='/News-and-Trends/Market-Snapshot' and contains(text(),'Market Snapshot')]"); //Locator for Market Snapshot
 	By atlMarketSnapshotPageHeader = By.xpath("//a[contains(text(),'Market Snapshot')]"); //Locator for Market Snapshot page Header
@@ -39,9 +40,8 @@ public class ATLNewsAndTrendsTabPage
 		this.driver = driver; 			
 	} 
 
-	public WebElement getATLNewsAndTrendsTap() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(atlNewsAndTrendsTap));
+	public WebElement getATLNewsAndTrendsTap() throws InterruptedException {
+		Thread.sleep(10000);
 		return driver.findElement(atlNewsAndTrendsTap);
 	}
 	
@@ -148,6 +148,11 @@ public class ATLNewsAndTrendsTabPage
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAtlantaNextHeader));
 		return driver.findElement(atlAtlantaNextHeader);
+	}
+	public WebElement getVerifyNewsSection() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyNewsSection));
+		return driver.findElement(VerifyNewsSection);
 	}
 	
 }

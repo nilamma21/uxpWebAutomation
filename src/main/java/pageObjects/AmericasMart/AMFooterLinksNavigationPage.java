@@ -14,10 +14,10 @@ public class AMFooterLinksNavigationPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By FacebookIcon = By.xpath("//div[@class = 'section-wrapper imc-section--neutral-heavy']/secrtion[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/div[1]/svg[1]"); // Locator for Facebook icon in footer links
-	By TwitterIcon = By.xpath("//div[@class='imc-optin-social']/div[2]/a[1]/div[1]/svg[1]"); // Locator for Twitter icon in footer links
-	By InstagramIcon = By.xpath("//div[@class='imc-optin-social']/div[3]/a[1]/div[1]/svg[1]"); // Locator for Instagram icon in footer links
-	By YoutubeIcon = By.xpath("//div[@class='imc-optin-social']/div[4]/a[1]/div[1]/svg[1]"); // Locator for You Tube icon in footer links
+	By FacebookIcon = By.xpath("//a[@href = 'https://www.facebook.com/AmericasmartAtl']"); // Locator for Facebook icon in footer links
+	By TwitterIcon = By.xpath("//a[@href='https://twitter.com/americasmartatl']']"); // Locator for Twitter icon in footer links
+	By InstagramIcon = By.xpath("//a[@href='https://www.instagram.com/americasmartatl/'])[position()=2]']"); // Locator for Instagram icon in footer links
+	By YoutubeIcon = By.xpath("//a[@href='https://www.youtube.com/user/AmericasMart']"); // Locator for You Tube icon in footer links
 	
 	public AMFooterLinksNavigationPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -25,7 +25,8 @@ public class AMFooterLinksNavigationPage {
 	} 
 
 	public WebElement getFacebookIcon() throws InterruptedException {
-		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(FacebookIcon));
 		return driver.findElement(FacebookIcon);
 
 	}

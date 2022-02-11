@@ -23,7 +23,7 @@ public class ATLAttendPage {
 	By ATLDiningGuide = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[3]/div[2]/a[1]"); //Locator for Dining Guide link
 	By ATLServicesAndAmenities = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[3]/div[3]/a[1]"); //Locator for Service and Amenities
 	By ATLTogetherSafely = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[4]/div[1]/a[2]"); //Locator for Together Safely logo
-	By VerifyATLAttendSection = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[4]/div[1]/a[2]/img[1]"); //Locator for vrification for Attend section
+	By VerifyATLAttendSection = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]"); //Locator for vrification for Attend section
 	
 	public ATLAttendPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -37,8 +37,7 @@ public class ATLAttendPage {
 	}
 	
 	public WebElement getATLAttendTab() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(ATLAttendTab));
+		Thread.sleep(10000);
 		return driver.findElement(ATLAttendTab);
 	}
 	
@@ -85,7 +84,7 @@ public class ATLAttendPage {
 	}
 	
 	public WebElement getVerifyATLAttendSection() throws InterruptedException {
-		Thread.sleep(15000);
+		Thread.sleep(10000);
 		return driver.findElement(VerifyATLAttendSection);
 	}
 

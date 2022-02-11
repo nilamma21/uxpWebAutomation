@@ -3,12 +3,12 @@
 <suite name="Failed suite [ATLMrkt_SmokeTestSuite]">
   <test name="Test(failed)">
     <classes>
-      <class name="americasmart.AmericasMartSmokeTest_UAT">
+      <class name="atlantamarket.AtlantaMarketSmokeTest_UAT">
         <methods>
           <include name="initialize"/>
-          <include name="TS002_VerifyExhibitorDirectoryTest"/>
+          <include name="TS012_VerifyAllLinksUnderAttendTabTest"/>
         </methods>
-      </class> <!-- americasmart.AmericasMartSmokeTest_UAT -->
+      </class> <!-- atlantamarket.AtlantaMarketSmokeTest_UAT -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_SmokeTestSuite] -->
