@@ -129,7 +129,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	public void TS004_VerifyMarketPlannerRegistrationsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-005: To verify Registrations option in Top Header
+		//UXP-004: To verify Registrations option in Top Header
 
 		lap = new UXPLandingPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
@@ -151,7 +151,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	public void TS005_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-T004: To verify Exhibitor Directory
+		//UXP-T005: To verify Exhibitor Directory
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atled = new ATLExhibitorDirectoryPage(driver);
@@ -605,7 +605,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	public void TS012_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-T005: To verify links for Market info tab at Header
+		//UXP-T012: To verify links for Attend tab at Header
 
 		mi = new UXPMarketInfoPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
@@ -614,13 +614,9 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Attend tab at Header
-		
 		atat.getATLAttendTab().click();
-		Assert.assertTrue(atat.getVerifyATLAttendSection().isDisplayed());
-		System.out.println("Attend section options are displayed properly");
 
 		//Click Why Attend tab under Attend section
-
 		atat.getATLWhyAttend().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Why Attend?");
 		System.out.println("Why Attend section is displayed properly");
@@ -674,101 +670,89 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
 		System.out.println("Together Safely section is displayed properly");
 		driver.get(prop.getProperty("atlmrkturl"));
-		
 	}
 	
 	@Test(priority=13)
 	public void TS013_VerifyAllNewsAndTrendsMenuTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-T011: To verify the all News & Trends tap Menu and it's redirection
+		//UXP-T013: To verify the all News & Trends tap Menu and it's redirection
 	
 		atlnt = new ATLNewsAndTrendsTabPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
+		atlnt.getATLNewsAndTrends().click();
+	
 		//Click News and Trends tab and verify result
 		atlnt.getATLNewsAndTrendsTap().click();
 		Assert.assertTrue(atlnt.getVerifyNewsSection().isDisplayed());
 		System.out.println("News section is displayed properly.");
 		
 		//Click on News And Trends and Verify Page
-		atlnt.getATLNewsAndTrends().click();
+		atlnt.getATLNewsAndTrendsSubmenu().click();
 		Assert.assertTrue(atlnt.getATLNewsAndTrendsPageHeader().getText().contains("News & Trends"));
-		System.out.println("News And Trends page");
 		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLatlMarketSnapshot().click();
 		//Click on MarketSnapshot and Verify Page
 		Assert.assertTrue(atlnt.getATLMarketSnapshotPageHeader().getText().contains("Market Snapshot"));
 		System.out.println("Market Snapshot page");
-				
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLWebinarAndEducation().click();
 		//Click on Webinar And Education and Verify Page
 		Assert.assertTrue(atlnt.getATLWebinarAndEducationPageHeader().getText().contains("Webinars & Education"));
 		System.out.println("Webinars & Education page");
-						
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLatlAheadCurve().click();
-		//Click on Webinar And Education and Verify Page
 		Assert.assertTrue(atlnt.getATLAheadCurvePageHeader().getText().contains("Ahead of the Curve"));
 		System.out.println("Ahead of the Curve page");
 		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLShopTheShow().click();
 		//Click on Shop the and Verify Page
 		Assert.assertTrue(atlnt.getATLShopTheShowPageHeader().getText().contains("Shop the "));
 		System.out.println("Shop the show page header");
 		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLPressReleases().click();
 		//Click on Press Releases and Verify Page
 		Assert.assertTrue(atlnt.getATLPressReleasesPageHeader().getText().contains("Press Releases"));
 		System.out.println("Press Releases page");
-		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+	
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLPublicationsLibrary().click();
 		//Click on Publications Library and Verify Page
 		Assert.assertTrue(atlnt.getATLPublicationsLibraryPageHeader().getText().contains("Publications Library"));
 		System.out.println("Publications Library page");
 		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLInTheNews().click();
 		//Click on In the News and Verify Page
 		Assert.assertTrue(atlnt.getATLInTheNewsPageHeader().getText().contains("In the News"));
 		System.out.println("In The News page");
 		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		//Click on News And Trends Tap
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLAtlantaNext().click();
 		//Click on Atlanta Next and Verify Page
 		Assert.assertTrue(atlnt.getATLAtlantaNextHeader().getText().contains("Atlanta Next"));
 		System.out.println("In Atlanta Next page");
 		
-		atlnt.getATLNewsAndTrendsTap().click();
-		//Click on News And Tredns Tap
-		System.out.println("News And Trends tap");
+		//Click on News And Trends Tab
+		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLPortmanPeachtree().click();
 		//Click on Portman Peachtree and Verify Page
 		Assert.assertTrue(atlnt.getATLPortmanPeachtreetHeader().isDisplayed());
 		System.out.println("In Portman Peachtreet page");
-		
-		
 	}
 
 

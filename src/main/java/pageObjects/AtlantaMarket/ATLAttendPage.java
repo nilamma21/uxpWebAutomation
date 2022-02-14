@@ -15,8 +15,8 @@ public class ATLAttendPage {
 	public WebDriverWait wait;
 
 	By ATLDownloadApp = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[2]/div[3]/a[1]"); // Locator for Download the App link
-	By ATLAttendTab = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[1]/a[1]"); // Locator for Attend tab in header
-	By ATLWhyAttend = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[1]/div[1]/a[1]"); //Locator for Why Attend link
+	By ATLAttendTab = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[1]/a[1]"); // Locator for Attend tab in header
+	By ATLWhyAttend = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[1]/div[1]/a"); //Locator for Why Attend link
 	By ATLRegistration = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[2]/div[1]/a[1]"); //Locator for Registration link
 	By ATLAdmissionPolicies = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[2]/div[2]/a[1]"); //Locator for Admission Policies link
 	By ATLTravel = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[3]/div[1]/a[1]"); //Locator for Travel link
@@ -24,6 +24,7 @@ public class ATLAttendPage {
 	By ATLServicesAndAmenities = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[3]/div[3]/a[1]"); //Locator for Service and Amenities
 	By ATLTogetherSafely = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[4]/div[1]/a[2]"); //Locator for Together Safely logo
 	By VerifyATLAttendSection = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]"); //Locator for vrification for Attend section
+
 	
 	public ATLAttendPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -38,12 +39,13 @@ public class ATLAttendPage {
 	
 	public WebElement getATLAttendTab() throws InterruptedException {
 		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendTab));
 		return driver.findElement(ATLAttendTab);
 	}
 	
 	public WebElement getATLWhyAttend() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(ATLWhyAttend));
+		Thread.sleep(10000);
 		return driver.findElement(ATLWhyAttend);
 	}
 
@@ -82,6 +84,7 @@ public class ATLAttendPage {
 		wait.until(ExpectedConditions.elementToBeClickable(ATLTogetherSafely));
 		return driver.findElement(ATLTogetherSafely);
 	}
+
 	
 	public WebElement getVerifyATLAttendSection() throws InterruptedException {
 		Thread.sleep(10000);

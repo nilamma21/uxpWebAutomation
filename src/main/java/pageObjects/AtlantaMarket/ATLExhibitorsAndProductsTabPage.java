@@ -26,7 +26,7 @@ public class ATLExhibitorsAndProductsTabPage {
 	By atlcatalogconnection = By.xpath("//a[contains(text(), 'Catalog ConneXion')]"); //Locator for Catalog Connection sub-menu
 	By atljunipermarketuat = By.xpath("(//a[contains(text(), 'JuniperMarket')])[position()=2]"); //Locator for Juniper Market sub-menu
 	By atlverifycatalogconnectpage = By.xpath("//h4[contains(text(), 'Welcome to Catalog Connexion!')]"); //Locator for Catalog Connection page validation
-	By atlverifyjunipermrktpage = By.xpath("//img[@alt='JuniperMarket-Logo_Horiz-RGB-500']"); //Locator for Juniper Market page
+	By atlverifyjunipermrktpage = By.xpath("(//img[@alt='JuniperMarket'])[position()=2]"); //Locator for Juniper Market page
 	By JuniperMarketProd = By.xpath("//a[contains(text(), 'JuniperMarket')]"); //Locator for Juniper Market header tab
 
 

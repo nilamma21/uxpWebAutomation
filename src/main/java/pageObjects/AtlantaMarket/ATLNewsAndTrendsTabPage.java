@@ -12,9 +12,12 @@ public class ATLNewsAndTrendsTabPage
 	public WebDriver driver;
 	public WebDriverWait wait;
 	
+
 	By atlNewsAndTrendsTap = By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[1]/a[1]"); //Locator for News & Trends header tab
 	By VerifyNewsSection = By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[2]"); //Locator for verification of news and trends section
 	By atlNewsAndTrends = By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[2]/div[1]/div[1]/a[1]"); //Locator for News & Trends under header tab
+	By atlNewsAndTrends = By.xpath("//a[contains(text(),'News & Trends')]"); //Locator for News & Trends under header tab
+	By atlsewsntrendssubmenu = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[1]/div[1]/a"); ////Locator for News & Trends sub menu
 	By atlNewsAndTrendsPageHeader = By.xpath("(//a[contains(text(),'News & Trends')])[2]"); //Locator for News & Trends page Header
 	By atlMarketSnapshot = By.xpath("//a[@href='/News-and-Trends/Market-Snapshot' and contains(text(),'Market Snapshot')]"); //Locator for Market Snapshot
 	By atlMarketSnapshotPageHeader = By.xpath("//a[contains(text(),'Market Snapshot')]"); //Locator for Market Snapshot page Header
@@ -49,6 +52,12 @@ public class ATLNewsAndTrendsTabPage
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(atlNewsAndTrends));
 		return driver.findElement(atlNewsAndTrends);
+	}
+	
+	public WebElement getATLNewsAndTrendsSubmenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlsewsntrendssubmenu));
+		return driver.findElement(atlsewsntrendssubmenu);
 	}
 	
 	public WebElement getATLNewsAndTrendsPageHeader() {
