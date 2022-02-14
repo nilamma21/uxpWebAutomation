@@ -6,7 +6,7 @@
       <class name="americasmart.AmericasMartSmokeTest_UAT">
         <methods>
           <include name="initialize"/>
-          <include name="TS003_VerifyAllSocialMediaLinksOnFooterTest"/>
+          <include name="T005_VerifyAllHeaderChanelLinksTest"/>
         </methods>
       </class> <!-- americasmart.AmericasMartSmokeTest_UAT -->
     </classes>

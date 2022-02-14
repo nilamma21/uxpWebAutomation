@@ -6,6 +6,7 @@
       <class name="atlantamarket.AtlantaMarketSmokeTest_UAT">
         <methods>
           <include name="initialize"/>
+          <include name="T005_VerifyAllHeaderChanelLinksTest"/>
           <include name="TS012_VerifyAllLinksUnderAttendTabTest"/>
         </methods>
       </class> <!-- atlantamarket.AtlantaMarketSmokeTest_UAT -->

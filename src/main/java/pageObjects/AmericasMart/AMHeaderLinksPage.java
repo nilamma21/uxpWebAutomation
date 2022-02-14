@@ -24,7 +24,8 @@ public class AMHeaderLinksPage {
 	} 
 
 	public WebElement getClosePrompt() throws InterruptedException {
-		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(ClosePrompt));
 		return driver.findElement(ClosePrompt);
 
 	}

@@ -308,7 +308,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		//Click on Juniper sub-menu
 		atlexhp.getATLExhibitorsAndProducts().click();
 		atlexhp.getATLJunpiperMrktUAT().click();
-		Assert.assertTrue(atlexhp.getATLVerifyJuniperMarketUAT().isDisplayed());
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
 		System.out.println("Juniper Market page is displayed properly");
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(6000);
@@ -599,7 +599,6 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(),"IMC PRIVACY STATEMENT");
 		System.out.println("Privacy Policy page opened properly");
 		driver.get(prop.getProperty("atlmrkturl"));
-	
 	}
 
 	@Test(priority=12)
@@ -683,6 +682,11 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		atlnt.getATLNewsAndTrends().click();
+	
+		//Click News and Trends tab and verify result
+		atlnt.getATLNewsAndTrendsTap().click();
+		Assert.assertTrue(atlnt.getVerifyNewsSection().isDisplayed());
+		System.out.println("News section is displayed properly.");
 		
 		//Click on News And Trends and Verify Page
 		atlnt.getATLNewsAndTrendsSubmenu().click();

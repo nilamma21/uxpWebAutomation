@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import pageObjects.AmericasMart.AMAboutTabPage;
 import pageObjects.AmericasMart.AMFooterLinksNavigationPage;
 import pageObjects.AmericasMart.AMHeaderLinksPage;
 import pageObjects.AtlantaMarket.ATLAllChannelsLinksPage;
@@ -62,6 +63,8 @@ public class AmericasMartSmokeTest_UAT extends base {
 	UXPExhibitorDirectoryPage ed;
 	UXPGlobalSearchPage gs;
 	AMFooterLinksNavigationPage amfl;
+	AMAboutTabPage amab;
+	UXPHeaderChannelLinksPage hd;
 	SendEmail se;
 
 	@BeforeTest
@@ -186,12 +189,154 @@ public class AmericasMartSmokeTest_UAT extends base {
 
 		
 		//Click on Youtube icon
+		amhe.getClosePrompt().click();
 		amfl.getYoutubeIcon().click();
 
 		//Verify that 'AMC Instagram' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.youtube.com/user/AmericasMart"));
 		System.out.println("Instagram opened successfully");
 		driver.get(prop.getProperty("ammarturl"));
+		amhe.getClosePrompt().click();
+	}
+	
+	@Test(priority=4)
+	public void TS005_VerifyAllLinksUnderAboutTabTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T005: To verify links for Market info tab at Header
+
+		mi = new UXPMarketInfoPage(driver);
+		amab = new AMAboutTabPage(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click About tab at Header
+
+		mi.getMarketInfoHeader().click();
+		Assert.assertTrue(mi.getVerifyMarketInfoSection().isDisplayed());
+		System.out.println("About section options are displayed properly");
+
+		//Click About Americas Mart option under About tab
+
+		mi.getAboutLasVegasMarket().click();
+		Assert.assertEquals(mi.getVerifyContactUs().getText(), "About");
+		System.out.println("About Americas Mart section is displayed properly");
+		mi.getMarketInfoHeader().click();
+
+		//Click Press Center option under About tab
+
+		mi.getMarketDatesAndHrs().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Press Releases");
+		System.out.println("Press Center section is displayed properly");
+		mi.getMarketInfoHeader().click();
+
+		//Click Blog option under About tab
+
+		mi.getRegistrationDetails().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Blog");
+		System.out.println("Blog section is displayed properly");
+		mi.getMarketInfoHeader().click();
+
+		//Click Atlanta Next option under About tab
+
+		mi.getFAQs().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Next");
+		System.out.println("Atlanta Next section is displayed properly");
+		mi.getMarketInfoHeader().click();
+
+		//Click History option under About tab
+
+		mi.getContactUs().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "History");
+		System.out.println("History section is displayed properly");
+		mi.getMarketInfoHeader().click();
+
+		//Click Careers option under About tab
+
+		amab.getCareers().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
+		System.out.println("Careers section is displayed properly");
+		mi.getMarketInfoHeader().click();
+
+		//Click Contact Us option under Market Info
+
+		amab.getContactUs().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Contact Us");
+		System.out.println("Contact Us section is displayed properly");
+		mi.getMarketInfoHeader().click();
+		
+		//Click Industry Partners option under Market Info
+
+		amab.getIndustryPartners().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Industry Partners");
+		System.out.println("Industry Partners section is displayed properly");
+	}
+	
+	@Test(priority=5)
+	public void T005_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException
+	{
+		
+		//The purpose of this test case to verify:-
+		//UXP-T101: To verify the Market Planner overview and it's functionality
+
+				lap = new UXPLandingPage(driver);
+				lp = new UXPLoginPage(driver);
+				amhe = new AMHeaderLinksPage(driver);
+				//cl = new AMCAllChannelsLinksPage(driver);
+				hd=new UXPHeaderChannelLinksPage(driver);
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				
+				//Click on Atlanta Market 
+				hd.getAtlantaMarket().click();
+				System.out.println("Atlanta Market Home Page");
+				//Verify that Atlanta Market Home page should be displayed
+				//Assert.assertTrue(hd.getAtlantaMarketLogo().isDisplayed());
+				Assert.assertTrue(driver.getCurrentUrl().equalsIgnoreCase("https://uat-atlmkt.imcmvdp.com/"));
+				System.out.println("Atlanta Market Home Page URL");
+				
+				driver.navigate().back();
+				
+				//Click on Atlanta Market 
+				hd.getAtlantaApparel().click();
+				System.out.println("Atlanta Apparel Home Page");
+				//Verify that Atlanta App Home page should be displayed
+				//Assert.assertTrue(cl.getAtlantaAppLogo().isDisplayed());
+				Assert.assertTrue(driver.getCurrentUrl().equalsIgnoreCase("https://uat-atlapp.imcmvdp.com/"));
+				System.out.println("Atlanta App URL");
+				
+				driver.navigate().back();
+				
+				//Click on Atlanta Market 
+				hd.getAmericasMart().click();
+				System.out.println("AmericasMart Home Page");
+				//Verify that AmericasMart Home page should be displayed
+				//Assert.assertTrue(cl.getAmericasMartLogo().isDisplayed());
+				Assert.assertTrue(driver.getCurrentUrl().equalsIgnoreCase("https://uat-amc.imcmvdp.com/"));
+				System.out.println("AmericasMart URL");
+				amhe.getClosePrompt().click();
+				
+				
+							
+				//Click on Atlanta Market 
+				hd.getHighPoint().click();
+				System.out.println("HighPoint Market Home Page");
+				//Verify that High point Market Home page should be displayed
+				//Assert.assertTrue(hd.getHighPointLogo().isDisplayed());
+				Assert.assertTrue(driver.getCurrentUrl().equalsIgnoreCase("http://www.imchighpointmarket.com/"));
+				System.out.println("High Point Market Home Page URL");
+				
+				driver.navigate().back();
+				
+				//Click on Atlanta Market 
+				hd.getLasVegas().click();
+				System.out.println("Las Vegas Market Home Page");
+				//Verify that Las Vegas Home page should be displayed
+				//Assert.assertTrue(hd.getLasVegasLogo().isDisplayed());
+				Assert.assertTrue(driver.getCurrentUrl().equalsIgnoreCase("https://uat-lvm.imcmvdp.com/"));
+				System.out.println("Las Vegas Market Home Page URL");
+				
+				
 	}
 	
 	/*@AfterSuite

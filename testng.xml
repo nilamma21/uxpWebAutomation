@@ -11,7 +11,11 @@
 	</test>
 </suite> -->
 
+
+ <!-- <suite name="ATLMrkt_SmokeTestSuite">
+
 <suite name="ATLMrkt_SmokeTestSuite">
+
 	<listners>
 		<listner class-name="atlantamarket.TestListeners" />
 	</listners>
@@ -19,9 +23,15 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
+
+			<methods> 
+				<include name="TS012_VerifyAllLinksUnderAttendTabTest" /> 
+				<include name="TS013_VerifyAllNewsAndTrendsMenuTest" /> 
+			</methods> 
 			 <!-- <methods> 
 				<include name="TS013_VerifyAllNewsAndTrendsMenuTest"/>
 			</methods> -->
+
 		</classes>
 	</test>
 </suite>
@@ -35,7 +45,7 @@
 		<classes>
 			<class name="americasmart.AmericasMartSmokeTest_UAT" />
 			<methods> 
-				<include name="TS003_VerifyAllSocialMediaLinksOnFooterTest" /> 
+				<include name="T005_VerifyAllHeaderChanelLinksTest" /> 
 			</methods> 
 		</classes>
 	</test>

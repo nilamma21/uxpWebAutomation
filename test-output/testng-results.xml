@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="AMMart_SmokeTestSuite" duration-ms="117090" started-at="2022-02-11T16:03:59Z" finished-at="2022-02-11T16:05:56Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="117090" started-at="2022-02-11T16:03:59Z" finished-at="2022-02-11T16:05:56Z">
+      <class name="americasmart.AmericasMartSmokeTest_UAT">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:americasmart.AmericasMartSmokeTest_UAT@3ffc5af1]" name="initialize" is-config="true" duration-ms="50416" started-at="2022-02-11T21:33:59Z" finished-at="2022-02-11T21:34:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="T005_VerifyAllHeaderChanelLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_UAT@3ffc5af1]" name="T005_VerifyAllHeaderChanelLinksTest" duration-ms="66654" started-at="2022-02-11T21:34:50Z" finished-at="2022-02-11T21:35:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T005_VerifyAllHeaderChanelLinksTest -->
+      </class> <!-- americasmart.AmericasMartSmokeTest_UAT -->
 <testng-results skipped="0" failed="1" total="13" passed="12">
   <reporter-output>
   </reporter-output>
