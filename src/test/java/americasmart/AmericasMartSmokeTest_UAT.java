@@ -283,7 +283,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 	}
 	
 	@Test(priority=5)
-	public void T005_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException
+	public void TS005_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException
 	{
 		
 		//The purpose of this test case to verify:-
@@ -563,7 +563,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 	}
 
 	@Test(priority=9)
-	public void T009_VerifyAllLinksUnderOpenYearRoundTest() throws InterruptedException, IOException
+	public void TS009_VerifyAllLinksUnderOpenYearRoundTest() throws InterruptedException, IOException
 	{
 		
 		//The purpose of this test case to verify:-
@@ -652,7 +652,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 	}
 	
 	@Test(priority=10)
-	public void T010_VerifyAllLinksUnderExhibitTest() throws InterruptedException, IOException
+	public void TS010_VerifyAllLinksUnderExhibitTest() throws InterruptedException, IOException
 	{
 		
 		//The purpose of this test case to verify:-
