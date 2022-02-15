@@ -83,10 +83,13 @@ public class AmericasMartSmokeTest_UAT extends base {
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
 		amhe = new AMHeaderLinksPage(driver);
+		amab = new AMAboutTabPage(driver);
 
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("ammarturl"));
+		amab.getErrorAdvancedBtn().click();
+		amab.getErrorUnsafeWebLink().click();
 		Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
@@ -112,6 +115,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 
 				//Verify that Market Planner Home page should be displayed
 				Assert.assertTrue(lap.getMPLinkText().isDisplayed());
+				amhe.getClosePrompt().click();
 	}
 
 	@Test(priority=2)
@@ -153,6 +157,8 @@ public class AmericasMartSmokeTest_UAT extends base {
 				String searchterm = gs.getVerifyGlobalSeacrh().getText();
 				Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 				System.out.println("Exhibitor Directory page is working properly.");
+				driver.get(prop.getProperty("ammarturl"));
+				amhe.getClosePrompt().click();
 	}
 	
 	@Test(priority=3)
@@ -345,7 +351,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 				Assert.assertTrue(driver.getCurrentUrl().equalsIgnoreCase("https://uat-lvm.imcmvdp.com/"));
 				System.out.println("Las Vegas Market Home Page URL");
 				
-				
+				driver.navigate().back();
 	}
 	
 	@Test(priority=6)
