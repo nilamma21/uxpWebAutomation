@@ -18,6 +18,7 @@ public class AMFooterLinksNavigationPage {
 	By TwitterIcon = By.xpath("//a[@href='https://twitter.com/americasmartatl']']"); // Locator for Twitter icon in footer links
 	By InstagramIcon = By.xpath("//a[@href='https://www.instagram.com/americasmartatl/'])[position()=2]']"); // Locator for Instagram icon in footer links
 	By YoutubeIcon = By.xpath("//a[@href='https://www.youtube.com/user/AmericasMart']"); // Locator for You Tube icon in footer links
+	By internationalmarketcenters = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[6]/div[1]/a[1]"); //Locator for International Market Centers in footer links
 	
 	public AMFooterLinksNavigationPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -49,6 +50,13 @@ public class AMFooterLinksNavigationPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(YoutubeIcon));
 		return driver.findElement(YoutubeIcon);
+
+	}
+	
+	public WebElement getinternationalmarketcenters() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(internationalmarketcenters));
+		return driver.findElement(internationalmarketcenters);
 
 	}
 
