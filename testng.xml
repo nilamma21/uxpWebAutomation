@@ -31,7 +31,7 @@
 	</test>
 </suite> -->
 
-<suite name="AMMart_SmokeTestSuite">
+<!-- <suite name="AMMart_SmokeTestSuite">
 	<listners>
 		<listner class-name="americasmart.TestListeners" />
 	</listners>
@@ -39,9 +39,24 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="americasmart.AmericasMartSmokeTest_UAT" />
+			<methods> 
+				<include name="TS008_VerifyGlobalSearchFunctionalityTest" /> 
+			</methods> 
+		</classes>
+	</test>
+</suite> -->
+
+<suite name="EXP_SmokeTestSuite">
+	<listners>
+		<listner class-name="americasmart.TestListeners" />
+	</listners>
+
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="exhibitorportal.ExhibitorPortalSmokeTest_UAT" />
 			<!-- <methods> 
 				<include name="TS008_VerifyGlobalSearchFunctionalityTest" /> 
 			</methods> -->
 		</classes>
 	</test>
-</suite> 
+</suite>
