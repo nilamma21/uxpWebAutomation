@@ -9,35 +9,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import pageObjects.AmericasMart.AMAboutTabPage;
-import pageObjects.AmericasMart.AMExhibitTabPage;
-import pageObjects.AmericasMart.AMFooterLinksNavigationPage;
-import pageObjects.AmericasMart.AMHeaderLinksPage;
-import pageObjects.AmericasMart.AMMarketsAndEventsPage;
+import ExhibitorPortal.EXPLoginPage;
+import ExhibitorPortal.EXPNotificationsTabPage;
 import pageObjects.AmericasMart.AMOpenYearRoundPage;
-import pageObjects.AtlantaMarket.ATLAllChannelsLinksPage;
-import pageObjects.AtlantaMarket.ATLAttendPage;
-import pageObjects.AtlantaMarket.ATLExhibitPage;
-import pageObjects.AtlantaMarket.ATLExhibitorDirectoryPage;
-import pageObjects.AtlantaMarket.ATLExhibitorsAndProductsTabPage;
-import pageObjects.AtlantaMarket.ATLFooterLinksNavigationPage;
-import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
-import pageObjects.AtlantaMarket.ATLMarketInfoPage;
-import pageObjects.AtlantaMarket.ATLNewsAndTrendsTabPage;
-import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
-import pageObjects.AtlantaMarket.ATLRegistrationsPage;
-import pageObjects.LasVegasMarket.UXPAttendPage;
-import pageObjects.LasVegasMarket.UXPExhibitPage;
-import pageObjects.LasVegasMarket.UXPExhibitorDirectoryPage;
-import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
-import pageObjects.LasVegasMarket.UXPExploreMarketPage;
-import pageObjects.LasVegasMarket.UXPFooterLinksNavigationPage;
-import pageObjects.LasVegasMarket.UXPGlobalSearchPage;
-import pageObjects.LasVegasMarket.UXPHeaderChannelLinksPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
-import pageObjects.LasVegasMarket.UXPMarketInfoPage;
-import pageObjects.LasVegasMarket.UXPProfileAndSettingsPage;
 import resources.GenerateData;
 import resources.SendEmail;
 import resources.Utility;
@@ -50,30 +26,8 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 	public Utility utl;
 	UXPLandingPage lap;
 	UXPLoginPage lp;
-	ATLProfileAndSettingsPage atlps;
-	ATLGlobalSearchPage atlgs;
-	ATLExhibitorsAndProductsTabPage atlexhp;
-	ATLExhibitorDirectoryPage atled;
-	ATLRegistrationsPage atlregp;
-	ATLMarketInfoPage atlmi;
-	ATLExhibitPage atlexh;
-	ATLAllChannelsLinksPage atlch;
-	ATLFooterLinksNavigationPage atlfl;
-	UXPExhibitorsAndProductsTabPage exhp;
-	UXPMarketInfoPage mi;
-	UXPFooterLinksNavigationPage fl;
-	ATLAttendPage atat;
-	ATLNewsAndTrendsTabPage atlnt;
-	AMHeaderLinksPage amhe;
-	UXPExhibitorDirectoryPage ed;
-	UXPGlobalSearchPage gs;
-	AMFooterLinksNavigationPage amfl;
-	AMAboutTabPage amab;
-	UXPHeaderChannelLinksPage hd;
-	UXPExploreMarketPage expmrkt;
-	AMMarketsAndEventsPage amme;
-	AMExhibitTabPage amexh;
-	AMOpenYearRoundPage amoyr;
+	EXPNotificationsTabPage nt;
+	EXPLoginPage el;
 	SendEmail se;
 
 	@BeforeTest
@@ -82,19 +36,15 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
-		amhe = new AMHeaderLinksPage(driver);
-
-		//Navigate to Atlanta Market site
+		
+		//Navigate to Exhibitor Portal
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("ammarturl"));
-		Thread.sleep(8000);
-		lap.getIUnderstandBtn().click();
-		Thread.sleep(10000);
-		amhe.getClosePrompt().click();
+		driver.get(prop.getProperty("expurl"));
+			
 	}
 
 	@Test(priority=1)
-	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
+	public void TS001_VerifyExhibitorPortalLoginTest() throws InterruptedException, IOException
 	{
 		
 		//The purpose of this test case to verify:-
@@ -102,15 +52,39 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 
 				lap = new UXPLandingPage(driver);
 				lp = new UXPLoginPage(driver);
-				amhe = new AMHeaderLinksPage(driver);
+				el = new EXPLoginPage(driver);
 				
-
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				
 				//Login to Market Planner
-				utl.verifyMPLoginFunctionality();
+				el.getEmailAddress().sendKeys(prop.getProperty("username"));
+				el.getPassword().sendKeys(prop.getProperty("password"));
+				el.getSignInBtn().click();
+				Thread.sleep(5000);
+				lap.getIUnderstandBtn().click();
+				Thread.sleep(5000);
+				
+				//Verify that Exhibitor Portal Home page should be displayed
+				Assert.assertTrue(el.getVerifyExpHomePage().isDisplayed());
+				System.out.println("Exhibitor Portal home page is displayed properly.");
+	}
+	
+	@Test(priority=2)
+	public void TS002_VerifyNotificationsTabTest() throws InterruptedException, IOException
+	{
+		
+		//The purpose of this test case to verify:-
+		//UXP-T101: To verify the Market Planner overview and it's functionality
 
-				//Verify that Market Planner Home page should be displayed
-				Assert.assertTrue(lap.getMPLinkText().isDisplayed());
+				lap = new UXPLandingPage(driver);
+				lp = new UXPLoginPage(driver);
+				nt = new EXPNotificationsTabPage(driver);
+				
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				
+				//Click Notifications icon and verify results
+				nt.getNotifications().click();
+				Assert.assertEquals(nt.getVeirfyNotifications().getText(), "Exhibitor Portal Message Center");
+				System.out.println("Exhibitor Portal notifications page is displayed properly.");
 	}
 }

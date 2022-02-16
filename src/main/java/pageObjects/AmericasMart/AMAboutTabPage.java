@@ -19,6 +19,7 @@ public class AMAboutTabPage {
 	By IndustryPartners = By.xpath("//div[@class = 'imc-section']/div[1]/div[1]/div[2]/div[4]/div[3]/a[1]"); // Locator for Instagram icon in footer links
 	By ErrorAdvancedBtn = By.xpath("//button[@id = 'details-button']");
 	By ErrorUnsafeWebLink = By.xpath("//a[@id = 'proceed-link']");
+	
 	public AMAboutTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
