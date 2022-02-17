@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
+
   <suite name="ATLMrkt_SmokeTestSuite" duration-ms="132238" started-at="2022-02-17T10:25:16Z" finished-at="2022-02-17T10:27:28Z">
     <groups>
     </groups>
@@ -16,6 +17,25 @@
           </reporter-output>
         </test-method> <!-- TS013_VerifyAllNewsAndTrendsMenuTest -->
       </class> <!-- atlantamarket.AtlantaMarketSmokeTest_PROD -->
+
+  <suite name="EXP_SmokeTestSuite" duration-ms="46359" started-at="2022-02-16T12:03:49Z" finished-at="2022-02-16T12:04:35Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="46359" started-at="2022-02-16T12:03:49Z" finished-at="2022-02-16T12:04:35Z">
+      <class name="exhibitorportal.ExhibitorPortalSmokeTest_UAT">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_UAT@523884b2]" name="initialize" is-config="true" duration-ms="12554" started-at="2022-02-16T17:33:49Z" finished-at="2022-02-16T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyExhibitorPortalLoginTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_UAT@523884b2]" name="TS001_VerifyExhibitorPortalLoginTest" duration-ms="31564" started-at="2022-02-16T17:34:02Z" finished-at="2022-02-16T17:34:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyExhibitorPortalLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyNotificationsTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_UAT@523884b2]" name="TS002_VerifyNotificationsTabTest" duration-ms="2210" started-at="2022-02-16T17:34:33Z" finished-at="2022-02-16T17:34:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyNotificationsTabTest -->
+      </class> <!-- exhibitorportal.ExhibitorPortalSmokeTest_UAT -->
     </test> <!-- Test -->
-  </suite> <!-- ATLMrkt_SmokeTestSuite -->
+  </suite> <!-- EXP_SmokeTestSuite -->
 </testng-results>

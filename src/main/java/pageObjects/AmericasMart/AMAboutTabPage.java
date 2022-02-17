@@ -17,7 +17,8 @@ public class AMAboutTabPage {
 	By Careers = By.xpath("//div[@class = 'imc-section']/div[1]/div[1]/div[2]/div[4]/div[1]/a[1]"); // Locator for Careers in About tab
 	By ContactUs = By.xpath("//div[@class = 'imc-section']/div[1]/div[1]/div[2]/div[4]/div[2]/a[1]"); // Locator for Contact Us in About tab
 	By IndustryPartners = By.xpath("//div[@class = 'imc-section']/div[1]/div[1]/div[2]/div[4]/div[3]/a[1]"); // Locator for Instagram icon in footer links
-	
+	By ErrorAdvancedBtn = By.xpath("//button[@id = 'details-button']");
+	By ErrorUnsafeWebLink = By.xpath("//a[@id = 'proceed-link']");
 	
 	public AMAboutTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -42,6 +43,20 @@ public class AMAboutTabPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(IndustryPartners));
 		return driver.findElement(IndustryPartners);
+
+	}
+	
+	public WebElement getErrorAdvancedBtn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(ErrorAdvancedBtn));
+		return driver.findElement(ErrorAdvancedBtn);
+
+	}
+	
+	public WebElement getErrorUnsafeWebLink() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(ErrorUnsafeWebLink));
+		return driver.findElement(ErrorUnsafeWebLink);
 
 	}
 

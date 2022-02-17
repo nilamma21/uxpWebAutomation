@@ -14,6 +14,9 @@
 
 <suite name="ATLMrkt_SmokeTestSuite">
 
+ <!-- <suite name="ATLMrkt_SmokeTestSuite">
+
+
 	<listners>
 		<listner class-name="atlantamarket.TestListeners" />
 	</listners>
@@ -27,6 +30,14 @@
 				<include name="TS008_VerifAllLinksUnderExhibitTabTest" /> 
 				<include name="TS013_VerifyAllNewsAndTrendsMenuTest"/>
 			</methods> -->
+
+			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
+
+			<methods> 
+				<include name="TS012_VerifyAllLinksUnderAttendTabTest" /> 
+				<include name="TS013_VerifyAllNewsAndTrendsMenuTest" /> 
+			</methods> 
+			 
 		</classes>
 	</test>
 </suite>
@@ -40,8 +51,23 @@
 		<classes>
 			<class name="americasmart.AmericasMartSmokeTest_UAT" />
 			<methods> 
-				<include name="T005_VerifyAllHeaderChanelLinksTest" /> 
+				<include name="TS008_VerifyGlobalSearchFunctionalityTest" /> 
 			</methods> 
 		</classes>
 	</test>
 </suite> -->
+
+<suite name="EXP_SmokeTestSuite">
+	<listners>
+		<listner class-name="americasmart.TestListeners" />
+	</listners>
+
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="exhibitorportal.ExhibitorPortalSmokeTest_UAT" />
+			<!-- <methods> 
+				<include name="TS008_VerifyGlobalSearchFunctionalityTest" /> 
+			</methods> -->
+		</classes>
+	</test>
+</suite>
