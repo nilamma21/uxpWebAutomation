@@ -28,7 +28,7 @@ public class ATLExhibitorsAndProductsTabPage {
 	By atlverifycatalogconnectpage = By.xpath("//h4[contains(text(), 'Welcome to Catalog Connexion!')]"); //Locator for Catalog Connection page validation
 	By atlverifyjunipermrktpage = By.xpath("(//img[@alt='JuniperMarket'])[position()=2]"); //Locator for Juniper Market page
 	By JuniperMarketProd = By.xpath("//a[contains(text(), 'JuniperMarket')]"); //Locator for Juniper Market header tab
-
+	By atlshowspecialsprod = By.xpath("//a[@href='/exhibitor/Show-Specials']"); //Locator for Show Specials menu
 
 
 	public ATLExhibitorsAndProductsTabPage(WebDriver driver) {
@@ -101,6 +101,13 @@ public class ATLExhibitorsAndProductsTabPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifyjunipermrktpage));
 		return driver.findElement(atlverifyjunipermrktpage);
 	}
+	public WebElement getATLShowSpecialsPROD() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlshowspecialsprod));
+		return driver.findElement(atlshowspecialsprod);
+	}
+	
+	
 }
 
 

@@ -36,6 +36,10 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
+
+            <a href="#" class="navigator-link" panel-name="suite-ATLMrkt_SmokeTestSuite">
+              <span class="suite-name border-passed">ATLMrkt_SmokeTestSuite</span>
+
             <a href="#" class="navigator-link" panel-name="suite-EXP_SmokeTestSuite">
               <span class="suite-name border-passed">EXP_SmokeTestSuite</span>
             </a> <!-- navigator-link -->
@@ -95,6 +99,18 @@
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
+
+                      <a href="#" panel-name="suite-ATLMrkt_SmokeTestSuite" class="hide-methods passed suite-ATLMrkt_SmokeTestSuite"> (hide)</a> <!-- hide-methods passed suite-ATLMrkt_SmokeTestSuite -->
+                      <a href="#" panel-name="suite-ATLMrkt_SmokeTestSuite" class="show-methods passed suite-ATLMrkt_SmokeTestSuite"> (show)</a> <!-- show-methods passed suite-ATLMrkt_SmokeTestSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-ATLMrkt_SmokeTestSuite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_SmokeTestSuite" title="atlantamarket.AtlantaMarketSmokeTest_PROD" hash-for-method="TS013_VerifyAllNewsAndTrendsMenuTest">TS013_VerifyAllNewsAndTrendsMenuTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-ATLMrkt_SmokeTestSuite -->
+
                       <a href="#" panel-name="suite-EXP_SmokeTestSuite" class="hide-methods passed suite-EXP_SmokeTestSuite"> (hide)</a> <!-- hide-methods passed suite-EXP_SmokeTestSuite -->
                       <a href="#" panel-name="suite-EXP_SmokeTestSuite" class="show-methods passed suite-EXP_SmokeTestSuite"> (show)</a> <!-- show-methods passed suite-EXP_SmokeTestSuite -->
                     </span>
@@ -120,6 +136,13 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
+
+        <div panel-name="suite-ATLMrkt_SmokeTestSuite" class="panel ATLMrkt_SmokeTestSuite">
+          <div class="suite-ATLMrkt_SmokeTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">atlantamarket.AtlantaMarketSmokeTest_PROD</span>
+
         <div panel-name="suite-EXP_SmokeTestSuite" class="panel EXP_SmokeTestSuite">
           <div class="suite-EXP_SmokeTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
@@ -129,6 +152,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+
+                  <a name="TS013_VerifyAllNewsAndTrendsMenuTest">
+                  </a> <!-- TS013_VerifyAllNewsAndTrendsMenuTest -->
+                  <span class="method-name">TS013_VerifyAllNewsAndTrendsMenuTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ATLMrkt_SmokeTestSuite-class-passed -->
+        </div> <!-- panel ATLMrkt_SmokeTestSuite -->
+        <div panel-name="test-xml-ATLMrkt_SmokeTestSuite" class="panel">
+
                   <a name="TS001_VerifyExhibitorPortalLoginTest">
                   </a> <!-- TS001_VerifyExhibitorPortalLoginTest -->
                   <span class="method-name">TS001_VerifyExhibitorPortalLoginTest</span>
@@ -155,6 +189,13 @@
 &lt;suite name=&quot;EXP_SmokeTestSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
+
+      &lt;class name=&quot;atlantamarket.AtlantaMarketSmokeTest_PROD&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TS013_VerifyAllNewsAndTrendsMenuTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- atlantamarket.AtlantaMarketSmokeTest_PROD --&gt;
+
       &lt;class name=&quot;exhibitorportal.ExhibitorPortalSmokeTest_UAT&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
@@ -195,6 +236,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
+<<<<<<< HEAD
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'TS013_VerifyAllNewsAndTrendsMenuTest')
+data.setCell(0, 2, 'atlantamarket.AtlantaMarketSmokeTest_PROD')
+data.setCell(0, 3, 73363);
+window.suiteTableData['ATLMrkt_SmokeTestSuite']= { tableData: data, tableDiv: 'times-div-ATLMrkt_SmokeTestSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-ATLMrkt_SmokeTestSuite">
+              </div> <!-- times-div-ATLMrkt_SmokeTestSuite -->
+=======
 data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TS001_VerifyExhibitorPortalLoginTest')
@@ -211,6 +266,7 @@ return data;
               <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-EXP_SmokeTestSuite">
               </div> <!-- times-div-EXP_SmokeTestSuite -->
+>>>>>>> 8056f53b1548c4dd27a4306346418a35388e29ac
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -223,9 +279,44 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-EXP_SmokeTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
+<<<<<<< HEAD
+            <span class="header-content">12 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">atlantamarket.AtlantaMarketSmokeTest_PROD</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest</span>
+                <br/>
+                <span class="ignored-method-name">TS004_VerifyMarketPlannerRegistrationsOptionTest</span>
+                <br/>
+                <span class="ignored-method-name">TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</span>
+                <br/>
+                <span class="ignored-method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                <br/>
+                <span class="ignored-method-name">TS008_VerifAllLinksUnderExhibitTabTest</span>
+                <br/>
+                <span class="ignored-method-name">TS005_VerifyExhibitorDirectoryTest</span>
+                <br/>
+                <span class="ignored-method-name">TS010_VerifyAllSocialMediaLinksOnFooterTest</span>
+                <br/>
+                <span class="ignored-method-name">TS009_VerifyAllChannelsLinksTest</span>
+                <br/>
+                <span class="ignored-method-name">TS003_VerifyGlobalSearchFunctionalityTest</span>
+                <br/>
+                <span class="ignored-method-name">TS012_VerifyAllLinksUnderAttendTabTest</span>
+                <br/>
+                <span class="ignored-method-name">TS006_VerifyAllLinksUnderMarketInfoTabTest</span>
+                <br/>
+                <span class="ignored-method-name">TS011_VerifyFooterLinksTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+=======
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+>>>>>>> 8056f53b1548c4dd27a4306346418a35388e29ac
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-EXP_SmokeTestSuite" class="panel">
@@ -234,18 +325,27 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+<<<<<<< HEAD
+              <div class="chronological-class-name">atlantamarket.AtlantaMarketSmokeTest_PROD</div> <!-- chronological-class-name -->
+=======
               <div class="chronological-class-name">exhibitorportal.ExhibitorPortalSmokeTest_UAT</div> <!-- chronological-class-name -->
+>>>>>>> 8056f53b1548c4dd27a4306346418a35388e29ac
               <div class="configuration-test before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+<<<<<<< HEAD
+                <span class="method-name">TS013_VerifyAllNewsAndTrendsMenuTest</span>
+                <span class="method-start">58801 ms</span>
+=======
                 <span class="method-name">TS001_VerifyExhibitorPortalLoginTest</span>
                 <span class="method-start">12571 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TS002_VerifyNotificationsTabTest</span>
                 <span class="method-start">44142 ms</span>
+>>>>>>> 8056f53b1548c4dd27a4306346418a35388e29ac
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

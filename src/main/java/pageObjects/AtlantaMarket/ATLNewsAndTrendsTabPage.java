@@ -15,7 +15,7 @@ public class ATLNewsAndTrendsTabPage
 
 	By atlNewsAndTrendsTap = By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[1]/a[1]"); //Locator for News & Trends header tab
 	By VerifyNewsSection = By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[2]"); //Locator for verification of news and trends section
-	By atlNewsAndTrends = By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[2]/div[1]/div[1]/a[1]"); //Locator for News & Trends under header tab
+	By atlNewsAndTrends = By.xpath("//a[contains(text(),'News & Trends')]"); //Locator for News & Trends under header tab
 	By atlsewsntrendssubmenu = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[1]/div[1]/a"); ////Locator for News & Trends sub menu
 	By atlNewsAndTrendsPageHeader = By.xpath("(//a[contains(text(),'News & Trends')])[2]"); //Locator for News & Trends page Header
 	By atlMarketSnapshot = By.xpath("//a[@href='/News-and-Trends/Market-Snapshot' and contains(text(),'Market Snapshot')]"); //Locator for Market Snapshot
@@ -34,7 +34,7 @@ public class ATLNewsAndTrendsTabPage
 	By atlInTheNewsHeader=By.xpath("//a[contains(text(),'In the News')]");//Locator for In the News header
 	By atlAtlantaNext=By.xpath("//a[@href='/News-and-Trends/Atlanta-Next']");////Locator for Atlanta Next
 	By atlAtlantaNextHeader=By.xpath("(//a[contains(text(),'Atlanta Next')])[1]");//Locator for Atlanta Next header
-	By atlPortmanPeachtree=By.xpath("//img[@src='https://uat-atlmkt.imcmvdp.com/-/jssmedia/Atlanta-Market/Blog/PortmanPeachtree_wTagline_Stacked.png?h=2245&w=3273&hash=1E2A62563C96110E8E9E4D3DC3913C69']");////Locator for Portman Peachtree
+	By atlPortmanPeachtree=By.xpath("(//a[@href='/News-and-Trends/Blog'])[position()=2]");////Locator for Portman Peachtree
 	By atlPortmanPeachtreeHeader=By.xpath("//img[@src='https://uat-atlmkt.imcmvdp.com/-/media/Atlanta-Market/Blog/PortmanPeachtree_Logo_wTagline_Horizontal.svg']");//Locator for PortmanPeachtree header
 	
 	public ATLNewsAndTrendsTabPage(WebDriver driver) {
@@ -49,7 +49,7 @@ public class ATLNewsAndTrendsTabPage
 	
 	public WebElement getATLNewsAndTrends() {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(atlNewsAndTrends));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlNewsAndTrends));
 		return driver.findElement(atlNewsAndTrends);
 	}
 	
