@@ -12,8 +12,6 @@
 </suite> -->
 
 
- <!-- <suite name="ATLMrkt_SmokeTestSuite">
-
 <suite name="ATLMrkt_SmokeTestSuite">
 
 	<listners>
@@ -22,16 +20,13 @@
 
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
-
-			<methods> 
-				<include name="TS012_VerifyAllLinksUnderAttendTabTest" /> 
-				<include name="TS013_VerifyAllNewsAndTrendsMenuTest" /> 
-			</methods> 
-			 <!-- <methods> 
+			<class name="atlantamarket.AtlantaMarketSmokeTest_PROD" />
+ 			<!-- <methods> 
+				<include name="TS001_VerifyMarketPlannerLoginTest"/>
+				<include name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest"/>
+				<include name="TS008_VerifAllLinksUnderExhibitTabTest" /> 
 				<include name="TS013_VerifyAllNewsAndTrendsMenuTest"/>
 			</methods> -->
-
 		</classes>
 	</test>
 </suite>

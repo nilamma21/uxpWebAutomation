@@ -32,7 +32,9 @@ public class ATLFooterLinksNavigationPage {
 	By instagramicon =  By.xpath("//a[@href='https://www.instagram.com/americasmartatl/']//div//*[name()='svg']"); //Locator for Instagram link in footer
 	By youtubeicon = By.xpath("//a[@href='https://www.youtube.com/user/AmericasMart']//div//*[name()='svg']"); //Locator You Tube icon
 	By twittericon = By.xpath("//a[@href='https://twitter.com/americasmartatl']//div//*[name()='svg']"); //Locator for Twitter icon
-	
+	By atlimclinkprod = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[7]/div[1]/a[1]"); //Locator IMC Footer link
+	By atlhpmktlinkprod = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[4]/div[1]/a[1]"); //Locator for High Point footer link
+
 	public ATLFooterLinksNavigationPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -123,6 +125,14 @@ public class ATLFooterLinksNavigationPage {
 	public WebElement getTwitterIcon() throws InterruptedException {
 		Thread.sleep(10000);
 		return driver.findElement(twittericon);
+	}
+	public WebElement getATLIMCLinkProd() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(atlimclinkprod);
+	}
+	public WebElement getATLHPMktLink() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(atlhpmktlinkprod);
 	}
 }
 

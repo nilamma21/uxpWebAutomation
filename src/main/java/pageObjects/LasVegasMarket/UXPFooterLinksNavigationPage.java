@@ -34,6 +34,8 @@ public class UXPFooterLinksNavigationPage {
 	By pinteresticon = By.xpath("//a[@href='https://www.pinterest.com/lasvegasmarket/']//div//*[name()='svg']"); //Locator for Pinterest icon
 	By twittericon = By.xpath("//a[@href='https://twitter.com/lasvegasmarket']//div//*[name()='svg']"); //Locator for Twitter icon
 	By linkedinicon = By.xpath("//a[@href='https://www.linkedin.com/company/las-vegas-market']//div//*[name()='svg']"); //Locator for LinkedIn icon
+	By abtatlmktlink = By.xpath("//a[@href='/Market-Info/About-Us']"); //Locator for About Atlanta Market footer link
+	By lvapplink = By.xpath("(//a[@href='https://www.lasvegas-apparel.com/'])[position()=2]"); //Locator for Las Vegas Apparel footer link
 	
 	public UXPFooterLinksNavigationPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -161,6 +163,16 @@ public class UXPFooterLinksNavigationPage {
 		Thread.sleep(10000);
 		return driver.findElement(linkedinicon);
 	}
+	public WebElement getAbtAtlMktLink() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(abtatlmktlink);
+	}
+	public WebElement getLVAPPLink() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(lvapplink);
+	}
+
+	
 }
 
 

@@ -19,7 +19,8 @@ public class ATLAllChannelsLinksPage {
 	By americasmart = By.xpath("//ul[@class='links-wrap']/li[3]/a[1]"); // Locator for Americas Mart header link
 	By highpoint = By.xpath("//ul[@class='links-wrap']/li[4]/a[1]"); // Locator for IMC High Point Market header link
 	By lasvegas = By.xpath("//ul[@class='links-wrap']/li[5]/a[1]"); // Locator for Las vegas Market header link
-	
+	By lasvegasapp = By.xpath("//ul[@class='links-wrap']/li[6]/a[1]"); // Locator for Las vegas Apparel header link
+
 	
 	public ATLAllChannelsLinksPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -54,6 +55,12 @@ public class ATLAllChannelsLinksPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lasvegas));
 		return driver.findElement(lasvegas);
+	}
+	
+	public WebElement getLasVegasApp() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lasvegasapp));
+		return driver.findElement(lasvegasapp);
 	}
 	
 }
