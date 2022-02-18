@@ -3,17 +3,13 @@
 <suite name="Failed suite [AMMart_SmokeTestSuite]">
   <test name="Test(failed)">
     <classes>
-      <class name="americasmart.AmericasMartSmokeTest_UAT">
+      <class name="americasmart.AmericasMartSmokeTest_PROD">
         <methods>
+          <include name="TS011_VerifyAllLinksUnderExhibitTest"/>
+          <include name="TS005_VerifyAllLinksUnderAboutTabTest"/>
           <include name="initialize"/>
-          <include name="TS003_VerifyAllSocialMediaLinksOnFooterTest"/>
-          <include name="TS008_VerifyGlobalSearchFunctionalityTest"/>
-          <include name="TS009_VerifyAllLinksUnderOpenYearRoundTest"/>
-          <include name="TS006_VerifyAllLinksUnderMarketsAndEventsTabTest"/>
-          <include name="TS007_VerifyFooterLinksTest"/>
-          <include name="TS010_VerifyAllLinksUnderExhibitTest"/>
         </methods>
-      </class> <!-- americasmart.AmericasMartSmokeTest_UAT -->
+      </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [AMMart_SmokeTestSuite] -->

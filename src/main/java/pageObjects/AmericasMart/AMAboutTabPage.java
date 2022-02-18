@@ -14,9 +14,9 @@ public class AMAboutTabPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By Careers = By.xpath("//div[@class = 'imc-section']/div[1]/div[1]/div[2]/div[4]/div[1]/a[1]"); // Locator for Careers in About tab
-	By ContactUs = By.xpath("//div[@class = 'imc-section']/div[1]/div[1]/div[2]/div[4]/div[2]/a[1]"); // Locator for Contact Us in About tab
-	By IndustryPartners = By.xpath("//div[@class = 'imc-section']/div[1]/div[1]/div[2]/div[4]/div[3]/a[1]"); // Locator for Instagram icon in footer links
+	By Careers = By.xpath("(//a[@href='/About/Careers'])[position()=1]"); // Locator for Careers in About tab
+	By ContactUs = By.xpath("(//a[@href='/About/Contact-Us'])[position()=1]"); // Locator for Contact Us in About tab
+	By IndustryPartners = By.xpath("//a[@href='/About/Industry-Partners']"); // Locator for Instagram icon in footer links
 	By ErrorAdvancedBtn = By.xpath("//button[@id = 'details-button']");
 	By ErrorUnsafeWebLink = By.xpath("//a[@id = 'proceed-link']");
 	
