@@ -23,7 +23,10 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
+
       <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -36,8 +39,11 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
+
             <a href="#" class="navigator-link" panel-name="suite-AMMart_SmokeTestSuite">
               <span class="suite-name border-failed">AMMart_SmokeTestSuite</span>
+            <a href="#" class="navigator-link" panel-name="suite-EXP_SmokeTestSuite">
+              <span class="suite-name border-failed">EXP_SmokeTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,6 +96,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
+
                     <span class="method-stats">12 methods, 2 failed,   10 passed</span>
                   </li>
                   <li>
@@ -143,11 +150,35 @@
                         <a href="#" class="method navigator-link" panel-name="suite-AMMart_SmokeTestSuite" title="americasmart.AmericasMartSmokeTest_PROD" hash-for-method="TS006_VerifyAllHeaderChanelLinksTest">TS006_VerifyAllHeaderChanelLinksTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-EXP_SmokeTestSuite" class="hide-methods failed suite-EXP_SmokeTestSuite"> (hide)</a> <!-- hide-methods failed suite-EXP_SmokeTestSuite -->
+                      <a href="#" panel-name="suite-EXP_SmokeTestSuite" class="show-methods failed suite-EXP_SmokeTestSuite"> (show)</a> <!-- show-methods failed suite-EXP_SmokeTestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-EXP_SmokeTestSuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-EXP_SmokeTestSuite" title="exhibitorportal.ExhibitorPortalSmokeTest_UAT" hash-for-method="TS003_VerifySettingsTabTest">TS003_VerifySettingsTabTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-EXP_SmokeTestSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-EXP_SmokeTestSuite" class="hide-methods passed suite-EXP_SmokeTestSuite"> (hide)</a> <!-- hide-methods passed suite-EXP_SmokeTestSuite -->
+                      <a href="#" panel-name="suite-EXP_SmokeTestSuite" class="show-methods passed suite-EXP_SmokeTestSuite"> (show)</a> <!-- show-methods passed suite-EXP_SmokeTestSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-EXP_SmokeTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-AMMart_SmokeTestSuite" title="americasmart.AmericasMartSmokeTest_PROD" hash-for-method="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest">TS007_VerifyAllLinksUnderMarketsAndEventsTabTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-AMMart_SmokeTestSuite" title="americasmart.AmericasMartSmokeTest_PROD" hash-for-method="TS008_VerifyFooterLinksTest">TS008_VerifyFooterLinksTest</a> <!-- method navigator-link -->
@@ -169,6 +200,8 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-AMMart_SmokeTestSuite -->
+
+                    </div> <!-- method-list-content passed suite-EXP_SmokeTestSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -179,6 +212,7 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
+
         <div panel-name="suite-AMMart_SmokeTestSuite" class="panel AMMart_SmokeTestSuite">
           <div class="suite-AMMart_SmokeTestSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
@@ -274,10 +308,17 @@
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">americasmart.AmericasMartSmokeTest_PROD</span>
+
+        <div panel-name="suite-EXP_SmokeTestSuite" class="panel EXP_SmokeTestSuite">
+          <div class="suite-EXP_SmokeTestSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">exhibitorportal.ExhibitorPortalSmokeTest_UAT</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+
                   <a name="TS001_VerifyMarketPlannerLoginTest">
                   </a> <!-- TS001_VerifyMarketPlannerLoginTest -->
                   <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
@@ -346,6 +387,66 @@
                   <span class="method-name">TS012_VerifyExhibitorDirectoryTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+                  <a name="TS003_VerifySettingsTabTest">
+                  </a> <!-- TS003_VerifySettingsTabTest -->
+                  <span class="method-name">TS003_VerifySettingsTabTest</span>
+                  <div class="stack-trace"><b>"java.lang.NullPointerException: null value in entry: url=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:34)
+	at com.google.common.collect.SingletonImmutableBiMap.&lt;init&gt;(SingletonImmutableBiMap.java:42)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:73)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:120)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+	at exhibitorportal.ExhibitorPortalSmokeTest_UAT.TS003_VerifySettingsTabTest(ExhibitorPortalSmokeTest_UAT.java:142)
+... Removed 24 stack frames<br/> java.lang.NullPointerException: null value in entry: url=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:34)
+	at com.google.common.collect.SingletonImmutableBiMap.&lt;init&gt;(SingletonImmutableBiMap.java:42)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:73)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:120)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+	at exhibitorportal.ExhibitorPortalSmokeTest_UAT.TS003_VerifySettingsTabTest(ExhibitorPortalSmokeTest_UAT.java:142)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+"</b><br>com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:34)<br>com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)<br>com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:73)<br>com.google.common.collect.ImmutableMap.of(ImmutableMap.java:120)<br>org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)<br>exhibitorportal.ExhibitorPortalSmokeTest_UAT.TS003_VerifySettingsTabTest(ExhibitorPortalSmokeTest_UAT.java:142)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EXP_SmokeTestSuite-class-failed -->
+          <div class="suite-EXP_SmokeTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">exhibitorportal.ExhibitorPortalSmokeTest_UAT</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS001_VerifyExhibitorPortalLoginTest">
+                  </a> <!-- TS001_VerifyExhibitorPortalLoginTest -->
+                  <span class="method-name">TS001_VerifyExhibitorPortalLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-AMMart_SmokeTestSuite-class-passed -->
         </div> <!-- panel AMMart_SmokeTestSuite -->
@@ -360,11 +461,19 @@
 &lt;suite name=&quot;AMMart_SmokeTestSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
+
       &lt;class name=&quot;americasmart.AmericasMartSmokeTest_PROD&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;TS010_VerifyAllLinksUnderExhibitTest&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- americasmart.AmericasMartSmokeTest_PROD --&gt;
+
+      &lt;class name=&quot;exhibitorportal.ExhibitorPortalSmokeTest_UAT&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TS001_VerifyExhibitorPortalLoginTest&quot;/&gt;
+          &lt;include name=&quot;TS003_VerifySettingsTabTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- exhibitorportal.ExhibitorPortalSmokeTest_UAT --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- AMMart_SmokeTestSuite --&gt;
@@ -404,6 +513,7 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
+
 data.addRows(12);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TS008_VerifyFooterLinksTest')
@@ -460,6 +570,23 @@ return data;
               <span class="suite-total-time">Total running time: 22 minutes</span>
               <div id="times-div-AMMart_SmokeTestSuite">
               </div> <!-- times-div-AMMart_SmokeTestSuite -->
+
+data.addRows(2);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'TS001_VerifyExhibitorPortalLoginTest')
+data.setCell(0, 2, 'exhibitorportal.ExhibitorPortalSmokeTest_UAT')
+data.setCell(0, 3, 32101);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TS003_VerifySettingsTabTest')
+data.setCell(1, 2, 'exhibitorportal.ExhibitorPortalSmokeTest_UAT')
+data.setCell(1, 3, 9869);
+window.suiteTableData['EXP_SmokeTestSuite']= { tableData: data, tableDiv: 'times-div-EXP_SmokeTestSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 41 seconds</span>
+              <div id="times-div-EXP_SmokeTestSuite">
+              </div> <!-- times-div-EXP_SmokeTestSuite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -472,9 +599,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-AMMart_SmokeTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
+
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <span class="header-content">1 ignored method</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">exhibitorportal.ExhibitorPortalSmokeTest_UAT</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TS002_VerifyNotificationsTabTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-AMMart_SmokeTestSuite" class="panel">
@@ -483,7 +621,10 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+
               <div class="chronological-class-name">americasmart.AmericasMartSmokeTest_PROD</div> <!-- chronological-class-name -->
+
+              <div class="chronological-class-name">exhibitorportal.ExhibitorPortalSmokeTest_UAT</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
@@ -539,6 +680,14 @@ return data;
               <div class="test-method">
                 <span class="method-name">TS012_VerifyExhibitorDirectoryTest</span>
                 <span class="method-start">1326257 ms</span>
+                <span class="method-name">TS001_VerifyExhibitorPortalLoginTest</span>
+                <span class="method-start">12955 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TS003_VerifySettingsTabTest</span>
+                <span class="method-start">45070 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

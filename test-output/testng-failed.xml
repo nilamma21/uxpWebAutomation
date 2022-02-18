@@ -10,6 +10,12 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
+      <class name="exhibitorportal.ExhibitorPortalSmokeTest_UAT">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS003_VerifySettingsTabTest"/>
+        </methods>
+      </class> <!-- exhibitorportal.ExhibitorPortalSmokeTest_UAT -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [AMMart_SmokeTestSuite] -->
