@@ -12,9 +12,7 @@
 </suite> -->
 
 
-<suite name="ATLMrkt_SmokeTestSuite">
-
- <!-- <suite name="ATLMrkt_SmokeTestSuite">
+<!-- <suite name="ATLMrkt_SmokeTestSuite">
 
 
 	<listners>
@@ -24,12 +22,12 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="atlantamarket.AtlantaMarketSmokeTest_PROD" />
- 			<!-- <methods> 
+ 			 <methods> 
 				<include name="TS001_VerifyMarketPlannerLoginTest"/>
 				<include name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest"/>
 				<include name="TS008_VerifAllLinksUnderExhibitTabTest" /> 
 				<include name="TS013_VerifyAllNewsAndTrendsMenuTest"/>
-			</methods> -->
+			</methods> 
 
 			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
 
@@ -40,7 +38,7 @@
 			 
 		</classes>
 	</test>
-</suite>
+</suite>-->
 
 <!-- <suite name="AMMart_SmokeTestSuite">
 	<listners>
@@ -59,15 +57,16 @@
 
 <suite name="EXP_SmokeTestSuite">
 	<listners>
-		<listner class-name="americasmart.TestListeners" />
+		<listner class-name="exhibitorportal.TestListeners" />
 	</listners>
 
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="exhibitorportal.ExhibitorPortalSmokeTest_UAT" />
-			<!-- <methods> 
-				<include name="TS008_VerifyGlobalSearchFunctionalityTest" /> 
-			</methods> -->
+			 <methods> 
+			 	<include name="TS001_VerifyExhibitorPortalLoginTest" /> 
+				<include name="TS003_VerifySettingsTabTest" /> 
+			</methods> 
 		</classes>
 	</test>
 </suite>

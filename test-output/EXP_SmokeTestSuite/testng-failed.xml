@@ -6,7 +6,7 @@
       <class name="exhibitorportal.ExhibitorPortalSmokeTest_UAT">
         <methods>
           <include name="initialize"/>
-          <include name="TS002_VerifyNotificationsTabTest"/>
+          <include name="TS003_VerifySettingsTabTest"/>
         </methods>
       </class> <!-- exhibitorportal.ExhibitorPortalSmokeTest_UAT -->
     </classes>
