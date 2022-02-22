@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+ 
  <!-- <suite name="LVM_SmokeTestSuite">
 	<listners>
 		<listner class-name="lasvegasmarket.TestListeners" />
@@ -9,24 +10,33 @@
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
 		</classes>
 	</test>
-</suite> -->
+</suite>
 
+
+
+ <suite name="ATLMrkt_SmokeTestSuite">
 
 <!-- <suite name="ATLMrkt_SmokeTestSuite">
 
 
-	<listners>
+ 	<listners>
 		<listner class-name="atlantamarket.TestListeners" />
 	</listners>
 
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="atlantamarket.AtlantaMarketSmokeTest_PROD" />
+
+ 			<methods> 
+
  			 <methods> 
 				<include name="TS001_VerifyMarketPlannerLoginTest"/>
 				<include name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest"/>
 				<include name="TS008_VerifAllLinksUnderExhibitTabTest" /> 
 				<include name="TS013_VerifyAllNewsAndTrendsMenuTest"/>
+
+			</methods>
+
 			</methods> 
 
 			<class name="atlantamarket.AtlantaMarketSmokeTest_UAT" />
@@ -38,24 +48,27 @@
 			 
 		</classes>
 	</test>
+
+</suite> -->
+
 </suite>-->
 
-<!-- <suite name="AMMart_SmokeTestSuite">
+<suite name="AMMart_SmokeTestSuite">
 	<listners>
 		<listner class-name="americasmart.TestListeners" />
 	</listners>
 
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="americasmart.AmericasMartSmokeTest_UAT" />
-			<methods> 
-				<include name="TS008_VerifyGlobalSearchFunctionalityTest" /> 
-			</methods> 
+			<class name="americasmart.AmericasMartSmokeTest_PROD" />
+ 			<methods> 
+				<include name="TS010_VerifyAllLinksUnderExhibitTest" /> 
+			</methods>
 		</classes>
 	</test>
-</suite> -->
+</suite>
 
-<suite name="EXP_SmokeTestSuite">
+<!-- <suite name="EXP_SmokeTestSuite">
 	<listners>
 		<listner class-name="exhibitorportal.TestListeners" />
 	</listners>
@@ -63,10 +76,19 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="exhibitorportal.ExhibitorPortalSmokeTest_UAT" />
+
+
+			<methods> 
+				<include name="TS008_VerifyGlobalSearchFunctionalityTest" /> 
+			</methods>
+
+			 <methods> 
+
 			 <!-- <methods> 
+
 			 	<include name="TS001_VerifyExhibitorPortalLoginTest" /> 
 				<include name="TS003_VerifySettingsTabTest" /> 
 			</methods> -->
 		</classes>
 	</test>
-</suite>
+</suite> -->

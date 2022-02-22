@@ -11,9 +11,13 @@ public class AMMarketsAndEventsPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By FallCashCarry = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[2]/div[4]/a[1]"); // Locator for Fall Cash and Carry
-	By YearRoundEvents = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[2]/div[5]/a[1]"); // Locator for Year Round Events
-	By AtlantaApparel = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[4]/div[1]/a[1]"); //Locator for Atlanta Apparel logo
+	By amcfallcashcarry = By.xpath("(//a[@href='/Markets/Fall-Cash-and-Carry'])[position()=1]"); // Locator for Fall Cash and Carry
+	By amcyearroundevents = By.xpath("//a[@href='/Year-Round/Calendar-of-Events']"); // Locator for Year Round Events
+	By atlantaapparel = By.xpath("(//a[@href='https://atlanta-apparel.com/'])[position()=1]"); //Locator for Atlanta Apparel logo
+	By amcspringmrkt = By.xpath("(//a[@href='/Markets/Spring-Market'])[position()=1]"); //Locator for Spring Market sub menu
+	By amcspringcashcarry = By.xpath("(//a[@href='/Markets/Spring-Cash-and-Carry'])[position()=1]"); //Locator for Spring Cash & Carry sub menu
+	By amcfallmarket = By.xpath("(//a[@href='/Markets/Fall-Market'])[position()=1]"); //Locator for Fall Market sub menu
+	By atlantamarket = By.xpath("(//a[@href='https://atlantamarket.com/'])[position()=1]"); //Locator for Atlanta Market logo
 	
 	public AMMarketsAndEventsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -21,20 +25,25 @@ public class AMMarketsAndEventsPage {
 	} 
 	
 	public WebElement getFallCashCarry() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(FallCashCarry));
-		return driver.findElement(FallCashCarry);
+		return driver.findElement(amcfallcashcarry);
 	}
 	
 	public WebElement getYearRoundEvents() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(YearRoundEvents));
-		return driver.findElement(YearRoundEvents);
+		return driver.findElement(amcyearroundevents);
 	}
-	
+	public WebElement getAtlantaMarket() throws InterruptedException {
+		return driver.findElement(atlantamarket);
+	}
 	public WebElement getAtlantaApparel() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(AtlantaApparel));
-		return driver.findElement(AtlantaApparel);
+		return driver.findElement(atlantaapparel);
+	}
+	public WebElement getAMCSpringMarket() {
+		return driver.findElement(amcspringmrkt);
+	}
+	public WebElement getAMCSpringCashnCarry() {
+		return driver.findElement(amcspringcashcarry);
+	}
+	public WebElement getAMCFallMarket() {
+		return driver.findElement(amcfallmarket);
 	}
 }

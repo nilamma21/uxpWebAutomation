@@ -21,6 +21,8 @@ public class AMOpenYearRoundPage {
 	By amcHowToRegister=By.xpath("//a[@href='/Year-Round/How-to-Register' and contains(text(),'How to Register')]"); //Locator for How to Register
 	By amcCalendarOfEvents=By.xpath("//a[@href='/Year-Round/Calendar-of-Events' and contains(text(),'Calendar of Events')]");
 	By amcDesigners=By.xpath("//a[@href='/Year-Round/For-Designers']");	
+	By amcparkingtransp = By.xpath("//a[@href='/Year-Round/Parking-and-Transportation']"); //Locator for Parking & Trasp. sub-menu
+	By amchotels = By.xpath("//a[@href='/Markets/Hotels']"); //Locator for Hotel sub-menu
 	
 	public AMOpenYearRoundPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -84,7 +86,12 @@ public class AMOpenYearRoundPage {
 		wait.until(ExpectedConditions.elementToBeClickable(amcDesigners));
 		return driver.findElement(amcDesigners);
 	}
-
+	public WebElement getParknTranspSubmenu() throws InterruptedException {
+		return driver.findElement(amcparkingtransp);
+	}
+	public WebElement getHotelsSubmenu() throws InterruptedException {
+		return driver.findElement(amchotels);
+	}
 	
 }
 
