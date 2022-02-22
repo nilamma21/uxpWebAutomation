@@ -27,13 +27,13 @@ public class AMExhibitTabPage {
 
 		public WebElement getamcExhibitTab() throws InterruptedException {
 			wait = new WebDriverWait (driver,20);
-			wait.until(ExpectedConditions.elementToBeClickable(amcExhibitTab));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(amcExhibitTab));
 			return driver.findElement(amcExhibitTab);
 		}
 		
 		public WebElement getExhibitAtAmc() throws InterruptedException {
 			wait = new WebDriverWait (driver,20);
-			wait.until(ExpectedConditions.elementToBeClickable(amcExhibitAtAmc));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(amcExhibitAtAmc));
 			return driver.findElement(amcExhibitAtAmc);
 		}
 		public WebElement getLeasingandExhibitOptions() throws InterruptedException {
@@ -62,8 +62,7 @@ public class AMExhibitTabPage {
 			return driver.findElement(amcExhFAQ);
 		}
 		public WebElement getAMCExhibitBrdcrumb() throws InterruptedException {
-			wait = new WebDriverWait (driver,20);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(amcexhibitbrdcrumb));
+			Thread.sleep(8000);
 			return driver.findElement(amcexhibitbrdcrumb);
 		}
 		
