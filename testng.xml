@@ -77,14 +77,18 @@
 		<classes>
 			<class name="exhibitorportal.ExhibitorPortalSmokeTest_UAT" />
 
+
 			<methods> 
 				<include name="TS008_VerifyGlobalSearchFunctionalityTest" /> 
 			</methods>
 
 			 <methods> 
+
+			 <!-- <methods> 
+
 			 	<include name="TS001_VerifyExhibitorPortalLoginTest" /> 
 				<include name="TS003_VerifySettingsTabTest" /> 
-			</methods> 
+			</methods> -->
 		</classes>
 	</test>
 </suite> -->

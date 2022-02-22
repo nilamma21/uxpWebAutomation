@@ -55,7 +55,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 			
 	}
 
-	@Test(priority=1)
+	@Test(priority=01)
 	public void TS001_VerifyExhibitorPortalLoginTest() throws InterruptedException, IOException
 	{
 		
@@ -81,7 +81,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				System.out.println("Exhibitor Portal home page is displayed properly.");
 	}
 	
-	@Test(priority=2)
+	@Test(priority=02)
 	public void TS002_VerifyNotificationsTabTest() throws InterruptedException, IOException
 	{
 		
@@ -100,7 +100,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				System.out.println("Exhibitor Portal notifications page is displayed properly.");
 	}
 	
-	@Test(priority=3)
+	@Test(priority=03)
 	public void TS003_VerifySettingsTabTest() throws InterruptedException, IOException
 	{
 		
@@ -147,16 +147,19 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				System.out.println("Corporate Info page is displayed properly.");
 				
 				
-				/*//Click Contact Customer Support icon and verify results
+				//Click Contact Customer Support icon and verify results
 				
-				driver.get(prop.getProperty("setcussupurl"));
+				/*driver.get(prop.getProperty("setcussupurl"));
 				Assert.assertTrue(st.getVerifyEXPGuide().isDisplayed());
 				System.out.println("Customer Support page opened successfully.");
-				driver.get("expurl");*///Code commented as captcha appears for Customer Support link
+				driver.get(prop.getProperty("expurl"));//Code commented as captcha appears for Customer Support link
+				*/
+				
+				
 				
 	}
 	
-	@Test(priority=4)
+	@Test(priority=04)
 	public void TS004_VerifyAllLinkUnderYourDigiShowroomTest() throws InterruptedException, IOException
 	{
 		
@@ -172,13 +175,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				System.out.println("EXP page");
-				//Login to Market Planner
-				el.getEmailAddress().sendKeys("nilamma@cybage.com");
-				el.getPassword().sendKeys("neelam*2011");
-				el.getSignInBtn().click();
-				Thread.sleep(10000);
-				lap.getIUnderstandBtn().click();
-				Thread.sleep(3000);
+			
 				
 				//Click on Your Digital Showroom Dropdown
 				yd.getEXPYourDigiShowroom().click();
@@ -188,7 +185,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				System.out.println("Profile Info");
 				//verify profile info page
 				Assert.assertTrue(yd.getEXPYourDigiShowroomAllHeader().getText().contains("Global"));
-				System.out.println(yd.getEXPYourDigiShowroomAllHeader().getText());
+				//System.out.println(yd.getEXPYourDigiShowroomAllHeader().getText());
 				
 				//Click on Your Digital Showroom Dropdown
 				yd.getEXPYourDigiShowroom().click();
@@ -236,7 +233,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 			
 	}
 	
-	@Test(priority=5)
+	@Test(priority=05)
 	public void TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest() throws InterruptedException, IOException
 	{
 		
@@ -252,14 +249,8 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				
 
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				/*System.out.println("EXP page");
-				//Login to Market Planner
-				el.getEmailAddress().sendKeys("nilamma@cybage.com");
-				el.getPassword().sendKeys("neelam*2011");
-				el.getSignInBtn().click();
-				Thread.sleep(10000);
-				lap.getIUnderstandBtn().click();
-				Thread.sleep(3000);*/
+				System.out.println("EXP page");
+			
 				
 				//Click on Applications And Leases Tab 
 				al.getEXPApplicationsAndLeasesTab().click();
@@ -384,7 +375,8 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				driver.switchTo().window(winHandleBefore5);
 			
 	}
-	@Test(priority=4)
+
+	@Test(priority=06)
 	public void TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest() throws InterruptedException, IOException
 	{
 		
@@ -401,13 +393,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				System.out.println("EXP page");
-				//Login to Market Planner
-			/*	el.getEmailAddress().sendKeys("nilamma@cybage.com");
-				el.getPassword().sendKeys("neelam*2011");
-				el.getSignInBtn().click();
-				Thread.sleep(10000);
-				lap.getIUnderstandBtn().click();
-				Thread.sleep(3000);*/
+			
 				
 				//Click on Registration And Services Tab 
 				rs.getEXPRegAndServicesTab().click();
@@ -434,8 +420,6 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 					driver.switchTo().window(winHandle);
 				}
 				//Verify that 'EXP Login' page should be displayed
-				//Assert.assertTrue(atlexh.getATLEXPLoginPageTitle().getText().contains("Sign in with your existing account"));
-				System.out.println(rs.getExpPortalHeader().getText());
 				Assert.assertTrue(rs.getExpPortalHeader().getText().contains("Sign"));
 				// Close the new window, if that window no more required
 				//driver.close();
@@ -489,7 +473,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				
 	}
 	
-	@Test(priority=5)
+	@Test(priority=07)
 	public void TS005_VerifyAllLinkUnderEXPMarketTabTest() throws InterruptedException, IOException
 	{
 		
@@ -507,14 +491,6 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				System.out.println("EXP page");
-				//Login to Market Planner
-				/*el.getEmailAddress().sendKeys("nilamma@cybage.com");
-				el.getPassword().sendKeys("neelam*2011");
-				el.getSignInBtn().click();
-				Thread.sleep(10000);
-				lap.getIUnderstandBtn().click();
-				Thread.sleep(3000);*/
-				
 				//Click on Registration And Services Tab 
 				mar.getEXPMarketTab().click();
 				System.out.println("Market Tab ");
@@ -544,6 +520,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				mar.getEXPMarket().click();
 				System.out.println("Verify Market");
 				Assert.assertTrue(mar.getEXPMarketHeader().getText().contains("Manage"));				
+	System.out.println("End");
 	}
 
 }
