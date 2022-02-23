@@ -107,11 +107,6 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Thread.sleep(6000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl")+"Profile"));
 		System.out.println("Profile and Settings section options are displayed properly");
-		
-		//Sign out from Market Planner
-		atlps.getATLWelcomeText().click();
-		lap.getMPSignOutBtn().click();
-		Thread.sleep(10000);
 	}
 	@Test(priority=3)
 	public void TS003_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
@@ -150,6 +145,11 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Verify that user should redirect to the 'Registration Info' page.
 		Assert.assertTrue(atlregp.getATLRegistrationsInfoTab().isDisplayed());
+
+		//Sign out from Market Planner
+		atlps.getATLWelcomeText().click();
+		lap.getMPSignOutBtn().click();
+		Thread.sleep(10000);
 	}
 
 	@Test(priority=5)
@@ -390,6 +390,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
 
 		driver.get(prop.getProperty("atlmrkturl"));
+		Thread.sleep(8000);
 	}
 
 	@Test(priority=9)
@@ -505,7 +506,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 		fl = new UXPFooterLinksNavigationPage(driver);
 		atlfl  = new ATLFooterLinksNavigationPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Scroll till footer links
@@ -516,14 +517,14 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/Market-Info/About-Us"));
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.scrollToElement(fl.getHighPointMarket());
-		
+
 		//Click Americas Mart link and verify results
 		fl.getAtlantaMarket().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
 		System.out.println("Americas Mart page opened properly");
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.scrollToElement(fl.getHighPointMarket());	
-		
+
 		//Click Atlanta Apparel link and verify results
 		fl.getAtlantaApparel().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
@@ -643,12 +644,12 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Dining Guide");
 		System.out.println("Dining Guide section is displayed properly");
 		atat.getATLAttendTab().click();
-		
+
 		//Click on Events under Attend section
 		atat.getATLEventsSubmenu().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Events");
 		atat.getATLAttendTab().click();
-		
+
 		//Click Services and Amenities under Attend section
 		atat.getATLServicesAndAmenities().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Services & Amenities");
@@ -673,7 +674,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//atlnt.getATLNewsAndTrends().click();
-		
+
 		//Click News and Trends tab and verify result
 		atlnt.getATLNewsAndTrendsTap().click();
 		Assert.assertTrue(atlnt.getVerifyNewsSection().isDisplayed());

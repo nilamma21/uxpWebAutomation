@@ -5,8 +5,8 @@
     <classes>
       <class name="atlantamarket.AtlantaMarketSmokeTest_PROD">
         <methods>
+          <include name="TS004_VerifyMarketPlannerRegistrationsOptionTest"/>
           <include name="initialize"/>
-          <include name="TS013_VerifyAllNewsAndTrendsMenuTest"/>
         </methods>
       </class> <!-- atlantamarket.AtlantaMarketSmokeTest_PROD -->
     </classes>
