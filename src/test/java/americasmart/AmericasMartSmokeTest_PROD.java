@@ -112,8 +112,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
 
-	@Test(priority=12)
-	public void TS012_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	@Test(priority=11)
+	public void TS011_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -151,10 +151,11 @@ public class AmericasMartSmokeTest_PROD extends base {
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");
+		driver.get(prop.getProperty("ammarturl"));
 	}
 
-	@Test(priority=4)
-	public void TS004_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	@Test(priority=12)
+	public void TS012_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-013: To verify the all social media links and it's redirection
@@ -595,8 +596,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"For Designers");
 	}
 
-	@Test(priority=11)
-	public void TS011_VerifyAllLinksUnderExhibitTest() throws InterruptedException, IOException
+	@Test(priority=4)
+	public void TS004_VerifyAllLinksUnderExhibitTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T107: To verify the Exhibit tab overview and it's functionality
@@ -640,9 +641,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle);
 		}
 
-		//Verify that 'EXP Login' page should be displayed
 		Thread.sleep(5000);
-		Assert.assertTrue(amexh.getExpPortalHeader().getText().contains("Sign in with your existing account"));
+		//Verify that 'EXP Home' page should be displayed
+		Assert.assertTrue(atlps.getAMCExhibitorPortalHome().isDisplayed());
 
 		driver.close();
 
@@ -672,11 +673,6 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Thread.sleep(6000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+"Profile"));
 		System.out.println("Profile and Settings section options are displayed properly");
-
-/*		//Sign out from Market Planner
-		atlps.getATLWelcomeText().click();
-		lap.getMPSignOutBtn().click();
-		Thread.sleep(10000);*/
 	}
 
 	@Test(priority=3)
@@ -696,7 +692,13 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 		//Verify that 'EXP Home' page should be displayed
 		Assert.assertTrue(atlps.getAMCExhibitorPortalHome().isDisplayed());
+	
 		driver.get(prop.getProperty("ammarturl"));
+		
+		/*//Sign out from Market Planner
+		atlps.getATLWelcomeText().click();
+		lap.getMPSignOutBtn().click();
+		Thread.sleep(10000);*/
 	}
 
 
