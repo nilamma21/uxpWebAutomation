@@ -159,8 +159,8 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				
 	}
 	
-	@Test(priority=04)
-	public void TS004_VerifyAllLinkUnderYourDigiShowroomTest() throws InterruptedException, IOException
+	@Test(priority=06)
+	public void TS006_VerifyAllLinkUnderYourDigiShowroomTest() throws InterruptedException, IOException
 	{
 		
 		//The purpose of this test case to verify:-
@@ -376,7 +376,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 			
 	}
 
-	@Test(priority=06)
+	@Test(priority=04)
 	public void TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest() throws InterruptedException, IOException
 	{
 		
@@ -474,7 +474,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 	}
 	
 	@Test(priority=07)
-	public void TS005_VerifyAllLinkUnderEXPMarketTabTest() throws InterruptedException, IOException
+	public void TS007_VerifyAllLinkUnderEXPMarketTabTest() throws InterruptedException, IOException
 	{
 		
 		//The purpose of this test case to verify:-
