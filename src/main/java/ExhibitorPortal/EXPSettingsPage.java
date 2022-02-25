@@ -12,9 +12,9 @@ public class EXPSettingsPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By Settings = By.xpath("//header[@class = 'EPHeader_header__bLMVK']/div[1]/div[2]/button[1]"); // Locator for Settings symbol
-	By VerifySettings = By.xpath("//header[@class = 'EPHeader_header__bLMVK']/div[1]/nav[1]"); // Locator for Settings Panel Verification
-	By EXPGuide = By.xpath("//header[@class = 'EPHeader_header__bLMVK']/div[1]/nav[1]/div[1]/div[2]/div[1]/a[1]"); // Locator for Exhibitor Portal Guide link
+	By Settings = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[2]/button[1]"); // Locator for Settings symbol
+	By VerifySettings = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]"); // Locator for Settings Panel Verification
+	By EXPGuide = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[2]/div[1]/a[1]"); // Locator for Exhibitor Portal Guide link
 	By VerifyEXPGuide = By.xpath("//section[@id = 'main-content']"); // Locator for EXP Guide Verification
 	By ManageUsers = By.xpath("//a[@href = '/Admin/Users']"); // Locator for Manage Users
 	By VerifyManageUsers = By.xpath("//p[@class = 'EPPageHeader_pageTitle__V1XKr']"); // Locator for Manage Users Verification

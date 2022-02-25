@@ -12,14 +12,14 @@ public class EXPDigitalShowroomTabPage
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By EXPYourDigiShowroom = By.xpath("//div[@class='EPHeader_headerWrapper__1X50E']/div[1]/div[1]/button[1]"); // Locator for Your Digi Showroom tab
-	By EXPProfileInfo = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[2]/div[1]/a[1]"); // Locator for Profile Info
-	By EXPlines = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[1]/a[1]"); // Locator for Instagram icon in footer links
-	By EXPProduct = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[2]/a[1]"); 
-	By EXPCatalogFlipbooks = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[3]/a[1]"); 
-	By EXPJuniperData = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[4]/div[1]/a[1]");
+	By EXPYourDigiShowroom = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[1]/div[1]/button[1]"); // Locator for Your Digi Showroom tab
+	By EXPProfileInfo = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[2]/div[1]/a[1]"); // Locator for Profile Info
+	By EXPlines = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[3]/div[1]/a[1]"); // Locator for Instagram icon in footer links
+	By EXPProduct = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[3]/div[2]/a[1]"); 
+	By EXPCatalogFlipbooks = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[3]/div[3]/a[1]"); 
+	By EXPJuniperData = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[4]/div[1]/a[1]");
 	By EXPYourDigiShowroomAllHeader = By.xpath("//div[@class='EPPageHeader_container__Jiq4V']/div[1]/div[4]/p[1]");
-	By EXPJuniperDataHeader = By.xpath("//div[@class='ds-section ds-form-section']/div[1]/form[1]/div[1]/h1[1]");
+	By EXPJuniperDataHeader = By.xpath("//div[@class='ds-section ds-logo-section ']/img[1]");
 	
 	public EXPDigitalShowroomTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub

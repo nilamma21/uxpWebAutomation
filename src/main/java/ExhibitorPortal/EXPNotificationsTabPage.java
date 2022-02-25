@@ -12,7 +12,7 @@ public class EXPNotificationsTabPage {
 	public WebDriverWait wait;
 
 	By Notifications = By.xpath("//a[@href = '/Notifications']"); // Locator for Notifications symbol
-	By VeirfyNotifications = By.xpath("//p[@class = 'EPPageHeader_pageTitle__V1XKr']"); // Locator for verify notifications page
+	By VeirfyNotifications = By.xpath("//div[@id = 'root']/div[1]/div[1]/div[4]/p[1]"); // Locator for verify notifications page
 	
 	public EXPNotificationsTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -20,7 +20,7 @@ public class EXPNotificationsTabPage {
 	} 
 
 	public WebElement getNotifications() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(Notifications));
 		return driver.findElement(Notifications);
 
