@@ -343,7 +343,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Click Spring Market tab under Markets and Events section
 
 		amme.getAMCSpringMarket().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Spring Market");
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+ "Markets/Spring-Market"));
+		//Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Spring Market");
 		System.out.println("Spring Market section is displayed properly");
 		atat.getATLAttendTab().click();
 

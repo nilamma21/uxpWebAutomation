@@ -5,8 +5,9 @@
     <classes>
       <class name="americasmart.AmericasMartSmokeTest_PROD">
         <methods>
+          <include name="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest"/>
           <include name="initialize"/>
-          <include name="TS012_VerifyAllSocialMediaLinksOnFooterTest"/>
+          <include name="TS009_VerifyGlobalSearchFunctionalityTest"/>
         </methods>
       </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
     </classes>
