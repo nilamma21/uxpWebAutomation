@@ -10,8 +10,7 @@
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
 		</classes>
 	</test>
-</suite>
-
+</suite> 
 
 <suite name="ATLMrkt_SmokeTestSuite">
 	<listners>
@@ -21,10 +20,9 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="atlantamarket.AtlantaMarketSmokeTest_PROD" />
-			>
 		</classes>
 	</test>
-</suite>
+</suite> -->
 
 <suite name="AMMart_SmokeTestSuite">
 	<listners>
@@ -38,7 +36,7 @@
 	</test>
 </suite>
 
-<suite name="EXP_SmokeTestSuite">
+<!--<suite name="EXP_SmokeTestSuite">
 	<listners>
 		<listner class-name="exhibitorportal.TestListeners" />
 	</listners>
@@ -50,7 +48,7 @@
 	</test>
 </suite> -->
 
-<suite name="ATLApp_SmokeTestSuite">
+<!-- <suite name="ATLApp_SmokeTestSuite">
 	<listners>
 		<listner class-name="atlantaapparel.TestListeners" />
 	</listners>
@@ -63,4 +61,4 @@
 			</methods>
 		</classes>
 	</test>
-</suite>
+</suite> -->

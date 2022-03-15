@@ -1,21 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLApp_SmokeTestSuite" duration-ms="128758" started-at="2022-02-24T11:52:32Z" finished-at="2022-02-24T11:54:41Z">
+  <suite name="AMMart_SmokeTestSuite" duration-ms="1563841" started-at="2022-03-09T10:02:07Z" finished-at="2022-03-09T10:28:10Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="128758" started-at="2022-02-24T11:52:32Z" finished-at="2022-02-24T11:54:41Z">
-      <class name="atlantaapparel.AtalntaAppSmokeTest_UAT">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@3ffc5af1]" name="initialize" is-config="true" duration-ms="60151" started-at="2022-02-24T17:22:32Z" finished-at="2022-02-24T17:23:32Z">
+    <test name="Test" duration-ms="1563841" started-at="2022-03-09T10:02:07Z" finished-at="2022-03-09T10:28:10Z">
+      <class name="americasmart.AmericasMartSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="73438" started-at="2022-03-09T15:32:07Z" finished-at="2022-03-09T15:33:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS005_VerifyExhibitorDirectoryTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@3ffc5af1]" name="TS005_VerifyExhibitorDirectoryTest" duration-ms="68554" started-at="2022-02-24T17:23:32Z" finished-at="2022-02-24T17:24:41Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="31219" started-at="2022-03-09T15:33:20Z" finished-at="2022-03-09T15:33:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyExhibitorDirectoryTest -->
-      </class> <!-- atlantaapparel.AtalntaAppSmokeTest_UAT -->
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="14471" started-at="2022-03-09T15:33:51Z" finished-at="2022-03-09T15:34:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyMarketPlannerProfileAndSettingsOptionTest -->
+        <test-method status="PASS" signature="TS003_VerifyMarketPlannerExhibitorPortalOptionTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS003_VerifyMarketPlannerExhibitorPortalOptionTest" duration-ms="20520" started-at="2022-03-09T15:34:06Z" finished-at="2022-03-09T15:34:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyMarketPlannerExhibitorPortalOptionTest -->
+        <test-method status="PASS" signature="TS004_VerifyAllLinksUnderExhibitTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS004_VerifyAllLinksUnderExhibitTest" duration-ms="56810" started-at="2022-03-09T15:34:26Z" finished-at="2022-03-09T15:35:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyAllLinksUnderExhibitTest -->
+        <test-method status="PASS" signature="TS005_VerifyAllLinksUnderAboutTabTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS005_VerifyAllLinksUnderAboutTabTest" duration-ms="175769" started-at="2022-03-09T15:35:23Z" finished-at="2022-03-09T15:38:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyAllLinksUnderAboutTabTest -->
+        <test-method status="PASS" signature="TS006_VerifyAllHeaderChanelLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS006_VerifyAllHeaderChanelLinksTest" duration-ms="187014" started-at="2022-03-09T15:38:19Z" finished-at="2022-03-09T15:41:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyAllHeaderChanelLinksTest -->
+        <test-method status="PASS" signature="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest" duration-ms="227867" started-at="2022-03-09T15:41:26Z" finished-at="2022-03-09T15:45:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyAllLinksUnderMarketsAndEventsTabTest -->
+        <test-method status="PASS" signature="TS008_VerifyFooterLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS008_VerifyFooterLinksTest" duration-ms="537088" started-at="2022-03-09T15:45:14Z" finished-at="2022-03-09T15:54:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyFooterLinksTest -->
+        <test-method status="PASS" signature="TS009_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS009_VerifyGlobalSearchFunctionalityTest" duration-ms="16585" started-at="2022-03-09T15:54:11Z" finished-at="2022-03-09T15:54:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyGlobalSearchFunctionalityTest -->
+        <test-method status="PASS" signature="TS010_VerifyAllLinksUnderOpenYearRoundTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS010_VerifyAllLinksUnderOpenYearRoundTest" duration-ms="101083" started-at="2022-03-09T15:54:27Z" finished-at="2022-03-09T15:56:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyAllLinksUnderOpenYearRoundTest -->
+        <test-method status="PASS" signature="TS011_VerifyExhibitorDirectoryTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS011_VerifyExhibitorDirectoryTest" duration-ms="77703" started-at="2022-03-09T15:56:08Z" finished-at="2022-03-09T15:57:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyExhibitorDirectoryTest -->
+        <test-method status="PASS" signature="TS012_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS012_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="44187" started-at="2022-03-09T15:57:26Z" finished-at="2022-03-09T15:58:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyAllSocialMediaLinksOnFooterTest -->
+      </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
     </test> <!-- Test -->
-  </suite> <!-- ATLApp_SmokeTestSuite -->
+  </suite> <!-- AMMart_SmokeTestSuite -->
 </testng-results>
