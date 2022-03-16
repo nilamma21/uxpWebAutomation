@@ -20,7 +20,7 @@ import pageObjects.AtlantaApparel.ATLAppExhibitTabPage;
 import pageObjects.AtlantaApparel.ATLAppExhibitorsAndProductTabPage;
 import pageObjects.AtlantaApparel.ATLAppFashionGalleryTabPage;
 import pageObjects.AtlantaApparel.ATLAppFooterLinksNavigationPage;
-import pageObjects.AtlantaApparel.ATLAppGlobalSearch;
+import pageObjects.AtlantaApparel.ATLAppGlobalSearchPage;
 import pageObjects.AtlantaApparel.ATLAppMarketsTabPage;
 import pageObjects.AtlantaApparel.ATLAppYearRoundTabPage;
 import pageObjects.AtlantaMarket.ATLAllChannelsLinksPage;
@@ -92,7 +92,8 @@ public class AtalntaAppSmokeTest_UAT extends base {
 	UXPYearRoundPage atly;
 	ATLAppYearRoundTabPage atlyr;
 	ATLAppFooterLinksNavigationPage atlfo;
-	ATLAppGlobalSearch gbs;
+	ATLAppGlobalSearchPage gbs;
+	UXPProfileAndSettingsPage ps;
 	SendEmail se;
 
 	@BeforeTest
@@ -138,12 +139,13 @@ public class AtalntaAppSmokeTest_UAT extends base {
 
 		lap = new UXPLandingPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
+		ps = new UXPProfileAndSettingsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Profile and Settings tab under Market Planner and verify result
-		atlps.getATLWelcomeText().click();
-		atlps.getATLProfileAndSettings().click();
+		ps.getWelcomeText().click();
+		ps.getProfileAndSettings().click();
 		Thread.sleep(10000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlappurl") + "Profile"));
 		System.out.println("Profile Page is displayed successfully");
@@ -185,11 +187,13 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
 		gs = new UXPGlobalSearchPage(driver);
-
+		gbs = new ATLAppGlobalSearchPage(driver);
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
+		utl.scrollToElement(gs.getVerifyGlobalSeacrh());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
@@ -257,9 +261,10 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		System.out.println("Click on Markets Tab");
 		//CLick on About
 		mi.getAboutLasVegasMarket().click();
-		System.out.println("CLick on About");
+		
+		//System.out.println("CLick on About");
 		//Verify About Page
-		Assert.assertTrue(atlm.getATLAppHeaders().getText().contains("Markets"));	
+		Assert.assertTrue(mi.getVerifyContactUs().getText().contains("Markets"));	
 		System.out.println("Verify About Page");
 
 		//Click on Markets Tab
@@ -399,7 +404,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		exhp.getExhibitorDirectory().click();
 		System.out.println("Click on Exhibitor Directory");
 		//Verify Exhibitor Directory Page
-		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Exhibitor Directory"));	
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Exhibitor Directory"));	
 		System.out.println("Verify Exhibitor Directory Page");
 
 		//Click on Exhibitors And brands Tab
@@ -453,7 +458,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		atlatt.getATLAttendingMarkets().click();
 		System.out.println("Click on Adding our Markets");
 		//Verify Attend Page
-		Assert.assertTrue(atlm.getATLAppHeaders().getText().contains("Attend"));	
+		Assert.assertTrue(mi.getVerifyContactUs().getText().contains("Attend"));	
 		System.out.println("Vefiry Adding our Markets Page");
 
 		//Click on Attend Tab
@@ -505,7 +510,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		//Verify Faq Page
 		Thread.sleep(2000);
 		System.out.println(atlm.getATLAppHeadersnext().getText());
-		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("FAQs"));	
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("FAQs"));	
 		System.out.println("Vefiry FAQ Page");	
 
 		//Click on Attend Tab
@@ -516,7 +521,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		System.out.println("Click on Hotels");
 		//Verify Hotels Page
 		Thread.sleep(2000);
-		Assert.assertTrue(atlm.getATLAppHeadersnextnext().getText().contains("Hotels"));	
+		Assert.assertTrue(atlatt.getATLVerifyHotels().getText().contains("Hotels"));	
 		System.out.println("Vefiry Hotels Page");	
 
 		//Click on Attend Tab
@@ -527,7 +532,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		System.out.println("Click on Hotels IMG");
 		//Verify Hotels Page
 		Thread.sleep(2000);
-		Assert.assertTrue(atlm.getATLAppHeadersnextnext().getText().contains("Hotels"));	
+		Assert.assertTrue(atlatt.getATLVerifyHotels().getText().contains("Hotels"));	
 		System.out.println("Vefiry Hotels Page IMG");	
 
 		//Click on Attend Tab
@@ -538,7 +543,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		System.out.println("Click on Travel");
 		//Verify Hotels Page
 		Thread.sleep(2000);
-		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Travel"));	
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Travel"));	
 		System.out.println("Vefiry Travel Page ");	
 
 		//Click on Attend Tab
@@ -549,8 +554,8 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		System.out.println("Click on Events");
 		Thread.sleep(2000);
 		//Verify Hotels Page
-		System.out.println(atlm.getATLAppHeadersnext().getText());
-		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Events"));	
+		//System.out.println(atlm.getATLAppHeadersnext().getText());
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Events"));	
 		System.out.println("Vefiry Events Page ");	
 
 
@@ -562,7 +567,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		System.out.println("Click on Dining");
 		Thread.sleep(2000);
 		//Verify Hotels Page
-		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Dining"));	
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Dining"));	
 		System.out.println("Vefiry Dining Page ");
 
 
@@ -573,7 +578,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		System.out.println("Click on Donwload App");
 		Thread.sleep(2000);
 		//Verify Hotels Page
-		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Atlanta Apparel App"));	
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Atlanta Apparel App"));	
 		System.out.println("Vefiry Download App Page ");
 	}
 
@@ -607,7 +612,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		System.out.println("Click on Fashion Gallery Link ");
 		//Verify Fashion Gallery Link 
 		Thread.sleep(4000);
-		Assert.assertTrue(atlm.getATLAppHeaders().getText().contains("Fashion Gallery"));	
+		Assert.assertTrue(mi.getVerifyContactUs().getText().contains("Fashion Gallery"));	
 		System.out.println("Vefiry Fashion Gallery Link  Page");
 
 		//Click on Fashion Gallery Tab
@@ -739,7 +744,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		System.out.println("CLick Advertising Sponsorship");
 		//Verify Exhibit In Social Occasion 
 		Thread.sleep(4000);
-		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Advertising + Sponsorship"));	
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Advertising + Sponsorship"));	
 		System.out.println("Verify Advertising Sponsorship ");
 
 		//Click on Exhibit Tab
@@ -750,7 +755,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		System.out.println("CLick Show Dates");
 		//Verify Show Dates 
 		Thread.sleep(4000);
-		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Complete Show Dates"));	
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Complete Show Dates"));	
 		System.out.println("Verify Show Dates ");
 
 		atlva.getAttend().click();

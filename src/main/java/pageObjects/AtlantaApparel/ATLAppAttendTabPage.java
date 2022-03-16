@@ -20,6 +20,8 @@ public class ATLAppAttendTabPage {
 	By ATLTravel = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[3]/div[2]/a[1]");
 	By ATLDining = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[4]/div[2]/a[1]");
 	By ATLDownloadApp = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[4]/div[3]/a[1]");
+	By ATLVerifyHotels = By.xpath("//ul[@class = 'imc-breadcrumb']/li[4]/a[1]"); //locator for verification of Hotels link
+	
 	public ATLAppAttendTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -93,5 +95,12 @@ public class ATLAppAttendTabPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLDownloadApp));
 		return driver.findElement(ATLDownloadApp);
+	}
+	
+	public WebElement getATLVerifyHotels() throws InterruptedException {
+
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLVerifyHotels));
+		return driver.findElement(ATLVerifyHotels);
 	}
 }

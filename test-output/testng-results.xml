@@ -1,65 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="12" passed="12">
+<testng-results skipped="0" failed="1" total="13" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="AMMart_SmokeTestSuite" duration-ms="1563841" started-at="2022-03-09T10:02:07Z" finished-at="2022-03-09T10:28:10Z">
+  <suite name="ATLApp_SmokeTestSuite" duration-ms="1130618" started-at="2022-03-16T11:10:56Z" finished-at="2022-03-16T11:29:47Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="1563841" started-at="2022-03-09T10:02:07Z" finished-at="2022-03-09T10:28:10Z">
-      <class name="americasmart.AmericasMartSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="73438" started-at="2022-03-09T15:32:07Z" finished-at="2022-03-09T15:33:20Z">
+    <test name="Test" duration-ms="1130618" started-at="2022-03-16T11:10:56Z" finished-at="2022-03-16T11:29:47Z">
+      <class name="atlantaapparel.AtalntaAppSmokeTest_UAT">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="initialize" is-config="true" duration-ms="52947" started-at="2022-03-16T16:40:56Z" finished-at="2022-03-16T16:41:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="31219" started-at="2022-03-09T15:33:20Z" finished-at="2022-03-09T15:33:51Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="25721" started-at="2022-03-16T16:41:49Z" finished-at="2022-03-16T16:42:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="PASS" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="14471" started-at="2022-03-09T15:33:51Z" finished-at="2022-03-09T15:34:06Z">
+        <test-method status="PASS" signature="TS002_VerifyMarketPlannerProfileOptionTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS002_VerifyMarketPlannerProfileOptionTest" duration-ms="24577" started-at="2022-03-16T16:42:15Z" finished-at="2022-03-16T16:42:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifyMarketPlannerProfileAndSettingsOptionTest -->
-        <test-method status="PASS" signature="TS003_VerifyMarketPlannerExhibitorPortalOptionTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS003_VerifyMarketPlannerExhibitorPortalOptionTest" duration-ms="20520" started-at="2022-03-09T15:34:06Z" finished-at="2022-03-09T15:34:26Z">
+        </test-method> <!-- TS002_VerifyMarketPlannerProfileOptionTest -->
+        <test-method status="PASS" signature="TS003_VerifyMarketPlannerExhibitorPortalOptionTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS003_VerifyMarketPlannerExhibitorPortalOptionTest" duration-ms="17411" started-at="2022-03-16T16:42:40Z" finished-at="2022-03-16T16:42:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS003_VerifyMarketPlannerExhibitorPortalOptionTest -->
-        <test-method status="PASS" signature="TS004_VerifyAllLinksUnderExhibitTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS004_VerifyAllLinksUnderExhibitTest" duration-ms="56810" started-at="2022-03-09T15:34:26Z" finished-at="2022-03-09T15:35:23Z">
+        <test-method status="FAIL" signature="TS004_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS004_VerifyGlobalSearchFunctionalityTest" duration-ms="50987" started-at="2022-03-16T16:42:57Z" finished-at="2022-03-16T16:43:48Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//section[@class = 'imc-searchform--section ']/span[1]/div[1]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'SHRADHAMA-WIN10', ip: '172.27.182.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir21440_2008819960}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63735}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=99.0.4844.51, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: eb7a281b525cd4158c373433fa9bce8d
+*** Element info: {Using=xpath, value=//section[@class = 'imc-searchform--section ']/span[1]/div[1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//section[@class = 'imc-searchform--section ']/span[1]/div[1]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'SHRADHAMA-WIN10', ip: '172.27.182.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir21440_2008819960}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63735}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=99.0.4844.51, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: eb7a281b525cd4158c373433fa9bce8d
+*** Element info: {Using=xpath, value=//section[@class = 'imc-searchform--section ']/span[1]/div[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.LasVegasMarket.UXPGlobalSearchPage.getVerifyGlobalSeacrh(UXPGlobalSearchPage.java:42)
+	at atlantaapparel.AtalntaAppSmokeTest_UAT.TS004_VerifyGlobalSearchFunctionalityTest(AtalntaAppSmokeTest_UAT.java:196)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS004_VerifyAllLinksUnderExhibitTest -->
-        <test-method status="PASS" signature="TS005_VerifyAllLinksUnderAboutTabTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS005_VerifyAllLinksUnderAboutTabTest" duration-ms="175769" started-at="2022-03-09T15:35:23Z" finished-at="2022-03-09T15:38:19Z">
+        </test-method> <!-- TS004_VerifyGlobalSearchFunctionalityTest -->
+        <test-method status="PASS" signature="TS005_VerifyExhibitorDirectoryTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS005_VerifyExhibitorDirectoryTest" duration-ms="68653" started-at="2022-03-16T16:43:48Z" finished-at="2022-03-16T16:44:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyAllLinksUnderAboutTabTest -->
-        <test-method status="PASS" signature="TS006_VerifyAllHeaderChanelLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS006_VerifyAllHeaderChanelLinksTest" duration-ms="187014" started-at="2022-03-09T15:38:19Z" finished-at="2022-03-09T15:41:26Z">
+        </test-method> <!-- TS005_VerifyExhibitorDirectoryTest -->
+        <test-method status="PASS" signature="TS006_VerifyAllLinksUnderMarketsTabTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS006_VerifyAllLinksUnderMarketsTabTest" duration-ms="142329" started-at="2022-03-16T16:44:57Z" finished-at="2022-03-16T16:47:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS006_VerifyAllHeaderChanelLinksTest -->
-        <test-method status="PASS" signature="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest" duration-ms="227867" started-at="2022-03-09T15:41:26Z" finished-at="2022-03-09T15:45:14Z">
+        </test-method> <!-- TS006_VerifyAllLinksUnderMarketsTabTest -->
+        <test-method status="PASS" signature="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest" duration-ms="22078" started-at="2022-03-16T16:47:19Z" finished-at="2022-03-16T16:47:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyAllLinksUnderMarketsAndEventsTabTest -->
-        <test-method status="PASS" signature="TS008_VerifyFooterLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS008_VerifyFooterLinksTest" duration-ms="537088" started-at="2022-03-09T15:45:14Z" finished-at="2022-03-09T15:54:11Z">
+        </test-method> <!-- TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest -->
+        <test-method status="PASS" signature="TS008_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS008_VerifyAllLinksUnderAttendTabTest" duration-ms="224952" started-at="2022-03-16T16:47:41Z" finished-at="2022-03-16T16:51:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_VerifyFooterLinksTest -->
-        <test-method status="PASS" signature="TS009_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS009_VerifyGlobalSearchFunctionalityTest" duration-ms="16585" started-at="2022-03-09T15:54:11Z" finished-at="2022-03-09T15:54:27Z">
+        </test-method> <!-- TS008_VerifyAllLinksUnderAttendTabTest -->
+        <test-method status="PASS" signature="TS009_VerifyAllLinksUnderFashionGalleryTabTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS009_VerifyAllLinksUnderFashionGalleryTabTest" duration-ms="59440" started-at="2022-03-16T16:51:26Z" finished-at="2022-03-16T16:52:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS009_VerifyGlobalSearchFunctionalityTest -->
-        <test-method status="PASS" signature="TS010_VerifyAllLinksUnderOpenYearRoundTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS010_VerifyAllLinksUnderOpenYearRoundTest" duration-ms="101083" started-at="2022-03-09T15:54:27Z" finished-at="2022-03-09T15:56:08Z">
+        </test-method> <!-- TS009_VerifyAllLinksUnderFashionGalleryTabTest -->
+        <test-method status="PASS" signature="TS010_VerifyAllLinksUnderExhibitTabTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS010_VerifyAllLinksUnderExhibitTabTest" duration-ms="142257" started-at="2022-03-16T16:52:26Z" finished-at="2022-03-16T16:54:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS010_VerifyAllLinksUnderOpenYearRoundTest -->
-        <test-method status="PASS" signature="TS011_VerifyExhibitorDirectoryTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS011_VerifyExhibitorDirectoryTest" duration-ms="77703" started-at="2022-03-09T15:56:08Z" finished-at="2022-03-09T15:57:26Z">
+        </test-method> <!-- TS010_VerifyAllLinksUnderExhibitTabTest -->
+        <test-method status="PASS" signature="TS011_VerifyAllLinksUnderYearRoundTabTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS011_VerifyAllLinksUnderYearRoundTabTest" duration-ms="49816" started-at="2022-03-16T16:54:48Z" finished-at="2022-03-16T16:55:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS011_VerifyExhibitorDirectoryTest -->
-        <test-method status="PASS" signature="TS012_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS012_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="44187" started-at="2022-03-09T15:57:26Z" finished-at="2022-03-09T15:58:10Z">
+        </test-method> <!-- TS011_VerifyAllLinksUnderYearRoundTabTest -->
+        <test-method status="PASS" signature="TS012_VerifyFooterLinksTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS012_VerifyFooterLinksTest" duration-ms="161525" started-at="2022-03-16T16:55:38Z" finished-at="2022-03-16T16:58:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS012_VerifyAllSocialMediaLinksOnFooterTest -->
-      </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
+        </test-method> <!-- TS012_VerifyFooterLinksTest -->
+        <test-method status="PASS" signature="TS013_VerifySocialMediaLinksTest()[pri:0, instance:atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab]" name="TS013_VerifySocialMediaLinksTest" duration-ms="87629" started-at="2022-03-16T16:58:19Z" finished-at="2022-03-16T16:59:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS013_VerifySocialMediaLinksTest -->
+      </class> <!-- atlantaapparel.AtalntaAppSmokeTest_UAT -->
     </test> <!-- Test -->
-  </suite> <!-- AMMart_SmokeTestSuite -->
+  </suite> <!-- ATLApp_SmokeTestSuite -->
 </testng-results>

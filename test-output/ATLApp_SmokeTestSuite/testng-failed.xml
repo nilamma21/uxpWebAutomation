@@ -5,7 +5,7 @@
     <classes>
       <class name="atlantaapparel.AtalntaAppSmokeTest_UAT">
         <methods>
-          <include name="TS005_VerifyExhibitorDirectoryTest"/>
+          <include name="TS004_VerifyGlobalSearchFunctionalityTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantaapparel.AtalntaAppSmokeTest_UAT -->
