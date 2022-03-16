@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ATLAppGlobalSearch {
+public class ATLAppGlobalSearchPage {
 
 	public WebDriver driver;
 	public WebDriverWait wait;
@@ -20,7 +20,9 @@ public class ATLAppGlobalSearch {
 	By AMCProductName = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/a[1]/div[1]/div[1]/span[1]/span[1]");
 	By ATLAPPProductName = By.xpath("//div[@class='imc-vr--xxlarge']/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]/div[1]/div[1]/span[1]/span[1]");
 	By ATLMatktProductName = By.xpath("//div[@class='imc-vr--xxlarge']/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/a[1]/div[1]/div[1]/span[1]/span[1]");
-	public ATLAppGlobalSearch(WebDriver driver) {
+	By VerifyGlobalSearch = By.xpath("//div[@class = 'imc-gallery__item']/div[1]/section[1]/span[1]/div[1]"); //Locator for verification of global search 
+	
+	public ATLAppGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
@@ -83,6 +85,12 @@ public class ATLAppGlobalSearch {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLMatktProductName));
 		return driver.findElement(ATLMatktProductName);
+
+	}
+	
+	public WebElement getVerifyGlobalSearch()throws InterruptedException{
+		Thread.sleep(10000);
+		return driver.findElement(VerifyGlobalSearch);
 
 	}
 }

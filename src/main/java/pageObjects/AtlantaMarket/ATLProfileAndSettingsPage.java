@@ -25,7 +25,7 @@ public class ATLProfileAndSettingsPage {
 	} 
 
 	public WebElement getATLWelcomeText() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlwelcometext));
 		return driver.findElement(atlwelcometext);
 	}
