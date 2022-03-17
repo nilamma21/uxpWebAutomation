@@ -17,7 +17,7 @@ public class ATLAppMarketsTabPage {
 	By ATLInTheNews = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[1]/div[4]/a[1]");
 	By ATLAppImage = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[1]/a[2]");
 	By ATLAppHeadersnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]");
-	By ATLAppHeadersnextnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]/a[1]");
+	By ATLAppHeadersnextnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]");
 	By ATLAppLink = By.xpath("//div[@class='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[2]/a[1]");
 	By ATLAppHeadersProduct = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[5]/a[1]");
 

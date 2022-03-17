@@ -171,7 +171,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		Assert.assertTrue(amexh.getExpPortalHeader().getText().contains("Sign in with your existing account"));
 
 		driver.get(prop.getProperty("atlappurl"));
-
+		Thread.sleep(8000);
 		/*//Sign out from Market Planner
 		atlps.getATLWelcomeText().click();
 		lap.getMPSignOutBtn().click();
@@ -188,6 +188,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		lp = new UXPLoginPage(driver);
 		gs = new UXPGlobalSearchPage(driver);
 		gbs = new ATLAppGlobalSearchPage(driver);
+		atlm = new ATLAppMarketsTabPage(driver);
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -197,6 +198,28 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
+		
+		//Click on any Exhibitor from Search results grid
+		String exHeader=gbs.getExhibitor().getText();
+		System.out.println("Exhibitor Header "+gbs.getExhibitor().getText());
+		gbs.getExhibitor().click();
+		String exDGShowroomHeader=atlm.getATLAppHeadersnextnext().getText();
+		System.out.println("DG Showroom Header "+atlm.getATLAppHeadersnextnext().getText());
+		Assert.assertTrue(exDGShowroomHeader.contains(exHeader));
+		System.out.println("Verified Digital Showroom Page");
+		
+		driver.navigate().back();
+		driver.navigate().back();
+		
+		//Click on any Product name from Search results Grid
+		String productName=gbs.getProductHeader().getText();
+		System.out.println("Product Name "+gbs.getProductHeader().getText());
+		utl.scrollToElement(gbs.getProductBlock());
+		gbs.getProductBlock().click();
+		//gbs.getProduct().click();
+		String productDetailsPageHeader=atlm.getATLAppHeadersProduct().getText();
+		Assert.assertTrue(productName.contains(productDetailsPageHeader));
+		System.out.println("Verified Product Details Page");
 	}
 
 	@Test(priority=5)
