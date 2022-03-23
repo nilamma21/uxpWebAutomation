@@ -10,7 +10,7 @@
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
 		</classes>
 	</test>
-</suite> -->
+</suite> 
 
 <suite name="ATLMrkt_SmokeTestSuite">
 	<listners>
@@ -22,9 +22,9 @@
 			<class name="atlantamarket.AtlantaMarketSmokeTest_PROD" />
 		</classes>
 	</test>
-</suite> 
+</suite> -->
 
-<!--   <suite name="AMMart_SmokeTestSuite">
+ <suite name="AMMart_SmokeTestSuite">
 	<listners>
 		<listner class-name="americasmart.TestListeners" />
 	</listners>
@@ -32,9 +32,13 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="americasmart.AmericasMartSmokeTest_PROD" />
+			<!--  <methods>
+			<include name="TS001_VerifyMarketPlannerLoginTest"/>
+			<include name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest"/>
+			</methods> -->
 		</classes>
 	</test>
-</suite>-->
+</suite> 
 
 <!--<suite name="EXP_SmokeTestSuite">
 	<listners>

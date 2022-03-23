@@ -14,6 +14,8 @@ public class ATLAppAttendTabPage {
 	By ATLAttendingMarketsImg = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[1]/div[1]/a[2]"); //Locator for Why Attend link
 	By ATLBuyersGuide = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[1]/div[2]/a[1]");
 	By ATLFAQs = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[2]/div[2]/a[1]");
+	By ATLFAQ = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[2]/div[3]/a[1]");
+	
 	By ATLHotels = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[3]/div[1]/a[1]");
 	By ATLEvents = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[4]/div[1]/a[1]");
 	By ATLHotelsImg = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[3]/div[1]/a[2]");
@@ -53,6 +55,12 @@ public class ATLAppAttendTabPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLFAQs));
 		return driver.findElement(ATLFAQs);
+	}
+	public WebElement getATLFAQ() throws InterruptedException {
+
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLFAQ));
+		return driver.findElement(ATLFAQ);
 	}
 
 	public WebElement getATLHotels() throws InterruptedException {

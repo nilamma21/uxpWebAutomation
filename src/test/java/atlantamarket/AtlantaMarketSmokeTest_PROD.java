@@ -120,6 +120,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+		Thread.sleep(10000);
 		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
@@ -172,6 +173,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		atled.getATLExhDirtSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		atled.getATLExhDirtSearchBtn().click();
+		Thread.sleep(5000);
 		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");

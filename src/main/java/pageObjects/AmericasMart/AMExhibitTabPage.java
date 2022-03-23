@@ -12,7 +12,7 @@ public class AMExhibitTabPage {
 		public WebDriverWait wait;
 
 		By amcExhibitTab = By.xpath("(//a[contains(text(),'Exhibit')])[1]"); // Locator for Exhibit Tab
-		By amcExhibitAtAmc=By.xpath("//a[contains(text(),'Exhibit at AmericasMart')]"); // Locator for Exhibit at AmericasMart
+		By amcExhibitAtAmc=By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[2]/div[1]/div[1]/a[1]"); // Locator for Exhibit at AmericasMart
 		By amcLeasingExhibitOptions=By.xpath("//a[@href='/Exhibit/Opportunities' and contains(text(),'Leasing & Exhibit Options')]");// Leasing & Exhibit Options
 		By amcAdvertising=By.xpath("//a[@href='/Exhibit/Advertising' and  contains(text(),'Advertising')]"); // Locator for Advertising
 		By amcExpLogin=By.xpath("//a[@title='The Exhibitor Portal Manages Your Exhibitor Account']");
