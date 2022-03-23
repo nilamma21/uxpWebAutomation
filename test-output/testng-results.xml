@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="12" passed="12">
+  <reporter-output>
+  </reporter-output>
+  <suite name="AMMart_SmokeTestSuite" duration-ms="1740383" started-at="2022-03-23T11:22:16Z" finished-at="2022-03-23T11:51:16Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="1740383" started-at="2022-03-23T11:22:16Z" finished-at="2022-03-23T11:51:16Z">
+      <class name="americasmart.AmericasMartSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="70143" started-at="2022-03-23T16:52:16Z" finished-at="2022-03-23T16:53:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="47527" started-at="2022-03-23T16:53:26Z" finished-at="2022-03-23T16:54:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="11261" started-at="2022-03-23T16:54:13Z" finished-at="2022-03-23T16:54:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyMarketPlannerProfileAndSettingsOptionTest -->
+        <test-method status="PASS" signature="TS003_VerifyMarketPlannerExhibitorPortalOptionTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS003_VerifyMarketPlannerExhibitorPortalOptionTest" duration-ms="30900" started-at="2022-03-23T16:54:25Z" finished-at="2022-03-23T16:54:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyMarketPlannerExhibitorPortalOptionTest -->
+        <test-method status="PASS" signature="TS004_VerifyAllLinksUnderExhibitTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS004_VerifyAllLinksUnderExhibitTest" duration-ms="92567" started-at="2022-03-23T16:54:56Z" finished-at="2022-03-23T16:56:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyAllLinksUnderExhibitTest -->
+        <test-method status="PASS" signature="TS005_VerifyAllLinksUnderAboutTabTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS005_VerifyAllLinksUnderAboutTabTest" duration-ms="162401" started-at="2022-03-23T16:56:28Z" finished-at="2022-03-23T16:59:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyAllLinksUnderAboutTabTest -->
+        <test-method status="PASS" signature="TS006_VerifyAllHeaderChanelLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS006_VerifyAllHeaderChanelLinksTest" duration-ms="243732" started-at="2022-03-23T16:59:10Z" finished-at="2022-03-23T17:03:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyAllHeaderChanelLinksTest -->
+        <test-method status="PASS" signature="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest" duration-ms="212693" started-at="2022-03-23T17:03:14Z" finished-at="2022-03-23T17:06:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyAllLinksUnderMarketsAndEventsTabTest -->
+        <test-method status="PASS" signature="TS008_VerifyFooterLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS008_VerifyFooterLinksTest" duration-ms="637824" started-at="2022-03-23T17:06:47Z" finished-at="2022-03-23T17:17:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyFooterLinksTest -->
+        <test-method status="PASS" signature="TS009_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS009_VerifyGlobalSearchFunctionalityTest" duration-ms="19945" started-at="2022-03-23T17:17:25Z" finished-at="2022-03-23T17:17:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyGlobalSearchFunctionalityTest -->
+        <test-method status="PASS" signature="TS010_VerifyAllLinksUnderOpenYearRoundTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS010_VerifyAllLinksUnderOpenYearRoundTest" duration-ms="94465" started-at="2022-03-23T17:17:45Z" finished-at="2022-03-23T17:19:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyAllLinksUnderOpenYearRoundTest -->
+        <test-method status="PASS" signature="TS011_VerifyExhibitorDirectoryTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS011_VerifyExhibitorDirectoryTest" duration-ms="76757" started-at="2022-03-23T17:19:19Z" finished-at="2022-03-23T17:20:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyExhibitorDirectoryTest -->
+        <test-method status="PASS" signature="TS012_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS012_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="40077" started-at="2022-03-23T17:20:36Z" finished-at="2022-03-23T17:21:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyAllSocialMediaLinksOnFooterTest -->
+      </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
+    </test> <!-- Test -->
+  </suite> <!-- AMMart_SmokeTestSuite -->
+</testng-results>

@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Mar 17 12:32:21 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>1640 seconds (1640240 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS001_VerifyMarketPlannerLoginTest()'><b>TS001_VerifyMarketPlannerLoginTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>65</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS002_VerifyMarketPlannerProfileOptionTest()'><b>TS002_VerifyMarketPlannerProfileOptionTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>27</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS003_VerifyMarketPlannerExhibitorPortalOptionTest()'><b>TS003_VerifyMarketPlannerExhibitorPortalOptionTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>31</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS004_VerifyGlobalSearchFunctionalityTest()'><b>TS004_VerifyGlobalSearchFunctionalityTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>59</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS005_VerifyExhibitorDirectoryTest()'><b>TS005_VerifyExhibitorDirectoryTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>74</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS006_VerifyAllLinksUnderMarketsTabTest()'><b>TS006_VerifyAllLinksUnderMarketsTabTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>182</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest()'><b>TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>44</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS008_VerifyAllLinksUnderAttendTabTest()'><b>TS008_VerifyAllLinksUnderAttendTabTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>316</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS009_VerifyAllLinksUnderFashionGalleryTabTest()'><b>TS009_VerifyAllLinksUnderFashionGalleryTabTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>140</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS010_VerifyAllLinksUnderExhibitTabTest()'><b>TS010_VerifyAllLinksUnderExhibitTabTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>224</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS011_VerifyAllLinksUnderYearRoundTabTest()'><b>TS011_VerifyAllLinksUnderYearRoundTabTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>61</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS012_VerifyFooterLinksTest()'><b>TS012_VerifyFooterLinksTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>231</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+<tr>
+<td title='atlantaapparel.AtalntaAppSmokeTest_UAT.TS013_VerifySocialMediaLinksTest()'><b>TS013_VerifySocialMediaLinksTest</b><br>Test class: atlantaapparel.AtalntaAppSmokeTest_UAT</td>
+<td></td>
+<td>120</td>
+<td>atlantaapparel.AtalntaAppSmokeTest_UAT@5b275dab</td></tr>
+</table><p>
+</body>
+</html>
