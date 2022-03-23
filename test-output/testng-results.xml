@@ -1,52 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="8" passed="7">
+<testng-results skipped="0" failed="1" total="13" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="EXP_SmokeTestSuite" duration-ms="296169" started-at="2022-03-23T07:16:00Z" finished-at="2022-03-23T07:20:56Z">
+  <suite name="ATLMrkt_SmokeTestSuite" duration-ms="1194934" started-at="2022-03-23T08:56:49Z" finished-at="2022-03-23T09:16:44Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="296169" started-at="2022-03-23T07:16:00Z" finished-at="2022-03-23T07:20:56Z">
-      <class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="9611" started-at="2022-03-23T12:46:00Z" finished-at="2022-03-23T12:46:09Z">
+    <test name="Test" duration-ms="1194934" started-at="2022-03-23T08:56:49Z" finished-at="2022-03-23T09:16:44Z">
+      <class name="atlantamarket.AtlantaMarketSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="47471" started-at="2022-03-23T14:26:49Z" finished-at="2022-03-23T14:27:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyExhibitorPortalLoginTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5b275dab]" name="TS001_VerifyExhibitorPortalLoginTest" duration-ms="32506" started-at="2022-03-23T12:46:09Z" finished-at="2022-03-23T12:46:42Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="28683" started-at="2022-03-23T14:27:36Z" finished-at="2022-03-23T14:28:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyExhibitorPortalLoginTest -->
-        <test-method status="PASS" signature="TS002_VerifyNotificationsTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5b275dab]" name="TS002_VerifyNotificationsTabTest" duration-ms="4540" started-at="2022-03-23T12:46:42Z" finished-at="2022-03-23T12:46:46Z">
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="10192" started-at="2022-03-23T14:28:05Z" finished-at="2022-03-23T14:28:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifyNotificationsTabTest -->
-        <test-method status="PASS" signature="TS003_VerifySettingsTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5b275dab]" name="TS003_VerifySettingsTabTest" duration-ms="11625" started-at="2022-03-23T12:46:46Z" finished-at="2022-03-23T12:46:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifySettingsTabTest -->
-        <test-method status="PASS" signature="TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5b275dab]" name="TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest" duration-ms="56838" started-at="2022-03-23T12:46:58Z" finished-at="2022-03-23T12:47:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest -->
-        <test-method status="PASS" signature="TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5b275dab]" name="TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest" duration-ms="25873" started-at="2022-03-23T12:47:55Z" finished-at="2022-03-23T12:48:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest -->
-        <test-method status="PASS" signature="TS006_VerifyAllLinkUnderYourDigiShowroomTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5b275dab]" name="TS006_VerifyAllLinkUnderYourDigiShowroomTest" duration-ms="43722" started-at="2022-03-23T12:48:21Z" finished-at="2022-03-23T12:49:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyAllLinkUnderYourDigiShowroomTest -->
-        <test-method status="PASS" signature="TS007_VerifyAllLinkUnderEXPMarketTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5b275dab]" name="TS007_VerifyAllLinkUnderEXPMarketTabTest" duration-ms="10340" started-at="2022-03-23T12:49:04Z" finished-at="2022-03-23T12:49:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyAllLinkUnderEXPMarketTabTest -->
-        <test-method status="FAIL" signature="TS008_VerifyExhibitorPortalFooterLinksTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5b275dab]" name="TS008_VerifyExhibitorPortalFooterLinksTest" duration-ms="100759" started-at="2022-03-23T12:49:15Z" finished-at="2022-03-23T12:50:55Z">
+        </test-method> <!-- TS002_VerifyMarketPlannerProfileAndSettingsOptionTest -->
+        <test-method status="FAIL" signature="TS003_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS003_VerifyGlobalSearchFunctionalityTest" duration-ms="10480" started-at="2022-03-23T14:28:15Z" finished-at="2022-03-23T14:28:25Z">
           <exception class="java.lang.AssertionError">
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)
 	at org.junit.Assert.assertTrue(Assert.java:52)
-	at exhibitorportal.ExhibitorPortalSmokeTest_PROD.TS008_VerifyExhibitorPortalFooterLinksTest(ExhibitorPortalSmokeTest_PROD.java:620)
+	at atlantamarket.AtlantaMarketSmokeTest_PROD.TS003_VerifyGlobalSearchFunctionalityTest(AtlantaMarketSmokeTest_PROD.java:124)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -76,8 +56,48 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_VerifyExhibitorPortalFooterLinksTest -->
-      </class> <!-- exhibitorportal.ExhibitorPortalSmokeTest_PROD -->
+        </test-method> <!-- TS003_VerifyGlobalSearchFunctionalityTest -->
+        <test-method status="PASS" signature="TS004_VerifyMarketPlannerRegistrationsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS004_VerifyMarketPlannerRegistrationsOptionTest" duration-ms="24339" started-at="2022-03-23T14:28:26Z" finished-at="2022-03-23T14:28:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyMarketPlannerRegistrationsOptionTest -->
+        <test-method status="PASS" signature="TS005_VerifyExhibitorDirectoryTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS005_VerifyExhibitorDirectoryTest" duration-ms="20924" started-at="2022-03-23T14:28:50Z" finished-at="2022-03-23T14:29:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyExhibitorDirectoryTest -->
+        <test-method status="PASS" signature="TS008_VerifAllLinksUnderExhibitTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS008_VerifAllLinksUnderExhibitTabTest" duration-ms="76039" started-at="2022-03-23T14:29:11Z" finished-at="2022-03-23T14:30:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifAllLinksUnderExhibitTabTest -->
+        <test-method status="PASS" signature="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest" duration-ms="61440" started-at="2022-03-23T14:30:27Z" finished-at="2022-03-23T14:31:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
+        <test-method status="PASS" signature="TS006_VerifyAllLinksUnderMarketInfoTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS006_VerifyAllLinksUnderMarketInfoTabTest" duration-ms="85020" started-at="2022-03-23T14:31:28Z" finished-at="2022-03-23T14:32:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyAllLinksUnderMarketInfoTabTest -->
+        <test-method status="PASS" signature="TS009_VerifyAllChannelsLinksTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS009_VerifyAllChannelsLinksTest" duration-ms="75750" started-at="2022-03-23T14:32:53Z" finished-at="2022-03-23T14:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyAllChannelsLinksTest -->
+        <test-method status="PASS" signature="TS010_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS010_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="63817" started-at="2022-03-23T14:34:09Z" finished-at="2022-03-23T14:35:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyAllSocialMediaLinksOnFooterTest -->
+        <test-method status="PASS" signature="TS011_VerifyFooterLinksTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS011_VerifyFooterLinksTest" duration-ms="430597" started-at="2022-03-23T14:35:13Z" finished-at="2022-03-23T14:42:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyFooterLinksTest -->
+        <test-method status="PASS" signature="TS012_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS012_VerifyAllLinksUnderAttendTabTest" duration-ms="190419" started-at="2022-03-23T14:42:24Z" finished-at="2022-03-23T14:45:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyAllLinksUnderAttendTabTest -->
+        <test-method status="PASS" signature="TS013_VerifyAllNewsAndTrendsMenuTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS013_VerifyAllNewsAndTrendsMenuTest" duration-ms="69424" started-at="2022-03-23T14:45:34Z" finished-at="2022-03-23T14:46:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS013_VerifyAllNewsAndTrendsMenuTest -->
+      </class> <!-- atlantamarket.AtlantaMarketSmokeTest_PROD -->
     </test> <!-- Test -->
-  </suite> <!-- EXP_SmokeTestSuite -->
+  </suite> <!-- ATLMrkt_SmokeTestSuite -->
 </testng-results>

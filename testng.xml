@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<!-- <suite name="LVM_SmokeTestSuite">
+<!--  <suite name="LVM_SmokeTestSuite">
 	<listners>
 		<listner class-name="lasvegasmarket.TestListeners" />
 	</listners>
@@ -10,7 +10,7 @@
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
 		</classes>
 	</test>
-</suite> 
+</suite> -->
 
 <suite name="ATLMrkt_SmokeTestSuite">
 	<listners>
@@ -22,9 +22,9 @@
 			<class name="atlantamarket.AtlantaMarketSmokeTest_PROD" />
 		</classes>
 	</test>
-</suite> -->
+</suite> 
 
-<!-- <suite name="AMMart_SmokeTestSuite">
+<!--   <suite name="AMMart_SmokeTestSuite">
 	<listners>
 		<listner class-name="americasmart.TestListeners" />
 	</listners>
@@ -36,7 +36,7 @@
 	</test>
 </suite>-->
 
-<suite name="EXP_SmokeTestSuite">
+<!--<suite name="EXP_SmokeTestSuite">
 	<listners>
 		<listner class-name="exhibitorportal.TestListeners" />
 	</listners>
@@ -44,16 +44,16 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD" />
-			<!--  <methods>
+			<methods>
 			<include name="TS001_VerifyExhibitorPortalLoginTest"/>
 			<include name="TS002_VerifyNotificationsTabTest"/>
 			<include name="TS003_VerifySettingsTabTest"/>
 			<include name="TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest"/>
 			<include name="TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest"/>
-			</methods> -->
+			</methods> 
 		</classes>
 	</test>
-</suite>
+</suite> -->
 
 <!-- <suite name="ATLApp_SmokeTestSuite">
 	<listners>

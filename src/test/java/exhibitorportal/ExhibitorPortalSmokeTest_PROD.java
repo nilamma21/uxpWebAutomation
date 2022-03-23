@@ -633,7 +633,9 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 				Assert.assertTrue(driver.getCurrentUrl().contains("http://www.imchighpointmarket.com/"));
 				System.out.println("Atlanta market page is displayed properly.");
 				driver.close();
-				
+				driver.switchTo().window(winHandleBefore);
+				driver.get(prop.getProperty("expurl"));
+				utl.scrollToElement(efl.getExhibitorPortalSymbol());
 				
 				//Click Las Vegas Market link and verify results
 				efl.getLasVegasMarket().click();

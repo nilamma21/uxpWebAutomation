@@ -86,7 +86,7 @@ public class EXPFooterLinksPage {
 	
 	public WebElement getPrivacyPolicy() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(TermsAndConditions));
+		wait.until(ExpectedConditions.elementToBeClickable(PrivacyPolicy));
 		return driver.findElement(PrivacyPolicy);
 
 	}
