@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" total="12" passed="8">
+<testng-results skipped="0" failed="2" total="12" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="AMMart_SmokeTestSuite" duration-ms="1142779" started-at="2022-03-23T10:40:47Z" finished-at="2022-03-23T10:59:50Z">
+  <suite name="AMMart_SmokeTestSuite" duration-ms="1227462" started-at="2022-03-23T11:16:57Z" finished-at="2022-03-23T11:37:24Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="1142779" started-at="2022-03-23T10:40:47Z" finished-at="2022-03-23T10:59:50Z">
+    <test name="Test" duration-ms="1227462" started-at="2022-03-23T11:16:57Z" finished-at="2022-03-23T11:37:24Z">
       <class name="americasmart.AmericasMartSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="52248" started-at="2022-03-23T16:10:47Z" finished-at="2022-03-23T16:11:39Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="46923" started-at="2022-03-23T16:46:57Z" finished-at="2022-03-23T16:47:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="31503" started-at="2022-03-23T16:11:39Z" finished-at="2022-03-23T16:12:11Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="21191" started-at="2022-03-23T16:47:44Z" finished-at="2022-03-23T16:48:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="FAIL" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="40282" started-at="2022-03-23T16:12:11Z" finished-at="2022-03-23T16:12:51Z">
+        <test-method status="FAIL" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="40258" started-at="2022-03-23T16:48:05Z" finished-at="2022-03-23T16:48:45Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = 'imc-header-user-icon--links-settings']/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
@@ -25,7 +25,7 @@
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
 	at pageObjects.AtlantaMarket.ATLProfileAndSettingsPage.getATLProfileAndSettings(ATLProfileAndSettingsPage.java:35)
-	at americasmart.AmericasMartSmokeTest_PROD.TS002_VerifyMarketPlannerProfileAndSettingsOptionTest(AmericasMartSmokeTest_PROD.java:675)
+	at americasmart.AmericasMartSmokeTest_PROD.TS002_VerifyMarketPlannerProfileAndSettingsOptionTest(AmericasMartSmokeTest_PROD.java:676)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -69,11 +69,11 @@ Driver info: driver.version: unknown
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS002_VerifyMarketPlannerProfileAndSettingsOptionTest -->
-        <test-method status="PASS" signature="TS003_VerifyMarketPlannerExhibitorPortalOptionTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS003_VerifyMarketPlannerExhibitorPortalOptionTest" duration-ms="20322" started-at="2022-03-23T16:12:52Z" finished-at="2022-03-23T16:13:12Z">
+        <test-method status="PASS" signature="TS003_VerifyMarketPlannerExhibitorPortalOptionTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS003_VerifyMarketPlannerExhibitorPortalOptionTest" duration-ms="25676" started-at="2022-03-23T16:48:46Z" finished-at="2022-03-23T16:49:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS003_VerifyMarketPlannerExhibitorPortalOptionTest -->
-        <test-method status="FAIL" signature="TS004_VerifyAllLinksUnderExhibitTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS004_VerifyAllLinksUnderExhibitTest" duration-ms="33679" started-at="2022-03-23T16:13:12Z" finished-at="2022-03-23T16:13:46Z">
+        <test-method status="FAIL" signature="TS004_VerifyAllLinksUnderExhibitTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS004_VerifyAllLinksUnderExhibitTest" duration-ms="34008" started-at="2022-03-23T16:49:12Z" finished-at="2022-03-23T16:49:46Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = 'imc-section']/div[1]/div[4]/div[2]/div[1]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
@@ -83,7 +83,7 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
 	at pageObjects.AmericasMart.AMExhibitTabPage.getExhibitAtAmc(AMExhibitTabPage.java:36)
-	at americasmart.AmericasMartSmokeTest_PROD.TS004_VerifyAllLinksUnderExhibitTest(AmericasMartSmokeTest_PROD.java:620)
+	at americasmart.AmericasMartSmokeTest_PROD.TS004_VerifyAllLinksUnderExhibitTest(AmericasMartSmokeTest_PROD.java:621)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -127,102 +127,35 @@ Driver info: driver.version: unknown
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS004_VerifyAllLinksUnderExhibitTest -->
-        <test-method status="PASS" signature="TS005_VerifyAllLinksUnderAboutTabTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS005_VerifyAllLinksUnderAboutTabTest" duration-ms="143591" started-at="2022-03-23T16:13:46Z" finished-at="2022-03-23T16:16:10Z">
+        <test-method status="PASS" signature="TS005_VerifyAllLinksUnderAboutTabTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS005_VerifyAllLinksUnderAboutTabTest" duration-ms="143813" started-at="2022-03-23T16:49:46Z" finished-at="2022-03-23T16:52:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS005_VerifyAllLinksUnderAboutTabTest -->
-        <test-method status="PASS" signature="TS006_VerifyAllHeaderChanelLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS006_VerifyAllHeaderChanelLinksTest" duration-ms="75786" started-at="2022-03-23T16:16:10Z" finished-at="2022-03-23T16:17:26Z">
+        <test-method status="PASS" signature="TS006_VerifyAllHeaderChanelLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS006_VerifyAllHeaderChanelLinksTest" duration-ms="106718" started-at="2022-03-23T16:52:10Z" finished-at="2022-03-23T16:53:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS006_VerifyAllHeaderChanelLinksTest -->
-        <test-method status="PASS" signature="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest" duration-ms="160819" started-at="2022-03-23T16:17:26Z" finished-at="2022-03-23T16:20:06Z">
+        <test-method status="PASS" signature="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest" duration-ms="160952" started-at="2022-03-23T16:53:57Z" finished-at="2022-03-23T16:56:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS007_VerifyAllLinksUnderMarketsAndEventsTabTest -->
-        <test-method status="PASS" signature="TS008_VerifyFooterLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS008_VerifyFooterLinksTest" duration-ms="433733" started-at="2022-03-23T16:20:06Z" finished-at="2022-03-23T16:27:20Z">
+        <test-method status="PASS" signature="TS008_VerifyFooterLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS008_VerifyFooterLinksTest" duration-ms="440765" started-at="2022-03-23T16:56:38Z" finished-at="2022-03-23T17:03:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS008_VerifyFooterLinksTest -->
-        <test-method status="FAIL" signature="TS009_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS009_VerifyGlobalSearchFunctionalityTest" duration-ms="11043" started-at="2022-03-23T16:27:20Z" finished-at="2022-03-23T16:27:31Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at americasmart.AmericasMartSmokeTest_PROD.TS009_VerifyGlobalSearchFunctionalityTest(AmericasMartSmokeTest_PROD.java:521)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="TS009_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS009_VerifyGlobalSearchFunctionalityTest" duration-ms="10600" started-at="2022-03-23T17:03:58Z" finished-at="2022-03-23T17:04:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS009_VerifyGlobalSearchFunctionalityTest -->
-        <test-method status="FAIL" signature="TS010_VerifyAllLinksUnderOpenYearRoundTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS010_VerifyAllLinksUnderOpenYearRoundTest" duration-ms="34466" started-at="2022-03-23T16:27:32Z" finished-at="2022-03-23T16:28:06Z">
-          <exception class="org.junit.ComparisonFailure">
-            <message>
-              <![CDATA[expected:<[Campus Overview]> but was:<[Visit]>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.junit.ComparisonFailure: expected:<[Campus Overview]> but was:<[Visit]>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at americasmart.AmericasMartSmokeTest_PROD.TS010_VerifyAllLinksUnderOpenYearRoundTest(AmericasMartSmokeTest_PROD.java:578)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.junit.ComparisonFailure -->
+        <test-method status="PASS" signature="TS010_VerifyAllLinksUnderOpenYearRoundTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS010_VerifyAllLinksUnderOpenYearRoundTest" duration-ms="85458" started-at="2022-03-23T17:04:09Z" finished-at="2022-03-23T17:05:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS010_VerifyAllLinksUnderOpenYearRoundTest -->
-        <test-method status="PASS" signature="TS011_VerifyExhibitorDirectoryTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS011_VerifyExhibitorDirectoryTest" duration-ms="73719" started-at="2022-03-23T16:28:07Z" finished-at="2022-03-23T16:29:20Z">
+        <test-method status="PASS" signature="TS011_VerifyExhibitorDirectoryTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS011_VerifyExhibitorDirectoryTest" duration-ms="73492" started-at="2022-03-23T17:05:34Z" finished-at="2022-03-23T17:06:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS011_VerifyExhibitorDirectoryTest -->
-        <test-method status="PASS" signature="TS012_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS012_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="29576" started-at="2022-03-23T16:29:20Z" finished-at="2022-03-23T16:29:50Z">
+        <test-method status="PASS" signature="TS012_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@5b275dab]" name="TS012_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="36466" started-at="2022-03-23T17:06:48Z" finished-at="2022-03-23T17:07:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS012_VerifyAllSocialMediaLinksOnFooterTest -->
