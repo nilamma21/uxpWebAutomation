@@ -14,7 +14,7 @@ public class EXPLoginPage {
 	By emailaddress = By.xpath("//input[@id='signInName']"); //Locator for field to enter Email Address from Login Page
 	By password= By.xpath("//input[@id='password']"); //Locator for field to enter Password from Login Page
 	By signinbtn= By.xpath("//button[@id='next']"); //Locator for field to click on Sign In button from Login Page
-	By VerifyExpHomePage = By.xpath("//header[@class = 'EPHeader_header__bLMVK']"); //Locator for exhibitor portal header tabs
+	By VerifyExpHomePage = By.xpath("//div[@id = 'root']/header[1]"); //Locator for exhibitor portal header tabs
 	By HomeIcon = By.xpath("//svg[contains(id(), 'Capa' ]"); //Locator for Home icon
 	
 	public EXPLoginPage(WebDriver driver) {

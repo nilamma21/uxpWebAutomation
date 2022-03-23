@@ -11,7 +11,7 @@ public class EXPFooterLinksPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By ExhibitorPortalSymbol = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[1]/div[1]/span[1]"); // Locator for EXP Symbol
+	By ExhibitorPortalSymbol = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[1]/div[1]/a[1]"); // Locator for EXP Symbol
 	By AmericasMart = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[2]/div[1]/div[1]/a[1]"); // Locator for Americas Mart link
 	By AtlantaMarket = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[2]/div[1]/div[1]/a[2]"); // Locator for Atlanta Market link
 	By AtlantaApparel = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[2]/div[1]/div[1]/a[3]"); // Locator for Atlanta Apparel link
@@ -86,7 +86,7 @@ public class EXPFooterLinksPage {
 	
 	public WebElement getPrivacyPolicy() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(PrivacyPolicy));
+		wait.until(ExpectedConditions.elementToBeClickable(TermsAndConditions));
 		return driver.findElement(PrivacyPolicy);
 
 	}

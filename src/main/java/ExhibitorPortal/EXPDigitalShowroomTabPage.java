@@ -12,7 +12,7 @@ public class EXPDigitalShowroomTabPage
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By EXPYourDigiShowroom = By.xpath("//div[@class='EPHeader_headerWrapper__1X50E']/div[1]/div[1]/button[1]"); // Locator for Your Digi Showroom tab
+	By EXPYourDigiShowroom = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[1]/div[1]/button[1]"); // Locator for Your Digi Showroom tab
 	By EXPProfileInfo = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[2]/div[1]/a[1]"); // Locator for Profile Info
 	By EXPlines = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[1]/a[1]"); // Locator for Instagram icon in footer links
 	By EXPProduct = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[2]/a[1]"); 

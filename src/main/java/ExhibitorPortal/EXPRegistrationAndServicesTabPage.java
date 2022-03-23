@@ -10,18 +10,14 @@ public class EXPRegistrationAndServicesTabPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By EXPRegAndServicesTab = By.xpath("//div[@class='EPHeader_lv1__j6nWj']/button[4]"); // Locator for Reg & Services tab
-	By EXPExhibitorReg = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[2]/div[1]/a[1]"); // Locator for Exhibitor reg
-	By EXPAtlantaServices = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[1]/a[1]"); // Locator for Atlanta Services
-	By EXPAtlantaAdvertisingAndSponcership = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[2]/a[1]"); //Locator for Atlanta Advertising And Sponcership
-	By EXPAtlantaPayment = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[3]/a[1]");//Locator Atlanta payment
-	By EXPAAmericasMartLogisticsExhibitorToolkit = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[4]/div[1]/a[1]");//Locator for AmericasMart Logistics | Exhibitor Toolkit
-	By EXPExhibitorRegHeader = By.xpath("//div[@class='EPPageHeader_block__1JPqk']/div[4]/p[1]");//Exhibitor reg Header
-	By ExpPotalHeader=By.xpath("//h2[contains(text(),'Sign in with your existing account')]");
-	By ExpPermSpaceHeader=By.xpath("//h1[@class='sg-title']/span[1]");
-	By ExpGiftTradeshowHeader=By.xpath("//div[@class='sg-instructions']/div[1]/span[1]");
-	By ExpFurniTradeshowHeader=By.xpath("//div[@class='sg-instructions']/div[1]");
-	
+	By EXPRegAndServicesTab = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[1]/div[1]/button[4]"); // Locator for Reg & Services tab
+	By EXPExhibitorReg = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[2]/div[1]/a[1]"); // Locator for Exhibitor reg
+	By EXPAtlantaServices = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[3]/div[1]/a[1]"); // Locator for Atlanta Services
+	By EXPAtlantaAdvertisingAndSponcership = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[3]/div[2]/a[1]"); //Locator for Atlanta Advertising And Sponcership
+	By EXPAtlantaPayment = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[3]/div[3]/a[1]");//Locator Atlanta payment
+	By EXPAAmericasMartLogisticsExhibitorToolkit = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[4]/div[1]/a[1]");//Locator for AmericasMart Logistics | Exhibitor Toolkit
+	By VerifyAtlantaLinks = By.xpath("//div[@class = 'ng-scope']/form[1]/div[1]/div[1]/div[1]/div[1]/h2[1]"); //Locator for Exhibitor POrtal Administrator text validation
+	By VerifyAMCToolKit = By.xpath("//span[id = 'lblCompany']"); //Locator for verification tool kit page
 	
 	public EXPRegistrationAndServicesTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -29,8 +25,7 @@ public class EXPRegistrationAndServicesTabPage {
 	} 
 
 	public WebElement getEXPRegAndServicesTab() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(EXPRegAndServicesTab));
+		Thread.sleep(10000);
 		return driver.findElement(EXPRegAndServicesTab);
 	}
 	public WebElement getEXPExhibitorReg() throws InterruptedException {
@@ -59,30 +54,17 @@ public class EXPRegistrationAndServicesTabPage {
 		return driver.findElement(EXPAAmericasMartLogisticsExhibitorToolkit);
 	}
 	
-	public WebElement getEXPExhibitorRegHeader() throws InterruptedException {
+	public WebElement getVerifyAtlantaLinks() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPExhibitorRegHeader));
-		return driver.findElement(EXPExhibitorRegHeader);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyAtlantaLinks));
+		return driver.findElement(VerifyAtlantaLinks);
 	}
-	public WebElement getExpPortalHeader() throws InterruptedException {
+	
+	public WebElement getVerifyAMCToolKit() {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(ExpPotalHeader));
-		return driver.findElement(ExpPotalHeader);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyAMCToolKit));
+		return driver.findElement(VerifyAMCToolKit);
 	}
-	public WebElement getExpPermSpaceHeader() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(ExpPermSpaceHeader));
-		return driver.findElement(ExpPermSpaceHeader);
-	}
-	public WebElement getExpGiftTradeshowHeader() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(ExpGiftTradeshowHeader));
-		return driver.findElement(ExpGiftTradeshowHeader);
-	}
-	public WebElement getExpFurniTradeshowHeader() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(ExpFurniTradeshowHeader));
-		return driver.findElement(ExpFurniTradeshowHeader);
-	}
+	
 }
 

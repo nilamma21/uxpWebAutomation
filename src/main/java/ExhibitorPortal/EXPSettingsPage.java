@@ -12,14 +12,14 @@ public class EXPSettingsPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By Settings = By.xpath("//header[@class = 'EPHeader_header__bLMVK']/div[1]/div[2]/button[1]"); // Locator for Settings symbol
-	By VerifySettings = By.xpath("//header[@class = 'EPHeader_header__bLMVK']/div[1]/nav[1]"); // Locator for Settings Panel Verification
-	By EXPGuide = By.xpath("//header[@class = 'EPHeader_header__bLMVK']/div[1]/nav[1]/div[1]/div[2]/div[1]/a[1]"); // Locator for Exhibitor Portal Guide link
+	By Settings = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[2]/button[1]"); // Locator for Settings symbol
+	By VerifySettings = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]"); // Locator for Settings Panel Verification
+	By EXPGuide = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[2]/div[1]/a[1]"); // Locator for Exhibitor Portal Guide link
 	By VerifyEXPGuide = By.xpath("//section[@id = 'main-content']"); // Locator for EXP Guide Verification
-	By ManageUsers = By.xpath("//a[@href = '/Admin/Users']"); // Locator for Manage Users
-	By VerifyManageUsers = By.xpath("//p[@class = 'EPPageHeader_pageTitle__V1XKr']"); // Locator for Manage Users Verification
-	By CorporateInfo = By.xpath("//a[@href = '/Admin/Corporate-Info']"); // Locator for View Corporate Info
-	By ContactCustomerSupport = By.xpath("//a[@href = 'https://imcentershelp.zendesk.com/hc/en-us/requests/new']"); // Locator for Contact Customer Support
+	By ManageUsers = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[3]/div[1]/a[1]"); // Locator for Manage Users
+	By VerifyManageUsers = By.xpath("//div[@id = 'root']/div[1]/div[1]/div[4]/p[1]"); // Locator for Manage Users Verification
+	By CorporateInfo = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[4]/div[1]/a[1]"); // Locator for View Corporate Info
+	By ContactCustomerSupport = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[5]/div[1]/a[1]"); // Locator for Contact Customer Support
 	By VerifyContactCustomerSupport = By.xpath("//div[@class = 'container']/h1"); // Locator for Contact Customer Support Verification
 	By CaptchaCheckBox = By.xpath("//div[@id = 'checkbox']"); //Locator for captcha check box
 	By SkipCaptcha = By.xpath("//div[@title = 'Skip Challenge']"); //Locator for Skip captcha

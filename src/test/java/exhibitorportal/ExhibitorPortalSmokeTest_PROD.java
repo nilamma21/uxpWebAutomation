@@ -27,7 +27,7 @@ import resources.Utility;
 import resources.base;
 
 @Listeners({TestListeners.class})
-public class ExhibitorPortalSmokeTest_UAT extends base {
+public class ExhibitorPortalSmokeTest_PROD extends base {
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;
@@ -212,7 +212,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 					driver.switchTo().window(winHandle);
 				}
 				//Verify that 'EXP Login' page should be displayed
-				Assert.assertTrue(driver.getCurrentUrl().contains("https://prodmvdp.b2clogin.com/"));
+				Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 				// Close the new window, if that window no more required
 				//driver.close();
 				System.out.println("New Window");
@@ -234,7 +234,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 					driver.switchTo().window(winHandle);
 				}
 				//Verify that 'EXP Login' page should be displayed
-				Assert.assertTrue(driver.getCurrentUrl().contains("https://prodmvdp.b2clogin.com/"));
+				Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 				// Close the new window, if that window no more required
 				driver.close();
 				// Switch back to original browser (first window)
@@ -252,7 +252,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 					driver.switchTo().window(winHandle);
 				}
 				//Verify that 'EXP Login' page should be displayed
-				Assert.assertTrue(driver.getCurrentUrl().contains("https://prodmvdp.b2clogin.com/"));
+				Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 				// Close the new window, if that window no more required
 				driver.close();
 				// Switch back to original browser (first window)
@@ -269,7 +269,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 					driver.switchTo().window(winHandle);
 				}
 			
-				Assert.assertTrue(driver.getCurrentUrl().contains("https://prodmvdp.b2clogin.com/"));
+				Assert.assertTrue(driver.getCurrentUrl().contains("https://www.expotoolkit.com/"));
 				System.out.println("Expo Tool Kit page verified successfully");
 				driver.close();
 				driver.switchTo().window(winHandleBefore4);
@@ -325,7 +325,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 					driver.switchTo().window(winHandle);
 				}
 				//Verify that 'EXP Login' page should be displayed
-				Assert.assertTrue(driver.getCurrentUrl().contains("https://prodmvdp.b2clogin.com/"));
+				Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 				// Close the new window, if that window no more required
 				driver.close();
 				// Switch back to original browser (first window)
@@ -343,7 +343,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 					driver.switchTo().window(winHandle);
 				}
 				//Verify that 'EXP Login' page should be displayed
-				Assert.assertTrue(driver.getCurrentUrl().contains("https://prodmvdp.b2clogin.com/"));
+				Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 				driver.close();
 				driver.switchTo().window(winHandleBefore1);
 				
@@ -360,7 +360,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				}
 				
 				//Verify that 'EXP Login' page should be displayed
-				Assert.assertTrue(driver.getCurrentUrl().contains("https://prodmvdp.b2clogin.com/"));
+				Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 				System.out.println("Verify AtlPayment");
 				// Close the new window, if that window no more required
 				driver.close();
@@ -583,7 +583,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				
 				//Scroll till footer links
-				utl.scrollToElement(efl.getAboutIMC());
+				utl.scrollToElement(efl.getExhibitorPortalSymbol());
 				
 				//Click Exhibitor Portal Symbol and verify results
 				efl.getExhibitorPortalSymbol().click();
@@ -591,42 +591,36 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				System.out.println("EXP home page is displayed properly.");
 				
 				//Scroll till footer links
-				utl.scrollToElement(efl.getAboutIMC());
+				utl.scrollToElement(efl.getExhibitorPortalSymbol());
 				
 				//Click Americas Mart link and verify results
 				efl.getAmericasMart().click();
 				Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
 				System.out.println("Amricas mart page is displayed properly.");
 				driver.get(prop.getProperty("expurl"));
-				utl.scrollToElement(efl.getAboutIMC());
-				
-				//Click Americas Mart link and verify results
-				efl.getAmericasMart().click();
-				Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
-				System.out.println("Amricas mart page is displayed properly.");
-				driver.get(prop.getProperty("expurl"));
-				utl.scrollToElement(efl.getAboutIMC());
+				utl.scrollToElement(efl.getExhibitorPortalSymbol());
+			
 					
 				//Click Atlanta Maeket link and verify results
 				efl.getAtlantaMarket().click();
 				Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
 				System.out.println("Atlanta market page is displayed properly.");
 				driver.get(prop.getProperty("expurl"));
-				utl.scrollToElement(efl.getAboutIMC());
+				utl.scrollToElement(efl.getExhibitorPortalSymbol());
 				
 				//Click Atlanta Apparel link and verify results
 				efl.getAtlantaApparel().click();
 				Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
 				System.out.println("Atlanta Apparel page is displayed properly.");
 				driver.get(prop.getProperty("expurl"));
-				utl.scrollToElement(efl.getAboutIMC());
+				utl.scrollToElement(efl.getExhibitorPortalSymbol());
 				
 				//Click ADAC link and verify results
 				efl.getADAC().click();
 				Assert.assertTrue(driver.getCurrentUrl().contains("https://adacatlanta.com/"));
 				System.out.println("ADAC page is displayed properly.");
 				driver.get(prop.getProperty("expurl"));
-				utl.scrollToElement(efl.getAboutIMC());
+				utl.scrollToElement(efl.getExhibitorPortalSymbol());
 				
 				//Click IMC Highpoint Market link and verify results
 				efl.getHighPointMarket().click();
@@ -636,7 +630,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				for(String winHandle : driver.getWindowHandles()){
 					driver.switchTo().window(winHandle);
 				}
-				Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
+				Assert.assertTrue(driver.getCurrentUrl().contains("http://www.imchighpointmarket.com/"));
 				System.out.println("Atlanta market page is displayed properly.");
 				driver.close();
 				
@@ -646,28 +640,28 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
 				System.out.println("Las Vegas market page is displayed properly.");
 				driver.get(prop.getProperty("expurl"));
-				utl.scrollToElement(efl.getAboutIMC());
+				utl.scrollToElement(efl.getExhibitorPortalSymbol());
 				
 				//Click Las Vegas Design Center link and verify results
 				efl.getLasVegasDesignCenter().click();
 				Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Year-Round/LVDC"));
 				System.out.println("Las Vegas design center page is displayed properly.");
 				driver.get(prop.getProperty("expurl"));
-				utl.scrollToElement(efl.getAboutIMC());
+				utl.scrollToElement(efl.getExhibitorPortalSymbol());
 				
 				//Click Privacy Policy link and verify results
 				efl.getPrivacyPolicy().click();
 				Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Privacy-Policy"));
 				System.out.println("Privacy Policy page is displayed properly.");
 				driver.get(prop.getProperty("expurl"));
-				utl.scrollToElement(efl.getAboutIMC());
+				utl.scrollToElement(efl.getExhibitorPortalSymbol());
 				
 				//Click Terms and Conditions link and verify results
 				efl.getTermsAndConditions().click();
 				Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/terms-of-use/"));
 				System.out.println("Terms and Conditions page is displayed properly.");
 				driver.get(prop.getProperty("expurl"));
-				utl.scrollToElement(efl.getAboutIMC());
+				utl.scrollToElement(efl.getExhibitorPortalSymbol());
 				
 				//Click About Us link and verify results
 				efl.getAboutIMC().click();
