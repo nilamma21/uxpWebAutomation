@@ -199,27 +199,6 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
 		
-		//Click on any Exhibitor from Search results grid
-		String exHeader=gbs.getExhibitor().getText();
-		System.out.println("Exhibitor Header "+gbs.getExhibitor().getText());
-		gbs.getExhibitor().click();
-		String exDGShowroomHeader=atlm.getATLAppHeadersnextnext().getText();
-		System.out.println("DG Showroom Header "+atlm.getATLAppHeadersnextnext().getText());
-		Assert.assertTrue(exDGShowroomHeader.contains(exHeader));
-		System.out.println("Verified Digital Showroom Page");
-		
-		driver.navigate().back();
-		driver.navigate().back();
-		
-		//Click on any Product name from Search results Grid
-		String productName=gbs.getProductHeader().getText();
-		System.out.println("Product Name "+gbs.getProductHeader().getText());
-		utl.scrollToElement(gbs.getProductBlock());
-		gbs.getProductBlock().click();
-		//gbs.getProduct().click();
-		String productDetailsPageHeader=atlm.getATLAppHeadersProduct().getText();
-		Assert.assertTrue(productName.contains(productDetailsPageHeader));
-		System.out.println("Verified Product Details Page");
 	}
 
 	@Test(priority=5)
@@ -424,7 +403,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		exhp.getExhibitorsAndProducts().click();
 		System.out.println("Click on Exhibitors And brands Tab");
 		//CLick on Exhibitor Directory
-		exhp.getExhibitorDirectory().click();
+		atlappexh.getAtlAppExhibitorsAndProducts().click();
 		System.out.println("Click on Exhibitor Directory");
 		//Verify Exhibitor Directory Page
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Exhibitor Directory"));	
@@ -660,18 +639,17 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		Thread.sleep(2000);
 		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Lookbooks"));	
 		System.out.println("Vefiry Lookbooks  Page");
-
+		
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
 		System.out.println("Click on Fashion Gallery Tab");
-		//CLick on  LookbooksImg  Page
+		//CLick on Look Book Link 
 		atlf.getatlAppLookBookImg().click();
-		System.out.println("Click on Lookbooks  img ");
-		//Vefiry Lookbooks img Page
+		System.out.println("Click on Look Book Link ");
+		//Vefiry Lookbooks  Page
 		Thread.sleep(2000);
 		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Lookbooks"));	
-		System.out.println("Vefiry Lookbooks  img Page");
-
+		System.out.println("Vefiry Lookbooks  Page");
 
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
@@ -681,8 +659,8 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		System.out.println("Click on Videos and Images Link ");
 		//Vefiry Lookbooks  Page
 		Thread.sleep(4000);
-		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Videos + Images"));	
-		System.out.println("Vefiry  Video and Images   Page");
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Videos + Images"));	
+		System.out.println("Verify  Video and Images   Page");
 
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
@@ -695,7 +673,25 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Videos + Images"));	
 		System.out.println("Vefiry Video and Images  img Page");
 
+	/*	//Click on Fashion Gallery Tab
+		atlf.getatlAppFashionGalleryTab().click();
+		System.out.println("Click on Fashion Gallery Tab");
+		//Click on Videos and Images Link 
+		atlf.getatlAppNews().click();
+		//Vefiry Lookbooks  Page
+		Thread.sleep(4000);
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("In The News"));	
+		System.out.println("Verify  In the News   Page");
 
+		//Click on Fashion Gallery Tab
+		atlf.getatlAppFashionGalleryTab().click();
+		System.out.println("Click on Fashion Gallery Tab");
+		//CLick on  LookbooksImg  Page
+		atlf.getatlAppatlAppNewsImg().click();
+		//Vefiry Lookbooks img Page
+		Thread.sleep(4000);
+		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("In The News"));	
+		System.out.println("Vefiry In the News  img Page");*/
 	}
 
 	@Test(priority=10)

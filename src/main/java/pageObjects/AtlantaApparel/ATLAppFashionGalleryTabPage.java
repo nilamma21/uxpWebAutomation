@@ -21,6 +21,7 @@ public class ATLAppFashionGalleryTabPage
 	By atlAppNews = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[4]/div[1]/a[1]");
 	By atlAppNewsImg = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[4]/div[1]/a[2]");
 	
+	
 	public ATLAppFashionGalleryTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			

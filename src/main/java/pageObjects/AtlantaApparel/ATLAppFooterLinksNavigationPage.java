@@ -11,12 +11,12 @@ public class ATLAppFooterLinksNavigationPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By AmericasMart = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[1]/div[1]/a[1]"); //Locator for High Point Market in footer links
-	By AtlantaMarket = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[2]/div[1]/a[1]"); //Locator for Atlanta Matket in footer links
-	By IMCHeighPointMarket = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[3]/div[1]/a[1]"); //Locator for Atlanta Apparel in footer links
-	By LasVegasMarket = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[4]/div[1]/a[1]"); //Locator for Americas Mart in footer links
-	By InternationalMarketCenters = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[5]/div[1]/a[1]"); //Locator for International Market Centers in footer links
-
+	By AmericasMart = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[2]/div[1]/a[1]"); //Locator for High Point Market in footer links
+	By AtlantaMarket = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[3]/div[1]/a[1]"); //Locator for Atlanta Matket in footer links
+	By IMCHeighPointMarket = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[4]/div[1]/a[1]"); //Locator for Atlanta Apparel in footer links
+	By LasVegasMarket = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[5]/div[1]/a[1]"); //Locator for Americas Mart in footer links
+	By InternationalMarketCenters = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[7]/div[1]/a[1]"); //Locator for International Market Centers in footer links
+	By AtlAppSymbol = By.xpath("//footer[@id = 'footer-content']/div[1]/div[1]/div[1]/a[1]"); //Locator for footer atlanta apparel symbol
 	By AmericasMartfooterlink = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[2]/div[1]/a[1]"); //Locator for High Point Market in footer links	
 	
 	By AtlantaMarketFooterLink = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[3]/div[1]/a[1]"); //Locator for Atlanta Matket in footer links
@@ -43,10 +43,10 @@ public class ATLAppFooterLinksNavigationPage {
 
 	
 	By facebookfootericon = By.xpath("//div[@class='imc-optin-social']/div[1]"); //Locator for Facebook link in footer
-	By instagramfootericon =  By.xpath("//div[@class='imc-optin-social']/div[2]"); //Locator for Instagram link in footer
-	By youtubefootericon = By.xpath("//div[@class='imc-optin-social']/div[3]"); //Locator You Tube icon
-	By snapchatfooter = By.xpath("//div[@class='imc-optin-social']/div[4]"); //Locator for snapchat icon
-	By twittericonfooter = By.xpath("//div[@class='imc-optin-social']/div[5]"); //Locator for Twitter icon
+	By instagramfootericon =  By.xpath("//div[@class='imc-optin-social']/div[3]"); //Locator for Instagram link in footer
+	By youtubefootericon = By.xpath("//div[@class='imc-optin-social']/div[4]"); //Locator You Tube icon
+	By snapchatfooter = By.xpath("//div[@class='imc-optin-social']/div[5]"); //Locator for snapchat icon
+	By twittericonfooter = By.xpath("//div[@class='imc-optin-social']/div[2]"); //Locator for Twitter icon
 	
 	
 	
@@ -240,5 +240,10 @@ public class ATLAppFooterLinksNavigationPage {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(twittericonfooter));
 		return driver.findElement(twittericonfooter);
 	}
-	
+	public WebElement getAtlAppSymbol() throws InterruptedException {
+		
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(AtlAppSymbol));
+		return driver.findElement(AtlAppSymbol);
+	}
 }
