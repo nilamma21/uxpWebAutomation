@@ -234,9 +234,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		exhp.getExhibitorsAndProducts().click();
 		Assert.assertTrue(exhp.getVerifyExhibitorsAndProductsSection().isDisplayed());
 		System.out.println("Exhibitors and Products section options are displayed properly");
-
+		
+		
 		//Click Exhibitor Directory option under Exhibitors and Products
-
+		Thread.sleep(5000);
 		exhp.getExhibitorDirectory().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor & Product Directory");
 		System.out.println("Exhibitory Directory section is displayed properly");

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+ 
 public class ATLAppGlobalSearchPage {
 
 	public WebDriver driver;
@@ -14,6 +14,8 @@ public class ATLAppGlobalSearchPage {
 	By Exhibitor = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/h2[1]");
 	By Product = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]");
 	By ProductHeader = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]");
+	By ProductName = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]/div[1]/div[1]/span[1]/span[1]");
+	
 	By ProductBlock = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]");
 	By AMCProductBlock = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]/div[1]/div[1]/span[1]/span[1]");
 	By AMCProductNameDetails = By.xpath("//div[@id='root']/section[1]/div[4]/div[1]/div[1]/h2[1]");
@@ -45,7 +47,13 @@ public class ATLAppGlobalSearchPage {
 		return driver.findElement(ProductHeader);
 
 	}
+	public WebElement getProductName()throws InterruptedException{
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ProductName));
+		return driver.findElement(ProductName);
 
+	}
+	
 	public WebElement getProductBlock()throws InterruptedException{
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ProductBlock));

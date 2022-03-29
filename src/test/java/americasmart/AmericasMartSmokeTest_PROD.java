@@ -512,12 +512,14 @@ public class AmericasMartSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
 		gs = new UXPGlobalSearchPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
-		String searchterm = gs.getVerifyGlobalSeacrh().getText();
+		Thread.sleep(10000);
+		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
 	}
@@ -670,8 +672,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		//Click Profile and Settings tab under Market Planner and verify result
 		atlps.getATLWelcomeText().click();
+		Thread.sleep(10000);
 		atlps.getATLProfileAndSettings().click();
-		Thread.sleep(6000);
+		
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+"Profile"));
 		System.out.println("Profile and Settings section options are displayed properly");
 	}

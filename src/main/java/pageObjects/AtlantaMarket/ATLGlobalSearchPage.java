@@ -16,7 +16,7 @@ public class ATLGlobalSearchPage {
 
 	By atlglobalsearchtxtbx = By.xpath("//input[@id='input-1']"); // Locator for Global Search field 
 	By atlsearchbtn = By.xpath("//button[@class = 'imc-searchform--button--search']"); //Locator for Seach button for global search
-	By atlverifyglobalseacrh = By.xpath("//section[@class = 'imc-searchform--section ']/span[1]/div[1]"); // Locator for global search verification
+	By atlverifyglobalseacrh = By.xpath("//div[@class = 'imc-gallery__item']/div[1]/section[1]/span[1]/div[1]"); // Locator for global search verification
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -24,15 +24,22 @@ public class ATLGlobalSearchPage {
 	} 
 
 	public WebElement getATLGlobalSearchTextBox() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlglobalsearchtxtbx));
 		return driver.findElement(atlglobalsearchtxtbx);
 	}
 
 	public WebElement getATLSearchButton() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlsearchbtn));
+
 		return driver.findElement(atlsearchbtn);
 	}
 	
 	public WebElement getATLVerifyGlobalSeacrh() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlverifyglobalseacrh));
+
 		return driver.findElement(atlverifyglobalseacrh);
 	}
 	

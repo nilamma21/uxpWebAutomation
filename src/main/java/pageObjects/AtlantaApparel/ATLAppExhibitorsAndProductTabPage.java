@@ -14,7 +14,8 @@ public class ATLAppExhibitorsAndProductTabPage
 
 	By atlaappfloorplans = By.xpath("//div[@class ='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[1]/a[1]"); //Locator for Floor Plans header tab
 	By atlaappCategories = By.xpath("//div[@class ='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[3]/div[1]/a[1]");
-
+	By AtlAppExhibitorsAndProducts = By.xpath("//*[contains(text(), 'Exhibitors & Products')]"); //Locator for Exhibitors and Products
+	
 	public ATLAppExhibitorsAndProductTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -29,5 +30,10 @@ public class ATLAppExhibitorsAndProductTabPage
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlaappCategories));
 		return driver.findElement(atlaappCategories);
+	}
+	public WebElement getAtlAppExhibitorsAndProducts()throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlAppExhibitorsAndProducts));
+		return driver.findElement(AtlAppExhibitorsAndProducts);
 	}
 }

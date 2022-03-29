@@ -10,11 +10,11 @@ public class EXPMarketTabPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By EXPMarketTab = By.xpath("//div[@class='EPHeader_headerLeft__rpgY3']/div[1]/button[2]"); // Locator for Market tab
+	By EXPMarketTab = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[1]/div[1]/button[2]"); // Locator for Market tab
 	By EXPManageYourMarket = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[2]/div[1]/a[1]"); // Locator for Manage Your Market
 	By EXPExhibitorResources = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[2]/div[2]/a[1]");//Locator for Exhibitor Resources
 	By EXPMarket = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[1]/a[1]");//Locator for Market
-	By EXPManageMarketHeader = By.xpath("//div[@class='EPContentSection_section__1m2WC']/div[1]/div[1]/h1[1]");//Locator for Market
+	By EXPManageMarketHeader = By.xpath("//div[@class='mainContainer']/section[1]/div[1]/div[1]/div[1]/h1[1]");//Locator for Market
 	By EXPExhibitorResourcesHeader = By.xpath("//div[@class='EPPageHeader_container__Jiq4V']/div[1]/div[4]/p[1]");
 	By EXPMarketHeader = By.xpath("//div[@class='EPPageHeader_container__Jiq4V']/div[1]/div[4]/p[1]");
 	

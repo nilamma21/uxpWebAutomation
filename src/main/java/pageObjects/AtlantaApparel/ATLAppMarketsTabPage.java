@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ATLAppMarketsTabPage {
 
-	public WebDriver driver;
+	public WebDriver driver; 
 	public WebDriverWait wait;
 
 	By ATLAppHeaders = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[2]/a[1]");
@@ -18,6 +18,7 @@ public class ATLAppMarketsTabPage {
 	By ATLAppImage = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[1]/a[2]");
 	By ATLAppHeadersnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]");
 	By ATLAppHeadersnextnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]");
+	By ATLAppHeadersnextnextnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]");
 	By ATLAppLink = By.xpath("//div[@class='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[2]/a[1]");
 	By ATLAppHeadersProduct = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[5]/a[1]");
 
@@ -27,7 +28,7 @@ public class ATLAppMarketsTabPage {
 	By ATLWorldOfPromLink = By.xpath("//div[@class='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[4]/div[2]/a[1]");
 
 	By ATLLasVegasAppImg = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[5]/div[1]/a[2]");
-	By ATLLasVegasAppLink = By.xpath("//div[@class='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[5]/div[2]/a[1]");
+	By ATLLasVegasAppLink = By.xpath("//div[@class='imc-section']/div[1]/div[1]/div[2]/div[5]/div[2]/a[1]");
 
 
 	//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[3]/div[1]/a[2]
@@ -52,6 +53,12 @@ public class ATLAppMarketsTabPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLAppHeadersnextnext));
 		return driver.findElement(ATLAppHeadersnextnext);
+
+	}
+	public WebElement getATLAppHeadersnextnextnext()throws InterruptedException{
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLAppHeadersnextnextnext));
+		return driver.findElement(ATLAppHeadersnextnextnext);
 
 	}
 	public WebElement getATLAppHeadersProduct()throws InterruptedException{
