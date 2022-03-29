@@ -15,7 +15,7 @@ public class UXPExhibitorsAndProductsTabPage {
 	public WebDriverWait wait;
 
 	By ExhibitorsAndProducts = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[1]/a[1]"); //Locator for Exhibitors and Products header tab
-	By ExhibitorDirectory = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[1]/div[1]/a[1]"); //Locator for ExhibitorDirectory header tab
+	By ExhibitorDirectory = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[2]/div[1]/div[1]/a[1]"); //Locator for ExhibitorDirectory header tab
 	By FloorPlans = By.xpath("//a[contains(text(), 'Floor Plans')]"); //Locator for Floor Plans header tab
 	By ShowSpecials = By.xpath("//a[contains(text(), 'Show Specials')]"); //Locator for ShowSpecials header tab
 	By Temporaries = By.xpath("//a[contains(text(), 'Temporaries')]"); //Locator for Temporaries header tab
@@ -34,10 +34,14 @@ public class UXPExhibitorsAndProductsTabPage {
 	} 
 
 	public WebElement getExhibitorsAndProducts() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ExhibitorsAndProducts));
 		return driver.findElement(ExhibitorsAndProducts);
 	}
 
 	public WebElement getExhibitorDirectory() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ExhibitorDirectory));
 		return driver.findElement(ExhibitorDirectory);
 	}
 
