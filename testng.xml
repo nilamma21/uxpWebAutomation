@@ -81,7 +81,7 @@
 	</listners>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="sitecore.SitecoreSmokeTest_UAT" />
+			<class name="sitecore.SitecoreSmokeTest_PROD" />
 			<!--  <methods>
 			<include name="TS001_VerifySitecoreLoginTest"/>
 			</methods> -->
