@@ -120,7 +120,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");

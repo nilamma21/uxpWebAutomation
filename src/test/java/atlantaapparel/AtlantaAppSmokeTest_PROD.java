@@ -564,7 +564,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//CLick on Download app img
 		atlatt.getATLDownloadApp().click(); 
 		System.out.println("Click on Donwload App");
-		Thread.sleep(2000);
+		Thread.sleep(15000);
 		//Verify Hotels Page
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Atlanta Apparel App"));	
 		System.out.println("Vefiry Download App Page ");
