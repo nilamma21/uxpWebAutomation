@@ -2,48 +2,48 @@
 <testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Sitecore_SmokeTestSuite" duration-ms="45130" started-at="2022-03-31T04:46:38Z" finished-at="2022-03-31T04:47:23Z">
+  <suite name="Sitecore_SmokeTestSuite" duration-ms="339186" started-at="2022-04-06T10:07:53Z" finished-at="2022-04-06T10:13:32Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="45130" started-at="2022-03-31T04:46:38Z" finished-at="2022-03-31T04:47:23Z">
+    <test name="Test" duration-ms="339186" started-at="2022-04-06T10:07:53Z" finished-at="2022-04-06T10:13:32Z">
       <class name="sitecore.SitecoreSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="12369" started-at="2022-03-31T10:16:38Z" finished-at="2022-03-31T10:16:51Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="33038" started-at="2022-04-06T15:37:53Z" finished-at="2022-04-06T15:38:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifySitecoreLoginTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS001_VerifySitecoreLoginTest" duration-ms="7379" started-at="2022-03-31T10:16:51Z" finished-at="2022-03-31T10:16:58Z">
+        <test-method status="PASS" signature="TS001_VerifySitecoreLoginTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS001_VerifySitecoreLoginTest" duration-ms="17027" started-at="2022-04-06T15:38:26Z" finished-at="2022-04-06T15:38:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_VerifySitecoreLoginTest -->
-        <test-method status="PASS" signature="TS002_VerifyContentEditorTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS002_VerifyContentEditorTest" duration-ms="6829" started-at="2022-03-31T10:16:58Z" finished-at="2022-03-31T10:17:05Z">
+        <test-method status="PASS" signature="TS002_VerifyContentEditorTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS002_VerifyContentEditorTest" duration-ms="16714" started-at="2022-04-06T15:38:43Z" finished-at="2022-04-06T15:38:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS002_VerifyContentEditorTest -->
-        <test-method status="PASS" signature="TS003_VerifyDigitalAdminPanelTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS003_VerifyDigitalAdminPanelTest" duration-ms="4026" started-at="2022-03-31T10:17:05Z" finished-at="2022-03-31T10:17:09Z">
+        <test-method status="PASS" signature="TS003_VerifyDigitalAdminPanelTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS003_VerifyDigitalAdminPanelTest" duration-ms="11580" started-at="2022-04-06T15:38:59Z" finished-at="2022-04-06T15:39:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS003_VerifyDigitalAdminPanelTest -->
-        <test-method status="PASS" signature="TS004_VerifyShowSpecialApprovalsTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS004_VerifyShowSpecialApprovalsTest" duration-ms="2228" started-at="2022-03-31T10:17:09Z" finished-at="2022-03-31T10:17:11Z">
+        <test-method status="PASS" signature="TS004_VerifyShowSpecialApprovalsTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS004_VerifyShowSpecialApprovalsTest" duration-ms="12034" started-at="2022-04-06T15:39:11Z" finished-at="2022-04-06T15:39:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS004_VerifyShowSpecialApprovalsTest -->
-        <test-method status="PASS" signature="TS005_VerifyExhibitorEventsApprovalTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS005_VerifyExhibitorEventsApprovalTest" duration-ms="2345" started-at="2022-03-31T10:17:11Z" finished-at="2022-03-31T10:17:14Z">
+        <test-method status="PASS" signature="TS005_VerifyExhibitorEventsApprovalTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS005_VerifyExhibitorEventsApprovalTest" duration-ms="46773" started-at="2022-04-06T15:39:23Z" finished-at="2022-04-06T15:40:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS005_VerifyExhibitorEventsApprovalTest -->
-        <test-method status="PASS" signature="TS006_VerifyIMCReportsTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS006_VerifyIMCReportsTest" duration-ms="2531" started-at="2022-03-31T10:17:14Z" finished-at="2022-03-31T10:17:16Z">
+        <test-method status="PASS" signature="TS006_VerifyIMCReportsTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS006_VerifyIMCReportsTest" duration-ms="50148" started-at="2022-04-06T15:40:10Z" finished-at="2022-04-06T15:41:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS006_VerifyIMCReportsTest -->
-        <test-method status="PASS" signature="TS007_VerifyTaxonomyManagerTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS007_VerifyTaxonomyManagerTest" duration-ms="1855" started-at="2022-03-31T10:17:16Z" finished-at="2022-03-31T10:17:18Z">
+        <test-method status="PASS" signature="TS007_VerifyTaxonomyManagerTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS007_VerifyTaxonomyManagerTest" duration-ms="12986" started-at="2022-04-06T15:41:00Z" finished-at="2022-04-06T15:41:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS007_VerifyTaxonomyManagerTest -->
-        <test-method status="PASS" signature="TS008_VerifyEmailExperienceManagerTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS008_VerifyEmailExperienceManagerTest" duration-ms="3315" started-at="2022-03-31T10:17:18Z" finished-at="2022-03-31T10:17:21Z">
+        <test-method status="PASS" signature="TS008_VerifyEmailExperienceManagerTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS008_VerifyEmailExperienceManagerTest" duration-ms="26593" started-at="2022-04-06T15:41:13Z" finished-at="2022-04-06T15:41:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS008_VerifyEmailExperienceManagerTest -->
-        <test-method status="PASS" signature="TS009_VerifyControlPanelTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS009_VerifyControlPanelTest" duration-ms="2200" started-at="2022-03-31T10:17:21Z" finished-at="2022-03-31T10:17:23Z">
+        <test-method status="PASS" signature="TS009_VerifyControlPanelTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS009_VerifyControlPanelTest" duration-ms="112219" started-at="2022-04-06T15:41:39Z" finished-at="2022-04-06T15:43:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS009_VerifyControlPanelTest -->
