@@ -18,7 +18,7 @@ public class base {
 
 	// this is base class page where driver is initialized and data.properties mentioned. 
 	// this class holds all the functions that commonly used by other pages.
-	public static WebDriver driver;
+	public WebDriver driver;
 	public static Properties prop;
 
 	public WebDriver initializeDriver() throws IOException
@@ -35,7 +35,7 @@ public class base {
 		{
 			// you can mention chromedriver.exe path here to execute all the scripts.
 
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver_99.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver_100.exe");
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		}

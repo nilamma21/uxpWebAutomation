@@ -688,7 +688,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click Why Attend tab under Attend section
 
 		at.getWhyAttend().click();
-		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Attend");
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend"));
 		System.out.println("Why Attend section is displayed properly");
 		at.getAttend().click();
 
