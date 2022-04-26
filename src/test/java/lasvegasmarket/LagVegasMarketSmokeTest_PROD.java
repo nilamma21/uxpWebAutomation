@@ -690,6 +690,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		at.getWhyAttend().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend"));
 		System.out.println("Why Attend section is displayed properly");
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(6000);
 		at.getAttend().click();
 
 		//Click Registration tab under Attend section
