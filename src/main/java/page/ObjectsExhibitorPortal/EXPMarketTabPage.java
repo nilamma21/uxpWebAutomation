@@ -14,9 +14,9 @@ public class EXPMarketTabPage {
 	By EXPManageYourMarket = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[2]/div[1]/a[1]"); // Locator for Manage Your Market
 	By EXPExhibitorResources = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[2]/div[2]/a[1]");//Locator for Exhibitor Resources
 	By EXPMarket = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[1]/a[1]");//Locator for Market
-	By EXPManageMarketHeader = By.xpath("//div[@class='mainContainer']/section[1]/div[1]/div[1]/div[1]/h1[1]");//Locator for Market
-	By EXPExhibitorResourcesHeader = By.xpath("//div[@class='EPPageHeader_container__Jiq4V']/div[1]/div[4]/p[1]");
-	By EXPMarketHeader = By.xpath("//div[@class='EPPageHeader_container__Jiq4V']/div[1]/div[4]/p[1]");
+	By EXPManageMarketHeader = By.xpath("//h2[contains(text(), 'Manage Your Markets')]");//Locator for Market
+	By EXPExhibitorResourcesHeader = By.xpath("//p[contains(text(), 'Exhibitor Resources')]");
+	By EXPMarketHeader = By.xpath("//p[contains(text(), 'Manage')]");
 	
 	public EXPMarketTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
