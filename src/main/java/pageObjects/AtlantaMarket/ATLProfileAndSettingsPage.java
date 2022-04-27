@@ -17,7 +17,7 @@ public class ATLProfileAndSettingsPage {
 	By atlwelcometext = By.xpath("//div[@id ='root']/div[1]/div[1]/div[3]/button[1]"); //Locator for Welcome Text in Market Planner
 	By atlprofileandsettings = By.xpath("//div[@class = 'imc-header-user-icon--links-settings']/a[1]"); //Locator for Profile and Settings option in Market Planner
 	By amcexhibitorportal = By.xpath("//a[@href='https://exhibitors.imcenters.com']"); //Locator for Exhibitor Portal sub menu
-	By amcexhphome = By.xpath("//h1[contains(text(), 'Welcome')]"); //Locator for EXP Home page title
+	By amcexhphome = By.xpath("//h1[contains(text(), 'Exhibitor Dashboard')]"); //Locator for EXP Home page title
 	
 	public ATLProfileAndSettingsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
