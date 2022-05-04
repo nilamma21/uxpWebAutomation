@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Sitecore_SmokeTestSuite]">
+<suite name="Failed suite [EXP_SmokeTestSuite]">
   <test name="Test(failed)">
     <classes>
-      <class name="sitecore.SitecoreSmokeTest_UAT">
+      <class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD">
         <methods>
-          <include name="TS008_VerifyEmailExperienceManagerTest"/>
-          <include name="TS009_VerifyControlPanelTest"/>
+          <include name="TS007_VerifyAllLinkUnderEXPMarketTabTest"/>
           <include name="initialize"/>
-          <include name="TS007_VerifyTaxonomyManagerTest"/>
         </methods>
-      </class> <!-- sitecore.SitecoreSmokeTest_UAT -->
+      </class> <!-- exhibitorportal.ExhibitorPortalSmokeTest_PROD -->
     </classes>
   </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Sitecore_SmokeTestSuite] -->
+</suite> <!-- Failed suite [EXP_SmokeTestSuite] -->

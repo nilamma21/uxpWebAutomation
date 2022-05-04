@@ -692,6 +692,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		atlps.getATLWelcomeText().click();
+		Thread.sleep(10000);
 		atlps.getAMCExhibitorPortalOptn().click();
 		
 		//Verify that 'EXP Home' page should be displayed

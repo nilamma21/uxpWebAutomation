@@ -14,7 +14,7 @@ public class SitecoreSmokeTestLinks {
 	By UserName = By.xpath("//input[@id = 'Username']"); // Locator for User Name
 	By Password = By.xpath("//input[@id = 'Password']"); //Locator for Password
 	By Loginbtn = By.xpath("//button[@name = 'button']"); //Locator for Login button
-	By VerifyHomePage = By.xpath("//div[@class = 'sc-globalHeader-startButton']/a[1]"); //Locator for verification of home page
+	By VerifyHomePage = By.xpath("//a[@href='/sitecore/shell/sitecore/client/Applications/Launchpad']"); //Locator for verification of home page
 	By ContentEditor = By.xpath("//a[@title = 'Content Editor']"); //Locator for Content Editor option
 	By VerifyContentEditor = By.xpath("//span[@class = 'scEditorTabHeaderActive']"); //Locator for Verify Content Editor
 	By DigitalAdminPanel = By.xpath("//a[@title = 'Digital Admin Panel']"); //Locator for Digital Admin Panel option
@@ -53,8 +53,9 @@ public class SitecoreSmokeTestLinks {
 	}
 	
 	public WebElement getVerifyHomePage() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(VerifyHomePage));
+		Thread.sleep(8000);
+//		wait = new WebDriverWait (driver,20);
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyHomePage));
 		return driver.findElement(VerifyHomePage);
 
 	}
@@ -82,7 +83,7 @@ public class SitecoreSmokeTestLinks {
 	
 	public WebElement getVerifyDigitalAdminPanel() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(VerifyDigitalAdminPanel));
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(VerifyDigitalAdminPanel));
 		return driver.findElement(VerifyDigitalAdminPanel);
 
 	}

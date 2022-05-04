@@ -1,53 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="9" passed="9">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Sitecore_SmokeTestSuite" duration-ms="45130" started-at="2022-03-31T04:46:38Z" finished-at="2022-03-31T04:47:23Z">
+  <suite name="EXP_SmokeTestSuite" duration-ms="93729" started-at="2022-04-27T09:59:01Z" finished-at="2022-04-27T10:00:34Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="45130" started-at="2022-03-31T04:46:38Z" finished-at="2022-03-31T04:47:23Z">
-      <class name="sitecore.SitecoreSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="12369" started-at="2022-03-31T10:16:38Z" finished-at="2022-03-31T10:16:51Z">
+    <test name="Test" duration-ms="93729" started-at="2022-04-27T09:59:01Z" finished-at="2022-04-27T10:00:34Z">
+      <class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5e5792a0]" name="initialize" is-config="true" duration-ms="23596" started-at="2022-04-27T15:29:01Z" finished-at="2022-04-27T15:29:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifySitecoreLoginTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS001_VerifySitecoreLoginTest" duration-ms="7379" started-at="2022-03-31T10:16:51Z" finished-at="2022-03-31T10:16:58Z">
+        <test-method status="PASS" signature="TS001_VerifyExhibitorPortalLoginTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5e5792a0]" name="TS001_VerifyExhibitorPortalLoginTest" duration-ms="50175" started-at="2022-04-27T15:29:24Z" finished-at="2022-04-27T15:30:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifySitecoreLoginTest -->
-        <test-method status="PASS" signature="TS002_VerifyContentEditorTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS002_VerifyContentEditorTest" duration-ms="6829" started-at="2022-03-31T10:16:58Z" finished-at="2022-03-31T10:17:05Z">
+        </test-method> <!-- TS001_VerifyExhibitorPortalLoginTest -->
+        <test-method status="FAIL" signature="TS007_VerifyAllLinkUnderEXPMarketTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5e5792a0]" name="TS007_VerifyAllLinkUnderEXPMarketTabTest" duration-ms="19460" started-at="2022-04-27T15:30:15Z" finished-at="2022-04-27T15:30:34Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at exhibitorportal.ExhibitorPortalSmokeTest_PROD.TS007_VerifyAllLinkUnderEXPMarketTabTest(ExhibitorPortalSmokeTest_PROD.java:537)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifyContentEditorTest -->
-        <test-method status="PASS" signature="TS003_VerifyDigitalAdminPanelTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS003_VerifyDigitalAdminPanelTest" duration-ms="4026" started-at="2022-03-31T10:17:05Z" finished-at="2022-03-31T10:17:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyDigitalAdminPanelTest -->
-        <test-method status="PASS" signature="TS004_VerifyShowSpecialApprovalsTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS004_VerifyShowSpecialApprovalsTest" duration-ms="2228" started-at="2022-03-31T10:17:09Z" finished-at="2022-03-31T10:17:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyShowSpecialApprovalsTest -->
-        <test-method status="PASS" signature="TS005_VerifyExhibitorEventsApprovalTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS005_VerifyExhibitorEventsApprovalTest" duration-ms="2345" started-at="2022-03-31T10:17:11Z" finished-at="2022-03-31T10:17:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyExhibitorEventsApprovalTest -->
-        <test-method status="PASS" signature="TS006_VerifyIMCReportsTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS006_VerifyIMCReportsTest" duration-ms="2531" started-at="2022-03-31T10:17:14Z" finished-at="2022-03-31T10:17:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyIMCReportsTest -->
-        <test-method status="PASS" signature="TS007_VerifyTaxonomyManagerTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS007_VerifyTaxonomyManagerTest" duration-ms="1855" started-at="2022-03-31T10:17:16Z" finished-at="2022-03-31T10:17:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyTaxonomyManagerTest -->
-        <test-method status="PASS" signature="TS008_VerifyEmailExperienceManagerTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS008_VerifyEmailExperienceManagerTest" duration-ms="3315" started-at="2022-03-31T10:17:18Z" finished-at="2022-03-31T10:17:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifyEmailExperienceManagerTest -->
-        <test-method status="PASS" signature="TS009_VerifyControlPanelTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5b275dab]" name="TS009_VerifyControlPanelTest" duration-ms="2200" started-at="2022-03-31T10:17:21Z" finished-at="2022-03-31T10:17:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifyControlPanelTest -->
-      </class> <!-- sitecore.SitecoreSmokeTest_PROD -->
+        </test-method> <!-- TS007_VerifyAllLinkUnderEXPMarketTabTest -->
+      </class> <!-- exhibitorportal.ExhibitorPortalSmokeTest_PROD -->
     </test> <!-- Test -->
-  </suite> <!-- Sitecore_SmokeTestSuite -->
+  </suite> <!-- EXP_SmokeTestSuite -->
 </testng-results>
