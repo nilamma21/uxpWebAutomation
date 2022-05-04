@@ -1,25 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="2" passed="1">
+<testng-results skipped="0" failed="1" total="13" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="EXP_SmokeTestSuite" duration-ms="93729" started-at="2022-04-27T09:59:01Z" finished-at="2022-04-27T10:00:34Z">
+  <suite name="LVM_SmokeTestSuite" duration-ms="1722187" started-at="2022-05-04T13:14:21Z" finished-at="2022-05-04T13:43:03Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="93729" started-at="2022-04-27T09:59:01Z" finished-at="2022-04-27T10:00:34Z">
-      <class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5e5792a0]" name="initialize" is-config="true" duration-ms="23596" started-at="2022-04-27T15:29:01Z" finished-at="2022-04-27T15:29:24Z">
+    <test name="Test" duration-ms="1722187" started-at="2022-05-04T13:14:21Z" finished-at="2022-05-04T13:43:03Z">
+      <class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="40881" started-at="2022-05-04T18:44:21Z" finished-at="2022-05-04T18:45:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyExhibitorPortalLoginTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5e5792a0]" name="TS001_VerifyExhibitorPortalLoginTest" duration-ms="50175" started-at="2022-04-27T15:29:24Z" finished-at="2022-04-27T15:30:15Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="54722" started-at="2022-05-04T18:45:02Z" finished-at="2022-05-04T18:45:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyExhibitorPortalLoginTest -->
-        <test-method status="FAIL" signature="TS007_VerifyAllLinkUnderEXPMarketTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@5e5792a0]" name="TS007_VerifyAllLinkUnderEXPMarketTabTest" duration-ms="19460" started-at="2022-04-27T15:30:15Z" finished-at="2022-04-27T15:30:34Z">
-          <exception class="java.lang.NullPointerException">
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifAllLinksUnderExhibitTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS002_VerifAllLinksUnderExhibitTabTest" duration-ms="98275" started-at="2022-05-04T18:45:56Z" finished-at="2022-05-04T18:47:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifAllLinksUnderExhibitTabTest -->
+        <test-method status="PASS" signature="TS003_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS003_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="40122" started-at="2022-05-04T18:47:35Z" finished-at="2022-05-04T18:48:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyMarketPlannerProfileAndSettingsOptionTest -->
+        <test-method status="PASS" signature="TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest" duration-ms="106366" started-at="2022-05-04T18:48:15Z" finished-at="2022-05-04T18:50:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
+        <test-method status="PASS" signature="TS005_VerifyAllLinksUnderMarketInfoTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS005_VerifyAllLinksUnderMarketInfoTabTest" duration-ms="179842" started-at="2022-05-04T18:50:01Z" finished-at="2022-05-04T18:53:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyAllLinksUnderMarketInfoTabTest -->
+        <test-method status="PASS" signature="TS006_VerifyAllLinksUnderExploreMarketTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS006_VerifyAllLinksUnderExploreMarketTabTest" duration-ms="122368" started-at="2022-05-04T18:53:01Z" finished-at="2022-05-04T18:55:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyAllLinksUnderExploreMarketTabTest -->
+        <test-method status="PASS" signature="TS007_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS007_VerifyGlobalSearchFunctionalityTest" duration-ms="16404" started-at="2022-05-04T18:55:03Z" finished-at="2022-05-04T18:55:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyGlobalSearchFunctionalityTest -->
+        <test-method status="FAIL" signature="TS008_VerifyFooterLinksTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS008_VerifyFooterLinksTest" duration-ms="524835" started-at="2022-05-04T18:55:20Z" finished-at="2022-05-04T19:04:05Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[5]/div[1]/a[1]"}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir15748_2071548288}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60964}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=100.0.4896.127, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d828ce341b334d10a695553e36223448
+*** Element info: {Using=xpath, value=//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[5]/div[1]/a[1]}]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at exhibitorportal.ExhibitorPortalSmokeTest_PROD.TS007_VerifyAllLinkUnderEXPMarketTabTest(ExhibitorPortalSmokeTest_PROD.java:537)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[5]/div[1]/a[1]"}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir15748_2071548288}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60964}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=100.0.4896.127, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d828ce341b334d10a695553e36223448
+*** Element info: {Using=xpath, value=//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[5]/div[1]/a[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.LasVegasMarket.UXPFooterLinksNavigationPage.getPrivacyPolicy(UXPFooterLinksNavigationPage.java:111)
+	at lasvegasmarket.LagVegasMarketSmokeTest_PROD.TS008_VerifyFooterLinksTest(LagVegasMarketSmokeTest_PROD.java:593)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -46,11 +104,31 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyAllLinkUnderEXPMarketTabTest -->
-      </class> <!-- exhibitorportal.ExhibitorPortalSmokeTest_PROD -->
+        </test-method> <!-- TS008_VerifyFooterLinksTest -->
+        <test-method status="PASS" signature="TS009_VerifyExhibitorDirectoryTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS009_VerifyExhibitorDirectoryTest" duration-ms="27141" started-at="2022-05-04T19:04:06Z" finished-at="2022-05-04T19:04:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyExhibitorDirectoryTest -->
+        <test-method status="PASS" signature="TS010_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS010_VerifyAllLinksUnderAttendTabTest" duration-ms="251148" started-at="2022-05-04T19:04:33Z" finished-at="2022-05-04T19:08:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyAllLinksUnderAttendTabTest -->
+        <test-method status="PASS" signature="TS011_VerifyAllLinksUnderYearRoundTabTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS011_VerifyAllLinksUnderYearRoundTabTest" duration-ms="72387" started-at="2022-05-04T19:08:44Z" finished-at="2022-05-04T19:09:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyAllLinksUnderYearRoundTabTest -->
+        <test-method status="PASS" signature="TS013_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS013_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="93726" started-at="2022-05-04T19:09:57Z" finished-at="2022-05-04T19:11:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS013_VerifyAllSocialMediaLinksOnFooterTest -->
+        <test-method status="PASS" signature="TS012_VerifyHeaderChannelLinksTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5b275dab]" name="TS012_VerifyHeaderChannelLinksTest" duration-ms="92547" started-at="2022-05-04T19:11:30Z" finished-at="2022-05-04T19:13:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyHeaderChannelLinksTest -->
+      </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest_PROD -->
     </test> <!-- Test -->
-  </suite> <!-- EXP_SmokeTestSuite -->
+  </suite> <!-- LVM_SmokeTestSuite -->
 </testng-results>
