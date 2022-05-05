@@ -589,7 +589,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Careers page opened properly");
 		//driver.close();
 		//driver.switchTo().window(winHandleBefore);
-		driver.get(prop.getProperty("lvmurl"));
+		
+/*		Terms & condition link has been removed from footer
+ 
+ 		driver.get(prop.getProperty("lvmurl"));
 		utl.scrollToElement(fl.getPrivacyPolicy());
 		//Click Terms of Use link and verify results
 
@@ -612,8 +615,9 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(),"TERMS OF USE");
 		System.out.println("Terms of Use page opened properly");
 		driver.close();
-		driver.switchTo().window(winHandleBefore1);
-		//Click Terms of Use link and verify results
+		driver.switchTo().window(winHandleBefore1);*/
+		
+		//Click Privacy Policy and verify results
 		driver.get(prop.getProperty("lvmurl"));
 		utl.scrollToElement(fl.getPrivacyPolicy());
 		
