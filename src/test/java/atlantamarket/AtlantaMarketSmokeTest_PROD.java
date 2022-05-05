@@ -89,6 +89,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Verify that Market Planner Home page should be displayed
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 		Thread.sleep(6000);
+		lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority=2)
@@ -152,6 +153,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlps.getATLWelcomeText().click();
 		lap.getMPSignOutBtn().click();
 		Thread.sleep(10000);
+		lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority=5)
