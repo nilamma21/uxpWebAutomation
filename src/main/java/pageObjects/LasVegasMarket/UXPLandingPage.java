@@ -14,7 +14,8 @@ public class UXPLandingPage {
 	By marketplannerlinktext = By.xpath("//span[contains(text(),'s Market Planner')][1]"); //Locator for Market Planner link text
 	By iunderstandbtn = By.xpath("//button[@id='gdpr-btn']"); //Locator for I Understand button
 	By mpsignoutbtn = By.xpath("(//a[@href='/imc-api/account/v1/logout'])[position()=1]"); //Locator for Sign out button
-	
+	By closemrktadbtn = By.xpath("//div[@class=' contact-exit']"); //Locator for Close button of Market ad
+
 	public UXPLandingPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -42,5 +43,8 @@ public class UXPLandingPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpsignoutbtn));
 		return driver.findElement(mpsignoutbtn);		
 	}	
-	
+	public WebElement getCloseMarktAdBtn() throws InterruptedException{
+		Thread.sleep(6000);
+		return driver.findElement(closemrktadbtn);		
+	}
 }

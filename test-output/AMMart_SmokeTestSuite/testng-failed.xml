@@ -5,9 +5,12 @@
     <classes>
       <class name="americasmart.AmericasMartSmokeTest_PROD">
         <methods>
-          <include name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest"/>
+          <include name="TS011_VerifyExhibitorDirectoryTest"/>
+          <include name="TS010_VerifyAllLinksUnderOpenYearRoundTest"/>
           <include name="initialize"/>
-          <include name="TS004_VerifyAllLinksUnderExhibitTest"/>
+          <include name="TS012_VerifyAllSocialMediaLinksOnFooterTest"/>
+          <include name="TS003_VerifyMarketPlannerExhibitorPortalOptionTest"/>
+          <include name="TS008_VerifyFooterLinksTest"/>
         </methods>
       </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
     </classes>

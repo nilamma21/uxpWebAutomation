@@ -69,6 +69,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
+		lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority=1)
