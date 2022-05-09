@@ -483,7 +483,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		//Click Careers Releases link and verify results
 
-		atlfl.getMediaPressReleases()
+		atlfl.getMediaPressReleases().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Careers");
 		System.out.println("Careers page opened properly");
 		driver.get(prop.getProperty("ammarturl"));

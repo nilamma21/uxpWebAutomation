@@ -285,9 +285,9 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		System.out.println("Floor Plans section is displayed properly");
 
 		//Click Show Specials option
-		/*atlexhp.getATLExhibitorsAndProducts().click();
+		atlexhp.getATLExhibitorsAndProducts().click();
 		atlexhp.getATLShowSpecialsPROD().click();
-		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Show Specials");*/
+		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Show Specials");
 
 		//Click Temporaries option under Exhibitors and Products
 		atlexhp.getATLExhibitorsAndProducts().click();

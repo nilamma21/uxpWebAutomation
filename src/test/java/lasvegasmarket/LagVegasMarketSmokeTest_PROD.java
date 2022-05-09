@@ -252,10 +252,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		//Click Show Specials option under Exhibitors and Products
 
-		/*exhp.getShowSpecials().click();
+		exhp.getShowSpecials().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Show Specials");
 		System.out.println("Show Specials section is displayed properly");
-		exhp.getExhibitorsAndProducts().click();*/
+		exhp.getExhibitorsAndProducts().click();
 
 		//Click Temporaries option under Exhibitors and Products
 
