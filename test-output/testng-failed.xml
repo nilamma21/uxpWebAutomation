@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [ATLMrkt_SmokeTestSuite]">
+<suite name="Failed suite [AMMart_SmokeTestSuite]">
   <test name="Test(failed)">
     <classes>
-      <class name="atlantamarket.AtlantaMarketSmokeTest_PROD">
+      <class name="americasmart.AmericasMartSmokeTest_PROD">
         <methods>
-          <include name="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>
+          <include name="TS010_VerifyAllLinksUnderOpenYearRoundTest"/>
           <include name="initialize"/>
-          <include name="TS013_VerifyAllNewsAndTrendsMenuTest"/>
-          <include name="TS009_VerifyAllChannelsLinksTest"/>
-          <include name="TS010_VerifyAllSocialMediaLinksOnFooterTest"/>
-          <include name="TS006_VerifyAllLinksUnderMarketInfoTabTest"/>
-          <include name="TS012_VerifyAllLinksUnderAttendTabTest"/>
-          <include name="TS011_VerifyFooterLinksTest"/>
+          <include name="TS008_VerifyFooterLinksTest"/>
         </methods>
-      </class> <!-- atlantamarket.AtlantaMarketSmokeTest_PROD -->
+      </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
     </classes>
   </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [ATLMrkt_SmokeTestSuite] -->
+</suite> <!-- Failed suite [AMMart_SmokeTestSuite] -->

@@ -13,7 +13,8 @@ public class AMOpenYearRoundPage {
 	By amcOpenYearRoundTab = By.xpath("//a[contains(text(),'Open Year Round')]"); // Locator for Open Year Round Tab
 	By amcAboutYearRound=By.xpath("//a[@title='About Year Round at AmericasMart']"); // Locator for About Year Round
 	By amcAboutYearRoundHeader=By.xpath("(//a[contains(text(),'Open Year Round')])[2]");// Locator for About Year Round page Header
-	By amcShoroomDirect=By.xpath("//a[@href='/exhibitor/exhibitor-directory' and contains(text(),'Showroom')]"); // Locator for Showroom Direct
+	By howtoregister = By.xpath("//div[@class = 'imc-section']/div[1]/div[2]/div[2]/div[1]/div[2]/a[1]");
+	By amcShoroomDirect=By.xpath("//div[@class = 'imc-navigation-2tier']/a[1]"); // Locator for Showroom Direct
 	By amcShowroomDirectHeader=By.xpath("//h2[contains(text(),'Open Year Round Directory')]");// Locator for Showroom Direct page Header
 	By amcFloorPlans=By.xpath("//a[@href='/Market-Map' or contains(text(),'Floor Plans')]"); // Locator for Floor Plan
 	By amcCampOverview=By.xpath("//a[@href='/Year-Round/Campus-Overview']"); // Locator for Camp Overview
@@ -92,6 +93,10 @@ public class AMOpenYearRoundPage {
 	public WebElement getHotelsSubmenu() throws InterruptedException {
 		return driver.findElement(amchotels);
 	}
-	
+	public WebElement gethowtoregister() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(howtoregister));
+		return driver.findElement(howtoregister);
+	}
 }
 

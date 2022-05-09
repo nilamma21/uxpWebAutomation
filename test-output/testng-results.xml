@@ -1,72 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="7" total="13" passed="6">
+<testng-results skipped="0" failed="2" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_SmokeTestSuite" duration-ms="379088" started-at="2022-05-05T09:34:52Z" finished-at="2022-05-05T09:41:11Z">
+  <suite name="AMMart_SmokeTestSuite" duration-ms="403953" started-at="2022-05-06T12:09:41Z" finished-at="2022-05-06T12:16:25Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="379088" started-at="2022-05-05T09:34:52Z" finished-at="2022-05-05T09:41:11Z">
-      <class name="atlantamarket.AtlantaMarketSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="initialize" is-config="true" duration-ms="58860" started-at="2022-05-05T15:04:52Z" finished-at="2022-05-05T15:05:51Z">
+    <test name="Test" duration-ms="403953" started-at="2022-05-06T12:09:41Z" finished-at="2022-05-06T12:16:25Z">
+      <class name="americasmart.AmericasMartSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@29774679]" name="initialize" is-config="true" duration-ms="44545" started-at="2022-05-06T17:39:41Z" finished-at="2022-05-06T17:40:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="44964" started-at="2022-05-05T15:05:51Z" finished-at="2022-05-05T15:06:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="PASS" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="12443" started-at="2022-05-05T15:06:36Z" finished-at="2022-05-05T15:06:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyMarketPlannerProfileAndSettingsOptionTest -->
-        <test-method status="PASS" signature="TS003_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS003_VerifyGlobalSearchFunctionalityTest" duration-ms="16007" started-at="2022-05-05T15:06:48Z" finished-at="2022-05-05T15:07:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyGlobalSearchFunctionalityTest -->
-        <test-method status="PASS" signature="TS004_VerifyMarketPlannerRegistrationsOptionTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS004_VerifyMarketPlannerRegistrationsOptionTest" duration-ms="38663" started-at="2022-05-05T15:07:04Z" finished-at="2022-05-05T15:07:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyMarketPlannerRegistrationsOptionTest -->
-        <test-method status="PASS" signature="TS005_VerifyExhibitorDirectoryTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS005_VerifyExhibitorDirectoryTest" duration-ms="18502" started-at="2022-05-05T15:07:43Z" finished-at="2022-05-05T15:08:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyExhibitorDirectoryTest -->
-        <test-method status="PASS" signature="TS008_VerifAllLinksUnderExhibitTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS008_VerifAllLinksUnderExhibitTabTest" duration-ms="100933" started-at="2022-05-05T15:08:01Z" finished-at="2022-05-05T15:09:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifAllLinksUnderExhibitTabTest -->
-        <test-method status="FAIL" signature="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest" duration-ms="1256" started-at="2022-05-05T15:09:42Z" finished-at="2022-05-05T15:09:43Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[element click intercepted: Element <a href="/" class="imc-navigation__tier1Link" aria-expanded="false" aria-controls="navigation-tier2-" data-xpath="navigation.tier1Link" target="_self">...</a> is not clickable at point (390, 159). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7]]>
-            </message>
+        <test-method status="FAIL" signature="TS008_VerifyFooterLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@29774679]" name="TS008_VerifyFooterLinksTest" duration-ms="320584" started-at="2022-05-06T17:40:26Z" finished-at="2022-05-06T17:45:46Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <a href="/" class="imc-navigation__tier1Link" aria-expanded="false" aria-controls="navigation-tier2-" data-xpath="navigation.tier1Link" target="_self">...</a> is not clickable at point (390, 159). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at atlantamarket.AtlantaMarketSmokeTest_PROD.TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest(AtlantaMarketSmokeTest_PROD.java:270)
+              <![CDATA[java.lang.NullPointerException
+	at americasmart.AmericasMartSmokeTest_PROD.TS008_VerifyFooterLinksTest(AmericasMartSmokeTest_PROD.java:477)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -88,47 +37,26 @@ Session ID: cf0b2bc39f118e1e3e716aa98c5effc7
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
-        <test-method status="FAIL" signature="TS006_VerifyAllLinksUnderMarketInfoTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS006_VerifyAllLinksUnderMarketInfoTabTest" duration-ms="11289" started-at="2022-05-05T15:09:44Z" finished-at="2022-05-05T15:09:55Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        </test-method> <!-- TS008_VerifyFooterLinksTest -->
+        <test-method status="FAIL" signature="TS010_VerifyAllLinksUnderOpenYearRoundTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@29774679]" name="TS010_VerifyAllLinksUnderOpenYearRoundTest" duration-ms="38027" started-at="2022-05-06T17:45:47Z" finished-at="2022-05-06T17:46:25Z">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[element click intercepted: Element <a href="/" class="imc-navigation__tier1Link" aria-expanded="false" aria-controls="navigation-tier2-" data-xpath="navigation.tier1Link" target="_self">...</a> is not clickable at point (73, 159). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7]]>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //h2[contains(text(),'Open Year Round Directory')] (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <a href="/" class="imc-navigation__tier1Link" aria-expanded="false" aria-controls="navigation-tier2-" data-xpath="navigation.tier1Link" target="_self">...</a> is not clickable at point (73, 159). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at atlantamarket.AtlantaMarketSmokeTest_PROD.TS006_VerifyAllLinksUnderMarketInfoTabTest(AtlantaMarketSmokeTest_PROD.java:196)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //h2[contains(text(),'Open Year Round Directory')] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AmericasMart.AMOpenYearRoundPage.getShowroomDirectPageHeader(AMOpenYearRoundPage.java:55)
+	at americasmart.AmericasMartSmokeTest_PROD.TS010_VerifyAllLinksUnderOpenYearRoundTest(AmericasMartSmokeTest_PROD.java:559)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -150,326 +78,31 @@ Session ID: cf0b2bc39f118e1e3e716aa98c5effc7
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //h2[contains(text(),'Open Year Round Directory')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'SHRADHAMA-WIN10', ip: '172.27.182.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS006_VerifyAllLinksUnderMarketInfoTabTest -->
-        <test-method status="FAIL" signature="TS009_VerifyAllChannelsLinksTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS009_VerifyAllChannelsLinksTest" duration-ms="1224" started-at="2022-05-05T15:09:55Z" finished-at="2022-05-05T15:09:57Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[element click intercepted: Element <a href="https://atlantamarket.com" class="" target="">...</a> is not clickable at point (97, 14). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <a href="https://atlantamarket.com" class="" target="">...</a> is not clickable at point (97, 14). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at atlantamarket.AtlantaMarketSmokeTest_PROD.TS009_VerifyAllChannelsLinksTest(AtlantaMarketSmokeTest_PROD.java:412)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifyAllChannelsLinksTest -->
-        <test-method status="FAIL" signature="TS010_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS010_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="25280" started-at="2022-05-05T15:09:57Z" finished-at="2022-05-05T15:10:22Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[element click intercepted: Element <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 74 74">...</svg> is not clickable at point (568, 8). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 74 74">...</svg> is not clickable at point (568, 8). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at atlantamarket.AtlantaMarketSmokeTest_PROD.TS010_VerifyAllSocialMediaLinksOnFooterTest(AtlantaMarketSmokeTest_PROD.java:462)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_VerifyAllSocialMediaLinksOnFooterTest -->
-        <test-method status="FAIL" signature="TS011_VerifyFooterLinksTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS011_VerifyFooterLinksTest" duration-ms="25421" started-at="2022-05-05T15:10:22Z" finished-at="2022-05-05T15:10:48Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[element click intercepted: Element <a href="/Market-Info/About-Us" class="imc-link imc-link--invert" title="" target="">...</a> is not clickable at point (664, 181). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <a href="/Market-Info/About-Us" class="imc-link imc-link--invert" title="" target="">...</a> is not clickable at point (664, 181). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at atlantamarket.AtlantaMarketSmokeTest_PROD.TS011_VerifyFooterLinksTest(AtlantaMarketSmokeTest_PROD.java:521)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_VerifyFooterLinksTest -->
-        <test-method status="FAIL" signature="TS012_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS012_VerifyAllLinksUnderAttendTabTest" duration-ms="11241" started-at="2022-05-05T15:10:48Z" finished-at="2022-05-05T15:10:59Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[element click intercepted: Element <a href="/" class="imc-navigation__tier1Link" aria-expanded="false" aria-controls="navigation-tier2-" data-xpath="navigation.tier1Link" target="_self">...</a> is not clickable at point (692, 10). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <a href="/" class="imc-navigation__tier1Link" aria-expanded="false" aria-controls="navigation-tier2-" data-xpath="navigation.tier1Link" target="_self">...</a> is not clickable at point (692, 10). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at atlantamarket.AtlantaMarketSmokeTest_PROD.TS012_VerifyAllLinksUnderAttendTabTest(AtlantaMarketSmokeTest_PROD.java:615)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS012_VerifyAllLinksUnderAttendTabTest -->
-        <test-method status="FAIL" signature="TS013_VerifyAllNewsAndTrendsMenuTest()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@5b275dab]" name="TS013_VerifyAllNewsAndTrendsMenuTest" duration-ms="11147" started-at="2022-05-05T15:10:59Z" finished-at="2022-05-05T15:11:11Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[element click intercepted: Element <a href="/" class="imc-navigation__tier1Link" aria-expanded="false" aria-controls="navigation-tier2-" data-xpath="navigation.tier1Link" target="_self">...</a> is not clickable at point (971, 10). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <a href="/" class="imc-navigation__tier1Link" aria-expanded="false" aria-controls="navigation-tier2-" data-xpath="navigation.tier1Link" target="_self">...</a> is not clickable at point (971, 10). Other element would receive the click: <label class="contact-cover" for="exitcontact"></label>
-  (Session info: chrome=101.0.4951.54)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18576_1966215527}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63971}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=101.0.4951.54, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cf0b2bc39f118e1e3e716aa98c5effc7
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at atlantamarket.AtlantaMarketSmokeTest_PROD.TS013_VerifyAllNewsAndTrendsMenuTest(AtlantaMarketSmokeTest_PROD.java:684)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS013_VerifyAllNewsAndTrendsMenuTest -->
-      </class> <!-- atlantamarket.AtlantaMarketSmokeTest_PROD -->
+        </test-method> <!-- TS010_VerifyAllLinksUnderOpenYearRoundTest -->
+      </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
     </test> <!-- Test -->
-  </suite> <!-- ATLMrkt_SmokeTestSuite -->
+  </suite> <!-- AMMart_SmokeTestSuite -->
 </testng-results>

@@ -20,14 +20,15 @@ public class ATLFooterLinksNavigationPage {
 	By americasmart = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[4]/div[1]/a[1]"); //Locator for Americas Mart in footer links
 	By internationalmarketcenters = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[5]/div[1]/a[1]"); //Locator for International Market Centers in footer links
 	By downloadtheapp = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[1]/div[1]/a[1]"); //Locator for Download The App in footer links
-	By contactus = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[2]/div[1]/a[1]"); //Locator for Contact Us in footer links
-	By careers = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[3]/div[1]/a[1]"); //Locator for Careers in footer links
+	By contactus = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[4]/div[1]/a[1]"); //Locator for Contact Us in footer links
+	By careers = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[2]/div[1]/a[1]"); //Locator for Careers in footer links
+	By MediaPressReleases = By.xpath("//a[contains(text(), 'Media & Press Releases')]"); //Locator for Media and Press Releases
 	By termsandconditions = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[4]/div[1]/a[1]"); // Locator for Terms and Conditions in footer links
 	By privacypolicy = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[5]/div[1]/a[1]"); // Locator for Privacy Policy in footer links
 	By verifycareers = By.xpath("//div[@id = 'content']/div[1]/div[1]/h1[1]"); //Locator for verify Careers
 	By closepopupamericasmart = By.xpath("//div[@class = ' contact-exit']"); //Locatory for Close Pop Up after opening Americas Mart footer link
 	By verifytermsofuse = By.xpath("//div[@id = 'primary']"); //Locator for Terms of Use
-	By verifyprivacypolicy = By.xpath("//*[contains (text(), 'WEB PRIVACY STATEMENT']"); //Locator for porivacy Policy
+	By verifyprivacypolicy = By.xpath("//*[contains (text(), 'Privacy Policy')]"); //Locator for porivacy Policy
 	By facebookicon = By.xpath("//a[@href='https://www.facebook.com/AmericasmartAtl']//div//*[name()='svg']"); //Locator for Facebook link in footer
 	By instagramicon =  By.xpath("//a[@href='https://www.instagram.com/americasmartatl/']//div//*[name()='svg']"); //Locator for Instagram link in footer
 	By youtubeicon = By.xpath("//a[@href='https://www.youtube.com/user/AmericasMart']//div//*[name()='svg']"); //Locator You Tube icon
@@ -133,6 +134,10 @@ public class ATLFooterLinksNavigationPage {
 	public WebElement getATLHPMktLink() throws InterruptedException {
 		Thread.sleep(10000);
 		return driver.findElement(atlhpmktlinkprod);
+	}
+	public WebElement getMediaPressReleases() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(MediaPressReleases);
 	}
 }
 

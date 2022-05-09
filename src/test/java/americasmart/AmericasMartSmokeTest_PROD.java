@@ -74,6 +74,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	AMMarketsAndEventsPage amme;
 	AMExhibitTabPage amexh;
 	AMOpenYearRoundPage amoyr;
+	
 	SendEmail se;
 
 	@BeforeTest
@@ -402,7 +403,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 		fl = new UXPFooterLinksNavigationPage(driver);
 		amfl = new AMFooterLinksNavigationPage(driver);
-
+		atlfl = new ATLFooterLinksNavigationPage(driver);
+				
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Scroll till footer links
@@ -473,7 +475,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		//Click Media and Press Releases link and verify results
 
-		fl.getContactUs().click();
+		atlfl.getCareers().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Press Releases");
 		System.out.println("Media and Press Releases page opened properly");
 		driver.get(prop.getProperty("ammarturl"));
@@ -481,7 +483,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		//Click Careers Releases link and verify results
 
-		fl.getCareers().click();
+		atlfl.getMediaPressReleases()
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Careers");
 		System.out.println("Careers page opened properly");
 		driver.get(prop.getProperty("ammarturl"));
@@ -549,11 +551,18 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Verify that About Open Year Round page should be displayed
 		String actualHeader="Open Year Round";
 		Assert.assertTrue(amoyr.getAboutYearRoundPageHeader().getText().equals(actualHeader));
+		
+		//Verify how to register 
+		amoyr.getOpenYearRoundTab().click();
+		amoyr.gethowtoregister().click();
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("How to Register"));
+		System.out.println("How to regiter opened");
 
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
 		//Click Showroom direct Link Link
 		amoyr.getShoroomDirect().click();
+		Thread.sleep(5000);
 		utl.scrollToElement(amoyr.getShowroomDirectPageHeader());
 		//Verify that Showroom Direct page should be displayed
 		String actualShowroomDirectHeader="Open Year Round Directory";
@@ -612,10 +621,13 @@ public class AmericasMartSmokeTest_PROD extends base {
 		amab = new AMAboutTabPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		amexh=new AMExhibitTabPage(driver);
+		atlps = new ATLProfileAndSettingsPage(driver);
+		atlexh = new ATLExhibitPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on Exhibit Tab 
+		Thread.sleep(3000);
 		amexh.getamcExhibitTab().click();
 		//Click Exhibit at Americas Mart Link
 		amexh.getExhibitAtAmc().click();
@@ -634,23 +646,16 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Verify that Advertising page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Advertising");
 
-		amexh.getamcExhibitTab().click();		
-		// Store the current window handle
+		amexh.getamcExhibitTab().click();	
+		amexh.getExpLogin().click();
 		String winHandleBefore = driver.getWindowHandle();
 
-		amexh.getExpLogin().click();
-		for(String winHandle : driver.getWindowHandles())
-		{
-			driver.switchTo().window(winHandle);
-		}
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);}
 
-		Thread.sleep(5000);
-		//Verify that 'EXP Home' page should be displayed
-		Assert.assertTrue(atlps.getAMCExhibitorPortalHome().isDisplayed());
-
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://exhibitors.imcenters.com/"));
+		System.out.println("Page opened successfully");
 		driver.close();
-
-		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 
 		//Click Advertising Link
@@ -671,8 +676,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Profile and Settings tab under Market Planner and verify result
+		Thread.sleep(5000);
 		atlps.getATLWelcomeText().click();
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		atlps.getATLProfileAndSettings().click();
 		
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+"Profile"));
@@ -690,9 +696,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		atlexh = new ATLExhibitPage(driver);
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+		Thread.sleep(5000);
 		atlps.getATLWelcomeText().click();
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		atlps.getAMCExhibitorPortalOptn().click();
 		
 		//Verify that 'EXP Home' page should be displayed

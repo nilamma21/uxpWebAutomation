@@ -252,10 +252,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		//Click Show Specials option under Exhibitors and Products
 
-		exhp.getShowSpecials().click();
+		/*exhp.getShowSpecials().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Show Specials");
 		System.out.println("Show Specials section is displayed properly");
-		exhp.getExhibitorsAndProducts().click();
+		exhp.getExhibitorsAndProducts().click();*/
 
 		//Click Temporaries option under Exhibitors and Products
 
@@ -403,7 +403,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
 
-		//Click on Show Specials sub-menu
+		/*//Click on Show Specials sub-menu
 		expmrkt.getShowSpecialsMenu().click();
 
 		//Verify that 'Show Specials' page should be displayed
@@ -411,7 +411,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Show Specials page is displayed properly");
 
 		//Click on Explore Market tab
-		expmrkt.getExploreMarketTab().click();
+		expmrkt.getExploreMarketTab().click();*/
 
 		//Click on Virtual Resources sub-menu
 		expmrkt.getVirtualResourcesMenu().click();
