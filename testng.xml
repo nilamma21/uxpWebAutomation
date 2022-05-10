@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<!--<suite name="LVM_SmokeTestSuite">
+<suite name="LVM_SmokeTestSuite">
 	<listners>
 		<listner class-name="lasvegasmarket.TestListeners" />
 	</listners>
@@ -10,7 +10,7 @@
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
 		</classes>
 	</test>
-</suite> -->
+</suite>
 
 <!-- <suite name="ATLMrkt_SmokeTestSuite">
 	<listners>
@@ -20,12 +20,11 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="atlantamarket.AtlantaMarketSmokeTest_PROD" />
-			
 		</classes>
 	</test>
 </suite> -->
 
-<suite name="AMMart_SmokeTestSuite">
+<!-- <suite name="AMMart_SmokeTestSuite">
 	<listners>
 		<listner class-name="americasmart.TestListeners" />
 	</listners>
@@ -33,15 +32,11 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="americasmart.AmericasMartSmokeTest_PROD" /> 
-			<methods>
-			<include name = 'TS008_VerifyFooterLinksTest'/>
-			<include name = 'TS010_VerifyAllLinksUnderOpenYearRoundTest'/>
-			</methods>
 		</classes>
 	</test>
-</suite> 
+</suite> -->
 
- <!--<suite name="EXP_SmokeTestSuite">
+<!-- <suite name="EXP_SmokeTestSuite">
 	<listners>
 		<listner class-name="exhibitorportal.TestListeners" />
 	</listners>
@@ -51,9 +46,9 @@
 			<class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD" /> 
 		</classes>
 	</test>
-</suite>  -->
+</suite> -->
 
- <!--<suite name="AtlApp_SmokeTestSuite">
+ <!-- <suite name="AtlApp_SmokeTestSuite">
 	<listners>
 		<listner class-name="atlantaapparel.TestListeners" />
 	</listners>
@@ -64,7 +59,7 @@
 	</test>
 </suite> -->
 
-<!--<suite name="Sitecore_SmokeTestSuite">
+<!-- <suite name="Sitecore_SmokeTestSuite">
 	<listners>
 		<listner class-name="sitecore.TestListeners" />
 	</listners>

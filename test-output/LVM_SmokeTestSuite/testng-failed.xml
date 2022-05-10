@@ -5,14 +5,8 @@
     <classes>
       <class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD">
         <methods>
-          <include name="TS009_VerifyExhibitorDirectoryTest"/>
-          <include name="TS006_VerifyAllLinksUnderExploreMarketTabTest"/>
-          <include name="TS007_VerifyGlobalSearchFunctionalityTest"/>
           <include name="initialize"/>
-          <include name="TS008_VerifyFooterLinksTest"/>
-          <include name="TS012_VerifyHeaderChannelLinksTest"/>
-          <include name="TS013_VerifyAllSocialMediaLinksOnFooterTest"/>
-          <include name="TS010_VerifyAllLinksUnderAttendTabTest"/>
+          <include name="TS005_VerifyAllLinksUnderMarketInfoTabTest"/>
           <include name="TS011_VerifyAllLinksUnderYearRoundTabTest"/>
         </methods>
       </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest_PROD -->
