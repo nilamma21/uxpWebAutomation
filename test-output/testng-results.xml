@@ -1,21 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="LVM_SmokeTestSuite" duration-ms="524124" started-at="2022-05-05T05:25:36Z" finished-at="2022-05-05T05:34:20Z">
+  <suite name="SmokeTestSuite" duration-ms="910758" started-at="2022-05-10T06:40:26Z" finished-at="2022-05-10T06:55:37Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="524124" started-at="2022-05-05T05:25:36Z" finished-at="2022-05-05T05:34:20Z">
-      <class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5e5792a0]" name="initialize" is-config="true" duration-ms="43867" started-at="2022-05-05T10:55:36Z" finished-at="2022-05-05T10:56:20Z">
+    <test name="Parallel Test" duration-ms="910758" started-at="2022-05-10T06:40:26Z" finished-at="2022-05-10T06:55:37Z">
+      <class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD">
+        <test-method status="PASS" signature="TS001_VerifyExhibitorPortalLoginTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@4883b407]" name="TS001_VerifyExhibitorPortalLoginTest" duration-ms="229759" started-at="2022-05-10T12:16:14Z" finished-at="2022-05-10T12:20:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyExhibitorPortalLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyNotificationsTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@4883b407]" name="TS002_VerifyNotificationsTabTest" duration-ms="28054" started-at="2022-05-10T12:20:04Z" finished-at="2022-05-10T12:20:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyNotificationsTabTest -->
+        <test-method status="PASS" signature="TS003_VerifySettingsTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@4883b407]" name="TS003_VerifySettingsTabTest" duration-ms="36893" started-at="2022-05-10T12:20:32Z" finished-at="2022-05-10T12:21:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifySettingsTabTest -->
+        <test-method status="PASS" signature="TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@4883b407]" name="TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest" duration-ms="125163" started-at="2022-05-10T12:21:09Z" finished-at="2022-05-10T12:23:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest -->
+        <test-method status="PASS" signature="TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@4883b407]" name="TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest" duration-ms="124612" started-at="2022-05-10T12:23:14Z" finished-at="2022-05-10T12:25:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest -->
+      </class> <!-- exhibitorportal.ExhibitorPortalSmokeTest_PROD -->
+      <class name="americasmart.AmericasMartSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@6d4b1c02]" name="initialize" is-config="true" duration-ms="66482" started-at="2022-05-10T12:10:26Z" finished-at="2022-05-10T12:11:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS008_VerifyFooterLinksTest()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@5e5792a0]" name="TS008_VerifyFooterLinksTest" duration-ms="480210" started-at="2022-05-05T10:56:20Z" finished-at="2022-05-05T11:04:20Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantaapparel.AtlantaAppSmokeTest_PROD@7cd62f43]" name="initialize" is-config="true" duration-ms="133015" started-at="2022-05-10T12:11:33Z" finished-at="2022-05-10T12:13:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_VerifyFooterLinksTest -->
-      </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest_PROD -->
-    </test> <!-- Test -->
-  </suite> <!-- LVM_SmokeTestSuite -->
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@6093dd95]" name="initialize" is-config="true" duration-ms="49497" started-at="2022-05-10T12:13:46Z" finished-at="2022-05-10T12:14:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@4883b407]" name="initialize" is-config="true" duration-ms="49152" started-at="2022-05-10T12:14:35Z" finished-at="2022-05-10T12:15:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@26653222]" name="initialize" is-config="true" duration-ms="25375" started-at="2022-05-10T12:15:24Z" finished-at="2022-05-10T12:15:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5622fdf]" name="initialize" is-config="true" duration-ms="24145" started-at="2022-05-10T12:15:50Z" finished-at="2022-05-10T12:16:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+      </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
+      <class name="sitecore.SitecoreSmokeTest_PROD">
+        <test-method status="PASS" signature="TS001_VerifySitecoreLoginTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5622fdf]" name="TS001_VerifySitecoreLoginTest" duration-ms="18719" started-at="2022-05-10T12:16:14Z" finished-at="2022-05-10T12:16:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifySitecoreLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyContentEditorTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5622fdf]" name="TS002_VerifyContentEditorTest" duration-ms="12870" started-at="2022-05-10T12:16:33Z" finished-at="2022-05-10T12:16:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyContentEditorTest -->
+        <test-method status="PASS" signature="TS003_VerifyDigitalAdminPanelTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5622fdf]" name="TS003_VerifyDigitalAdminPanelTest" duration-ms="8314" started-at="2022-05-10T12:16:46Z" finished-at="2022-05-10T12:16:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyDigitalAdminPanelTest -->
+      </class> <!-- sitecore.SitecoreSmokeTest_PROD -->
+    </test> <!-- Parallel Test -->
+  </suite> <!-- SmokeTestSuite -->
 </testng-results>

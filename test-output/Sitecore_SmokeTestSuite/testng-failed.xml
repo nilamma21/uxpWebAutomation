@@ -6,13 +6,7 @@
       <class name="sitecore.SitecoreSmokeTest_PROD">
         <methods>
           <include name="initialize"/>
-          <include name="TS006_VerifyIMCReportsTest"/>
-          <include name="TS004_VerifyShowSpecialApprovalsTest"/>
-          <include name="TS007_VerifyTaxonomyManagerTest"/>
-          <include name="TS005_VerifyExhibitorEventsApprovalTest"/>
           <include name="TS003_VerifyDigitalAdminPanelTest"/>
-          <include name="TS008_VerifyEmailExperienceManagerTest"/>
-          <include name="TS009_VerifyControlPanelTest"/>
         </methods>
       </class> <!-- sitecore.SitecoreSmokeTest_PROD -->
     </classes>

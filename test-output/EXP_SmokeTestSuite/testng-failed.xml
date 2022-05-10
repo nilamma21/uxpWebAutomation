@@ -5,7 +5,7 @@
     <classes>
       <class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD">
         <methods>
-          <include name="TS007_VerifyAllLinkUnderEXPMarketTabTest"/>
+          <include name="TS003_VerifySettingsTabTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- exhibitorportal.ExhibitorPortalSmokeTest_PROD -->

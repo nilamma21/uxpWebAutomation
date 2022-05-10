@@ -66,9 +66,10 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(10000);
+		Thread.sleep(3000);
+	//	lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority=1)
@@ -87,7 +88,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Verify that Market Planner Home page should be displayed
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
-		Thread.sleep(6000);
+		//Thread.sleep(6000);
+		//lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority=2)
@@ -102,7 +104,9 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Profile and Settings tab under Market Planner and verify result
+		Thread.sleep(5000);
 		atlps.getATLWelcomeText().click();
+		
 		atlps.getATLProfileAndSettings().click();
 		Thread.sleep(6000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl")+"Profile"));
@@ -150,7 +154,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Sign out from Market Planner
 		atlps.getATLWelcomeText().click();
 		lap.getMPSignOutBtn().click();
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
+		//lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority=5)
@@ -173,7 +178,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		atled.getATLExhDirtSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		atled.getATLExhDirtSearchBtn().click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");
@@ -517,6 +522,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Click on About Atlanta Market link
 		fl.getAbtAtlMktLink().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/Market-Info/About-Us"));
+		System.out.println("About Atlanta Market page opened properly");
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.scrollToElement(fl.getHighPointMarket());
 
@@ -551,6 +557,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Click on Las Vegas Apparel footer link
 		fl.getLVAPPLink().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
+		System.out.println("Las Vegas Apparel page opened properly");
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.scrollToElement(fl.getHighPointMarket());
 
@@ -569,28 +576,29 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		utl.scrollToElement(fl.getHighPointMarket());
 
 		//Click Careers link and verify results
-		fl.getContactUs().click();
+		atlfl.getCareers().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Careers");
 		System.out.println("Careers page opened properly");
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.scrollToElement(fl.getHighPointMarket());
 
 		//Click Media and Press Releases link and verify results
-		fl.getCareers().click();
+		atlfl.getMediaPressReleases().click();
+		atlfl.getMediaPressReleases().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Press Releases");
 		System.out.println("Media and Pres Releases page opened properly");
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.scrollToElement(fl.getHighPointMarket());
 
 		//Click Contact Us link and verify results
-		fl.getTermsAndConditions().click();
+		atlfl.getContactUs().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Contact Us");
 		System.out.println("Contact Us page opened properly");
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.scrollToElement(fl.getHighPointMarket());
 
 		//Click Terms of Use link and verify results
-		fl.getPrivacyPolicy().click();
+		atlfl.getVerifyPrivacyPolicy().click();
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(),"IMC PRIVACY STATEMENT");
 		System.out.println("Privacy Policy page opened properly");
 		driver.get(prop.getProperty("atlmrkturl"));

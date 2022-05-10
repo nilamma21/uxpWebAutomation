@@ -48,7 +48,7 @@
 	</test>
 </suite> -->
 
-<!-- <suite name="AtlApp_SmokeTestSuite">
+ <!-- <suite name="AtlApp_SmokeTestSuite">
 	<listners>
 		<listner class-name="atlantaapparel.TestListeners" />
 	</listners>

@@ -403,7 +403,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
 
-		//Click on Show Specials sub-menu
+		/*//Click on Show Specials sub-menu
 		expmrkt.getShowSpecialsMenu().click();
 
 		//Verify that 'Show Specials' page should be displayed
@@ -411,7 +411,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Show Specials page is displayed properly");
 
 		//Click on Explore Market tab
-		expmrkt.getExploreMarketTab().click();
+		expmrkt.getExploreMarketTab().click();*/
 
 		//Click on Virtual Resources sub-menu
 		expmrkt.getVirtualResourcesMenu().click();

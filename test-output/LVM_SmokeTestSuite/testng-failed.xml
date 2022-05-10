@@ -6,7 +6,8 @@
       <class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD">
         <methods>
           <include name="initialize"/>
-          <include name="TS008_VerifyFooterLinksTest"/>
+          <include name="TS005_VerifyAllLinksUnderMarketInfoTabTest"/>
+          <include name="TS011_VerifyAllLinksUnderYearRoundTabTest"/>
         </methods>
       </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest_PROD -->
     </classes>
