@@ -3,10 +3,15 @@
 
 <suite name="SmokeTestSuite" parallel="classes">
 
-	<test thread-count="5" name="Parallel Test">
+	<test thread-count="6" name="Parallel Test">
 		<classes>
 			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
 			<class name="atlantamarket.AtlantaMarketSmokeTest_PROD" />
+			<class name="americasmart.AmericasMartSmokeTest_PROD" />
+			<class name="atlantaapparel.AtlantaAppSmokeTest_PROD" />
+			<class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD" />
+			<class name="sitecore.SitecoreSmokeTest_PROD" />
+			<class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD" />
 		</classes>
 	</test>
 </suite>

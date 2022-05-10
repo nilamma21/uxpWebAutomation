@@ -1,108 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="2" passed="0">
+<testng-results skipped="0" failed="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="AMMart_SmokeTestSuite" duration-ms="403953" started-at="2022-05-06T12:09:41Z" finished-at="2022-05-06T12:16:25Z">
+  <suite name="SmokeTestSuite" duration-ms="910758" started-at="2022-05-10T06:40:26Z" finished-at="2022-05-10T06:55:37Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="403953" started-at="2022-05-06T12:09:41Z" finished-at="2022-05-06T12:16:25Z">
+    <test name="Parallel Test" duration-ms="910758" started-at="2022-05-10T06:40:26Z" finished-at="2022-05-10T06:55:37Z">
+      <class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD">
+        <test-method status="PASS" signature="TS001_VerifyExhibitorPortalLoginTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@4883b407]" name="TS001_VerifyExhibitorPortalLoginTest" duration-ms="229759" started-at="2022-05-10T12:16:14Z" finished-at="2022-05-10T12:20:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyExhibitorPortalLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyNotificationsTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@4883b407]" name="TS002_VerifyNotificationsTabTest" duration-ms="28054" started-at="2022-05-10T12:20:04Z" finished-at="2022-05-10T12:20:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyNotificationsTabTest -->
+        <test-method status="PASS" signature="TS003_VerifySettingsTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@4883b407]" name="TS003_VerifySettingsTabTest" duration-ms="36893" started-at="2022-05-10T12:20:32Z" finished-at="2022-05-10T12:21:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifySettingsTabTest -->
+        <test-method status="PASS" signature="TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@4883b407]" name="TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest" duration-ms="125163" started-at="2022-05-10T12:21:09Z" finished-at="2022-05-10T12:23:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest -->
+        <test-method status="PASS" signature="TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@4883b407]" name="TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest" duration-ms="124612" started-at="2022-05-10T12:23:14Z" finished-at="2022-05-10T12:25:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest -->
+      </class> <!-- exhibitorportal.ExhibitorPortalSmokeTest_PROD -->
       <class name="americasmart.AmericasMartSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@29774679]" name="initialize" is-config="true" duration-ms="44545" started-at="2022-05-06T17:39:41Z" finished-at="2022-05-06T17:40:25Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@6d4b1c02]" name="initialize" is-config="true" duration-ms="66482" started-at="2022-05-10T12:10:26Z" finished-at="2022-05-10T12:11:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS008_VerifyFooterLinksTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@29774679]" name="TS008_VerifyFooterLinksTest" duration-ms="320584" started-at="2022-05-06T17:40:26Z" finished-at="2022-05-06T17:45:46Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at americasmart.AmericasMartSmokeTest_PROD.TS008_VerifyFooterLinksTest(AmericasMartSmokeTest_PROD.java:477)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantaapparel.AtlantaAppSmokeTest_PROD@7cd62f43]" name="initialize" is-config="true" duration-ms="133015" started-at="2022-05-10T12:11:33Z" finished-at="2022-05-10T12:13:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_VerifyFooterLinksTest -->
-        <test-method status="FAIL" signature="TS010_VerifyAllLinksUnderOpenYearRoundTest()[pri:0, instance:americasmart.AmericasMartSmokeTest_PROD@29774679]" name="TS010_VerifyAllLinksUnderOpenYearRoundTest" duration-ms="38027" started-at="2022-05-06T17:45:47Z" finished-at="2022-05-06T17:46:25Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //h2[contains(text(),'Open Year Round Directory')] (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //h2[contains(text(),'Open Year Round Directory')] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.AmericasMart.AMOpenYearRoundPage.getShowroomDirectPageHeader(AMOpenYearRoundPage.java:55)
-	at americasmart.AmericasMartSmokeTest_PROD.TS010_VerifyAllLinksUnderOpenYearRoundTest(AmericasMartSmokeTest_PROD.java:559)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //h2[contains(text(),'Open Year Round Directory')]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'SHRADHAMA-WIN10', ip: '172.27.182.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketSmokeTest_PROD@6093dd95]" name="initialize" is-config="true" duration-ms="49497" started-at="2022-05-10T12:13:46Z" finished-at="2022-05-10T12:14:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS010_VerifyAllLinksUnderOpenYearRoundTest -->
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:exhibitorportal.ExhibitorPortalSmokeTest_PROD@4883b407]" name="initialize" is-config="true" duration-ms="49152" started-at="2022-05-10T12:14:35Z" finished-at="2022-05-10T12:15:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket.LagVegasMarketSmokeTest_PROD@26653222]" name="initialize" is-config="true" duration-ms="25375" started-at="2022-05-10T12:15:24Z" finished-at="2022-05-10T12:15:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5622fdf]" name="initialize" is-config="true" duration-ms="24145" started-at="2022-05-10T12:15:50Z" finished-at="2022-05-10T12:16:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
       </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
-    </test> <!-- Test -->
-  </suite> <!-- AMMart_SmokeTestSuite -->
+      <class name="sitecore.SitecoreSmokeTest_PROD">
+        <test-method status="PASS" signature="TS001_VerifySitecoreLoginTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5622fdf]" name="TS001_VerifySitecoreLoginTest" duration-ms="18719" started-at="2022-05-10T12:16:14Z" finished-at="2022-05-10T12:16:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifySitecoreLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyContentEditorTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5622fdf]" name="TS002_VerifyContentEditorTest" duration-ms="12870" started-at="2022-05-10T12:16:33Z" finished-at="2022-05-10T12:16:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyContentEditorTest -->
+        <test-method status="PASS" signature="TS003_VerifyDigitalAdminPanelTest()[pri:0, instance:sitecore.SitecoreSmokeTest_PROD@5622fdf]" name="TS003_VerifyDigitalAdminPanelTest" duration-ms="8314" started-at="2022-05-10T12:16:46Z" finished-at="2022-05-10T12:16:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyDigitalAdminPanelTest -->
+      </class> <!-- sitecore.SitecoreSmokeTest_PROD -->
+    </test> <!-- Parallel Test -->
+  </suite> <!-- SmokeTestSuite -->
 </testng-results>
