@@ -3,22 +3,18 @@
 
 <suite name="SmokeTestSuite">
 	<listners>
-		<listner class-name="lasvegasmarket.TestListeners" />
- 		<listner class-name="atlantamarket.TestListeners" />
-		<listner class-name="americasmart.TestListeners" />
-		<listner class-name="atlantaapparel.TestListeners" />
-		<listner class-name="exhibitorportal.TestListeners" />
-		<listner class-name="sitecore.TestListeners" />
+		<listner class-name="PROD.TestListeners" />
 	</listners>
+
 	<test thread-count="6" name="SequencialTest">
 		<classes>
-			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
-			<class name="atlantamarket.AtlantaMarketSmokeTest_PROD" />
-			<class name="americasmart.AmericasMartSmokeTest_PROD" />
-			<class name="atlantaapparel.AtlantaAppSmokeTest_PROD" />
-			<class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD" />
-			<class name="sitecore.SitecoreSmokeTest_PROD" />
-			<class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD" />
+			<class name="PROD.LagVegasMarketSmokeTest_PROD" />
+			<class name="PROD.AtlantaMarketSmokeTest_PROD" />
+			<class name="PROD.AmericasMartSmokeTest_PROD" />
+			<class name="PROD.AtlantaAppSmokeTest_PROD" />
+			<class name="PROD.ExhibitorPortalSmokeTest_PROD" />
+			<class name="PROD.SitecoreSmokeTest_PROD" />
+			<class name="PROD.ExhibitorPortalSmokeTest_PROD" />
 		</classes>
 	</test>
 </suite>

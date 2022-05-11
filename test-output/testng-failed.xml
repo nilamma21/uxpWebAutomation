@@ -3,100 +3,56 @@
 <suite name="Failed suite [SmokeTestSuite]">
   <test name="SequencialTest(failed)">
     <classes>
-      <class name="atlantaapparel.AtlantaAppSmokeTest_PROD">
+      <class name="PROD.AtlantaAppSmokeTest_PROD">
         <methods>
-          <include name="TS011_VerifyAllLinksUnderYearRoundTabTest"/>
           <include name="TS012_VerifyFooterLinksTest"/>
-          <include name="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest"/>
-          <include name="TS001_VerifyMarketPlannerLoginTest"/>
-          <include name="TS008_VerifyAllLinksUnderAttendTabTest"/>
-          <include name="TS005_VerifyExhibitorDirectoryTest"/>
-          <include name="TS009_VerifyAllLinksUnderFashionGalleryTabTest"/>
-          <include name="initialize"/>
-          <include name="TS004_VerifyGlobalSearchFunctionalityTest"/>
-          <include name="TS003_VerifyMarketPlannerExhibitorPortalOptionTest"/>
-          <include name="TS010_VerifyAllLinksUnderExhibitTabTest"/>
           <include name="TS013_VerifySocialMediaLinksTest"/>
-          <include name="TS006_VerifyAllLinksUnderMarketsTabTest"/>
-          <include name="TS002_VerifyMarketPlannerProfileOptionTest"/>
-        </methods>
-      </class> <!-- atlantaapparel.AtlantaAppSmokeTest_PROD -->
-      <class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD">
-        <methods>
-          <include name="TS001_VerifyMarketPlannerLoginTest"/>
-          <include name="TS007_VerifyGlobalSearchFunctionalityTest"/>
-          <include name="TS002_VerifAllLinksUnderExhibitTabTest"/>
-          <include name="TS008_VerifyFooterLinksTest"/>
-          <include name="TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>
-          <include name="TS013_VerifyAllSocialMediaLinksOnFooterTest"/>
-          <include name="TS003_VerifyMarketPlannerProfileAndSettingsOptionTest"/>
-          <include name="TS011_VerifyAllLinksUnderYearRoundTabTest"/>
-          <include name="TS009_VerifyExhibitorDirectoryTest"/>
-          <include name="TS006_VerifyAllLinksUnderExploreMarketTabTest"/>
-          <include name="TS005_VerifyAllLinksUnderMarketInfoTabTest"/>
-          <include name="TS012_VerifyHeaderChannelLinksTest"/>
-          <include name="TS010_VerifyAllLinksUnderAttendTabTest"/>
-        </methods>
-      </class> <!-- lasvegasmarket.LagVegasMarketSmokeTest_PROD -->
-      <class name="americasmart.AmericasMartSmokeTest_PROD">
-        <methods>
-          <include name="TS007_VerifyAllLinksUnderMarketsAndEventsTabTest"/>
-          <include name="TS006_VerifyAllHeaderChanelLinksTest"/>
-          <include name="TS004_VerifyAllLinksUnderExhibitTest"/>
-          <include name="TS009_VerifyGlobalSearchFunctionalityTest"/>
-          <include name="TS003_VerifyMarketPlannerExhibitorPortalOptionTest"/>
-          <include name="TS001_VerifyMarketPlannerLoginTest"/>
-          <include name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest"/>
-          <include name="TS011_VerifyExhibitorDirectoryTest"/>
-          <include name="TS005_VerifyAllLinksUnderAboutTabTest"/>
-          <include name="TS010_VerifyAllLinksUnderOpenYearRoundTest"/>
+          <include name="sendEmail"/>
           <include name="initialize"/>
-          <include name="TS012_VerifyAllSocialMediaLinksOnFooterTest"/>
+        </methods>
+      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
+      <class name="PROD.LagVegasMarketSmokeTest_PROD">
+        <methods>
+          <include name="sendEmail"/>
           <include name="TS008_VerifyFooterLinksTest"/>
+          <include name="initialize"/>
+          <include name="TS011_VerifyAllLinksUnderYearRoundTabTest"/>
         </methods>
-      </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
-      <class name="atlantamarket.AtlantaMarketSmokeTest_PROD">
+      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
+      <class name="PROD.AmericasMartSmokeTest_PROD">
         <methods>
-          <include name="TS004_VerifyMarketPlannerRegistrationsOptionTest"/>
-          <include name="TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>
-          <include name="TS013_VerifyAllNewsAndTrendsMenuTest"/>
-          <include name="TS003_VerifyGlobalSearchFunctionalityTest"/>
+          <include name="TS005_VerifyAllLinksUnderAboutTabTest"/>
+          <include name="initialize"/>
+          <include name="sendEmail"/>
+        </methods>
+      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
+      <class name="PROD.AtlantaMarketSmokeTest_PROD">
+        <methods>
           <include name="TS012_VerifyAllLinksUnderAttendTabTest"/>
-          <include name="TS011_VerifyFooterLinksTest"/>
-          <include name="TS001_VerifyMarketPlannerLoginTest"/>
-          <include name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest"/>
-          <include name="TS008_VerifAllLinksUnderExhibitTabTest"/>
-          <include name="TS005_VerifyExhibitorDirectoryTest"/>
-          <include name="TS009_VerifyAllChannelsLinksTest"/>
-          <include name="TS010_VerifyAllSocialMediaLinksOnFooterTest"/>
-          <include name="TS006_VerifyAllLinksUnderMarketInfoTabTest"/>
+          <include name="sendEmail"/>
+          <include name="TS013_VerifyAllNewsAndTrendsMenuTest"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- atlantamarket.AtlantaMarketSmokeTest_PROD -->
-      <class name="sitecore.SitecoreSmokeTest_PROD">
+      </class> <!-- PROD.AtlantaMarketSmokeTest_PROD -->
+      <class name="PROD.SitecoreSmokeTest_PROD">
         <methods>
-          <include name="TS001_VerifySitecoreLoginTest"/>
-          <include name="TS006_VerifyIMCReportsTest"/>
-          <include name="TS004_VerifyShowSpecialApprovalsTest"/>
-          <include name="TS007_VerifyTaxonomyManagerTest"/>
           <include name="TS005_VerifyExhibitorEventsApprovalTest"/>
-          <include name="TS003_VerifyDigitalAdminPanelTest"/>
-          <include name="TS008_VerifyEmailExperienceManagerTest"/>
+          <include name="TS006_VerifyIMCReportsTest"/>
+          <include name="TS007_VerifyTaxonomyManagerTest"/>
+          <include name="initialize"/>
+          <include name="TS004_VerifyShowSpecialApprovalsTest"/>
           <include name="TS009_VerifyControlPanelTest"/>
-          <include name="TS002_VerifyContentEditorTest"/>
+          <include name="sendEmail"/>
+          <include name="TS008_VerifyEmailExperienceManagerTest"/>
         </methods>
-      </class> <!-- sitecore.SitecoreSmokeTest_PROD -->
-      <class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD">
+      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
+      <class name="PROD.ExhibitorPortalSmokeTest_PROD">
         <methods>
-          <include name="TS003_VerifySettingsTabTest"/>
-          <include name="TS002_VerifyNotificationsTabTest"/>
+          <include name="initialize"/>
           <include name="TS006_VerifyAllLinkUnderYourDigiShowroomTest"/>
-          <include name="TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest"/>
-          <include name="TS001_VerifyExhibitorPortalLoginTest"/>
-          <include name="TS008_VerifyExhibitorPortalFooterLinksTest"/>
-          <include name="TS007_VerifyAllLinkUnderEXPMarketTabTest"/>
-          <include name="TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest"/>
+          <include name="sendEmail"/>
         </methods>
-      </class> <!-- exhibitorportal.ExhibitorPortalSmokeTest_PROD -->
+      </class> <!-- PROD.ExhibitorPortalSmokeTest_PROD -->
     </classes>
   </test> <!-- SequencialTest(failed) -->
 </suite> <!-- Failed suite [SmokeTestSuite] -->

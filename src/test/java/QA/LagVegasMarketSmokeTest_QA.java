@@ -1,4 +1,4 @@
-package lasvegasmarket;
+package QA;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
