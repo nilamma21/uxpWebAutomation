@@ -11,7 +11,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import sitecore.TestListeners;
 import pageObjects.Sitecore.SitecoreSmokeTestLinks;
 import resources.GenerateData;
 import resources.Utility;
