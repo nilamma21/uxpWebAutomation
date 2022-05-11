@@ -1,4 +1,4 @@
-package sitecore;
+package UAT;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ import resources.Utility;
 import resources.base;
 
 @Listeners({TestListeners.class})
-public class SitecoreSmokeTest_PROD extends base {
+public class SitecoreSmokeTest_UAT extends base {
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;

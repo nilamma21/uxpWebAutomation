@@ -1,15 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [AMMart_SmokeTestSuite]">
-  <test name="Test(failed)">
+<suite name="Failed suite [SmokeTestSuite]">
+  <test name="SequencialTest(failed)">
     <classes>
-      <class name="americasmart.AmericasMartSmokeTest_PROD">
+      <class name="PROD.AtlantaAppSmokeTest_PROD">
         <methods>
-          <include name="TS010_VerifyAllLinksUnderOpenYearRoundTest"/>
+          <include name="TS012_VerifyFooterLinksTest"/>
+          <include name="TS013_VerifySocialMediaLinksTest"/>
+          <include name="sendEmail"/>
           <include name="initialize"/>
-          <include name="TS008_VerifyFooterLinksTest"/>
         </methods>
-      </class> <!-- americasmart.AmericasMartSmokeTest_PROD -->
+      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
+      <class name="PROD.LagVegasMarketSmokeTest_PROD">
+        <methods>
+          <include name="sendEmail"/>
+          <include name="TS008_VerifyFooterLinksTest"/>
+          <include name="initialize"/>
+          <include name="TS011_VerifyAllLinksUnderYearRoundTabTest"/>
+        </methods>
+      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
+      <class name="PROD.AmericasMartSmokeTest_PROD">
+        <methods>
+          <include name="TS005_VerifyAllLinksUnderAboutTabTest"/>
+          <include name="initialize"/>
+          <include name="sendEmail"/>
+        </methods>
+      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
+      <class name="PROD.AtlantaMarketSmokeTest_PROD">
+        <methods>
+          <include name="TS012_VerifyAllLinksUnderAttendTabTest"/>
+          <include name="sendEmail"/>
+          <include name="TS013_VerifyAllNewsAndTrendsMenuTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- PROD.AtlantaMarketSmokeTest_PROD -->
+      <class name="PROD.SitecoreSmokeTest_PROD">
+        <methods>
+          <include name="TS005_VerifyExhibitorEventsApprovalTest"/>
+          <include name="TS006_VerifyIMCReportsTest"/>
+          <include name="TS007_VerifyTaxonomyManagerTest"/>
+          <include name="initialize"/>
+          <include name="TS004_VerifyShowSpecialApprovalsTest"/>
+          <include name="TS009_VerifyControlPanelTest"/>
+          <include name="sendEmail"/>
+          <include name="TS008_VerifyEmailExperienceManagerTest"/>
+        </methods>
+      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
+      <class name="PROD.ExhibitorPortalSmokeTest_PROD">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS006_VerifyAllLinkUnderYourDigiShowroomTest"/>
+          <include name="sendEmail"/>
+        </methods>
+      </class> <!-- PROD.ExhibitorPortalSmokeTest_PROD -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [AMMart_SmokeTestSuite] -->
+  </test> <!-- SequencialTest(failed) -->
+</suite> <!-- Failed suite [SmokeTestSuite] -->

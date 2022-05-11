@@ -442,29 +442,21 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		System.out.println("EXP page");
-
 
 		//Click on Your Digital Showroom Dropdown
-
 		yd.getEXPYourDigiShowroom().click();
-		System.out.println("Your Digital Showroom");
 		Assert.assertTrue(st.getVerifySettings().isDisplayed());
 		System.out.println("Digital Showroom is displayed properly.");
+		
 		//Click on Profile Info
 		rs.getEXPExhibitorReg().click();
-		System.out.println("Profile Info");
 		//verify profile info page
-		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Global"));
-		//System.out.println(yd.getEXPYourDigiShowroomAllHeader().getText());
+		Assert.assertTrue(yd.getEXPValidateProfile().isDisplayed());
 
 		//Click on Your Digital Showroom Dropdown
-		Thread.sleep(5000);
 		yd.getEXPYourDigiShowroom().click();
-		System.out.println("Your Digital Showroom");
 		//Click on Lines
 		rs.getEXPAtlantaServices().click();
-		System.out.println("Lines");
 		//verify Lines page
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Managing Your Manufacturing Lines"));
 
