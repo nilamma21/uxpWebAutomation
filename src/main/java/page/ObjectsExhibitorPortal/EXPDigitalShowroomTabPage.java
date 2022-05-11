@@ -20,6 +20,7 @@ public class EXPDigitalShowroomTabPage
 	By EXPJuniperData = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[4]/div[1]/a[1]");
 	By EXPYourDigiShowroomAllHeader = By.xpath("//div[@class='EPPageHeader_container__Jiq4V']/div[1]/div[4]/p[1]");
 	By EXPJuniperDataHeader = By.xpath("//div[@class='ds-section ds-form-section']/div[1]/form[1]/div[1]/h1[1]");
+	By EXPvalidateprofile = By.xpath("//main[@class='EPUpdateExhibitorProfile_main__UikME']"); //Locator to validate EXP Profile page
 	
 	public EXPDigitalShowroomTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -66,9 +67,13 @@ public class EXPDigitalShowroomTabPage
 	
 	public WebElement getEXPJuniperDataHeader() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
-		//wait.until(ExpectedConditions.elementToBeClickable(EXPYourDigiShowroomAllHeader));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPJuniperDataHeader));
 		return driver.findElement(EXPJuniperDataHeader);
 	}
 	
+	public WebElement getEXPValidateProfile() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPvalidateprofile));
+		return driver.findElement(EXPvalidateprofile);
+	}
 }

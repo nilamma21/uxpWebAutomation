@@ -1,10 +1,13 @@
-package americasmart;
+package PROD;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -77,14 +80,12 @@ public class AmericasMartSmokeTest_PROD extends base {
 	
 	SendEmail se;
 
-	@BeforeTest
+	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
-		amhe = new AMHeaderLinksPage(driver);
-		amab = new AMAboutTabPage(driver);
 
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
@@ -475,15 +476,15 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		//Click Media and Press Releases link and verify results
 
-		atlfl.getCareers().click();
+		atlfl.getMediaPressReleases().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Press Releases");
 		System.out.println("Media and Press Releases page opened properly");
 		driver.get(prop.getProperty("ammarturl"));
 		utl.scrollToElement(fl.getHighPointMarket());
 
-		//Click Careers Releases link and verify results
-
-		atlfl.getMediaPressReleases().click();
+		//Click Careers link and verify results
+		
+		atlfl.getCareers().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Careers");
 		System.out.println("Careers page opened properly");
 		driver.get(prop.getProperty("ammarturl"));
@@ -565,7 +566,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Thread.sleep(5000);
 		utl.scrollToElement(amoyr.getShowroomDirectPageHeader());
 		//Verify that Showroom Direct page should be displayed
-		String actualShowroomDirectHeader="Open Year Round Directory";
+		String actualShowroomDirectHeader="Exhibitor Directory";
 		Assert.assertTrue(amoyr.getShowroomDirectPageHeader().getText().equals(actualShowroomDirectHeader));
 
 		//Click on Open Year Round Tab 
@@ -713,12 +714,13 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 
-	/*@AfterSuite
+	@AfterClass
 	public void sendEmail()
 	{
-		se = new SendEmail();
-		se.sendEmailWithAttachment();
-	}*/
+		driver.quit();
+//		se = new SendEmail();
+//		se.sendEmailWithAttachment();
+	}
 
 }
 

@@ -1,4 +1,4 @@
-package sitecore;
+package UAT;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ import resources.Utility;
 import resources.base;
 
 @Listeners({TestListeners.class})
-public class SitecoreSmokeTest_PROD extends base {
+public class SitecoreSmokeTest_UAT extends base {
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;
@@ -61,7 +61,7 @@ public class SitecoreSmokeTest_PROD extends base {
 		sl.getContentEditor().click();
 		Assert.assertTrue(sl.getVerifyContentEditor().getText().contains("Content"));
 		System.out.println("Content Editor opened successfully.");
-		
+		sl.getVerifyHomePage().click();
 	}
 	
 	@Test(priority=03)
@@ -73,11 +73,10 @@ public class SitecoreSmokeTest_PROD extends base {
 		
 		sl = new SitecoreSmokeTestLinks(driver);
 
-		sl.getVerifyHomePage().click();
 		sl.getDigitalAdminPanel().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("Digital Admin Panel"));
 		System.out.println("Digital Admin Panel opened successfully.");
-		
+		sl.getVerifyHomePage().click();
 	}
 	
 	@Test(priority=04)
@@ -88,12 +87,11 @@ public class SitecoreSmokeTest_PROD extends base {
 		//UXP-T124: To verify Show Special Approvals page opens properly
 		
 		sl = new SitecoreSmokeTestLinks(driver);
-		
-		sl.getVerifyHomePage().click();
+
 		sl.getShowSpecialApprovals().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("Show Specials Approvals"));
 		System.out.println("Show Special Approvals opened successfully.");
-		
+		sl.getVerifyHomePage().click();
 	}
 	
 	@Test(priority=05)
@@ -105,11 +103,10 @@ public class SitecoreSmokeTest_PROD extends base {
 		
 		sl = new SitecoreSmokeTestLinks(driver);
 
-		sl.getVerifyHomePage().click();
 		sl.getExhibitorEventsApproval().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("Exhibitor Events Approvals"));
 		System.out.println("Exhibitor Events Approval opened successfully.");
-		
+		sl.getVerifyHomePage().click();
 	}
 	
 	@Test(priority=06)
@@ -121,11 +118,10 @@ public class SitecoreSmokeTest_PROD extends base {
 		
 		sl = new SitecoreSmokeTestLinks(driver);
 
-		sl.getVerifyHomePage().click();
 		sl.getIMCReports().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("IMC Reports Panel"));
 		System.out.println("IMC Reports opened successfully.");
-		
+		sl.getVerifyHomePage().click();
 	}
 	
 	@Test(priority=07)
@@ -137,11 +133,10 @@ public class SitecoreSmokeTest_PROD extends base {
 		
 		sl = new SitecoreSmokeTestLinks(driver);
 
-		sl.getVerifyHomePage().click();
 		sl.getTaxonomyManager().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("Taxonomy Manager"));
 		System.out.println("Taxonomy Manager opened successfully.");
-		
+		sl.getVerifyHomePage().click();
 	}
 	
 	@Test(priority=8)
@@ -153,11 +148,10 @@ public class SitecoreSmokeTest_PROD extends base {
 		
 		sl = new SitecoreSmokeTestLinks(driver);
 
-		sl.getVerifyHomePage().click();
 		sl.getEmailExperienceManager().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("Email Experience Manager"));
 		System.out.println("Email Experience Manager opened successfully.");
-		
+		sl.getVerifyHomePage().click();
 	}
 	
 	@Test(priority=9)
@@ -168,12 +162,11 @@ public class SitecoreSmokeTest_PROD extends base {
 		//UXP-T128: To verify Control Panel page opens properly
 		
 		sl = new SitecoreSmokeTestLinks(driver);
-		
-		sl.getVerifyHomePage().click();
+
 		sl.getControlPanel().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("Control Panel"));
 		System.out.println("Control Panel opened successfully.");
-		//sl.getVerifyHomePage().click();
+		sl.getVerifyHomePage().click();
 	}
 	
 	

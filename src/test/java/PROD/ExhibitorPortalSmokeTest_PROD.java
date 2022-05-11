@@ -1,10 +1,13 @@
-package exhibitorportal;
+package PROD;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -44,17 +47,17 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	EXPFooterLinksPage efl;
 	SendEmail se;
 
-	@BeforeTest
+	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
 
-		//Navigate to Exhibitor Portal
+		/*//Navigate to Exhibitor Portal
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("expurl"));
-
+		 */
 	}
 
 	@Test(priority=01)
@@ -70,7 +73,11 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//Login to Market Planner
+		//Navigate to Exhibitor Portal
+		driver.manage().window().maximize();
+		driver.get(prop.getProperty("expurl"));
+		
+		//Login to EXP
 		el.getEmailAddress().sendKeys(prop.getProperty("username"));
 		el.getPassword().sendKeys(prop.getProperty("password"));
 		el.getSignInBtn().click();
@@ -438,16 +445,17 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		lp = new UXPLoginPage(driver);
 		amhe = new AMHeaderLinksPage(driver);
 		yd=new EXPDigitalShowroomTabPage(driver);
-		el=new EXPLoginPage(driver);
-
+		el = new EXPLoginPage(driver);
+		st = new EXPSettingsPage(driver);
+		rs = new EXPRegistrationAndServicesTabPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//Click on Your Digital Showroom Dropdown
+		//Click on Your Digital Showroom Drop-down
 		yd.getEXPYourDigiShowroom().click();
 		Assert.assertTrue(st.getVerifySettings().isDisplayed());
 		System.out.println("Digital Showroom is displayed properly.");
-		
+
 		//Click on Profile Info
 		rs.getEXPExhibitorReg().click();
 		//verify profile info page
@@ -462,10 +470,8 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		//Click on Your Digital Showroom Dropdown
 		yd.getEXPYourDigiShowroom().click();
-		System.out.println("Your Digital Showroom");
 		//Click on Product
 		rs.getEXPAtlantaAdvertisingAndSponcership().click();
-		System.out.println("Produt");
 		//verify Product page
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Products"));
 
@@ -513,7 +519,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		el=new EXPLoginPage(driver);
 		mar=new EXPMarketTabPage(driver);
 		st=new EXPSettingsPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on Registration And Services Tab 
@@ -645,8 +651,14 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/our-story/"));
 		System.out.println("About us page is displayed properly.");
 		driver.get(prop.getProperty("expurl"));
-
-
+	}
+	
+	@AfterClass
+	public void sendEmail()
+	{
+		driver.quit();
+//		se = new SendEmail();
+//		se.sendEmailWithAttachment();
 	}
 
 }

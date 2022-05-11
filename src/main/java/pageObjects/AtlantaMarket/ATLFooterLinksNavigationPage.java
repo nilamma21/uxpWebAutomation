@@ -21,7 +21,7 @@ public class ATLFooterLinksNavigationPage {
 	By internationalmarketcenters = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[5]/div[1]/a[1]"); //Locator for International Market Centers in footer links
 	By downloadtheapp = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[1]/div[1]/a[1]"); //Locator for Download The App in footer links
 	By contactus = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[4]/div[1]/a[1]"); //Locator for Contact Us in footer links
-	By careers = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[2]/div[1]/a[1]"); //Locator for Careers in footer links
+	By careers = By.xpath("//a[contains(text(), 'Careers')]"); //Locator for Careers in footer links
 	By MediaPressReleases = By.xpath("//a[contains(text(), 'Media & Press Releases')]"); //Locator for Media and Press Releases
 	By termsandconditions = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[4]/div[1]/a[1]"); // Locator for Terms and Conditions in footer links
 	By privacypolicy = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[5]/div[1]/a[1]"); // Locator for Privacy Policy in footer links
