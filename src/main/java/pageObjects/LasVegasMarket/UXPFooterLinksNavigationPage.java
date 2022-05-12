@@ -25,9 +25,9 @@ public class UXPFooterLinksNavigationPage {
 	By TermsAndConditions = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[3]/div[4]/div[1]/a[1]"); // Locator for Terms and Conditions in footer links
 	By PrivacyPolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); // Locator for Privacy Policy in footer links
 	By VerifyCareers = By.xpath("//div[@id = 'content']/div[1]/div[1]/h1[1]"); //Locator for verify Careers
-	By ClosePopUpAmericasmart = By.xpath("//div[@class = ' contact-exit']"); //Locatory for Close Pop Up after opening Americas Mart footer link
+	By ClosePopUpAmericasmart = By.xpath("//div[@class = ' contact-exit']"); //Locator for Close Pop Up after opening Americas Mart footer link
 	By VerifyTermsOfUse = By.xpath("//div[@id = 'primary']"); //Locator for Terms of Use
-	By VerifyPrivacyPolicy = By.xpath("//*[contains (text(), 'WEB PRIVACY STATEMENT']"); //Locator for porivacy Policy
+	By VerifyPrivacyPolicy = By.xpath("//*[contains (text(), 'WEB PRIVACY STATEMENT']"); //Locator for privacy Policy
 	By facebookicon = By.xpath("//a[@href='https://www.facebook.com/lvmarket']//div//*[name()='svg']"); //Locator for Facebook link in footer
 	By instagramicon =  By.xpath("//a[@href='https://www.instagram.com/lasvegasmarket/']//div//*[name()='svg']"); //Locator for Instagram link in footer
 	By youtubeicon = By.xpath("//a[@href='https://www.youtube.com/channel/UCh8pZYxnmh7Wjrnf3d_OsWg']//div//*[name()='svg']"); //Locator You Tube icon
@@ -36,6 +36,7 @@ public class UXPFooterLinksNavigationPage {
 	By linkedinicon = By.xpath("//a[@href='https://www.linkedin.com/company/las-vegas-market']//div//*[name()='svg']"); //Locator for LinkedIn icon
 	By abtatlmktlink = By.xpath("//a[@href='/Market-Info/About-Us']"); //Locator for About Atlanta Market footer link
 	By lvapplink = By.xpath("(//a[@href='https://www.lasvegas-apparel.com/'])[position()=2]"); //Locator for Las Vegas Apparel footer link
+	By lvmprivacypolicy = By.xpath("(//a[contains(text(),'Privacy Policy')])[position()=2]"); //Locator for Privacy Policy on LVM Footer
 	
 	public UXPFooterLinksNavigationPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -171,7 +172,10 @@ public class UXPFooterLinksNavigationPage {
 		Thread.sleep(10000);
 		return driver.findElement(lvapplink);
 	}
-
+	public WebElement getLVMPrivacyPolicyPLink() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(lvmprivacypolicy);
+	}
 	
 }
 

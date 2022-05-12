@@ -27,7 +27,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
-		utl = new Utility(driver);
+		//utl = new Utility(driver);
 
 		/*	//Navigate to Sitecore
 		driver.manage().window().maximize();
@@ -43,6 +43,7 @@ public class SitecoreSmokeTest_PROD extends base {
 		//UXP-T119: To verify Login functionality works properly
 
 		sl = new SitecoreSmokeTestLinks(driver);
+		utl = new Utility(driver);
 
 		//Navigate to Sitecore
 		driver.manage().window().maximize();
@@ -182,12 +183,17 @@ public class SitecoreSmokeTest_PROD extends base {
 		//sl.getVerifyHomePage().click();
 	}
 
-	@AfterClass
+	/*	@AfterSuite
 	public void sendEmail()
 	{
+		se = new SendEmail();
+		se.sendEmailWithAttachment();
+	}*/
+
+	@AfterClass
+	public void tearDown()
+	{
 		driver.quit();
-//		se = new SendEmail();
-//		se.sendEmailWithAttachment();
 	}
 
 }

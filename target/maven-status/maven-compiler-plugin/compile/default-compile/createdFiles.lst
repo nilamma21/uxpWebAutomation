@@ -1,8 +1,6 @@
-resources\SendEmail.class
-resources\GenerateData.class
-pgeObjects\UXPLoginPage.class
 resources\Utility.class
 resources\base.class
 resources\ExtendReporterNG.class
-pgeObjects\UXPLandingPage.class
 resources\SendEmail$1.class
+resources\GenerateData.class
+resources\SendEmail.class
