@@ -31,14 +31,130 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">64.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">SequencialTest</td><td class="numi">13</td><td class="numi">13</td><td class="numi">0</td><td class="numi_attn">4</td><td class="numi">427.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">lasvegasmarket.MarketPlannerPageTest</td><td><a href="#m1"><b>TS001_VerifyMarketPlannerTest</b>  </a></td><td class="numi">1</td><td>1630074588863</td><td class="numi">53297</td></tr>
+<tr><th colspan="4">SequencialTest &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="3">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m1"><b>TS001_VerifySitecoreLoginTest</b>  </a></td><td class="numi">1</td><td>1652335048222</td><td class="numi">37166</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS002_VerifyContentEditorTest</b>  </a></td><td class="numi">1</td><td>1652335085507</td><td class="numi">20557</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS003_VerifyDigitalAdminPanelTest</b>  </a></td><td class="numi">1</td><td>1652335106085</td><td class="numi">20604</td></tr>
+<tr class="failedeven"><td rowspan="1">PROD.ExhibitorPortalSmokeTest_PROD</td><td><a href="#m4"><b>TS008_VerifyExhibitorPortalFooterLinksTest</b>  </a></td><td class="numi">1</td><td>1652335447971</td><td class="numi">219</td></tr>
+<tr><th colspan="4">SequencialTest &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="6">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m5"><b>TS004_VerifyShowSpecialApprovalsTest</b>  </a></td><td class="numi">1</td><td>1652335126693</td><td class="numi">19800</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS005_VerifyExhibitorEventsApprovalTest</b>  </a></td><td class="numi">1</td><td>1652335146494</td><td class="numi">9117</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS006_VerifyIMCReportsTest</b>  </a></td><td class="numi">1</td><td>1652335155613</td><td class="numi">4452</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS007_VerifyTaxonomyManagerTest</b>  </a></td><td class="numi">1</td><td>1652335160066</td><td class="numi">4317</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS008_VerifyEmailExperienceManagerTest</b>  </a></td><td class="numi">1</td><td>1652335164384</td><td class="numi">4753</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS009_VerifyControlPanelTest</b>  </a></td><td class="numi">1</td><td>1652335169138</td><td class="numi">10980</td></tr>
+<tr class="passedeven"><td rowspan="7">PROD.ExhibitorPortalSmokeTest_PROD</td><td><a href="#m11"><b>TS001_VerifyExhibitorPortalLoginTest</b>  </a></td><td class="numi">1</td><td>1652335200990</td><td class="numi">51613</td></tr><tr class="passedeven"><td><a href="#m12"><b>TS002_VerifyNotificationsTabTest</b>  </a></td><td class="numi">1</td><td>1652335252604</td><td class="numi">3677</td></tr><tr class="passedeven"><td><a href="#m13"><b>TS003_VerifySettingsTabTest</b>  </a></td><td class="numi">1</td><td>1652335256282</td><td class="numi">16608</td></tr><tr class="passedeven"><td><a href="#m14"><b>TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest</b>  </a></td><td class="numi">1</td><td>1652335272891</td><td class="numi">71568</td></tr><tr class="passedeven"><td><a href="#m15"><b>TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest</b>  </a></td><td class="numi">1</td><td>1652335344460</td><td class="numi">50225</td></tr><tr class="passedeven"><td><a href="#m16"><b>TS006_VerifyAllLinkUnderYourDigiShowroomTest</b>  </a></td><td class="numi">1</td><td>1652335394694</td><td class="numi">38608</td></tr><tr class="passedeven"><td><a href="#m17"><b>TS007_VerifyAllLinkUnderEXPMarketTabTest</b>  </a></td><td class="numi">1</td><td>1652335433303</td><td class="numi">14668</td></tr>
 </table>
-<h1>Test</h1>
-<h2 id="m1">lasvegasmarket.MarketPlannerPageTest:TS001_VerifyMarketPlannerTest</h2>
+<h1>SequencialTest</h1>
+<h2 id="m1">PROD.SitecoreSmokeTest_PROD:TS002_VerifyContentEditorTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //a[@title = &apos;Content Editor&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.Sitecore.SitecoreSmokeTestLinks.getContentEditor(SitecoreSmokeTestLinks.java:65)
+<br/>at PROD.SitecoreSmokeTest_PROD.TS002_VerifyContentEditorTest(SitecoreSmokeTest_PROD.java:67)
+<br/>29 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //a[@title = &apos;Content Editor&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.Sitecore.SitecoreSmokeTestLinks.getContentEditor(SitecoreSmokeTestLinks.java:65)
+<br/>at PROD.SitecoreSmokeTest_PROD.TS002_VerifyContentEditorTest(SitecoreSmokeTest_PROD.java:67)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">PROD.ExhibitorPortalSmokeTest_PROD:TS008_VerifyExhibitorPortalFooterLinksTest</h2>
+<div style="padding-left:3em">
+<p>null</p>
+PROD.ExhibitorPortalSmokeTest_PROD.TS008_VerifyExhibitorPortalFooterLinksTest(ExhibitorPortalSmokeTest_PROD.java:567)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">PROD.SitecoreSmokeTest_PROD:TS001_VerifySitecoreLoginTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //a[@href=&apos;/sitecore/shell/sitecore/client/Applications/Launchpad&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.Sitecore.SitecoreSmokeTestLinks.getVerifyHomePage(SitecoreSmokeTestLinks.java:58)
+<br/>at PROD.SitecoreSmokeTest_PROD.TS001_VerifySitecoreLoginTest(SitecoreSmokeTest_PROD.java:54)
+<br/>29 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //a[@href=&apos;/sitecore/shell/sitecore/client/Applications/Launchpad&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.Sitecore.SitecoreSmokeTestLinks.getVerifyHomePage(SitecoreSmokeTestLinks.java:58)
+<br/>at PROD.SitecoreSmokeTest_PROD.TS001_VerifySitecoreLoginTest(SitecoreSmokeTest_PROD.java:54)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">PROD.SitecoreSmokeTest_PROD:TS003_VerifyDigitalAdminPanelTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //a[@href=&apos;/sitecore/shell/sitecore/client/Applications/Launchpad&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.Sitecore.SitecoreSmokeTestLinks.getVerifyHomePage(SitecoreSmokeTestLinks.java:58)
+<br/>at PROD.SitecoreSmokeTest_PROD.TS003_VerifyDigitalAdminPanelTest(SitecoreSmokeTest_PROD.java:82)
+<br/>29 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //a[@href=&apos;/sitecore/shell/sitecore/client/Applications/Launchpad&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.Sitecore.SitecoreSmokeTestLinks.getVerifyHomePage(SitecoreSmokeTestLinks.java:58)
+<br/>at PROD.SitecoreSmokeTest_PROD.TS003_VerifyDigitalAdminPanelTest(SitecoreSmokeTest_PROD.java:82)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">PROD.ExhibitorPortalSmokeTest_PROD:TS001_VerifyExhibitorPortalLoginTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">PROD.SitecoreSmokeTest_PROD:TS007_VerifyTaxonomyManagerTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">PROD.SitecoreSmokeTest_PROD:TS004_VerifyShowSpecialApprovalsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">PROD.ExhibitorPortalSmokeTest_PROD:TS006_VerifyAllLinkUnderYourDigiShowroomTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">PROD.ExhibitorPortalSmokeTest_PROD:TS003_VerifySettingsTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">PROD.ExhibitorPortalSmokeTest_PROD:TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">PROD.ExhibitorPortalSmokeTest_PROD:TS002_VerifyNotificationsTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">PROD.SitecoreSmokeTest_PROD:TS005_VerifyExhibitorEventsApprovalTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">PROD.ExhibitorPortalSmokeTest_PROD:TS007_VerifyAllLinkUnderEXPMarketTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">PROD.SitecoreSmokeTest_PROD:TS006_VerifyIMCReportsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">PROD.SitecoreSmokeTest_PROD:TS008_VerifyEmailExperienceManagerTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">PROD.SitecoreSmokeTest_PROD:TS009_VerifyControlPanelTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">PROD.ExhibitorPortalSmokeTest_PROD:TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

@@ -63,8 +63,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
-		utl = new Utility(driver);
-		lap = new UXPLandingPage(driver);
+		//		utl = new Utility(driver);
+		//		lap = new UXPLandingPage(driver);
 
 		/*//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
@@ -83,6 +83,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
+		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -90,9 +91,9 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(5000);
-		lap.getIUnderstandBtn().click();
-		Thread.sleep(3000);
-		
+		//		lap.getIUnderstandBtn().click();
+		//		Thread.sleep(3000);
+
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
 
@@ -594,7 +595,6 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click Media and Press Releases link and verify results
 		atlfl.getMediaPressReleases().click();
-		atlfl.getMediaPressReleases().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Press Releases");
 		System.out.println("Media and Pres Releases page opened properly");
 		driver.get(prop.getProperty("atlmrkturl"));
@@ -768,12 +768,17 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	}
 
 
-	@AfterClass
+	/*	@AfterSuite
 	public void sendEmail()
 	{
+		se = new SendEmail();
+		se.sendEmailWithAttachment();
+	}*/
+
+	@AfterClass
+	public void tearDown()
+	{
 		driver.quit();
-//		se = new SendEmail();
-//		se.sendEmailWithAttachment();
 	}
 
 }

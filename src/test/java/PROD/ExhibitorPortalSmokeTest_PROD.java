@@ -51,8 +51,8 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
-		utl = new Utility(driver);
-		lap = new UXPLandingPage(driver);
+//		utl = new Utility(driver);
+//		lap = new UXPLandingPage(driver);
 
 		/*//Navigate to Exhibitor Portal
 		driver.manage().window().maximize();
@@ -70,6 +70,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
 		el = new EXPLoginPage(driver);
+		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -653,12 +654,17 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("expurl"));
 	}
 	
-	@AfterClass
+	/*	@AfterSuite
 	public void sendEmail()
 	{
+		se = new SendEmail();
+		se.sendEmailWithAttachment();
+	}*/
+
+	@AfterClass
+	public void tearDown()
+	{
 		driver.quit();
-//		se = new SendEmail();
-//		se.sendEmailWithAttachment();
 	}
 
 }

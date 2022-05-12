@@ -67,7 +67,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
-
+		
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("lvmurl"));
@@ -623,11 +624,11 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		
 		//Click Privacy Policy and verify results
 		driver.get(prop.getProperty("lvmurl"));
-		utl.scrollToElement(fl.getPrivacyPolicy());
+		utl.scrollToElement(fl.getLVMPrivacyPolicyPLink());
 		
 		//Click Privacy Policy link and verify results
 
-		fl.getPrivacyPolicy().click();
+		fl.getLVMPrivacyPolicyPLink().click();
 
 		//Switch to new My Imports tab
 		/*Set<String> win2 = driver.getWindowHandles();
@@ -993,12 +994,17 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		
 	}
 	
-	@AfterClass
+	/*	@AfterSuite
 	public void sendEmail()
 	{
+		se = new SendEmail();
+		se.sendEmailWithAttachment();
+	}*/
+
+	@AfterClass
+	public void tearDown()
+	{
 		driver.quit();
-//		se = new SendEmail();
-//		se.sendEmailWithAttachment();
 	}
 
 }

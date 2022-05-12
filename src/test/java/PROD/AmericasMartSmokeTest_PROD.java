@@ -77,22 +77,22 @@ public class AmericasMartSmokeTest_PROD extends base {
 	AMMarketsAndEventsPage amme;
 	AMExhibitTabPage amexh;
 	AMOpenYearRoundPage amoyr;
-	
+
 	SendEmail se;
 
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
-		utl = new Utility(driver);
-		lap = new UXPLandingPage(driver);
+		//		utl = new Utility(driver);
+		//		lap = new UXPLandingPage(driver);
 
-		//Navigate to Atlanta Market site
+		/*//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(10000);
+		Thread.sleep(10000);*/
 	}
 
 	@Test(priority=1)
@@ -104,8 +104,16 @@ public class AmericasMartSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
 		amhe = new AMHeaderLinksPage(driver);
-
+		utl = new Utility(driver);
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Navigate to Atlanta Market site
+		driver.manage().window().maximize();
+		driver.get(prop.getProperty("ammarturl"));
+		Thread.sleep(8000);
+		//		lap.getIUnderstandBtn().click();
+		//		Thread.sleep(10000);
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -281,7 +289,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		amhe = new AMHeaderLinksPage(driver);
 		hd = new UXPHeaderChannelLinksPage(driver);
 		atlch = new ATLAllChannelsLinksPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on Atlanta Market 
@@ -405,7 +413,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		fl = new UXPFooterLinksNavigationPage(driver);
 		amfl = new AMFooterLinksNavigationPage(driver);
 		atlfl = new ATLFooterLinksNavigationPage(driver);
-				
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Scroll till footer links
@@ -483,7 +491,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.scrollToElement(fl.getHighPointMarket());
 
 		//Click Careers link and verify results
-		
+
 		atlfl.getCareers().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Careers");
 		System.out.println("Careers page opened properly");
@@ -552,7 +560,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Verify that About Open Year Round page should be displayed
 		String actualHeader="Open Year Round";
 		Assert.assertTrue(amoyr.getAboutYearRoundPageHeader().getText().equals(actualHeader));
-		
+
 		//Verify how to register 
 		amoyr.getOpenYearRoundTab().click();
 		amoyr.gethowtoregister().click();
@@ -681,7 +689,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		atlps.getATLWelcomeText().click();
 		Thread.sleep(5000);
 		atlps.getATLProfileAndSettings().click();
-		
+
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+"Profile"));
 		System.out.println("Profile and Settings section options are displayed properly");
 	}
@@ -695,18 +703,18 @@ public class AmericasMartSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
 		atlexh = new ATLExhibitPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 		atlps.getATLWelcomeText().click();
 		Thread.sleep(5000);
 		atlps.getAMCExhibitorPortalOptn().click();
-		
+
 		//Verify that 'EXP Home' page should be displayed
 		Assert.assertTrue(atlps.getAMCExhibitorPortalHome().isDisplayed());
-	
+
 		driver.get(prop.getProperty("ammarturl"));
-		
+
 		/*//Sign out from Market Planner
 		atlps.getATLWelcomeText().click();
 		lap.getMPSignOutBtn().click();
@@ -714,12 +722,17 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 
-	@AfterClass
+/*	@AfterSuite
 	public void sendEmail()
 	{
+		se = new SendEmail();
+		se.sendEmailWithAttachment();
+	}*/
+
+	@AfterClass
+	public void tearDown()
+	{
 		driver.quit();
-//		se = new SendEmail();
-//		se.sendEmailWithAttachment();
 	}
 
 }
