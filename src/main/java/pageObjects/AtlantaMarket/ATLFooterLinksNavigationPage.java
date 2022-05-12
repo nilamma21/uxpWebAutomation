@@ -120,7 +120,9 @@ public class ATLFooterLinksNavigationPage {
 		return driver.findElement(instagramicon);
 	}
 	public WebElement getYouTubeIcon() throws InterruptedException {
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(youtubeicon));
 		return driver.findElement(youtubeicon);
 	}
 	public WebElement getTwitterIcon() throws InterruptedException {

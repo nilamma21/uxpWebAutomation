@@ -105,8 +105,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
-		utl = new Utility(driver);
-		lap = new UXPLandingPage(driver);
+//		utl = new Utility(driver);
+//		lap = new UXPLandingPage(driver);
 
 		//Navigate to Atlanta Apparel site
 		//driver.manage().window().maximize();
@@ -124,14 +124,15 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
-
+		utl = new Utility(driver);
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Navigate to Atlanta Apparel site
 		driver.get(prop.getProperty("atlappurl"));;
 		Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(10000);
+		Thread.sleep(8000);
 		
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -961,23 +962,6 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/privacy-policy"));
 		System.out.println("Privacy Policy page opened properly");
 		driver.get(prop.getProperty("atlappurl"));
-
-
-		//Footer Address
-		String winHandleBefore = driver.getWindowHandle();
-		atlfo.getfooterAddress().click();
-		System.out.println("Click on Address");
-
-		for(String winHandle : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle);}
-		String addUrl=driver.getCurrentUrl();
-		Assert.assertTrue(driver.getCurrentUrl().contains(addUrl));
-		System.out.println("Google map opened successfully.");
-		driver.close();
-		driver.switchTo().window(winHandleBefore);
-		driver.get(prop.getProperty("atlappurl"));
-
-
 	}
 
 	@Test(priority=13)
@@ -1079,12 +1063,17 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore4);*/
 	}
 
-	@AfterClass
+	/*	@AfterSuite
 	public void sendEmail()
 	{
+		se = new SendEmail();
+		se.sendEmailWithAttachment();
+	}*/
+
+	@AfterClass
+	public void tearDown()
+	{
 		driver.quit();
-//		se = new SendEmail();
-//		se.sendEmailWithAttachment();
 	}
 
 }
