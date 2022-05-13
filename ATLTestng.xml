@@ -9,10 +9,6 @@
 	<test thread-count="1" name="ATLTest">
 		<classes>
 			<class name="PROD.AtlantaMarketSmokeTest_PROD" />
-            <methods>
-                <include name="TS001_VerifyMarketPlannerLoginTest"/>
-                <include name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest"/>
-            </methods>
 		</classes>
 	</test>
 </suite>
