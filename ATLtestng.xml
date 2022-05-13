@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SmokeTestSuite">
+	<listners>
+		<listner class-name="PROD.TestListeners" />
+	</listners>
+
+	<test thread-count="1" name="ATLTest">
+		<classes>
+			<class name="PROD.AtlantaMarketSmokeTest_PROD" />
+            <methods>
+                <include name="TS001_VerifyMarketPlannerLoginTest">
+                <include name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest">
+            </methods>
+		</classes>
+	</test>
+</suite>
