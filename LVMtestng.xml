@@ -9,6 +9,10 @@
 	<test thread-count="1" name="LVMTest">
 		<classes>
 			<class name="PROD.LagVegasMarketSmokeTest_PROD" />
+            <methods>
+                <include name="TS001_VerifyMarketPlannerLoginTest">
+                <include name="TS002_VerifAllLinksUnderExhibitTabTest">
+            </methods>
 		</classes>
 	</test>
 </suite>
