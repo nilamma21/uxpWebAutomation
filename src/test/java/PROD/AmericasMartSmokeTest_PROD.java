@@ -112,8 +112,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(8000);
-		//		lap.getIUnderstandBtn().click();
-		//		Thread.sleep(10000);
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(10000);
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
