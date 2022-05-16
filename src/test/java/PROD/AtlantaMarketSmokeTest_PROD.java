@@ -91,8 +91,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(5000);
-		//		lap.getIUnderstandBtn().click();
-		//		Thread.sleep(3000);
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(3000);
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
