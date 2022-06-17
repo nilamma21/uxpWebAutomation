@@ -373,11 +373,11 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Press Center section is displayed properly");
 	}
 
-	@Test(priority=06)
-	public void TS006_VerifyAllLinksUnderExploreMarketTabTest() throws InterruptedException, IOException
+	@Test(priority=13)
+	public void TS013_VerifyAllLinksUnderExploreMarketTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-T006: To verify links for Explore Market tab at Header
+		//UXP-T013: To verify links for Explore Market tab at Header
 
 		expmrkt = new UXPExploreMarketPage(driver);
 
@@ -829,8 +829,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Shopzio Exhibitors section is displayed properly");	
 	}
 
-	@Test(priority=013)
-	public void TS013_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	@Test(priority=006)
+	public void TS006_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-013: To verify the all social media links and it's redirection
