@@ -219,6 +219,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
+		Thread.sleep(7000);
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 		// Close the new window, if that window no more required
@@ -241,6 +242,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
+		Thread.sleep(7000);
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 		// Close the new window, if that window no more required
@@ -259,6 +261,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
+		Thread.sleep(7000);
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 		// Close the new window, if that window no more required
@@ -276,7 +279,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-
+		Thread.sleep(7000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.expotoolkit.com/"));
 		System.out.println("Expo Tool Kit page verified successfully");
 		driver.close();
