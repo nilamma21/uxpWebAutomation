@@ -164,8 +164,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 	}
 
-	@Test(priority=12)
-	public void TS012_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	@Test(priority=7)
+	public void TS007_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-013: To verify the all social media links and it's redirection
@@ -327,8 +327,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 
-	@Test(priority=7)
-	public void TS007_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
+	@Test(priority=12)
+	public void TS012_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T012: To verify links for Attend tab at Header
