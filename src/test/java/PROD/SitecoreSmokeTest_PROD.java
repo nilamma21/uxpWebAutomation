@@ -52,6 +52,9 @@ public class SitecoreSmokeTest_PROD extends base {
 		sl.getUserName().sendKeys(prop.getProperty("sitecoreusername"));
 		sl.getPassword().sendKeys(prop.getProperty("sitecorepassword"));
 		sl.getLoginbtn().click();
+		
+		//Temp solution for login issue
+		driver.get(prop.getProperty("sitecoreurl"));
 		Assert.assertTrue(sl.getVerifyHomePage().isDisplayed());
 		System.out.println("Login Successful.");
 	}

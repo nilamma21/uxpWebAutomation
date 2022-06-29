@@ -1,33 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="2" total="12" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="780912" started-at="2022-05-12T12:24:00Z" finished-at="2022-05-12T12:37:01Z">
+  <suite name="SmokeTestSuite" duration-ms="1465522" started-at="2022-06-29T07:17:39Z" finished-at="2022-06-29T07:42:04Z">
     <groups>
     </groups>
-    <test name="SequencialTest" duration-ms="780912" started-at="2022-05-12T12:24:00Z" finished-at="2022-05-12T12:37:01Z">
-      <class name="PROD.AtlantaMarketSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@27efef64]" name="initialize" is-config="true" duration-ms="7596" started-at="2022-05-12T17:54:00Z" finished-at="2022-05-12T17:54:07Z">
+    <test name="SequencialTest" duration-ms="1465522" started-at="2022-06-29T07:17:39Z" finished-at="2022-06-29T07:42:04Z">
+      <class name="PROD.AmericasMartSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="initialize" is-config="true" duration-ms="14287" started-at="2022-06-29T12:47:39Z" finished-at="2022-06-29T12:47:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@27efef64]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="62069" started-at="2022-05-12T17:54:07Z" finished-at="2022-05-12T17:55:10Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="104380" started-at="2022-06-29T12:47:53Z" finished-at="2022-06-29T12:49:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="PASS" signature="TS010_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@27efef64]" name="TS010_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="73746" started-at="2022-05-12T17:55:10Z" finished-at="2022-05-12T17:56:23Z">
+        <test-method status="PASS" signature="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="TS002_VerifyMarketPlannerProfileAndSettingsOptionTest" duration-ms="21885" started-at="2022-06-29T12:49:37Z" finished-at="2022-06-29T12:49:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS010_VerifyAllSocialMediaLinksOnFooterTest -->
-        <test-method status="PASS" signature="TS011_VerifyFooterLinksTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@27efef64]" name="TS011_VerifyFooterLinksTest" duration-ms="632101" started-at="2022-05-12T17:56:23Z" finished-at="2022-05-12T18:06:55Z">
+        </test-method> <!-- TS002_VerifyMarketPlannerProfileAndSettingsOptionTest -->
+        <test-method status="PASS" signature="TS003_VerifyMarketPlannerExhibitorPortalOptionTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="TS003_VerifyMarketPlannerExhibitorPortalOptionTest" duration-ms="32038" started-at="2022-06-29T12:49:59Z" finished-at="2022-06-29T12:50:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS011_VerifyFooterLinksTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@27efef64]" name="tearDown" is-config="true" duration-ms="5347" started-at="2022-05-12T18:06:55Z" finished-at="2022-05-12T18:07:01Z">
+        </test-method> <!-- TS003_VerifyMarketPlannerExhibitorPortalOptionTest -->
+        <test-method status="PASS" signature="TS004_VerifyAllLinksUnderExhibitTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="TS004_VerifyAllLinksUnderExhibitTest" duration-ms="64644" started-at="2022-06-29T12:50:31Z" finished-at="2022-06-29T12:51:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyAllLinksUnderExhibitTest -->
+        <test-method status="PASS" signature="TS005_VerifyAllLinksUnderAboutTabTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="TS005_VerifyAllLinksUnderAboutTabTest" duration-ms="160353" started-at="2022-06-29T12:51:36Z" finished-at="2022-06-29T12:54:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyAllLinksUnderAboutTabTest -->
+        <test-method status="PASS" signature="TS006_VerifyAllHeaderChanelLinksTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="TS006_VerifyAllHeaderChanelLinksTest" duration-ms="148187" started-at="2022-06-29T12:54:16Z" finished-at="2022-06-29T12:56:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyAllHeaderChanelLinksTest -->
+        <test-method status="PASS" signature="TS007_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="TS007_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="58417" started-at="2022-06-29T12:56:44Z" finished-at="2022-06-29T12:57:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyAllSocialMediaLinksOnFooterTest -->
+        <test-method status="PASS" signature="TS008_VerifyFooterLinksTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="TS008_VerifyFooterLinksTest" duration-ms="531038" started-at="2022-06-29T12:57:43Z" finished-at="2022-06-29T13:06:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyFooterLinksTest -->
+        <test-method status="FAIL" signature="TS009_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="TS009_VerifyGlobalSearchFunctionalityTest" duration-ms="26840" started-at="2022-06-29T13:06:34Z" finished-at="2022-06-29T13:07:01Z">
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at PROD.AmericasMartSmokeTest_PROD.TS009_VerifyGlobalSearchFunctionalityTest(AmericasMartSmokeTest_PROD.java:534)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyGlobalSearchFunctionalityTest -->
+        <test-method status="PASS" signature="TS010_VerifyAllLinksUnderOpenYearRoundTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="TS010_VerifyAllLinksUnderOpenYearRoundTest" duration-ms="122688" started-at="2022-06-29T13:07:01Z" finished-at="2022-06-29T13:09:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyAllLinksUnderOpenYearRoundTest -->
+        <test-method status="PASS" signature="TS011_VerifyExhibitorDirectoryTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="TS011_VerifyExhibitorDirectoryTest" duration-ms="89283" started-at="2022-06-29T13:09:03Z" finished-at="2022-06-29T13:10:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyExhibitorDirectoryTest -->
+        <test-method status="FAIL" signature="TS012_VerifyAllLinksUnderMarketsAndEventsTabTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="TS012_VerifyAllLinksUnderMarketsAndEventsTabTest" duration-ms="86865" started-at="2022-06-29T13:10:33Z" finished-at="2022-06-29T13:12:00Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class ='imc-section']/div[1]/div[3]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class ='imc-section']/div[1]/div[3]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLAttendPage.getATLAttendTab(ATLAttendPage.java:43)
+	at PROD.AmericasMartSmokeTest_PROD.TS012_VerifyAllLinksUnderMarketsAndEventsTabTest(AmericasMartSmokeTest_PROD.java:359)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class ='imc-section']/div[1]/div[3]/div[1]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyAllLinksUnderMarketsAndEventsTabTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@3532ec19]" name="tearDown" is-config="true" duration-ms="4465" started-at="2022-06-29T13:12:00Z" finished-at="2022-06-29T13:12:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.AtlantaMarketSmokeTest_PROD -->
+      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
     </test> <!-- SequencialTest -->
   </suite> <!-- SmokeTestSuite -->
 </testng-results>

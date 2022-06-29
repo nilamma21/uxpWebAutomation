@@ -11,8 +11,8 @@
 			<class name="PROD.LagVegasMarketSmokeTest_PROD" />
 			<class name="PROD.AtlantaMarketSmokeTest_PROD" />
 			<class name="PROD.AmericasMartSmokeTest_PROD" />
-			<class name="PROD.AtlantaAppSmokeTest_PROD" />
- 			<class name="PROD.ExhibitorPortalSmokeTest_PROD" />
+			 <class name="PROD.AtlantaAppSmokeTest_PROD" /> 
+ 			<class name="PROD.ExhibitorPortalSmokeTest_PROD" /> 
 			<class name="PROD.SitecoreSmokeTest_PROD" />
 		</classes>
 	</test>

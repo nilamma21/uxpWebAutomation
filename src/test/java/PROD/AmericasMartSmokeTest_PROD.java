@@ -105,15 +105,15 @@ public class AmericasMartSmokeTest_PROD extends base {
 		lp = new UXPLoginPage(driver);
 		amhe = new AMHeaderLinksPage(driver);
 		utl = new Utility(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(8000);
-		//		lap.getIUnderstandBtn().click();
-		//		Thread.sleep(10000);
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(10000);
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -164,8 +164,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 	}
 
-	@Test(priority=12)
-	public void TS012_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	@Test(priority=7)
+	public void TS007_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-013: To verify the all social media links and it's redirection
@@ -205,7 +205,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		System.out.println("Instagram opened successfully");
 		driver.get(prop.getProperty("ammarturl"));*/
 
-
+		Thread.sleep(8000);
 		//Click on Youtube icon
 		amfl.getYoutubeIcon().click();
 
@@ -327,8 +327,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 
-	@Test(priority=7)
-	public void TS007_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
+	@Test(priority=12)
+	public void TS012_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T012: To verify links for Attend tab at Header
@@ -722,7 +722,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 
-/*	@AfterSuite
+	/*	@AfterSuite
 	public void sendEmail()
 	{
 		se = new SendEmail();

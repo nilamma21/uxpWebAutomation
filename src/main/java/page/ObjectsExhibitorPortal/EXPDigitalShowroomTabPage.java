@@ -19,8 +19,8 @@ public class EXPDigitalShowroomTabPage
 	By EXPCatalogFlipbooks = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[3]/a[1]"); 
 	By EXPJuniperData = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[4]/div[1]/a[1]");
 	By EXPYourDigiShowroomAllHeader = By.xpath("//div[@class='EPPageHeader_container__Jiq4V']/div[1]/div[4]/p[1]");
-	By EXPJuniperDataHeader = By.xpath("//div[@class='ds-section ds-form-section']/div[1]/form[1]/div[1]/h1[1]");
-	By EXPvalidateprofile = By.xpath("//main[@class='EPUpdateExhibitorProfile_main__UikME']"); //Locator to validate EXP Profile page
+	By EXPJuniperDataHeader = By.xpath("//h1[contains(text(),'Juniper Data')]");
+	By EXPvalidateprofile = By.xpath("//div[@class='mainContainer']"); //Locator to validate EXP Profile page
 	
 	public EXPDigitalShowroomTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub

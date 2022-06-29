@@ -122,9 +122,10 @@ public class ATLNewsAndTrendsTabPage
 		wait.until(ExpectedConditions.elementToBeClickable(atlPublicationsLibrary));
 		return driver.findElement(atlPublicationsLibrary);
 	}
-	public WebElement getATLPublicationsLibraryPageHeader() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlPublicationsLibraryHeader));
+	public WebElement getATLPublicationsLibraryPageHeader() throws InterruptedException {
+		Thread.sleep(7000);
+//		wait = new WebDriverWait (driver,20);
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(atlPublicationsLibraryHeader));
 		return driver.findElement(atlPublicationsLibraryHeader);
 	}
 	public WebElement getATLInTheNews() {
