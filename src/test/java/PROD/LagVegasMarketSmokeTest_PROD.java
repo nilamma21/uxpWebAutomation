@@ -373,8 +373,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Press Center section is displayed properly");
 	}
 
-	@Test(priority=06)
-	public void TS006_VerifyAllLinksUnderExploreMarketTabTest() throws InterruptedException, IOException
+	@Test(priority=12)
+	public void TS012_VerifyAllLinksUnderExploreMarketTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T006: To verify links for Explore Market tab at Header
@@ -948,8 +948,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore);
 	}
 	
-	@Test(priority=12)
-	public void TS012_VerifyHeaderChannelLinksTest() throws InterruptedException, IOException
+	@Test(priority=06)
+	public void TS006_VerifyHeaderChannelLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-: To verify header channel links
