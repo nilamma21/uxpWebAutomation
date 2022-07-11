@@ -9,7 +9,7 @@ trigger:
 # Set variables once
 variables:
   browser: chrome
-  version: 102
+  version: '102'
 
 pool:
   vmImage: windows-2019
