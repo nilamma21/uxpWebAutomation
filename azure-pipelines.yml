@@ -25,3 +25,5 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+    browser: $(browser) # Use the variable
+    version: $(version)
