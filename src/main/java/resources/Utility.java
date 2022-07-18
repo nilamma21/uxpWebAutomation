@@ -48,4 +48,19 @@ public class Utility extends base {
 		lp.getSignInBtn().click();
 
 	}
+public void verifyCloseBtnPopup() throws IOException, InterruptedException {
+		
+		lap = new UXPLandingPage(driver);
+		lp = new UXPLoginPage(driver);		
+		
+		
+		try {
+			lap.getCloseMarktAdBtn().click();
+			//lap.getCloseMarktAdBtn().click();
+			System.out.println("Pupup Closed Successfully !!");
+		}catch(Exception e) {
+			// TODO: handle exception
+			System.out.println("No Popup");
+		}
+			}
 }
