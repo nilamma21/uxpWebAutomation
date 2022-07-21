@@ -17,15 +17,15 @@ public class UXPFooterLinksNavigationPage {
 	By marketInfo = By.xpath("//a[@href='/market-info']"); //Locator for Market information in footer links
 	By pressCenter = By.xpath("//a[@href='/Market-Info/Press-Center']']"); //Locator for Press Center in footer links
 	By DownloadTheApp = By.xpath("//a[contains(text(),'Download the App')]"); //Locator for Download The App in footer links
-	By ContactUs = By.xpath("(//a[@href='/Contact-Us'])[position()=2]"); //Locator for Contact Us in footer links
-	By Careers = By.xpath("//a[@href='/Market-Info/Careers']"); //Locator for Careers in footer links
+	By ContactUs = By.xpath("(//a[contains(text(),'Contact Us')])[2]"); //Locator for Contact Us in footer links
+	By Careers = By.xpath("//a[@href='/market-info/careers']"); //Locator for Careers in footer links
 	By PrivacyPolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); // Locator for Privacy Policy in footer links
-	By TermsAndConditions = By.xpath("//a[contains(@href,'https://www.imcenters.com/terms-of-use/')]"); // Locator for Terms and Conditions in footer links
-	By AmericasMart = By.xpath("//a[contains(@href,'https://www.americasmart.com/')]"); //Locator for Americas Mart in footer links
-	By AtlantaApparel = By.xpath("//a[contains(@href,'https://www.atlanta-apparel.com/')]"); //Locator for Atlanta Apparel in footer links
-	By AtlantaMarket = By.xpath("//a[contains(@href,'https://www.atlantamarket.com/')]"); //Locator for Atlanta Matket in footer links
-	By HighPointMarket = By.xpath("//a[contains(@href,'https://www.imchighpointmarket.com')]"); //Locator for High Point Market in footer links
-	By lvapplink = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/')])[2]"); //Locator for Las Vegas Apparel footer link
+	By TermsAndConditions = By.xpath("//a[@href='https://www.imcenters.com/terms-of-use/']"); // Locator for Terms and Conditions in footer links
+	By AmericasMart = By.xpath("//a[@href='https://www.americasmart.com']"); //Locator for Americas Mart in footer links
+	By AtlantaApparel = By.xpath("//a[@href='https://www.atlanta-apparel.com']"); //Locator for Atlanta Apparel in footer links
+	By AtlantaMarket = By.xpath("//a[@href='https://www.atlantamarket.com']"); //Locator for Atlanta Matket in footer links
+	By HighPointMarket = By.xpath("//a[@href='https://www.imchighpointmarket.com']"); //Locator for High Point Market in footer links
+	By lvapplink = By.xpath("(//a[@href='https://www.lasvegas-apparel.com'])[2]"); //Locator for Las Vegas Apparel footer link
 	By InternationalMarketCenters = By.xpath("//a[contains(text(),'International Market Centers')]"); //Locator for International Market Centers in footer links
 	By JuniperMarket = By.xpath("//a[@href='https://www.junipermarket.com']"); //Locator for Juniper Market  in footer links
 	By facebookicon = By.xpath("//a[@href='https://www.facebook.com/lvmarket']//div//*[name()='svg']"); //Locator for Facebook link in footer
@@ -74,70 +74,70 @@ public class UXPFooterLinksNavigationPage {
 
 	public WebElement getHighPointMarket() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(HighPointMarket);
 
 	}
 
 	public WebElement getAtlantaMarket() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(AtlantaMarket);
 
 	}
 
 	public WebElement getAtlantaApparel() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(AtlantaApparel);
 
 	}
 
 	public WebElement getAmericasMart() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(AmericasMart);
 
 	}
 
 	public WebElement getInternationalMarketCenters() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(InternationalMarketCenters);
 
 	}
 
 	public WebElement getDownloadTheApp() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(DownloadTheApp);
 
 	}
 
 	public WebElement getContactUs() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(ContactUs);
 
 	}
 
 	public WebElement getCareers() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(Careers);
 
 	}
 
 	public WebElement getTermsAndConditions() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(TermsAndConditions);
 
 	}
 
 	public WebElement getPrivacyPolicy() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(PrivacyPolicy);
 
 	}

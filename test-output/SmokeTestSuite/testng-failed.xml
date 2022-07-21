@@ -5,9 +5,9 @@
     <classes>
       <class name="PROD.LagVegasMarketSmokeTest_PROD">
         <methods>
-          <include name="TS008_VerifyFooterLinksTest"/>
+          <include name="TS007_VerifyGlobalSearchFunctionalityTest"/>
           <include name="initialize"/>
-          <include name="tearDown"/>
+          <include name="TS011_VerifyAllLinksUnderYearRoundTabTest"/>
         </methods>
       </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
     </classes>
