@@ -3,23 +3,13 @@
 <suite name="Failed suite [SmokeTestSuite]">
   <test name="SequencialTest(failed)">
     <classes>
-      <class name="PROD.AtlantaAppSmokeTest_PROD">
+      <class name="PROD.LagVegasMarketSmokeTest_PROD">
         <methods>
-          <include name="TS010_VerifyAllLinksUnderExhibitTabTest"/>
-          <include name="TS005_VerifyExhibitorDirectoryTest"/>
-          <include name="TS013_VerifySocialMediaLinksTest"/>
-          <include name="tearDown"/>
-          <include name="TS006_VerifyAllLinksUnderMarketsTabTest"/>
-          <include name="TS012_VerifyFooterLinksTest"/>
-          <include name="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest"/>
-          <include name="TS008_VerifyAllLinksUnderAttendTabTest"/>
-          <include name="TS011_VerifyAllLinksUnderYearRoundTabTest"/>
-          <include name="TS004_VerifyGlobalSearchFunctionalityTest"/>
-          <include name="TS009_VerifyAllLinksUnderFashionGalleryTabTest"/>
-          <include name="TS001_VerifyMarketPlannerLoginTest"/>
+          <include name="TS008_VerifyFooterLinksTest"/>
           <include name="initialize"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
+      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
     </classes>
   </test> <!-- SequencialTest(failed) -->
 </suite> <!-- Failed suite [SmokeTestSuite] -->
