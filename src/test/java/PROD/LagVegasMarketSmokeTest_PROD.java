@@ -55,7 +55,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
-		//driver.get(prop.getProperty("lvmurl"));
+		driver.get(prop.getProperty("lvmurl"));
 		//Thread.sleep(15000);
 	}
 
@@ -513,16 +513,22 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		//Scroll till footer links
 
-		utl.scrollToElement(fl.getHighPointMarket());
+		utl.scrollToElement(fl.getmarketInfo());
 
 		//Click High Point Market link and verify results
-
+	/*	fl.getmarketInfo().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/market-info"));
+		System.out.println("Market info Page opened properly");
+		driver.get(prop.getProperty("lvmurl"));
+		utl.scrollToElement(fl.getmarketInfo());
+		
+		//fl.getHighPointMarket().click();
 		fl.getHighPointMarket().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("http://www.imchighpointmarket.com/"));
 		System.out.println("High Point Market page opened properly");
 		driver.get(prop.getProperty("lvmurl"));
-		utl.scrollToElement(fl.getHighPointMarket());
-
+		utl.scrollToElement(fl.getmarketInfo());
+*/
 
 		//Click Atlanta Market link and verify results
 
@@ -530,7 +536,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
 		System.out.println("Atlanta Market page opened properly");
 		driver.get(prop.getProperty("lvmurl"));
-		utl.scrollToElement(fl.getHighPointMarket());
+		utl.scrollToElement(fl.getmarketInfo());
 
 		//Click Atlanta Apparel link and verify results
 
@@ -538,7 +544,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
 		System.out.println("Atlanta Apparel page opened properly");
 		driver.get(prop.getProperty("lvmurl"));
-		utl.scrollToElement(fl.getHighPointMarket());
+		utl.scrollToElement(fl.getmarketInfo());
 
 		//Click Americas Mart link and verify results
 
@@ -547,7 +553,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
 		System.out.println("Americas Mart page opened properly");
 		driver.get(prop.getProperty("lvmurl"));
-		utl.scrollToElement(fl.getHighPointMarket());
+		utl.scrollToElement(fl.getmarketInfo());
 
 		//Click International Market Centers link and verify results
 
@@ -555,7 +561,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
 		System.out.println("International Market Centers page opened properly");
 		driver.get(prop.getProperty("lvmurl"));
-		utl.scrollToElement(fl.getHighPointMarket());
+		utl.scrollToElement(fl.getmarketInfo());
 
 		//Click Download The App link and verify results
 
@@ -563,7 +569,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Market App");
 		System.out.println("International Market Centers page opened properly");
 		driver.get(prop.getProperty("lvmurl"));
-		utl.scrollToElement(fl.getHighPointMarket());
+		utl.scrollToElement(fl.getmarketInfo());
 
 		//Click Download The App link and verify results
 
@@ -571,7 +577,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Market App");
 		System.out.println("Download App page opened properly");
 		driver.get(prop.getProperty("lvmurl"));
-		utl.scrollToElement(fl.getHighPointMarket());
+		utl.scrollToElement(fl.getmarketInfo());
 
 		//Click Contact Us link and verify results
 
@@ -579,7 +585,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(mi.getVerifyContactUs().getText(),"Contact Us");
 		System.out.println("Contact Us page opened properly");
 		driver.get(prop.getProperty("lvmurl"));
-		utl.scrollToElement(fl.getHighPointMarket());
+		utl.scrollToElement(fl.getmarketInfo());
 
 		//Click Careers link and verify results
 
@@ -845,7 +851,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		String winHandleBefore = driver.getWindowHandle();
 
 		//Scroll till footer links
-		utl.scrollToElement(fl.getHighPointMarket());
+		utl.scrollToElement(fl.getmarketInfo());
 
 		//In app footer click on 'Facebook' icon and verify results
 		fl.getFacebookIcon().click();
