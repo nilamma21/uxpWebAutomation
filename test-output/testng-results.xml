@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Failed suite [SmokeTestSuite]" duration-ms="124449" started-at="2022-07-21T15:06:29Z" finished-at="2022-07-21T15:08:34Z">
+  <suite name="SmokeTestSuite" duration-ms="576577" started-at="2022-07-25T13:24:51Z" finished-at="2022-07-25T13:34:28Z">
     <groups>
     </groups>
-    <test name="SequencialTest(failed)" duration-ms="124449" started-at="2022-07-21T15:06:29Z" finished-at="2022-07-21T15:08:34Z">
-      <class name="PROD.LagVegasMarketSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@754ba872]" name="initialize" is-config="true" duration-ms="43240" started-at="2022-07-21T20:36:29Z" finished-at="2022-07-21T20:37:12Z">
+    <test name="SequencialTest" duration-ms="576577" started-at="2022-07-25T13:24:51Z" finished-at="2022-07-25T13:34:28Z">
+      <class name="PROD.AtlantaMarketSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@4dfa3a9d]" name="initialize" is-config="true" duration-ms="43035" started-at="2022-07-25T18:54:51Z" finished-at="2022-07-25T18:55:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS007_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@754ba872]" name="TS007_VerifyGlobalSearchFunctionalityTest" duration-ms="17804" started-at="2022-07-21T20:37:12Z" finished-at="2022-07-21T20:37:30Z">
+        <test-method status="PASS" signature="TS011_VerifyFooterLinksTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@4dfa3a9d]" name="TS011_VerifyFooterLinksTest" duration-ms="533504" started-at="2022-07-25T18:55:34Z" finished-at="2022-07-25T19:04:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyGlobalSearchFunctionalityTest -->
-        <test-method status="PASS" signature="TS011_VerifyAllLinksUnderYearRoundTabTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@754ba872]" name="TS011_VerifyAllLinksUnderYearRoundTabTest" duration-ms="63348" started-at="2022-07-21T20:37:30Z" finished-at="2022-07-21T20:38:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_VerifyAllLinksUnderYearRoundTabTest -->
-      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
-    </test> <!-- SequencialTest(failed) -->
-  </suite> <!-- Failed suite [SmokeTestSuite] -->
+        </test-method> <!-- TS011_VerifyFooterLinksTest -->
+      </class> <!-- PROD.AtlantaMarketSmokeTest_PROD -->
+    </test> <!-- SequencialTest -->
+  </suite> <!-- SmokeTestSuite -->
 </testng-results>
