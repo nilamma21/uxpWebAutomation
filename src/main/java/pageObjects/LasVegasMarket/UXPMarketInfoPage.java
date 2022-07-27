@@ -27,6 +27,8 @@ public class UXPMarketInfoPage {
 	By VerifyAboutLasVegasMarket = By.xpath("//a[@title = 'Register to Attend']"); // Locator for verification of About Las Vegas Market page
 	By VerifyFAQs = By.xpath("//div[@class = 'imc-section--content-with-image']/div[1]/div[1]/h2[1]"); // Locator for verification of FAQs page
 	By VerifyContactUs = By.xpath("//ul[@class = 'imc-breadcrumb']/li[2]/a[1]"); // Locator for verification of Contact Us page
+	By VerifyContactUsATL = By.xpath("//ul[@class = 'imc-breadcrumb']/li[3]/a[1]"); // Locator for verification of Contact Us page
+	
 	By VerifyMarketInfoSection = By.xpath("//div[@class = 'imc-section']/div[1]/div[1]/div[2]"); //Locator for verification of Market Info section
 	By VerifyRegistrationDetailsProd = By.xpath("//a[@title = 'Register Now']"); //Locator for verification of Registration Details
 	By VerifyFAQsProd = By.xpath("//div[@class = 'imc-section--content-with-image']/div[1]/div[1]/h1[1]"); // Locator for verification of FAQs page on Prod
@@ -146,6 +148,14 @@ public class UXPMarketInfoPage {
 		return driver.findElement(VerifyFAQsProd);
 		
 	}
+	public WebElement getverifyContactUsATL(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyContactUsATL));
+		return driver.findElement(VerifyContactUsATL);
+		
+	}
+		
+	
 	
 	
 }

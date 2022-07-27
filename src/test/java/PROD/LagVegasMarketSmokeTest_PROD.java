@@ -511,117 +511,180 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click Market Info link and verify results
 		fl.getmarketInfo().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/market-info"));
+		System.out.println("Market Info Page open successfully");
+		driver.get(prop.getProperty("lvmurl"));
+		utl.scrollToElement(fl.getmarketInfo());
+		
+		// Click on Press Center
+		fl.getpressCenter().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Market-Info/Press-Center"));
+		System.out.println("Press center Page open successfully");
 		driver.get(prop.getProperty("lvmurl"));
 		utl.scrollToElement(fl.getmarketInfo());
 
-		//Click Atlanta Market link and verify results
-		fl.getAtlantaMarket().click();
-
-		//Switch to new tab
-		String winHandleBefore3 = driver.getWindowHandle();
-
-		for(String winHandle3 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle3);}
-
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore3);
+		// Click Download The App link and verify results
+		fl.getDownloadTheApp().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market App");
+		System.out.println("Download App Page open successfully");
+		driver.get(prop.getProperty("lvmurl"));
 		utl.scrollToElement(fl.getmarketInfo());
 
-		//Click Atlanta Apparel link and verify results
-		fl.getAtlantaApparel().click();
-
-		//Switch to new tab
-		String winHandleBefore4 = driver.getWindowHandle();
-
-		for(String winHandle4 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle4);}
-
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore4);
+		// Click on Our Brand link
+		fl.getOurBrandsATL().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/exhibitor/directory"));
+		System.out.println("Our Brands Page open successfully");
+		driver.get(prop.getProperty("lvmurl"));
+		utl.scrollToElement(fl.getmarketInfo());
+		
+		// Click Contact Us link and verify results
+		fl.getContactUs().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/contact-us"));
+		System.out.println("Contact us Page open successfully");
+		driver.get(prop.getProperty("lvmurl"));
+		utl.scrollToElement(fl.getmarketInfo());
+		
+		// Click Careers link and verify results
+		fl.getCareersATL().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
+		// driver.get(prop.getProperty("atlappurl"));
+		System.out.println("Careers Page open successfully");
+		driver.get(prop.getProperty("lvmurl"));
 		utl.scrollToElement(fl.getmarketInfo());
 
-		//Click International Market Centers link and verify results
-		fl.getInternationalMarketCenters().click();
-
-		//Switch to new tab
-		String winHandleBefore6 = driver.getWindowHandle();
-
-		for(String winHandle6 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle6);}
-
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore6);
-		utl.scrollToElement(fl.getmarketInfo());
-
-		//Click on High Point Market link
-		fl.getHighPointMarket().click();
-
-		//Switch to new tab
+		// Click on Terms & condition link
+		fl.getTermsAndConditions().click();
+		// Switch to new tab
 		String winHandleBefore7 = driver.getWindowHandle();
-
-		for(String winHandle7 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle7);}
-
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
+		for (String winHandle7 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle7);
+		}
+		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
+		System.out.println("Terms And Conditions Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore7);
-		utl.scrollToElement(fl.getmarketInfo());
 
-		//Click Download The App link and verify results
-		fl.getDownloadTheApp().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Market App");
+		// Click Privacy Policy and verify results
 		driver.get(prop.getProperty("lvmurl"));
 		utl.scrollToElement(fl.getmarketInfo());
-
-		//Click Contact Us link and verify results
-		fl.getContactUs().click();
-		Assert.assertEquals(mi.getVerifyContactUs().getText(),"Contact Us");
-		driver.get(prop.getProperty("lvmurl"));
-		utl.scrollToElement(fl.getmarketInfo());
-
-		//Click Careers link and verify results
-		fl.getCareers().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Careers");
-		driver.get(prop.getProperty("lvmurl"));
-		utl.scrollToElement(fl.getmarketInfo());
-
-		//Click on Terms & condition link
-		fl.getTermsAndConditions().click();
-
-		//Switch to new tab
-		String winHandleBefore1 = driver.getWindowHandle();
-
-		for(String winHandle1 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle1);}
-
-		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(),"TERMS OF USE");
-		driver.close();
-		driver.switchTo().window(winHandleBefore1);
-
-		//Click Privacy Policy and verify results
-		driver.get(prop.getProperty("lvmurl"));
-		utl.scrollToElement(fl.getLVMPrivacyPolicyPLink());
-
-		//Click Privacy Policy link and verify results
+		// Click Privacy Policy link and verify results
 		fl.getLVMPrivacyPolicyPLink().click();
+		String winHandleBefore8 = driver.getWindowHandle();
+		for (String winHandle8 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle8);
+		}
+		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "IMC PRIVACY STATEMENT");
+		System.out.println("Privacy Policy Page open successfully");
+		driver.close();
+		driver.switchTo().window(winHandleBefore8);
+		driver.get(prop.getProperty("lvmurl"));
+		utl.scrollToElement(fl.getmarketInfo());
+		
+		// Click Americas Mart link and verify results
+		fl.getAmericasMart_ATLApp().click();
+		String winHandleBefore9 = driver.getWindowHandle();
+		for (String winHandle9 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle9);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
+		System.out.println("AmericasMart Page open successfully");
+		driver.close();
+		driver.switchTo().window(winHandleBefore9);
+		driver.get(prop.getProperty("lvmurl"));
+		utl.scrollToElement(fl.getmarketInfo());
 
+		
+		// Click Atlanta Market link and verify results
+		fl.getAtlantaMarket().click();
+		// Switch to new tab
+		String winHandleBefore3 = driver.getWindowHandle();
+		for (String winHandle3 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle3);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
+		System.out.println("Atlanta Market Page open successfully");
+		driver.close();
+		driver.switchTo().window(winHandleBefore3);
+		driver.get(prop.getProperty("lvmurl"));
+		utl.scrollToElement(fl.getmarketInfo());
+		
+
+		// Click Atlanta Apparel link and verify results
+		fl.getAtlantaApparel().click();
+		// Switch to new tab
 		String winHandleBefore2 = driver.getWindowHandle();
-
-		for(String winHandle2 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle2);}
-
-		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(),"IMC PRIVACY STATEMENT");
+		for (String winHandle2 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle2);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
+		System.out.println("Atlanta App Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore2);
+		driver.get(prop.getProperty("lvmurl"));
 		utl.scrollToElement(fl.getmarketInfo());
 
-		//Click Americas Mart link and verify results
-		fl.getAmericasMart().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
+		// Click on High Point Market link
+		// Switch to new tab
+		String winHandleBefore4 = driver.getWindowHandle();
+		fl.getHighPointMarket().click();
+		for (String winHandle4 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle4);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
+		System.out.println("High point Market Page open successfully");
+		driver.close();
+		driver.switchTo().window(winHandleBefore4);
 		driver.get(prop.getProperty("lvmurl"));
+		utl.scrollToElement(fl.getmarketInfo());
+
+		// Click on LVA Market link
+		// Switch to new tab
+		fl.getlvmlink_ATLM().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
+		System.out.println("Las Vegas App Page open successfully");
+		driver.get(prop.getProperty("lvmurl"));
+		utl.scrollToElement(fl.getmarketInfo());
+
+		/*// Click on LVM Market link
+		// Switch to new tab
+		String winHandleBefore11 = driver.getWindowHandle();
+		fl.getlvmlink_ATL().click();
+		for (String winHandle11 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle11);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
+		System.out.println("Las Vegas Market Page open successfully");
+		driver.close();
+		driver.switchTo().window(winHandleBefore11);
+		utl.scrollToElement(fl.getmarketInfo());*/
+
+		// Click International Market Centers link and verify results
+		fl.getInternationalMarketCenters().click();
+		// Switch to new tab
+		String winHandleBefore11 = driver.getWindowHandle();
+		for (String winHandle11 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle11);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
+		driver.close();
+		System.out.println("IMC Market Page open successfully");
+		driver.switchTo().window(winHandleBefore11);
+		driver.get(prop.getProperty("lvmurl"));
+		utl.scrollToElement(fl.getmarketInfo());
+
+		// Click Juniper Market Centers link and verify results
+		fl.getJuniperMarket().click();
+		// Switch to new tab
+		String winHandleBefore12 = driver.getWindowHandle();
+		for (String winHandle12 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle12);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
+		driver.close();
+		System.out.println("Juniper Market Page open successfully");
+		driver.switchTo().window(winHandleBefore12);
+		driver.get(prop.getProperty("lvmurl"));
+		utl.scrollToElement(fl.getmarketInfo());
+		
 	}
 
 	@Test(priority=9)
@@ -816,13 +879,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
-
 		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfo());
-
 		//In app footer click on 'Facebook' icon and verify results
 		fl.getFacebookIcon().click();
-
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
@@ -830,16 +890,12 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Thread.sleep(10000);
 		//Verify that 'LVM Facebook' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/lvmarket"));
-
 		// Close the new window, if that window no more required
 		driver.close();
-
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
-
-		/*		//Click on Instagram icon
-		fl.getInstagramIcon().click();
-
+		//Click on Instagram icon
+		/*fl.getInstagramIcon().click();
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
@@ -847,12 +903,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Thread.sleep(10000);
 		//Verify that 'LVM Instagram' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.instagram.com/lasvegasmarket/"));
-
 		// Close the new window, if that window no more required
 		driver.close();
-
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore);*/
+		driver.switchTo().window(winHandleBefore);
 
 		//Click on You Tube icon
 		fl.getYouTubeIcon().click();
@@ -871,7 +925,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 
-		/*		//Click on Pinterest icon
+				//Click on Pinterest icon
 		fl.getPinterestIcon().click();
 
 		// Switch to new window opened
@@ -903,7 +957,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.close();
 
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore);*/
+		driver.switchTo().window(winHandleBefore);
 
 		//Click on LinkedIn icon
 		fl.getLinkedInIcon().click();
@@ -920,7 +974,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.close();
 
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore);
+		driver.switchTo().window(winHandleBefore);*/
 	}
 
 	@Test(priority=06)
@@ -954,12 +1008,12 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Americas Mart channel link is working properly.");
 		driver.get(prop.getProperty("lvmurl"));
 
-		/*//Click IMC High Point Market channel link and verify result
+		//Click IMC High Point Market channel link and verify result
 
-		hd.getAtlantaMarket().click();
-		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
-		System.out.println("Atlanta Market channel link is working properly.");
-		driver.get(prop.getProperty("lvmurl"));*/
+		hd.getHighPoint().click();
+		Assert.assertTrue(driver.getTitle().contains("High Point Fall Market"));
+		System.out.println("IMC High Point channel link is working properly.");
+		driver.get(prop.getProperty("lvmurl"));
 
 		//Click Lav Vegas Market channel link and verify result
 
