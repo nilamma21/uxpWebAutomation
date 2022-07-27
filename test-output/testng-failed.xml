@@ -5,7 +5,7 @@
     <classes>
       <class name="PROD.AtlantaMarketSmokeTest_PROD">
         <methods>
-          <include name="TS011_VerifyFooterLinksTest"/>
+          <include name="TS010_VerifyAllSocialMediaLinksOnFooterTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- PROD.AtlantaMarketSmokeTest_PROD -->

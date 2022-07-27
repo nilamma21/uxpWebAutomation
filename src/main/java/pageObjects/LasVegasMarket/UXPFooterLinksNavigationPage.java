@@ -16,7 +16,11 @@ public class UXPFooterLinksNavigationPage {
 
 	By marketInfo = By.xpath("//a[@href='/market-info']"); //Locator for Market information in footer links
 	By marketInfoATL = By.xpath("//a[@href='/Markets']"); //Locator for Market information in footer links
+	By marketInfoAMC = By.xpath("//a[@href='/about']"); //Locator for Market information in footer links AMC
+	
 	By pressCenter = By.xpath("//a[@href='/Market-Info/Press-Center']"); //Locator for Press Center in footer links
+	By pressCenterAMC = By.xpath("//a[@href='/About/Press-Center']"); //Locator for Press Center in footer links
+	
 	By pressCenterATL = By.xpath("//a[@href='/Markets/Press-Center']"); //Locator for Press Center in footer links
 	By ourBrandsATL = By.xpath("//a[@href='/exhibitor/directory']"); //Locator for Our brands in footer links ATL
 	
@@ -43,9 +47,13 @@ public class UXPFooterLinksNavigationPage {
 	By JuniperMarket = By.xpath("//a[@href='https://www.junipermarket.com']"); //Locator for Juniper Market  in footer links
 	By facebookicon = By.xpath("//a[@href='https://www.facebook.com/lvmarket']//div//*[name()='svg']"); //Locator for Facebook link in footer
 	By instagramicon =  By.xpath("//a[@href='https://www.instagram.com/lasvegasmarket/']//div//*[name()='svg']"); //Locator for Instagram link in footer
+	By instagramiconATLM =  By.xpath("//a[@href='https://www.instagram.com/americasmartatl/']//div//*[name()='svg']"); //Locator for Instagram link in footer
+	
 	By youtubeicon = By.xpath("//a[@href='https://www.youtube.com/channel/UCh8pZYxnmh7Wjrnf3d_OsWg']//div//*[name()='svg']"); //Locator You Tube icon
 	By pinteresticon = By.xpath("//a[@href='https://www.pinterest.com/lasvegasmarket/']//div//*[name()='svg']"); //Locator for Pinterest icon
 	By twittericon = By.xpath("//a[@href='https://twitter.com/lasvegasmarket']//div//*[name()='svg']"); //Locator for Twitter icon
+	By twittericonATLM = By.xpath("//a[@href='https://twitter.com/americasmartatl']//div//*[name()='svg']"); //Locator for Twitter icon
+	
 	By linkedinicon = By.xpath("//a[@href='https://www.linkedin.com/company/las-vegas-market']//div//*[name()='svg']"); //Locator for LinkedIn icon
 	By footerLVMLogo = By.xpath("//img[@src='https://www.lasvegasmarket.com/-/media/Channel-Logos/LVM-footer.svg']"); //Locator for Footer LVM logo
 	
@@ -272,7 +280,22 @@ public class UXPFooterLinksNavigationPage {
 		Thread.sleep(10000);
 		return driver.findElement(lvmlink_ATLM);
 	}	
-		
+	public WebElement getInstagramiconATLM() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(instagramiconATLM);
+	}	
+	public WebElement gettwittericonATLM() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(twittericonATLM);
+	}	
+	public WebElement marketInfoAMC() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(marketInfoAMC);
+	}		
+	public WebElement getpressCenterAMC() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(pressCenterAMC);
+	}	
 	
 }
 

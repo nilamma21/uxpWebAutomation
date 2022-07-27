@@ -109,11 +109,11 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 
 		//Navigate to Atlanta Apparel site
-		//driver.manage().window().maximize();
+		/*//driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlappurl"));;
 		Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(5000);
+		Thread.sleep(5000);*/
 	}
 
 	@Test(priority=1)
@@ -712,9 +712,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlva=new UXPAttendPage(driver);
 		atlExhi=new ATLAppExhibitTabPage(driver);
 		atlexh=new ATLExhibitPage(driver);
+		el=new EXPLoginPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//Click on Exhibit Tab
+		/*//Click on Exhibit Tab
 		atlva.getAttend().click();
 		System.out.println("Click on Exhibit Tab");
 		//CLick Exhibit with us Link 
@@ -749,7 +750,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Exhibit in Social Occasion"));	
 		System.out.println("Verify Exhibit In Social Occasion ");
 
-
+*/
 		//Click on Exhibit Tab
 		atlva.getAttend().click();
 		System.out.println("Click on Exhibit Tab");
@@ -832,23 +833,26 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Click on Year Round Tab");
 		//CLick AmericasMart Link 
 		atly.getYearRound().click();
-		System.out.println("CLick AmericasMart Link ");
-		//Verify MaricasMart Link 
-		Thread.sleep(4000);
-		Assert.assertTrue(atlm.getATLAppHeaders().getText().contains("Open Year Round"));	
-		System.out.println("Verify AmericasMart Link ");
-
-		driver.navigate().back();
-		Thread.sleep(5000);
 		//Click on Year Round Tab
 		atly.getYearRoundTab().click();
-		System.out.println("Click on Year Round Tab");
+		String winHandleBefore5 = driver.getWindowHandle();
+		for (String winHandle5 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle5);
+		}
+		//Thread.sleep(5000);
+		//Assert.assertTrue(driver.getCurrentUrl().contains("Open Year Round at AmericasMart"));
+		Assert.assertTrue(atlm.getATLAppHeaders().getText().contains("Open Year Round"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore5);
+		
+		/*driver.get(prop.getProperty("atlappurl"));
+		atly.getYearRoundTab().click();*/
+		atly.getYearRoundTab().click();
 		//CLick Shop The Mart Link 
 		atly.getLasVegasDesignCenter().click();
 		System.out.println("CLick Shop The Mart Link ");
 		//Verify Shop The Mart Link 
 		Thread.sleep(4000);
-
 		Assert.assertTrue(atlyr.getShopTheMart().getText().contains("SHOP THE BEST KEPT SECRET IN JEWELRY & FASHION"));	
 		System.out.println("Verify Shop The Mart page ");
 
@@ -1087,10 +1091,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		// Close the new window, if that window no more required
 		driver.close();
 
-		/*// Switch back to original browser (first window)
+		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 
-		//Click on twitter Icon
+		/*//Click on twitter Icon
 		atlfo.gettwittericonfooter().click();
 		String winHandleBefore1 = driver.getWindowHandle();
 		for(String winHandle : driver.getWindowHandles()){
@@ -1098,7 +1102,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		}
 		Thread.sleep(10000);
 		//Verify that 'Atlapp Facebook' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.twitter.com/apparelmarkets/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://twitter.com/atlantaapparel"));
 
 		// Close the new window, if that window no more required
 		driver.close();
@@ -1120,9 +1124,9 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore2);*/
+		driver.switchTo().window(winHandleBefore2);
 
-		/*//Click on Youtube Icon
+		//Click on Youtube Icon
 		atlfo.getyoutubefootericon().click();
 		String winHandleBefore3 = driver.getWindowHandle();
 		for(String winHandle : driver.getWindowHandles()){
@@ -1136,17 +1140,17 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore3);*/
+		driver.switchTo().window(winHandleBefore3);
 
-		/*//Click on SnapChat Icon
-		atlfo.getsnapchatfooter.click();
+		//Click on SnapChat Icon
+		atlfo.getsnapchatfooter().click();
 		String winHandleBefore4 = driver.getWindowHandle();
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
 		Thread.sleep(10000);
-		//Verify that 'Atlapp Facebook' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.snapchat.com/apparelmarkets/"));
+		//Verify that 'Atlapp Snapchat' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.snapchat.com/add/atlantaapparel"));
 
 		// Close the new window, if that window no more required
 		driver.close();

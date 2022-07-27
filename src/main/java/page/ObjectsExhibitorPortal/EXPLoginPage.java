@@ -43,10 +43,11 @@ public class EXPLoginPage {
 		return driver.findElement(signinbtn);		
 	}
 
-	public WebElement getVerifyExpHomePage() {
+	public WebElement getVerifyExpHomePage() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(VerifyExpHomePage));
+		/*wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyExpHomePage));*/
+		Thread.sleep(10000);
 		return driver.findElement(VerifyExpHomePage);		
 	}
 	

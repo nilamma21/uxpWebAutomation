@@ -15,9 +15,11 @@
 			<class name="PROD.ExhibitorPortalSmokeTest_PROD" />
 			<class name="PROD.SitecoreSmokeTest_PROD" /> -->
 			
-		<class name="PROD.AtlantaMarketSmokeTest_PROD" />
+<class name="PROD.AtlantaMarketSmokeTest_PROD" />
 			<methods>
-			<include name="TS011_VerifyFooterLinksTest" />
+			<!-- <include name="TS001_VerifyMarketPlannerLoginTest" />
+			<include name="TS010_VerifyAllLinksUnderExhibitTabTest" /> -->
+			<!-- <include name="TS005_VerifyAllLinksUnderAboutTabTest" /> -->
 			</methods>
 			
 		</classes>

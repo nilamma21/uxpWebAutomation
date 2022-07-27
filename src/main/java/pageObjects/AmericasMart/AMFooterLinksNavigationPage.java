@@ -15,7 +15,7 @@ public class AMFooterLinksNavigationPage {
 	public WebDriverWait wait;
 
 	By FacebookIcon = By.xpath("//a[@href = 'https://www.facebook.com/AmericasmartAtl']"); // Locator for Facebook icon in footer links
-	By TwitterIcon = By.xpath("//a[@href='https://twitter.com/americasmartatl']']"); // Locator for Twitter icon in footer links
+	By TwitterIcon = By.xpath("//a[@href='https://twitter.com/americasmartatl']"); // Locator for Twitter icon in footer links
 	By InstagramIcon = By.xpath("//a[@href='https://www.instagram.com/americasmartatl/'])[position()=2]']"); // Locator for Instagram icon in footer links
 	By YoutubeIcon = By.xpath("//a[@href='https://www.youtube.com/user/AmericasMart']"); // Locator for You Tube icon in footer links
 	By internationalmarketcenters = By.xpath("//a[@href='https://imcenters.com/']"); //Locator for International Market Centers in footer links

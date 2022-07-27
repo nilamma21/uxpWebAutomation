@@ -70,11 +70,11 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			lap = new UXPLandingPage(driver);
 
 		//Navigate to Atlanta Market site
-		driver.manage().window().maximize();
+	/*	driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(3000);
+		Thread.sleep(3000);*/
 		//	lap.getCloseMarktAdBtn().click();
 	}
 
@@ -94,8 +94,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(5000);
-		//		lap.getIUnderstandBtn().click();
-		//		Thread.sleep(3000);
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(3000);
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -483,8 +483,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("atlmrkturl"));
 
-		/*		//Click on Instagram icon
-		fl.getInstagramIcon().click();
+				//Click on Instagram icon
+	/*	fl.getInstagramiconATLM().click();
 
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
@@ -492,10 +492,10 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		}
 		Thread.sleep(10000);
 		//Verify that 'ATL Instagram' page should be displayed
-		Assert.assertTrue(driver.getCurrentatlmrkturl().contains("https://www.instagram.com/americasmartatl/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.instagram.com/americasmartatl/"));
 
 		driver.get(prop.getProperty("atlmrkturl"));
-		 */
+		 
 
 		//Click on You Tube icon
 		atlfl.getYouTubeIcon().click();
@@ -506,15 +506,14 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("atlmrkturl"));
 
-		/*//Click on Twitter icon
-		fl.getTwitterIcon().click();
+		//Click on Twitter icon
+		fl.gettwittericonATLM().click();
 
 		Thread.sleep(10000);
 		//Verify that 'ATL Twitter' page should be displayed
-		Assert.assertTrue(driver.getCurrentatlmrkturl().contains("https://www.twitter.com/americasmartatl")); 
-
-		driver.get(prop.getProperty("atlmrkturl"));
-		 */
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.twitter.com/americasmartatl")); 
+		driver.get(prop.getProperty("atlmrkturl"));*/
+		 
 	}
 
 	@Test(priority= 11)
