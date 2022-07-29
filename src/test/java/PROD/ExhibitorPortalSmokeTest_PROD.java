@@ -12,14 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import page.ObjectsExhibitorPortal.EXPApplicationsAndLeasesTabPage;
-import page.ObjectsExhibitorPortal.EXPDigitalShowroomTabPage;
-import page.ObjectsExhibitorPortal.EXPFooterLinksPage;
-import page.ObjectsExhibitorPortal.EXPLoginPage;
-import page.ObjectsExhibitorPortal.EXPMarketTabPage;
-import page.ObjectsExhibitorPortal.EXPNotificationsTabPage;
-import page.ObjectsExhibitorPortal.EXPRegistrationAndServicesTabPage;
-import page.ObjectsExhibitorPortal.EXPSettingsPage;
+import pageObjects.ExhibitorPortal.*;
 import pageObjects.AmericasMart.AMHeaderLinksPage;
 import pageObjects.AmericasMart.AMOpenYearRoundPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
@@ -219,7 +212,6 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(7000);
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 		// Close the new window, if that window no more required
@@ -242,7 +234,6 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(7000);
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 		// Close the new window, if that window no more required
@@ -261,7 +252,6 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(7000);
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 		// Close the new window, if that window no more required
@@ -279,7 +269,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(7000);
+
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.expotoolkit.com/"));
 		System.out.println("Expo Tool Kit page verified successfully");
 		driver.close();

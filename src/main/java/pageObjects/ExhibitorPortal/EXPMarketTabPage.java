@@ -1,4 +1,4 @@
-package ExhibitorPortal;
+package pageObjects.ExhibitorPortal;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,13 +10,13 @@ public class EXPMarketTabPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By EXPMarketTab = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[1]/div[1]/button[2]"); // Locator for Market tab
+	By EXPMarketTab = By.xpath("//button[contains(text(),'Markets')]"); // Locator for Market tab
 	By EXPManageYourMarket = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[2]/div[1]/a[1]"); // Locator for Manage Your Market
 	By EXPExhibitorResources = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[2]/div[2]/a[1]");//Locator for Exhibitor Resources
 	By EXPMarket = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[1]/a[1]");//Locator for Market
-	By EXPManageMarketHeader = By.xpath("//div[@class='mainContainer']/section[1]/div[1]/div[1]/div[1]/h1[1]");//Locator for Market
-	By EXPExhibitorResourcesHeader = By.xpath("//div[@class='EPPageHeader_container__Jiq4V']/div[1]/div[4]/p[1]");
-	By EXPMarketHeader = By.xpath("//div[@class='EPPageHeader_container__Jiq4V']/div[1]/div[4]/p[1]");
+	By EXPManageMarketHeader = By.xpath("//h2[contains(text(), 'Manage Your Markets')]");//Locator for Market
+	By EXPExhibitorResourcesHeader = By.xpath("//p[contains(text(), 'Exhibitor Resources')]");
+	By EXPMarketHeader = By.xpath("//p[contains(text(), 'Manage')]");
 	
 	public EXPMarketTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -24,8 +24,9 @@ public class EXPMarketTabPage {
 	} 
 
 	public WebElement getEXPMarketTab() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(EXPMarketTab));
+		Thread.sleep(7000);
+//		wait = new WebDriverWait (driver,20);
+//		wait.until(ExpectedConditions.elementToBeClickable(EXPMarketTab));
 		return driver.findElement(EXPMarketTab);
 	}
 	public WebElement getEXPManageYourMarket() throws InterruptedException {

@@ -59,6 +59,7 @@ public class TestListeners extends base implements ITestListener {
 
 	public void onTestSuccess(ITestResult arg0) {
 		// TODO Auto-generated method stub
+		String testMethodName = arg0.getName().toString().trim();
 		System.out.println("PASSED- "+testMethodName);
 		test.log(Status.PASS, "Test Passed");
 	}

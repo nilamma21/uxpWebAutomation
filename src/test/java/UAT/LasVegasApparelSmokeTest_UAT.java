@@ -9,13 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import page.ObjectsExhibitorPortal.EXPApplicationsAndLeasesTabPage;
-import page.ObjectsExhibitorPortal.EXPDigitalShowroomTabPage;
-import page.ObjectsExhibitorPortal.EXPLoginPage;
-import page.ObjectsExhibitorPortal.EXPMarketTabPage;
-import page.ObjectsExhibitorPortal.EXPNotificationsTabPage;
-import page.ObjectsExhibitorPortal.EXPRegistrationAndServicesTabPage;
-import page.ObjectsExhibitorPortal.EXPSettingsPage;
+import pageObjects.ExhibitorPortal.*;
 import pageObjects.AmericasMart.AMHeaderLinksPage;
 import pageObjects.AmericasMart.AMOpenYearRoundPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;

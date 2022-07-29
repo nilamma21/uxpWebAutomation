@@ -29,23 +29,33 @@ public class Utility extends base {
 		return element;
 	}
 
-	
+
 	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
 		// The purpose of this test case to verify:-
 		// TS1- Login to Market Planner
-		
+
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);		
-		
+
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
 
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
-		
+
 		lp.getSignInBtn().click();
 
+	}
+	public void verifyCloseBtnPopup() throws IOException, InterruptedException {
+
+		lap = new UXPLandingPage(driver);		
+
+		try {
+			lap.getCloseMarktAdBtn().click();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

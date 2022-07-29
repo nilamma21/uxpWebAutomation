@@ -12,7 +12,7 @@ public class UXPExploreMarketPage {
 	
 	By exploremarkettab = By.xpath("//a[contains(text(),'Explore Market')]"); //Locator for Explore Market tab
 	By explorelvm = By.xpath("//a[contains(text(),'Explore Las Vegas Market')]"); //Locator for Explore LVM Sub-menu
-	By webnevnts = By.xpath("//a[contains(text(),'Webinars & Events')]"); //Locator for Webinars & Events sub-menu
+	By webnevnts = By.xpath("//a[contains(text(),'Events and Seminars')]"); //Locator for Webinars & Events sub-menu
 	By showspecials = By.xpath("//a[contains(text(),'Show Specials')]"); //Locator for Show Specials sub-menu
 	By virtualresources = By.xpath("//a[contains(text(),'Virtual Resources')]"); //Locator for Virtual Resources sub-menu
 	By keydestn = By.xpath("//a[contains(text(),'Key Destinations')]");//Locator for Key Destinations sub-menu
