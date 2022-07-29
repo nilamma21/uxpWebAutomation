@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import page.ObjectsExhibitorPortal.EXPLoginPage;
+import pageObjects.ExhibitorPortal.EXPLoginPage;
 import pageObjects.AmericasMart.AMAboutTabPage;
 import pageObjects.AmericasMart.AMExhibitTabPage;
 import pageObjects.AmericasMart.AMFooterLinksNavigationPage;
@@ -170,7 +170,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
 		amexh = new AMExhibitTabPage(driver);
-		el = new EXPLoginPage(driver);
+		el = new pageObjects.ExhibitorPortal.EXPLoginPage(driver);
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 

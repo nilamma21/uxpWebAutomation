@@ -1,4 +1,4 @@
-package page.ObjectsExhibitorPortal;
+package pageObjects.ExhibitorPortal;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
