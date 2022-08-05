@@ -69,8 +69,8 @@ public class base {
 			//WebDriverManager.chromedriver().driverVersion(prop.getProperty("driverversion")).setup();
 
 			//Checks for the latest browser version
-			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver_102.exe");
-			WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver_104.exe");
+			//WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		}
