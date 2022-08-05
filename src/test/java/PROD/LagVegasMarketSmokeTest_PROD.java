@@ -472,8 +472,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Social Media");
 	}
 
-	@Test(priority=07)
-	public void TS007_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+	@Test(priority=10)
+	public void TS010_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T63: To verify global search functionality
@@ -715,8 +715,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Directory page is working properly.");
 	}
 
-	@Test(priority=10)
-	public void TS010_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
+	@Test(priority=07)
+	public void TS007_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T005: To verify links for Market info tab at Header
