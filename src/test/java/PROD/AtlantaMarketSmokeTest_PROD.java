@@ -468,11 +468,12 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//UXP-T010: To verify the all social media links and it's redirection
 
 		atlfl = new ATLFooterLinksNavigationPage(driver);
+		fl = new UXPFooterLinksNavigationPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Scroll till footer links
-		utl.scrollToElement(atlfl.getHighPointMarket());
+		utl.scrollToElement(fl.getmarketInfo());
 
 		//In app footer click on 'Facebook' icon and verify results
 		atlfl.getFacebookIcon().click();
