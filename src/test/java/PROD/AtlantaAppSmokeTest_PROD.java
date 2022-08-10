@@ -1056,7 +1056,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 		System.out.println("Juniper Market Page open successfully");
 		driver.switchTo().window(winHandleBefore12);
-		utl.scrollToElement(fl.getmarketInfoATL());			
+		utl.scrollToElement(fl.getmarketInfoATL());				
 		
 	}
 
