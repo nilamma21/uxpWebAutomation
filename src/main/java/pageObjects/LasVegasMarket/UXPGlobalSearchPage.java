@@ -32,6 +32,8 @@ public class UXPGlobalSearchPage {
 
 	public WebElement getSearchButton() {
 		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(SearchButton));
 		return driver.findElement(SearchButton);
 
 	}

@@ -70,11 +70,11 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			lap = new UXPLandingPage(driver);
 
 		//Navigate to Atlanta Market site
-	/*	driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(3000);*/
+		Thread.sleep(3000);
 		//	lap.getCloseMarktAdBtn().click();
 	}
 
@@ -91,11 +91,11 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Navigate to Atlanta Market site
-		driver.manage().window().maximize();
+	/*	driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(3000);
+		Thread.sleep(3000);*/
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -468,11 +468,12 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//UXP-T010: To verify the all social media links and it's redirection
 
 		atlfl = new ATLFooterLinksNavigationPage(driver);
+		fl = new UXPFooterLinksNavigationPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Scroll till footer links
-		utl.scrollToElement(atlfl.getHighPointMarket());
+		utl.scrollToElement(fl.getmarketInfo());
 
 		//In app footer click on 'Facebook' icon and verify results
 		atlfl.getFacebookIcon().click();
