@@ -472,8 +472,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Social Media");
 	}
 
-	@Test(priority=07)
-	public void TS007_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+	@Test(priority=10)
+	public void TS010_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T63: To verify global search functionality
@@ -485,8 +485,9 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
+		Thread.sleep(15000);
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
@@ -714,8 +715,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Directory page is working properly.");
 	}
 
-	@Test(priority=10)
-	public void TS010_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
+	@Test(priority=07)
+	public void TS007_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T005: To verify links for Market info tab at Header
