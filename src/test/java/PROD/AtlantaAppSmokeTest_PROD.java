@@ -116,7 +116,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Thread.sleep(5000);*/
 	}
 
-	@Test(priority=1)
+	@Test(priority=12)
 	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -141,7 +141,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
 
-	@Test(priority=2)
+	@Test(priority=13)
 	public void TS002_VerifyMarketPlannerProfileOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -861,7 +861,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=12)
+	@Test(priority=1)
 	public void TS012_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 
@@ -1060,7 +1060,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 	}
 
-	@Test(priority=13)
+	@Test(priority=2)
 	public void TS013_VerifySocialMediaLinksTest() throws InterruptedException, IOException
 	{
 
