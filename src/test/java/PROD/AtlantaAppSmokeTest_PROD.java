@@ -861,7 +861,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=09)
+	@Test(priority=9)
 	public void TS009_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 
@@ -1060,7 +1060,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 	}
 
-	@Test(priority=07)
+	@Test(priority=7)
 	public void TS007_VerifySocialMediaLinksTest() throws InterruptedException, IOException
 	{
 
