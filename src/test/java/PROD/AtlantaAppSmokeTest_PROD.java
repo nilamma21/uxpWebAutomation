@@ -109,14 +109,14 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 
 		//Navigate to Atlanta Apparel site
-		/*//driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlappurl"));;
 		Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(5000);*/
+		Thread.sleep(5000);
 	}
 
-	@Test(priority=12)
+	@Test(priority=1)
 	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -128,11 +128,11 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//Navigate to Atlanta Apparel site
+		/*//Navigate to Atlanta Apparel site
 		driver.get(prop.getProperty("atlappurl"));;
 		Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(8000);
+		Thread.sleep(8000);*/
 		
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -141,7 +141,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
 
-	@Test(priority=13)
+	@Test(priority=2)
 	public void TS002_VerifyMarketPlannerProfileOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -239,9 +239,9 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
 
-		utl.scrollToElement(mi.getVerifyContactUs());
+/*		utl.scrollToElement(mi.getVerifyContactUs());
 		amhe.getExhbAndProdsTab().click();
-		gs.getSearchButton().click();
+		gs.getSearchButton().click()*/;
 		Thread.sleep(5000);
 		utl.scrollToElement(mi.getVerifyContactUs());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
@@ -861,7 +861,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=1)
+	@Test(priority=12)
 	public void TS012_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 
@@ -1056,11 +1056,11 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 		System.out.println("Juniper Market Page open successfully");
 		driver.switchTo().window(winHandleBefore12);
-		utl.scrollToElement(fl.getmarketInfoATL());				
+		utl.scrollToElement(fl.getmarketInfoATL());			
 		
 	}
 
-	@Test(priority=2)
+	@Test(priority=13)
 	public void TS013_VerifySocialMediaLinksTest() throws InterruptedException, IOException
 	{
 
@@ -1169,10 +1169,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
-
-
-
