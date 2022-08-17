@@ -59,7 +59,7 @@ public class SitecoreSmokeTest_PROD extends base {
 		System.out.println("Login Successful.");
 	}
 
-	@Test(priority=04)
+	@Test(priority=05)
 	public void TS002_VerifyContentEditorTest() throws InterruptedException, IOException
 	{
 
@@ -106,7 +106,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=05)
+	@Test(priority=04)
 	public void TS005_VerifyExhibitorEventsApprovalTest() throws InterruptedException, IOException
 	{
 
