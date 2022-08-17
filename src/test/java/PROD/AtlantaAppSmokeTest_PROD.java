@@ -390,8 +390,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlappurl"));
 	}
 
-	@Test(priority=7)
-	public void TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest() throws InterruptedException, IOException
+	@Test(priority=13)
+	public void TS013_VerifyAllLinksUnderExhibitorsAndBrandsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T07: To verify Exhibitors And Brands Tab
@@ -578,8 +578,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Vefiry Download App Page ");
 	}
 
-	@Test(priority=9)
-	public void TS009_VerifyAllLinksUnderFashionGalleryTabTest() throws InterruptedException, IOException
+	@Test(priority=12)
+	public void TS012_VerifyAllLinksUnderFashionGalleryTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T09: To verify Fashion Gallery Tab
@@ -861,8 +861,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=12)
-	public void TS012_VerifyFooterLinksTest() throws InterruptedException, IOException
+	@Test(priority=09)
+	public void TS009_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -1060,8 +1060,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 	}
 
-	@Test(priority=13)
-	public void TS013_VerifySocialMediaLinksTest() throws InterruptedException, IOException
+	@Test(priority=07)
+	public void TS007_VerifySocialMediaLinksTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
