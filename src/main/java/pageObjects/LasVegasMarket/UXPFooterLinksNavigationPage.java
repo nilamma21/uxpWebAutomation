@@ -95,205 +95,231 @@ public class UXPFooterLinksNavigationPage {
 	} 
 
 	public WebElement getHighPointMarket() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(HighPointMarket));
 		return driver.findElement(HighPointMarket);
 
 	}
 
 	public WebElement getAtlantaMarket() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlantaMarket));
 		return driver.findElement(AtlantaMarket);
 
 	}
 
 	public WebElement getAtlantaApparel() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlantaApparel));
 		return driver.findElement(AtlantaApparel);
 
 	}
 
 	public WebElement getAmericasMart() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AmericasMart));
 		return driver.findElement(AmericasMart);
 
 	}
 
 	public WebElement getInternationalMarketCenters() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(InternationalMarketCenters));;
 		return driver.findElement(InternationalMarketCenters);
 
 	}
 
 	public WebElement getDownloadTheApp() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(DownloadTheApp));
 		return driver.findElement(DownloadTheApp);
 
 	}
 
 	public WebElement getContactUs() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ContactUs));
 		return driver.findElement(ContactUs);
 
 	}
 
 	public WebElement getCareers() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Careers));
 		return driver.findElement(Careers);
 
 	}
 
 	public WebElement getTermsAndConditions() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(TermsAndConditions));;
 		return driver.findElement(TermsAndConditions);
 
 	}
 
 	public WebElement getPrivacyPolicy() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(PrivacyPolicy));
 		return driver.findElement(PrivacyPolicy);
 
 	}
 	
 	public WebElement getVerifyCareers() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyCareers));
 		return driver.findElement(VerifyCareers);
 
 	}
 	
 	public WebElement getClosePopUpAmericasmart() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ClosePopUpAmericasmart));
 		return driver.findElement(ClosePopUpAmericasmart);
 
 	}
 	
 	public WebElement getVerifyTermsOfUse() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyTermsOfUse));
 		return driver.findElement(VerifyTermsOfUse);
 
 	}
 	
 	public WebElement getVerifyPrivacyPolicy() throws InterruptedException {
-		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyPrivacyPolicy));
 		return driver.findElement(VerifyPrivacyPolicy);
 	}
 	
 	public WebElement getFacebookIcon() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(facebookicon));
 		return driver.findElement(facebookicon);
 	}
 	public WebElement getInstagramIcon() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(instagramicon));
 		return driver.findElement(instagramicon);
 	}
 	public WebElement getYouTubeIcon() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(youtubeicon));
 		return driver.findElement(youtubeicon);
 	}
 	public WebElement getPinterestIcon() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pinteresticon));
 		return driver.findElement(pinteresticon);
 	}
 	public WebElement getTwitterIcon() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(twittericon));
 		return driver.findElement(twittericon);
 	}
 	public WebElement getLinkedInIcon() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(linkedinicon));
 		return driver.findElement(linkedinicon);
 	}
 	public WebElement getAbtAtlMktLink() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(abtatlmktlink));
 		return driver.findElement(abtatlmktlink);
 	}
 	public WebElement getLVAPPLink() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvapplink));
 		return driver.findElement(lvapplink);
 	}
 	public WebElement getLVMPrivacyPolicyPLink() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmprivacypolicy));
 		return driver.findElement(lvmprivacypolicy);
 	}
 	public WebElement getmarketInfo() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(marketInfo));
 		return driver.findElement(marketInfo);
 	}
 	public WebElement getmarketInfoATL() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(marketInfoATL));
 		return driver.findElement(marketInfoATL);
 	}
 	public WebElement getContactUsATL() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ContactUsATL));
 		return driver.findElement(ContactUsATL);
 	}
 	public WebElement getCareersATL() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(CareersATL));
 		return driver.findElement(CareersATL);
 	}
 	public WebElement getAmericasMart_ATLApp() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AmericasMart_ATLApp));
 		return driver.findElement(AmericasMart_ATLApp);
 	}
 	public WebElement getatlprivacypolicy() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlprivacypolicy));
 		return driver.findElement(atlprivacypolicy);
 	}
 	public WebElement getpressCenterATL() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pressCenterATL));
 		return driver.findElement(pressCenterATL);
 	}
 	public WebElement getOurBrandsATL() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ourBrandsATL));
 		return driver.findElement(ourBrandsATL);
 	}
 	public WebElement getlvapplink_ATL() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvapplink_ATL));
 		return driver.findElement(lvapplink_ATL);
 	}
 	public WebElement getlvmlink_ATL() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmlink_ATL));
 		return driver.findElement(lvmlink_ATL);
 	}	
 
 	public WebElement getJuniperMarket() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(JuniperMarket));
 		return driver.findElement(JuniperMarket);
 	}	
 	public WebElement getpressCenter() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pressCenter));
 		return driver.findElement(pressCenter);
 	}	
 	public WebElement getlvmlink_ATLM() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmlink_ATLM));
 		return driver.findElement(lvmlink_ATLM);
 	}	
 	public WebElement getInstagramiconATLM() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(instagramiconATLM));
 		return driver.findElement(instagramiconATLM);
 	}	
 	public WebElement gettwittericonATLM() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(twittericonATLM));
 		return driver.findElement(twittericonATLM);
 	}	
 	public WebElement marketInfoAMC() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(marketInfoAMC));
 		return driver.findElement(marketInfoAMC);
 	}		
 	public WebElement getpressCenterAMC() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pressCenterAMC));
 		return driver.findElement(pressCenterAMC);
 	}	
 	

@@ -34,7 +34,7 @@ public class UXPLandingPage {
 	}	
 	
 	public WebElement getIUnderstandBtn() throws InterruptedException {
-		Thread.sleep(15000);
+		Thread.sleep(5000);
 		return driver.findElement(iunderstandbtn);		
 	}
 	
@@ -44,7 +44,7 @@ public class UXPLandingPage {
 		return driver.findElement(mpsignoutbtn);		
 	}	
 	public WebElement getCloseMarktAdBtn() throws InterruptedException{
-		Thread.sleep(6000);
+		Thread.sleep(5000);
 		return driver.findElement(closemrktadbtn);		
 	}
 }

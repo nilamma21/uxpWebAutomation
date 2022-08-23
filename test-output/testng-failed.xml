@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [SmokeTestSuite]">
-  <test name="SequencialTest(failed)">
+<suite name="Failed suite [LVM_SmokeTestSuite]">
+  <test name="Test(failed)">
     <classes>
-      <class name="PROD.AtlantaMarketSmokeTest_PROD">
+      <class name="PROD.LagVegasMarketSmokeTest_PROD">
         <methods>
-          <include name="TS010_VerifyAllSocialMediaLinksOnFooterTest"/>
+          <include name="TS007_VerifyAllLinksUnderAttendTabTest"/>
           <include name="initialize"/>
+          <include name="TS009_VerifyExhibitorDirectoryTest"/>
         </methods>
-      </class> <!-- PROD.AtlantaMarketSmokeTest_PROD -->
+      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
     </classes>
-  </test> <!-- SequencialTest(failed) -->
-</suite> <!-- Failed suite [SmokeTestSuite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [LVM_SmokeTestSuite] -->

@@ -71,12 +71,12 @@ public class UXPExhibitorsAndProductsTabPage {
 	}
 
 	public WebElement getVerifyExhibitorDirectory() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(VerifyExhibitorDirectory);
 	}
 
 	public WebElement getVerifyFloorPlans() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(VerifyFloorPlans);
 	}
 
