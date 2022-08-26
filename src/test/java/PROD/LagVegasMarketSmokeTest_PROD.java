@@ -487,7 +487,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		gs.getGlobalSearchTextBox().click();
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
-		//Thread.sleep(3000);
+		Thread.sleep(15000);
+
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Global Search functionality is working properly.");

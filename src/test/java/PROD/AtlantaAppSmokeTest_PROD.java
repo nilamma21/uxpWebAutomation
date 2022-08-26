@@ -239,9 +239,9 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
 
-		utl.scrollToElement(mi.getVerifyContactUs());
+/*		utl.scrollToElement(mi.getVerifyContactUs());
 		amhe.getExhbAndProdsTab().click();
-		gs.getSearchButton().click();
+		gs.getSearchButton().click()*/;
 		Thread.sleep(5000);
 		utl.scrollToElement(mi.getVerifyContactUs());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
@@ -1169,10 +1169,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
-
-
-
