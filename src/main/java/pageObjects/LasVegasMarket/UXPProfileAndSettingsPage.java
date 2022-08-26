@@ -25,7 +25,7 @@ public class UXPProfileAndSettingsPage {
 
 	public WebElement getWelcomeText() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(WelcomeText);
 
 	}
@@ -38,7 +38,7 @@ public class UXPProfileAndSettingsPage {
 	
 	public WebElement getVerifyProfile() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(VerifyProfile);
 
 	}

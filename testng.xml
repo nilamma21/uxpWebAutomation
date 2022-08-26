@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="LVM_SmokeTestSuite">
+<!--  <suite name="LVM_SmokeTestSuite">
 	<listners>
-		<listner class-name="lasvegasmarket.TestListeners" />
+		<listner class-name="PROD.TestListeners" />
 	</listners>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
-		</classes>
-	</test>
-</suite>
-
-<!-- <suite name="ATLMrkt_SmokeTestSuite">
-	<listners>
-		<listner class-name="atlantamarket.TestListeners" />
-	</listners>
-
-	<test thread-count="5" name="Test">
-		<classes>
-			<class name="atlantamarket.AtlantaMarketSmokeTest_PROD" />
+			<class name="PROD.LagVegasMarketSmokeTest_PROD" />
 		</classes>
 	</test>
 </suite> -->
+
+<suite name="ATLMrkt_SmokeTestSuite">
+	<listners>
+		<listner class-name="PROD.TestListeners" />
+	</listners>
+
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="PROD.AtlantaMarketSmokeTest_PROD" />
+		</classes>
+	</test>
+</suite> 
 
 <!-- <suite name="AMMart_SmokeTestSuite">
 	<listners>

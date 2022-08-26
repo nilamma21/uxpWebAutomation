@@ -32,13 +32,15 @@ public class UXPGlobalSearchPage {
 
 	public WebElement getSearchButton() {
 		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(SearchButton));
 		return driver.findElement(SearchButton);
 
 	}
 	
 	public WebElement getVerifyGlobalSeacrh() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(15000);
+		Thread.sleep(5000);
 		return driver.findElement(VerifyGlobalSeacrh);
 
 	}

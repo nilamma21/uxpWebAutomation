@@ -40,7 +40,7 @@ public class UXPMarketInfoPage {
 	} 
 
 	public WebElement getMarketInfoHeader() throws InterruptedException{
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(MarketInfoHeader);
 
 	}
@@ -123,7 +123,7 @@ public class UXPMarketInfoPage {
 	}
 	
 	public WebElement getVerifyContactUs() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(VerifyContactUs);
 		
 	}

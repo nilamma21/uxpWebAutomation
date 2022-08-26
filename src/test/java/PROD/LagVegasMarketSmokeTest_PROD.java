@@ -59,7 +59,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("lvmurl"));
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(6000);
+		//Thread.sleep(6000);
 	}
 
 	@Test(priority=01)
@@ -81,7 +81,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		//Verify that Market Planner Home page should be displayed
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
-		Thread.sleep(6000);
+		Thread.sleep(1000);
 	}
 
 	@Test(priority=02)
@@ -191,7 +191,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle);
 		}
 
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 		//Verify that 'Juniper' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
 		//Assert.assertTrue(exh.getExhibitOpprBrdcrumb().isDisplayed());
@@ -245,7 +245,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 
 		//Click Exhibitor Directory option under Exhibitors and Products
-		Thread.sleep(5000);
+		//Thread.sleep(1000);
 		exhp.getExhibitorDirectory().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor & Product Directory");
 		System.out.println("Exhibitory Directory section is displayed properly");
@@ -328,7 +328,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click Registration Details option under Market Info
 
 		mi.getRegistrationDetails().click();
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		Assert.assertEquals(driver.getCurrentUrl(), "https://www.lasvegasmarket.com/Market-Info/Registration-Details");
 		System.out.println("Registration Details section is displayed properly");
 		mi.getMarketInfoHeader().click();
@@ -394,7 +394,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click on Explore Las Vegas Market sub-menu
 		expmrkt.getExploreLVMMenu().click();
 
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 		//Verify that 'Explore LVM' page should be displayed
 		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Explore Market");
 
@@ -404,7 +404,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click on 'Events and Seminars' sub-menu
 		expmrkt.getWebinarsnEventsMenu().click();
 
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 		//Verify that 'Events and Seminars' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Events and Seminars");
 
@@ -472,8 +472,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Social Media");
 	}
 
-	@Test(priority=07)
-	public void TS007_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+	@Test(priority=10)
+	public void TS010_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T63: To verify global search functionality
@@ -484,11 +484,12 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		gs = new UXPGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		gs.getGlobalSearchTextBox().click();
+		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
+		//Thread.sleep(3000);
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
-		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
+		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Global Search functionality is working properly.");
 	}
 
@@ -714,8 +715,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Directory page is working properly.");
 	}
 
-	@Test(priority=10)
-	public void TS010_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
+	@Test(priority=07)
+	public void TS007_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T005: To verify links for Market info tab at Header
@@ -738,7 +739,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend"));
 		System.out.println("Why Attend section is displayed properly");
 		driver.get(prop.getProperty("lvmurl"));
-		Thread.sleep(6000);
+		//Thread.sleep(6000);
 		at.getAttend().click();
 
 		//Click Registration tab under Attend section
@@ -887,7 +888,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 		//Verify that 'LVM Facebook' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/lvmarket"));
 		// Close the new window, if that window no more required

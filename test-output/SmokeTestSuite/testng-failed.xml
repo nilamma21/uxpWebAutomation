@@ -5,58 +5,10 @@
     <classes>
       <class name="PROD.LagVegasMarketSmokeTest_PROD">
         <methods>
-          <include name="TS010_VerifyAllLinksUnderAttendTabTest"/>
-          <include name="TS012_VerifyHeaderChannelLinksTest"/>
+          <include name="TS013_VerifyAllLinksUnderExploreMarketTabTest"/>
           <include name="initialize"/>
-          <include name="TS009_VerifyExhibitorDirectoryTest"/>
-          <include name="TS011_VerifyAllLinksUnderYearRoundTabTest"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
-      <class name="PROD.AtlantaAppSmokeTest_PROD">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
-      <class name="PROD.AmericasMartSmokeTest_PROD">
-        <methods>
-          <include name="tearDown"/>
-          <include name="TS004_VerifyAllLinksUnderExhibitTest"/>
-          <include name="TS012_VerifyAllSocialMediaLinksOnFooterTest"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
-      <class name="PROD.AtlantaMarketSmokeTest_PROD">
-        <methods>
-          <include name="TS011_VerifyFooterLinksTest"/>
-          <include name="TS010_VerifyAllSocialMediaLinksOnFooterTest"/>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- PROD.AtlantaMarketSmokeTest_PROD -->
-      <class name="PROD.SitecoreSmokeTest_PROD">
-        <methods>
-          <include name="tearDown"/>
-          <include name="TS001_VerifySitecoreLoginTest"/>
-          <include name="TS005_VerifyExhibitorEventsApprovalTest"/>
-          <include name="TS006_VerifyIMCReportsTest"/>
-          <include name="TS007_VerifyTaxonomyManagerTest"/>
-          <include name="initialize"/>
-          <include name="TS004_VerifyShowSpecialApprovalsTest"/>
-          <include name="TS003_VerifyDigitalAdminPanelTest"/>
-          <include name="TS009_VerifyControlPanelTest"/>
-          <include name="TS002_VerifyContentEditorTest"/>
-          <include name="TS008_VerifyEmailExperienceManagerTest"/>
-        </methods>
-      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
-      <class name="PROD.ExhibitorPortalSmokeTest_PROD">
-        <methods>
-          <include name="initialize"/>
-          <include name="TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- PROD.ExhibitorPortalSmokeTest_PROD -->
     </classes>
   </test> <!-- SequencialTest(failed) -->
 </suite> <!-- Failed suite [SmokeTestSuite] -->
