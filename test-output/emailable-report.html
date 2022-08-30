@@ -31,38 +31,579 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">13</td><td class="numi">13</td><td class="numi">0</td><td class="numi">0</td><td class="numi">787.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">51</td><td class="numi">51</td><td class="numi">0</td><td class="numi_attn">17</td><td class="numi">4,602.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">PROD.ExhibitorPortalSmokeTest_PROD</td><td><a href="#m1"><b>TS001_VerifyExhibitorPortalLoginTest</b>  </a></td><td class="numi">1</td><td>1661839044592</td><td class="numi">47745</td></tr>
+<tr class="failedeven"><td rowspan="2">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m2"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1661839345454</td><td class="numi">303079</td></tr><tr class="failedeven"><td><a href="#m3"><b>TS002_VerifyMarketPlannerProfileOptionTest</b>  </a></td><td class="numi">1</td><td>1661839648536</td><td class="numi">35099</td></tr>
+<tr class="failedodd"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m4"><b>TS003_VerifyGlobalSearchFunctionalityTest</b>  </a></td><td class="numi">1</td><td>1661836624582</td><td class="numi">14804</td></tr>
+<tr class="failedeven"><td rowspan="2">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m5"><b>TS003_VerifyMarketPlannerExhibitorPortalOptionTest</b>  </a></td><td class="numi">1</td><td>1661839683638</td><td class="numi">35111</td></tr><tr class="failedeven"><td><a href="#m6"><b>TS004_VerifyGlobalSearchFunctionalityTest</b>  </a></td><td class="numi">1</td><td>1661839718750</td><td class="numi">40378</td></tr>
+<tr class="failedodd"><td rowspan="1">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m7"><b>TS005_VerifyAllLinksUnderMarketInfoTabTest</b>  </a></td><td class="numi">1</td><td>1661835990698</td><td class="numi">35828</td></tr>
+<tr class="failedeven"><td rowspan="1">PROD.AmericasMartSmokeTest_PROD</td><td><a href="#m8"><b>TS006_VerifyAllHeaderChanelLinksTest</b>  </a></td><td class="numi">1</td><td>1661837806547</td><td class="numi">335420</td></tr>
+<tr class="failedodd"><td rowspan="3">PROD.ExhibitorPortalSmokeTest_PROD</td><td><a href="#m9"><b>TS006_VerifyAllLinkUnderYourDigiShowroomTest</b>  </a></td><td class="numi">1</td><td>1661839194324</td><td class="numi">41575</td></tr><tr class="failedodd"><td><a href="#m10"><b>TS007_VerifyAllLinkUnderEXPMarketTabTest</b>  </a></td><td class="numi">1</td><td>1661839235900</td><td class="numi">36508</td></tr><tr class="failedodd"><td><a href="#m11"><b>TS008_VerifyExhibitorPortalFooterLinksTest</b>  </a></td><td class="numi">1</td><td>1661839272412</td><td class="numi">35115</td></tr>
+<tr class="failedeven"><td rowspan="1">PROD.AmericasMartSmokeTest_PROD</td><td><a href="#m12"><b>TS009_VerifyGlobalSearchFunctionalityTest</b>  </a></td><td class="numi">1</td><td>1661838612974</td><td class="numi">45938</td></tr>
+<tr class="failedodd"><td rowspan="2">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m13"><b>TS010_VerifyAllLinksUnderExhibitTabTest</b>  </a></td><td class="numi">1</td><td>1661840108142</td><td class="numi">75603</td></tr><tr class="failedodd"><td><a href="#m14"><b>TS011_VerifyAllLinksUnderYearRoundTabTest</b>  </a></td><td class="numi">1</td><td>1661840183751</td><td class="numi">30167</td></tr>
+<tr class="failedeven"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m15"><b>TS011_VerifyFooterLinksTest</b>  </a></td><td class="numi">1</td><td>1661836988879</td><td class="numi">343131</td></tr>
+<tr class="failedodd"><td rowspan="2">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m16"><b>TS012_VerifyFooterLinksTest</b>  </a></td><td class="numi">1</td><td>1661840213926</td><td class="numi">30062</td></tr><tr class="failedodd"><td><a href="#m17"><b>TS013_VerifySocialMediaLinksTest</b>  </a></td><td class="numi">1</td><td>1661840243990</td><td class="numi">30131</td></tr>
 <tr><th colspan="4">Test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="13">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m1"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1661235884124</td><td class="numi">25868</td></tr><tr class="passedodd"><td><a href="#m2"><b>TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</b>  </a></td><td class="numi">1</td><td>1661235910001</td><td class="numi">24200</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS003_VerifyGlobalSearchFunctionalityTest</b>  </a></td><td class="numi">1</td><td>1661235934205</td><td class="numi">15999</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS004_VerifyMarketPlannerRegistrationsOptionTest</b>  </a></td><td class="numi">1</td><td>1661235950206</td><td class="numi">31771</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS005_VerifyExhibitorDirectoryTest</b>  </a></td><td class="numi">1</td><td>1661235981980</td><td class="numi">19015</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS006_VerifyAllLinksUnderMarketInfoTabTest</b>  </a></td><td class="numi">1</td><td>1661236140504</td><td class="numi">82820</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b>  </a></td><td class="numi">1</td><td>1661236081891</td><td class="numi">58610</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS008_VerifAllLinksUnderExhibitTabTest</b>  </a></td><td class="numi">1</td><td>1661236000996</td><td class="numi">80894</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS009_VerifyAllChannelsLinksTest</b>  </a></td><td class="numi">1</td><td>1661236223326</td><td class="numi">56597</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS010_VerifyAllSocialMediaLinksOnFooterTest</b>  </a></td><td class="numi">1</td><td>1661236279925</td><td class="numi">28038</td></tr><tr class="passedodd"><td><a href="#m11"><b>TS011_VerifyFooterLinksTest</b>  </a></td><td class="numi">1</td><td>1661236307964</td><td class="numi">136565</td></tr><tr class="passedodd"><td><a href="#m12"><b>TS012_VerifyAllLinksUnderAttendTabTest</b>  </a></td><td class="numi">1</td><td>1661236444534</td><td class="numi">150176</td></tr><tr class="passedodd"><td><a href="#m13"><b>TS013_VerifyAllNewsAndTrendsMenuTest</b>  </a></td><td class="numi">1</td><td>1661236594711</td><td class="numi">48425</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m18"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1661835837751</td><td class="numi">35424</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m19"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1661836588825</td><td class="numi">27202</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.AmericasMartSmokeTest_PROD</td><td><a href="#m20"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1661837532598</td><td class="numi">112105</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m21"><b>TS001_VerifySitecoreLoginTest</b>  </a></td><td class="numi">1</td><td>1661840280210</td><td class="numi">28274</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m22"><b>TS002_VerifAllLinksUnderExhibitTabTest</b>  </a></td><td class="numi">1</td><td>1661835873184</td><td class="numi">49170</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m23"><b>TS002_VerifyContentEditorTest</b>  </a></td><td class="numi">1</td><td>1661840308484</td><td class="numi">8628</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m24"><b>TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</b>  </a></td><td class="numi">1</td><td>1661836616029</td><td class="numi">8552</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AmericasMartSmokeTest_PROD</td><td><a href="#m25"><b>TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</b>  </a></td><td class="numi">1</td><td>1661837644704</td><td class="numi">9407</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.ExhibitorPortalSmokeTest_PROD</td><td><a href="#m26"><b>TS002_VerifyNotificationsTabTest</b>  </a></td><td class="numi">1</td><td>1661839092342</td><td class="numi">7098</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m27"><b>TS003_VerifyDigitalAdminPanelTest</b>  </a></td><td class="numi">1</td><td>1661840317113</td><td class="numi">20792</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.AmericasMartSmokeTest_PROD</td><td><a href="#m28"><b>TS003_VerifyMarketPlannerExhibitorPortalOptionTest</b>  </a></td><td class="numi">1</td><td>1661837654112</td><td class="numi">36080</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m29"><b>TS003_VerifyMarketPlannerProfileAndSettingsOptionTest</b>  </a></td><td class="numi">1</td><td>1661835922356</td><td class="numi">15225</td></tr>
+<tr class="passedodd"><td rowspan="2">PROD.ExhibitorPortalSmokeTest_PROD</td><td><a href="#m30"><b>TS003_VerifySettingsTabTest</b>  </a></td><td class="numi">1</td><td>1661839099441</td><td class="numi">17186</td></tr><tr class="passedodd"><td><a href="#m31"><b>TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest</b>  </a></td><td class="numi">1</td><td>1661839116628</td><td class="numi">35685</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AmericasMartSmokeTest_PROD</td><td><a href="#m32"><b>TS004_VerifyAllLinksUnderExhibitTest</b>  </a></td><td class="numi">1</td><td>1661837690193</td><td class="numi">42878</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m33"><b>TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b>  </a></td><td class="numi">1</td><td>1661835937583</td><td class="numi">53113</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m34"><b>TS004_VerifyMarketPlannerRegistrationsOptionTest</b>  </a></td><td class="numi">1</td><td>1661836639388</td><td class="numi">21390</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m35"><b>TS004_VerifyShowSpecialApprovalsTest</b>  </a></td><td class="numi">1</td><td>1661840337906</td><td class="numi">19594</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.ExhibitorPortalSmokeTest_PROD</td><td><a href="#m36"><b>TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest</b>  </a></td><td class="numi">1</td><td>1661839152315</td><td class="numi">42007</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.AmericasMartSmokeTest_PROD</td><td><a href="#m37"><b>TS005_VerifyAllLinksUnderAboutTabTest</b>  </a></td><td class="numi">1</td><td>1661837733072</td><td class="numi">73474</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m38"><b>TS005_VerifyExhibitorDirectoryTest</b>  </a></td><td class="numi">1</td><td>1661836660780</td><td class="numi">17647</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m39"><b>TS005_VerifyExhibitorDirectoryTest</b>  </a></td><td class="numi">1</td><td>1661839759131</td><td class="numi">34683</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m40"><b>TS005_VerifyExhibitorEventsApprovalTest</b>  </a></td><td class="numi">1</td><td>1661840357502</td><td class="numi">17215</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m41"><b>TS006_VerifyAllLinksUnderMarketInfoTabTest</b>  </a></td><td class="numi">1</td><td>1661836801747</td><td class="numi">47635</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m42"><b>TS006_VerifyAllLinksUnderMarketsTabTest</b>  </a></td><td class="numi">1</td><td>1661839793815</td><td class="numi">111931</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m43"><b>TS006_VerifyHeaderChannelLinksTest</b>  </a></td><td class="numi">1</td><td>1661836026709</td><td class="numi">64770</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m44"><b>TS006_VerifyIMCReportsTest</b>  </a></td><td class="numi">1</td><td>1661840374718</td><td class="numi">18017</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m45"><b>TS007_VerifyAllLinksUnderAttendTabTest</b>  </a></td><td class="numi">1</td><td>1661836091480</td><td class="numi">152705</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m46"><b>TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest</b>  </a></td><td class="numi">1</td><td>1661839905748</td><td class="numi">13932</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m47"><b>TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b>  </a></td><td class="numi">1</td><td>1661836747894</td><td class="numi">53852</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AmericasMartSmokeTest_PROD</td><td><a href="#m48"><b>TS007_VerifyAllSocialMediaLinksOnFooterTest</b>  </a></td><td class="numi">1</td><td>1661838141970</td><td class="numi">91382</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m49"><b>TS007_VerifyTaxonomyManagerTest</b>  </a></td><td class="numi">1</td><td>1661840392736</td><td class="numi">2875</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m50"><b>TS008_VerifAllLinksUnderExhibitTabTest</b>  </a></td><td class="numi">1</td><td>1661836678428</td><td class="numi">69464</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m51"><b>TS008_VerifyAllLinksUnderAttendTabTest</b>  </a></td><td class="numi">1</td><td>1661839919681</td><td class="numi">137916</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m52"><b>TS008_VerifyEmailExperienceManagerTest</b>  </a></td><td class="numi">1</td><td>1661840395612</td><td class="numi">2749</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m53"><b>TS008_VerifyFooterLinksTest</b>  </a></td><td class="numi">1</td><td>1661836244186</td><td class="numi">220494</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AmericasMartSmokeTest_PROD</td><td><a href="#m54"><b>TS008_VerifyFooterLinksTest</b>  </a></td><td class="numi">1</td><td>1661838233356</td><td class="numi">379614</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m55"><b>TS009_VerifyAllChannelsLinksTest</b>  </a></td><td class="numi">1</td><td>1661836849383</td><td class="numi">123633</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m56"><b>TS009_VerifyAllLinksUnderFashionGalleryTabTest</b>  </a></td><td class="numi">1</td><td>1661840057598</td><td class="numi">50543</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m57"><b>TS009_VerifyControlPanelTest</b>  </a></td><td class="numi">1</td><td>1661840398361</td><td class="numi">17577</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m58"><b>TS009_VerifyExhibitorDirectoryTest</b>  </a></td><td class="numi">1</td><td>1661836464686</td><td class="numi">9041</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.AmericasMartSmokeTest_PROD</td><td><a href="#m59"><b>TS010_VerifyAllLinksUnderOpenYearRoundTest</b>  </a></td><td class="numi">1</td><td>1661838658914</td><td class="numi">90989</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m60"><b>TS010_VerifyAllSocialMediaLinksOnFooterTest</b>  </a></td><td class="numi">1</td><td>1661836973017</td><td class="numi">15861</td></tr>
+<tr class="passedodd"><td rowspan="2">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m61"><b>TS010_VerifyGlobalSearchFunctionalityTest</b>  </a></td><td class="numi">1</td><td>1661836473728</td><td class="numi">4671</td></tr><tr class="passedodd"><td><a href="#m62"><b>TS011_VerifyAllLinksUnderYearRoundTabTest</b>  </a></td><td class="numi">1</td><td>1661836486437</td><td class="numi">33835</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AmericasMartSmokeTest_PROD</td><td><a href="#m63"><b>TS011_VerifyExhibitorDirectoryTest</b>  </a></td><td class="numi">1</td><td>1661838749904</td><td class="numi">77473</td></tr>
+<tr class="passedodd"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m64"><b>TS012_VerifyAllLinksUnderAttendTabTest</b>  </a></td><td class="numi">1</td><td>1661837332015</td><td class="numi">153162</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AmericasMartSmokeTest_PROD</td><td><a href="#m65"><b>TS012_VerifyAllLinksUnderMarketsAndEventsTabTest</b>  </a></td><td class="numi">1</td><td>1661838827378</td><td class="numi">213190</td></tr>
+<tr class="passedodd"><td rowspan="2">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m66"><b>TS012_VerifyAllSocialMediaLinksOnFooterTest</b>  </a></td><td class="numi">1</td><td>1661836478400</td><td class="numi">8035</td></tr><tr class="passedodd"><td><a href="#m67"><b>TS013_VerifyAllLinksUnderExploreMarketTabTest</b>  </a></td><td class="numi">1</td><td>1661836520273</td><td class="numi">53223</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m68"><b>TS013_VerifyAllNewsAndTrendsMenuTest</b>  </a></td><td class="numi">1</td><td>1661837485178</td><td class="numi">42652</td></tr>
 </table>
 <h1>Test</h1>
-<h2 id="m1">PROD.AtlantaMarketSmokeTest_PROD:TS010_VerifyAllSocialMediaLinksOnFooterTest</h2>
+<h2 id="m1">PROD.ExhibitorPortalSmokeTest_PROD:TS008_VerifyExhibitorPortalFooterLinksTest</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;/&apos;]/img&quot;}
+  (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir17356_202791350}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63246}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 05964b17fdb061dc210fd3f56fb2a3f4
+*** Element info: {Using=xpath, value=//a[@href=&apos;/&apos;]/img}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at pageObjects.ExhibitorPortal.EXPFooterLinksPage.getExhibitorPortalSymbol(EXPFooterLinksPage.java:34)
+<br/>at PROD.ExhibitorPortalSmokeTest_PROD.TS008_VerifyExhibitorPortalFooterLinksTest(ExhibitorPortalSmokeTest_PROD.java:562)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">PROD.AtlantaMarketSmokeTest_PROD:TS004_VerifyMarketPlannerRegistrationsOptionTest</h2>
+<h2 id="m2">PROD.ExhibitorPortalSmokeTest_PROD:TS006_VerifyAllLinkUnderYourDigiShowroomTest</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.junit.Assert.fail(Assert.java:86)
+<br/>at org.junit.Assert.assertTrue(Assert.java:41)
+<br/>at org.junit.Assert.assertTrue(Assert.java:52)
+<br/>at PROD.ExhibitorPortalSmokeTest_PROD.TS006_VerifyAllLinkUnderYourDigiShowroomTest(ExhibitorPortalSmokeTest_PROD.java:493)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">PROD.AtlantaMarketSmokeTest_PROD:TS006_VerifyAllLinksUnderMarketInfoTabTest</h2>
+<h2 id="m3">PROD.AtlantaAppSmokeTest_PROD:TS004_VerifyGlobalSearchFunctionalityTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //section[@class = &apos;imc-searchform--section &apos;]/span[1]/div[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.LasVegasMarket.UXPGlobalSearchPage.getVerifyGlobalSeacrh(UXPGlobalSearchPage.java:44)
+<br/>at PROD.AtlantaAppSmokeTest_PROD.TS004_VerifyGlobalSearchFunctionalityTest(AtlantaAppSmokeTest_PROD.java:206)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //section[@class = &apos;imc-searchform--section &apos;]/span[1]/div[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.LasVegasMarket.UXPGlobalSearchPage.getVerifyGlobalSeacrh(UXPGlobalSearchPage.java:44)
+<br/>at PROD.AtlantaAppSmokeTest_PROD.TS004_VerifyGlobalSearchFunctionalityTest(AtlantaAppSmokeTest_PROD.java:206)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">PROD.AtlantaMarketSmokeTest_PROD:TS001_VerifyMarketPlannerLoginTest</h2>
+<h2 id="m4">PROD.LagVegasMarketSmokeTest_PROD:TS005_VerifyAllLinksUnderMarketInfoTabTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class = &apos;imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth&apos;]/div[1]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.LasVegasMarket.UXPMarketInfoPage.getAboutLasVegasMarket(UXPMarketInfoPage.java:51)
+<br/>at PROD.LagVegasMarketSmokeTest_PROD.TS005_VerifyAllLinksUnderMarketInfoTabTest(LagVegasMarketSmokeTest_PROD.java:311)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //div[@class = &apos;imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth&apos;]/div[1]/div[1]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.LasVegasMarket.UXPMarketInfoPage.getAboutLasVegasMarket(UXPMarketInfoPage.java:51)
+<br/>at PROD.LagVegasMarketSmokeTest_PROD.TS005_VerifyAllLinksUnderMarketInfoTabTest(LagVegasMarketSmokeTest_PROD.java:311)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">PROD.AtlantaMarketSmokeTest_PROD:TS009_VerifyAllChannelsLinksTest</h2>
+<h2 id="m5">PROD.ExhibitorPortalSmokeTest_PROD:TS001_VerifyExhibitorPortalLoginTest</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@id=&apos;gdpr-btn&apos;]&quot;}
+  (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir17356_202791350}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63246}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 05964b17fdb061dc210fd3f56fb2a3f4
+*** Element info: {Using=xpath, value=//button[@id=&apos;gdpr-btn&apos;]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at pageObjects.LasVegasMarket.UXPLandingPage.getIUnderstandBtn(UXPLandingPage.java:37)
+<br/>at PROD.ExhibitorPortalSmokeTest_PROD.TS001_VerifyExhibitorPortalLoginTest(ExhibitorPortalSmokeTest_PROD.java:79)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">PROD.AtlantaMarketSmokeTest_PROD:TS008_VerifAllLinksUnderExhibitTabTest</h2>
+<h2 id="m6">PROD.ExhibitorPortalSmokeTest_PROD:TS007_VerifyAllLinkUnderEXPMarketTabTest</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Markets&apos;)]&quot;}
+  (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir17356_202791350}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63246}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 05964b17fdb061dc210fd3f56fb2a3f4
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Markets&apos;)]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at pageObjects.ExhibitorPortal.EXPMarketTabPage.getEXPMarketTab(EXPMarketTabPage.java:29)
+<br/>at PROD.ExhibitorPortalSmokeTest_PROD.TS007_VerifyAllLinkUnderEXPMarketTabTest(ExhibitorPortalSmokeTest_PROD.java:521)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">PROD.AtlantaMarketSmokeTest_PROD:TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest</h2>
+<h2 id="m7">PROD.AtlantaAppSmokeTest_PROD:TS002_VerifyMarketPlannerProfileOptionTest</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id =&apos;root&apos;]/div[1]/div[1]/div[3]/button[1]&quot;}
+  (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir13532_1377483303}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63797}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 3781c26fbe36ad255b503cc8ee6ca548
+*** Element info: {Using=xpath, value=//div[@id =&apos;root&apos;]/div[1]/div[1]/div[3]/button[1]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at pageObjects.LasVegasMarket.UXPProfileAndSettingsPage.getWelcomeText(UXPProfileAndSettingsPage.java:29)
+<br/>at PROD.AtlantaAppSmokeTest_PROD.TS002_VerifyMarketPlannerProfileOptionTest(AtlantaAppSmokeTest_PROD.java:157)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">PROD.AtlantaMarketSmokeTest_PROD:TS005_VerifyExhibitorDirectoryTest</h2>
+<h2 id="m8">PROD.AtlantaAppSmokeTest_PROD:TS003_VerifyMarketPlannerExhibitorPortalOptionTest</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id =&apos;root&apos;]/div[1]/div[1]/div[3]/button[1]&quot;}
+  (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir13532_1377483303}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63797}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 3781c26fbe36ad255b503cc8ee6ca548
+*** Element info: {Using=xpath, value=//div[@id =&apos;root&apos;]/div[1]/div[1]/div[3]/button[1]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at pageObjects.AtlantaMarket.ATLProfileAndSettingsPage.getATLWelcomeText(ATLProfileAndSettingsPage.java:29)
+<br/>at PROD.AtlantaAppSmokeTest_PROD.TS003_VerifyMarketPlannerExhibitorPortalOptionTest(AtlantaAppSmokeTest_PROD.java:177)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">PROD.AtlantaMarketSmokeTest_PROD:TS013_VerifyAllNewsAndTrendsMenuTest</h2>
+<h2 id="m9">PROD.AmericasMartSmokeTest_PROD:TS009_VerifyGlobalSearchFunctionalityTest</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.junit.Assert.fail(Assert.java:86)
+<br/>at org.junit.Assert.assertTrue(Assert.java:41)
+<br/>at org.junit.Assert.assertTrue(Assert.java:52)
+<br/>at PROD.AmericasMartSmokeTest_PROD.TS009_VerifyGlobalSearchFunctionalityTest(AmericasMartSmokeTest_PROD.java:744)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m10">PROD.AtlantaMarketSmokeTest_PROD:TS003_VerifyGlobalSearchFunctionalityTest</h2>
+<h2 id="m10">PROD.AtlantaAppSmokeTest_PROD:TS011_VerifyAllLinksUnderYearRoundTabTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class =&apos;imc-section&apos;]/div[1]/div[6]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.LasVegasMarket.UXPYearRoundPage.getYearRoundTab(UXPYearRoundPage.java:35)
+<br/>at PROD.AtlantaAppSmokeTest_PROD.TS011_VerifyAllLinksUnderYearRoundTabTest(AtlantaAppSmokeTest_PROD.java:839)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //div[@class =&apos;imc-section&apos;]/div[1]/div[6]/div[1]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.LasVegasMarket.UXPYearRoundPage.getYearRoundTab(UXPYearRoundPage.java:35)
+<br/>at PROD.AtlantaAppSmokeTest_PROD.TS011_VerifyAllLinksUnderYearRoundTabTest(AtlantaAppSmokeTest_PROD.java:839)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m11">PROD.AtlantaMarketSmokeTest_PROD:TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</h2>
+<h2 id="m11">PROD.AtlantaAppSmokeTest_PROD:TS010_VerifyAllLinksUnderExhibitTabTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id = &apos;root&apos;]/header[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.ExhibitorPortal.EXPLoginPage.getVerifyExpHomePage(EXPLoginPage.java:49)
+<br/>at PROD.AtlantaAppSmokeTest_PROD.TS010_VerifyAllLinksUnderExhibitTabTest(AtlantaAppSmokeTest_PROD.java:795)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //div[@id = &apos;root&apos;]/header[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.ExhibitorPortal.EXPLoginPage.getVerifyExpHomePage(EXPLoginPage.java:49)
+<br/>at PROD.AtlantaAppSmokeTest_PROD.TS010_VerifyAllLinksUnderExhibitTabTest(AtlantaAppSmokeTest_PROD.java:795)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m12">PROD.AtlantaMarketSmokeTest_PROD:TS011_VerifyFooterLinksTest</h2>
+<h2 id="m12">PROD.AtlantaMarketSmokeTest_PROD:TS003_VerifyGlobalSearchFunctionalityTest</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.junit.Assert.fail(Assert.java:86)
+<br/>at org.junit.Assert.assertTrue(Assert.java:41)
+<br/>at org.junit.Assert.assertTrue(Assert.java:52)
+<br/>at PROD.AtlantaMarketSmokeTest_PROD.TS003_VerifyGlobalSearchFunctionalityTest(AtlantaMarketSmokeTest_PROD.java:145)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m13">PROD.AtlantaMarketSmokeTest_PROD:TS012_VerifyAllLinksUnderAttendTabTest</h2>
+<h2 id="m13">PROD.AtlantaAppSmokeTest_PROD:TS012_VerifyFooterLinksTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //a[@href=&apos;/Markets&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.LasVegasMarket.UXPFooterLinksNavigationPage.getmarketInfoATL(UXPFooterLinksNavigationPage.java:246)
+<br/>at PROD.AtlantaAppSmokeTest_PROD.TS012_VerifyFooterLinksTest(AtlantaAppSmokeTest_PROD.java:887)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //a[@href=&apos;/Markets&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.LasVegasMarket.UXPFooterLinksNavigationPage.getmarketInfoATL(UXPFooterLinksNavigationPage.java:246)
+<br/>at PROD.AtlantaAppSmokeTest_PROD.TS012_VerifyFooterLinksTest(AtlantaAppSmokeTest_PROD.java:887)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">PROD.AmericasMartSmokeTest_PROD:TS006_VerifyAllHeaderChanelLinksTest</h2>
+<div style="padding-left:3em">
+<p>timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=104.0.5112.102)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir17128_914512807}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60070}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 849508c68d9668d334a664760c49016c</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+<br/>at PROD.AmericasMartSmokeTest_PROD.TS006_VerifyAllHeaderChanelLinksTest(AmericasMartSmokeTest_PROD.java:299)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">PROD.AtlantaMarketSmokeTest_PROD:TS011_VerifyFooterLinksTest</h2>
+<div style="padding-left:3em">
+<p>timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=104.0.5112.102)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir14008_1236807684}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:57841}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 4bef46911bbcf3d9597f97bb2f7a2daf</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+<br/>at PROD.AtlantaMarketSmokeTest_PROD.TS011_VerifyFooterLinksTest(AtlantaMarketSmokeTest_PROD.java:553)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">PROD.AtlantaAppSmokeTest_PROD:TS001_VerifyMarketPlannerLoginTest</h2>
+<div style="padding-left:3em">
+<p>timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=104.0.5112.102)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir13532_1377483303}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63797}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 3781c26fbe36ad255b503cc8ee6ca548
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Login&apos;)]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at pageObjects.LasVegasMarket.UXPLandingPage.getLogin(UXPLandingPage.java:26)
+<br/>at resources.Utility.verifyMPLoginFunctionality(Utility.java:42)
+<br/>at PROD.AtlantaAppSmokeTest_PROD.TS001_VerifyMarketPlannerLoginTest(AtlantaAppSmokeTest_PROD.java:138)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">PROD.AtlantaAppSmokeTest_PROD:TS013_VerifySocialMediaLinksTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of all elements located by By.xpath: //div[@class=&apos;imc-optin-social&apos;]/div[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir13532_1377483303}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:63797}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 3781c26fbe36ad255b503cc8ee6ca548</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaApparel.ATLAppFooterLinksNavigationPage.getfacebookfootericon(ATLAppFooterLinksNavigationPage.java:216)
+<br/>at PROD.AtlantaAppSmokeTest_PROD.TS013_VerifySocialMediaLinksTest(AtlantaAppSmokeTest_PROD.java:1086)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">PROD.AmericasMartSmokeTest_PROD:TS012_VerifyAllLinksUnderMarketsAndEventsTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">PROD.ExhibitorPortalSmokeTest_PROD:TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">PROD.AtlantaMarketSmokeTest_PROD:TS004_VerifyMarketPlannerRegistrationsOptionTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">PROD.LagVegasMarketSmokeTest_PROD:TS010_VerifyGlobalSearchFunctionalityTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">PROD.SitecoreSmokeTest_PROD:TS006_VerifyIMCReportsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">PROD.SitecoreSmokeTest_PROD:TS004_VerifyShowSpecialApprovalsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">PROD.ExhibitorPortalSmokeTest_PROD:TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">PROD.AtlantaAppSmokeTest_PROD:TS006_VerifyAllLinksUnderMarketsTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">PROD.LagVegasMarketSmokeTest_PROD:TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">PROD.AmericasMartSmokeTest_PROD:TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">PROD.AmericasMartSmokeTest_PROD:TS008_VerifyFooterLinksTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">PROD.LagVegasMarketSmokeTest_PROD:TS009_VerifyExhibitorDirectoryTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m30">PROD.AmericasMartSmokeTest_PROD:TS010_VerifyAllLinksUnderOpenYearRoundTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m31">PROD.SitecoreSmokeTest_PROD:TS009_VerifyControlPanelTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m32">PROD.AtlantaAppSmokeTest_PROD:TS008_VerifyAllLinksUnderAttendTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m33">PROD.SitecoreSmokeTest_PROD:TS008_VerifyEmailExperienceManagerTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m34">PROD.SitecoreSmokeTest_PROD:TS001_VerifySitecoreLoginTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m35">PROD.AtlantaAppSmokeTest_PROD:TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m36">PROD.SitecoreSmokeTest_PROD:TS007_VerifyTaxonomyManagerTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m37">PROD.AtlantaAppSmokeTest_PROD:TS005_VerifyExhibitorDirectoryTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m38">PROD.LagVegasMarketSmokeTest_PROD:TS013_VerifyAllLinksUnderExploreMarketTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m39">PROD.LagVegasMarketSmokeTest_PROD:TS011_VerifyAllLinksUnderYearRoundTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m40">PROD.AtlantaMarketSmokeTest_PROD:TS009_VerifyAllChannelsLinksTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m41">PROD.LagVegasMarketSmokeTest_PROD:TS008_VerifyFooterLinksTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m42">PROD.AmericasMartSmokeTest_PROD:TS003_VerifyMarketPlannerExhibitorPortalOptionTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m43">PROD.AmericasMartSmokeTest_PROD:TS004_VerifyAllLinksUnderExhibitTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m44">PROD.AtlantaMarketSmokeTest_PROD:TS006_VerifyAllLinksUnderMarketInfoTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m45">PROD.AtlantaMarketSmokeTest_PROD:TS010_VerifyAllSocialMediaLinksOnFooterTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m46">PROD.ExhibitorPortalSmokeTest_PROD:TS002_VerifyNotificationsTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m47">PROD.AtlantaMarketSmokeTest_PROD:TS008_VerifAllLinksUnderExhibitTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m48">PROD.AmericasMartSmokeTest_PROD:TS011_VerifyExhibitorDirectoryTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m49">PROD.SitecoreSmokeTest_PROD:TS003_VerifyDigitalAdminPanelTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m50">PROD.LagVegasMarketSmokeTest_PROD:TS002_VerifAllLinksUnderExhibitTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m51">PROD.AtlantaMarketSmokeTest_PROD:TS005_VerifyExhibitorDirectoryTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m52">PROD.LagVegasMarketSmokeTest_PROD:TS007_VerifyAllLinksUnderAttendTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m53">PROD.AmericasMartSmokeTest_PROD:TS001_VerifyMarketPlannerLoginTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m54">PROD.AmericasMartSmokeTest_PROD:TS007_VerifyAllSocialMediaLinksOnFooterTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m55">PROD.AtlantaMarketSmokeTest_PROD:TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m56">PROD.AtlantaMarketSmokeTest_PROD:TS001_VerifyMarketPlannerLoginTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m57">PROD.LagVegasMarketSmokeTest_PROD:TS006_VerifyHeaderChannelLinksTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m58">PROD.LagVegasMarketSmokeTest_PROD:TS012_VerifyAllSocialMediaLinksOnFooterTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m59">PROD.AtlantaAppSmokeTest_PROD:TS009_VerifyAllLinksUnderFashionGalleryTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m60">PROD.SitecoreSmokeTest_PROD:TS005_VerifyExhibitorEventsApprovalTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m61">PROD.AtlantaMarketSmokeTest_PROD:TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m62">PROD.AmericasMartSmokeTest_PROD:TS005_VerifyAllLinksUnderAboutTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m63">PROD.ExhibitorPortalSmokeTest_PROD:TS003_VerifySettingsTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m64">PROD.LagVegasMarketSmokeTest_PROD:TS003_VerifyMarketPlannerProfileAndSettingsOptionTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m65">PROD.LagVegasMarketSmokeTest_PROD:TS001_VerifyMarketPlannerLoginTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m66">PROD.SitecoreSmokeTest_PROD:TS002_VerifyContentEditorTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m67">PROD.AtlantaMarketSmokeTest_PROD:TS012_VerifyAllLinksUnderAttendTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m68">PROD.AtlantaMarketSmokeTest_PROD:TS013_VerifyAllNewsAndTrendsMenuTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

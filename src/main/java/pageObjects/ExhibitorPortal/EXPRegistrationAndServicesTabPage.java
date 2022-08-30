@@ -25,7 +25,7 @@ public class EXPRegistrationAndServicesTabPage {
 	} 
 
 	public WebElement getEXPRegAndServicesTab() throws InterruptedException {
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 		return driver.findElement(EXPRegAndServicesTab);
 	}
 	public WebElement getEXPExhibitorReg() throws InterruptedException {

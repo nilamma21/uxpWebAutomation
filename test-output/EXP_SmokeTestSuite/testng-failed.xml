@@ -3,12 +3,15 @@
 <suite name="Failed suite [EXP_SmokeTestSuite]">
   <test name="Test(failed)">
     <classes>
-      <class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD">
+      <class name="PROD.ExhibitorPortalSmokeTest_PROD">
         <methods>
-          <include name="TS003_VerifySettingsTabTest"/>
           <include name="initialize"/>
+          <include name="tearDown"/>
+          <include name="TS006_VerifyAllLinkUnderYourDigiShowroomTest"/>
+          <include name="TS008_VerifyExhibitorPortalFooterLinksTest"/>
+          <include name="TS007_VerifyAllLinkUnderEXPMarketTabTest"/>
         </methods>
-      </class> <!-- exhibitorportal.ExhibitorPortalSmokeTest_PROD -->
+      </class> <!-- PROD.ExhibitorPortalSmokeTest_PROD -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [EXP_SmokeTestSuite] -->

@@ -43,7 +43,7 @@ public class ATLNewsAndTrendsTabPage
 	} 
 
 	public WebElement getATLNewsAndTrendsTap() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(atlNewsAndTrendsTap);
 	}
 	

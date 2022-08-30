@@ -24,9 +24,8 @@ public class EXPMarketTabPage {
 	} 
 
 	public WebElement getEXPMarketTab() throws InterruptedException {
-		Thread.sleep(7000);
-//		wait = new WebDriverWait (driver,20);
-//		wait.until(ExpectedConditions.elementToBeClickable(EXPMarketTab));
+		Thread.sleep(5000);
+		
 		return driver.findElement(EXPMarketTab);
 	}
 	public WebElement getEXPManageYourMarket() throws InterruptedException {

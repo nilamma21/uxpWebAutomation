@@ -36,7 +36,7 @@ public class ATLMarketInfoPage {
 	} 
 
 	public WebElement getATLMarketInfoHeader() throws InterruptedException{
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(atlmarketinfoheader);
 	}
 	
