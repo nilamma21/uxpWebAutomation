@@ -97,7 +97,8 @@ public class ATLAppGlobalSearchPage {
 	}
 	
 	public WebElement getVerifyGlobalSearch()throws InterruptedException{
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLMatktProductName));
 		return driver.findElement(VerifyGlobalSearch);
 
 	}
