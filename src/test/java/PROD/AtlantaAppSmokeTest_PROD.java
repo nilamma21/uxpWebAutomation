@@ -361,18 +361,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Verify Atlanta Apparel Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets/World-of-Prom"));	
 		System.out.println("Verify World Of Prom Page");
-		driver.get(prop.getProperty("atlappurl"));
-		
-		Thread.sleep(2000);
-		mi.getMarketInfoHeader().click();
-		System.out.println("Click on Markets Tab");
-		//Click on Atlanta App Link
-		atlm.getATLWorldOfPromLink().click();
-		System.out.println("Click on World Of Prom Link");
-		//Verify Atlanta Apparel Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets/World-of-Prom"));	
-		System.out.println("Verify World Of Prom Link Page");
-		driver.get(prop.getProperty("atlappurl"));
+		//driver.get(prop.getProperty("atlappurl"));
 		
 		Thread.sleep(2000);
 		mi.getMarketInfoHeader().click();
