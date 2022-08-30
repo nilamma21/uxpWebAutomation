@@ -40,7 +40,8 @@ public class UXPGlobalSearchPage {
 	
 	public WebElement getVerifyGlobalSeacrh() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyGlobalSeacrh));
 		return driver.findElement(VerifyGlobalSeacrh);
 
 	}

@@ -84,17 +84,17 @@ public class ATLExhibitPage {
 	}
 
 	public WebElement getATLApplyToExhibitBrdcrmb() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(atlapplytoexhibitbrdcrmb);		
 	}
 	
 	public WebElement getATLExhRegstnBrdcrmb() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(atlexhregstnbrdcrmb);		
 	}
 
 	public WebElement getATLExhResourcesBrdcrmb() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(atlexhresourcesbrdcrumb);		
 	}
 	

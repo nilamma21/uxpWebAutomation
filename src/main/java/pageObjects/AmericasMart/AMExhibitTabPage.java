@@ -26,8 +26,7 @@ public class AMExhibitTabPage {
 		} 
 
 		public WebElement getamcExhibitTab() throws InterruptedException {
-			wait = new WebDriverWait (driver,20);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(amcExhibitTab));
+			Thread.sleep(3000);
 			return driver.findElement(amcExhibitTab);
 		}
 		

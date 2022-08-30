@@ -245,7 +245,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 
 		//Click Exhibitor Directory option under Exhibitors and Products
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		exhp.getExhibitorDirectory().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor & Product Directory");
 		System.out.println("Exhibitory Directory section is displayed properly");
@@ -487,8 +487,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		gs.getGlobalSearchTextBox().click();
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
-		Thread.sleep(15000);
-
+		Thread.sleep(3000);
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Global Search functionality is working properly.");
@@ -711,6 +710,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Directory is opened properly.");
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
+		Thread.sleep(3000);
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");

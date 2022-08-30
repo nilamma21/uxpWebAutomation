@@ -112,9 +112,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("ammarturl"));
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		utl.verifyCloseBtnPopup();
 
 		//Login to Market Planner
@@ -180,7 +180,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.verifyCloseBtnPopup();
 		//Scroll till footer links
 		utl.scrollToElement(fl.getHighPointMarket());
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 
 		//In app footer click on 'Facebook' icon and verify results
 		amfl.getFacebookIcon().click();
@@ -344,7 +344,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.verifyCloseBtnPopup();
 		//Click Markets and Events tab at Header
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		atat.getATLAttendTab().click();
 
 		//Click Market Dates and Hours tab under Markets and Events section
@@ -739,7 +739,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.verifyCloseBtnPopup();
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
@@ -782,7 +782,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		amoyr.getOpenYearRoundTab().click();
 		//Click Showroom direct Link Link
 		amoyr.getShoroomDirect().click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		utl.scrollToElement(amoyr.getShowroomDirectPageHeader());
 		//Verify that Showroom Direct page should be displayed
 		String actualShowroomDirectHeader="Exhibitor Directory";
@@ -847,7 +847,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on Exhibit Tab 
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		//utl.verifyCloseBtnPopup();
 		amexh.getamcExhibitTab().click();
 		//Click Exhibit at Americas Mart Link
@@ -899,9 +899,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Profile and Settings tab under Market Planner and verify result
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		atlps.getATLWelcomeText().click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		atlps.getATLProfileAndSettings().click();
 
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+"Profile"));

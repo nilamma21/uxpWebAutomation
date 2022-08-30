@@ -24,21 +24,18 @@ public class ATLGlobalSearchPage {
 	} 
 
 	public WebElement getATLGlobalSearchTextBox() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(atlglobalsearchtxtbx));
+		Thread.sleep(3000);
 		return driver.findElement(atlglobalsearchtxtbx);
 	}
 
-	public WebElement getATLSearchButton() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(atlsearchbtn));
+	public WebElement getATLSearchButton() throws InterruptedException {
+		Thread.sleep(1000);
 
 		return driver.findElement(atlsearchbtn);
 	}
 	
 	public WebElement getATLVerifyGlobalSeacrh() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(atlverifyglobalseacrh));
+		Thread.sleep(10000);
 
 		return driver.findElement(atlverifyglobalseacrh);
 	}
