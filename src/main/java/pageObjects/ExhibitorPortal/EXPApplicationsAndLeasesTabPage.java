@@ -37,7 +37,8 @@ public class EXPApplicationsAndLeasesTabPage
 	}
 
 	public WebElement getEXPAtlantaApplyForTradeshowSpace() throws InterruptedException {
-	Thread.sleep(3000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(EXPAtlantaApplyForTradeshowSpace));
 		return driver.findElement(EXPAtlantaApplyForTradeshowSpace);
 	}
 

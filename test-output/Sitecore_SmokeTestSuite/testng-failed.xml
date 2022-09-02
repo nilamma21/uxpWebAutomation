@@ -3,13 +3,12 @@
 <suite name="Failed suite [Sitecore_SmokeTestSuite]">
   <test name="Test(failed)">
     <classes>
-      <class name="PROD.SitecoreSmokeTest_PROD">
+      <class name="sitecore.SitecoreSmokeTest_PROD">
         <methods>
-          <include name="tearDown"/>
           <include name="initialize"/>
-          <include name="TS004_VerifyShowSpecialApprovalsTest"/>
+          <include name="TS003_VerifyDigitalAdminPanelTest"/>
         </methods>
-      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
+      </class> <!-- sitecore.SitecoreSmokeTest_PROD -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Sitecore_SmokeTestSuite] -->

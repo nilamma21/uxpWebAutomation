@@ -44,7 +44,8 @@ public class ATLAppMarketsTabPage {
 
 	}
 	public WebElement getATLAppHeadersnext()throws InterruptedException{
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLAppHeadersnext));
 		return driver.findElement(ATLAppHeadersnext);
 
 	}

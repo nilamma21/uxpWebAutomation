@@ -29,8 +29,9 @@ public class EXPFooterLinksPage {
 	} 
 
 	public WebElement getExhibitorPortalSymbol() throws InterruptedException {
-		Thread.sleep(5000);
-		
+		Thread.sleep(7000);
+//		wait = new WebDriverWait (driver,20);
+//		wait.until(ExpectedConditions.elementToBeClickable(ExhibitorPortalSymbol));
 		return driver.findElement(ExhibitorPortalSymbol);
 
 	}

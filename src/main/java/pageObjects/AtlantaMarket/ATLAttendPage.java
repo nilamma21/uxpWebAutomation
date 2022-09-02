@@ -86,7 +86,7 @@ public class ATLAttendPage {
 	}
 
 	public WebElement getVerifyATLAttendSection() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		return driver.findElement(VerifyATLAttendSection);
 	}
 	public WebElement getATLEventsSubmenu() throws InterruptedException {

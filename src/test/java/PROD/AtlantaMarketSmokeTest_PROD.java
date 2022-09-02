@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -73,9 +72,9 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
-		//Thread.sleep(3000);
+		Thread.sleep(3000);
 		//	lap.getCloseMarktAdBtn().click();
 	}
 
@@ -119,11 +118,11 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Profile and Settings tab under Market Planner and verify result
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		atlps.getATLWelcomeText().click();
 
 		atlps.getATLProfileAndSettings().click();
-		//Thread.sleep(6000);
+		Thread.sleep(6000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl")+"Profile"));
 		System.out.println("Profile and Settings section options are displayed properly");
 	}
@@ -136,11 +135,10 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
-		
-		atlgs.getATLSearchButton().sendKeys(Keys.ENTER);
-		//Thread.sleep(10000);
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
 		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
@@ -194,7 +192,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		atled.getATLExhDirtSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		atled.getATLExhDirtSearchBtn().click();
-		//Thread.sleep(1000);
+		Thread.sleep(6000);
 		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");
@@ -323,7 +321,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
 		System.out.println("Juniper Market page is displayed properly");
 		driver.get(prop.getProperty("atlmrkturl"));
-		//Thread.sleep(6000);
+		Thread.sleep(6000);
 	}
 
 	@Test(priority=6)
@@ -408,12 +406,12 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Click on Juniper Commerce sub-menu
 		atlexh.getATLJuniperMenu().click();
 
-		//Thread.sleep(10000);
+		Thread.sleep(10000);
 		//Verify that 'Juniper' page should be displayed
 		Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
 
 		driver.get(prop.getProperty("atlmrkturl"));
-		//Thread.sleep(8000);
+		Thread.sleep(8000);
 	}
 
 	@Test(priority=9)
@@ -480,7 +478,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//In app footer click on 'Facebook' icon and verify results
 		atlfl.getFacebookIcon().click();
 
-		//Thread.sleep(10000);
+		Thread.sleep(10000);
 		//Verify that 'ATL Facebook' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/AmericasmartAtl"));
 

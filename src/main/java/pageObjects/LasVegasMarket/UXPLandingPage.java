@@ -21,8 +21,9 @@ public class UXPLandingPage {
 		this.driver = driver; 			
 	} 
 	
-	public WebElement getLogin() throws InterruptedException {
-		Thread.sleep(3000);
+	public WebElement getLogin() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(loginbtn));
 		return driver.findElement(loginbtn);		
 	}
 	
@@ -33,7 +34,7 @@ public class UXPLandingPage {
 	}	
 	
 	public WebElement getIUnderstandBtn() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		return driver.findElement(iunderstandbtn);		
 	}
 	
