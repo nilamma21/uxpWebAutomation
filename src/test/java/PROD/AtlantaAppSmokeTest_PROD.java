@@ -202,7 +202,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Thread.sleep(3000);
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
-		//Thread.sleep(5000);
+		Thread.sleep(15000);
 		utl.scrollToElement(gs.getVerifyGlobalSeacrh());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Thread.sleep(3000);
