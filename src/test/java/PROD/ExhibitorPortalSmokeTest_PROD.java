@@ -489,6 +489,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
+
 		Thread.sleep(9000);
 		Assert.assertTrue(driver.getTitle().contains("Welcome to Juniper Data"));
 		// Close the new window, if that window no more required
