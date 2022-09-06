@@ -36,7 +36,8 @@ public class ATLExhibitorsAndProductsTabPage {
 		this.driver = driver; 			
 	} 
 
-	public WebElement getATLExhibitorsAndProducts() {
+	public WebElement getATLExhibitorsAndProducts() throws InterruptedException {
+		Thread.sleep(3000);
 		return driver.findElement(atlexhibitorsnproducts);
 	}
 
@@ -57,13 +58,12 @@ public class ATLExhibitorsAndProductsTabPage {
 	}
 
 	public WebElement getATLVerifyExhibitorsAndProductsSection() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifyexhibitorsnproductssection));
+		Thread.sleep(3000);
 		return driver.findElement(atlverifyexhibitorsnproductssection);
 	}
 
 	public WebElement getATLVerifyExhibitorDirectory() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(atlverifyexhibitordirectory);
 	}
 

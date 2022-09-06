@@ -35,7 +35,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=1)
+	@Test(priority=01)
 	public void TS001_VerifySitecoreLoginTest() throws InterruptedException, IOException
 	{
 
@@ -59,7 +59,7 @@ public class SitecoreSmokeTest_PROD extends base {
 		System.out.println("Login Successful.");
 	}
 
-	@Test(priority=2)
+	@Test(priority=02)
 	public void TS002_VerifyContentEditorTest() throws InterruptedException, IOException
 	{
 
@@ -74,7 +74,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=3)
+	@Test(priority=03)
 	public void TS003_VerifyDigitalAdminPanelTest() throws InterruptedException, IOException
 	{
 
@@ -90,8 +90,8 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=9)
-	public void TS009_VerifyShowSpecialApprovalsTest() throws InterruptedException, IOException
+	@Test(priority=04)
+	public void TS004_VerifyShowSpecialApprovalsTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -106,7 +106,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=5)
+	@Test(priority=05)
 	public void TS005_VerifyExhibitorEventsApprovalTest() throws InterruptedException, IOException
 	{
 
@@ -122,7 +122,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=6)
+	@Test(priority=06)
 	public void TS006_VerifyIMCReportsTest() throws InterruptedException, IOException
 	{
 
@@ -138,7 +138,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=7)
+	@Test(priority=07)
 	public void TS007_VerifyTaxonomyManagerTest() throws InterruptedException, IOException
 	{
 
@@ -170,8 +170,8 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=4)
-	public void TS004_VerifyControlPanelTest() throws InterruptedException, IOException
+	@Test(priority=9)
+	public void TS009_VerifyControlPanelTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-

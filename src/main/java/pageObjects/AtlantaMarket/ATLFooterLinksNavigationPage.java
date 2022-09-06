@@ -42,81 +42,81 @@ public class ATLFooterLinksNavigationPage {
 	} 
 
 	public WebElement getHighPointMarket() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(highpointmarket);
 	}
 
 	public WebElement getAtlantaMarket() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(atlantamarket);
 	}
 
 	public WebElement getAtlantaApparel() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(atlantaapparel);
 	}
 
 	public WebElement getAmericasMart() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(americasmart);
 	}
 
 	public WebElement getInternationalMarketCenters() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(internationalmarketcenters);
 	}
 
 	public WebElement getDownloadTheApp() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(downloadtheapp);
 	}
 
 	public WebElement getContactUs() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(contactus);
 	}
 
 	public WebElement getCareers() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(careers);
 	}
 
 	public WebElement getTermsAndConditions() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(termsandconditions);
 	}
 
 	public WebElement getPrivacyPolicy() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(privacypolicy);
 	}
 	
 	public WebElement getVerifyCareers() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(verifycareers);
 	}
 	
 	public WebElement getClosePopUpAmericasmart() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(closepopupamericasmart);
 	}
 	
 	public WebElement getVerifyTermsOfUse() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(verifytermsofuse);
 	}
 	
 	public WebElement getVerifyPrivacyPolicy() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(verifyprivacypolicy);
 	}
 	
 	public WebElement getFacebookIcon() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(facebookicon);
 	}
 	public WebElement getInstagramIcon() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(instagramicon);
 	}
 	public WebElement getYouTubeIcon() throws InterruptedException {
@@ -126,19 +126,19 @@ public class ATLFooterLinksNavigationPage {
 		return driver.findElement(youtubeicon);
 	}
 	public WebElement getTwitterIcon() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(twittericon);
 	}
 	public WebElement getATLIMCLinkProd() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(atlimclinkprod);
 	}
 	public WebElement getATLHPMktLink() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(atlhpmktlinkprod);
 	}
 	public WebElement getMediaPressReleases() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		return driver.findElement(MediaPressReleases);
 	}
 }

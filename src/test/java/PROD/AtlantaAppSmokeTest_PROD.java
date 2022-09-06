@@ -110,10 +110,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		//Navigate to Atlanta Apparel site
 		//driver.manage().window().maximize();
-		driver.get(prop.getProperty("atlappurl"));;
-		Thread.sleep(8000);
+		driver.get(prop.getProperty("atlappurl"));
+		//Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 	}
 
 	@Test(priority=1)
@@ -178,11 +178,11 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlps.getAMCExhibitorPortalOptn().click();
 
 		//Verify that 'EXP Login' page should be displayed
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		Assert.assertTrue(el.getVerifyExpHomePage().isDisplayed());
 		System.out.println("Exhibitor Portal is displayed properly.");
 		driver.get(prop.getProperty("atlappurl"));
-		Thread.sleep(8000);
+		//Thread.sleep(8000);
 	
 	}
 	
@@ -199,12 +199,13 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlm = new ATLAppMarketsTabPage(driver);
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(3000);
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
-		Thread.sleep(15000);
+		//Thread.sleep(5000);
 		utl.scrollToElement(gs.getVerifyGlobalSeacrh());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
+		Thread.sleep(3000);
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
 		driver.get(prop.getProperty("atlappurl"));
@@ -240,10 +241,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
 
-/*		utl.scrollToElement(mi.getVerifyContactUs());
+		utl.scrollToElement(mi.getVerifyContactUs());
 		amhe.getExhbAndProdsTab().click();
-		gs.getSearchButton().click()*/;
-		Thread.sleep(5000);
+		gs.getSearchButton().click();
+		Thread.sleep(1000);
 		utl.scrollToElement(mi.getVerifyContactUs());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
@@ -268,7 +269,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlm=new ATLAppMarketsTabPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		//Click on Markets Tab
 		mi.getMarketInfoHeader().click();
 		System.out.println("Click on Markets Tab");
@@ -298,8 +299,9 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Click on press releases");
 
 		//System.out.println(atlm.getATLAppHeadersnext().getText());
-		//Verify About Page
-		//Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Press Center"));	
+		//Verify Press Releases Page
+		Thread.sleep(3000);
+		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Press Center"));	
 		System.out.println("Verify Press Realeses Page");		
 
 		//Click on Markets Tab
@@ -308,8 +310,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Click on Click on In the News
 		atlm.getATLInTheNews().click();
 		System.out.println("Click on In the News");
-		//Verify About Page
-		//Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("In The News"));	
+		//Verify In the News Page
+		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("In The News"));	
 		System.out.println("Verify In the News Page");		
 
 		mi.getMarketInfoHeader().click();
@@ -318,7 +320,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlm.getATLAppImage().click();
 		System.out.println("Click on Atlanta App Image");
 		//Verify Atlanta Apparel Page
-		//Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Atlanta Apparel"));	
+		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Atlanta Apparel"));	
 		System.out.println("Verify Atlanta Apparel Page");
 
 
@@ -328,7 +330,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlm.getATLAppLink().click();
 		System.out.println("Click on Atlanta App Link");
 		//Verify Atlanta Apparel Page
-		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Atlanta Apparel"));	
+		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Atlanta Apparel"));
 		System.out.println("Verify Atlanta Apparel Link Page");
 
 		mi.getMarketInfoHeader().click();
@@ -337,7 +339,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlm.getATLVowImage().click();
 		System.out.println("Click on Vow Image");
 		//Verify Atlanta Apparel Page
-		//Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("VOW"));	
+		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("VOW"));	
 		System.out.println("Verify Vow Page");
 
 
@@ -347,39 +349,32 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlm.getATLVowLink().click();
 		System.out.println("Click on Vow Link");
 		//Verify Atlanta Apparel Page
-		//Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("VOW"));	
+		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("VOW"));	
 		System.out.println("Verify Vow Page Link Page");
-
+		
+		
 		mi.getMarketInfoHeader().click();
 		System.out.println("Click on Markets Tab");
 		//Click on Atlanta App Image
 		atlm.getATLWorldOfPromImg().click();
 		System.out.println("Click on World Of Prom Image");
 		//Verify Atlanta Apparel Page
-		//Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("World"));	
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets/World-of-Prom"));	
 		System.out.println("Verify World Of Prom Page");
-
-
-		mi.getMarketInfoHeader().click();
-		System.out.println("Click on Markets Tab");
-		//Click on Atlanta App Link
-		atlm.getATLWorldOfPromLink().click();
-		System.out.println("Click on World Of Prom Link");
-		//Verify Atlanta Apparel Page
-		//Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("World"));	
-		System.out.println("Verify World Of Prom Link Page");
-
+		//driver.get(prop.getProperty("atlappurl"));
+		
+		Thread.sleep(2000);
 		mi.getMarketInfoHeader().click();
 		System.out.println("Click on Markets Tab");
 		//Click on Atlanta App Image
 		atlm.getATLLasVegasAppImg().click();
 		System.out.println("Click on Las Vegas App Image");
 		//Verify Atlanta Apparel Page
-		//Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Las"));	
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));	
 		System.out.println("Verify Las Vegas App Img Page");
 		driver.get(prop.getProperty("atlappurl"));
-
-
+		
+		Thread.sleep(2000);
 		mi.getMarketInfoHeader().click();
 		System.out.println("Click on Markets Tab");
 		//Click on Atlanta App Link
@@ -412,7 +407,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on Exhibitors And Brands Tab
-		Thread.sleep(10000);
+		Thread.sleep(1000);
 		exhp.getExhibitorsAndProducts().click();
 		System.out.println("Click on Exhibitors And brands Tab");
 		//CLick on Exhibitor Directory
@@ -527,7 +522,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlatt.getATLHotels().click(); 
 		System.out.println("Click on Hotels");
 		//Verify Hotels Page
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		Assert.assertTrue(atlatt.getATLVerifyHotels().getText().contains("Hotels"));	
 		System.out.println("Vefiry Hotels Page");	
 
@@ -539,7 +534,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlatt.getATLTravel().click(); 
 		System.out.println("Click on Travel");
 		//Verify Hotels Page
-		Thread.sleep(2000);
+		//Thread.sleep(1000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Travel"));	
 		System.out.println("Vefiry Travel Page ");	
 
@@ -549,7 +544,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//CLick on Events img
 		atlatt.getATLEvents().click(); 
 		System.out.println("Click on Events");
-		Thread.sleep(2000);
+	//	Thread.sleep(1000);
 		//Verify Hotels Page
 		//System.out.println(atlm.getATLAppHeadersnext().getText());
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Events"));	
@@ -562,7 +557,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//CLick on Dining img
 		atlatt.getATLDining().click(); 
 		System.out.println("Click on Dining");
-		Thread.sleep(2000);
+		//Thread.sleep(1000);
 		//Verify Hotels Page
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Dining"));	
 		System.out.println("Vefiry Dining Page ");
@@ -573,7 +568,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//CLick on Download app img
 		atlatt.getATLDownloadApp().click(); 
 		System.out.println("Click on Donwload App");
-		Thread.sleep(15000);
+		//Thread.sleep(3000);
 		//Verify Hotels Page
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Atlanta Apparel App"));	
 		System.out.println("Vefiry Download App Page ");
@@ -608,7 +603,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlf.getatlAppfashionGalleryLink().click();
 		System.out.println("Click on Fashion Gallery Link ");
 		//Verify Fashion Gallery Link 
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Images"));	
 		System.out.println("Vefiry Fashion Gallery Link  Page");
 
@@ -619,7 +614,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlf.getatlAppfashionGalleryLinkImg().click();
 		System.out.println("Click on Fashion Gallery Link Img ");
 		//Verify Fashion Gallery Link Img
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Images"));	
 		System.out.println("Vefiry Fashion Gallery Link Img Page");
 
@@ -631,7 +626,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlf.getatlAppLookBook().click();
 		System.out.println("Click on Look Book Link ");
 		//Vefiry Lookbooks  Page
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Lookbooks"));	
 		System.out.println("Vefiry Lookbooks  Page");
 		
@@ -642,7 +637,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlf.getatlAppLookBookImg().click();
 		System.out.println("Click on Look Book Link ");
 		//Vefiry Lookbooks  Page
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Lookbooks"));	
 		System.out.println("Vefiry Lookbooks  Page");
 
@@ -653,7 +648,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlf.getatlAppvideosImages().click();
 		System.out.println("Click on Videos and Images Link ");
 		//Vefiry Lookbooks  Page
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Videos"));	
 		System.out.println("Verify  Video and Images   Page");
 
@@ -664,7 +659,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlf.getatlAppvideosImagesImg().click();
 		System.out.println("Click on  Video and Images  Img ");
 		//Vefiry Lookbooks img Page
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Videos"));	
 		System.out.println("Vefiry Video and Images  img Page");
 
@@ -674,7 +669,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Click on Videos and Images Link 
 		atlf.getatlAppNews().click();
 		//Vefiry Lookbooks  Page
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("In The News"));	
 		System.out.println("Verify  In the News   Page");
 
@@ -684,7 +679,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//CLick on  LookbooksImg  Page
 		atlf.getatlAppatlAppNewsImg().click();
 		//Vefiry Lookbooks img Page
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("In The News"));	
 		System.out.println("Vefiry In the News  img Page");
 	}
@@ -759,7 +754,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlva.getHotels().click();
 		System.out.println("CLick Advertising Sponsorship");
 		//Verify Exhibit In Social Occasion 
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Advertising + Sponsorship"));	
 		System.out.println("Verify Advertising Sponsorship ");
 
@@ -770,7 +765,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlva.getTravel().click();
 		System.out.println("CLick Show Dates");
 		//Verify Show Dates 
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Complete Show Dates"));	
 		System.out.println("Verify Show Dates ");
 
@@ -797,7 +792,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlva.getDining().click();
 		System.out.println("CLick Exhibit Exhibitor Resources");
 		//Verify Exhibitor Resources
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Resources"));	
 		System.out.println("Verify Exhibitor Resources ");	
 	}
@@ -853,7 +848,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atly.getLasVegasDesignCenter().click();
 		System.out.println("CLick Shop The Mart Link ");
 		//Verify Shop The Mart Link 
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		Assert.assertTrue(atlyr.getShopTheMart().getText().contains("SHOP THE BEST KEPT SECRET IN JEWELRY & FASHION"));	
 		System.out.println("Verify Shop The Mart page ");
 
@@ -1085,7 +1080,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 		//Verify that 'Atlapp Facebook' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/apparelmarkets/"));
 
@@ -1170,7 +1165,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }
+
+
+

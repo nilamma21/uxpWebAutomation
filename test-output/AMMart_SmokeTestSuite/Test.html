@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>10/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon May 09 16:01:33 IST 2022</td>
+<td>Started on:</td><td>Wed Aug 24 15:35:05 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>1491 seconds (1491176 ms)</td>
+<tr><td>Total time:</td><td>1296 seconds (1296003 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,122 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='americasmart.AmericasMartSmokeTest_PROD.TS008_VerifyFooterLinksTest()'><b>TS008_VerifyFooterLinksTest</b><br>Test class: americasmart.AmericasMartSmokeTest_PROD</td>
-<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[Press Release]s&gt; but was:&lt;[Career]s&gt;
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at americasmart.AmericasMartSmokeTest_PROD.TS008_VerifyFooterLinksTest(AmericasMartSmokeTest_PROD.java:487)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace858818438", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace858818438'><pre>org.junit.ComparisonFailure: expected:&lt;[Press Release]s&gt; but was:&lt;[Career]s&gt;
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at americasmart.AmericasMartSmokeTest_PROD.TS008_VerifyFooterLinksTest(AmericasMartSmokeTest_PROD.java:487)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div></td>
-<td>495</td>
-<td>americasmart.AmericasMartSmokeTest_PROD@5b275dab</td></tr>
-<tr>
-<td title='americasmart.AmericasMartSmokeTest_PROD.TS010_VerifyAllLinksUnderOpenYearRoundTest()'><b>TS010_VerifyAllLinksUnderOpenYearRoundTest</b><br>Test class: americasmart.AmericasMartSmokeTest_PROD</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //h2[contains(text(),&apos;Open Year Round Directory&apos;)] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.AmericasMart.AMOpenYearRoundPage.getShowroomDirectPageHeader(AMOpenYearRoundPage.java:56)
-	at americasmart.AmericasMartSmokeTest_PROD.TS010_VerifyAllLinksUnderOpenYearRoundTest(AmericasMartSmokeTest_PROD.java:566)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //h2[contains(text(),&apos;Open Year Round Directory&apos;)]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1904288897", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1904288897'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //h2[contains(text(),&apos;Open Year Round Directory&apos;)] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.AmericasMart.AMOpenYearRoundPage.getShowroomDirectPageHeader(AMOpenYearRoundPage.java:56)
-	at americasmart.AmericasMartSmokeTest_PROD.TS010_VerifyAllLinksUnderOpenYearRoundTest(AmericasMartSmokeTest_PROD.java:566)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //h2[contains(text(),&apos;Open Year Round Directory&apos;)]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-</pre></div></td>
-<td>55</td>
-<td>americasmart.AmericasMartSmokeTest_PROD@5b275dab</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -191,55 +75,65 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='americasmart.AmericasMartSmokeTest_PROD.TS001_VerifyMarketPlannerLoginTest()'><b>TS001_VerifyMarketPlannerLoginTest</b><br>Test class: americasmart.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS001_VerifyMarketPlannerLoginTest()'><b>TS001_VerifyMarketPlannerLoginTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>48</td>
-<td>americasmart.AmericasMartSmokeTest_PROD@5b275dab</td></tr>
+<td>107</td>
+<td>PROD.AmericasMartSmokeTest_PROD@4667ae56</td></tr>
 <tr>
-<td title='americasmart.AmericasMartSmokeTest_PROD.TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()'><b>TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</b><br>Test class: americasmart.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS002_VerifyMarketPlannerProfileAndSettingsOptionTest()'><b>TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>22</td>
-<td>americasmart.AmericasMartSmokeTest_PROD@5b275dab</td></tr>
+<td>8</td>
+<td>PROD.AmericasMartSmokeTest_PROD@4667ae56</td></tr>
 <tr>
-<td title='americasmart.AmericasMartSmokeTest_PROD.TS003_VerifyMarketPlannerExhibitorPortalOptionTest()'><b>TS003_VerifyMarketPlannerExhibitorPortalOptionTest</b><br>Test class: americasmart.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS003_VerifyMarketPlannerExhibitorPortalOptionTest()'><b>TS003_VerifyMarketPlannerExhibitorPortalOptionTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>40</td>
-<td>americasmart.AmericasMartSmokeTest_PROD@5b275dab</td></tr>
+<td>30</td>
+<td>PROD.AmericasMartSmokeTest_PROD@4667ae56</td></tr>
 <tr>
-<td title='americasmart.AmericasMartSmokeTest_PROD.TS004_VerifyAllLinksUnderExhibitTest()'><b>TS004_VerifyAllLinksUnderExhibitTest</b><br>Test class: americasmart.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS004_VerifyAllLinksUnderExhibitTest()'><b>TS004_VerifyAllLinksUnderExhibitTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>57</td>
-<td>americasmart.AmericasMartSmokeTest_PROD@5b275dab</td></tr>
+<td>39</td>
+<td>PROD.AmericasMartSmokeTest_PROD@4667ae56</td></tr>
 <tr>
-<td title='americasmart.AmericasMartSmokeTest_PROD.TS005_VerifyAllLinksUnderAboutTabTest()'><b>TS005_VerifyAllLinksUnderAboutTabTest</b><br>Test class: americasmart.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS005_VerifyAllLinksUnderAboutTabTest()'><b>TS005_VerifyAllLinksUnderAboutTabTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>155</td>
-<td>americasmart.AmericasMartSmokeTest_PROD@5b275dab</td></tr>
+<td>108</td>
+<td>PROD.AmericasMartSmokeTest_PROD@4667ae56</td></tr>
 <tr>
-<td title='americasmart.AmericasMartSmokeTest_PROD.TS006_VerifyAllHeaderChanelLinksTest()'><b>TS006_VerifyAllHeaderChanelLinksTest</b><br>Test class: americasmart.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS006_VerifyAllHeaderChanelLinksTest()'><b>TS006_VerifyAllHeaderChanelLinksTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>199</td>
-<td>americasmart.AmericasMartSmokeTest_PROD@5b275dab</td></tr>
+<td>313</td>
+<td>PROD.AmericasMartSmokeTest_PROD@4667ae56</td></tr>
 <tr>
-<td title='americasmart.AmericasMartSmokeTest_PROD.TS007_VerifyAllLinksUnderMarketsAndEventsTabTest()'><b>TS007_VerifyAllLinksUnderMarketsAndEventsTabTest</b><br>Test class: americasmart.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS007_VerifyAllSocialMediaLinksOnFooterTest()'><b>TS007_VerifyAllSocialMediaLinksOnFooterTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>209</td>
-<td>americasmart.AmericasMartSmokeTest_PROD@5b275dab</td></tr>
+<td>83</td>
+<td>PROD.AmericasMartSmokeTest_PROD@4667ae56</td></tr>
 <tr>
-<td title='americasmart.AmericasMartSmokeTest_PROD.TS009_VerifyGlobalSearchFunctionalityTest()'><b>TS009_VerifyGlobalSearchFunctionalityTest</b><br>Test class: americasmart.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS008_VerifyFooterLinksTest()'><b>TS008_VerifyFooterLinksTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>11</td>
-<td>americasmart.AmericasMartSmokeTest_PROD@5b275dab</td></tr>
+<td>178</td>
+<td>PROD.AmericasMartSmokeTest_PROD@4667ae56</td></tr>
 <tr>
-<td title='americasmart.AmericasMartSmokeTest_PROD.TS011_VerifyExhibitorDirectoryTest()'><b>TS011_VerifyExhibitorDirectoryTest</b><br>Test class: americasmart.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS009_VerifyGlobalSearchFunctionalityTest()'><b>TS009_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>81</td>
-<td>americasmart.AmericasMartSmokeTest_PROD@5b275dab</td></tr>
+<td>45</td>
+<td>PROD.AmericasMartSmokeTest_PROD@4667ae56</td></tr>
 <tr>
-<td title='americasmart.AmericasMartSmokeTest_PROD.TS012_VerifyAllSocialMediaLinksOnFooterTest()'><b>TS012_VerifyAllSocialMediaLinksOnFooterTest</b><br>Test class: americasmart.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS010_VerifyAllLinksUnderOpenYearRoundTest()'><b>TS010_VerifyAllLinksUnderOpenYearRoundTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>43</td>
-<td>americasmart.AmericasMartSmokeTest_PROD@5b275dab</td></tr>
+<td>90</td>
+<td>PROD.AmericasMartSmokeTest_PROD@4667ae56</td></tr>
+<tr>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS011_VerifyExhibitorDirectoryTest()'><b>TS011_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
+<td></td>
+<td>78</td>
+<td>PROD.AmericasMartSmokeTest_PROD@4667ae56</td></tr>
+<tr>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS012_VerifyAllLinksUnderMarketsAndEventsTabTest()'><b>TS012_VerifyAllLinksUnderMarketsAndEventsTabTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
+<td></td>
+<td>206</td>
+<td>PROD.AmericasMartSmokeTest_PROD@4667ae56</td></tr>
 </table><p>
 </body>
 </html>
