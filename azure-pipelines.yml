@@ -10,8 +10,10 @@ trigger:
 pool:
   vmImage: windows-2019
 
-  jobs:
-    - job: ATL Agent Job
+stages:
+  - stage: test
+    jobs:
+    - job: ATLAgentJob
       steps:
       - task: Maven@3
         inputs:
@@ -25,7 +27,7 @@ pool:
           testRunTitle: 'ATL Smoke Test Results'
           goals: 'package'
 
-    - job: LVM Agent Job
+    - job: LVMAgentJob
       steps:
       - task: Maven@3
         inputs:
@@ -39,7 +41,7 @@ pool:
           testRunTitle: 'LVM Smoke Test Results'
           goals: 'package'
     
-    - job: AMC Agent Job
+    - job: AMCAgentJob
       steps:
       - task: Maven@3
         inputs:
@@ -53,7 +55,7 @@ pool:
           testRunTitle: 'AMC Smoke Test Results'
           goals: 'package'
     
-    - job: ATL App Agent Job
+    - job: ATLAppAgentJob
       steps:
       - task: Maven@3
         inputs:
@@ -67,7 +69,7 @@ pool:
           testRunTitle: 'ATL App Smoke Test Results'
           goals: 'package'
     
-    - job: EXP Agent Job
+    - job: EXPAgentJob
       steps:
       - task: Maven@3
         inputs:
@@ -81,7 +83,7 @@ pool:
           testRunTitle: 'EXP Smoke Test Results'
           goals: 'package'
     
-    - job: Sitecore Agent Job
+    - job: SitecoreAgentJob
       steps:
       - task: Maven@3
         inputs:
