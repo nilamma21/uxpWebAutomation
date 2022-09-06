@@ -1032,11 +1032,11 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		se.sendEmailWithAttachment();
 	}*/
 
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 
 }
 

@@ -31,56 +31,17 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">SequencialTest</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">159.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Parallel Test</td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">126.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">SequencialTest &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="2">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m1"><b>TS006_VerifyAllLinksUnderMarketsTabTest</b>  </a></td><td class="numi">1</td><td>1661855170926</td><td class="numi">121496</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest</b>  </a></td><td class="numi">1</td><td>1661855293179</td><td class="numi">8491</td></tr>
+<tr><th colspan="4">Parallel Test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m1"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1662444580353</td><td class="numi">57114</td></tr>
+<tr class="passedeven"><td rowspan="1">PROD.AtlantaMarketSmokeTest_PROD</td><td><a href="#m2"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1662444593427</td><td class="numi">49648</td></tr>
 </table>
-<h1>SequencialTest</h1>
-<h2 id="m1">PROD.AtlantaAppSmokeTest_PROD:TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest</h2>
-<div style="padding-left:3em">
-<p>null</p>
-org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
-<br/>at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElements(ExpectedConditions.java:901)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$200(ExpectedConditions.java:44)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:232)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:229)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-<br/>at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getExhibitorsAndProducts(UXPExhibitorsAndProductsTabPage.java:38)
-<br/>at PROD.AtlantaAppSmokeTest_PROD.TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest(AtlantaAppSmokeTest_PROD.java:411)
-<br/>25 lines not shown
-</div>
+<h1>Parallel Test</h1>
+<h2 id="m1">PROD.AtlantaMarketSmokeTest_PROD:TS001_VerifyMarketPlannerLoginTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">PROD.AtlantaAppSmokeTest_PROD:TS006_VerifyAllLinksUnderMarketsTabTest</h2>
-<div style="padding-left:3em">
-<p>Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class =&apos;imc-section&apos;]/div[1]/div[1]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
-org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-<br/>at pageObjects.LasVegasMarket.UXPMarketInfoPage.getMarketInfoHeader(UXPMarketInfoPage.java:44)
-<br/>at PROD.AtlantaAppSmokeTest_PROD.TS006_VerifyAllLinksUnderMarketsTabTest(AtlantaAppSmokeTest_PROD.java:367)
-<br/>25 lines not shown
-<p>Caused by Cannot locate an element using By.xpath: //div[@class =&apos;imc-section&apos;]/div[1]/div[1]/div[1]/a[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown</p>
-org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-<br/>at java.util.Optional.orElseThrow(Unknown Source)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-<br/>at pageObjects.LasVegasMarket.UXPMarketInfoPage.getMarketInfoHeader(UXPMarketInfoPage.java:44)
-<br/>at PROD.AtlantaAppSmokeTest_PROD.TS006_VerifyAllLinksUnderMarketsTabTest(AtlantaAppSmokeTest_PROD.java:367)
-<br/>25 lines not shown
-</div>
+<h2 id="m2">PROD.LagVegasMarketSmokeTest_PROD:TS001_VerifyMarketPlannerLoginTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
