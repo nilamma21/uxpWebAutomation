@@ -6,8 +6,9 @@
       <class name="PROD.SitecoreSmokeTest_PROD">
         <methods>
           <include name="tearDown"/>
-          <include name="TS006_VerifyIMCReportsTest"/>
           <include name="initialize"/>
+          <include name="TS009_VerifyDigitalAdminPanelTest"/>
+          <include name="TS005_VerifyEmailExperienceManagerTest"/>
         </methods>
       </class> <!-- PROD.SitecoreSmokeTest_PROD -->
     </classes>
