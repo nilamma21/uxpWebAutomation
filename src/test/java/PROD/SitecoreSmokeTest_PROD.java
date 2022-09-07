@@ -74,8 +74,8 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=03)
-	public void TS003_VerifyDigitalAdminPanelTest() throws InterruptedException, IOException
+	@Test(priority=9)
+	public void TS009_VerifyDigitalAdminPanelTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -135,7 +135,6 @@ public class SitecoreSmokeTest_PROD extends base {
 		sl.getIMCReports().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("IMC Reports Panel"));
 		System.out.println("IMC Reports opened successfully.");
-
 	}
 
 	@Test(priority=07)
@@ -170,8 +169,8 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=9)
-	public void TS009_VerifyControlPanelTest() throws InterruptedException, IOException
+	@Test(priority=3)
+	public void TS003_VerifyControlPanelTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-

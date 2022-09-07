@@ -1,39 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="126693" started-at="2022-09-06T06:08:45Z" finished-at="2022-09-06T06:10:52Z">
+  <suite name="SmokeTestSuite" duration-ms="91866" started-at="2022-09-07T07:24:05Z" finished-at="2022-09-07T07:25:37Z">
     <groups>
     </groups>
-    <test name="Parallel Test" duration-ms="126693" started-at="2022-09-06T06:08:45Z" finished-at="2022-09-06T06:10:52Z">
-      <class name="PROD.LagVegasMarketSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@f6c48ac]" name="initialize" is-config="true" duration-ms="54874" started-at="2022-09-06T11:38:45Z" finished-at="2022-09-06T11:39:40Z">
+    <test name="Parallel Test" duration-ms="91866" started-at="2022-09-07T07:24:05Z" finished-at="2022-09-07T07:25:37Z">
+      <class name="PROD.SitecoreSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="initialize" is-config="true" duration-ms="11936" started-at="2022-09-07T12:54:05Z" finished-at="2022-09-07T12:54:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@f6c48ac]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="57114" started-at="2022-09-06T11:39:40Z" finished-at="2022-09-06T11:40:37Z">
+        <test-method status="PASS" signature="TS001_VerifySitecoreLoginTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS001_VerifySitecoreLoginTest" duration-ms="27911" started-at="2022-09-07T12:54:17Z" finished-at="2022-09-07T12:54:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@f6c48ac]" name="tearDown" is-config="true" duration-ms="14533" started-at="2022-09-06T11:40:37Z" finished-at="2022-09-06T11:40:52Z">
+        </test-method> <!-- TS001_VerifySitecoreLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyContentEditorTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS002_VerifyContentEditorTest" duration-ms="9893" started-at="2022-09-07T12:54:45Z" finished-at="2022-09-07T12:54:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyContentEditorTest -->
+        <test-method status="PASS" signature="TS003_VerifyControlPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS003_VerifyControlPanelTest" duration-ms="5767" started-at="2022-09-07T12:54:55Z" finished-at="2022-09-07T12:55:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyControlPanelTest -->
+        <test-method status="PASS" signature="TS004_VerifyShowSpecialApprovalsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS004_VerifyShowSpecialApprovalsTest" duration-ms="4909" started-at="2022-09-07T12:55:01Z" finished-at="2022-09-07T12:55:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyShowSpecialApprovalsTest -->
+        <test-method status="PASS" signature="TS005_VerifyExhibitorEventsApprovalTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS005_VerifyExhibitorEventsApprovalTest" duration-ms="4408" started-at="2022-09-07T12:55:06Z" finished-at="2022-09-07T12:55:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyExhibitorEventsApprovalTest -->
+        <test-method status="PASS" signature="TS006_VerifyIMCReportsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS006_VerifyIMCReportsTest" duration-ms="4672" started-at="2022-09-07T12:55:10Z" finished-at="2022-09-07T12:55:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyIMCReportsTest -->
+        <test-method status="PASS" signature="TS007_VerifyTaxonomyManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS007_VerifyTaxonomyManagerTest" duration-ms="4830" started-at="2022-09-07T12:55:15Z" finished-at="2022-09-07T12:55:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyTaxonomyManagerTest -->
+        <test-method status="PASS" signature="TS008_VerifyEmailExperienceManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS008_VerifyEmailExperienceManagerTest" duration-ms="6762" started-at="2022-09-07T12:55:20Z" finished-at="2022-09-07T12:55:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyEmailExperienceManagerTest -->
+        <test-method status="PASS" signature="TS009_VerifyDigitalAdminPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS009_VerifyDigitalAdminPanelTest" duration-ms="5342" started-at="2022-09-07T12:55:26Z" finished-at="2022-09-07T12:55:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyDigitalAdminPanelTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="tearDown" is-config="true" duration-ms="5341" started-at="2022-09-07T12:55:32Z" finished-at="2022-09-07T12:55:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
-      <class name="PROD.AtlantaMarketSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@59ec2012]" name="initialize" is-config="true" duration-ms="67973" started-at="2022-09-06T11:38:45Z" finished-at="2022-09-06T11:39:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@59ec2012]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="49648" started-at="2022-09-06T11:39:53Z" finished-at="2022-09-06T11:40:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@59ec2012]" name="tearDown" is-config="true" duration-ms="8974" started-at="2022-09-06T11:40:43Z" finished-at="2022-09-06T11:40:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- PROD.AtlantaMarketSmokeTest_PROD -->
+      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
     </test> <!-- Parallel Test -->
   </suite> <!-- SmokeTestSuite -->
 </testng-results>
