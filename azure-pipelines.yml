@@ -10,68 +10,89 @@ trigger:
 pool:
   vmImage: windows-2019
 
-steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'ATLApppom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'LVMpom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+stages:
+  - stage: test
+    jobs:
+    - job: ATLAgentJob
+      steps:
+      - task: Maven@3
+        inputs:
+          mavenPomFile: 'ATLpom.xml'
+          mavenOptions: '-Xmx3072m'
+          javaHomeOption: 'JDKVersion'
+          jdkVersionOption: '1.8'
+          jdkArchitectureOption: 'x64'
+          publishJUnitResults: true
+          testResultsFiles: '**/surefire-reports/TEST-*.xml'
+          testRunTitle: 'ATL Smoke Test Results'
+          goals: 'package'
 
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'ATLpom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
-
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'AMCpom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
-
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'EXPpom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
-
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'Sitecorepom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    - job: LVMAgentJob
+      steps:
+      - task: Maven@3
+        inputs:
+          mavenPomFile: 'LVMpom.xml'
+          mavenOptions: '-Xmx3072m'
+          javaHomeOption: 'JDKVersion'
+          jdkVersionOption: '1.8'
+          jdkArchitectureOption: 'x64'
+          publishJUnitResults: true
+          testResultsFiles: '**/surefire-reports/TEST-*.xml'
+          testRunTitle: 'LVM Smoke Test Results'
+          goals: 'package'
+    
+    - job: AMCAgentJob
+      steps:
+      - task: Maven@3
+        inputs:
+          mavenPomFile: 'AMCpom.xml'
+          mavenOptions: '-Xmx3072m'
+          javaHomeOption: 'JDKVersion'
+          jdkVersionOption: '1.8'
+          jdkArchitectureOption: 'x64'
+          publishJUnitResults: true
+          testResultsFiles: '**/surefire-reports/TEST-*.xml'
+          testRunTitle: 'AMC Smoke Test Results'
+          goals: 'package'
+    
+    - job: ATLAppAgentJob
+      steps:
+      - task: Maven@3
+        inputs:
+          mavenPomFile: 'ATLApppom.xml'
+          mavenOptions: '-Xmx3072m'
+          javaHomeOption: 'JDKVersion'
+          jdkVersionOption: '1.8'
+          jdkArchitectureOption: 'x64'
+          publishJUnitResults: true
+          testResultsFiles: '**/surefire-reports/TEST-*.xml'
+          testRunTitle: 'ATL App Smoke Test Results'
+          goals: 'package'
+    
+    - job: EXPAgentJob
+      steps:
+      - task: Maven@3
+        inputs:
+          mavenPomFile: 'EXPpom.xml'
+          mavenOptions: '-Xmx3072m'
+          javaHomeOption: 'JDKVersion'
+          jdkVersionOption: '1.8'
+          jdkArchitectureOption: 'x64'
+          publishJUnitResults: true
+          testResultsFiles: '**/surefire-reports/TEST-*.xml'
+          testRunTitle: 'EXP Smoke Test Results'
+          goals: 'package'
+    
+    - job: SitecoreAgentJob
+      steps:
+      - task: Maven@3
+        inputs:
+          mavenPomFile: 'Sitecorepom.xml'
+          mavenOptions: '-Xmx3072m'
+          javaHomeOption: 'JDKVersion'
+          jdkVersionOption: '1.8'
+          jdkArchitectureOption: 'x64'
+          publishJUnitResults: true
+          testResultsFiles: '**/surefire-reports/TEST-*.xml'
+          testRunTitle: 'Sitecore Smoke Test Results'
+          goals: 'package'
