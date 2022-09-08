@@ -1,151 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="9" passed="7">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="139364" started-at="2022-09-07T11:17:03Z" finished-at="2022-09-07T11:19:22Z">
+  <suite name="SmokeTestSuite" duration-ms="164502" started-at="2022-09-08T05:50:01Z" finished-at="2022-09-08T05:52:45Z">
     <groups>
     </groups>
-    <test name="Parallel Test" duration-ms="139364" started-at="2022-09-07T11:17:03Z" finished-at="2022-09-07T11:19:22Z">
-      <class name="PROD.SitecoreSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="initialize" is-config="true" duration-ms="34710" started-at="2022-09-07T16:47:03Z" finished-at="2022-09-07T16:47:38Z">
+    <test name="Parallel Test" duration-ms="164502" started-at="2022-09-08T05:50:01Z" finished-at="2022-09-08T05:52:45Z">
+      <class name="PROD.AmericasMartSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@4dfa3a9d]" name="initialize" is-config="true" duration-ms="47073" started-at="2022-09-08T11:20:01Z" finished-at="2022-09-08T11:20:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifySitecoreLoginTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS001_VerifySitecoreLoginTest" duration-ms="25618" started-at="2022-09-07T16:47:38Z" finished-at="2022-09-07T16:48:03Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@4dfa3a9d]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="81408" started-at="2022-09-08T11:20:48Z" finished-at="2022-09-08T11:22:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifySitecoreLoginTest -->
-        <test-method status="PASS" signature="TS002_VerifyContentEditorTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS002_VerifyContentEditorTest" duration-ms="35459" started-at="2022-09-07T16:48:03Z" finished-at="2022-09-07T16:48:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyContentEditorTest -->
-        <test-method status="PASS" signature="TS003_VerifyControlPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS003_VerifyControlPanelTest" duration-ms="5758" started-at="2022-09-07T16:48:39Z" finished-at="2022-09-07T16:48:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyControlPanelTest -->
-        <test-method status="PASS" signature="TS004_VerifyShowSpecialApprovalsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS004_VerifyShowSpecialApprovalsTest" duration-ms="4642" started-at="2022-09-07T16:48:45Z" finished-at="2022-09-07T16:48:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyShowSpecialApprovalsTest -->
-        <test-method status="FAIL" signature="TS005_VerifyEmailExperienceManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS005_VerifyEmailExperienceManagerTest" duration-ms="2472" started-at="2022-09-07T16:48:49Z" finished-at="2022-09-07T16:48:52Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[element click intercepted: Element <a class="sc-global-logo medium" href="/sitecore/shell/sitecore/client/Applications/Launchpad"></a> is not clickable at point (114, 25). Other element would receive the click: <div class="overlay" id="progressindicator">...</div>
-  (Session info: chrome=104.0.5112.102)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir28260_199786692}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61133}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 89e272d445081c4423a91b8476c0016b]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <a class="sc-global-logo medium" href="/sitecore/shell/sitecore/client/Applications/Launchpad"></a> is not clickable at point (114, 25). Other element would receive the click: <div class="overlay" id="progressindicator">...</div>
-  (Session info: chrome=104.0.5112.102)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir28260_199786692}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61133}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 89e272d445081c4423a91b8476c0016b
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at PROD.SitecoreSmokeTest_PROD.TS005_VerifyEmailExperienceManagerTest(SitecoreSmokeTest_PROD.java:164)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyEmailExperienceManagerTest -->
-        <test-method status="PASS" signature="TS006_VerifyIMCReportsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS006_VerifyIMCReportsTest" duration-ms="4464" started-at="2022-09-07T16:48:52Z" finished-at="2022-09-07T16:48:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyIMCReportsTest -->
-        <test-method status="PASS" signature="TS007_VerifyTaxonomyManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS007_VerifyTaxonomyManagerTest" duration-ms="6985" started-at="2022-09-07T16:48:56Z" finished-at="2022-09-07T16:49:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyTaxonomyManagerTest -->
-        <test-method status="PASS" signature="TS008_VerifyExhibitorEventsApprovalTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS008_VerifyExhibitorEventsApprovalTest" duration-ms="12334" started-at="2022-09-07T16:49:03Z" finished-at="2022-09-07T16:49:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifyExhibitorEventsApprovalTest -->
-        <test-method status="FAIL" signature="TS009_VerifyDigitalAdminPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="TS009_VerifyDigitalAdminPanelTest" duration-ms="1232" started-at="2022-09-07T16:49:16Z" finished-at="2022-09-07T16:49:17Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[element click intercepted: Element <a class="sc-global-logo medium" href="/sitecore/shell/sitecore/client/Applications/Launchpad"></a> is not clickable at point (114, 25). Other element would receive the click: <div class="overlay" id="progressindicator">...</div>
-  (Session info: chrome=104.0.5112.102)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir28260_199786692}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61133}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 89e272d445081c4423a91b8476c0016b]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <a class="sc-global-logo medium" href="/sitecore/shell/sitecore/client/Applications/Launchpad"></a> is not clickable at point (114, 25). Other element would receive the click: <div class="overlay" id="progressindicator">...</div>
-  (Session info: chrome=104.0.5112.102)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir28260_199786692}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61133}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 89e272d445081c4423a91b8476c0016b
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at PROD.SitecoreSmokeTest_PROD.TS009_VerifyDigitalAdminPanelTest(SitecoreSmokeTest_PROD.java:86)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifyDigitalAdminPanelTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@204f30ec]" name="tearDown" is-config="true" duration-ms="5455" started-at="2022-09-07T16:49:17Z" finished-at="2022-09-07T16:49:22Z">
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="35944" started-at="2022-09-08T11:22:09Z" finished-at="2022-09-08T11:22:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
+      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
     </test> <!-- Parallel Test -->
   </suite> <!-- SmokeTestSuite -->
 </testng-results>
