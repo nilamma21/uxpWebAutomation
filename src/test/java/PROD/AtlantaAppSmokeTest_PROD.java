@@ -161,8 +161,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Profile Page is displayed successfully");
 	}
 
-	@Test(priority=3)
-	public void TS003_VerifyMarketPlannerExhibitorPortalOptionTest() throws InterruptedException, IOException
+	@Test(priority=13)
+	public void TS013_VerifyMarketPlannerExhibitorPortalOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-003: To verify Exhibitor Portal option in Market Planner
@@ -1056,12 +1056,12 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 	}
 
-	@Test(priority=13)
-	public void TS013_VerifySocialMediaLinksTest() throws InterruptedException, IOException
+	@Test(priority=3)
+	public void TS003_VerifySocialMediaLinksTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
-		//UXP-T013: To verify the all social media links and it's redirection
+		//UXP-T003: To verify the all social media links and it's redirection
 
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		mi = new UXPMarketInfoPage(driver);
@@ -1165,7 +1165,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
