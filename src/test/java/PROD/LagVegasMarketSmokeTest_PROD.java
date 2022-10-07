@@ -1025,12 +1025,12 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 	}
 
-	/*	@AfterSuite
+	@AfterSuite
 	public void sendEmail()
 	{
 		se = new SendEmail();
 		se.sendEmailWithAttachment();
-	}*/
+	}
 
 	@AfterClass
 	public void tearDown()
