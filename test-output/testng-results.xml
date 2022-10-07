@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="164502" started-at="2022-09-08T05:50:01Z" finished-at="2022-09-08T05:52:45Z">
+  <suite name="SmokeTestSuite" duration-ms="152605" started-at="2022-10-07T11:13:32Z" finished-at="2022-10-07T11:16:05Z">
     <groups>
     </groups>
-    <test name="Parallel Test" duration-ms="164502" started-at="2022-09-08T05:50:01Z" finished-at="2022-09-08T05:52:45Z">
-      <class name="PROD.AmericasMartSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@4dfa3a9d]" name="initialize" is-config="true" duration-ms="47073" started-at="2022-09-08T11:20:01Z" finished-at="2022-09-08T11:20:48Z">
+    <test name="SequencialTest" duration-ms="152605" started-at="2022-10-07T11:13:32Z" finished-at="2022-10-07T11:16:05Z">
+      <class name="PROD.LagVegasMarketSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@6eebc39e]" name="initialize" is-config="true" duration-ms="27241" started-at="2022-10-07T16:43:32Z" finished-at="2022-10-07T16:44:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@4dfa3a9d]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="81408" started-at="2022-09-08T11:20:48Z" finished-at="2022-09-08T11:22:09Z">
+        <test-method status="PASS" signature="TS002_VerifAllLinksUnderExhibitTabTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@6eebc39e]" name="TS002_VerifAllLinksUnderExhibitTabTest" duration-ms="65528" started-at="2022-10-07T16:44:00Z" finished-at="2022-10-07T16:45:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="35944" started-at="2022-09-08T11:22:09Z" finished-at="2022-09-08T11:22:45Z">
+        </test-method> <!-- TS002_VerifAllLinksUnderExhibitTabTest -->
+        <test-method status="PASS" signature="TS005_VerifyAllLinksUnderMarketInfoTabTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@6eebc39e]" name="TS005_VerifyAllLinksUnderMarketInfoTabTest" duration-ms="56765" started-at="2022-10-07T16:45:05Z" finished-at="2022-10-07T16:46:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyAllLinksUnderMarketInfoTabTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@6eebc39e]" name="tearDown" is-config="true" duration-ms="2997" started-at="2022-10-07T16:46:02Z" finished-at="2022-10-07T16:46:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
-    </test> <!-- Parallel Test -->
+        <test-method status="PASS" signature="sendEmail()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@6eebc39e]" name="sendEmail" is-config="true" duration-ms="10467" started-at="2022-10-07T16:46:07Z" finished-at="2022-10-07T16:46:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendEmail -->
+      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
+    </test> <!-- SequencialTest -->
   </suite> <!-- SmokeTestSuite -->
 </testng-results>

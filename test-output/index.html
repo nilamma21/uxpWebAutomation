@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-SmokeTestSuite">
-                    <span>C:\Users\nilamma\uxpWebAutomation\Paralleltestng.xml</span>
+                    <span>C:\Users\nilamma\uxpWebAutomation\SequencialTestng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +101,12 @@
                     <div class="method-list-content passed suite-SmokeTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.AmericasMartSmokeTest_PROD" hash-for-method="TS001_VerifyMarketPlannerLoginTest">TS001_VerifyMarketPlannerLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS002_VerifAllLinksUnderExhibitTabTest">TS002_VerifAllLinksUnderExhibitTabTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS005_VerifyAllLinksUnderMarketInfoTabTest">TS005_VerifyAllLinksUnderMarketInfoTabTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-SmokeTestSuite -->
@@ -119,14 +124,21 @@
           <div class="suite-SmokeTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">PROD.AmericasMartSmokeTest_PROD</span>
+              <span class="class-name">PROD.LagVegasMarketSmokeTest_PROD</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS001_VerifyMarketPlannerLoginTest">
-                  </a> <!-- TS001_VerifyMarketPlannerLoginTest -->
-                  <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                  <a name="TS002_VerifAllLinksUnderExhibitTabTest">
+                  </a> <!-- TS002_VerifAllLinksUnderExhibitTabTest -->
+                  <span class="method-name">TS002_VerifAllLinksUnderExhibitTabTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS005_VerifyAllLinksUnderMarketInfoTabTest">
+                  </a> <!-- TS005_VerifyAllLinksUnderMarketInfoTabTest -->
+                  <span class="method-name">TS005_VerifyAllLinksUnderMarketInfoTabTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,22 +146,23 @@
         </div> <!-- panel SmokeTestSuite -->
         <div panel-name="test-xml-SmokeTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\nilamma\uxpWebAutomation\Paralleltestng.xml</span>
+            <span class="header-content">C:\Users\nilamma\uxpWebAutomation\SequencialTestng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;SmokeTestSuite&quot; parallel=&quot;classes&quot;&gt;
-  &lt;test thread-count=&quot;6&quot; name=&quot;Parallel Test&quot;&gt;
+&lt;suite name=&quot;SmokeTestSuite&quot;&gt;
+  &lt;test thread-count=&quot;6&quot; name=&quot;SequencialTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;PROD.AmericasMartSmokeTest_PROD&quot;&gt;
+      &lt;class name=&quot;PROD.LagVegasMarketSmokeTest_PROD&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TS001_VerifyMarketPlannerLoginTest&quot;/&gt;
+          &lt;include name=&quot;TS002_VerifAllLinksUnderExhibitTabTest&quot;/&gt;
+          &lt;include name=&quot;TS005_VerifyAllLinksUnderMarketInfoTabTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- PROD.AmericasMartSmokeTest_PROD --&gt;
+      &lt;/class&gt; &lt;!-- PROD.LagVegasMarketSmokeTest_PROD --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Parallel Test --&gt;
+  &lt;/test&gt; &lt;!-- SequencialTest --&gt;
 &lt;/suite&gt; &lt;!-- SmokeTestSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -161,7 +174,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Parallel Test (1 class)</span>
+                <span class="test-name">SequencialTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,16 +200,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS001_VerifyMarketPlannerLoginTest')
-data.setCell(0, 2, 'PROD.AmericasMartSmokeTest_PROD')
-data.setCell(0, 3, 81408);
+data.setCell(0, 1, 'TS002_VerifAllLinksUnderExhibitTabTest')
+data.setCell(0, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(0, 3, 65528);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TS005_VerifyAllLinksUnderMarketInfoTabTest')
+data.setCell(1, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(1, 3, 56765);
 window.suiteTableData['SmokeTestSuite']= { tableData: data, tableDiv: 'times-div-SmokeTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-SmokeTestSuite">
               </div> <!-- times-div-SmokeTestSuite -->
             </div> <!-- times-div -->
@@ -215,29 +232,29 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">PROD.AmericasMartSmokeTest_PROD</span>
+              <span class="ignored-class-name">PROD.LagVegasMarketSmokeTest_PROD</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS010_VerifyAllLinksUnderOpenYearRoundTest</span>
+                <span class="ignored-method-name">TS003_VerifyMarketPlannerProfileAndSettingsOptionTest</span>
                 <br/>
-                <span class="ignored-method-name">TS012_VerifyAllLinksUnderMarketsAndEventsTabTest</span>
+                <span class="ignored-method-name">TS012_VerifyAllSocialMediaLinksOnFooterTest</span>
                 <br/>
-                <span class="ignored-method-name">TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</span>
+                <span class="ignored-method-name">TS007_VerifyAllLinksUnderAttendTabTest</span>
                 <br/>
-                <span class="ignored-method-name">TS011_VerifyExhibitorDirectoryTest</span>
-                <br/>
-                <span class="ignored-method-name">TS009_VerifyGlobalSearchFunctionalityTest</span>
-                <br/>
-                <span class="ignored-method-name">TS004_VerifyAllLinksUnderExhibitTest</span>
-                <br/>
-                <span class="ignored-method-name">TS006_VerifyAllHeaderChanelLinksTest</span>
-                <br/>
-                <span class="ignored-method-name">TS003_VerifyMarketPlannerExhibitorPortalOptionTest</span>
-                <br/>
-                <span class="ignored-method-name">TS005_VerifyAllLinksUnderAboutTabTest</span>
-                <br/>
-                <span class="ignored-method-name">TS007_VerifyAllSocialMediaLinksOnFooterTest</span>
+                <span class="ignored-method-name">TS006_VerifyHeaderChannelLinksTest</span>
                 <br/>
                 <span class="ignored-method-name">TS008_VerifyFooterLinksTest</span>
+                <br/>
+                <span class="ignored-method-name">TS013_VerifyAllLinksUnderExploreMarketTabTest</span>
+                <br/>
+                <span class="ignored-method-name">TS010_VerifyGlobalSearchFunctionalityTest</span>
+                <br/>
+                <span class="ignored-method-name">TS009_VerifyExhibitorDirectoryTest</span>
+                <br/>
+                <span class="ignored-method-name">TS011_VerifyAllLinksUnderYearRoundTabTest</span>
+                <br/>
+                <span class="ignored-method-name">TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest</span>
+                <br/>
+                <span class="ignored-method-name">TS001_VerifyMarketPlannerLoginTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -249,19 +266,27 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">PROD.AmericasMartSmokeTest_PROD</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">PROD.LagVegasMarketSmokeTest_PROD</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
-                <span class="method-start">47096 ms</span>
+                <span class="method-name">TS002_VerifAllLinksUnderExhibitTabTest</span>
+                <span class="method-start">27247 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS005_VerifyAllLinksUnderMarketInfoTabTest</span>
+                <span class="method-start">92818 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">128525 ms</span>
+                <span class="method-start">149584 ms</span>
               </div> <!-- configuration-class after -->
+              <div class="configuration-suite after">
+                <span class="method-name">sendEmail</span>
+                <span class="method-start">154277 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
