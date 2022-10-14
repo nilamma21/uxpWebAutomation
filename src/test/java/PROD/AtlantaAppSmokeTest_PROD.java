@@ -441,8 +441,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 
 	}
-	@Test(priority=8)
-	public void TS008_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
+	@Test(priority=13)
+	public void TS013_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T08: To verify Attend Tab
@@ -685,8 +685,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 	
 
-	@Test(priority=12)
-	public void TS012_VerifyAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
+	@Test(priority=10)
+	public void TS010_VerifyAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T010: To verify Exhibit Tab
@@ -857,8 +857,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=10)
-	public void TS010_VerifyFooterLinksTest() throws InterruptedException, IOException
+	@Test(priority=12)
+	public void TS012_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -1056,8 +1056,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 	}
 
-	@Test(priority=13)
-	public void TS013_VerifySocialMediaLinksTest() throws InterruptedException, IOException
+	@Test(priority=8)
+	public void TS008_VerifySocialMediaLinksTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
