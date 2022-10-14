@@ -124,8 +124,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
 
-	@Test(priority=11)
-	public void TS011_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	@Test(priority=10)
+	public void TS010_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -734,8 +734,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		System.out.println("Global Search functionality is working properly.");
 	}
 
-	@Test(priority=10)
-	public void TS010_VerifyAllLinksUnderOpenYearRoundTest() throws InterruptedException, IOException
+	@Test(priority=11)
+	public void TS011_VerifyAllLinksUnderOpenYearRoundTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
