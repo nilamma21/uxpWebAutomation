@@ -71,9 +71,7 @@ public class UXPExhibitorsAndProductsTabPage {
 	}
 
 	public WebElement getVerifyExhibitorDirectory() throws InterruptedException {
-		//Thread.sleep(8000);
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyExhibitorDirectory));
+		Thread.sleep(10000);
 		return driver.findElement(VerifyExhibitorDirectory);
 	}
 
