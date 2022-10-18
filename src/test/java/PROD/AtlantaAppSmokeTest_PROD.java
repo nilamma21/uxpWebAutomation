@@ -910,7 +910,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for (String winHandle5 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle5);
 		}
-		Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
+		//Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
+		Assert.assertTrue(driver.getCurrentUrl().contains("/About/Contact-Us"));
 		System.out.println("Contact us Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore5);
@@ -922,7 +923,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for (String winHandle6 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle6);
 		}
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
+		//Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
+		Assert.assertTrue(driver.getCurrentUrl().contains("/About/Careers"));
 		// driver.get(prop.getProperty("atlappurl"));
 		System.out.println("Careers Page open successfully");
 		driver.close();
