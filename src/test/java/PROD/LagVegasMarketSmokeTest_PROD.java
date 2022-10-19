@@ -350,12 +350,12 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click FAQs option under Market Info
 
 		mi.getFAQs().click();
-		Assert.assertEquals(mi.getVerifyFAQsProd().getText(), "Frequently Asked Questions");
+		Assert.assertEquals(mi.getverifyContactUsATL().getText(), "FAQ");
 		System.out.println("Frequently Asked Questions section is displayed properly");
 		//driver.get(prop.getProperty("lvmurl"));
 		mi.getMarketInfoHeader().click();
 
-		//Click Contact s option under Market Info
+		//Click Contact us option under Market Info
 
 		mi.getContactUs().click();
 		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Contact Us");
