@@ -138,6 +138,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		gs = new UXPGlobalSearchPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		mi = new UXPMarketInfoPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atled = new ATLExhibitorDirectoryPage(driver);
+		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//Verify exhibitor data is displayed or not as per search criteria
