@@ -5,8 +5,8 @@
     <classes>
       <class name="PROD.AtlantaAppSmokeTest_PROD">
         <methods>
-          <include name="TS010_VerifyAllLinksUnderExhibitTabTest"/>
           <include name="tearDown"/>
+          <include name="TS006_VerifyAllLinksUnderMarketsTabTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->

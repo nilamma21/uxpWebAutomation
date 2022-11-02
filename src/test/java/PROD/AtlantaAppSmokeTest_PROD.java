@@ -891,12 +891,13 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Apparel App");
+		//Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Apparel App");
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
 		System.out.println("Download App Page open successfully");
 		driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
-		//Click on Our Brancd link
+		//Click on Our Brand link
 		fl.getOurBrandsATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/exhibitor/directory"));
 		System.out.println("Our Brands Page open successfully");
@@ -909,7 +910,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for (String winHandle5 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle5);
 		}
-		Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
+		//Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
+		Assert.assertTrue(driver.getCurrentUrl().contains("/About/Contact-Us"));
 		System.out.println("Contact us Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore5);
@@ -921,7 +923,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for (String winHandle6 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle6);
 		}
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
+		Assert.assertTrue(driver.getCurrentUrl().contains("/About/Careers"));
+		//Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
 		// driver.get(prop.getProperty("atlappurl"));
 		System.out.println("Careers Page open successfully");
 		driver.close();

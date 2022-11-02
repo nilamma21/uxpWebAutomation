@@ -150,6 +150,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		exhp.getExhDirectSearchBtn().click();
 		Thread.sleep(10000);
 		
+		utl.scrollToElement(mi.getVerifyContactUs());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		driver.get(prop.getProperty("ammarturl"));

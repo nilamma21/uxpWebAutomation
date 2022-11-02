@@ -75,8 +75,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlmrkturl"));
 		//Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
-		//Thread.sleep(3000);
-		//	lap.getCloseMarktAdBtn().click();
+		Thread.sleep(3000);
+		utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=1)
@@ -91,20 +91,13 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//Navigate to Atlanta Market site
-	/*	driver.manage().window().maximize();
-		driver.get(prop.getProperty("atlmrkturl"));
-		Thread.sleep(5000);
-		lap.getIUnderstandBtn().click();
-		Thread.sleep(3000);*/
-
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
-
+		
 		//Verify that Market Planner Home page should be displayed
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 		//Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=2)
@@ -138,9 +131,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
-		
-		atlgs.getATLSearchButton().sendKeys(Keys.ENTER);
-		//Thread.sleep(10000);
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(10000);
 		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
@@ -171,7 +163,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlps.getATLWelcomeText().click();
 		lap.getMPSignOutBtn().click();
 		//Thread.sleep(10000);
-		//lap.getCloseMarktAdBtn().click();
+		utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=5)
@@ -323,6 +315,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
 		System.out.println("Juniper Market page is displayed properly");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 		//Thread.sleep(6000);
 	}
 
@@ -414,6 +407,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("atlmrkturl"));
 		//Thread.sleep(8000);
+		utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=9)
@@ -431,36 +425,42 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
 		System.out.println("Atlanta Market channel link is working properly.");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 
 		//Click Atlanta Apparel channel link and verify result
 		atlch.getAtlantaApparel().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Apparel at AmericasMart"));
 		System.out.println("Atlanta Apparel channel link is working properly.");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 
 		//Click Americas Mart channel link and verify result
 		atlch.getAmericasMart().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Wholesale Gift, Home, Rug and Apparel Markets"));
 		System.out.println("Americas Mart channel link is working properly.");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 
 		//Click IMC High Point Market channel link and verify result
 		atlch.getHighPoint().click();
 		Assert.assertTrue(driver.getTitle().contains("High Point"));
 		System.out.println("High Point Market channel link is working properly.");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 
 		//Click Las Vegas Market channel link and verify result
 		atlch.getLasVegas().click();
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas"));
 		System.out.println("Las Vegas Market channel link is working properly.");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 
 		//Click Las Vegas Market channel link and verify result
 		atlch.getLasVegasApp().click();
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas Apparel"));
 		System.out.println("Las Vegas Apparel channel link is working properly.");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=10)
@@ -485,6 +485,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/AmericasmartAtl"));
 
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 
 				//Click on Instagram icon
 	/*	fl.getInstagramiconATLM().click();
@@ -540,6 +541,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/market-info"));
 		System.out.println("Market Info Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		//Click on Press Center
@@ -547,6 +549,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/Market-Info/Press-Center"));
 		System.out.println("Press center Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Download The App link and verify results
@@ -554,6 +557,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "App");
 		System.out.println("Download App Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		//Click on Our Brancd link
@@ -561,6 +565,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/exhibitor/directory"));
 		System.out.println("Our Brands Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Contact Us link and verify results
@@ -602,6 +607,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		// Click Privacy Policy and verify results
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		// Click Privacy Policy link and verify results
 		fl.getatlprivacypolicy().click();
@@ -615,6 +621,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore8);
 		// utl.scrollToElement(fl.getmarketInfo());
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Americas Mart link and verify results
@@ -628,6 +635,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore9);
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 /*		// Click Atlanta Market link and verify results
@@ -675,6 +683,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
 		System.out.println("Las Vegas App Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click on LVM Market link
@@ -784,6 +793,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
 		System.out.println("Together Safely section is displayed properly");
 		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=13)
@@ -867,6 +877,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Click on Portman Peachtree and Verify Page
 		try {
 			atlnt.getATLPortmanPeachtree().click();
+			Thread.sleep(3000);
 			Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Blog");
 		} catch (WebDriverException e) {
 			e.printStackTrace();
