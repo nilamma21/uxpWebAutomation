@@ -54,6 +54,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
+		DOMConfigurator.configure("log4j.xml");
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
 		
