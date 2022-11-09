@@ -44,7 +44,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
 	{
-		DOMConfigurator.configure("log4j.xml");
+		//DOMConfigurator.configure("log4j.xml");
 		driver = initializeDriver(); //requires for Parallel text execution
 //		utl = new Utility(driver);
 //		lap = new UXPLandingPage(driver);
