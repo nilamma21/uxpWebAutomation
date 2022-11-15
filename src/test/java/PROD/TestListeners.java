@@ -1,4 +1,4 @@
-package atlantamarket_PROD;
+package PROD;
 
 import java.io.IOException;
 
