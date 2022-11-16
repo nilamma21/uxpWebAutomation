@@ -136,41 +136,20 @@ public class AmericasMartSmokeTest_PROD extends base {
 		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		utl.verifyCloseBtnPopup();
+ 
+		//utl.verifyCloseBtnPopup();
 		//Verify exhibitor directory page is successfully opened
-
 		ed.getExhibitorDirectory().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
-
-		//Scroll till exhibitor directory
-
-		utl.scrollToElement(exhp.getVerifyExhibitorDirectory());
-
-		//Verify exhibitor data is displayed or not as per search criteria
-
-		System.out.println("Exhibitor Directory is opened properly.");
-		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
-		gs.getSearchButton().click();
-
-		utl.scrollToElement(mi.getVerifyContactUs());
-		amhe.getExhbAndProdsTab().click();
-		gs.getSearchButton().click();
+		
+		
+		exhp.getExhDirectSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
+		exhp.getExhDirectSearchBtn().click();
+		Thread.sleep(10000);
+		
 		utl.scrollToElement(mi.getVerifyContactUs());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
-
-		//Verify exhibitor data is displayed or not as per search criteria
-
-		atled.getATLExhibitorDirectory().click();
-		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
-		System.out.println("Exhibitor Directory is opened properly.");
-
-		atled.getATLExhDirtSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
-		atled.getATLExhDirtSearchBtn().click();
-		Thread.sleep(10000);
-		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
-		System.out.println("Exhibitor Directory page is working properly.");
 		driver.get(prop.getProperty("ammarturl"));
 	}
 
