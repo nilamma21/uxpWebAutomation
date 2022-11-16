@@ -138,9 +138,6 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
  
 		//utl.verifyCloseBtnPopup();
-		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);
-		ps = new UXPProfileAndSettingsPage(driver);
 		gs = new UXPGlobalSearchPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		ed = new UXPExhibitorDirectoryPage(driver);
