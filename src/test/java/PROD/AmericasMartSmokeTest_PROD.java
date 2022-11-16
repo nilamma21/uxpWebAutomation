@@ -88,17 +88,13 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
 
-		try {
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(5000);
-		lap.getIUnderstandBtn().click();
-		Thread.sleep(5000);
+		// lap.getIUnderstandBtn().click();
+		// Thread.sleep(5000);
 		//utl.verifyCloseBtnPopup();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 	@Test(priority=1)
