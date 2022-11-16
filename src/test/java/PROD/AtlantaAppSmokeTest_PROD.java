@@ -113,8 +113,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlappurl"));
 		Thread.sleep(8000);
-		//lap.getIUnderstandBtn().click();
-		//Thread.sleep(5000);
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(5000);
 	}
 
 	@Test(priority=1)
