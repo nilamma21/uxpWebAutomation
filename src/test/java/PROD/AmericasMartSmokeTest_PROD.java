@@ -88,12 +88,12 @@ public class AmericasMartSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 
 		//Navigate to Atlanta Market site
-		driver.manage().window().maximize();
+		/*driver.manage().window().maximize();
 		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(5000);
-		lap.getIUnderstandBtn().click();
+		//lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
-		//utl.verifyCloseBtnPopup();
+		utl.verifyCloseBtnPopup();*/
 	}
 
 	@Test(priority=1)
@@ -109,13 +109,13 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		/*//Navigate to Atlanta Market site
+		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("ammarturl"));
 		//Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
 		//Thread.sleep(5000);
-		utl.verifyCloseBtnPopup();*/
+		utl.verifyCloseBtnPopup();
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -140,18 +140,29 @@ public class AmericasMartSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		//utl.verifyCloseBtnPopup();
+		utl.verifyCloseBtnPopup();
 		//Verify exhibitor directory page is successfully opened
+
 		ed.getExhibitorDirectory().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
-		
-		
-		exhp.getExhDirectSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
-		exhp.getExhDirectSearchBtn().click();
-		Thread.sleep(10000);
-		
+
+		//Scroll till exhibitor directory
+
+		utl.scrollToElement(exhp.getVerifyExhibitorDirectory());
+
+		//Verify exhibitor data is displayed or not as per search criteria
+
+		System.out.println("Exhibitor Directory is opened properly.");
+		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
+		gs.getSearchButton().click();
+
+		utl.scrollToElement(mi.getVerifyContactUs());
+		amhe.getExhbAndProdsTab().click();
+		gs.getSearchButton().click();
+		utl.scrollToElement(mi.getVerifyContactUs());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
+		System.out.println("Exhibitor Directory page is working properly.");
 		driver.get(prop.getProperty("ammarturl"));
 	}
 
@@ -936,7 +947,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+	//	driver.quit();
 	}
 
 }

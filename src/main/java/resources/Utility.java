@@ -55,7 +55,7 @@ public class Utility extends base {
 		try {
 			lap.getCloseMarktAdBtn().click();
 		}catch(Exception e) {
-		  e.getMessage();
+			e.printStackTrace();
 		}
 	}
 }

@@ -25,8 +25,8 @@ public class UXPExhibitorsAndProductsTabPage {
 	By VerifyExhibitorsAndProductsSection = By.xpath("//div[@class = 'imc-section']/div[1]/div[2]/div[2]"); //Locator for verification of Exhibitors and Products section
 	By VerifyExhibitorDirectory = By.xpath("//ul[@class = 'imc-breadcrumb']/li[3]/a[1]"); // Locator for Exhibitor Directory text
 	By VerifyFloorPlans = By.xpath("//div[@class = 'imc-campus-view']"); // Locator for floor plans map
-	By exhdirectsearchbx = By.xpath("(//input[@id='input-1'])[2]"); //Locator for Exhibitor Directory Search box
-	By exhdirectsearchbtn = By.xpath("(//button[@class = 'imc-searchform--button--search'])[2]"); //Locator for Exh Direct Serach btn
+
+
 
 	public UXPExhibitorsAndProductsTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -85,19 +85,6 @@ public class UXPExhibitorsAndProductsTabPage {
 		wait.until(ExpectedConditions.elementToBeClickable(JuniperMarketProd));
 		return driver.findElement(JuniperMarketProd);
 	}
-	public WebElement getExhDirectSearchBox() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(exhdirectsearchbx));
-		return driver.findElement(exhdirectsearchbx);
-	}
-	
-	public WebElement getExhDirectSearchBtn() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(exhdirectsearchbtn));
-		return driver.findElement(exhdirectsearchbtn);
-	}
-	
-	
 }
 
 

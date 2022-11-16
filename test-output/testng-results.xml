@@ -1,25 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="164502" started-at="2022-09-08T05:50:01Z" finished-at="2022-09-08T05:52:45Z">
+  <suite name="SmokeTestSuite" duration-ms="158963" started-at="2022-08-30T10:25:42Z" finished-at="2022-08-30T10:28:21Z">
     <groups>
     </groups>
-    <test name="Parallel Test" duration-ms="164502" started-at="2022-09-08T05:50:01Z" finished-at="2022-09-08T05:52:45Z">
-      <class name="PROD.AmericasMartSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@4dfa3a9d]" name="initialize" is-config="true" duration-ms="47073" started-at="2022-09-08T11:20:01Z" finished-at="2022-09-08T11:20:48Z">
+    <test name="SequencialTest" duration-ms="158963" started-at="2022-08-30T10:25:42Z" finished-at="2022-08-30T10:28:21Z">
+      <class name="PROD.AtlantaAppSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="initialize" is-config="true" duration-ms="28151" started-at="2022-08-30T15:55:42Z" finished-at="2022-08-30T15:56:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@4dfa3a9d]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="81408" started-at="2022-09-08T11:20:48Z" finished-at="2022-09-08T11:22:09Z">
+        <test-method status="FAIL" signature="TS006_VerifyAllLinksUnderMarketsTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="TS006_VerifyAllLinksUnderMarketsTabTest" duration-ms="121496" started-at="2022-08-30T15:56:10Z" finished-at="2022-08-30T15:58:12Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class ='imc-section']/div[1]/div[1]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class ='imc-section']/div[1]/div[1]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.UXPMarketInfoPage.getMarketInfoHeader(UXPMarketInfoPage.java:44)
+	at PROD.AtlantaAppSmokeTest_PROD.TS006_VerifyAllLinksUnderMarketsTabTest(AtlantaAppSmokeTest_PROD.java:367)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class ='imc-section']/div[1]/div[1]/div[1]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="35944" started-at="2022-09-08T11:22:09Z" finished-at="2022-09-08T11:22:45Z">
+        </test-method> <!-- TS006_VerifyAllLinksUnderMarketsTabTest -->
+        <test-method status="FAIL" signature="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest" duration-ms="8491" started-at="2022-08-30T15:58:13Z" finished-at="2022-08-30T15:58:21Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElements(ExpectedConditions.java:901)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$200(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:232)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:229)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getExhibitorsAndProducts(UXPExhibitorsAndProductsTabPage.java:38)
+	at PROD.AtlantaAppSmokeTest_PROD.TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest(AtlantaAppSmokeTest_PROD.java:411)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-30T15:58:21Z" finished-at="2022-08-30T15:58:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
-    </test> <!-- Parallel Test -->
+      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
+    </test> <!-- SequencialTest -->
   </suite> <!-- SmokeTestSuite -->
 </testng-results>
