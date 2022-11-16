@@ -109,16 +109,12 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
 
-		try {
 		//Navigate to Atlanta Apparel site
-		//driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlappurl"));
-		//Thread.sleep(8000);
-		lap.getIUnderstandBtn().click();
+		Thread.sleep(8000);
+		//lap.getIUnderstandBtn().click();
 		//Thread.sleep(5000);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 	@Test(priority=1)
