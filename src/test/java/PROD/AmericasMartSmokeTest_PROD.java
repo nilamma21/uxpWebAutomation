@@ -938,7 +938,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-	//	driver.quit();
+		driver.quit();
 	}
 
 }
