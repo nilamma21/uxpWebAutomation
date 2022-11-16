@@ -443,7 +443,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		expmrkt.getNewsnTrendsMenu().click();
 
 		//Verify that 'News & Trends' page should be displayed
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "News and Trends");
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "News & Trends");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
