@@ -2,7 +2,7 @@ package PROD;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
+//import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -53,6 +53,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
 	{
+		//DOMConfigurator.configure("log4j.xml");
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
@@ -350,12 +351,12 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click FAQs option under Market Info
 
 		mi.getFAQs().click();
-		Assert.assertEquals(mi.getVerifyFAQsProd().getText(), "Frequently Asked Questions");
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "FAQ");
 		System.out.println("Frequently Asked Questions section is displayed properly");
 		//driver.get(prop.getProperty("lvmurl"));
 		mi.getMarketInfoHeader().click();
 
-		//Click Contact s option under Market Info
+		//Click Contact us option under Market Info
 
 		mi.getContactUs().click();
 		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Contact Us");

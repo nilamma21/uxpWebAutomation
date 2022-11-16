@@ -2,7 +2,7 @@ package PROD;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
+//import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -83,17 +83,18 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
 	{
+		//DOMConfigurator.configure("log4j.xml");
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
 
 		//Navigate to Atlanta Market site
-		/*driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(5000);
-		//lap.getIUnderstandBtn().click();
+		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
-		utl.verifyCloseBtnPopup();*/
+		utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=1)
@@ -108,14 +109,6 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		//Navigate to Atlanta Market site
-		driver.manage().window().maximize();
-		driver.get(prop.getProperty("ammarturl"));
-		//Thread.sleep(5000);
-		lap.getIUnderstandBtn().click();
-		//Thread.sleep(5000);
-		utl.verifyCloseBtnPopup();
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -138,8 +131,12 @@ public class AmericasMartSmokeTest_PROD extends base {
 		gs = new UXPGlobalSearchPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		mi = new UXPMarketInfoPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atled = new ATLExhibitorDirectoryPage(driver);
+		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 		utl.verifyCloseBtnPopup();
 		//Verify exhibitor directory page is successfully opened
 
@@ -161,6 +158,17 @@ public class AmericasMartSmokeTest_PROD extends base {
 		gs.getSearchButton().click();
 		utl.scrollToElement(mi.getVerifyContactUs());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
+
+		//Verify exhibitor data is displayed or not as per search criteria
+
+		atled.getATLExhibitorDirectory().click();
+		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
+		System.out.println("Exhibitor Directory is opened properly.");
+
+		atled.getATLExhDirtSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
+		atled.getATLExhDirtSearchBtn().click();
+		Thread.sleep(10000);
+		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");
 		driver.get(prop.getProperty("ammarturl"));
