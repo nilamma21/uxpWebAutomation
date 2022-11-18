@@ -511,10 +511,10 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
 		System.out.println("Atlanta Market Page open successfully");
-		driver.get(prop.getProperty("ammarturl"));
+		//driver.get(prop.getProperty("ammarturl"));
 
-//		driver.close();
-//		driver.switchTo().window(winHandleBefore1);
+		driver.close();
+		driver.switchTo().window(winHandleBefore1);
 		utl.scrollToElement(fl.marketInfoAMC());
 
 		// Click Atlanta Apparel link and verify results
@@ -526,9 +526,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
 		System.out.println("Atlanta App Page open successfully");
-		driver.get(prop.getProperty("ammarturl"));
-//		driver.close();
-//		driver.switchTo().window(winHandleBefore2);
+		//driver.get(prop.getProperty("ammarturl"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore2);
 		utl.scrollToElement(fl.marketInfoAMC());
 		
 		// Click on High Point Market link
@@ -540,10 +540,10 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
 		System.out.println("High point Market Page open successfully");
-		driver.get(prop.getProperty("ammarturl"));
+		//driver.get(prop.getProperty("ammarturl"));
 		
-//		driver.close();
-//		driver.switchTo().window(winHandleBefore4);
+		driver.close();
+		driver.switchTo().window(winHandleBefore4);
 		utl.scrollToElement(fl.marketInfoAMC());
 		
 		// Click on LVA Market link
@@ -563,10 +563,10 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
 		System.out.println("Las Vegas Market Page open successfully");
-		driver.get(prop.getProperty("ammarturl"));
+		//driver.get(prop.getProperty("ammarturl"));
 		
-//		driver.close();
-//		driver.switchTo().window(winHandleBefore11);
+		driver.close();
+		driver.switchTo().window(winHandleBefore11);
 		utl.scrollToElement(fl.marketInfoAMC());		
 		
 		//Click International Market Centers link and verify results
@@ -576,11 +576,11 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for(String winHandle3 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle3);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
-		driver.get(prop.getProperty("ammarturl"));
+		//driver.get(prop.getProperty("ammarturl"));
 		
-//		driver.close();
-//		System.out.println("IMC Market Page open successfully");
-//		driver.switchTo().window(winHandleBefore3);
+		driver.close();
+		System.out.println("IMC Market Page open successfully");
+		driver.switchTo().window(winHandleBefore3);
 		utl.scrollToElement(fl.marketInfoAMC());		
 		
 		//Click Juniper Market Centers link and verify results
@@ -590,11 +590,11 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for(String winHandle12 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle12);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
-		driver.get(prop.getProperty("ammarturl"));
+		//driver.get(prop.getProperty("ammarturl"));
 		
-//		driver.close();
-//		System.out.println("Juniper Market Page open successfully");
-//		driver.switchTo().window(winHandleBefore12);
+		driver.close();
+		System.out.println("Juniper Market Page open successfully");
+		driver.switchTo().window(winHandleBefore12);
 		utl.scrollToElement(fl.marketInfoAMC());	
 		
 		
