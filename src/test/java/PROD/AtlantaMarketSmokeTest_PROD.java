@@ -193,7 +193,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Directory page is working properly.");
 	}
 
-	@Test(priority=8)
+	@Test(priority=13)
 	public void TS006_VerifyAllLinksUnderMarketInfoTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -797,7 +797,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		utl.verifyCloseBtnPopup();
 	}
 
-	@Test(priority=13)
+	@Test(priority=8)
 	public void TS013_VerifyAllNewsAndTrendsMenuTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
