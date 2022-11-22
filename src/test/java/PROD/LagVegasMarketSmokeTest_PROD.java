@@ -1014,6 +1014,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click IMC High Point Market channel link and verify result
 
 		hd.getHighPoint().click();
+		Thread.sleep(3000);
 		Assert.assertTrue(driver.getTitle().contains("High Point Fall Market"));
 		System.out.println("IMC High Point channel link is working properly.");
 		driver.get(prop.getProperty("lvmurl"));
