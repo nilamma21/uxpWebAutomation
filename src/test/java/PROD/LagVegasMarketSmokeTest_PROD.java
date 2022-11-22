@@ -377,7 +377,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Press Center section is displayed properly");
 	}
 
-	@Test(priority=13)
+	@Test(priority=6)
 	public void TS013_VerifyAllLinksUnderExploreMarketTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -980,7 +980,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore);*/
 	}
 
-	@Test(priority=06)
+	@Test(priority=13)
 	public void TS006_VerifyHeaderChannelLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
