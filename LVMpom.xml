@@ -27,6 +27,7 @@
           <suiteXmlFiles>
             <suiteXmlFile>LVMTestng.xml</suiteXmlFile>
           </suiteXmlFiles>
+          <trimStackTrace>false</trimStackTrace>
         </configuration>
         </plugin>
       </plugins>
