@@ -26,6 +26,7 @@
           <suiteXmlFiles>
             <suiteXmlFile>ATLTestng.xml</suiteXmlFile>
           </suiteXmlFiles>
+		  <trimStackTrace>false</trimStackTrace>
         </configuration>
         </plugin>
       </plugins>
