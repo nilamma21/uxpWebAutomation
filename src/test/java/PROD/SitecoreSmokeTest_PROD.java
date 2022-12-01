@@ -91,7 +91,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=04)
+	@Test(priority=9)
 	public void TS004_VerifyShowSpecialApprovalsTest() throws InterruptedException, IOException
 	{
 
@@ -171,7 +171,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=9)
+	@Test(priority=4)
 	public void TS009_VerifyControlPanelTest() throws InterruptedException, IOException
 	{
 
