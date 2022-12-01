@@ -306,7 +306,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.verifyCloseBtnPopup();
 		//Click on High Point Market 
 		hd.getHighPoint().click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		Assert.assertTrue(driver.getTitle().contains("High Point"));
 		driver.get(prop.getProperty("ammarturl"));
 		utl.verifyCloseBtnPopup();
