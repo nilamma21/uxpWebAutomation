@@ -59,7 +59,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		
 		driver.get(prop.getProperty("lvmurl"));
-		//lap.getIUnderstandBtn().click();
+		lap.getIUnderstandBtn().click();
 		Thread.sleep(6000);
 	}
 
