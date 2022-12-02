@@ -92,8 +92,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(5000);
-		// lap.getIUnderstandBtn().click();
-		// Thread.sleep(5000);
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(5000);
 		utl.verifyCloseBtnPopup();
 	}
 
@@ -147,11 +147,12 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Verify exhibitor data is displayed or not as per search criteria
 
 		ed.getExhibitorDirectory().click();
+		Thread.sleep(4000)''
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
 		System.out.println("Exhibitor Directory is opened properly.");
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
-		Thread.sleep(3000);
+		Thread.sleep(8000);
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		driver.get(prop.getProperty("ammarturl"));
