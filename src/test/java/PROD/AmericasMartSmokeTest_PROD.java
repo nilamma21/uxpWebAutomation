@@ -147,7 +147,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Verify exhibitor data is displayed or not as per search criteria
 
 		ed.getExhibitorDirectory().click();
-		Thread.sleep(4000)''
+		Thread.sleep(4000);
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
 		System.out.println("Exhibitor Directory is opened properly.");
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
