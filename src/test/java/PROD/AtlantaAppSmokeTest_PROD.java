@@ -232,6 +232,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		//Verify exhibitor directory page is successfully opened
 		atled.getATLExhibitorDirectory().click();
+		Thread.sleep(4000);
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Apparel Exhibitor Directory");
 
 		//Scroll till exhibitor directory
