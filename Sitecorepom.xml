@@ -27,7 +27,7 @@
             <suiteXmlFile>SitecoreTestng.xml</suiteXmlFile>
           </suiteXmlFiles>
 		  <trimStackTrace>false</trimStackTrace>
-          <rerunFailingTestsCount>1</rerunFailingTestsCount>
+          <rerunFailingTestsCount>2</rerunFailingTestsCount>
         </configuration>
         </plugin>
       </plugins>
