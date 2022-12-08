@@ -50,7 +50,7 @@
 		</classes>
 	</test>
 </suite> -->
-
+<!--
    <suite name="AtlApp_SmokeTestSuite">
 	<listners>
 		<listner class-name="PROD.TestListeners" />
@@ -66,7 +66,15 @@
 			
 		</classes>
 	</test>
-</suite> 
+</suite> -->
+
+ <suite name="AtlApp_SmokeTestSuite">
+	<test name="Test">
+		<classes>
+			<class name="UAT.AtlantaMarketLoginTest_UAT"/>	
+		</classes>
+	</test>
+</suite>
 
 <!--  <suite name="Sitecore_SmokeTestSuite">
 	<listners>
