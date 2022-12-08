@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="6752" started-at="2022-12-08T08:56:54Z" finished-at="2022-12-08T08:57:00Z">
     <groups>
     </groups>
@@ -61,4 +62,58 @@
       </class> <!-- UAT.AtlantaMarketLoginTest_UAT -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+=======
+  <suite name="SmokeTestSuite" duration-ms="127364" started-at="2022-12-05T09:52:48Z" finished-at="2022-12-05T09:54:56Z">
+    <groups>
+    </groups>
+    <test name="SequencialTest" duration-ms="127364" started-at="2022-12-05T09:52:48Z" finished-at="2022-12-05T09:54:56Z">
+      <class name="PROD.SitecoreSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="initialize" is-config="true" duration-ms="36940" started-at="2022-12-05T15:22:48Z" finished-at="2022-12-05T15:23:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifySitecoreLoginTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS001_VerifySitecoreLoginTest" duration-ms="29571" started-at="2022-12-05T15:23:25Z" finished-at="2022-12-05T15:23:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifySitecoreLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyContentEditorTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS002_VerifyContentEditorTest" duration-ms="8910" started-at="2022-12-05T15:23:55Z" finished-at="2022-12-05T15:24:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyContentEditorTest -->
+        <test-method status="PASS" signature="TS003_VerifyControlPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS003_VerifyControlPanelTest" duration-ms="5096" started-at="2022-12-05T15:24:04Z" finished-at="2022-12-05T15:24:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyControlPanelTest -->
+        <test-method status="PASS" signature="TS004_VerifyShowSpecialApprovalsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS004_VerifyShowSpecialApprovalsTest" duration-ms="7770" started-at="2022-12-05T15:24:09Z" finished-at="2022-12-05T15:24:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyShowSpecialApprovalsTest -->
+        <test-method status="PASS" signature="TS005_VerifyEmailExperienceManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS005_VerifyEmailExperienceManagerTest" duration-ms="9596" started-at="2022-12-05T15:24:17Z" finished-at="2022-12-05T15:24:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyEmailExperienceManagerTest -->
+        <test-method status="PASS" signature="TS006_VerifyIMCReportsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS006_VerifyIMCReportsTest" duration-ms="4245" started-at="2022-12-05T15:24:26Z" finished-at="2022-12-05T15:24:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyIMCReportsTest -->
+        <test-method status="PASS" signature="TS007_VerifyTaxonomyManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS007_VerifyTaxonomyManagerTest" duration-ms="7324" started-at="2022-12-05T15:24:31Z" finished-at="2022-12-05T15:24:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyTaxonomyManagerTest -->
+        <test-method status="PASS" signature="TS008_VerifyExhibitorEventsApprovalTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS008_VerifyExhibitorEventsApprovalTest" duration-ms="3871" started-at="2022-12-05T15:24:38Z" finished-at="2022-12-05T15:24:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyExhibitorEventsApprovalTest -->
+        <test-method status="PASS" signature="TS009_VerifyDigitalAdminPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS009_VerifyDigitalAdminPanelTest" duration-ms="5867" started-at="2022-12-05T15:24:42Z" finished-at="2022-12-05T15:24:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyDigitalAdminPanelTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="tearDown" is-config="true" duration-ms="7925" started-at="2022-12-05T15:24:48Z" finished-at="2022-12-05T15:24:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
+    </test> <!-- SequencialTest -->
+  </suite> <!-- SmokeTestSuite -->
+>>>>>>> 9de8755a9679810dd7f15bef415e3dc8b8aea1d3
 </testng-results>

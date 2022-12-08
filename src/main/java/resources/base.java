@@ -26,7 +26,7 @@ public class base {
 	// this class holds all the functions that commonly used by other pages.
 
 	public static WebDriver driver;
-	//public WebDriver driver; //For parallel execution
+	//public WebDriver driver; //For parallel execution [not working with screenshot code]
 	public static Properties prop;
 
 	public static void chromeVersion() throws IOException {
