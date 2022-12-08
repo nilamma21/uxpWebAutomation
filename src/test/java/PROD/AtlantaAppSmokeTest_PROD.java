@@ -171,7 +171,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlps = new ATLProfileAndSettingsPage(driver);
 		amexh = new AMExhibitTabPage(driver);
 		el = new pageObjects.ExhibitorPortal.EXPLoginPage(driver);
-		
+	
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		atlps.getATLWelcomeText().click();
@@ -183,9 +183,9 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Portal is displayed properly.");
 		driver.get(prop.getProperty("atlappurl"));
 		//Thread.sleep(8000);
-	
+
 	}
-	
+
 	@Test(priority=4)
 	public void TS004_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
@@ -197,7 +197,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		gs = new UXPGlobalSearchPage(driver);
 		gbs = new ATLAppGlobalSearchPage(driver);
 		atlm = new ATLAppMarketsTabPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(3000);
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));

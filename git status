@@ -1,0 +1,239 @@
+[33mcommit 9de116b62f1ea60340cac5031f8407bbd4bd6c00[m[33m ([m[1;36mHEAD -> [m[1;32mUXP_anup_smoketest[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Wed Nov 2 15:55:44 2022 +0530
+
+    Enabled screencapture code
+
+[33mcommit f7e4333af86a94f5cfd208decd987160ce167479[m
+Merge: 659b78d e3514b4
+Author: SwapnilIrnak91 <99010409+SwapnilIrnak91@users.noreply.github.com>
+Date:   Fri Oct 7 17:36:29 2022 +0530
+
+    Merge pull request #53 from nilamma21/UXP_Nilam_SendEmailFunction
+    
+    Updated ATL App class
+
+[33mcommit e3514b463b5fec8e52617132722932b5873805c3[m[33m ([m[1;31morigin/UXP_Nilam_SendEmailFunction[m[33m)[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Fri Oct 7 17:32:03 2022 +0530
+
+    Updated ATL App class
+
+[33mcommit 659b78d86967acac3c4559b9d61720a7fde5731a[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Thu Sep 8 11:24:36 2022 +0530
+
+    Fixed AMC_ExhDirect TC
+
+[33mcommit cd2f0b26bd7fe3142bcf50bb66925bac837c0253[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Wed Sep 7 16:51:04 2022 +0530
+
+    Fixed AMC_ExhDirect TC
+
+[33mcommit eed4cc8323f794296af7478e944d895d736e0afd[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Wed Sep 7 12:57:42 2022 +0530
+
+    Updated TC Seq of Sitecore
+
+[33mcommit 6dc6a1d2b5ed40c13e1ba27dff386dea75d5101a[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Tue Sep 6 11:45:27 2022 +0530
+
+    Added code for ParallelTest
+
+[33mcommit 44125b23caea253acf6c18ce740b26a1b1cf0e7e[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Tue Aug 30 16:04:33 2022 +0530
+
+    Updated Markets TC in ATL App
+
+[33mcommit 33c5555a9fb270d0e446f6d18e389fcd0309e16f[m
+Merge: ae3a3e1 cc6c808
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Tue Aug 30 13:57:34 2022 +0530
+
+    Merge pull request #52 from nilamma21/UXP_Shradha_ATLMKTCodeOptimization
+    
+    Code Optimization
+
+[33mcommit cc6c80863d3e9112d0265b6694831507183a6d3f[m[33m ([m[1;31morigin/UXP_Shradha_ATLMKTCodeOptimization[m[33m)[m
+Author: Shradha Malekar <shradhama@cybage.com>
+Date:   Tue Aug 30 13:34:38 2022 +0530
+
+    Code Optimization
+
+[33mcommit ae3a3e1ea66ce5bacb9a592cf98e59f774823683[m
+Author: Shradha Malekar <shradhama@cybage.com>
+Date:   Tue Aug 23 13:51:09 2022 +0530
+
+    Code optimization
+
+[33mcommit ab0b3d1d65f2fb8462696c3ac7e9e757e3c228e3[m
+Merge: d9b3cd3 bc8fcda
+Author: shradhama <75716493+shradhama@users.noreply.github.com>
+Date:   Wed Aug 10 11:31:00 2022 +0530
+
+    Merge pull request #51 from nilamma21/UXP_Nilam_ReleaseSmokeTest29
+    
+    Updated FooterLink & SocialMedia TCs in ATLApp
+
+[33mcommit bc8fcda15a856f0bfffa18626d22902939e38841[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Wed Aug 10 11:19:35 2022 +0530
+
+    Updated FooterLink & SocialMedia TCs in ATLApp
+
+[33mcommit d9b3cd37efc4cb8e406fa819bc66f1e889fde0db[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Fri Jul 29 11:17:59 2022 +0530
+
+    Updated EXP Pageobjects class
+
+[33mcommit d0bbdf3bb8661eca9ccb319a4505a3b9fc58004b[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Fri Jul 29 11:06:07 2022 +0530
+
+    Updated Testng.xml file
+
+[33mcommit 0128477d9c1fb51918456a9bd4ec57bd26c2eead[m
+Merge: 1c4bcb0 31cb7f7
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Wed Jul 27 13:13:18 2022 +0530
+
+    Merge pull request #50 from nilamma21/UXP_SmokeFixing_ATL
+    
+    Uxp smoke fixing atl
+
+[33mcommit 31cb7f7297a6cdee7326f083484eb30e78bf0238[m[33m ([m[1;31morigin/UXP_SmokeFixing_ATL[m[33m)[m
+Author: SwapnilIrnak91” <swapnili@cybage.com>
+Date:   Wed Jul 27 13:05:23 2022 +0530
+
+    Commited SmokeFixes_ATLApp_ATLM_AMC_LVM
+
+[33mcommit 3c15e54778f9e69a239903d9a8f4c22c88c90d51[m
+Author: SwapnilIrnak91” <swapnili@cybage.com>
+Date:   Tue Jul 26 10:44:59 2022 +0530
+
+    Commited ATLApp And ATLMarket SmokeFixes
+
+[33mcommit 1c4bcb0c3ff6a4f45d76ea66415e0727b19b583d[m
+Merge: a883027 935abba
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Thu Jul 21 20:42:23 2022 +0530
+
+    Merge pull request #49 from nilamma21/UXP_LVM_SmokeIssuesFixes
+    
+    Added code for LVM_FooterLink fixes
+
+[33mcommit 935abbae124cda4815f7d6cc97b278d884247aec[m[33m ([m[1;31morigin/UXP_LVM_SmokeIssuesFixes[m[33m)[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Thu Jul 21 20:40:40 2022 +0530
+
+    Added code for LVM_FooterLink fixes
+
+[33mcommit a8830272924bea354a66c72fc2986df8692ab66d[m
+Merge: f91309b a281fe9
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Thu Jul 21 17:00:14 2022 +0530
+
+    Merge pull request #48 from nilamma21/UXP_Swapnil_LVM_FooterLinksTest
+    
+    commited footerlinks test
+
+[33mcommit a281fe962d504c136341bab2df3fcaaf45ce01c8[m[33m ([m[1;31morigin/UXP_Swapnil_LVM_FooterLinksTest[m[33m)[m
+Author: SwapnilIrnak91” <swapnili@cybage.com>
+Date:   Thu Jul 21 16:54:13 2022 +0530
+
+    commited footerlinks test
+
+[33mcommit f91309b9b151ca48b3779aea8327d4aabc4aa5e6[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Tue Jul 19 18:39:26 2022 +0530
+
+    Added code for WebdriverManager
+
+[33mcommit 98ee1540ccca4fa058ed59c4afedeeacf9f74029[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Mon Jul 18 12:33:08 2022 +0530
+
+    Removed print statement from utility
+
+[33mcommit b2c12f4a72c6e2ec65852da735b327a5fff25e28[m
+Merge: eeba04b b3c0d8c
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Mon Jul 18 12:28:34 2022 +0530
+
+    Merge pull request #47 from nilamma21/SmokeTesting
+    
+    Added Popup Code
+
+[33mcommit eeba04bbdc9b9952b3ed1046c4c00f1c7c6dab65[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Mon Jul 18 12:25:17 2022 +0530
+
+    Updated LVMExplore TC
+
+[33mcommit b3c0d8c8fa2423bf92d96d369e50532aabb82a13[m[33m ([m[1;31morigin/SmokeTesting[m[33m)[m
+Author: SwapnilIrnak91” <swapnili@cybage.com>
+Date:   Mon Jul 18 12:07:14 2022 +0530
+
+    Added Popup Code
+
+[33mcommit af15887589e56195e6b983e1fe8264e7a6fc80d9[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Tue Jul 5 19:54:36 2022 +0530
+
+    Monday_SmokeTestExecution
+
+[33mcommit 6a78cfbf7704b806b189fe5727af5731f854fe95[m
+Author: Nilam Mahajan <75731650+nilamma21@users.noreply.github.com>
+Date:   Wed Jun 29 14:13:09 2022 +0530
+
+    Added chromedriver 103
+
+[33mcommit 0d35642064c33c043ea5fdab991d428b210e2272[m
+Merge: 9f58e0a 70c0b97
+Author: nilamma21 <75731650+nilamma21@users.noreply.github.com>
+Date:   Thu May 12 18:12:49 2022 +0530
+
+    Merge pull request #46 from nilamma21/Nilam_UXP_MondaySmokeTest
+    
+    Nilam uxp monday smoke test
+
+[33mcommit 70c0b976d23b5e72c95699536fd5dcf9a198a4f5[m[33m ([m[1;31morigin/Nilam_UXP_MondaySmokeTest[m[33m)[m
+Author: nilamma <nilamma@cybage.com>
+Date:   Thu May 12 18:10:30 2022 +0530
+
+    Executed all channels in smoke test
+
+[33mcommit 9f58e0a65edf9448c64b64db0ecac56f4c628306[m
+Author: nilamma <nilamma@cybage.com>
+Date:   Wed May 11 17:48:34 2022 +0530
+
+    Updated framework structure
+
+[33mcommit a659df1fd5b0539b829651cb21c0af0cbfa94e1b[m
+Merge: 9076287 1dd1dee
+Author: nilamma <nilamma@cybage.com>
+Date:   Wed May 11 17:44:28 2022 +0530
+
+    Merge branch 'master' of https://github.com/nilamma21/uxpWebAutomation
+
+[33mcommit 9076287799f597022904e2a8687595603a297c0c[m
+Author: nilamma <nilamma@cybage.com>
+Date:   Wed May 11 17:43:47 2022 +0530
+
+    Added Chromedriver101 file
+
+[33mcommit 44bdd7743fc774a2df53be86397fb0ae43172ad4[m
+Author: nilamma <nilamma@cybage.com>
+Date:   Wed May 11 16:59:00 2022 +0530
+
+    Updated framework structure
+
+[33mcommit 1dd1deee3ad3d67859cac8f80a8eaddc15855d00[m
+Merge: 17174d9 35d1a14
+Author: nilamma21 <75731650+nilamma21@users.noreply.github.com>
+Date:   Wed May 11 16:51:53 2

@@ -31,41 +31,23 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">SequencialTest</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">125.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">4.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">SequencialTest &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m1"><b>TS006_VerifyAllLinksUnderMarketsTabTest</b>  </a></td><td class="numi">1</td><td>1667377304052</td><td class="numi">85711</td></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">UAT.AtlantaMarketLoginTest_UAT</td><td><a href="#m1"><b>atlMarketOpen</b>  </a></td><td class="numi">1</td><td>1670478361132</td><td class="numi">7</td></tr>
 </table>
-<h1>SequencialTest</h1>
-<h2 id="m1">PROD.AtlantaAppSmokeTest_PROD:TS006_VerifyAllLinksUnderMarketsTabTest</h2>
+<h1>Default test</h1>
+<h2 id="m1">UAT.AtlantaMarketLoginTest_UAT:atlMarketOpen</h2>
 <div style="padding-left:3em">
-<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class =&apos;imc-gallery imc-gallery--65-35 breadcrumbs__round&apos;]/div[1]/ul[1]/li[3]/a[1]&quot;}
-  (Session info: chrome=106.0.5249.119)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=106.0.5249.61 (511755355844955cd3e264779baf0dd38212a4d0-refs/branch-heads/5249@{#569}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir7268_749188213}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56126}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=106.0.5249.119, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 09a99451e6589661ae164619b344904b
-*** Element info: {Using=xpath, value=//div[@class =&apos;imc-gallery imc-gallery--65-35 breadcrumbs__round&apos;]/div[1]/ul[1]/li[3]/a[1]}</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
-<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-<br/>at pageObjects.AtlantaApparel.ATLAppMarketsTabPage.getATLAppHeadersnext(ATLAppMarketsTabPage.java:48)
-<br/>at PROD.AtlantaAppSmokeTest_PROD.TS006_VerifyAllLinksUnderMarketsTabTest(AtlantaAppSmokeTest_PROD.java:342)
+<p>null value in entry: url=null</p>
+com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:34)
+<br/>at com.google.common.collect.SingletonImmutableBiMap.&lt;init&gt;(SingletonImmutableBiMap.java:42)
+<br/>at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:73)
+<br/>at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:120)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at UAT.AtlantaMarketLoginTest_UAT.atlMarketOpen(AtlantaMarketLoginTest_UAT.java:35)
 <br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
