@@ -67,13 +67,13 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
-				utl = new Utility(driver);
-			lap = new UXPLandingPage(driver);
+		utl = new Utility(driver);
+		lap = new UXPLandingPage(driver);
 
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(3000);
 		utl.verifyCloseBtnPopup();

@@ -3,6 +3,7 @@ package PROD;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -105,6 +106,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
+		DOMConfigurator.configure("log4j.xml");
+		
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
 
@@ -269,7 +272,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlm=new ATLAppMarketsTabPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		//Click on Markets Tab
 		mi.getMarketInfoHeader().click();
 		System.out.println("Click on Markets Tab");
