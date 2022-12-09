@@ -2,7 +2,7 @@ package PROD;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-//import org.apache.log4j.xml.DOMConfigurator;
+
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriverException;
@@ -66,15 +66,14 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
 	{
-		//DOMConfigurator.configure("log4j.xml");
 		driver = initializeDriver(); //requires for Parallel text execution
-				utl = new Utility(driver);
-			lap = new UXPLandingPage(driver);
+		utl = new Utility(driver);
+		lap = new UXPLandingPage(driver);
 
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(3000);
 		utl.verifyCloseBtnPopup();
@@ -893,10 +892,13 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		se.sendEmailWithAttachment();
 	}*/
 
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 
 }
+
+
+

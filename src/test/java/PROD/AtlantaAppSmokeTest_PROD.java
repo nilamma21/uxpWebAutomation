@@ -2,7 +2,8 @@ package PROD;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-//import org.apache.log4j.xml.DOMConfigurator;
+
+import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -104,16 +105,17 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
 	{
-		//DOMConfigurator.configure("log4j.xml");
 		driver = initializeDriver(); //requires for Parallel text execution
+		DOMConfigurator.configure("log4j.xml");
+		
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
 
 		//Navigate to Atlanta Apparel site
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlappurl"));
-		Thread.sleep(8000);
-		//lap.getIUnderstandBtn().click();
+		//Thread.sleep(8000);
+		lap.getIUnderstandBtn().click();
 		//Thread.sleep(5000);
 	}
 
@@ -270,7 +272,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlm=new ATLAppMarketsTabPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		//Click on Markets Tab
 		mi.getMarketInfoHeader().click();
 		System.out.println("Click on Markets Tab");
@@ -892,13 +894,13 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
 		//Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Apparel App");
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
 		System.out.println("Download App Page open successfully");
 		driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
-		//Click on Our Brancd link
+		//Click on Our Brand link
 		fl.getOurBrandsATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/exhibitor/directory"));
 		System.out.println("Our Brands Page open successfully");
@@ -924,8 +926,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for (String winHandle6 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle6);
 		}
-		//Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
 		Assert.assertTrue(driver.getCurrentUrl().contains("/About/Careers"));
+		//Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
 		// driver.get(prop.getProperty("atlappurl"));
 		System.out.println("Careers Page open successfully");
 		driver.close();
@@ -1169,7 +1171,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }
+
+
+

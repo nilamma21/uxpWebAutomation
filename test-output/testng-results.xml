@@ -1,122 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="2" passed="0">
+<testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="158963" started-at="2022-08-30T10:25:42Z" finished-at="2022-08-30T10:28:21Z">
+  <suite name="SmokeTestSuite" duration-ms="127364" started-at="2022-12-05T09:52:48Z" finished-at="2022-12-05T09:54:56Z">
     <groups>
     </groups>
-    <test name="SequencialTest" duration-ms="158963" started-at="2022-08-30T10:25:42Z" finished-at="2022-08-30T10:28:21Z">
-      <class name="PROD.AtlantaAppSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="initialize" is-config="true" duration-ms="28151" started-at="2022-08-30T15:55:42Z" finished-at="2022-08-30T15:56:10Z">
+    <test name="SequencialTest" duration-ms="127364" started-at="2022-12-05T09:52:48Z" finished-at="2022-12-05T09:54:56Z">
+      <class name="PROD.SitecoreSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="initialize" is-config="true" duration-ms="36940" started-at="2022-12-05T15:22:48Z" finished-at="2022-12-05T15:23:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS006_VerifyAllLinksUnderMarketsTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="TS006_VerifyAllLinksUnderMarketsTabTest" duration-ms="121496" started-at="2022-08-30T15:56:10Z" finished-at="2022-08-30T15:58:12Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class ='imc-section']/div[1]/div[1]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class ='imc-section']/div[1]/div[1]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.UXPMarketInfoPage.getMarketInfoHeader(UXPMarketInfoPage.java:44)
-	at PROD.AtlantaAppSmokeTest_PROD.TS006_VerifyAllLinksUnderMarketsTabTest(AtlantaAppSmokeTest_PROD.java:367)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class ='imc-section']/div[1]/div[1]/div[1]/a[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method status="PASS" signature="TS001_VerifySitecoreLoginTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS001_VerifySitecoreLoginTest" duration-ms="29571" started-at="2022-12-05T15:23:25Z" finished-at="2022-12-05T15:23:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS006_VerifyAllLinksUnderMarketsTabTest -->
-        <test-method status="FAIL" signature="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest" duration-ms="8491" started-at="2022-08-30T15:58:13Z" finished-at="2022-08-30T15:58:21Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
-	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElements(ExpectedConditions.java:901)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$200(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:232)
-	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:229)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getExhibitorsAndProducts(UXPExhibitorsAndProductsTabPage.java:38)
-	at PROD.AtlantaAppSmokeTest_PROD.TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest(AtlantaAppSmokeTest_PROD.java:411)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        </test-method> <!-- TS001_VerifySitecoreLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyContentEditorTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS002_VerifyContentEditorTest" duration-ms="8910" started-at="2022-12-05T15:23:55Z" finished-at="2022-12-05T15:24:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-30T15:58:21Z" finished-at="2022-08-30T15:58:21Z">
+        </test-method> <!-- TS002_VerifyContentEditorTest -->
+        <test-method status="PASS" signature="TS003_VerifyControlPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS003_VerifyControlPanelTest" duration-ms="5096" started-at="2022-12-05T15:24:04Z" finished-at="2022-12-05T15:24:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyControlPanelTest -->
+        <test-method status="PASS" signature="TS004_VerifyShowSpecialApprovalsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS004_VerifyShowSpecialApprovalsTest" duration-ms="7770" started-at="2022-12-05T15:24:09Z" finished-at="2022-12-05T15:24:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyShowSpecialApprovalsTest -->
+        <test-method status="PASS" signature="TS005_VerifyEmailExperienceManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS005_VerifyEmailExperienceManagerTest" duration-ms="9596" started-at="2022-12-05T15:24:17Z" finished-at="2022-12-05T15:24:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyEmailExperienceManagerTest -->
+        <test-method status="PASS" signature="TS006_VerifyIMCReportsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS006_VerifyIMCReportsTest" duration-ms="4245" started-at="2022-12-05T15:24:26Z" finished-at="2022-12-05T15:24:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyIMCReportsTest -->
+        <test-method status="PASS" signature="TS007_VerifyTaxonomyManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS007_VerifyTaxonomyManagerTest" duration-ms="7324" started-at="2022-12-05T15:24:31Z" finished-at="2022-12-05T15:24:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyTaxonomyManagerTest -->
+        <test-method status="PASS" signature="TS008_VerifyExhibitorEventsApprovalTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS008_VerifyExhibitorEventsApprovalTest" duration-ms="3871" started-at="2022-12-05T15:24:38Z" finished-at="2022-12-05T15:24:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyExhibitorEventsApprovalTest -->
+        <test-method status="PASS" signature="TS009_VerifyDigitalAdminPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS009_VerifyDigitalAdminPanelTest" duration-ms="5867" started-at="2022-12-05T15:24:42Z" finished-at="2022-12-05T15:24:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyDigitalAdminPanelTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="tearDown" is-config="true" duration-ms="7925" started-at="2022-12-05T15:24:48Z" finished-at="2022-12-05T15:24:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
+      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
     </test> <!-- SequencialTest -->
   </suite> <!-- SmokeTestSuite -->
 </testng-results>

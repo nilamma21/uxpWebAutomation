@@ -2,7 +2,7 @@ package PROD;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-//import org.apache.log4j.xml.DOMConfigurator;
+
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -83,7 +83,6 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
 	{
-		//DOMConfigurator.configure("log4j.xml");
 		driver = initializeDriver(); //requires for Parallel text execution
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
@@ -94,7 +93,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=1)
@@ -109,6 +108,14 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		/*//Navigate to Atlanta Market site
+		driver.manage().window().maximize();
+		driver.get(prop.getProperty("ammarturl"));
+		//Thread.sleep(5000);
+		lap.getIUnderstandBtn().click();
+		//Thread.sleep(5000);
+		utl.verifyCloseBtnPopup();*/
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -131,46 +138,21 @@ public class AmericasMartSmokeTest_PROD extends base {
 		gs = new UXPGlobalSearchPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		mi = new UXPMarketInfoPage(driver);
-		atlgs = new ATLGlobalSearchPage(driver);
-		atled = new ATLExhibitorDirectoryPage(driver);
-		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		//Verify exhibitor directory page is successfully opened
-
 		ed.getExhibitorDirectory().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
-
-		//Scroll till exhibitor directory
-
-		utl.scrollToElement(exhp.getVerifyExhibitorDirectory());
-
-		//Verify exhibitor data is displayed or not as per search criteria
-
-		System.out.println("Exhibitor Directory is opened properly.");
-		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
-		gs.getSearchButton().click();
-
-		utl.scrollToElement(mi.getVerifyContactUs());
-		amhe.getExhbAndProdsTab().click();
-		gs.getSearchButton().click();
+		
+		
+		exhp.getExhDirectSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
+		exhp.getExhDirectSearchBtn().click();
+		Thread.sleep(10000);
+		
 		utl.scrollToElement(mi.getVerifyContactUs());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
-
-		//Verify exhibitor data is displayed or not as per search criteria
-
-		atled.getATLExhibitorDirectory().click();
-		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
-		System.out.println("Exhibitor Directory is opened properly.");
-
-		atled.getATLExhDirtSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
-		atled.getATLExhDirtSearchBtn().click();
-		Thread.sleep(10000);
-		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
-		System.out.println("Exhibitor Directory page is working properly.");
 		driver.get(prop.getProperty("ammarturl"));
 	}
 
@@ -323,6 +305,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.verifyCloseBtnPopup();
 		//Click on High Point Market 
 		hd.getHighPoint().click();
+		Thread.sleep(5000);
 		Assert.assertTrue(driver.getTitle().contains("High Point"));
 		driver.get(prop.getProperty("ammarturl"));
 		utl.verifyCloseBtnPopup();
@@ -338,8 +321,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 
-	@Test(priority=12)
-	public void TS012_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
+	@Test(priority=8)
+	public void TS008_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T012: To verify links for Attend tab at Header
@@ -416,8 +399,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 	}
 
-	@Test(priority=8)
-	public void TS008_VerifyFooterLinksTest() throws InterruptedException, IOException
+	@Test(priority=12)
+	public void TS012_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T69: To verify Footer Links Navigation
@@ -528,8 +511,10 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
 		System.out.println("Atlanta Market Page open successfully");
-		driver.close();
-		driver.switchTo().window(winHandleBefore1);
+		driver.get(prop.getProperty("ammarturl"));
+
+//		driver.close();
+//		driver.switchTo().window(winHandleBefore1);
 		utl.scrollToElement(fl.marketInfoAMC());
 
 		// Click Atlanta Apparel link and verify results
@@ -541,8 +526,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
 		System.out.println("Atlanta App Page open successfully");
-		driver.close();
-		driver.switchTo().window(winHandleBefore2);
+		driver.get(prop.getProperty("ammarturl"));
+//		driver.close();
+//		driver.switchTo().window(winHandleBefore2);
 		utl.scrollToElement(fl.marketInfoAMC());
 		
 		// Click on High Point Market link
@@ -554,8 +540,10 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
 		System.out.println("High point Market Page open successfully");
-		driver.close();
-		driver.switchTo().window(winHandleBefore4);
+		driver.get(prop.getProperty("ammarturl"));
+		
+//		driver.close();
+//		driver.switchTo().window(winHandleBefore4);
 		utl.scrollToElement(fl.marketInfoAMC());
 		
 		// Click on LVA Market link
@@ -575,8 +563,10 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
 		System.out.println("Las Vegas Market Page open successfully");
-		driver.close();
-		driver.switchTo().window(winHandleBefore11);
+		driver.get(prop.getProperty("ammarturl"));
+		
+//		driver.close();
+//		driver.switchTo().window(winHandleBefore11);
 		utl.scrollToElement(fl.marketInfoAMC());		
 		
 		//Click International Market Centers link and verify results
@@ -586,9 +576,11 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for(String winHandle3 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle3);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
-		driver.close();
-		System.out.println("IMC Market Page open successfully");
-		driver.switchTo().window(winHandleBefore3);
+		driver.get(prop.getProperty("ammarturl"));
+		
+//		driver.close();
+//		System.out.println("IMC Market Page open successfully");
+//		driver.switchTo().window(winHandleBefore3);
 		utl.scrollToElement(fl.marketInfoAMC());		
 		
 		//Click Juniper Market Centers link and verify results
@@ -598,9 +590,11 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for(String winHandle12 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle12);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
-		driver.close();
-		System.out.println("Juniper Market Page open successfully");
-		driver.switchTo().window(winHandleBefore12);
+		driver.get(prop.getProperty("ammarturl"));
+		
+//		driver.close();
+//		System.out.println("Juniper Market Page open successfully");
+//		driver.switchTo().window(winHandleBefore12);
 		utl.scrollToElement(fl.marketInfoAMC());	
 		
 		
@@ -955,7 +949,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-	//	driver.quit();
+		//driver.quit();
 	}
 
 }

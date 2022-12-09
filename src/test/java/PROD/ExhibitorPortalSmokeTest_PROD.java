@@ -2,7 +2,7 @@ package PROD;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-//import org.apache.log4j.xml.DOMConfigurator;
+
 import org.junit.Assert;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -44,7 +44,6 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
 	{
-		//DOMConfigurator.configure("log4j.xml");
 		driver = initializeDriver(); //requires for Parallel text execution
 //		utl = new Utility(driver);
 //		lap = new UXPLandingPage(driver);
@@ -119,8 +118,8 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		try {
 		//Click Settings icon and verify results
+
 		st.getSettings().click();
 		Assert.assertTrue(st.getVerifySettings().isDisplayed());
 		System.out.println("Settings panel is displayed properly.");
@@ -162,14 +161,14 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 				driver.get(prop.getProperty("expurl"));//Code commented as captcha appears for Customer Support link
 		 */
 
-	} catch(StaleElementReferenceException e) {
-        }
+
 
 	}
 
 	@Test(priority=04)
 	public void TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest() throws InterruptedException, IOException
 	{
+
 		//The purpose of this test case to verify:-
 		//UXP-T101: To verify the All Link Under Your Digi Showroom and it's functionality
 
@@ -182,8 +181,9 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		st = new EXPSettingsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	
+		
 		//Click on Registration And Services Tab 
+
 		try {
 		//el.getVerifyExpHomePage().click();
 		rs.getEXPRegAndServicesTab().click();
@@ -274,10 +274,9 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		System.out.println("Expo Tool Kit page verified successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
-
+		
 		} catch(StaleElementReferenceException e) {
         }
-
 	}
 
 
@@ -448,7 +447,6 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		try {
 		//Click on Your Digital Showroom Drop-down
 		yd.getEXPYourDigiShowroom().click();
 		Assert.assertTrue(st.getVerifySettings().isDisplayed());
@@ -499,9 +497,6 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
-
-		} catch(StaleElementReferenceException e) {
-        }
 
 	}
 

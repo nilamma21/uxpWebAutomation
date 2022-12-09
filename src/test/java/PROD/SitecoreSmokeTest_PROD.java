@@ -1,7 +1,7 @@
 package PROD;
 
 import java.io.IOException;
-//import org.apache.log4j.xml.DOMConfigurator;
+
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -26,7 +26,6 @@ public class SitecoreSmokeTest_PROD extends base {
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
 	{
-		//DOMConfigurator.configure("log4j.xml");
 		driver = initializeDriver(); //requires for Parallel text execution
 		//utl = new Utility(driver);
 
@@ -36,7 +35,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=01)
+	@Test(priority=1)
 	public void TS001_VerifySitecoreLoginTest() throws InterruptedException, IOException
 	{
 
@@ -60,7 +59,7 @@ public class SitecoreSmokeTest_PROD extends base {
 		System.out.println("Login Successful.");
 	}
 
-	@Test(priority=02)
+	@Test(priority=2)
 	public void TS002_VerifyContentEditorTest() throws InterruptedException, IOException
 	{
 
@@ -75,8 +74,8 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=03)
-	public void TS003_VerifyDigitalAdminPanelTest() throws InterruptedException, IOException
+	@Test(priority=9)
+	public void TS009_VerifyDigitalAdminPanelTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -91,7 +90,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=04)
+	@Test(priority=4)
 	public void TS004_VerifyShowSpecialApprovalsTest() throws InterruptedException, IOException
 	{
 
@@ -107,8 +106,8 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=05)
-	public void TS005_VerifyExhibitorEventsApprovalTest() throws InterruptedException, IOException
+	@Test(priority=8)
+	public void TS008_VerifyExhibitorEventsApprovalTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -123,7 +122,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=06)
+	@Test(priority=6)
 	public void TS006_VerifyIMCReportsTest() throws InterruptedException, IOException
 	{
 
@@ -136,10 +135,9 @@ public class SitecoreSmokeTest_PROD extends base {
 		sl.getIMCReports().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("IMC Reports Panel"));
 		System.out.println("IMC Reports opened successfully.");
-
 	}
 
-	@Test(priority=07)
+	@Test(priority=7)
 	public void TS007_VerifyTaxonomyManagerTest() throws InterruptedException, IOException
 	{
 
@@ -155,10 +153,9 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=8)
-	public void TS008_VerifyEmailExperienceManagerTest() throws InterruptedException, IOException
+	@Test(priority=5)
+	public void TS005_VerifyEmailExperienceManagerTest() throws InterruptedException, IOException
 	{
-
 		//The purpose of this test case to verify:-
 		//UXP-T121: To verify Email Experience Manager page opens properly
 
@@ -168,11 +165,10 @@ public class SitecoreSmokeTest_PROD extends base {
 		sl.getEmailExperienceManager().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("Email Experience Manager"));
 		System.out.println("Email Experience Manager opened successfully.");
-
 	}
 
-	@Test(priority=9)
-	public void TS009_VerifyControlPanelTest() throws InterruptedException, IOException
+	@Test(priority=3)
+	public void TS003_VerifyControlPanelTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
