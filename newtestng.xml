@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="PROD.AtlantaMarketSmokeTest_PROD"/>
+      <class name="UAT.AtlantaMarketSmokeTest_UAT"/>
+      <class name="PROD.SitecoreSmokeTest_PROD"/>
+      <class name="PROD.LagVegasMarketSmokeTest_PROD"/>
+      <class name="UAT.LagVegasMarketSmokeTest_UAT"/>
+      <class name="PROD.AtlantaAppSmokeTest_PROD"/>
+      <class name="PROD.AmericasMartSmokeTest_PROD"/>
+      <class name="UAT.ExhibitorPortalSmokeTest_UAT"/>
+      <class name="UAT.AmericasMartSmokeTest_UAT"/>
+      <class name="UAT.SitecoreSmokeTest_UAT"/>
+      <class name="UAT.AtalntaAppSmokeTest_UAT"/>
+      <class name="UAT.LasVegasApparelSmokeTest_UAT"/>
+      <class name="UAT.AtlantaMarketLoginTest_UAT"/>
+      <class name="PROD.ExhibitorPortalSmokeTest_PROD"/>
+      <class name="QA.LagVegasMarketSmokeTest_QA"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
