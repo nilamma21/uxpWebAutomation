@@ -627,6 +627,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		// Switch to new tab
 		String winHandleBefore4 = driver.getWindowHandle();
 		fl.getHighPointMarket().click();
+		Thread.sleep(6000);
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
@@ -710,7 +711,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Directory is opened properly.");
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");
