@@ -14,9 +14,7 @@
 				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
 				<!-- -->
 				<!-- <include name="TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" /> --> 
-				
-			<!-- 	<include name="TS013_VerifySeeInOtherMarketsForExhibitorTest" />-->
-			<!-- 	<include name="TS008_VerifyEventsOverviewInGlobalSearchTest" />  -->
+		
 				
 				
 			</methods>
