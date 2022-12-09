@@ -7,9 +7,9 @@ public class ExtendReporterNG {
 	static ExtentReports extent;
 	
 	public static ExtentReports getReportObject() {
-		String path= System.getProperty("user.dir")+"/reports/RegressionTestResults.html";
+		String path= System.getProperty("user.dir")+"/reports/SmokeTestResults.html";
 		ExtentSparkReporter reporter= new ExtentSparkReporter(path);
-		reporter.config().setReportName("Regression Automation Test Results");
+		reporter.config().setReportName("UXP Automation Results");
 		reporter.config().setDocumentTitle("Test Results");
 
 		extent = new ExtentReports();

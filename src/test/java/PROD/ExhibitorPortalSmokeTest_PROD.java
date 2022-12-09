@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
@@ -178,13 +177,14 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		al=new EXPApplicationsAndLeasesTabPage(driver);
 		rs=new EXPRegistrationAndServicesTabPage(driver);
 		el=new EXPLoginPage(driver);
-		st = new EXPSettingsPage(driver);
+
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+		System.out.println("EXP page");
+
+
 		//Click on Registration And Services Tab 
 
-		try {
 		//el.getVerifyExpHomePage().click();
 		rs.getEXPRegAndServicesTab().click();
 		System.out.println("Registration And Services Tab ");
@@ -274,9 +274,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		System.out.println("Expo Tool Kit page verified successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
-		
-		} catch(StaleElementReferenceException e) {
-        }
+
 	}
 
 
@@ -491,7 +489,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		Assert.assertTrue(driver.getTitle().contains("Welcome to Juniper Data"));
 		// Close the new window, if that window no more required
 		driver.close();

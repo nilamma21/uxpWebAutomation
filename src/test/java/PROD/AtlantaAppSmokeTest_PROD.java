@@ -3,7 +3,6 @@ package PROD;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -106,18 +105,15 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
-		DOMConfigurator.configure("log4j.xml");
-		
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
 
 		//Navigate to Atlanta Apparel site
 		//driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlappurl"));
-
 		//Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(8000);
+		//Thread.sleep(5000);
 	}
 
 	@Test(priority=1)
@@ -206,10 +202,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Thread.sleep(3000);
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
-		Thread.sleep(10000);
+		//Thread.sleep(5000);
 		utl.scrollToElement(gs.getVerifyGlobalSeacrh());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
-		//Thread.sleep(8000);
+		Thread.sleep(3000);
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
 		driver.get(prop.getProperty("atlappurl"));
@@ -235,7 +231,6 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		//Verify exhibitor directory page is successfully opened
 		atled.getATLExhibitorDirectory().click();
-		Thread.sleep(4000);
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Apparel Exhibitor Directory");
 
 		//Scroll till exhibitor directory
@@ -246,10 +241,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
 
-		/*utl.scrollToElement(mi.getVerifyContactUs());
+		utl.scrollToElement(mi.getVerifyContactUs());
 		amhe.getExhbAndProdsTab().click();
-		gs.getSearchButton().click();*/
-		Thread.sleep(10000);
+		gs.getSearchButton().click();
+		Thread.sleep(1000);
 		utl.scrollToElement(mi.getVerifyContactUs());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
@@ -274,7 +269,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlm=new ATLAppMarketsTabPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		//Click on Markets Tab
 		mi.getMarketInfoHeader().click();
 		System.out.println("Click on Markets Tab");
@@ -446,8 +441,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 
 	}
-	@Test(priority=13)
-	public void TS013_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
+	@Test(priority=8)
+	public void TS008_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T08: To verify Attend Tab
@@ -770,7 +765,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlva.getTravel().click();
 		System.out.println("CLick Show Dates");
 		//Verify Show Dates 
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Complete Show Dates"));	
 		System.out.println("Verify Show Dates ");
 
@@ -896,13 +891,12 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
-		//Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Apparel App");
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Apparel App");
 		System.out.println("Download App Page open successfully");
 		driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
-		//Click on Our Brand link
+		//Click on Our Brancd link
 		fl.getOurBrandsATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/exhibitor/directory"));
 		System.out.println("Our Brands Page open successfully");
@@ -915,8 +909,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for (String winHandle5 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle5);
 		}
-		//Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
-		Assert.assertTrue(driver.getCurrentUrl().contains("/About/Contact-Us"));
+		Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
 		System.out.println("Contact us Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore5);
@@ -928,8 +921,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for (String winHandle6 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle6);
 		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("/About/Careers"));
-		//Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
 		// driver.get(prop.getProperty("atlappurl"));
 		System.out.println("Careers Page open successfully");
 		driver.close();
@@ -1064,8 +1056,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 	}
 
-	@Test(priority=8)
-	public void TS008_VerifySocialMediaLinksTest() throws InterruptedException, IOException
+	@Test(priority=13)
+	public void TS013_VerifySocialMediaLinksTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -1173,7 +1165,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

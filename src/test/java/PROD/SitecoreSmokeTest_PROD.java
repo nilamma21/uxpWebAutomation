@@ -35,7 +35,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=1)
+	@Test(priority=01)
 	public void TS001_VerifySitecoreLoginTest() throws InterruptedException, IOException
 	{
 
@@ -59,7 +59,7 @@ public class SitecoreSmokeTest_PROD extends base {
 		System.out.println("Login Successful.");
 	}
 
-	@Test(priority=2)
+	@Test(priority=02)
 	public void TS002_VerifyContentEditorTest() throws InterruptedException, IOException
 	{
 
@@ -74,8 +74,8 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=9)
-	public void TS009_VerifyDigitalAdminPanelTest() throws InterruptedException, IOException
+	@Test(priority=03)
+	public void TS003_VerifyDigitalAdminPanelTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -90,7 +90,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=4)
+	@Test(priority=04)
 	public void TS004_VerifyShowSpecialApprovalsTest() throws InterruptedException, IOException
 	{
 
@@ -106,8 +106,8 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=8)
-	public void TS008_VerifyExhibitorEventsApprovalTest() throws InterruptedException, IOException
+	@Test(priority=05)
+	public void TS005_VerifyExhibitorEventsApprovalTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -122,7 +122,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=6)
+	@Test(priority=06)
 	public void TS006_VerifyIMCReportsTest() throws InterruptedException, IOException
 	{
 
@@ -135,9 +135,10 @@ public class SitecoreSmokeTest_PROD extends base {
 		sl.getIMCReports().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("IMC Reports Panel"));
 		System.out.println("IMC Reports opened successfully.");
+
 	}
 
-	@Test(priority=7)
+	@Test(priority=07)
 	public void TS007_VerifyTaxonomyManagerTest() throws InterruptedException, IOException
 	{
 
@@ -153,9 +154,10 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=5)
-	public void TS005_VerifyEmailExperienceManagerTest() throws InterruptedException, IOException
+	@Test(priority=8)
+	public void TS008_VerifyEmailExperienceManagerTest() throws InterruptedException, IOException
 	{
+
 		//The purpose of this test case to verify:-
 		//UXP-T121: To verify Email Experience Manager page opens properly
 
@@ -165,10 +167,11 @@ public class SitecoreSmokeTest_PROD extends base {
 		sl.getEmailExperienceManager().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("Email Experience Manager"));
 		System.out.println("Email Experience Manager opened successfully.");
+
 	}
 
-	@Test(priority=3)
-	public void TS003_VerifyControlPanelTest() throws InterruptedException, IOException
+	@Test(priority=9)
+	public void TS009_VerifyControlPanelTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-

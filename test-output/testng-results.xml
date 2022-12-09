@@ -1,116 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<testng-results skipped="0" failed="0" total="9" passed="9">
+<testng-results skipped="0" failed="2" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="127364" started-at="2022-12-05T09:52:48Z" finished-at="2022-12-05T09:54:56Z">
+  <suite name="SmokeTestSuite" duration-ms="158963" started-at="2022-08-30T10:25:42Z" finished-at="2022-08-30T10:28:21Z">
     <groups>
     </groups>
-    <test name="SequencialTest" duration-ms="127364" started-at="2022-12-05T09:52:48Z" finished-at="2022-12-05T09:54:56Z">
-      <class name="PROD.SitecoreSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="initialize" is-config="true" duration-ms="36940" started-at="2022-12-05T15:22:48Z" finished-at="2022-12-05T15:23:25Z">
+    <test name="SequencialTest" duration-ms="158963" started-at="2022-08-30T10:25:42Z" finished-at="2022-08-30T10:28:21Z">
+      <class name="PROD.AtlantaAppSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="initialize" is-config="true" duration-ms="28151" started-at="2022-08-30T15:55:42Z" finished-at="2022-08-30T15:56:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifySitecoreLoginTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS001_VerifySitecoreLoginTest" duration-ms="29571" started-at="2022-12-05T15:23:25Z" finished-at="2022-12-05T15:23:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifySitecoreLoginTest -->
-        <test-method status="PASS" signature="TS002_VerifyContentEditorTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS002_VerifyContentEditorTest" duration-ms="8910" started-at="2022-12-05T15:23:55Z" finished-at="2022-12-05T15:24:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyContentEditorTest -->
-        <test-method status="PASS" signature="TS003_VerifyControlPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS003_VerifyControlPanelTest" duration-ms="5096" started-at="2022-12-05T15:24:04Z" finished-at="2022-12-05T15:24:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyControlPanelTest -->
-        <test-method status="PASS" signature="TS004_VerifyShowSpecialApprovalsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS004_VerifyShowSpecialApprovalsTest" duration-ms="7770" started-at="2022-12-05T15:24:09Z" finished-at="2022-12-05T15:24:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyShowSpecialApprovalsTest -->
-        <test-method status="PASS" signature="TS005_VerifyEmailExperienceManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS005_VerifyEmailExperienceManagerTest" duration-ms="9596" started-at="2022-12-05T15:24:17Z" finished-at="2022-12-05T15:24:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyEmailExperienceManagerTest -->
-        <test-method status="PASS" signature="TS006_VerifyIMCReportsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS006_VerifyIMCReportsTest" duration-ms="4245" started-at="2022-12-05T15:24:26Z" finished-at="2022-12-05T15:24:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyIMCReportsTest -->
-        <test-method status="PASS" signature="TS007_VerifyTaxonomyManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS007_VerifyTaxonomyManagerTest" duration-ms="7324" started-at="2022-12-05T15:24:31Z" finished-at="2022-12-05T15:24:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyTaxonomyManagerTest -->
-        <test-method status="PASS" signature="TS008_VerifyExhibitorEventsApprovalTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS008_VerifyExhibitorEventsApprovalTest" duration-ms="3871" started-at="2022-12-05T15:24:38Z" finished-at="2022-12-05T15:24:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifyExhibitorEventsApprovalTest -->
-        <test-method status="PASS" signature="TS009_VerifyDigitalAdminPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="TS009_VerifyDigitalAdminPanelTest" duration-ms="5867" started-at="2022-12-05T15:24:42Z" finished-at="2022-12-05T15:24:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifyDigitalAdminPanelTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@754ba872]" name="tearDown" is-config="true" duration-ms="7925" started-at="2022-12-05T15:24:48Z" finished-at="2022-12-05T15:24:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
-    </test> <!-- SequencialTest -->
-  </suite> <!-- SmokeTestSuite -->
-
-<testng-results skipped="0" failed="2" total="11" passed="9">
-  <reporter-output>
-  </reporter-output>
-  <suite name="LVM_RegressionTestSuite" duration-ms="766265" started-at="2022-12-08T11:26:55Z" finished-at="2022-12-08T11:39:41Z">
-    <groups>
-    </groups>
-    <test name="RegressionTest" duration-ms="766265" started-at="2022-12-08T11:26:55Z" finished-at="2022-12-08T11:39:41Z">
-      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="initialize" is-config="true" duration-ms="27852" started-at="2022-12-08T16:56:55Z" finished-at="2022-12-08T16:57:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyInformationTabInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS001_VerifyInformationTabInGlobalSearchTest" duration-ms="19547" started-at="2022-12-08T16:57:23Z" finished-at="2022-12-08T16:57:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyInformationTabInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest" duration-ms="30305" started-at="2022-12-08T16:57:42Z" finished-at="2022-12-08T16:58:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest" duration-ms="85077" started-at="2022-12-08T16:58:13Z" finished-at="2022-12-08T16:59:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS004_VerifyCatalogsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS004_VerifyCatalogsOverviewInGlobalSearchTest" duration-ms="27100" started-at="2022-12-08T16:59:38Z" finished-at="2022-12-08T17:00:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyCatalogsOverviewInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS005_VerifyArticlesOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS005_VerifyArticlesOverviewInGlobalSearchTest" duration-ms="107665" started-at="2022-12-08T17:00:05Z" finished-at="2022-12-08T17:01:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyArticlesOverviewInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest" duration-ms="206879" started-at="2022-12-08T17:01:52Z" finished-at="2022-12-08T17:05:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest" duration-ms="48846" started-at="2022-12-08T17:05:19Z" finished-at="2022-12-08T17:06:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest" duration-ms="73120" started-at="2022-12-08T17:06:08Z" finished-at="2022-12-08T17:07:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest -->
-        <test-method status="FAIL" signature="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest" duration-ms="80878" started-at="2022-12-08T17:07:21Z" finished-at="2022-12-08T17:08:42Z">
+        <test-method status="FAIL" signature="TS006_VerifyAllLinksUnderMarketsTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="TS006_VerifyAllLinksUnderMarketsTabTest" duration-ms="121496" started-at="2022-08-30T15:56:10Z" finished-at="2022-08-30T15:58:12Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(text(),'Las Vegas')] (tried for 20 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class ='imc-section']/div[1]/div[1]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(text(),'Las Vegas')] (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getEventsATLMktTopics(ATLGlobalSearchPage.java:535)
-	at atlantamarket_PROD.GlobalSearch_SearchFor.TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:673)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class ='imc-section']/div[1]/div[1]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.UXPMarketInfoPage.getMarketInfoHeader(UXPMarketInfoPage.java:44)
+	at PROD.AtlantaAppSmokeTest_PROD.TS006_VerifyAllLinksUnderMarketsTabTest(AtlantaAppSmokeTest_PROD.java:367)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -132,76 +43,45 @@
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[contains(text(),'Las Vegas')]"}
-  (Session info: chrome=108.0.5359.96)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55096}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: acffd5e3146ac837885e7302cb696d39
-*** Element info: {Using=xpath, value=//label[contains(text(),'Las Vegas')]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class ='imc-section']/div[1]/div[1]/div[1]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
 	... 26 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest -->
-        <test-method status="FAIL" signature="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" duration-ms="6767" started-at="2022-12-08T17:08:42Z" finished-at="2022-12-08T17:08:49Z">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: element is not attached to the page document
-  (Session info: chrome=108.0.5359.96)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55096}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: acffd5e3146ac837885e7302cb696d39]]>
-            </message>
+        </test-method> <!-- TS006_VerifyAllLinksUnderMarketsTabTest -->
+        <test-method status="FAIL" signature="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest" duration-ms="8491" started-at="2022-08-30T15:58:13Z" finished-at="2022-08-30T15:58:21Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=108.0.5359.96)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55096}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: acffd5e3146ac837885e7302cb696d39
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at atlantamarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:729)
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElements(ExpectedConditions.java:901)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$200(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:232)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:229)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getExhibitorsAndProducts(UXPExhibitorsAndProductsTabPage.java:38)
+	at PROD.AtlantaAppSmokeTest_PROD.TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest(AtlantaAppSmokeTest_PROD.java:411)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -223,21 +103,20 @@ Session ID: acffd5e3146ac837885e7302cb696d39
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS010_VerifyShowSpecialsOverviewInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS011_VerifyEventsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS011_VerifyEventsOverviewInGlobalSearchTest" duration-ms="51893" started-at="2022-12-08T17:08:49Z" finished-at="2022-12-08T17:09:41Z">
+        </test-method> <!-- TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-30T15:58:21Z" finished-at="2022-08-30T15:58:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS011_VerifyEventsOverviewInGlobalSearchTest -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
-    </test> <!-- RegressionTest -->
-  </suite> <!-- LVM_RegressionTestSuite -->
-
+        </test-method> <!-- tearDown -->
+      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
+    </test> <!-- SequencialTest -->
+  </suite> <!-- SmokeTestSuite -->
 </testng-results>
