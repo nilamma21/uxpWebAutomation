@@ -114,9 +114,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Navigate to Atlanta Apparel site
 		//driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlappurl"));
+
 		//Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
-		//Thread.sleep(5000);
+		Thread.sleep(8000);
 	}
 
 	@Test(priority=1)
@@ -234,6 +235,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		//Verify exhibitor directory page is successfully opened
 		atled.getATLExhibitorDirectory().click();
+		Thread.sleep(4000);
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Apparel Exhibitor Directory");
 
 		//Scroll till exhibitor directory
@@ -1171,7 +1173,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

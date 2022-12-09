@@ -61,6 +61,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(3000);
 		utl.verifyCloseBtnPopup();
+		Thread.sleep(6000);
 	}
 
 	@Test(priority=01)
@@ -445,7 +446,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		expmrkt.getNewsnTrendsMenu().click();
 
 		//Verify that 'News & Trends' page should be displayed
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "News and Trends");
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "News & Trends");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
@@ -1035,7 +1036,11 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click IMC High Point Market channel link and verify result
 
 		hd.getHighPoint().click();
+<<<<<<< HEAD
 		Thread.sleep(7000);
+=======
+		Thread.sleep(8000);
+>>>>>>> 977357c033c874deb65ed7ec9eca09e190a0e887
 		Assert.assertTrue(driver.getTitle().contains("High Point Fall Market"));
 		System.out.println("IMC High Point channel link is working properly.");
 		driver.get(prop.getProperty("lvmurl"));

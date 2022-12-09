@@ -41,10 +41,11 @@ public class TestListeners extends base implements ITestListener {
 			String testMethodName = arg0.getName().toString().trim();
 			//test.addScreenCaptureFromPath(capture(driver, testMethodName));
 			test.fail(arg0.getThrowable());
-			Log.info("FAILED- "+testMethodName);
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+
+			System.out.println("FAILED- "+testMethodName);
+		// } catch (IOException e) {
+		// 	e.printStackTrace();
+		// }
 	}
 
 	public void onTestSkipped(ITestResult arg0) {

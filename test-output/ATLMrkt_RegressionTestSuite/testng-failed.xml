@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
+  <test name="RegressionParallelest(failed)">
+    <classes>
+      <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS009_VerifyClickOnLineSearchForExhibitorTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
+    </classes>
+  </test> <!-- RegressionParallelest(failed) -->
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
