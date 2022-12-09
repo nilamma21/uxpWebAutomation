@@ -1000,6 +1000,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		// Switch to new tab
 		String winHandleBefore4 = driver.getWindowHandle();
 		fl.getHighPointMarket().click();
+		Thread.sleep(6000);
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
