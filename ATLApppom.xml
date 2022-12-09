@@ -44,7 +44,7 @@
     	<groupId>org.testng</groupId>
     	<artifactId>testng</artifactId>
     	<version>6.8</version>
-    	<!-- <scope>test</scope> -->
+    	<scope>test</scope>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 	<dependency>
@@ -63,6 +63,7 @@
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.2.1</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
