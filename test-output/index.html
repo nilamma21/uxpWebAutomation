@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-SmokeTestSuite">
-              <span class="suite-name border-passed">SmokeTestSuite</span>
+              <span class="suite-name border-failed">SmokeTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods,   9 passed</span>
+                    <span class="method-stats">13 methods, 2 failed,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-SmokeTestSuite" class="hide-methods failed suite-SmokeTestSuite"> (hide)</a> <!-- hide-methods failed suite-SmokeTestSuite -->
+                      <a href="#" panel-name="suite-SmokeTestSuite" class="show-methods failed suite-SmokeTestSuite"> (show)</a> <!-- show-methods failed suite-SmokeTestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-SmokeTestSuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest">TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS013_VerifyAllLinksUnderExploreMarketTabTest">TS013_VerifyAllLinksUnderExploreMarketTabTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-SmokeTestSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,47 +120,57 @@
                     <div class="method-list-content passed suite-SmokeTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS001_VerifySitecoreLoginTest">TS001_VerifySitecoreLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS001_VerifyMarketPlannerLoginTest">TS001_VerifyMarketPlannerLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS002_VerifyContentEditorTest">TS002_VerifyContentEditorTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS002_VerifAllLinksUnderExhibitTabTest">TS002_VerifAllLinksUnderExhibitTabTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS003_VerifyControlPanelTest">TS003_VerifyControlPanelTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS003_VerifyMarketPlannerProfileAndSettingsOptionTest">TS003_VerifyMarketPlannerProfileAndSettingsOptionTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS004_VerifyShowSpecialApprovalsTest">TS004_VerifyShowSpecialApprovalsTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS005_VerifyAllLinksUnderMarketInfoTabTest">TS005_VerifyAllLinksUnderMarketInfoTabTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS005_VerifyEmailExperienceManagerTest">TS005_VerifyEmailExperienceManagerTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS006_VerifyHeaderChannelLinksTest">TS006_VerifyHeaderChannelLinksTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS006_VerifyIMCReportsTest">TS006_VerifyIMCReportsTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS007_VerifyAllLinksUnderAttendTabTest">TS007_VerifyAllLinksUnderAttendTabTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS007_VerifyTaxonomyManagerTest">TS007_VerifyTaxonomyManagerTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS008_VerifyFooterLinksTest">TS008_VerifyFooterLinksTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS008_VerifyExhibitorEventsApprovalTest">TS008_VerifyExhibitorEventsApprovalTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS009_VerifyExhibitorDirectoryTest">TS009_VerifyExhibitorDirectoryTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS009_VerifyDigitalAdminPanelTest">TS009_VerifyDigitalAdminPanelTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS010_VerifyGlobalSearchFunctionalityTest">TS010_VerifyGlobalSearchFunctionalityTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS011_VerifyAllLinksUnderYearRoundTabTest">TS011_VerifyAllLinksUnderYearRoundTabTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS012_VerifyAllSocialMediaLinksOnFooterTest">TS012_VerifyAllSocialMediaLinksOnFooterTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-SmokeTestSuite -->
@@ -156,73 +185,253 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SmokeTestSuite" class="panel SmokeTestSuite">
-          <div class="suite-SmokeTestSuite-class-passed">
+          <div class="suite-SmokeTestSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">PROD.SitecoreSmokeTest_PROD</span>
+              <img src="failed.png"/>
+              <span class="class-name">PROD.LagVegasMarketSmokeTest_PROD</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS001_VerifySitecoreLoginTest">
-                  </a> <!-- TS001_VerifySitecoreLoginTest -->
-                  <span class="method-name">TS001_VerifySitecoreLoginTest</span>
+                  <a name="TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest">
+                  </a> <!-- TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
+                  <span class="method-name">TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest</span>
+                  <div class="stack-trace"><b>"org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(), &apos;New Product Introductions&apos;)]&quot;}
+  (Session info: chrome=108.0.5359.95)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18172_1741758685}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56455}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.95, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 2c49a61685a7f831bd960de5e5e98e16
+*** Element info: {Using=xpath, value=//a[contains(text(), &apos;New Product Introductions&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getNewProductIntroductions(UXPExhibitorsAndProductsTabPage.java:61)
+	at PROD.LagVegasMarketSmokeTest_PROD.TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest(LagVegasMarketSmokeTest_PROD.java:279)
+... Removed 28 stack frames<br/> org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(), &apos;New Product Introductions&apos;)]&quot;}
+  (Session info: chrome=108.0.5359.95)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18172_1741758685}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56455}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.95, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 2c49a61685a7f831bd960de5e5e98e16
+*** Element info: {Using=xpath, value=//a[contains(text(), &apos;New Product Introductions&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getNewProductIntroductions(UXPExhibitorsAndProductsTabPage.java:61)
+	at PROD.LagVegasMarketSmokeTest_PROD.TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest(LagVegasMarketSmokeTest_PROD.java:279)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+"</b><br>sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br>sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)<br>sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)<br>java.lang.reflect.Constructor.newInstance(Unknown Source)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)<br>org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)<br>org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)<br>org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)<br>org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)<br>org.openqa.selenium.By$ByXPath.findElement(By.java:361)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)<br>pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getNewProductIntroductions(UXPExhibitorsAndProductsTabPage.java:61)<br>PROD.LagVegasMarketSmokeTest_PROD.TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest(LagVegasMarketSmokeTest_PROD.java:279)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br>
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS002_VerifyContentEditorTest">
-                  </a> <!-- TS002_VerifyContentEditorTest -->
-                  <span class="method-name">TS002_VerifyContentEditorTest</span>
+                  <a name="TS013_VerifyAllLinksUnderExploreMarketTabTest">
+                  </a> <!-- TS013_VerifyAllLinksUnderExploreMarketTabTest -->
+                  <span class="method-name">TS013_VerifyAllLinksUnderExploreMarketTabTest</span>
+                  <div class="stack-trace"><b>"org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;Virtual Resources&apos;)]&quot;}
+  (Session info: chrome=108.0.5359.95)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18172_1741758685}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56455}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.95, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 2c49a61685a7f831bd960de5e5e98e16
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Virtual Resources&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.LasVegasMarket.UXPExploreMarketPage.getVirtualResourcesMenu(UXPExploreMarketPage.java:44)
+	at PROD.LagVegasMarketSmokeTest_PROD.TS013_VerifyAllLinksUnderExploreMarketTabTest(LagVegasMarketSmokeTest_PROD.java:427)
+... Removed 28 stack frames<br/> org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;Virtual Resources&apos;)]&quot;}
+  (Session info: chrome=108.0.5359.95)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18172_1741758685}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56455}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.95, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 2c49a61685a7f831bd960de5e5e98e16
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Virtual Resources&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.LasVegasMarket.UXPExploreMarketPage.getVirtualResourcesMenu(UXPExploreMarketPage.java:44)
+	at PROD.LagVegasMarketSmokeTest_PROD.TS013_VerifyAllLinksUnderExploreMarketTabTest(LagVegasMarketSmokeTest_PROD.java:427)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+"</b><br>sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br>sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)<br>sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)<br>java.lang.reflect.Constructor.newInstance(Unknown Source)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)<br>org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)<br>org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)<br>org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)<br>org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)<br>org.openqa.selenium.By$ByXPath.findElement(By.java:361)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)<br>pageObjects.LasVegasMarket.UXPExploreMarketPage.getVirtualResourcesMenu(UXPExploreMarketPage.java:44)<br>PROD.LagVegasMarketSmokeTest_PROD.TS013_VerifyAllLinksUnderExploreMarketTabTest(LagVegasMarketSmokeTest_PROD.java:427)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SmokeTestSuite-class-failed -->
+          <div class="suite-SmokeTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">PROD.LagVegasMarketSmokeTest_PROD</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS001_VerifyMarketPlannerLoginTest">
+                  </a> <!-- TS001_VerifyMarketPlannerLoginTest -->
+                  <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS003_VerifyControlPanelTest">
-                  </a> <!-- TS003_VerifyControlPanelTest -->
-                  <span class="method-name">TS003_VerifyControlPanelTest</span>
+                  <a name="TS002_VerifAllLinksUnderExhibitTabTest">
+                  </a> <!-- TS002_VerifAllLinksUnderExhibitTabTest -->
+                  <span class="method-name">TS002_VerifAllLinksUnderExhibitTabTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS004_VerifyShowSpecialApprovalsTest">
-                  </a> <!-- TS004_VerifyShowSpecialApprovalsTest -->
-                  <span class="method-name">TS004_VerifyShowSpecialApprovalsTest</span>
+                  <a name="TS003_VerifyMarketPlannerProfileAndSettingsOptionTest">
+                  </a> <!-- TS003_VerifyMarketPlannerProfileAndSettingsOptionTest -->
+                  <span class="method-name">TS003_VerifyMarketPlannerProfileAndSettingsOptionTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS005_VerifyEmailExperienceManagerTest">
-                  </a> <!-- TS005_VerifyEmailExperienceManagerTest -->
-                  <span class="method-name">TS005_VerifyEmailExperienceManagerTest</span>
+                  <a name="TS005_VerifyAllLinksUnderMarketInfoTabTest">
+                  </a> <!-- TS005_VerifyAllLinksUnderMarketInfoTabTest -->
+                  <span class="method-name">TS005_VerifyAllLinksUnderMarketInfoTabTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS006_VerifyIMCReportsTest">
-                  </a> <!-- TS006_VerifyIMCReportsTest -->
-                  <span class="method-name">TS006_VerifyIMCReportsTest</span>
+                  <a name="TS006_VerifyHeaderChannelLinksTest">
+                  </a> <!-- TS006_VerifyHeaderChannelLinksTest -->
+                  <span class="method-name">TS006_VerifyHeaderChannelLinksTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS007_VerifyTaxonomyManagerTest">
-                  </a> <!-- TS007_VerifyTaxonomyManagerTest -->
-                  <span class="method-name">TS007_VerifyTaxonomyManagerTest</span>
+                  <a name="TS007_VerifyAllLinksUnderAttendTabTest">
+                  </a> <!-- TS007_VerifyAllLinksUnderAttendTabTest -->
+                  <span class="method-name">TS007_VerifyAllLinksUnderAttendTabTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS008_VerifyExhibitorEventsApprovalTest">
-                  </a> <!-- TS008_VerifyExhibitorEventsApprovalTest -->
-                  <span class="method-name">TS008_VerifyExhibitorEventsApprovalTest</span>
+                  <a name="TS008_VerifyFooterLinksTest">
+                  </a> <!-- TS008_VerifyFooterLinksTest -->
+                  <span class="method-name">TS008_VerifyFooterLinksTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS009_VerifyDigitalAdminPanelTest">
-                  </a> <!-- TS009_VerifyDigitalAdminPanelTest -->
-                  <span class="method-name">TS009_VerifyDigitalAdminPanelTest</span>
+                  <a name="TS009_VerifyExhibitorDirectoryTest">
+                  </a> <!-- TS009_VerifyExhibitorDirectoryTest -->
+                  <span class="method-name">TS009_VerifyExhibitorDirectoryTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS010_VerifyGlobalSearchFunctionalityTest">
+                  </a> <!-- TS010_VerifyGlobalSearchFunctionalityTest -->
+                  <span class="method-name">TS010_VerifyGlobalSearchFunctionalityTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS011_VerifyAllLinksUnderYearRoundTabTest">
+                  </a> <!-- TS011_VerifyAllLinksUnderYearRoundTabTest -->
+                  <span class="method-name">TS011_VerifyAllLinksUnderYearRoundTabTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS012_VerifyAllSocialMediaLinksOnFooterTest">
+                  </a> <!-- TS012_VerifyAllSocialMediaLinksOnFooterTest -->
+                  <span class="method-name">TS012_VerifyAllSocialMediaLinksOnFooterTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -239,7 +448,7 @@
 &lt;suite name=&quot;SmokeTestSuite&quot;&gt;
   &lt;test thread-count=&quot;6&quot; name=&quot;SequencialTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;PROD.SitecoreSmokeTest_PROD&quot;/&gt;
+      &lt;class name=&quot;PROD.LagVegasMarketSmokeTest_PROD&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- SequencialTest --&gt;
 &lt;/suite&gt; &lt;!-- SmokeTestSuite --&gt;
@@ -279,48 +488,64 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(9);
+data.addRows(13);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS001_VerifySitecoreLoginTest')
-data.setCell(0, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(0, 3, 29571);
+data.setCell(0, 1, 'TS008_VerifyFooterLinksTest')
+data.setCell(0, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(0, 3, 888504);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TS005_VerifyEmailExperienceManagerTest')
-data.setCell(1, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(1, 3, 9596);
+data.setCell(1, 1, 'TS006_VerifyHeaderChannelLinksTest')
+data.setCell(1, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(1, 3, 220750);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TS002_VerifyContentEditorTest')
-data.setCell(2, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(2, 3, 8910);
+data.setCell(2, 1, 'TS007_VerifyAllLinksUnderAttendTabTest')
+data.setCell(2, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(2, 3, 199553);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TS004_VerifyShowSpecialApprovalsTest')
-data.setCell(3, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(3, 3, 7770);
+data.setCell(3, 1, 'TS005_VerifyAllLinksUnderMarketInfoTabTest')
+data.setCell(3, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(3, 3, 83888);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TS007_VerifyTaxonomyManagerTest')
-data.setCell(4, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(4, 3, 7324);
+data.setCell(4, 1, 'TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest')
+data.setCell(4, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(4, 3, 66265);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TS009_VerifyDigitalAdminPanelTest')
-data.setCell(5, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(5, 3, 5867);
+data.setCell(5, 1, 'TS013_VerifyAllLinksUnderExploreMarketTabTest')
+data.setCell(5, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(5, 3, 53616);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'TS003_VerifyControlPanelTest')
-data.setCell(6, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(6, 3, 5096);
+data.setCell(6, 1, 'TS001_VerifyMarketPlannerLoginTest')
+data.setCell(6, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(6, 3, 49680);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'TS006_VerifyIMCReportsTest')
-data.setCell(7, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(7, 3, 4245);
+data.setCell(7, 1, 'TS011_VerifyAllLinksUnderYearRoundTabTest')
+data.setCell(7, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(7, 3, 44022);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'TS008_VerifyExhibitorEventsApprovalTest')
-data.setCell(8, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(8, 3, 3871);
+data.setCell(8, 1, 'TS002_VerifAllLinksUnderExhibitTabTest')
+data.setCell(8, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(8, 3, 35848);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'TS003_VerifyMarketPlannerProfileAndSettingsOptionTest')
+data.setCell(9, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(9, 3, 20625);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'TS009_VerifyExhibitorDirectoryTest')
+data.setCell(10, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(10, 3, 13585);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'TS012_VerifyAllSocialMediaLinksOnFooterTest')
+data.setCell(11, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(11, 3, 8605);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'TS010_VerifyGlobalSearchFunctionalityTest')
+data.setCell(12, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
+data.setCell(12, 3, 4787);
 window.suiteTableData['SmokeTestSuite']= { tableData: data, tableDiv: 'times-div-SmokeTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 28 minutes</span>
               <div id="times-div-SmokeTestSuite">
               </div> <!-- times-div-SmokeTestSuite -->
             </div> <!-- times-div -->
@@ -346,51 +571,75 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">PROD.SitecoreSmokeTest_PROD</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">PROD.LagVegasMarketSmokeTest_PROD</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TS001_VerifySitecoreLoginTest</span>
-                <span class="method-start">37080 ms</span>
+                <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                <span class="method-start">110607 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS002_VerifyContentEditorTest</span>
-                <span class="method-start">66671 ms</span>
+                <span class="method-name">TS002_VerifAllLinksUnderExhibitTabTest</span>
+                <span class="method-start">160336 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS003_VerifyControlPanelTest</span>
-                <span class="method-start">75587 ms</span>
+                <span class="method-name">TS003_VerifyMarketPlannerProfileAndSettingsOptionTest</span>
+                <span class="method-start">196190 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS004_VerifyShowSpecialApprovalsTest</span>
-                <span class="method-start">80687 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest</span>
+                <span class="method-start">216826 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS005_VerifyEmailExperienceManagerTest</span>
-                <span class="method-start">88459 ms</span>
+                <span class="method-name">TS005_VerifyAllLinksUnderMarketInfoTabTest</span>
+                <span class="method-start">283190 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS006_VerifyIMCReportsTest</span>
-                <span class="method-start">98058 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TS013_VerifyAllLinksUnderExploreMarketTabTest</span>
+                <span class="method-start">367080 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS007_VerifyTaxonomyManagerTest</span>
-                <span class="method-start">102309 ms</span>
+                <span class="method-name">TS007_VerifyAllLinksUnderAttendTabTest</span>
+                <span class="method-start">420702 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS008_VerifyExhibitorEventsApprovalTest</span>
-                <span class="method-start">109636 ms</span>
+                <span class="method-name">TS008_VerifyFooterLinksTest</span>
+                <span class="method-start">620262 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS009_VerifyDigitalAdminPanelTest</span>
-                <span class="method-start">113509 ms</span>
+                <span class="method-name">TS009_VerifyExhibitorDirectoryTest</span>
+                <span class="method-start">1508768 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS010_VerifyGlobalSearchFunctionalityTest</span>
+                <span class="method-start">1522355 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS012_VerifyAllSocialMediaLinksOnFooterTest</span>
+                <span class="method-start">1527144 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS011_VerifyAllLinksUnderYearRoundTabTest</span>
+                <span class="method-start">1535752 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS006_VerifyHeaderChannelLinksTest</span>
+                <span class="method-start">1579775 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">119379 ms</span>
+                <span class="method-start">1800528 ms</span>
               </div> <!-- configuration-class after -->
+              <div class="configuration-suite after">
+                <span class="method-name">sendEmail</span>
+                <span class="method-start">1810774 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

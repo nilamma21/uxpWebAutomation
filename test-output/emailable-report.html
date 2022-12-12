@@ -31,30 +31,96 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">SequencialTest</td><td class="numi">9</td><td class="numi">9</td><td class="numi">0</td><td class="numi">0</td><td class="numi">127.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">SequencialTest</td><td class="numi">11</td><td class="numi">11</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">1,806.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">SequencialTest &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="2">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m1"><b>TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b>  </a></td><td class="numi">1</td><td>1670582583501</td><td class="numi">66265</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS013_VerifyAllLinksUnderExploreMarketTabTest</b>  </a></td><td class="numi">1</td><td>1670582733755</td><td class="numi">53616</td></tr>
 <tr><th colspan="4">SequencialTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="9">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m1"><b>TS001_VerifySitecoreLoginTest</b>  </a></td><td class="numi">1</td><td>1670234005943</td><td class="numi">29571</td></tr><tr class="passedodd"><td><a href="#m2"><b>TS002_VerifyContentEditorTest</b>  </a></td><td class="numi">1</td><td>1670234035534</td><td class="numi">8910</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS003_VerifyControlPanelTest</b>  </a></td><td class="numi">1</td><td>1670234044450</td><td class="numi">5096</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS004_VerifyShowSpecialApprovalsTest</b>  </a></td><td class="numi">1</td><td>1670234049550</td><td class="numi">7770</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS005_VerifyEmailExperienceManagerTest</b>  </a></td><td class="numi">1</td><td>1670234057322</td><td class="numi">9596</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS006_VerifyIMCReportsTest</b>  </a></td><td class="numi">1</td><td>1670234066921</td><td class="numi">4245</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS007_VerifyTaxonomyManagerTest</b>  </a></td><td class="numi">1</td><td>1670234071172</td><td class="numi">7324</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS008_VerifyExhibitorEventsApprovalTest</b>  </a></td><td class="numi">1</td><td>1670234078499</td><td class="numi">3871</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS009_VerifyDigitalAdminPanelTest</b>  </a></td><td class="numi">1</td><td>1670234082372</td><td class="numi">5867</td></tr>
+<tr class="passedodd"><td rowspan="11">PROD.LagVegasMarketSmokeTest_PROD</td><td><a href="#m3"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1670582477282</td><td class="numi">49680</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS002_VerifAllLinksUnderExhibitTabTest</b>  </a></td><td class="numi">1</td><td>1670582527011</td><td class="numi">35848</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS003_VerifyMarketPlannerProfileAndSettingsOptionTest</b>  </a></td><td class="numi">1</td><td>1670582562865</td><td class="numi">20625</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS005_VerifyAllLinksUnderMarketInfoTabTest</b>  </a></td><td class="numi">1</td><td>1670582649865</td><td class="numi">83888</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS006_VerifyHeaderChannelLinksTest</b>  </a></td><td class="numi">1</td><td>1670583946450</td><td class="numi">220750</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS007_VerifyAllLinksUnderAttendTabTest</b>  </a></td><td class="numi">1</td><td>1670582787377</td><td class="numi">199553</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS008_VerifyFooterLinksTest</b>  </a></td><td class="numi">1</td><td>1670582986937</td><td class="numi">888504</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS009_VerifyExhibitorDirectoryTest</b>  </a></td><td class="numi">1</td><td>1670583875443</td><td class="numi">13585</td></tr><tr class="passedodd"><td><a href="#m11"><b>TS010_VerifyGlobalSearchFunctionalityTest</b>  </a></td><td class="numi">1</td><td>1670583889030</td><td class="numi">4787</td></tr><tr class="passedodd"><td><a href="#m12"><b>TS011_VerifyAllLinksUnderYearRoundTabTest</b>  </a></td><td class="numi">1</td><td>1670583902427</td><td class="numi">44022</td></tr><tr class="passedodd"><td><a href="#m13"><b>TS012_VerifyAllSocialMediaLinksOnFooterTest</b>  </a></td><td class="numi">1</td><td>1670583893819</td><td class="numi">8605</td></tr>
 </table>
 <h1>SequencialTest</h1>
-<h2 id="m1">PROD.SitecoreSmokeTest_PROD:TS005_VerifyEmailExperienceManagerTest</h2>
+<h2 id="m1">PROD.LagVegasMarketSmokeTest_PROD:TS013_VerifyAllLinksUnderExploreMarketTabTest</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;Virtual Resources&apos;)]&quot;}
+  (Session info: chrome=108.0.5359.95)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18172_1741758685}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56455}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.95, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 2c49a61685a7f831bd960de5e5e98e16
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Virtual Resources&apos;)]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at pageObjects.LasVegasMarket.UXPExploreMarketPage.getVirtualResourcesMenu(UXPExploreMarketPage.java:44)
+<br/>at PROD.LagVegasMarketSmokeTest_PROD.TS013_VerifyAllLinksUnderExploreMarketTabTest(LagVegasMarketSmokeTest_PROD.java:427)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">PROD.SitecoreSmokeTest_PROD:TS008_VerifyExhibitorEventsApprovalTest</h2>
+<h2 id="m2">PROD.LagVegasMarketSmokeTest_PROD:TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(), &apos;New Product Introductions&apos;)]&quot;}
+  (Session info: chrome=108.0.5359.95)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18172_1741758685}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56455}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.95, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 2c49a61685a7f831bd960de5e5e98e16
+*** Element info: {Using=xpath, value=//a[contains(text(), &apos;New Product Introductions&apos;)]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getNewProductIntroductions(UXPExhibitorsAndProductsTabPage.java:61)
+<br/>at PROD.LagVegasMarketSmokeTest_PROD.TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest(LagVegasMarketSmokeTest_PROD.java:279)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">PROD.SitecoreSmokeTest_PROD:TS003_VerifyControlPanelTest</h2>
+<h2 id="m3">PROD.LagVegasMarketSmokeTest_PROD:TS002_VerifAllLinksUnderExhibitTabTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">PROD.SitecoreSmokeTest_PROD:TS007_VerifyTaxonomyManagerTest</h2>
+<h2 id="m4">PROD.LagVegasMarketSmokeTest_PROD:TS010_VerifyGlobalSearchFunctionalityTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">PROD.SitecoreSmokeTest_PROD:TS001_VerifySitecoreLoginTest</h2>
+<h2 id="m5">PROD.LagVegasMarketSmokeTest_PROD:TS008_VerifyFooterLinksTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">PROD.SitecoreSmokeTest_PROD:TS002_VerifyContentEditorTest</h2>
+<h2 id="m6">PROD.LagVegasMarketSmokeTest_PROD:TS007_VerifyAllLinksUnderAttendTabTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">PROD.SitecoreSmokeTest_PROD:TS004_VerifyShowSpecialApprovalsTest</h2>
+<h2 id="m7">PROD.LagVegasMarketSmokeTest_PROD:TS011_VerifyAllLinksUnderYearRoundTabTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">PROD.SitecoreSmokeTest_PROD:TS006_VerifyIMCReportsTest</h2>
+<h2 id="m8">PROD.LagVegasMarketSmokeTest_PROD:TS001_VerifyMarketPlannerLoginTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">PROD.SitecoreSmokeTest_PROD:TS009_VerifyDigitalAdminPanelTest</h2>
+<h2 id="m9">PROD.LagVegasMarketSmokeTest_PROD:TS009_VerifyExhibitorDirectoryTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">PROD.LagVegasMarketSmokeTest_PROD:TS012_VerifyAllSocialMediaLinksOnFooterTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">PROD.LagVegasMarketSmokeTest_PROD:TS006_VerifyHeaderChannelLinksTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">PROD.LagVegasMarketSmokeTest_PROD:TS005_VerifyAllLinksUnderMarketInfoTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">PROD.LagVegasMarketSmokeTest_PROD:TS003_VerifyMarketPlannerProfileAndSettingsOptionTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

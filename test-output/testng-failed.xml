@@ -3,13 +3,15 @@
 <suite name="Failed suite [SmokeTestSuite]">
   <test name="SequencialTest(failed)">
     <classes>
-      <class name="PROD.SitecoreSmokeTest_PROD">
+      <class name="PROD.LagVegasMarketSmokeTest_PROD">
         <methods>
-          <include name="tearDown"/>
+          <include name="sendEmail"/>
+          <include name="TS013_VerifyAllLinksUnderExploreMarketTabTest"/>
           <include name="initialize"/>
-          <include name="TS009_VerifyDigitalAdminPanelTest"/>
+          <include name="TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
+      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
     </classes>
   </test> <!-- SequencialTest(failed) -->
 </suite> <!-- Failed suite [SmokeTestSuite] -->
