@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="5342" started-at="2022-12-12T05:00:11Z" finished-at="2022-12-12T05:00:16Z">
+  <suite name="Suite" duration-ms="5492" started-at="2022-12-12T05:29:49Z" finished-at="2022-12-12T05:29:55Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="5342" started-at="2022-12-12T05:00:11Z" finished-at="2022-12-12T05:00:16Z">
+    <test name="Test" duration-ms="5492" started-at="2022-12-12T05:29:49Z" finished-at="2022-12-12T05:29:55Z">
       <class name="UAT.AtlantaMarketLoginTest_UAT">
-        <test-method status="PASS" signature="driverInitialize()[pri:0, instance:UAT.AtlantaMarketLoginTest_UAT@343f4d3d]" name="driverInitialize" is-config="true" duration-ms="3737" started-at="2022-12-12T10:30:11Z" finished-at="2022-12-12T10:30:15Z">
+        <test-method status="PASS" signature="driverInitialize()[pri:0, instance:UAT.AtlantaMarketLoginTest_UAT@343f4d3d]" name="driverInitialize" is-config="true" duration-ms="3802" started-at="2022-12-12T10:59:49Z" finished-at="2022-12-12T10:59:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInitialize -->
-        <test-method status="FAIL" signature="atlMarketOpen()[pri:0, instance:UAT.AtlantaMarketLoginTest_UAT@343f4d3d]" name="atlMarketOpen" duration-ms="8" started-at="2022-12-12T10:30:15Z" finished-at="2022-12-12T10:30:15Z">
+        <test-method status="FAIL" signature="atlMarketOpen()[pri:0, instance:UAT.AtlantaMarketLoginTest_UAT@343f4d3d]" name="atlMarketOpen" duration-ms="11" started-at="2022-12-12T10:59:53Z" finished-at="2022-12-12T10:59:53Z">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[null value in entry: url=null]]>
@@ -54,7 +54,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- atlMarketOpen -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:UAT.AtlantaMarketLoginTest_UAT@343f4d3d]" name="quitBrowser" is-config="true" duration-ms="1558" started-at="2022-12-12T10:30:15Z" finished-at="2022-12-12T10:30:16Z">
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:UAT.AtlantaMarketLoginTest_UAT@343f4d3d]" name="quitBrowser" is-config="true" duration-ms="1633" started-at="2022-12-12T10:59:53Z" finished-at="2022-12-12T10:59:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
