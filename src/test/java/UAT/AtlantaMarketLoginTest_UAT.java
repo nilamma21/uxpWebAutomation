@@ -41,7 +41,9 @@ public class AtlantaMarketLoginTest_UAT extends base {
 		lp.getEmailAddress().sendKeys(prop.getProperty("username"));
 		lp.getPassword().sendKeys(prop.getProperty("password"));
 		lp.getSignInBtn().click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Thread.sleep(5000);
+		
 		
 	}
 	

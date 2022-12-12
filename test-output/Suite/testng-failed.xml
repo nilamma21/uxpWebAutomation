@@ -3,12 +3,13 @@
 <suite name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="lasvegasmarket.MPLoginPageTest">
+      <class name="UAT.AtlantaMarketLoginTest_UAT">
         <methods>
-          <include name="TS001_VerifyMarketPlannerPageTest"/>
-          <include name="initialize"/>
+          <include name="atlMarketOpen"/>
+          <include name="quitBrowser"/>
+          <include name="driverInitialize"/>
         </methods>
-      </class> <!-- lasvegasmarket.MPLoginPageTest -->
+      </class> <!-- UAT.AtlantaMarketLoginTest_UAT -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
