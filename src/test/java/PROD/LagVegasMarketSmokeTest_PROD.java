@@ -570,7 +570,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		}
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
 		System.out.println("Terms And Conditions Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore7);
 
 		// Click Privacy Policy and verify results
@@ -585,7 +585,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		}
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "IMC PRIVACY STATEMENT");
 		System.out.println("Privacy Policy Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
@@ -599,7 +599,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
 		System.out.println("AmericasMart Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore9);
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
@@ -615,7 +615,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
 		System.out.println("Atlanta Market Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore3);
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
@@ -629,9 +629,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		for (String winHandle2 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle2);
 		}
+		Thread.sleep(5000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
 		System.out.println("Atlanta App Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore2);
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
@@ -646,7 +647,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
 		System.out.println("High point Market Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore4);
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
@@ -682,7 +683,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle11);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
-		driver.close();
+		//driver.close();
 		System.out.println("IMC Market Page open successfully");
 		driver.switchTo().window(winHandleBefore11);
 		driver.get(prop.getProperty("lvmurl"));
@@ -697,7 +698,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle12);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
-		driver.close();
+		//driver.close();
 		System.out.println("Juniper Market Page open successfully");
 		driver.switchTo().window(winHandleBefore12);
 		driver.get(prop.getProperty("lvmurl"));
@@ -1019,6 +1020,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click Atlanta Apparel channel link and verify result
 
 		hd.getAtlantaApparel().click();
+		Thread.sleep(5000);
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Apparel at AmericasMart"));
 		System.out.println("Atlanta Apparel channel link is working properly.");
 		driver.get(prop.getProperty("lvmurl"));
@@ -1048,17 +1050,16 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 	}
 
-	// @AfterSuite
-	// public void sendEmail()
-	// {
-	// 	se = new SendEmail();
-	// 	se.sendEmailWithAttachment();
-	// }
+	/*@AfterSuite
+	public void sendEmail()
+	{
+		se = new SendEmail();
+		se.sendEmailWithAttachment();
+	}*/
 
 	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
 	}
-
 }
