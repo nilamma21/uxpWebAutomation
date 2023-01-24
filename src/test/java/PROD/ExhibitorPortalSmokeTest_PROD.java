@@ -610,7 +610,9 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		}
 		Thread.sleep(8000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
-		System.out.println("Atlanta market page is displayed properly.");
+
+		System.out.println("High Point market page is displayed properly.");
+
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
 		driver.get(prop.getProperty("expurl"));

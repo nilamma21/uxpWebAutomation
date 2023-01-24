@@ -8,7 +8,7 @@
 
 	<test thread-count="1" name="LVMTest">
 		<classes>
-			<class name="PROD.LasVegasMarketSmokeTest_PROD" />
+			<class name="PROD.LagVegasMarketSmokeTest_PROD" />
 		</classes>
 	</test>
 </suite>

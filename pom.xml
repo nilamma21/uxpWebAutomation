@@ -13,6 +13,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+    	<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	<build>
 		<pluginManagement>
@@ -23,7 +25,7 @@
 					<version>3.0.0-M7</version>
 					<configuration>
 						<suiteXmlFiles>
-							<suiteXmlFile>SequencialTestng.xml</suiteXmlFile>
+							<suiteXmlFile>Paralleltestng.xml</suiteXmlFile>
 						</suiteXmlFiles>
 						<trimStackTrace>false</trimStackTrace>
 						<rerunFailingTestsCount>1</rerunFailingTestsCount>
@@ -62,7 +64,7 @@
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.2.1</version>
-			<scope>test</scope>
+			<!-- <scope>test</scope> -->
 		</dependency>
 
 		<dependency>

@@ -1062,8 +1062,4 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	{
 		driver.quit();
 	}
-
 }
-
-
-

@@ -322,7 +322,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 
 	@Test(priority=8)
-	public void TS008_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
+	public void TS012_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T012: To verify links for Attend tab at Header
@@ -400,7 +400,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=12)
-	public void TS012_AMC_VerifyFooterLinksTest() throws InterruptedException, IOException
+	public void TS008_AMC_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T69: To verify Footer Links Navigation
@@ -469,7 +469,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
 		System.out.println("Terms And Conditions Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore7);
 
 		// Click Privacy Policy and verify results
@@ -483,7 +483,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "IMC PRIVACY STATEMENT");
 		System.out.println("Privacy Policy Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		// utl.scrollToElement(fl.marketInfoAMC());
 		driver.get(prop.getProperty("ammarturl"));
@@ -596,6 +596,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 //		System.out.println("Juniper Market Page open successfully");
 //		driver.switchTo().window(winHandleBefore12);
 		utl.scrollToElement(fl.marketInfoAMC());	
+			
 		
 		
 		
@@ -741,7 +742,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.verifyCloseBtnPopup();
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
-		//Thread.sleep(10000);
+		Thread.sleep(10000);
 		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
@@ -953,6 +954,3 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 }
-
-
-
