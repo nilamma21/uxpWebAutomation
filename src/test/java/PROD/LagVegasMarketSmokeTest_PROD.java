@@ -59,11 +59,12 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("lvmurl"));
 		lap.getIUnderstandBtn().click();
-		//Thread.sleep(6000);
+		Thread.sleep(3000);
+		utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=01)
-	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
+	public void TS001_LVM_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-001: To verify the Market Planner overview and it's functionality
@@ -74,8 +75,9 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl"));
-
+//		driver.get(prop.getProperty("lvmurl"));
+//		utl.verifyCloseBtnPopup();
+		
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
 
@@ -85,7 +87,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=02)
-	public void TS002_VerifAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
+	public void TS002_LVM_VerifAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-002: To verify the Exhibit menu overview and it's functionality
@@ -209,7 +211,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=03)
-	public void TS003_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
+	public void TS003_LVM_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-003: To verify Profile and Settings option in Market Planner
@@ -228,7 +230,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=04)
-	public void TS004_VerifyAllLinksUnderExhibitorsAndProductsTabTest() throws InterruptedException, IOException
+	public void TS004_LVM_VerifyAllLinksUnderExhibitorsAndProductsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-004: To verify the Exhibitors & Products menu overview and it's functionality
@@ -292,10 +294,11 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com"));
 		System.out.println("Juniper Market page is displayed properly");
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=05)
-	public void TS005_VerifyAllLinksUnderMarketInfoTabTest() throws InterruptedException, IOException
+	public void TS005_LVM_VerifyAllLinksUnderMarketInfoTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T005: To verify links for Market info tab at Header
@@ -350,7 +353,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click FAQs option under Market Info
 
 		mi.getFAQs().click();
-		Assert.assertEquals(mi.getVerifyFAQsProd().getText(), "Frequently Asked Questions");
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "FAQ");
 		System.out.println("Frequently Asked Questions section is displayed properly");
 		//driver.get(prop.getProperty("lvmurl"));
 		mi.getMarketInfoHeader().click();
@@ -376,8 +379,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Press Center section is displayed properly");
 	}
 
-	@Test(priority=13)
-	public void TS013_VerifyAllLinksUnderExploreMarketTabTest() throws InterruptedException, IOException
+	@Test(priority=6)
+	public void TS013_LVM_VerifyAllLinksUnderExploreMarketTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T006: To verify links for Explore Market tab at Header
@@ -473,7 +476,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=10)
-	public void TS010_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+	public void TS010_LVM_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T63: To verify global search functionality
@@ -495,7 +498,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 
 	@Test(priority= 8)
-	public void TS008_VerifyFooterLinksTest() throws InterruptedException, IOException
+	public void TS008_LVM_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T69: To verify Footer Links Navigation
@@ -514,6 +517,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/market-info"));
 		System.out.println("Market Info Page open successfully");
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click on Press Center
@@ -521,6 +525,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Market-Info/Press-Center"));
 		System.out.println("Press center Page open successfully");
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 
 		// Click Download The App link and verify results
@@ -528,6 +533,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market App");
 		System.out.println("Download App Page open successfully");
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 
 		// Click on Our Brand link
@@ -535,6 +541,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/exhibitor/directory"));
 		System.out.println("Our Brands Page open successfully");
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Contact Us link and verify results
@@ -542,6 +549,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/contact-us"));
 		System.out.println("Contact us Page open successfully");
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Careers link and verify results
@@ -550,6 +558,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		// driver.get(prop.getProperty("atlappurl"));
 		System.out.println("Careers Page open successfully");
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 
 		// Click on Terms & condition link
@@ -561,11 +570,12 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		}
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
 		System.out.println("Terms And Conditions Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore7);
 
 		// Click Privacy Policy and verify results
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		// Click Privacy Policy link and verify results
 		fl.getLVMPrivacyPolicyPLink().click();
@@ -575,9 +585,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		}
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "IMC PRIVACY STATEMENT");
 		System.out.println("Privacy Policy Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Americas Mart link and verify results
@@ -588,9 +599,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
 		System.out.println("AmericasMart Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore9);
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 
 		
@@ -603,9 +615,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
 		System.out.println("Atlanta Market Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore3);
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 
@@ -616,11 +629,13 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		for (String winHandle2 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle2);
 		}
+		Thread.sleep(5000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
 		System.out.println("Atlanta App Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore2);
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 
 		// Click on High Point Market link
@@ -632,9 +647,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
 		System.out.println("High point Market Page open successfully");
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore4);
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 
 		// Click on LVA Market link
@@ -643,6 +659,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
 		System.out.println("Las Vegas App Page open successfully");
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 
 		/*// Click on LVM Market link
@@ -666,10 +683,11 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle11);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
-		driver.close();
+		//driver.close();
 		System.out.println("IMC Market Page open successfully");
 		driver.switchTo().window(winHandleBefore11);
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 
 		// Click Juniper Market Centers link and verify results
@@ -680,16 +698,17 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle12);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
-		driver.close();
+		//driver.close();
 		System.out.println("Juniper Market Page open successfully");
 		driver.switchTo().window(winHandleBefore12);
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 	}
 
 	@Test(priority=9)
-	public void TS009_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	public void TS009_LVM_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T64: To verify Exhibitor Directory
@@ -717,7 +736,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=07)
-	public void TS007_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
+	public void TS007_LVM_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T005: To verify links for Market info tab at Header
@@ -740,6 +759,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend"));
 		System.out.println("Why Attend section is displayed properly");
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 		//Thread.sleep(6000);
 		at.getAttend().click();
 
@@ -810,7 +830,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 
 	@Test(priority=11)
-	public void TS011_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
+	public void TS011_LVM_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T005: To verify links for Market info tab at Header
@@ -870,7 +890,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=012)
-	public void TS012_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	public void TS012_LVM_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-013: To verify the all social media links and it's redirection
@@ -979,8 +999,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore);*/
 	}
 
-	@Test(priority=06)
-	public void TS006_VerifyHeaderChannelLinksTest() throws InterruptedException, IOException
+	@Test(priority=13)
+	public void TS006_LVM_VerifyHeaderChannelLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-: To verify header channel links
@@ -995,13 +1015,16 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
 		System.out.println("Atlanta Market channel link is working properly.");
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 
 		//Click Atlanta Apparel channel link and verify result
 
 		hd.getAtlantaApparel().click();
+		Thread.sleep(5000);
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Apparel at AmericasMart"));
 		System.out.println("Atlanta Apparel channel link is working properly.");
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 
 		//Click Americas Mart channel link and verify result
 
@@ -1009,12 +1032,12 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Wholesale Gift, Home, Rug and Apparel Markets"));
 		System.out.println("Americas Mart channel link is working properly.");
 		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 
 		//Click IMC High Point Market channel link and verify result
 
 		hd.getHighPoint().click();
-		Thread.sleep(8000);
-
+		Thread.sleep(7000);
 		Assert.assertTrue(driver.getTitle().contains("High Point Fall Market"));
 		System.out.println("IMC High Point channel link is working properly.");
 		driver.get(prop.getProperty("lvmurl"));
@@ -1027,7 +1050,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 	}
 
-	/*	@AfterSuite
+	/*@AfterSuite
 	public void sendEmail()
 	{
 		se = new SendEmail();

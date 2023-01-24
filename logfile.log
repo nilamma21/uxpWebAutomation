@@ -1,0 +1,66 @@
+2022-11-04 16:17:15,290 INFO  [Log] FAILED- TS006_VerifyAllLinksUnderMarketsTabTest 
+2022-11-04 16:20:56,702 INFO  [Log] FAILED- TS006_VerifyAllLinksUnderMarketsTabTest 
+2022-11-04 16:27:04,766 INFO  [Log] FAILED- TS006_VerifyAllLinksUnderMarketsTabTest 
+2022-11-07 18:53:41,406 INFO  [Log] FAILED- TS006_VerifyAllLinksUnderMarketsTabTest 
+2022-11-08 15:42:33,593 ERROR [Log] Excpetion occured 
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]"}
+  (Session info: chrome=107.0.5304.88)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir1728_911325435}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64212}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=107.0.5304.88, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 6b4cf0b906ca2078f89fedf2606b0cce
+*** Element info: {Using=xpath, value=//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.AtlantaApparel.ATLAppMarketsTabPage.getATLAppHeadersnext(ATLAppMarketsTabPage.java:48)
+	at PROD.AtlantaAppSmokeTest_PROD.TS006_VerifyAllLinksUnderMarketsTabTest(AtlantaAppSmokeTest_PROD.java:346)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+2022-11-09 14:48:40,307 INFO  [Log] FAILED- TS006_VerifyAllLinksUnderMarketsTabTest 
+2022-11-16 17:13:58,773 INFO  [Log] FAILED- TS003_VerifyMarketPlannerExhibitorPortalOptionTest 
+2022-11-16 17:14:03,929 INFO  [Log] FAILED- TS004_VerifyGlobalSearchFunctionalityTest 
+2022-11-16 17:14:05,846 INFO  [Log] FAILED- TS005_VerifyExhibitorDirectoryTest 
+2022-11-16 17:14:07,153 INFO  [Log] FAILED- TS006_VerifyAllLinksUnderMarketsTabTest 
+2022-11-16 17:14:09,543 INFO  [Log] FAILED- TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest 
+2022-11-16 17:14:29,733 INFO  [Log] FAILED- TS008_VerifySocialMediaLinksTest 
+2022-11-16 17:14:31,182 INFO  [Log] FAILED- TS009_VerifyAllLinksUnderFashionGalleryTabTest 
+2022-11-16 17:14:37,578 INFO  [Log] FAILED- TS010_VerifyAllLinksUnderExhibitTabTest 
+2022-11-16 17:14:38,950 INFO  [Log] FAILED- TS011_VerifyAllLinksUnderYearRoundTabTest 
+2022-11-16 17:14:44,500 INFO  [Log] FAILED- TS012_VerifyFooterLinksTest 
+2022-11-16 17:14:55,760 INFO  [Log] FAILED- TS013_VerifyAllLinksUnderAttendTabTest 

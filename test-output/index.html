@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-SmokeTestSuite">
-              <span class="suite-name border-failed">SmokeTestSuite</span>
+              <span class="suite-name border-passed">SmokeTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,26 +90,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-SmokeTestSuite" class="hide-methods failed suite-SmokeTestSuite"> (hide)</a> <!-- hide-methods failed suite-SmokeTestSuite -->
-                      <a href="#" panel-name="suite-SmokeTestSuite" class="show-methods failed suite-SmokeTestSuite"> (show)</a> <!-- show-methods failed suite-SmokeTestSuite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-SmokeTestSuite" class="hide-methods passed suite-SmokeTestSuite"> (hide)</a> <!-- hide-methods passed suite-SmokeTestSuite -->
+                      <a href="#" panel-name="suite-SmokeTestSuite" class="show-methods passed suite-SmokeTestSuite"> (show)</a> <!-- show-methods passed suite-SmokeTestSuite -->
                     </span>
-                    <div class="method-list-content failed suite-SmokeTestSuite">
+                    <div class="method-list-content passed suite-SmokeTestSuite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.AtlantaAppSmokeTest_PROD" hash-for-method="TS006_VerifyAllLinksUnderMarketsTabTest">TS006_VerifyAllLinksUnderMarketsTabTest</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.AtlantaMarketSmokeTest_PROD" hash-for-method="TS012_VerifyAllLinksUnderAttendTabTest">TS012_VerifyAllLinksUnderAttendTabTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.AtlantaAppSmokeTest_PROD" hash-for-method="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest">TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.AtlantaMarketSmokeTest_PROD" hash-for-method="TS013_VerifyAllNewsAndTrendsMenuTest">TS013_VerifyAllNewsAndTrendsMenuTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-SmokeTestSuite -->
+                    </div> <!-- method-list-content passed suite-SmokeTestSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -121,144 +121,28 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SmokeTestSuite" class="panel SmokeTestSuite">
-          <div class="suite-SmokeTestSuite-class-failed">
+          <div class="suite-SmokeTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">PROD.AtlantaAppSmokeTest_PROD</span>
+              <img src="passed.png"/>
+              <span class="class-name">PROD.AtlantaMarketSmokeTest_PROD</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS006_VerifyAllLinksUnderMarketsTabTest">
-                  </a> <!-- TS006_VerifyAllLinksUnderMarketsTabTest -->
-                  <span class="method-name">TS006_VerifyAllLinksUnderMarketsTabTest</span>
-                  <div class="stack-trace"><b>"org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class =&apos;imc-section&apos;]/div[1]/div[1]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.UXPMarketInfoPage.getMarketInfoHeader(UXPMarketInfoPage.java:44)
-	at PROD.AtlantaAppSmokeTest_PROD.TS006_VerifyAllLinksUnderMarketsTabTest(AtlantaAppSmokeTest_PROD.java:367)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class =&apos;imc-section&apos;]/div[1]/div[1]/div[1]/a[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-... Removed 24 stack frames<br/> org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class =&apos;imc-section&apos;]/div[1]/div[1]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.UXPMarketInfoPage.getMarketInfoHeader(UXPMarketInfoPage.java:44)
-	at PROD.AtlantaAppSmokeTest_PROD.TS006_VerifyAllLinksUnderMarketsTabTest(AtlantaAppSmokeTest_PROD.java:367)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class =&apos;imc-section&apos;]/div[1]/div[1]/div[1]/a[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-"</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)<br>pageObjects.LasVegasMarket.UXPMarketInfoPage.getMarketInfoHeader(UXPMarketInfoPage.java:44)<br>PROD.AtlantaAppSmokeTest_PROD.TS006_VerifyAllLinksUnderMarketsTabTest(AtlantaAppSmokeTest_PROD.java:367)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br>
-</div> <!-- stack-trace -->
+                  <a name="TS012_VerifyAllLinksUnderAttendTabTest">
+                  </a> <!-- TS012_VerifyAllLinksUnderAttendTabTest -->
+                  <span class="method-name">TS012_VerifyAllLinksUnderAttendTabTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest">
-                  </a> <!-- TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest -->
-                  <span class="method-name">TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest</span>
-                  <div class="stack-trace"><b>"java.lang.NullPointerException
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
-	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElements(ExpectedConditions.java:901)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$200(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:232)
-	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:229)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getExhibitorsAndProducts(UXPExhibitorsAndProductsTabPage.java:38)
-	at PROD.AtlantaAppSmokeTest_PROD.TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest(AtlantaAppSmokeTest_PROD.java:411)
-... Removed 24 stack frames<br/> java.lang.NullPointerException
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
-	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElements(ExpectedConditions.java:901)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$200(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:232)
-	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:229)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getExhibitorsAndProducts(UXPExhibitorsAndProductsTabPage.java:38)
-	at PROD.AtlantaAppSmokeTest_PROD.TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest(AtlantaAppSmokeTest_PROD.java:411)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-"</b><br>org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)<br>org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)<br>org.openqa.selenium.By$ByXPath.findElements(By.java:356)<br>org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)<br>org.openqa.selenium.support.ui.ExpectedConditions.findElements(ExpectedConditions.java:901)<br>org.openqa.selenium.support.ui.ExpectedConditions.access$200(ExpectedConditions.java:44)<br>org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:232)<br>org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:229)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)<br>pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getExhibitorsAndProducts(UXPExhibitorsAndProductsTabPage.java:38)<br>PROD.AtlantaAppSmokeTest_PROD.TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest(AtlantaAppSmokeTest_PROD.java:411)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br>
-</div> <!-- stack-trace -->
+                  <a name="TS013_VerifyAllNewsAndTrendsMenuTest">
+                  </a> <!-- TS013_VerifyAllNewsAndTrendsMenuTest -->
+                  <span class="method-name">TS013_VerifyAllNewsAndTrendsMenuTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SmokeTestSuite-class-failed -->
+          </div> <!-- suite-SmokeTestSuite-class-passed -->
         </div> <!-- panel SmokeTestSuite -->
         <div panel-name="test-xml-SmokeTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -271,12 +155,12 @@ Driver info: driver.version: unknown
 &lt;suite name=&quot;SmokeTestSuite&quot;&gt;
   &lt;test thread-count=&quot;6&quot; name=&quot;SequencialTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;PROD.AtlantaAppSmokeTest_PROD&quot;&gt;
+      &lt;class name=&quot;PROD.AtlantaMarketSmokeTest_PROD&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TS006_VerifyAllLinksUnderMarketsTabTest&quot;/&gt;
-          &lt;include name=&quot;TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest&quot;/&gt;
+          &lt;include name=&quot;TS012_VerifyAllLinksUnderAttendTabTest&quot;/&gt;
+          &lt;include name=&quot;TS013_VerifyAllNewsAndTrendsMenuTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- PROD.AtlantaAppSmokeTest_PROD --&gt;
+      &lt;/class&gt; &lt;!-- PROD.AtlantaMarketSmokeTest_PROD --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- SequencialTest --&gt;
 &lt;/suite&gt; &lt;!-- SmokeTestSuite --&gt;
@@ -318,18 +202,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS006_VerifyAllLinksUnderMarketsTabTest')
-data.setCell(0, 2, 'PROD.AtlantaAppSmokeTest_PROD')
-data.setCell(0, 3, 121496);
+data.setCell(0, 1, 'TS012_VerifyAllLinksUnderAttendTabTest')
+data.setCell(0, 2, 'PROD.AtlantaMarketSmokeTest_PROD')
+data.setCell(0, 3, 214174);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest')
-data.setCell(1, 2, 'PROD.AtlantaAppSmokeTest_PROD')
-data.setCell(1, 3, 8491);
+data.setCell(1, 1, 'TS013_VerifyAllNewsAndTrendsMenuTest')
+data.setCell(1, 2, 'PROD.AtlantaMarketSmokeTest_PROD')
+data.setCell(1, 3, 70118);
 window.suiteTableData['SmokeTestSuite']= { tableData: data, tableDiv: 'times-div-SmokeTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-SmokeTestSuite">
               </div> <!-- times-div-SmokeTestSuite -->
             </div> <!-- times-div -->
@@ -348,29 +232,29 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">PROD.AtlantaAppSmokeTest_PROD</span>
+              <span class="ignored-class-name">PROD.AtlantaMarketSmokeTest_PROD</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS010_VerifyAllLinksUnderExhibitTabTest</span>
+                <span class="ignored-method-name">TS006_VerifyAllLinksUnderMarketInfoTabTest</span>
                 <br/>
-                <span class="ignored-method-name">TS012_VerifyFooterLinksTest</span>
+                <span class="ignored-method-name">TS011_VerifyFooterLinksTest</span>
                 <br/>
-                <span class="ignored-method-name">TS013_VerifySocialMediaLinksTest</span>
+                <span class="ignored-method-name">TS010_VerifyAllSocialMediaLinksOnFooterTest</span>
+                <br/>
+                <span class="ignored-method-name">TS009_VerifyAllChannelsLinksTest</span>
+                <br/>
+                <span class="ignored-method-name">TS003_VerifyGlobalSearchFunctionalityTest</span>
                 <br/>
                 <span class="ignored-method-name">TS005_VerifyExhibitorDirectoryTest</span>
                 <br/>
-                <span class="ignored-method-name">TS008_VerifyAllLinksUnderAttendTabTest</span>
+                <span class="ignored-method-name">TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest</span>
                 <br/>
-                <span class="ignored-method-name">TS011_VerifyAllLinksUnderYearRoundTabTest</span>
-                <br/>
-                <span class="ignored-method-name">TS003_VerifyMarketPlannerExhibitorPortalOptionTest</span>
-                <br/>
-                <span class="ignored-method-name">TS004_VerifyGlobalSearchFunctionalityTest</span>
-                <br/>
-                <span class="ignored-method-name">TS009_VerifyAllLinksUnderFashionGalleryTabTest</span>
+                <span class="ignored-method-name">TS004_VerifyMarketPlannerRegistrationsOptionTest</span>
                 <br/>
                 <span class="ignored-method-name">TS001_VerifyMarketPlannerLoginTest</span>
                 <br/>
-                <span class="ignored-method-name">TS002_VerifyMarketPlannerProfileOptionTest</span>
+                <span class="ignored-method-name">TS002_VerifyMarketPlannerProfileAndSettingsOptionTest</span>
+                <br/>
+                <span class="ignored-method-name">TS008_VerifAllLinksUnderExhibitTabTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -382,26 +266,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">PROD.AtlantaAppSmokeTest_PROD</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">PROD.AtlantaMarketSmokeTest_PROD</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">TS006_VerifyAllLinksUnderMarketsTabTest</span>
-                <span class="method-start">28162 ms</span>
+                <span class="method-name">TS012_VerifyAllLinksUnderAttendTabTest</span>
+                <span class="method-start">107904 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest</span>
-                <span class="method-start">150415 ms</span>
+                <span class="method-name">TS013_VerifyAllNewsAndTrendsMenuTest</span>
+                <span class="method-start">322111 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">158912 ms</span>
+                <span class="method-start">392232 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

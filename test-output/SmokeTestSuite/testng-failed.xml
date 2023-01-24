@@ -3,14 +3,12 @@
 <suite name="Failed suite [SmokeTestSuite]">
   <test name="SequencialTest(failed)">
     <classes>
-      <class name="PROD.AtlantaAppSmokeTest_PROD">
+      <class name="PROD.LagVegasMarketSmokeTest_PROD">
         <methods>
-          <include name="TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest"/>
-          <include name="tearDown"/>
-          <include name="TS006_VerifyAllLinksUnderMarketsTabTest"/>
           <include name="initialize"/>
+          <include name="TS009_VerifyExhibitorDirectoryTest"/>
         </methods>
-      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
+      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
     </classes>
   </test> <!-- SequencialTest(failed) -->
 </suite> <!-- Failed suite [SmokeTestSuite] -->

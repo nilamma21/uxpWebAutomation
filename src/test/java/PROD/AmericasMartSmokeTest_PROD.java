@@ -88,16 +88,16 @@ public class AmericasMartSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 
 		//Navigate to Atlanta Market site
-		/*driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(5000);
-		//lap.getIUnderstandBtn().click();
+		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
-		utl.verifyCloseBtnPopup();*/
+		//utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=1)
-	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
+	public void TS001_AMC_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T101: To verify the Market Planner overview and it's functionality
@@ -109,13 +109,13 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//Navigate to Atlanta Market site
+		/*//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("ammarturl"));
 		//Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
 		//Thread.sleep(5000);
-		utl.verifyCloseBtnPopup();
+		utl.verifyCloseBtnPopup();*/
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -125,7 +125,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=11)
-	public void TS011_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	public void TS011_AMC_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -140,34 +140,24 @@ public class AmericasMartSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		//Verify exhibitor directory page is successfully opened
-
 		ed.getExhibitorDirectory().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
-
-		//Scroll till exhibitor directory
-
-		utl.scrollToElement(exhp.getVerifyExhibitorDirectory());
-
-		//Verify exhibitor data is displayed or not as per search criteria
-
-		System.out.println("Exhibitor Directory is opened properly.");
-		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
-		gs.getSearchButton().click();
-
-		utl.scrollToElement(mi.getVerifyContactUs());
-		amhe.getExhbAndProdsTab().click();
-		gs.getSearchButton().click();
+		
+		
+		exhp.getExhDirectSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
+		exhp.getExhDirectSearchBtn().click();
+		Thread.sleep(10000);
+		
 		utl.scrollToElement(mi.getVerifyContactUs());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
-		System.out.println("Exhibitor Directory page is working properly.");
 		driver.get(prop.getProperty("ammarturl"));
 	}
 
 	@Test(priority=7)
-	public void TS007_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	public void TS007_AMC_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-013: To verify the all social media links and it's redirection
@@ -219,7 +209,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=5)
-	public void TS005_VerifyAllLinksUnderAboutTabTest() throws InterruptedException, IOException
+	public void TS005_AMC_VerifyAllLinksUnderAboutTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T005: To verify links for Market info tab at Header
@@ -281,7 +271,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=6)
-	public void TS006_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException
+	public void TS006_AMC_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -315,6 +305,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.verifyCloseBtnPopup();
 		//Click on High Point Market 
 		hd.getHighPoint().click();
+		Thread.sleep(5000);
 		Assert.assertTrue(driver.getTitle().contains("High Point"));
 		driver.get(prop.getProperty("ammarturl"));
 		utl.verifyCloseBtnPopup();
@@ -330,8 +321,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 
-	@Test(priority=12)
-	public void TS012_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
+	@Test(priority=8)
+	public void TS008_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T012: To verify links for Attend tab at Header
@@ -408,8 +399,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 	}
 
-	@Test(priority=8)
-	public void TS008_VerifyFooterLinksTest() throws InterruptedException, IOException
+	@Test(priority=12)
+	public void TS012_AMC_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T69: To verify Footer Links Navigation
@@ -520,8 +511,10 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
 		System.out.println("Atlanta Market Page open successfully");
-		driver.close();
-		driver.switchTo().window(winHandleBefore1);
+		driver.get(prop.getProperty("ammarturl"));
+
+//		driver.close();
+//		driver.switchTo().window(winHandleBefore1);
 		utl.scrollToElement(fl.marketInfoAMC());
 
 		// Click Atlanta Apparel link and verify results
@@ -533,8 +526,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
 		System.out.println("Atlanta App Page open successfully");
-		driver.close();
-		driver.switchTo().window(winHandleBefore2);
+		driver.get(prop.getProperty("ammarturl"));
+//		driver.close();
+//		driver.switchTo().window(winHandleBefore2);
 		utl.scrollToElement(fl.marketInfoAMC());
 		
 		// Click on High Point Market link
@@ -546,8 +540,10 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
 		System.out.println("High point Market Page open successfully");
-		driver.close();
-		driver.switchTo().window(winHandleBefore4);
+		driver.get(prop.getProperty("ammarturl"));
+		
+//		driver.close();
+//		driver.switchTo().window(winHandleBefore4);
 		utl.scrollToElement(fl.marketInfoAMC());
 		
 		// Click on LVA Market link
@@ -567,8 +563,10 @@ public class AmericasMartSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
 		System.out.println("Las Vegas Market Page open successfully");
-		driver.close();
-		driver.switchTo().window(winHandleBefore11);
+		driver.get(prop.getProperty("ammarturl"));
+		
+//		driver.close();
+//		driver.switchTo().window(winHandleBefore11);
 		utl.scrollToElement(fl.marketInfoAMC());		
 		
 		//Click International Market Centers link and verify results
@@ -578,9 +576,11 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for(String winHandle3 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle3);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
-		driver.close();
-		System.out.println("IMC Market Page open successfully");
-		driver.switchTo().window(winHandleBefore3);
+		driver.get(prop.getProperty("ammarturl"));
+		
+//		driver.close();
+//		System.out.println("IMC Market Page open successfully");
+//		driver.switchTo().window(winHandleBefore3);
 		utl.scrollToElement(fl.marketInfoAMC());		
 		
 		//Click Juniper Market Centers link and verify results
@@ -590,9 +590,11 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for(String winHandle12 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle12);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
-		driver.close();
-		System.out.println("Juniper Market Page open successfully");
-		driver.switchTo().window(winHandleBefore12);
+		driver.get(prop.getProperty("ammarturl"));
+		
+//		driver.close();
+//		System.out.println("Juniper Market Page open successfully");
+//		driver.switchTo().window(winHandleBefore12);
 		utl.scrollToElement(fl.marketInfoAMC());	
 		
 		
@@ -725,7 +727,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=9)
-	public void TS009_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+	public void TS009_AMC_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T63: To verify global search functionality
@@ -746,7 +748,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=10)
-	public void TS010_VerifyAllLinksUnderOpenYearRoundTest() throws InterruptedException, IOException
+	public void TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -829,7 +831,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=4)
-	public void TS004_VerifyAllLinksUnderExhibitTest() throws InterruptedException, IOException
+	public void TS004_AMC_VerifyAllLinksUnderExhibitTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T107: To verify the Exhibit tab overview and it's functionality
@@ -888,7 +890,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=2)
-	public void TS002_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
+	public void TS002_AMC_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-002: To verify Profile and Settings option in Market Planner
@@ -909,7 +911,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=3)
-	public void TS003_VerifyMarketPlannerExhibitorPortalOptionTest() throws InterruptedException, IOException
+	public void TS003_AMC_VerifyMarketPlannerExhibitorPortalOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-003: To verify Exhibitor Portal option in Market Planner
@@ -947,7 +949,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-	//	driver.quit();
+		driver.quit();
 	}
 
 }

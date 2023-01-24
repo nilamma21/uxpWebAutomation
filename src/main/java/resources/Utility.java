@@ -1,4 +1,3 @@
-
 package resources;
 
 import java.io.IOException;
@@ -55,7 +54,7 @@ public class Utility extends base {
 		try {
 			lap.getCloseMarktAdBtn().click();
 		}catch(Exception e) {
-			e.printStackTrace();
+		  e.getMessage();
 		}
 	}
 }

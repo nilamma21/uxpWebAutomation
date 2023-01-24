@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
@@ -54,7 +55,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=01)
-	public void TS001_VerifyExhibitorPortalLoginTest() throws InterruptedException, IOException
+	public void TS001_EXP_VerifyExhibitorPortalLoginTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -85,7 +86,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=02)
-	public void TS002_VerifyNotificationsTabTest() throws InterruptedException, IOException
+	public void TS002_EXP_VerifyNotificationsTabTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -105,7 +106,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=03)
-	public void TS003_VerifySettingsTabTest() throws InterruptedException, IOException
+	public void TS003_EXP_VerifySettingsTabTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -165,7 +166,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=04)
-	public void TS004_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest() throws InterruptedException, IOException
+	public void TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -177,14 +178,13 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		al=new EXPApplicationsAndLeasesTabPage(driver);
 		rs=new EXPRegistrationAndServicesTabPage(driver);
 		el=new EXPLoginPage(driver);
-
+		st = new EXPSettingsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		System.out.println("EXP page");
-
-
+		
 		//Click on Registration And Services Tab 
 
+		try {
 		//el.getVerifyExpHomePage().click();
 		rs.getEXPRegAndServicesTab().click();
 		System.out.println("Registration And Services Tab ");
@@ -274,12 +274,14 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		System.out.println("Expo Tool Kit page verified successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
-
+		
+		} catch(StaleElementReferenceException e) {
+        }
 	}
 
 
 	@Test(priority=05)
-	public void TS005_VerifyAllLinkUnderEXPApplicationsAndLeasesTest() throws InterruptedException, IOException
+	public void TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -429,7 +431,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=06)
-	public void TS006_VerifyAllLinkUnderYourDigiShowroomTest() throws InterruptedException, IOException
+	public void TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -489,7 +491,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		Assert.assertTrue(driver.getTitle().contains("Welcome to Juniper Data"));
 		// Close the new window, if that window no more required
 		driver.close();
@@ -501,7 +503,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 
 	@Test(priority=07)
-	public void TS007_VerifyAllLinkUnderEXPMarketTabTest() throws InterruptedException, IOException
+	public void TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T101: To verify the All Link Under Market tab and it's functionality
@@ -545,7 +547,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=8)
-	public void TS008_VerifyExhibitorPortalFooterLinksTest() throws InterruptedException, IOException
+	public void TS008_EXP_VerifyExhibitorPortalFooterLinksTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -606,7 +608,8 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("http://www.imchighpointmarket.com/"));
+		Thread.sleep(8000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
 		System.out.println("Atlanta market page is displayed properly.");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);

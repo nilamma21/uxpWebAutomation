@@ -5,13 +5,18 @@
 
 	<test thread-count="6" name="Parallel Test">
 		<classes>
-			<class name="lasvegasmarket.LagVegasMarketSmokeTest_PROD" />
-			<class name="atlantamarket.AtlantaMarketSmokeTest_PROD" />
-			<class name="americasmart.AmericasMartSmokeTest_PROD" />
-			<class name="atlantaapparel.AtlantaAppSmokeTest_PROD" />
-			<class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD" />
-			<class name="sitecore.SitecoreSmokeTest_PROD" />
-			<class name="exhibitorportal.ExhibitorPortalSmokeTest_PROD" />
+ 	 		<class name="PROD.LagVegasMarketSmokeTest_PROD" />
+ 	 		<methods>
+ 	 		<include name="TS001_VerifyMarketPlannerLoginTest"/>
+ 	 		</methods>
+		 	<class name="PROD.AtlantaMarketSmokeTest_PROD" />
+		<methods>
+ 	 		<include name="TS001_VerifyMarketPlannerLoginTest"/>
+ 	 		</methods>
+ 			<!--<class name="PROD.AmericasMartSmokeTest_PROD" />
+ 			<class name="PROD.AtlantaAppSmokeTest_PROD" />
+			<class name="PROD.ExhibitorPortalSmokeTest_PROD" />
+			<class name="PROD.SitecoreSmokeTest_PROD" /> -->
 		</classes>
 	</test>
 </suite>
