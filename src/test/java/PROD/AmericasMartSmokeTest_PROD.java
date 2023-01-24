@@ -97,7 +97,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=1)
-	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
+	public void TS001_AMC_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T101: To verify the Market Planner overview and it's functionality
@@ -125,7 +125,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=11)
-	public void TS011_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	public void TS011_AMC_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -157,7 +157,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=7)
-	public void TS007_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	public void TS007_AMC_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-013: To verify the all social media links and it's redirection
@@ -209,7 +209,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=5)
-	public void TS005_VerifyAllLinksUnderAboutTabTest() throws InterruptedException, IOException
+	public void TS005_AMC_VerifyAllLinksUnderAboutTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T005: To verify links for Market info tab at Header
@@ -271,7 +271,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=6)
-	public void TS006_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException
+	public void TS006_AMC_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -322,7 +322,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 
 	@Test(priority=8)
-	public void TS008_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
+	public void TS008_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T012: To verify links for Attend tab at Header
@@ -400,7 +400,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=12)
-	public void TS012_VerifyFooterLinksTest() throws InterruptedException, IOException
+	public void TS012_AMC_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T69: To verify Footer Links Navigation
@@ -727,7 +727,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=9)
-	public void TS009_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+	public void TS009_AMC_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T63: To verify global search functionality
@@ -748,7 +748,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=10)
-	public void TS010_VerifyAllLinksUnderOpenYearRoundTest() throws InterruptedException, IOException
+	public void TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -831,7 +831,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=4)
-	public void TS004_VerifyAllLinksUnderExhibitTest() throws InterruptedException, IOException
+	public void TS004_AMC_VerifyAllLinksUnderExhibitTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T107: To verify the Exhibit tab overview and it's functionality
@@ -890,7 +890,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=2)
-	public void TS002_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
+	public void TS002_AMC_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-002: To verify Profile and Settings option in Market Planner
@@ -911,7 +911,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=3)
-	public void TS003_VerifyMarketPlannerExhibitorPortalOptionTest() throws InterruptedException, IOException
+	public void TS003_AMC_VerifyMarketPlannerExhibitorPortalOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-003: To verify Exhibitor Portal option in Market Planner
@@ -949,7 +949,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

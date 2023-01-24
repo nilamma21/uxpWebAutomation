@@ -36,7 +36,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=1)
-	public void TS001_VerifySitecoreLoginTest() throws InterruptedException, IOException
+	public void TS001_SC_VerifySitecoreLoginTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -60,7 +60,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=2)
-	public void TS002_VerifyContentEditorTest() throws InterruptedException, IOException
+	public void TS002_SC_VerifyContentEditorTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -75,7 +75,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=9)
-	public void TS009_VerifyDigitalAdminPanelTest() throws InterruptedException, IOException
+	public void TS009_SC_VerifyDigitalAdminPanelTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -91,7 +91,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=4)
-	public void TS004_VerifyShowSpecialApprovalsTest() throws InterruptedException, IOException
+	public void TS004_SC_VerifyShowSpecialApprovalsTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -107,7 +107,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=8)
-	public void TS008_VerifyExhibitorEventsApprovalTest() throws InterruptedException, IOException
+	public void TS008_SC_VerifyExhibitorEventsApprovalTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -123,7 +123,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=6)
-	public void TS006_VerifyIMCReportsTest() throws InterruptedException, IOException
+	public void TS006_SC_VerifyIMCReportsTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -138,7 +138,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=7)
-	public void TS007_VerifyTaxonomyManagerTest() throws InterruptedException, IOException
+	public void TS007_SC_VerifyTaxonomyManagerTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -154,7 +154,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=5)
-	public void TS005_VerifyEmailExperienceManagerTest() throws InterruptedException, IOException
+	public void TS005_SC_VerifyEmailExperienceManagerTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T121: To verify Email Experience Manager page opens properly
@@ -168,7 +168,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=3)
-	public void TS003_VerifyControlPanelTest() throws InterruptedException, IOException
+	public void TS003_SC_VerifyControlPanelTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-

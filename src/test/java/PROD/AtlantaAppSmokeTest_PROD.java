@@ -120,7 +120,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=1)
-	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
+	public void TS001_ATLApp_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T01: To verify the Market Planner overview and it's functionality
@@ -145,7 +145,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=2)
-	public void TS002_VerifyMarketPlannerProfileOptionTest() throws InterruptedException, IOException
+	public void TS002_ATLApp_VerifyMarketPlannerProfileOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-002: To verify Profile option in Market Planner
@@ -165,7 +165,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=3)
-	public void TS003_VerifyMarketPlannerExhibitorPortalOptionTest() throws InterruptedException, IOException
+	public void TS003_ATLApp_VerifyMarketPlannerExhibitorPortalOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-003: To verify Exhibitor Portal option in Market Planner
@@ -190,7 +190,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 	
 	@Test(priority=4)
-	public void TS004_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+	public void TS004_ATLApp_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T04: To verify global search functionality
@@ -216,7 +216,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=5)
-	public void TS005_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	public void TS005_ATLApp_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T05: To verify Exhibitor Directory
@@ -256,7 +256,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=6)
-	public void TS006_VerifyAllLinksUnderMarketsTabTest() throws InterruptedException, IOException
+	public void TS006_ATLApp_VerifyAllLinksUnderMarketsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T06: To verify Markets Tab
@@ -390,7 +390,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=7)
-	public void TS007_VerifyAllLinksUnderExhibitorsAndBrandsTabTest() throws InterruptedException, IOException
+	public void TS007_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T07: To verify Exhibitors And Brands Tab
@@ -445,7 +445,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 	}
 	@Test(priority=13)
-	public void TS013_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
+	public void TS013_ATLApp_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T08: To verify Attend Tab
@@ -578,7 +578,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=9)
-	public void TS009_VerifyAllLinksUnderFashionGalleryTabTest() throws InterruptedException, IOException
+	public void TS009_ATLApp_VerifyAllLinksUnderFashionGalleryTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T09: To verify Fashion Gallery Tab
@@ -689,7 +689,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	
 
 	@Test(priority=10)
-	public void TS010_VerifyAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
+	public void TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T010: To verify Exhibit Tab
@@ -801,7 +801,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=11)
-	public void TS011_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
+	public void TS011_ATLApp_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T011: To Year Round Tab
@@ -861,7 +861,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=12)
-	public void TS012_VerifyFooterLinksTest() throws InterruptedException, IOException
+	public void TS012_ATLApp_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -1063,7 +1063,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=8)
-	public void TS008_VerifySocialMediaLinksTest() throws InterruptedException, IOException
+	public void TS008_ATLApp_VerifySocialMediaLinksTest() throws InterruptedException, IOException
 	{
 
 		//The purpose of this test case to verify:-
@@ -1171,7 +1171,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
