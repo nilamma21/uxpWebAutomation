@@ -829,7 +829,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	}
 
 
-	@Test(priority=11)
+	@Test(priority=13)
 	public void TS011_LVM_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -999,7 +999,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore);*/
 	}
 
-	@Test(priority=13)
+	@Test(priority=11)
 	public void TS006_LVM_VerifyHeaderChannelLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
