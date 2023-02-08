@@ -459,6 +459,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click Las Vegas Market channel link and verify result
 		atlch.getLasVegasApp().click();
+		Thread.sleep(6000);
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas Apparel"));
 		System.out.println("Las Vegas Apparel channel link is working properly.");
 		driver.get(prop.getProperty("atlmrkturl"));
@@ -543,7 +544,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/market-info"));
 		System.out.println("Market Info Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		//Click on Press Center
@@ -551,7 +552,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/Market-Info/Press-Center"));
 		System.out.println("Press center Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Download The App link and verify results
@@ -559,7 +560,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "App");
 		System.out.println("Download App Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		//Click on Our Brancd link
@@ -567,7 +568,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/exhibitor/directory"));
 		System.out.println("Our Brands Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Contact Us link and verify results
@@ -623,7 +624,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore8);
 		// utl.scrollToElement(fl.getmarketInfo());
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Americas Mart link and verify results
@@ -637,7 +638,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//driver.close();
 		driver.switchTo().window(winHandleBefore9);
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 /*		// Click Atlanta Market link and verify results
@@ -682,10 +683,11 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		// Click on LVA Market link
 		// Switch to new tab
 		fl.getlvmlink_ATLM().click();
+		Thread.sleep(6000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
 		System.out.println("Las Vegas App Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click on LVM Market link
