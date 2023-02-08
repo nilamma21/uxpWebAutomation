@@ -794,6 +794,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click Together Safely under Attend section
 		atat.getATLTogetherSafely().click();
+		Thread.sleep(6000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
 		System.out.println("Together Safely section is displayed properly");
 		driver.get(prop.getProperty("atlmrkturl"));
