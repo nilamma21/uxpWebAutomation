@@ -106,7 +106,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
-		//DOMConfigurator.configure("log4j.xml");
+		DOMConfigurator.configure("log4j.xml");
 		
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
@@ -444,7 +444,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 
 	}
-	@Test(priority=13)
+	@Test(priority=9)
 	public void TS013_ATLApp_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -577,8 +577,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Vefiry Download App Page ");
 	}
 
-	@Test(priority=9)
-	public void TS009_ATLApp_VerifyAllLinksUnderFashionGalleryTabTest() throws InterruptedException, IOException
+	@Test(priority=13)
+	public void TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T09: To verify Fashion Gallery Tab
@@ -601,90 +601,31 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
-		System.out.println("Click on Fashion Gallery Tab");
-		//CLick on Click on Fashion Gallery Link 
+		//CLick on Click on Images sub-menu 
 		atlf.getatlAppfashionGalleryLink().click();
-		System.out.println("Click on Fashion Gallery Link ");
-		//Verify Fashion Gallery Link 
-		//Thread.sleep(4000);
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Images"));	
-		System.out.println("Vefiry Fashion Gallery Link  Page");
+		//Verify Images page 
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlappurl")+"The-Best-Of/Images"));	
 
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
-		System.out.println("Click on Fashion Gallery Tab");
-		//CLick on Click on Fashion Gallery Link 
-		atlf.getatlAppfashionGalleryLinkImg().click();
-		System.out.println("Click on Fashion Gallery Link Img ");
-		//Verify Fashion Gallery Link Img
-		//Thread.sleep(2000);
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Images"));	
-		System.out.println("Vefiry Fashion Gallery Link Img Page");
-
-
-		//Click on Fashion Gallery Tab
-		atlf.getatlAppFashionGalleryTab().click();
-		System.out.println("Click on Fashion Gallery Tab");
-		//CLick on Look Book Link 
+		//CLick on Lookbooks Link 
 		atlf.getatlAppLookBook().click();
-		System.out.println("Click on Look Book Link ");
-		//Vefiry Lookbooks  Page
-		//Thread.sleep(2000);
+		//Verify Lookbooks  Page
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Lookbooks"));	
-		System.out.println("Vefiry Lookbooks  Page");
 		
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
-		System.out.println("Click on Fashion Gallery Tab");
-		//CLick on Look Book Link 
-		atlf.getatlAppLookBookImg().click();
-		System.out.println("Click on Look Book Link ");
-		//Vefiry Lookbooks  Page
-		//Thread.sleep(2000);
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Lookbooks"));	
-		System.out.println("Vefiry Lookbooks  Page");
-
-		//Click on Fashion Gallery Tab
-		atlf.getatlAppFashionGalleryTab().click();
-		System.out.println("Click on Fashion Gallery Tab");
-		//Click on Videos and Images Link 
+		//Click on Videos Link 
 		atlf.getatlAppvideosImages().click();
-		System.out.println("Click on Videos and Images Link ");
-		//Vefiry Lookbooks  Page
-		//Thread.sleep(4000);
+		//Verify Videos  Page
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Videos"));	
-		System.out.println("Verify  Video and Images   Page");
 
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
-		System.out.println("Click on Fashion Gallery Tab");
-		//CLick on  LookbooksImg  Page
-		atlf.getatlAppvideosImagesImg().click();
-		System.out.println("Click on  Video and Images  Img ");
-		//Vefiry Lookbooks img Page
-		//Thread.sleep(4000);
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Videos"));	
-		System.out.println("Vefiry Video and Images  img Page");
-
-		//Click on Fashion Gallery Tab
-		atlf.getatlAppFashionGalleryTab().click();
-		System.out.println("Click on Fashion Gallery Tab");
-		//Click on Videos and Images Link 
+		//Click on In The News Link 
 		atlf.getatlAppNews().click();
-		//Vefiry Lookbooks  Page
-		//Thread.sleep(4000);
+		//Verify In the News  Page
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("In The News"));	
-		System.out.println("Verify  In the News   Page");
-
-		//Click on Fashion Gallery Tab
-		atlf.getatlAppFashionGalleryTab().click();
-		System.out.println("Click on Fashion Gallery Tab");
-		//CLick on  LookbooksImg  Page
-		atlf.getatlAppatlAppNewsImg().click();
-		//Vefiry Lookbooks img Page
-		//Thread.sleep(4000);
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("In The News"));	
-		System.out.println("Vefiry In the News  img Page");
 	}
 	
 
@@ -943,7 +884,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		}
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
 		System.out.println("Terms And Conditions Page open successfully");
-		//driver.close();
+		driver.close();
 		driver.switchTo().window(winHandleBefore7);
 
 		// Click Privacy Policy and verify results
@@ -957,7 +898,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		}
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "IMC PRIVACY STATEMENT");
 		System.out.println("Privacy Policy Page open successfully");
-		//driver.close();
+		driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		// utl.scrollToElement(fl.getmarketInfoATL());
 		driver.get(prop.getProperty("atlappurl"));
@@ -985,7 +926,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
 		System.out.println("Atlanta Market Page open successfully");
-		//driver.close();
+		driver.close();
 		driver.switchTo().window(winHandleBefore1);
 		utl.scrollToElement(fl.getmarketInfoATL());
 
@@ -998,7 +939,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
 		System.out.println("Atlanta App Page open successfully");
-		///driver.close();
+		driver.close();
 		driver.switchTo().window(winHandleBefore2);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		*/
@@ -1011,7 +952,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
 		System.out.println("High point Market Page open successfully");
-		//driver.close();
+		driver.close();
 		driver.switchTo().window(winHandleBefore4);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
@@ -1032,7 +973,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
 		System.out.println("Las Vegas Market Page open successfully");
-		///driver.close();
+		driver.close();
 		driver.switchTo().window(winHandleBefore11);
 		utl.scrollToElement(fl.getmarketInfoATL());		
 		
@@ -1043,7 +984,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for(String winHandle3 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle3);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
-		//driver.close();
+		driver.close();
 		System.out.println("IMC Market Page open successfully");
 		driver.switchTo().window(winHandleBefore3);
 		utl.scrollToElement(fl.getmarketInfoATL());		
@@ -1055,7 +996,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for(String winHandle12 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle12);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
-		//driver.close();
+		driver.close();
 		System.out.println("Juniper Market Page open successfully");
 		driver.switchTo().window(winHandleBefore12);
 		utl.scrollToElement(fl.getmarketInfoATL());			

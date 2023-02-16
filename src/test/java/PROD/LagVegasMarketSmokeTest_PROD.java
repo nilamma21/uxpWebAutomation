@@ -75,9 +75,6 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-//		driver.get(prop.getProperty("lvmurl"));
-//		utl.verifyCloseBtnPopup();
-		
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
 
@@ -240,59 +237,46 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click ExhibitorsAndProductsTab at Header
-
 		exhp.getExhibitorsAndProducts().click();
 		Assert.assertTrue(exhp.getVerifyExhibitorsAndProductsSection().isDisplayed());
-		System.out.println("Exhibitors and Products section options are displayed properly");
-
-
-		//Click Exhibitor Directory option under Exhibitors and Products
 		Thread.sleep(1000);
+		
+		//Click Exhibitor Directory option under Exhibitors and Products
 		exhp.getExhibitorDirectory().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor & Product Directory");
-		System.out.println("Exhibitory Directory section is displayed properly");
 		exhp.getExhibitorsAndProducts().click();
 
 		//Click Floor Plans option under Exhibitors and Products
-
 		exhp.getFloorPlans().click();
 		Assert.assertTrue(exhp.getVerifyFloorPlans().isDisplayed());
-		System.out.println("Floor Plans section is displayed properly");
 		exhp.getExhibitorsAndProducts().click();
 
 		//Click Show Specials option under Exhibitors and Products
-
 		exhp.getShowSpecials().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Show Specials");
-		System.out.println("Show Specials section is displayed properly");
 		exhp.getExhibitorsAndProducts().click();
 
 		//Click Temporaries option under Exhibitors and Products
-
 		exhp.getTemporaries().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Temporaries");
-		System.out.println("Temporaries section is displayed properly");
-		exhp.getExhibitorsAndProducts().click();
+		
 
-		//Click New Introductions option under Exhibitors and Products
-
+		/*//Click New Introductions option under Exhibitors and Products
+		//Removed this menu from page
+		 * exhp.getExhibitorsAndProducts().click();
 		exhp.getNewProductIntroductions().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "New Introductions");
-		System.out.println("New Introductions section is displayed properly");
+		System.out.println("New Introductions section is displayed properly");*/
 		exhp.getExhibitorsAndProducts().click();
 
 		//Click Categories option under Exhibitors and Products
-
 		exhp.getCategories().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Categories");
-		System.out.println("Categories section is displayed properly");
 		exhp.getExhibitorsAndProducts().click();
 
-		//Click Juniper Market option under Exhibitos and Products
-
+		//Click Juniper Market option under Exhibitors and Products
 		exhp.getJuniperMarketProd().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com"));
-		System.out.println("Juniper Market page is displayed properly");
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
 	}
@@ -393,86 +377,68 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-
 		//Click on Explore Las Vegas Market sub-menu
 		expmrkt.getExploreLVMMenu().click();
-
-		//Thread.sleep(10000);
 		//Verify that 'Explore LVM' page should be displayed
 		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Explore Market");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-
 		//Click on 'Events and Seminars' sub-menu
 		expmrkt.getWebinarsnEventsMenu().click();
-
-		//Thread.sleep(10000);
 		//Verify that 'Events and Seminars' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Events and Seminars");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-
 		//Click on Show Specials sub-menu
 		expmrkt.getShowSpecialsMenu().click();
-
 		//Verify that 'Show Specials' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Show Specials");
 
-		//Click on Explore Market tab
+		/* This menu is removed from Explore market
+		 * //Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-
 		//Click on Virtual Resources sub-menu
 		expmrkt.getVirtualResourcesMenu().click();
-
 		//Verify that 'Virtual Resources' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Virtual Resources");
-
+*/
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-
 		//Click on Key Destinations sub-menu
 		expmrkt.getKeyDestinationsMenu().click();
-
 		//Verify that 'Key Destinations' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Key Destinations");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-
 		//Click on News & Trends sub-menu
 		expmrkt.getNewsnTrendsMenu().click();
-
 		//Verify that 'News & Trends' page should be displayed
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "News and Trends");
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "News & Trends");
 
-		//Click on Explore Market tab
+/*		//Below menus are removed from Explore market
+ * 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-
 		//Click on Market Recap sub-menu
 		expmrkt.getMarketRecapMenu().click();
-
 		//Verify that 'Market Recap' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market Recap");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-
 		//Click on Things To Do sub-menu
 		expmrkt.getThingsToDoMenu().click();
-
 		//Verify that 'Things To Do' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Things To Do in Las Vegas");
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
-
 		//Click on Social Media sub-menu
 		expmrkt.getSocialMediaMenu().click();
-
 		//Verify that 'Social Media' page should be displayed
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Social Media");
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Social Media");*/
 	}
 
 	@Test(priority=10)
@@ -829,7 +795,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	}
 
 
-	@Test(priority=11)
+	@Test(priority=13)
 	public void TS011_LVM_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -999,7 +965,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore);*/
 	}
 
-	@Test(priority=13)
+	@Test(priority=11)
 	public void TS006_LVM_VerifyHeaderChannelLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -1062,4 +1028,5 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	{
 		driver.quit();
 	}
+
 }
