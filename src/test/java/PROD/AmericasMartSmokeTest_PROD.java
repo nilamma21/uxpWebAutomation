@@ -208,7 +208,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));*/
 	}
 
-	@Test(priority=12)
+	@Test(priority=10)
 	public void TS005_AMC_VerifyAllLinksUnderAboutTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -731,7 +731,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		System.out.println("Global Search functionality is working properly.");
 	}
 
-	@Test(priority=10)
+	@Test(priority=12)
 	public void TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest() throws InterruptedException, IOException
 	{
 
@@ -799,7 +799,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		amoyr.getOpenYearRoundTab().click();
 		amoyr.getHotelsSubmenu().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Hotels");
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+"Markets/Hotels"));
 
 		amoyr.getOpenYearRoundTab().click();
 		amoyr.getHowToReg().click();
@@ -938,3 +938,6 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 }
+
+
+
