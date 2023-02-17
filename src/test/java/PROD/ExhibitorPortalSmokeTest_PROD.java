@@ -250,7 +250,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle);
 		}
 
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.expotoolkit.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
 		
