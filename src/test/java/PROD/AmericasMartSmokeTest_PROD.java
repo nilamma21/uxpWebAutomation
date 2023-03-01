@@ -370,7 +370,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Click Fall Cash & Carry under Markets and Events section
 
 		amme.getFallCashCarry().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Fall Cash & Carry");
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+"Markets/Fall-Cash-and-Carry"));
 		System.out.println("Fall Cash & Carry section is displayed properly");
 		atat.getATLAttendTab().click();
 
