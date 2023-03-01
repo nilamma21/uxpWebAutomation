@@ -816,35 +816,35 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click Why Year Round tab under Year Round section
 
 		yr.getYearRound().click();
-		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Year Round");
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round"));
 		System.out.println("Year Round section is displayed properly");
 		yr.getYearRoundTab().click();
 
 		//Click LVDC tab under Year Round section
 
 		yr.getLasVegasDesignCenter().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "LVDC");
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/LVDC"));
 		System.out.println("LVDC section is displayed properly");
 		yr.getYearRoundTab().click();
 
 		//Click The Expo tab under Year Round section
 
 		yr.getExpo().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "The Expo");
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/The-Expo"));
 		System.out.println("The Expo section is displayed properly");
 		yr.getYearRoundTab().click();
 
 		//Click Off-Market Events tab under Year Round section
 
 		yr.getMarketEvents().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Off-Market Events");
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Off-Market-Events"));
 		System.out.println("Off-Market Events section is displayed properly");
 		yr.getYearRoundTab().click();
 
 		//Click Venue Rental tab under Year Round section
 
 		yr.getVenueRental().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Venue Rental");
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Venue-Rental"));
 		System.out.println("Venue Rental section is displayed properly");
 		yr.getYearRoundTab().click();
 
