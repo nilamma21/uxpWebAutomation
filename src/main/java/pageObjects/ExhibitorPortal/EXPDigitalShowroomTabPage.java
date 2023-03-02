@@ -17,7 +17,7 @@ public class EXPDigitalShowroomTabPage
 	By EXPlines = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[1]/a[1]"); // Locator for Instagram icon in footer links
 	By EXPProduct = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[2]/a[1]"); 
 	By EXPCatalogFlipbooks = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[3]/div[3]/a[1]"); 
-	By EXPJuniperData = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[4]/div[1]/a[1]");
+	By EXPJuniperData = By.xpath("//div[@class='HeaderNavbar_navBlock__qnM1z']/div[4]/div[1]/a");
 	By EXPYourDigiShowroomAllHeader = By.xpath("//div[@class='EPPageHeader_container__Jiq4V']/div[1]/div[4]/p[1]");
 	By EXPJuniperDataHeader = By.xpath("//h1[contains(text(),'Juniper Data')]");
 	By EXPvalidateprofile = By.xpath("//div[@class='mainContainer']"); //Locator to validate EXP Profile page
