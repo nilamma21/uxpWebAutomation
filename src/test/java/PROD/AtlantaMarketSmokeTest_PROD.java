@@ -313,8 +313,12 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlexhp.getATLExhibitorsAndProducts().click();
 		atlexhp.getATLJunpiperMrktUAT().click();
 		Thread.sleep(6000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
-		System.out.println("Juniper Market page is displayed properly");
+		String winHandleBefore8 = driver.getWindowHandle();
+		for (String winHandle8 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle8);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com"));
+		driver.switchTo().window(winHandleBefore8);
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.verifyCloseBtnPopup();
 		//Thread.sleep(6000);
@@ -481,7 +485,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//In app footer click on 'Facebook' icon and verify results
 		atlfl.getFacebookIcon().click();
 
-		//Thread.sleep(10000);
+		Thread.sleep(8000);
 		//Verify that 'ATL Facebook' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/AmericasmartAtl"));
 
