@@ -105,7 +105,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Portal notifications page is displayed properly.");
 	}
 
-	@Test(priority=3)
+	@Test(priority=8)
 	public void TS003_EXP_VerifySettingsTabTest() throws InterruptedException, IOException
 	{
 
@@ -163,7 +163,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=8)
+	@Test(priority=3)
 	public void TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest() throws InterruptedException, IOException
 	{
 
@@ -460,11 +460,11 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		//Click on Your Digital Showroom Dropdown
 		yd.getEXPYourDigiShowroom().click();
-		System.out.println("Your Digital Showroom");
+
 		//Click on JuniperData Link
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
-		rs.getEXPAAmericasMartLogisticsExhibitorToolkit().click();	
+		yd.getEXPJuniperData().click();	
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
