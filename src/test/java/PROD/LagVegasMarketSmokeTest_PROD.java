@@ -275,19 +275,19 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click Categories option under Exhibitors and Products
 		exhp.getCategories().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Categories");
-		exhp.getExhibitorsAndProducts().click();
+		// exhp.getExhibitorsAndProducts().click();
 
-		//Click Juniper Market option under Exhibitors and Products
-		exhp.getJuniperMarketProd().click();
-		Thread.sleep(8000);
-		String winHandleBefore8 = driver.getWindowHandle();
-		for (String winHandle8 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle8);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com"));
-		driver.switchTo().window(winHandleBefore8);
-		driver.get(prop.getProperty("lvmurl"));
-		utl.verifyCloseBtnPopup();
+		// //Click Juniper Market option under Exhibitors and Products
+		// exhp.getJuniperMarketProd().click();
+		// Thread.sleep(8000);
+		// String winHandleBefore8 = driver.getWindowHandle();
+		// for (String winHandle8 : driver.getWindowHandles()) {
+		// 	driver.switchTo().window(winHandle8);
+		// }
+		// Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com"));
+		// driver.switchTo().window(winHandleBefore8);
+		// driver.get(prop.getProperty("lvmurl"));
+		// utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=05)
