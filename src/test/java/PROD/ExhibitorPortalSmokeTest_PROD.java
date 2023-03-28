@@ -54,7 +54,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		 */
 	}
 
-	@Test(priority=01)
+	@Test(priority=1)
 	public void TS001_EXP_VerifyExhibitorPortalLoginTest() throws InterruptedException, IOException
 	{
 
@@ -85,7 +85,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Portal home page is displayed properly.");
 	}
 
-	@Test(priority=02)
+	@Test(priority=2)
 	public void TS002_EXP_VerifyNotificationsTabTest() throws InterruptedException, IOException
 	{
 
@@ -105,7 +105,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Portal notifications page is displayed properly.");
 	}
 
-	@Test(priority=03)
+	@Test(priority=8)
 	public void TS003_EXP_VerifySettingsTabTest() throws InterruptedException, IOException
 	{
 
@@ -161,11 +161,9 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 				driver.get(prop.getProperty("expurl"));//Code commented as captcha appears for Customer Support link
 		 */
 
-
-
 	}
 
-	@Test(priority=04)
+	@Test(priority=3)
 	public void TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest() throws InterruptedException, IOException
 	{
 
@@ -185,26 +183,17 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		//Click on Registration And Services Tab 
 
 		try {
-		//el.getVerifyExpHomePage().click();
 		rs.getEXPRegAndServicesTab().click();
-		System.out.println("Registration And Services Tab ");
 		Assert.assertTrue(st.getVerifySettings().isDisplayed());
-		System.out.println("Registration and Services section is displayed properly.");
 
 		//Exhibitor Registration
 		rs.getEXPExhibitorReg().click();
-		System.out.println("Exhibitor Registration ");
 		//Verify Exhibitor Registration Page Header
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Market Registrations"));
-		System.out.println("Verify Exhibitor Registration Page");
 		driver.navigate().back();
 
 		rs.getEXPRegAndServicesTab().click();
-		System.out.println("Registration And Services Tab ");
-
 		//Click on Atlanta Services
-		System.out.println("Atlanta Services");
-
 		String winHandleBefore1 = driver.getWindowHandle();
 		rs.getEXPAtlantaServices().click();		
 
@@ -216,17 +205,12 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
 		// Close the new window, if that window no more required
 		//driver.close();
-		System.out.println("New Window");
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore1);
 
-
-		System.out.println("Registration And Services Tab ");
-
+		
 		//Click on Atlanta Advertising and services
-		System.out.println("Atlanta Advertising and Sponcership");
-
 		String winHandleBefore2 = driver.getWindowHandle();
 		rs.getEXPAtlantaAdvertisingAndSponcership().click();		
 		//Click on Exhibitor Portal Login' sub-menu
@@ -241,10 +225,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore2);
 
-		System.out.println("Registration And Services Tab ");
-		//Click on Atlanta Paymet
-		System.out.println("Atlanta payment");
-
+		//Click on Atlanta Payments
 		String winHandleBefore3 = driver.getWindowHandle();
 		rs.getEXPAtlantaPayment().click();		
 		//Click on Exhibitor Portal Login' sub-menu
@@ -259,8 +240,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore3);
 
-		System.out.println("Registration And Services Tab ");
-		//Click on Americas Mart Expo Tool Kit
+		//Click on AmericasMart Exhibitor Tool Kit
 		rs.getEXPAAmericasMartLogisticsExhibitorToolkit().click();
 		String winHandleBefore4 = driver.getWindowHandle();
 
@@ -271,7 +251,6 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		}
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.expotoolkit.com/"));
-		System.out.println("Expo Tool Kit page verified successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
 		
@@ -279,8 +258,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
         }
 	}
 
-
-	@Test(priority=05)
+	@Test(priority=5)
 	public void TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest() throws InterruptedException, IOException
 	{
 
@@ -430,7 +408,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=06)
+	@Test(priority=6)
 	public void TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest() throws InterruptedException, IOException
 	{
 
@@ -482,11 +460,11 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		//Click on Your Digital Showroom Dropdown
 		yd.getEXPYourDigiShowroom().click();
-		System.out.println("Your Digital Showroom");
+
 		//Click on JuniperData Link
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
-		rs.getEXPAAmericasMartLogisticsExhibitorToolkit().click();	
+		yd.getEXPJuniperData().click();	
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
@@ -502,7 +480,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 
 
-	@Test(priority=07)
+	@Test(priority=7)
 	public void TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -546,7 +524,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 				Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Manage"));*/
 	}
 
-	@Test(priority=8)
+	@Test(priority=4)
 	public void TS008_EXP_VerifyExhibitorPortalFooterLinksTest() throws InterruptedException, IOException
 	{
 
@@ -661,7 +639,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

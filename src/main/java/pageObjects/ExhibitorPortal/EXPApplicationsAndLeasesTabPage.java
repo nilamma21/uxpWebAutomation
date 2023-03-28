@@ -11,7 +11,7 @@ public class EXPApplicationsAndLeasesTabPage
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By EXPApplicationsAndLeasesTab = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[1]/div[1]/button[3]"); // Locator for Application & Leases tab
+	By EXPApplicationsAndLeasesTab = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[1]/div[1]/span[3]"); // Locator for Application & Leases tab
 	//By EXPAtlantaPermanentSpace = By.xpath("//div[@class='HeaderNavbar_navBlock__3D9ws']/div[2]/div[1]/a[1]"); // Locator for Atlanta Permanent space
 	By EXPAtlantaApplyForTradeshowSpace = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[2]/div[2]/a[1]"); // Locator for Atlanta Apply For Tradeshow Space
 	By EXPAtlantaManageTradeshowSpace = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[1]/div[3]/a[1]"); //Locator for Atlanta Manage Tradeshow Space

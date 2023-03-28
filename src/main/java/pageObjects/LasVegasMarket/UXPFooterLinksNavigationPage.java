@@ -35,16 +35,16 @@ public class UXPFooterLinksNavigationPage {
 	By TermsAndConditions = By.xpath("//a[@href='https://www.imcenters.com/terms-of-use/']"); // Locator for Terms and Conditions in footer links
 	By AmericasMart = By.xpath("//a[@href='https://www.americasmart.com']"); //Locator for Americas Mart in footer links
 	By AmericasMart_ATLApp = By.xpath("(//a[contains(text(),'AmericasMart')])[2]"); //Locator for Americas Mart in footer links of ATLApp
-	By lvapplink_ATL = By.xpath("(//a[@href='https://www.lasvegas-apparel.com/'])[2]"); //Locator for Las Vegas Apparel footer link
+	By lvapplink_ATL = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/')])[2]"); //Locator for Las Vegas Apparel footer link
 	By lvmlink_ATL = By.xpath("(//a[contains(text(),'Las Vegas Market')])[2]"); //Locator for Las Vegas market footer link
-	By lvmlink_ATLM = By.xpath("//a[@href='https://www.lasvegas-apparel.com/']"); //Locator for Las Vegas market footer link
+	By lvmlink_ATLM = By.xpath("//a[contains(@href,'https://www.lasvegas-apparel.com/')]"); //Locator for Las Vegas market footer link
 	
-	By AtlantaApparel = By.xpath("//a[@href='https://www.atlanta-apparel.com']"); //Locator for Atlanta Apparel in footer links
-	By AtlantaMarket = By.xpath("//a[@href='https://www.atlantamarket.com']"); //Locator for Atlanta Matket in footer links
-	By HighPointMarket = By.xpath("//a[@href='https://www.imchighpointmarket.com']"); //Locator for High Point Market in footer links
-	By lvapplink = By.xpath("(//a[@href='https://www.lasvegas-apparel.com'])[2]"); //Locator for Las Vegas Apparel footer link
+	By AtlantaApparel = By.xpath("//a[contains(@href,'https://www.atlanta-apparel.com')]"); //Locator for Atlanta Apparel in footer links
+	By AtlantaMarket = By.xpath("//a[contains(@href,'https://www.atlantamarket.com/')]"); //Locator for Atlanta Matket in footer links
+	By HighPointMarket = By.xpath("//a[contains(@href,'https://www.imchighpointmarket.com')]"); //Locator for High Point Market in footer links
+	By lvapplink = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com')])[2]"); //Locator for Las Vegas Apparel footer link
 	By InternationalMarketCenters = By.xpath("//a[contains(text(),'International Market Centers')]"); //Locator for International Market Centers in footer links
-	By JuniperMarket = By.xpath("//a[@href='https://www.junipermarket.com']"); //Locator for Juniper Market  in footer links
+	By JuniperMarket = By.xpath("//a[contains(@href,'https://www.junipermarket.com')]"); //Locator for Juniper Market  in footer links
 	By facebookicon = By.xpath("//a[@href='https://www.facebook.com/lvmarket']//div//*[name()='svg']"); //Locator for Facebook link in footer
 	By instagramicon =  By.xpath("//a[@href='https://www.instagram.com/lasvegasmarket/']//div//*[name()='svg']"); //Locator for Instagram link in footer
 	By instagramiconATLM =  By.xpath("//a[@href='https://www.instagram.com/americasmartatl/']//div//*[name()='svg']"); //Locator for Instagram link in footer
