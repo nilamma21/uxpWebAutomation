@@ -64,3 +64,10 @@ Session ID: 6b4cf0b906ca2078f89fedf2606b0cce
 2022-11-16 17:14:38,950 INFO  [Log] FAILED- TS011_VerifyAllLinksUnderYearRoundTabTest 
 2022-11-16 17:14:44,500 INFO  [Log] FAILED- TS012_VerifyFooterLinksTest 
 2022-11-16 17:14:55,760 INFO  [Log] FAILED- TS013_VerifyAllLinksUnderAttendTabTest 
+2023-02-08 17:16:05,788 INFO  [Log] FAILED- TS009_ATLApp_VerifyAllLinksUnderFashionGalleryTabTest 
+2023-02-08 17:17:23,019 INFO  [Log] FAILED- TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest 
+2023-02-08 17:17:53,641 INFO  [Log] FAILED- TS011_ATLApp_VerifyAllLinksUnderYearRoundTabTest 
+2023-02-08 17:18:22,865 INFO  [Log] FAILED- TS012_ATLApp_VerifyFooterLinksTest 
+2023-02-08 17:18:52,914 INFO  [Log] FAILED- TS013_ATLApp_VerifyAllLinksUnderAttendTabTest 
+2023-02-08 17:41:12,685 INFO  [Log] FAILED- TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest 
+2023-02-08 17:53:06,869 INFO  [Log] FAILED- TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest 

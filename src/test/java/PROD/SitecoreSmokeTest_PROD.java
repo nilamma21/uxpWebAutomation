@@ -62,6 +62,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	@Test(priority=2)
 	public void TS002_SC_VerifyContentEditorTest() throws InterruptedException, IOException
 	{
+
 		//The purpose of this test case to verify:-
 		//UXP-T121: To verify Content Editor page opens properly
 
@@ -76,6 +77,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	@Test(priority=9)
 	public void TS009_SC_VerifyDigitalAdminPanelTest() throws InterruptedException, IOException
 	{
+
 		//The purpose of this test case to verify:-
 		//UXP-T122: To verify Digital Admin Panel page opens properly
 
@@ -107,6 +109,7 @@ public class SitecoreSmokeTest_PROD extends base {
 	@Test(priority=8)
 	public void TS008_SC_VerifyExhibitorEventsApprovalTest() throws InterruptedException, IOException
 	{
+
 		//The purpose of this test case to verify:-
 		//UXP-T123: To verify Exhibitor Events Approval page opens properly
 
