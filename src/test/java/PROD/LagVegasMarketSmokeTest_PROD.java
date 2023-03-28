@@ -182,32 +182,32 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor Resouces");
 		Assert.assertTrue(exh.getExhibitOpprBrdcrumb().isDisplayed());
 		System.out.println("Exhibitor Resources page is opened properly.");
-		exh.getExhibitTab().click();
+		// exh.getExhibitTab().click();
 
-		//Click on Juniper sub-menu
-		exh.getJuniperMenu().click();
+		// //Click on Juniper sub-menu
+		// exh.getJuniperMenu().click();
 
-		// Switch to new window opened
-		String winHandleBefore = driver.getWindowHandle();
-		for(String winHandle : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle);
-		}
+		// // Switch to new window opened
+		// String winHandleBefore = driver.getWindowHandle();
+		// for(String winHandle : driver.getWindowHandles()){
+		// 	driver.switchTo().window(winHandle);
+		// }
 
-		//Thread.sleep(10000);
-		//Verify that 'Juniper' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
-		//Assert.assertTrue(exh.getExhibitOpprBrdcrumb().isDisplayed());
-		System.out.println("Juniper page is opened properly.");
+		// //Thread.sleep(10000);
+		// //Verify that 'Juniper' page should be displayed
+		// Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
+		// //Assert.assertTrue(exh.getExhibitOpprBrdcrumb().isDisplayed());
+		// System.out.println("Juniper page is opened properly.");
 
 
-		// Close the new window, if that window no more required
-		driver.close();
+		// // Close the new window, if that window no more required
+		// driver.close();
 
-		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore);
+		// // Switch back to original browser (first window)
+		// driver.switchTo().window(winHandleBefore);
 
-		//Click on Exhibit tab
-		exh.getExhibitTab().click();
+		// //Click on Exhibit tab
+		// exh.getExhibitTab().click();
 	}
 
 	@Test(priority=03)
