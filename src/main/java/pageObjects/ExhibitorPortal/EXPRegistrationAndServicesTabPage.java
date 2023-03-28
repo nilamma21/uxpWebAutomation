@@ -10,7 +10,7 @@ public class EXPRegistrationAndServicesTabPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By EXPRegAndServicesTab = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[1]/div[1]/button[4]"); // Locator for Reg & Services tab
+	By EXPRegAndServicesTab = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[1]/div[1]/span[4]"); // Locator for Reg & Services tab
 	By EXPExhibitorReg = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[2]/div[1]/a[1]"); // Locator for Exhibitor reg
 	By EXPAtlantaServices = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[3]/div[1]/a[1]"); // Locator for Atlanta Services
 	By EXPAtlantaAdvertisingAndSponcership = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[3]/div[2]/a[1]"); //Locator for Atlanta Advertising And Sponcership
