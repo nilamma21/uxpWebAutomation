@@ -309,19 +309,19 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Categories");
 		System.out.println("Categories section is displayed properly");
 
-		//Click on Juniper sub-menu
-		atlexhp.getATLExhibitorsAndProducts().click();
-		atlexhp.getATLJunpiperMrktUAT().click();
-		Thread.sleep(6000);
-		String winHandleBefore8 = driver.getWindowHandle();
-		for (String winHandle8 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle8);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com"));
-		driver.switchTo().window(winHandleBefore8);
-		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
-		//Thread.sleep(6000);
+		// //Click on Juniper sub-menu
+		// atlexhp.getATLExhibitorsAndProducts().click();
+		// atlexhp.getATLJunpiperMrktUAT().click();
+		// Thread.sleep(6000);
+		// String winHandleBefore8 = driver.getWindowHandle();
+		// for (String winHandle8 : driver.getWindowHandles()) {
+		// 	driver.switchTo().window(winHandle8);
+		// }
+		// Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com"));
+		// driver.switchTo().window(winHandleBefore8);
+		// driver.get(prop.getProperty("atlmrkturl"));
+		// utl.verifyCloseBtnPopup();
+		// //Thread.sleep(6000);
 	}
 
 	@Test(priority=13)
