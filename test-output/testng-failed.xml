@@ -5,9 +5,15 @@
     <classes>
       <class name="UAT.AtlantaMarketLoginTest_UAT">
         <methods>
+
           <include name="atlMarketOpen"/>
           <include name="quitBrowser"/>
           <include name="driverInitialize"/>
+
+          <include name="TS009_SC_VerifyDigitalAdminPanelTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+
         </methods>
       </class> <!-- UAT.AtlantaMarketLoginTest_UAT -->
     </classes>

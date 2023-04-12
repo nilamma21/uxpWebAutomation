@@ -12,7 +12,7 @@ public class EXPSettingsPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By Settings = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[2]/button[1]"); // Locator for Settings symbol
+	By Settings = By.xpath("//div[@id = 'root']/header[1]/div[1]/div[2]/span"); // Locator for Settings symbol
 	By VerifySettings = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]"); // Locator for Settings Panel Verification
 	By EXPGuide = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[2]/div[1]/a[1]"); // Locator for Exhibitor Portal Guide link
 	By VerifyEXPGuide = By.xpath("//section[@id = 'main-content']"); // Locator for EXP Guide Verification

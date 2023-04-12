@@ -80,7 +80,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=1)
-	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
+	public void TS001_ATL_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-001: To verify the Market Planner overview and it's functionality
@@ -101,7 +101,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=2)
-	public void TS002_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
+	public void TS002_ATL_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-002: To verify Profile and Settings option in Market Planner
@@ -121,7 +121,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		System.out.println("Profile and Settings section options are displayed properly");
 	}
 	@Test(priority=3)
-	public void TS003_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+	public void TS003_ATL_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T003: To verify global search functionality
@@ -139,7 +139,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=4)
-	public void TS004_VerifyMarketPlannerRegistrationsOptionTest() throws InterruptedException, IOException
+	public void TS004_ATL_VerifyMarketPlannerRegistrationsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-004: To verify Registrations option in Top Header
@@ -167,7 +167,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=5)
-	public void TS005_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	public void TS005_ATL_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T005: To verify Exhibitor Directory
@@ -192,8 +192,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Directory page is working properly.");
 	}
 
-	@Test(priority=8)
-	public void TS006_VerifyAllLinksUnderMarketInfoTabTest() throws InterruptedException, IOException
+	@Test(priority=6)
+	public void TS006_ATL_VerifyAllLinksUnderMarketInfoTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T006: To verify links for Market info tab at Header
@@ -267,7 +267,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=7)
-	public void TS007_VerifyAllLinksUnderExhibitorsAndProductsTabTest() throws InterruptedException, IOException
+	public void TS007_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-007: To verify the Exhibitors & Products menu overview and it's functionality
@@ -312,15 +312,20 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Click on Juniper sub-menu
 		atlexhp.getATLExhibitorsAndProducts().click();
 		atlexhp.getATLJunpiperMrktUAT().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
-		System.out.println("Juniper Market page is displayed properly");
+		Thread.sleep(6000);
+		String winHandleBefore8 = driver.getWindowHandle();
+		for (String winHandle8 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle8);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com"));
+		driver.switchTo().window(winHandleBefore8);
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.verifyCloseBtnPopup();
 		//Thread.sleep(6000);
 	}
 
-	@Test(priority=6)
-	public void TS008_VerifAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
+	@Test(priority=13)
+	public void TS008_ATL_VerifAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-008: To verify the Exhibit menu overview and it's functionality
@@ -395,23 +400,23 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Verify that Exhibitor Resources page should be displayed
 		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Exhibitor Resources"));
 
-		//Click on Exhibit tab
+		/*//Click on Exhibit tab
 		atlexh.getATLExhibitTab().click();
 
 		//Click on Juniper Commerce sub-menu
+		// Juniper menu is removed from design
 		atlexh.getATLJuniperMenu().click();
 
-		//Thread.sleep(10000);
+		Thread.sleep(6000);
 		//Verify that 'Juniper' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Experience the Future of B2B Wholesale Commerce | JuniperCommerce"));
-
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipercommerce.com/"));
+*/
 		driver.get(prop.getProperty("atlmrkturl"));
-		//Thread.sleep(8000);
 		utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=9)
-	public void TS009_VerifyAllChannelsLinksTest() throws InterruptedException, IOException
+	public void TS009_ATL_VerifyAllChannelsLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-TS009: To verify all channels links in Header
@@ -457,6 +462,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click Las Vegas Market channel link and verify result
 		atlch.getLasVegasApp().click();
+		Thread.sleep(6000);
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas Apparel"));
 		System.out.println("Las Vegas Apparel channel link is working properly.");
 		driver.get(prop.getProperty("atlmrkturl"));
@@ -464,7 +470,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority=10)
-	public void TS010_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	public void TS010_ATL_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T010: To verify the all social media links and it's redirection
@@ -480,7 +486,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//In app footer click on 'Facebook' icon and verify results
 		atlfl.getFacebookIcon().click();
 
-		//Thread.sleep(10000);
+		Thread.sleep(8000);
 		//Verify that 'ATL Facebook' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/AmericasmartAtl"));
 
@@ -521,7 +527,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	}
 
 	@Test(priority= 11)
-	public void TS011_VerifyFooterLinksTest() throws InterruptedException, IOException
+	public void TS011_ATL_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T69: To verify Footer Links Navigation
@@ -539,33 +545,29 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Click Market Info link and verify results
 		fl.getmarketInfo().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/market-info"));
-		System.out.println("Market Info Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		//Click on Press Center
 		fl.getpressCenter().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/Market-Info/Press-Center"));
-		System.out.println("Press center Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "App");
-		System.out.println("Download App Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
-		//Click on Our Brancd link
+		//Click on Our Brands link
 		fl.getOurBrandsATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/exhibitor/directory"));
-		System.out.println("Our Brands Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Contact Us link and verify results
@@ -575,7 +577,6 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle5);
 		}
 		Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
-		System.out.println("Contact us Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore5);
 		utl.scrollToElement(fl.getmarketInfo());
@@ -587,8 +588,6 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle6);
 		}
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
-		// driver.get(prop.getProperty("atlappurl"));
-		System.out.println("Careers Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore6);
 		utl.scrollToElement(fl.getmarketInfo());
@@ -601,13 +600,12 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle7);
 		}
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
-		System.out.println("Terms And Conditions Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore7);
 
 		// Click Privacy Policy and verify results
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		// Click Privacy Policy link and verify results
 		fl.getatlprivacypolicy().click();
@@ -616,12 +614,11 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle8);
 		}
 		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "IMC PRIVACY STATEMENT");
-		System.out.println("Privacy Policy Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		// utl.scrollToElement(fl.getmarketInfo());
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Americas Mart link and verify results
@@ -631,26 +628,12 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle9);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
-		System.out.println("AmericasMart Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore9);
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
-/*		// Click Atlanta Market link and verify results
-		fl.getAtlantaMarket().click();
-		// Switch to new tab
-		String winHandleBefore1 = driver.getWindowHandle();
-		for (String winHandle1 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle1);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
-		System.out.println("Atlanta Market Page open successfully");
-		driver.close();
-		driver.switchTo().window(winHandleBefore1);
-		utl.scrollToElement(fl.getmarketInfo());*/
-
 		// Click Atlanta Apparel link and verify results
 		fl.getAtlantaApparel().click();
 		// Switch to new tab
@@ -659,7 +642,6 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle2);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
-		System.out.println("Atlanta App Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore2);
 		utl.scrollToElement(fl.getmarketInfo());
@@ -672,7 +654,6 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle4);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
-		System.out.println("High point Market Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
 		utl.scrollToElement(fl.getmarketInfo());
@@ -680,10 +661,10 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		// Click on LVA Market link
 		// Switch to new tab
 		fl.getlvmlink_ATLM().click();
+		Thread.sleep(6000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
-		System.out.println("Las Vegas App Page open successfully");
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click on LVM Market link
@@ -694,7 +675,6 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle11);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
-		System.out.println("Las Vegas Market Page open successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore11);
 		utl.scrollToElement(fl.getmarketInfo());		
@@ -707,7 +687,6 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle3);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
 		driver.close();
-		System.out.println("IMC Market Page open successfully");
 		driver.switchTo().window(winHandleBefore3);
 		utl.scrollToElement(fl.getmarketInfo());		
 		
@@ -719,15 +698,12 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle12);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
 		driver.close();
-		System.out.println("Juniper Market Page open successfully");
 		driver.switchTo().window(winHandleBefore12);
 		utl.scrollToElement(fl.getmarketInfo());	
-		
-		
 	}
 
 	@Test(priority=12)
-	public void TS012_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
+	public void TS012_ATL_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T012: To verify links for Attend tab at Header
@@ -788,16 +764,18 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		System.out.println("Services & Amenities section is displayed properly");
 		atat.getATLAttendTab().click();
 
-		//Click Together Safely under Attend section
+		/*//Click Together Safely under Attend section
+		//This logo is removed from design
 		atat.getATLTogetherSafely().click();
+		Thread.sleep(6000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
-		System.out.println("Together Safely section is displayed properly");
+		System.out.println("Together Safely section is displayed properly");*/
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.verifyCloseBtnPopup();
 	}
 
-	@Test(priority=13)
-	public void TS013_VerifyAllNewsAndTrendsMenuTest() throws InterruptedException, IOException
+	@Test(priority=8)
+	public void TS013_ATL_VerifyAllNewsAndTrendsMenuTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T013: To verify the all News & Trends tap Menu and it's redirection
