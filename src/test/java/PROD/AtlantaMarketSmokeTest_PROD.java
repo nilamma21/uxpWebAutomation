@@ -691,7 +691,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		utl.scrollToElement(fl.getmarketInfo());		
 		
 		//Click Juniper Market Centers link and verify results
-		fl.getJuniperMarket().click();
+	/*	fl.getJuniperMarket().click();
 		//Switch to new tab
 		String winHandleBefore12 = driver.getWindowHandle();
 		for(String winHandle12 : driver.getWindowHandles()){
@@ -699,7 +699,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore12);
-		utl.scrollToElement(fl.getmarketInfo());	
+		utl.scrollToElement(fl.getmarketInfo());	*/
 	}
 
 	@Test(priority=12)

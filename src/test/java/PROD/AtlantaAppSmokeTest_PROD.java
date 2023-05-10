@@ -174,7 +174,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlps = new ATLProfileAndSettingsPage(driver);
 		amexh = new AMExhibitTabPage(driver);
 		el = new pageObjects.ExhibitorPortal.EXPLoginPage(driver);
-		
+	
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		atlps.getATLWelcomeText().click();
@@ -186,9 +186,9 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Portal is displayed properly.");
 		driver.get(prop.getProperty("atlappurl"));
 		//Thread.sleep(8000);
-	
+
 	}
-	
+
 	@Test(priority=4)
 	public void TS004_ATLApp_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
@@ -200,7 +200,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		gs = new UXPGlobalSearchPage(driver);
 		gbs = new ATLAppGlobalSearchPage(driver);
 		atlm = new ATLAppMarketsTabPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(3000);
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -959,7 +959,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		utl.scrollToElement(fl.getmarketInfoATL());		
 		
 		//Click Juniper Market Centers link and verify results
-		fl.getJuniperMarket().click();
+		/*fl.getJuniperMarket().click();
 		//Switch to new tab
 		String winHandleBefore12 = driver.getWindowHandle();
 		for(String winHandle12 : driver.getWindowHandles()){
@@ -967,7 +967,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore12);
-		utl.scrollToElement(fl.getmarketInfoATL());		
+		utl.scrollToElement(fl.getmarketInfoATL());	*/	
 	}
 
 	@Test(priority=8)

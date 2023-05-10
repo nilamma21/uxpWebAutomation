@@ -19,6 +19,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+
 public class base {	
 
 	// this is base class page where driver is initialized and data.properties mentioned. 

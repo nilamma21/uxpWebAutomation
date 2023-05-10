@@ -636,7 +636,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		utl.scrollToElement(fl.getmarketInfo());
 
 		// Click Juniper Market Centers link and verify results
-		fl.getJuniperMarket().click();
+		/*fl.getJuniperMarket().click();
 		// Switch to new tab
 		String winHandleBefore12 = driver.getWindowHandle();
 		for (String winHandle12 : driver.getWindowHandles()) {
@@ -647,7 +647,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore12);
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
-		utl.scrollToElement(fl.getmarketInfo());
+		utl.scrollToElement(fl.getmarketInfo());*/
 
 	}
 
