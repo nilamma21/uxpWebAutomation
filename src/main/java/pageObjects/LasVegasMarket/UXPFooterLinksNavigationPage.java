@@ -32,7 +32,7 @@ public class UXPFooterLinksNavigationPage {
 	By CareersATL = By.xpath("//a[contains(text(),'Careers')]"); //Locator for Careers in footer links
 	
 	By PrivacyPolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); // Locator for Privacy Policy in footer links
-	By TermsAndConditions = By.xpath("//a[@href='https://www.imcenters.com/terms-of-use/']"); // Locator for Terms and Conditions in footer links
+	By TermsAndConditions = By.partialLinkText("Terms"); // Locator for Terms and Conditions in footer links
 	By AmericasMart = By.xpath("//a[@href='https://www.americasmart.com']"); //Locator for Americas Mart in footer links
 	By AmericasMart_ATLApp = By.xpath("(//a[contains(text(),'AmericasMart')])[2]"); //Locator for Americas Mart in footer links of ATLApp
 	By lvapplink_ATL = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/')])[2]"); //Locator for Las Vegas Apparel footer link
@@ -58,7 +58,7 @@ public class UXPFooterLinksNavigationPage {
 	By footerLVMLogo = By.xpath("//img[@src='https://www.lasvegasmarket.com/-/media/Channel-Logos/LVM-footer.svg']"); //Locator for Footer LVM logo
 	
 	By VerifyCareers = By.xpath("//div[@id = 'content']/div[1]/div[1]/h1[1]"); //Locator for verify Careers
-	By VerifyTermsOfUse = By.xpath("//div[@id = 'primary']"); //Locator for Terms of Use
+	By VerifyTermsOfUse = By.xpath("//div[@id = 'primary']/h1"); //Locator for Terms of Use
 	By VerifyPrivacyPolicy = By.xpath("//*[contains (text(), 'WEB PRIVACY STATEMENT']"); //Locator for privacy Policy
 	By abtatlmktlink = By.xpath("//a[@href='/Market-Info/About-Us']"); //Locator for About Atlanta Market footer link
 	By lvmprivacypolicy = By.xpath("(//a[contains(text(),'Privacy Policy')])[position()=2]"); //Locator for Privacy Policy on LVM Footer

@@ -35,7 +35,7 @@ public class Utility extends base {
 		// TS1- Login to Market Planner
 
 		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);		
+		lp = new UXPLoginPage(driver);
 
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
@@ -49,7 +49,7 @@ public class Utility extends base {
 	}
 	public void verifyCloseBtnPopup() throws IOException, InterruptedException {
 
-		lap = new UXPLandingPage(driver);		
+		lap = new UXPLandingPage(driver);	
 
 		try {
 			lap.getCloseMarktAdBtn().click();

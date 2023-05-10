@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="lasvegasmarket_UAT.GlobalSearch_LineActions">
+      <class name="UAT.AtlantaMarketLoginTest_UAT">
         <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
+          <include name="atlMarketOpen"/>
+          <include name="quitBrowser"/>
+          <include name="driverInitialize"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LineActions -->
+      </class> <!-- UAT.AtlantaMarketLoginTest_UAT -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
