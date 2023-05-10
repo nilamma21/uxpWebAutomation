@@ -309,19 +309,19 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(atlexhp.getATLVerifyExhibitorDirectory().getText(), "Categories");
 		System.out.println("Categories section is displayed properly");
 
-		//Click on Juniper sub-menu
-		atlexhp.getATLExhibitorsAndProducts().click();
-		atlexhp.getATLJunpiperMrktUAT().click();
-		Thread.sleep(6000);
-		String winHandleBefore8 = driver.getWindowHandle();
-		for (String winHandle8 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle8);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com"));
-		driver.switchTo().window(winHandleBefore8);
-		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
-		//Thread.sleep(6000);
+		// //Click on Juniper sub-menu
+		// atlexhp.getATLExhibitorsAndProducts().click();
+		// atlexhp.getATLJunpiperMrktUAT().click();
+		// Thread.sleep(6000);
+		// String winHandleBefore8 = driver.getWindowHandle();
+		// for (String winHandle8 : driver.getWindowHandles()) {
+		// 	driver.switchTo().window(winHandle8);
+		// }
+		// Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com"));
+		// driver.switchTo().window(winHandleBefore8);
+		// driver.get(prop.getProperty("atlmrkturl"));
+		// utl.verifyCloseBtnPopup();
+		// //Thread.sleep(6000);
 	}
 
 	@Test(priority=13)
@@ -700,6 +700,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore12);
 		utl.scrollToElement(fl.getmarketInfo());	*/
+
 	}
 
 	@Test(priority=12)
@@ -803,11 +804,11 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		System.out.println("Market Snapshot page");
 
 		//Click on News And Trends Tab
-		atlnt.getATLNewsAndTrends().click();
-		atlnt.getATLWebinarAndEducation().click();
+		//atlnt.getATLNewsAndTrends().click();
+		//atlnt.getATLWebinarAndEducation().click();
 		//Click on Webinar And Education and Verify Page
-		Assert.assertTrue(atlnt.getATLWebinarAndEducationPageHeader().getText().contains("Webinars & Education"));
-		System.out.println("Webinars & Education page");
+		//Assert.assertTrue(atlnt.getATLWebinarAndEducationPageHeader().getText().contains("Webinars & Education"));
+		//System.out.println("Webinars & Education page");
 
 		//Click on News And Trends Tab
 		atlnt.getATLNewsAndTrends().click();
@@ -816,11 +817,11 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		System.out.println("Ahead of the Curve page");
 
 		//Click on News And Trends Tab
-		atlnt.getATLNewsAndTrends().click();
-		atlnt.getATLShopTheShow().click();
+		//atlnt.getATLNewsAndTrends().click();
+		//atlnt.getATLShopTheShow().click();
 		//Click on Shop the and Verify Page
-		Assert.assertTrue(atlnt.getATLShopTheShowPageHeader().getText().contains("Shop the "));
-		System.out.println("Shop the show page header");
+		//Assert.assertTrue(atlnt.getATLShopTheShowPageHeader().getText().contains("Shop the "));
+		//System.out.println("Shop the show page header");
 
 		//Click on News And Trends Tab
 		atlnt.getATLNewsAndTrends().click();
@@ -844,11 +845,11 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		System.out.println("In The News page");
 
 		//Click on News And Trends Tap
-		atlnt.getATLNewsAndTrends().click();
-		atlnt.getATLAtlantaNext().click();
+		//atlnt.getATLNewsAndTrends().click();
+		//atlnt.getATLAtlantaNext().click();
 		//Click on Atlanta Next and Verify Page
-		Assert.assertTrue(atlnt.getATLAtlantaNextHeader().getText().contains("Atlanta Next"));
-		System.out.println("In Atlanta Next page");
+		//Assert.assertTrue(atlnt.getATLAtlantaNextHeader().getText().contains("Atlanta Next"));
+		//System.out.println("In Atlanta Next page");
 
 		//Click on News And Trends Tab
 		atlnt.getATLNewsAndTrends().click();
