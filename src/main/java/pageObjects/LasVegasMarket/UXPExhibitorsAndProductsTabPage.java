@@ -46,53 +46,37 @@ public class UXPExhibitorsAndProductsTabPage {
 	}
 
 	public WebElement getFloorPlans() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(FloorPlans));
 		return driver.findElement(FloorPlans);
 	}
 
 	public WebElement getShowSpecials() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ShowSpecials));
 		return driver.findElement(ShowSpecials);
 	}
 
 	public WebElement getTemporaries() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Temporaries));
 		return driver.findElement(Temporaries);
 	}
 
 	public WebElement getNewProductIntroductions() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(NewProductIntroductions));
 		return driver.findElement(NewProductIntroductions);
 	}
 
 	public WebElement getCategories() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Categories));
 		return driver.findElement(Categories);
 	}
 
 	public WebElement getVerifyExhibitorsAndProductsSection() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(VerifyExhibitorsAndProductsSection));
 		return driver.findElement(VerifyExhibitorsAndProductsSection);
 	}
 
 	public WebElement getVerifyExhibitorDirectory() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,30);
-		wait.until(ExpectedConditions.elementToBeClickable(VerifyExhibitorDirectory));
 		return driver.findElement(VerifyExhibitorDirectory);
 	}
 
 	public WebElement getVerifyFloorPlans() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(VerifyFloorPlans));
 		return driver.findElement(VerifyFloorPlans);
 	}
 
