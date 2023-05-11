@@ -3,13 +3,13 @@
 <suite name="Failed suite [SmokeTestSuite]">
   <test name="SequencialTest(failed)">
     <classes>
-      <class name="PROD.AmericasMartSmokeTest_PROD">
+      <class name="PROD.AtlantaAppSmokeTest_PROD">
         <methods>
+          <include name="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest"/>
           <include name="tearDown"/>
-          <include name="TS012_AMC_VerifyFooterLinksTest"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
+      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
     </classes>
   </test> <!-- SequencialTest(failed) -->
 </suite> <!-- Failed suite [SmokeTestSuite] -->

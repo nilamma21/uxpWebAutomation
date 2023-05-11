@@ -8,7 +8,6 @@
 
 	<test thread-count="6" name="SequencialTest">
 		<classes>
-<<<<<<< HEAD
 
  			  <!-- <class name="PROD.LagVegasMarketSmokeTest_PROD" /> -->
 	<!-- 		<class name="PROD.AtlantaMarketSmokeTest_PROD" />
@@ -22,20 +21,12 @@
 			    <class name="PROD.AmericasMartSmokeTest_PROD" />
 		 		<class name="PROD.AtlantaAppSmokeTest_PROD" />
 			  <class name="PROD.ExhibitorPortalSmokeTest_PROD" />-->
-	 	 	 <class name="PROD.AmericasMartSmokeTest_PROD" />
+	 	 	 <class name="PROD.AtlantaAppSmokeTest_PROD" />
 	 	 	 <methods>
-				<!-- <include name="TS001_EXP_VerifyExhibitorPortalLoginTest()"/>   --> 
-	 	 	  <include name="TS012_AMC_VerifyFooterLinksTest()"/>
+				 <include name="TS001_ATLApp_VerifyMarketPlannerLoginTest()"/>   
+	 	 	  <include name="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest()"/>
 	 	 	 </methods>
 
-=======
- 			    <class name="PROD.LagVegasMarketSmokeTest_PROD" />  
-			  	<class name="PROD.AtlantaMarketSmokeTest_PROD" />
-			    <class name="PROD.AmericasMartSmokeTest_PROD" />
-		 		<class name="PROD.AtlantaAppSmokeTest_PROD" />
-			  <class name="PROD.ExhibitorPortalSmokeTest_PROD" />
-	 	 	 <class name="PROD.SitecoreSmokeTest_PROD" />
->>>>>>> 30d422e9ff04049880f4ba00934e367c903045f6
 		</classes>
 	</test>
 </suite>

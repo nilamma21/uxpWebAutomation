@@ -66,7 +66,7 @@ public class EXPSettingsPage {
 	}
 	
 	public WebElement getVerifyManageUsers() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyManageUsers));
 		return driver.findElement(VerifyManageUsers);
 

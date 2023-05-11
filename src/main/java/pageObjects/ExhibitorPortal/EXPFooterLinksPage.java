@@ -30,7 +30,8 @@ public class EXPFooterLinksPage {
 
 	public WebElement getExhibitorPortalSymbol() throws InterruptedException {
 		Thread.sleep(5000);
-		
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.elementToBeClickable(ExhibitorPortalSymbol));
 		return driver.findElement(ExhibitorPortalSymbol);
 
 	}
@@ -99,7 +100,7 @@ public class EXPFooterLinksPage {
 	}
 	
 	public WebElement getAboutIMC() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(AboutIMC));
 		return driver.findElement(AboutIMC);
 

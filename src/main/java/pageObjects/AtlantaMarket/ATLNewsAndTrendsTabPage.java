@@ -20,7 +20,7 @@ public class ATLNewsAndTrendsTabPage
 	By atlNewsAndTrendsPageHeader = By.xpath("(//a[contains(text(),'News & Trends')])[2]"); //Locator for News & Trends page Header
 	By atlMarketSnapshot = By.xpath("//a[@href='/News-and-Trends/Market-Snapshot' and contains(text(),'Market Snapshot')]"); //Locator for Market Snapshot
 	By atlMarketSnapshotPageHeader = By.xpath("//a[contains(text(),'Market Snapshot')]"); //Locator for Market Snapshot page Header
-	By atlWebinarAndEducation=By.xpath("//a[contains(text(),'Webinars & Education')]");////Locator for Webinar & Education page
+	By atlWebinarAndEducation=By.xpath("//a[@href='/News-and-Trends/Webinars-and-Education' and contains(text(),'Webinars & Education')]");////Locator for Webinar & Education page
 	By atlWebinarAndEducationHeader=By.xpath("//a[contains(text(),'Webinars & Education')]");////Locator for Webinar & Education page Header
 	By atlAheadCurve=By.xpath("//a[@href='/News-and-Trends/Ahead-of-the-Curve' and contains(text(),'Ahead of the Curve')]");////Locator for Ahead of the Curve
 	By atlAheadCurvePageHeader=By.xpath("//a[contains(text(),'Ahead of the Curve')]");////Locator for Ahead of the Curve Header

@@ -563,7 +563,6 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore12);
 		utl.scrollToElement(fl.marketInfoAMC());*/
-
 	}
 
 	@Test(priority=9)

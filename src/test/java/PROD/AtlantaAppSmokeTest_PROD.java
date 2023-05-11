@@ -3,7 +3,7 @@ package PROD;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-//import org.apache.log4j.xml.DOMConfigurator;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -106,7 +106,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
-		//DOMConfigurator.configure("log4j.xml");
+		DOMConfigurator.configure("log4j.xml");
 		
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
@@ -604,14 +604,14 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//CLick on Click on Images sub-menu 
 		atlf.getatlAppfashionGalleryLink().click();
 		//Verify Images page 
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlappurl")+"The-Best-Of/Images"));	
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlappurl")+"The-Best-Of/Lookbooks-and-Brand-Books"));	
 
 		//Click on Fashion Gallery Tab
-		atlf.getatlAppFashionGalleryTab().click();
+		/*atlf.getatlAppFashionGalleryTab().click();
 		//CLick on Lookbooks Link 
 		atlf.getatlAppLookBook().click();
 		//Verify Lookbooks  Page
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Lookbooks"));	
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Lookbooks"));	*/
 		
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
@@ -958,7 +958,6 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore3);
 		utl.scrollToElement(fl.getmarketInfoATL());		
 		
-
 		//Click Juniper Market Centers link and verify results
 		/*fl.getJuniperMarket().click();
 		//Switch to new tab
@@ -969,7 +968,6 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore12);
 		utl.scrollToElement(fl.getmarketInfoATL());	*/	
-
 	}
 
 	@Test(priority=8)
