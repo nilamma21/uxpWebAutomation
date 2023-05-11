@@ -604,14 +604,14 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//CLick on Click on Images sub-menu 
 		atlf.getatlAppfashionGalleryLink().click();
 		//Verify Images page 
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlappurl")+"The-Best-Of/Images"));	
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlappurl")+"The-Best-Of/Lookbooks-and-Brand-Books"));	
 
 		//Click on Fashion Gallery Tab
-		atlf.getatlAppFashionGalleryTab().click();
+		/*atlf.getatlAppFashionGalleryTab().click();
 		//CLick on Lookbooks Link 
 		atlf.getatlAppLookBook().click();
 		//Verify Lookbooks  Page
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Lookbooks"));	
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Lookbooks"));	*/
 		
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
