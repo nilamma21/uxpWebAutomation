@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="178404" started-at="2023-05-10T11:16:27Z" finished-at="2023-05-10T11:19:25Z">
+  <suite name="SmokeTestSuite" duration-ms="54983" started-at="2023-05-11T07:42:34Z" finished-at="2023-05-11T07:43:29Z">
     <groups>
     </groups>
-    <test name="SequencialTest" duration-ms="178404" started-at="2023-05-10T11:16:27Z" finished-at="2023-05-10T11:19:25Z">
-      <class name="PROD.AmericasMartSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@6eebc39e]" name="initialize" is-config="true" duration-ms="32215" started-at="2023-05-10T16:46:27Z" finished-at="2023-05-10T16:46:59Z">
+    <test name="SequencialTest" duration-ms="54983" started-at="2023-05-11T07:42:34Z" finished-at="2023-05-11T07:43:29Z">
+      <class name="PROD.AtlantaAppSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@6eebc39e]" name="initialize" is-config="true" duration-ms="20340" started-at="2023-05-11T13:12:34Z" finished-at="2023-05-11T13:12:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS012_AMC_VerifyFooterLinksTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@6eebc39e]" name="TS012_AMC_VerifyFooterLinksTest" duration-ms="146154" started-at="2023-05-10T16:46:59Z" finished-at="2023-05-10T16:49:25Z">
+        <test-method status="PASS" signature="TS001_ATLApp_VerifyMarketPlannerLoginTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@6eebc39e]" name="TS001_ATLApp_VerifyMarketPlannerLoginTest" duration-ms="21829" started-at="2023-05-11T13:12:54Z" finished-at="2023-05-11T13:13:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS012_AMC_VerifyFooterLinksTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@6eebc39e]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-05-10T16:49:25Z" finished-at="2023-05-10T16:49:25Z">
+        </test-method> <!-- TS001_ATLApp_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@6eebc39e]" name="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest" duration-ms="12787" started-at="2023-05-11T13:13:16Z" finished-at="2023-05-11T13:13:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@6eebc39e]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-05-11T13:13:29Z" finished-at="2023-05-11T13:13:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
+      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
     </test> <!-- SequencialTest -->
   </suite> <!-- SmokeTestSuite -->
 </testng-results>

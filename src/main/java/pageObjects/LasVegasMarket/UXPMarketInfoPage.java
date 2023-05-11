@@ -124,7 +124,8 @@ public class UXPMarketInfoPage {
 	}
 	
 	public WebElement getVerifyContactUs() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(5000);wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyContactUs));
 		return driver.findElement(VerifyContactUs);
 		
 	}

@@ -16,9 +16,9 @@ public class ATLAppFashionGalleryTabPage
 	By atlAppfashionGalleryLinkImg = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[1]/div[1]/a[2]");
 	By atlAppLookBook = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[2]/div[1]/a[1]");
 	By atlAppLookBookImg = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[2]/div[1]/a[2]");
-	By atlAppvideosImages = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[3]/div[1]/a[1]");
+	By atlAppvideosImages = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[2]/div[1]/a[1]");
 	By atlAppvideosImagesImg = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[3]/div[1]/a[2]");
-	By atlAppNews = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[4]/div[1]/a[1]");
+	By atlAppNews = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[3]/div[1]/a[1]");
 	By atlAppNewsImg = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[4]/div[1]/a[2]");
 	
 	

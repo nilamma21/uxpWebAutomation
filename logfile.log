@@ -87,3 +87,10 @@ Session ID: 6b4cf0b906ca2078f89fedf2606b0cce
 2023-05-10 12:29:17,318 INFO  [Log] FAILED- TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest 
 2023-05-10 12:33:14,641 INFO  [Log] FAILED- TS012_ATLApp_VerifyFooterLinksTest 
 2023-05-10 16:25:05,184 INFO  [Log] SKIPPED- TS012_ATLApp_VerifyFooterLinksTest 
+2023-05-11 11:06:28,098 INFO  [Log] FAILED- TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest 
+2023-05-11 11:13:53,902 INFO  [Log] FAILED- TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest 
+2023-05-11 11:20:35,653 INFO  [Log] FAILED- TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest 
+2023-05-11 11:22:23,159 INFO  [Log] FAILED- TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest 
+2023-05-11 11:24:31,441 INFO  [Log] FAILED- TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest 
+2023-05-11 11:29:13,650 INFO  [Log] FAILED- TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest 
+2023-05-11 11:34:43,908 INFO  [Log] FAILED- TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest 
