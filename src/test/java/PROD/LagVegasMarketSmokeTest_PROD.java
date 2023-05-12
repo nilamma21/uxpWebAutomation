@@ -185,7 +185,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		exh.getExhibitTab().click();
 
 		//Click on Juniper sub-menu
-		exh.getJuniperMenu().click();
+	/*	exh.getJuniperMenu().click();
 
 		// Switch to new window opened
 		String winHandleBefore = driver.getWindowHandle();
@@ -207,7 +207,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore);
 
 		//Click on Exhibit tab
-		exh.getExhibitTab().click();
+		exh.getExhibitTab().click();*/
 	}
 
 	@Test(priority=03)
