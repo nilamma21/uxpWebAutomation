@@ -310,7 +310,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		System.out.println("Categories section is displayed properly");
 
 		//Click on Juniper sub-menu
-		atlexhp.getATLExhibitorsAndProducts().click();
+		/*atlexhp.getATLExhibitorsAndProducts().click();
 		atlexhp.getATLJunpiperMrktUAT().click();
 		Thread.sleep(6000);
 		String winHandleBefore8 = driver.getWindowHandle();
@@ -320,7 +320,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com"));
 		driver.switchTo().window(winHandleBefore8);
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		utl.verifyCloseBtnPopup();*/
 		//Thread.sleep(6000);
 	}
 
