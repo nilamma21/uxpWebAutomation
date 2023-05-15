@@ -793,6 +793,3 @@ public class AmericasMartSmokeTest_PROD extends base {
 	}
 
 }
-
-
-
