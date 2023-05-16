@@ -32,21 +32,21 @@ public class SitecoreSmokeTestLinks {
 	} 
 
 	public WebElement getUserName() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(UserName));
 		return driver.findElement(UserName);
 
 	}
 	
 	public WebElement getPassword() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(Password));
 		return driver.findElement(Password);
 
 	}
 	
 	public WebElement getLoginbtn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(Loginbtn));
 		return driver.findElement(Loginbtn);
 

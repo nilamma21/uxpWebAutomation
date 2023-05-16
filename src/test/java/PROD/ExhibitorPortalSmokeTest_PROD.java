@@ -163,7 +163,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=3)
+	@Test(priority=9)
 	public void TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest() throws InterruptedException, IOException
 	{
 
