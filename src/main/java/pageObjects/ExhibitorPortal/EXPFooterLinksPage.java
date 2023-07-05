@@ -17,11 +17,14 @@ public class EXPFooterLinksPage {
 	By AtlantaApparel = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[2]/div[1]/div[1]/a[3]"); // Locator for Atlanta Apparel link
 	By ADAC = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[2]/div[1]/div[1]/a[4]"); // Locator for ADAC link
 	By HighPointMarket = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[2]/div[1]/div[1]/a[5]"); // Locator for High Point Market link
-	By LasVegasMarket = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[2]/div[1]/div[1]/a[6]"); // Locator for Las Vegas Market link
-	By LasVegasDesignCenter = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[2]/div[1]/div[1]/a[7]"); // Locator for Las Vegas Design Center link
+	By LasVegasMarket = By.xpath("//div[@class='EPFooter_linksContainer__3GLBW']//a[contains(text(),'Las Vegas Market')]"); // Locator for Las Vegas Market link
+	By LasVegasDesignCenter = By.xpath("//div[@class='EPFooter_linksContainer__3GLBW']//a[contains(text(),'Las Vegas Design Center')]"); // Locator for Las Vegas Design Center link
 	By PrivacyPolicy = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[2]/div[1]/div[2]/a[1]"); // Locator for Privacy Policy link
 	By TermsAndConditions = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[2]/div[1]/div[2]/a[2]"); // Locator for Terms And Conditions link
 	By AboutIMC = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[2]/div[1]/div[2]/a[3]"); // Locator for About IMC link
+	By LasVegasApparel = By.xpath("//div[@class='EPFooter_linksContainer__3GLBW']//a[contains(text(),'Las Vegas Apparel')]"); // Locator for Las Vegas Market link
+	By andmore = By.xpath("//div[@id = 'root']/footer[1]/div[1]/div[2]/div[1]/div[2]/a[3]"); //Locator for ANDMORE in footer links
+
 	
 	public EXPFooterLinksPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -105,5 +108,17 @@ public class EXPFooterLinksPage {
 		return driver.findElement(AboutIMC);
 
 	}
+	
+	public WebElement getLasVegasApparel() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(LasVegasApparel));
+		return driver.findElement(LasVegasApparel);
 
+	}
+	
+	public WebElement getandmore() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(andmore));;
+		return driver.findElement(andmore);
+	}
 }

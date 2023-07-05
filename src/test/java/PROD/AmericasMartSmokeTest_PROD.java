@@ -95,8 +95,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Thread.sleep(5000);
 		//utl.verifyCloseBtnPopup();
 	}
-
-	@Test(priority=1)
+	
+	//Due to re-branding changes
+	@Test(enabled=false)//priority=1
 	public void TS001_AMC_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -124,7 +125,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
 
-	@Test(priority=4)
+	@Test(priority=13)
 	public void TS011_AMC_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
 
@@ -217,7 +218,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 		amab = new AMAboutTabPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-
+		
+		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.verifyCloseBtnPopup();
 		//Click About tab at Header
@@ -235,13 +237,14 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Press Releases");
 		System.out.println("Press Center section is displayed properly");
 		mi.getMarketInfoHeader().click();
-
-		//Click Atlanta Next option under About tab
+		
+		//Due to re-branding changes
+/*		//Click Atlanta Next option under About tab
 		mi.getFAQs().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Next");
 		System.out.println("Atlanta Next section is displayed properly");
 		mi.getMarketInfoHeader().click();
-
+*/
 		//Click History option under About tab
 		mi.getContactUs().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "History");
@@ -398,7 +401,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 	}
 
-	@Test(priority=5)
+	@Test(priority=14)//Previous priority is 5
 	public void TS012_AMC_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -427,10 +430,10 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/About/Press-Center"));
 		driver.get(prop.getProperty("ammarturl"));
 		utl.scrollToElement(fl.marketInfoAMC());
-
+		
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "App");
+		Assert.assertEquals(driver.getTitle(), "Download the @Market ANDMORE App");
 		driver.get(prop.getProperty("ammarturl"));
 		utl.scrollToElement(fl.marketInfoAMC());
 
@@ -461,7 +464,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for (String winHandle7 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle7);
 		}
-		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
+		Assert.assertEquals(driver.getTitle(), "Terms of Use - Andmore");
 		driver.close();
 		driver.switchTo().window(winHandleBefore7);
 
@@ -474,7 +477,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for (String winHandle8 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle8);
 		}
-		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "IMC PRIVACY STATEMENT");
+		Assert.assertEquals(driver.getTitle(), "Web Privacy Policy - Andmore");
 		driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		// utl.scrollToElement(fl.marketInfoAMC());
@@ -514,7 +517,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.highpointmarketandmore.com/"));
 		driver.get(prop.getProperty("ammarturl"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
@@ -541,16 +544,17 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.scrollToElement(fl.marketInfoAMC());		
 
 		//Click International Market Centers link and verify results
-		fl.getInternationalMarketCenters().click();
+		//fl.getInternationalMarketCenters().click();//Change for re-branding
+		fl.getandmore().click();
 		//Switch to new tab
 		String winHandleBefore3 = driver.getWindowHandle();
 		for(String winHandle3 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle3);}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
 		driver.get(prop.getProperty("ammarturl"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore3);
-		utl.scrollToElement(fl.marketInfoAMC());		
+		utl.scrollToElement(fl.marketInfoAMC());
 
 		//Click Juniper Market Centers link and verify results
 		/*fl.getJuniperMarket().click();
@@ -708,19 +712,28 @@ public class AmericasMartSmokeTest_PROD extends base {
 		amexh.getAdvertising().click();
 		//Verify that Advertising page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Advertising");
-
+		
+		//Exhibitor Portal Login
 		amexh.getamcExhibitTab().click();	
 		amexh.getExpLogin().click();
 		String winHandleBefore = driver.getWindowHandle();
-
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);}
-
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://exhibitors.imcenters.com/"));
+		Thread.sleep(10000);
+		Assert.assertTrue(driver.getTitle().contains("Sign In to ANDMORE"));
 		System.out.println("Page opened successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
-
+		
+		//Exhibitor Portal Guide
+		//amexh.getamcExhibitTab().click();	
+		amexh.getExpGuide().click();
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);}
+		Assert.assertTrue(driver.getCurrentUrl().contains("support.andmore.com"));
+		System.out.println("Page opened successfully");
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
 		//Click Advertising Link
 		amexh.getExpFAQs().click();
 		//Verify that FAQs page should be displayed
@@ -728,8 +741,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 
 	}
-
-	@Test(priority=2)
+	
+	//Due to re-branding changes
+	@Test(enabled=false)//priority=2
 	public void TS002_AMC_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -749,8 +763,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+"Profile"));
 		System.out.println("Profile and Settings section options are displayed properly");
 	}
-
-	@Test(priority=3)
+	
+	//Due to re-branding changes
+	@Test(enabled=false)//priority=3
 	public void TS003_AMC_VerifyMarketPlannerExhibitorPortalOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -789,7 +804,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

@@ -54,7 +54,7 @@ public class SitecoreSmokeTestLinks {
 	
 	public WebElement getVerifyHomePage() throws InterruptedException {
 		//Thread.sleep(15000);
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyHomePage));
 		return driver.findElement(VerifyHomePage);
 

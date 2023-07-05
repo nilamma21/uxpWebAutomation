@@ -17,9 +17,9 @@ public class ATLAllChannelsLinksPage {
 	By atlantamarket = By.xpath("//ul[@class='links-wrap']/li[1]/a[1]"); // Locator for Atlanta Market header link
 	By atlantaapparel = By.xpath("//ul[@class='links-wrap']/li[2]/a[1]"); // Locator for Atlanta Apparel header link
 	By americasmart = By.xpath("//ul[@class='links-wrap']/li[3]/a[1]"); // Locator for Americas Mart header link
-	By highpoint = By.xpath("//ul[@class='links-wrap']/li[4]/a[1]"); // Locator for IMC High Point Market header link
-	By lasvegas = By.xpath("//ul[@class='links-wrap']/li[5]/a[1]"); // Locator for Las vegas Market header link
-	By lasvegasapp = By.xpath("//ul[@class='links-wrap']/li[6]/a[1]"); // Locator for Las vegas Apparel header link
+	By highpoint = By.xpath("(//a[contains(text(),'High Point Market ANDMORE')])[1]"); // Locator for IMC High Point Market header link
+	By lasvegas = By.xpath("(//a[contains(text(),'Las Vegas Market')])[1]"); // Locator for Las vegas Market header link
+	By lasvegasapp = By.xpath("(//a[contains(text(),'Las Vegas Apparel')])[1]"); // Locator for Las vegas Apparel header link
 
 	
 	public ATLAllChannelsLinksPage(WebDriver driver) {
