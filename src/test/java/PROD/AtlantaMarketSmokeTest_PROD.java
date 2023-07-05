@@ -878,9 +878,14 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Click on Atlanta Next and Verify Page
 		Assert.assertTrue(atlnt.getATLAtlantaNextHeader().getText().contains("Atlanta Next"));
 		System.out.println("In Atlanta Next page");*/
+
 		
 		//Due to re-branding changes
 /*		//Click on News And Trends Tab
+
+
+		//Click on News And Trends Tab
+
 		atlnt.getATLNewsAndTrends().click();
 		//Click on Portman Peachtree and Verify Page
 		try {
