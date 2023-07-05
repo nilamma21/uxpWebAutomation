@@ -27,7 +27,7 @@ public class ATLAppMarketsTabPage {
 	By ATLWorldOfPromImg = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[4]/div[1]/a[2]");
 	By ATLWorldOfPromLink = By.xpath("//div[@class='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[4]/div[2]/a[1]");
 
-	By ATLLasVegasAppImg = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[5]/div[1]/a[2]");
+	By ATLLasVegasAppImg = By.xpath("(//div[@class='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//a[contains(text(),'Las Vegas Apparel')])[2]");
 	By ATLLasVegasAppLink = By.xpath("//div[@class='imc-section']/div[1]/div[1]/div[2]/div[5]/div[2]/a[1]");
 
 

@@ -1,29 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="54983" started-at="2023-05-11T07:42:34Z" finished-at="2023-05-11T07:43:29Z">
+  <suite name="SmokeTestSuite" duration-ms="59349" started-at="2023-07-05T07:01:01Z" finished-at="2023-07-05T07:02:00Z">
     <groups>
     </groups>
-    <test name="SequencialTest" duration-ms="54983" started-at="2023-05-11T07:42:34Z" finished-at="2023-05-11T07:43:29Z">
-      <class name="PROD.AtlantaAppSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@6eebc39e]" name="initialize" is-config="true" duration-ms="20340" started-at="2023-05-11T13:12:34Z" finished-at="2023-05-11T13:12:54Z">
+    <test name="SequencialTest" duration-ms="59349" started-at="2023-07-05T07:01:01Z" finished-at="2023-07-05T07:02:00Z">
+      <class name="PROD.SitecoreSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="initialize" is-config="true" duration-ms="4788" started-at="2023-07-05T12:31:01Z" finished-at="2023-07-05T12:31:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_ATLApp_VerifyMarketPlannerLoginTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@6eebc39e]" name="TS001_ATLApp_VerifyMarketPlannerLoginTest" duration-ms="21829" started-at="2023-05-11T13:12:54Z" finished-at="2023-05-11T13:13:16Z">
+        <test-method status="PASS" signature="TS001_SC_VerifySitecoreLoginTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS001_SC_VerifySitecoreLoginTest" duration-ms="16185" started-at="2023-07-05T12:31:06Z" finished-at="2023-07-05T12:31:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_ATLApp_VerifyMarketPlannerLoginTest -->
-        <test-method status="PASS" signature="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@6eebc39e]" name="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest" duration-ms="12787" started-at="2023-05-11T13:13:16Z" finished-at="2023-05-11T13:13:29Z">
+        </test-method> <!-- TS001_SC_VerifySitecoreLoginTest -->
+        <test-method status="PASS" signature="TS002_SC_VerifyContentEditorTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS002_SC_VerifyContentEditorTest" duration-ms="9660" started-at="2023-07-05T12:31:22Z" finished-at="2023-07-05T12:31:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@6eebc39e]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-05-11T13:13:29Z" finished-at="2023-05-11T13:13:29Z">
+        </test-method> <!-- TS002_SC_VerifyContentEditorTest -->
+        <test-method status="PASS" signature="TS003_SC_VerifyControlPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS003_SC_VerifyControlPanelTest" duration-ms="2570" started-at="2023-07-05T12:31:32Z" finished-at="2023-07-05T12:31:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_SC_VerifyControlPanelTest -->
+        <test-method status="PASS" signature="TS004_SC_VerifyShowSpecialApprovalsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS004_SC_VerifyShowSpecialApprovalsTest" duration-ms="3419" started-at="2023-07-05T12:31:34Z" finished-at="2023-07-05T12:31:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_SC_VerifyShowSpecialApprovalsTest -->
+        <test-method status="PASS" signature="TS005_SC_VerifyEmailExperienceManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS005_SC_VerifyEmailExperienceManagerTest" duration-ms="4992" started-at="2023-07-05T12:31:38Z" finished-at="2023-07-05T12:31:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_SC_VerifyEmailExperienceManagerTest -->
+        <test-method status="PASS" signature="TS006_SC_VerifyIMCReportsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS006_SC_VerifyIMCReportsTest" duration-ms="3171" started-at="2023-07-05T12:31:43Z" finished-at="2023-07-05T12:31:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_SC_VerifyIMCReportsTest -->
+        <test-method status="PASS" signature="TS007_SC_VerifyTaxonomyManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS007_SC_VerifyTaxonomyManagerTest" duration-ms="3534" started-at="2023-07-05T12:31:46Z" finished-at="2023-07-05T12:31:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_SC_VerifyTaxonomyManagerTest -->
+        <test-method status="PASS" signature="TS008_SC_VerifyExhibitorEventsApprovalTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS008_SC_VerifyExhibitorEventsApprovalTest" duration-ms="2568" started-at="2023-07-05T12:31:49Z" finished-at="2023-07-05T12:31:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_SC_VerifyExhibitorEventsApprovalTest -->
+        <test-method status="PASS" signature="TS009_SC_VerifyDigitalAdminPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS009_SC_VerifyDigitalAdminPanelTest" duration-ms="5429" started-at="2023-07-05T12:31:52Z" finished-at="2023-07-05T12:31:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_SC_VerifyDigitalAdminPanelTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="tearDown" is-config="true" duration-ms="2989" started-at="2023-07-05T12:31:57Z" finished-at="2023-07-05T12:32:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
+      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
     </test> <!-- SequencialTest -->
   </suite> <!-- SmokeTestSuite -->
 </testng-results>

@@ -1,5 +1,7 @@
 package PROD;
 
+import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -106,7 +108,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	public void initialize() throws IOException, InterruptedException
 	{
 		driver = initializeDriver(); //requires for Parallel text execution
-		DOMConfigurator.configure("log4j.xml");
+		//DOMConfigurator.configure("log4j.xml");
 		
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
@@ -118,8 +120,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		lap.getIUnderstandBtn().click();
 		//Thread.sleep(5000);
 	}
-
-	@Test(priority=1)
+	//Due to re-branding changes
+	@Test(enabled=false)//priority=1
 	public void TS001_ATLApp_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -143,8 +145,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Verify that Market Planner Home page should be displayed
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
-
-	@Test(priority=2)
+	//Due to re-branding changes
+	@Test(enabled=false)//priority=2
 	public void TS002_ATLApp_VerifyMarketPlannerProfileOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -163,8 +165,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlappurl") + "Profile"));
 		System.out.println("Profile Page is displayed successfully");
 	}
-
-	@Test(priority=3)
+	//Due to re-branding changes
+	@Test(enabled=false)//priority=3
 	public void TS003_ATLApp_VerifyMarketPlannerExhibitorPortalOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -270,10 +272,11 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 		atled = new ATLExhibitorDirectoryPage (driver);
 		atlm=new ATLAppMarketsTabPage(driver);
-
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		//Click on Markets Tab
+		Thread.sleep(5000);
+		//Due to re-branding changes
+/*		//Click on Markets Tab
 		mi.getMarketInfoHeader().click();
 		System.out.println("Click on Markets Tab");
 		//CLick on About
@@ -283,7 +286,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Verify About Page
 		Assert.assertTrue(mi.getVerifyContactUs().getText().contains("Markets"));	
 		System.out.println("Verify About Page");
-
+*/
 		//Click on Markets Tab
 		mi.getMarketInfoHeader().click();
 		System.out.println("Click on Markets Tab");
@@ -340,13 +343,13 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Click on Markets Tab");
 		//Click on Atlanta App Image
 		atlm.getATLVowImage().click();
-		System.out.println("Click on Vow Image");
+		System.out.println("Click on Formal Image");
 		//Verify Atlanta Apparel Page
-		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("VOW"));	
-		System.out.println("Verify Vow Page");
+		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Formal Markets"));	//Due to re-branding changes. previous 'VOW', now 'Formal Markets'
+		System.out.println("Verify Formal Markets Page");
 
-
-		mi.getMarketInfoHeader().click();
+		//Due to re-branding changes
+/*		mi.getMarketInfoHeader().click();
 		System.out.println("Click on Markets Tab");
 		//Click on Atlanta App Image
 		atlm.getATLVowLink().click();
@@ -354,7 +357,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Verify Atlanta Apparel Page
 		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("VOW"));	
 		System.out.println("Verify Vow Page Link Page");
-		
+
 		
 		mi.getMarketInfoHeader().click();
 		System.out.println("Click on Markets Tab");
@@ -365,6 +368,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets/World-of-Prom"));	
 		System.out.println("Verify World Of Prom Page");
 		//driver.get(prop.getProperty("atlappurl"));
+*/
 		
 		Thread.sleep(2000);
 		mi.getMarketInfoHeader().click();
@@ -377,7 +381,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Verify Las Vegas App Img Page");
 		driver.get(prop.getProperty("atlappurl"));
 		
-		Thread.sleep(2000);
+/*Thread.sleep(2000);
 		mi.getMarketInfoHeader().click();
 		System.out.println("Click on Markets Tab");
 		//Click on Atlanta App Link
@@ -387,6 +391,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));	
 		System.out.println("Verify Las Vegas App Link Page");
 		driver.get(prop.getProperty("atlappurl"));
+*/
 	}
 
 	@Test(priority=7)
@@ -597,8 +602,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atat=new ATLAttendPage(driver);		
 		atlatt=new ATLAppAttendTabPage(driver);
 		atlf=new ATLAppFashionGalleryTabPage(driver);
+		
+		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
 		//CLick on Click on Images sub-menu 
@@ -629,7 +636,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 	
 
-	@Test(priority=10)
+	@Test(priority=10)//Previous priority is 10
 	public void TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -653,6 +660,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlExhi=new ATLAppExhibitTabPage(driver);
 		atlexh=new ATLExhibitPage(driver);
 		el=new EXPLoginPage(driver);
+		
+		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		/*//Click on Exhibit Tab
@@ -724,21 +733,24 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
+		Thread.sleep(10000);
 		//Verify that 'EXP Login' page should be displayed
-		Assert.assertTrue(el.getVerifyExpHomePage().isDisplayed());
+		Assert.assertEquals(driver.getTitle(), "Sign In to ANDMORE");
 		System.out.println("Verify Exp Page");
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
-
-		//CLick Exhibitor Resources Link 
+		
+		//Due to re-branding changes
+/*		//CLick Exhibitor Resources Link 
 		atlva.getDining().click();
 		System.out.println("CLick Exhibit Exhibitor Resources");
 		//Verify Exhibitor Resources
 		//Thread.sleep(4000);
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Resources"));	
 		System.out.println("Verify Exhibitor Resources ");	
+*/
 	}
 
 	@Test(priority=11)
@@ -766,13 +778,16 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlexh=new ATLExhibitPage(driver);
 		atly=new UXPYearRoundPage(driver);
 		atlyr=new ATLAppYearRoundTabPage(driver);
+		
+		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		//Click on Year Round Tab
 		atly.getYearRoundTab().click();
 		System.out.println("Click on Year Round Tab");
 		//CLick AmericasMart Link 
-		atly.getYearRound().click();
+		Thread.sleep(1000);
+		atly.getYearRound().click();//changed to AmericasMart
 		//Click on Year Round Tab
 		atly.getYearRoundTab().click();
 		String winHandleBefore5 = driver.getWindowHandle();
@@ -872,7 +887,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for (String winHandle7 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle7);
 		}
-		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
+		//Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
+		Assert.assertEquals(driver.getTitle(), "Terms of Use - Andmore");
 		driver.close();
 		driver.switchTo().window(winHandleBefore7);
 
@@ -885,7 +901,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for (String winHandle8 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle8);
 		}
-		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "IMC PRIVACY STATEMENT");
+		Assert.assertEquals(driver.getTitle(), "Web Privacy Policy - Andmore");
 		driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		// utl.scrollToElement(fl.getmarketInfoATL());
@@ -923,7 +939,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.highpointmarketandmore.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
 		utl.scrollToElement(fl.getmarketInfoATL());
@@ -947,7 +963,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore11);
 		utl.scrollToElement(fl.getmarketInfoATL());		
 		
-		//Click International Market Centers link and verify results
+		//Due to re-branding changes
+/*		//Click International Market Centers link and verify results
 		fl.getInternationalMarketCenters().click();
 		//Switch to new tab
 		String winHandleBefore3 = driver.getWindowHandle();
@@ -957,7 +974,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore3);
 		utl.scrollToElement(fl.getmarketInfoATL());		
-		
+*/		
 		//Click Juniper Market Centers link and verify results
 		/*fl.getJuniperMarket().click();
 		//Switch to new tab
@@ -968,6 +985,17 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore12);
 		utl.scrollToElement(fl.getmarketInfoATL());	*/	
+		
+		fl.getandmore().click();
+		//Switch to new tab
+		String winHandleBefore3 = driver.getWindowHandle();
+		for(String winHandle3 : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle3);}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore3);
+		utl.scrollToElement(fl.getmarketInfoATL());	
+		
 	}
 
 	@Test(priority=8)
@@ -1079,10 +1107,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
-
-
-

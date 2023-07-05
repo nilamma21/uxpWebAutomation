@@ -34,6 +34,8 @@ public class UXPLandingPage {
 	
 	public WebElement getIUnderstandBtn() throws InterruptedException {
 		Thread.sleep(3000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(iunderstandbtn));
 		return driver.findElement(iunderstandbtn);		
 	}
 	

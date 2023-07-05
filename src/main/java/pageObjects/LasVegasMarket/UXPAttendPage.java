@@ -21,10 +21,10 @@ public class UXPAttendPage {
 	By Hotels = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[3]/div[1]/a[1]"); //Locator for Hotels under Attend
 	By Travel = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[3]/div[2]/a[1]"); //Locator for Travel under Attend
 	By MarketPlanner = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[4]/div[1]/a[1]"); //Locator for MarketPlanner under Attend
-	By Dining = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[4]/div[2]/a[1]"); //Locator for Dining under Attend
-	By Amenities = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[4]/div[3]/a[1]"); //Locator for Amenities under Attend
-	By Accessibility = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[4]/div[4]/a[1]"); //Locator for Accessibility under Attend
-	By DownloadApp = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[4]/div[5]/a[1]"); //Locator for DownloadApp under Attend
+	By Dining = By.xpath("//div[contains(@class,'imc-navigation-col')]/div/a[contains(text(),'Dining')]"); //Locator for Dining under Attend
+	By Amenities = By.xpath("//div[contains(@class,'imc-navigation-col')]/div/a[contains(text(),'Amenities & Services')]"); //Locator for Amenities under Attend
+	By Accessibility = By.xpath("//div[contains(@class,'imc-navigation-col')]/div/a[contains(text(),'Accessibility and ADA')]"); //Locator for Accessibility under Attend
+	By DownloadApp = By.xpath("//div[contains(@class,'imc-navigation-col')]/div/a[contains(text(),'Download the App')]"); //Locator for DownloadApp under Attend
 	By VerifyAttendSection = By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[2]"); // Locator for Attend section verification
 	
 	
