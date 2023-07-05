@@ -68,17 +68,17 @@ public class ATLExhibitPage {
 	}
 
 	public WebElement getATLExhibitorResources() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorresources));
 		return driver.findElement(atlexhibitorresources);		
 	}
 	public WebElement getATLExhibitAtAtlanta() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitatatlanta));
 		return driver.findElement(atlexhibitatatlanta);		
 	}
 	public WebElement getATLApplyToExhibit() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlapplytoexhibit));
 		return driver.findElement(atlapplytoexhibit);		
 	}

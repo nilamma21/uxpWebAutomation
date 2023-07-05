@@ -24,7 +24,7 @@ public class UXPFooterLinksNavigationPage {
 	By pressCenterATL = By.xpath("//a[@href='/Markets/Press-Center']"); //Locator for Press Center in footer links
 	By ourBrandsATL = By.xpath("//a[@href='/exhibitor/directory']"); //Locator for Our brands in footer links ATL
 	
-	By DownloadTheApp = By.xpath("//a[contains(text(),'Download the App')]"); //Locator for Download The App in footer links
+	By DownloadTheApp = By.xpath("//a[contains(text(),'Download the @Market App')]"); //Locator for Download The App in footer links
 	By ContactUs = By.xpath("(//a[contains(text(),'Contact Us')])[2]"); //Locator for Contact Us in footer links
 	By ContactUsATL = By.xpath("//a[contains(text(),'Contact Us')]"); //Locator for Contact Us in footer links
 	
@@ -40,8 +40,8 @@ public class UXPFooterLinksNavigationPage {
 	By lvmlink_ATLM = By.xpath("//a[contains(@href,'https://www.lasvegas-apparel.com/')]"); //Locator for Las Vegas market footer link
 	
 	By AtlantaApparel = By.xpath("//a[contains(@href,'https://www.atlanta-apparel.com')]"); //Locator for Atlanta Apparel in footer links
-	By AtlantaMarket = By.xpath("//a[contains(@href,'https://www.atlantamarket.com/')]"); //Locator for Atlanta Matket in footer links
-	By HighPointMarket = By.xpath("//a[contains(@href,'https://www.imchighpointmarket.com')]"); //Locator for High Point Market in footer links
+	By AtlantaMarket = By.xpath("//div[contains(@class,'imc-accordion imc-vr--titan imc-category--heading')]//a[contains(text(),'Atlanta Market')]"); //Locator for Atlanta Matket in footer links
+	By HighPointMarket = By.xpath("//a[contains(@href,'https://www.highpointmarketandmore.com')]"); //Locator for High Point Market in footer links
 	By lvapplink = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com')])[2]"); //Locator for Las Vegas Apparel footer link
 	By InternationalMarketCenters = By.xpath("//a[contains(text(),'International Market Centers')]"); //Locator for International Market Centers in footer links
 	By JuniperMarket = By.xpath("//a[contains(@href,'https://www.junipermarket.com')]"); //Locator for Juniper Market  in footer links
@@ -64,7 +64,8 @@ public class UXPFooterLinksNavigationPage {
 	By lvmprivacypolicy = By.xpath("(//a[contains(text(),'Privacy Policy')])[position()=2]"); //Locator for Privacy Policy on LVM Footer
 	By ClosePopUpAmericasmart = By.xpath("//div[@class = ' contact-exit']"); //Locator for Close Pop Up after opening Americas Mart footer link
 	By atlprivacypolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); //Locator for Privacy Policy on LVM Footer
-	
+	By andmore = By.xpath("(//div[contains(@class,'imc-gallery__item imc-gallery__item--minheight imc-content-nav-container--column')]/div/p/a[contains(text(),'ANDMORE')])[2]"); //Locator for ANDMORE in footer links
+
 /*	By HighPointMarket = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[1]/div[1]/a[1]"); //Locator for High Point Market in footer links
 	By AtlantaMarket = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[2]/div[1]/a[1]"); //Locator for Atlanta Matket in footer links
 	By AtlantaApparel = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[3]/div[1]/a[1]"); //Locator for Atlanta Apparel in footer links
@@ -322,6 +323,12 @@ public class UXPFooterLinksNavigationPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(pressCenterAMC));
 		return driver.findElement(pressCenterAMC);
 	}	
+	public WebElement getandmore() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(andmore));;
+		return driver.findElement(andmore);
+
+	}
 	
 }
 
