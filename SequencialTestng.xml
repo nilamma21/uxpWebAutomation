@@ -9,7 +9,7 @@
 	<test thread-count="6" name="SequencialTest">
 		<classes>
 
- 			  <!-- <class name="PROD.LagVegasMarketSmokeTest_PROD" /> -->
+ 			  <class name="PROD.LagVegasMarketSmokeTest_PROD" />
 	<!-- 		<class name="PROD.AtlantaMarketSmokeTest_PROD" />
 			  <class name="PROD.AmericasMartSmokeTest_PROD" />	
 			<class name="PROD.AtlantaAppSmokeTest_PROD" />
@@ -21,10 +21,10 @@
 			    <class name="PROD.AmericasMartSmokeTest_PROD" />
 		 		<class name="PROD.AtlantaAppSmokeTest_PROD" />
 			  <class name="PROD.ExhibitorPortalSmokeTest_PROD" />-->
-	 	 	 <class name="PROD.SitecoreSmokeTest_PROD" />
+	 	 	 <class name="PROD.AmericasMartSmokeTest_PROD" />
 	 	 	 <methods>
-			 <!--  	<include name="TS001_EXP_VerifyExhibitorPortalLoginTest()"/>   
-	 	  		<include name="TS008_EXP_VerifyExhibitorPortalFooterLinksTest"/>  -->
+				<!-- <include name="TS001_EXP_VerifyExhibitorPortalLoginTest()"/>   --> 
+	 	 	  <include name="TS012_AMC_VerifyFooterLinksTest()"/>
 	 	 	 </methods>
 
 		</classes>
