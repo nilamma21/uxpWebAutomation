@@ -2,52 +2,52 @@
 <testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="59349" started-at="2023-07-05T07:01:01Z" finished-at="2023-07-05T07:02:00Z">
+  <suite name="SmokeTestSuite" duration-ms="82883" started-at="2023-07-11T11:12:59Z" finished-at="2023-07-11T11:14:22Z">
     <groups>
     </groups>
-    <test name="SequencialTest" duration-ms="59349" started-at="2023-07-05T07:01:01Z" finished-at="2023-07-05T07:02:00Z">
+    <test name="SequencialTest" duration-ms="82883" started-at="2023-07-11T11:12:59Z" finished-at="2023-07-11T11:14:22Z">
       <class name="PROD.SitecoreSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="initialize" is-config="true" duration-ms="4788" started-at="2023-07-05T12:31:01Z" finished-at="2023-07-05T12:31:06Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="initialize" is-config="true" duration-ms="3458" started-at="2023-07-11T16:42:59Z" finished-at="2023-07-11T16:43:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_SC_VerifySitecoreLoginTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS001_SC_VerifySitecoreLoginTest" duration-ms="16185" started-at="2023-07-05T12:31:06Z" finished-at="2023-07-05T12:31:22Z">
+        <test-method status="PASS" signature="TS001_SC_VerifySitecoreLoginTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS001_SC_VerifySitecoreLoginTest" duration-ms="17241" started-at="2023-07-11T16:43:03Z" finished-at="2023-07-11T16:43:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_SC_VerifySitecoreLoginTest -->
-        <test-method status="PASS" signature="TS002_SC_VerifyContentEditorTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS002_SC_VerifyContentEditorTest" duration-ms="9660" started-at="2023-07-05T12:31:22Z" finished-at="2023-07-05T12:31:32Z">
+        <test-method status="PASS" signature="TS002_SC_VerifyContentEditorTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS002_SC_VerifyContentEditorTest" duration-ms="5796" started-at="2023-07-11T16:43:20Z" finished-at="2023-07-11T16:43:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS002_SC_VerifyContentEditorTest -->
-        <test-method status="PASS" signature="TS003_SC_VerifyControlPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS003_SC_VerifyControlPanelTest" duration-ms="2570" started-at="2023-07-05T12:31:32Z" finished-at="2023-07-05T12:31:34Z">
+        <test-method status="PASS" signature="TS003_SC_VerifyControlPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS003_SC_VerifyControlPanelTest" duration-ms="8258" started-at="2023-07-11T16:43:26Z" finished-at="2023-07-11T16:43:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS003_SC_VerifyControlPanelTest -->
-        <test-method status="PASS" signature="TS004_SC_VerifyShowSpecialApprovalsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS004_SC_VerifyShowSpecialApprovalsTest" duration-ms="3419" started-at="2023-07-05T12:31:34Z" finished-at="2023-07-05T12:31:38Z">
+        <test-method status="PASS" signature="TS004_SC_VerifyShowSpecialApprovalsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS004_SC_VerifyShowSpecialApprovalsTest" duration-ms="7520" started-at="2023-07-11T16:43:34Z" finished-at="2023-07-11T16:43:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS004_SC_VerifyShowSpecialApprovalsTest -->
-        <test-method status="PASS" signature="TS005_SC_VerifyEmailExperienceManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS005_SC_VerifyEmailExperienceManagerTest" duration-ms="4992" started-at="2023-07-05T12:31:38Z" finished-at="2023-07-05T12:31:43Z">
+        <test-method status="PASS" signature="TS005_SC_VerifyEmailExperienceManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS005_SC_VerifyEmailExperienceManagerTest" duration-ms="8017" started-at="2023-07-11T16:43:41Z" finished-at="2023-07-11T16:43:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS005_SC_VerifyEmailExperienceManagerTest -->
-        <test-method status="PASS" signature="TS006_SC_VerifyIMCReportsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS006_SC_VerifyIMCReportsTest" duration-ms="3171" started-at="2023-07-05T12:31:43Z" finished-at="2023-07-05T12:31:46Z">
+        <test-method status="PASS" signature="TS006_SC_VerifyIMCReportsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS006_SC_VerifyIMCReportsTest" duration-ms="7606" started-at="2023-07-11T16:43:49Z" finished-at="2023-07-11T16:43:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS006_SC_VerifyIMCReportsTest -->
-        <test-method status="PASS" signature="TS007_SC_VerifyTaxonomyManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS007_SC_VerifyTaxonomyManagerTest" duration-ms="3534" started-at="2023-07-05T12:31:46Z" finished-at="2023-07-05T12:31:49Z">
+        <test-method status="PASS" signature="TS007_SC_VerifyTaxonomyManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS007_SC_VerifyTaxonomyManagerTest" duration-ms="9328" started-at="2023-07-11T16:43:57Z" finished-at="2023-07-11T16:44:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS007_SC_VerifyTaxonomyManagerTest -->
-        <test-method status="PASS" signature="TS008_SC_VerifyExhibitorEventsApprovalTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS008_SC_VerifyExhibitorEventsApprovalTest" duration-ms="2568" started-at="2023-07-05T12:31:49Z" finished-at="2023-07-05T12:31:52Z">
+        <test-method status="PASS" signature="TS008_SC_VerifyExhibitorEventsApprovalTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS008_SC_VerifyExhibitorEventsApprovalTest" duration-ms="7406" started-at="2023-07-11T16:44:06Z" finished-at="2023-07-11T16:44:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS008_SC_VerifyExhibitorEventsApprovalTest -->
-        <test-method status="PASS" signature="TS009_SC_VerifyDigitalAdminPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS009_SC_VerifyDigitalAdminPanelTest" duration-ms="5429" started-at="2023-07-05T12:31:52Z" finished-at="2023-07-05T12:31:57Z">
+        <test-method status="PASS" signature="TS009_SC_VerifyDigitalAdminPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="TS009_SC_VerifyDigitalAdminPanelTest" duration-ms="8214" started-at="2023-07-11T16:44:14Z" finished-at="2023-07-11T16:44:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS009_SC_VerifyDigitalAdminPanelTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="tearDown" is-config="true" duration-ms="2989" started-at="2023-07-05T12:31:57Z" finished-at="2023-07-05T12:32:00Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@e25b2fe]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-07-11T16:44:22Z" finished-at="2023-07-11T16:44:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
