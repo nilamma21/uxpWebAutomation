@@ -39,7 +39,7 @@ public class ATLAttendPage {
 	
 	public WebElement getATLAttendTab() throws InterruptedException {
 		Thread.sleep(10000);
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendTab));
 		return driver.findElement(ATLAttendTab);
 	}
