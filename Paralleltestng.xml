@@ -5,13 +5,13 @@
 
 	<test thread-count="1" name="Parallel Test">
 		<classes>
- 	 		<!-- <class name="PROD.LagVegasMarketSmokeTest_PROD" /> -->
+ 	 		<!-- <class name="PROD.LagVegasMarketSmokeTest_PROD" /> 
 		 	<class name="PROD.AtlantaMarketSmokeTest_PROD" />
- 			<!-- <class name="PROD.AmericasMartSmokeTest_PROD" />
+ 			<class name="PROD.AmericasMartSmokeTest_PROD" />
  			<class name="PROD.AtlantaAppSmokeTest_PROD" />
 			<class name="PROD.ExhibitorPortalSmokeTest_PROD" />
-			<class name="PROD.SitecoreSmokeTest_PROD" />
-			<class name="PROD.LasVegasAppSmokeTest_PROD" /> -->
+			<class name="PROD.SitecoreSmokeTest_PROD" />-->
+			<class name="PROD.LasVegasAppSmokeTest_PROD" /> 
 		</classes>
 	</test>
 </suite>
