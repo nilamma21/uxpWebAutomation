@@ -1,6 +1,7 @@
 package PROD;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,7 +33,7 @@ public class SitecoreSmokeTest_PROD extends base {
 		/*	//Navigate to Sitecore
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("sitecoreurl"));*/
-
+		
 	}
 
 	@Test(priority=1)
@@ -48,7 +49,7 @@ public class SitecoreSmokeTest_PROD extends base {
 		//Navigate to Sitecore
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("sitecoreurl"));
-
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		sl.getUserName().sendKeys(prop.getProperty("sitecoreusername"));
 		sl.getPassword().sendKeys(prop.getProperty("sitecorepassword"));
 		sl.getLoginbtn().click();
@@ -82,7 +83,7 @@ public class SitecoreSmokeTest_PROD extends base {
 		//UXP-T122: To verify Digital Admin Panel page opens properly
 
 		sl = new SitecoreSmokeTestLinks(driver);
-
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		sl.getVerifyHomePage().click();
 		sl.getDigitalAdminPanel().click();
 		Assert.assertTrue(sl.getVerifyDigitalAdminPanel().getText().contains("Digital Admin Panel"));

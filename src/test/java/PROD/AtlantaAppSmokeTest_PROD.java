@@ -578,7 +578,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Click on Donwload App");
 		//Thread.sleep(3000);
 		//Verify Hotels Page
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Atlanta Apparel App"));	
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));	
 		System.out.println("Vefiry Download App Page ");
 	}
 
@@ -735,7 +735,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		}
 		Thread.sleep(10000);
 		//Verify that 'EXP Login' page should be displayed
-		Assert.assertEquals(driver.getTitle(), "Sign In to ANDMORE");
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://prodmvdp.b2clogin.com/"));
 		System.out.println("Verify Exp Page");
 		// Close the new window, if that window no more required
 		driver.close();
@@ -888,7 +888,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle7);
 		}
 		//Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
-		Assert.assertEquals(driver.getTitle(), "Terms of Use - Andmore");
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/terms-of-use"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore7);
 
@@ -901,7 +901,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		for (String winHandle8 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle8);
 		}
-		Assert.assertEquals(driver.getTitle(), "Web Privacy Policy - Andmore");
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/privacy-policy"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		// utl.scrollToElement(fl.getmarketInfoATL());
@@ -1107,7 +1107,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

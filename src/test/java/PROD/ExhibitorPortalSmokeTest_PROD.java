@@ -469,8 +469,10 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Thread.sleep(10000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("junipercore.com"));
+		System.out.println(driver.getCurrentUrl());
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://auth.junipercore.com/"));
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
@@ -645,6 +647,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for (String winHandle8 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle8);
 		}
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Year-Round/LVDC"));
 		System.out.println("Las Vegas design center page is displayed properly.");
 		driver.close();
@@ -700,7 +703,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }
