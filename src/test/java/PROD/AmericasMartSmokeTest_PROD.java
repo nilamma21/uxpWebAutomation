@@ -720,7 +720,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);}
 		Thread.sleep(10000);
-		Assert.assertTrue(driver.getTitle().contains("Sign In to ANDMORE"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://prodmvdp.b2clogin.com/"));
 		System.out.println("Page opened successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
