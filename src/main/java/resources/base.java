@@ -25,8 +25,8 @@ public class base {
 	// this is base class page where driver is initialized and data.properties mentioned. 
 	// this class holds all the functions that commonly used by other pages.
 
-	//public static WebDriver driver;
-	public WebDriver driver; //For parallel execution [not working with screenshot code]
+	public static WebDriver driver;
+	//public WebDriver driver; //For parallel execution [not working with screenshot code]
 	public static Properties prop;
 
 	public static void chromeVersion() throws IOException {
