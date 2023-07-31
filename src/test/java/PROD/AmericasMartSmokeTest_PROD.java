@@ -338,11 +338,23 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.verifyCloseBtnPopup();
 		//Click Markets and Events tab at Header
 		//Thread.sleep(3000);
+		
+		atat.getATLAttendTab().click();
+
+		//Click Attend our next market tab under Markets and Events section
+
+		amme.getattendournextmarket().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://compass.onpeak.com/"));
+		System.out.println("Attend our next market section is displayed properly");
+		driver.get(prop.getProperty("ammarturl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		utl.verifyCloseBtnPopup();
+		
 		atat.getATLAttendTab().click();
 
 		//Click Market Dates and Hours tab under Markets and Events section
 
-		atat.getATLWhyAttend().click();
+		amme.getMarketDatesAndHour().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market Dates and Hours");
 		System.out.println("Market Dates and Hours section is displayed properly");
 
@@ -464,7 +476,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for (String winHandle7 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle7);
 		}
-		Assert.assertEquals(driver.getTitle(), "Terms of Use - Andmore");
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/terms-of-use"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore7);
 
@@ -477,7 +489,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for (String winHandle8 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle8);
 		}
-		Assert.assertEquals(driver.getTitle(), "Web Privacy Policy - Andmore");
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/privacy-policy"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		// utl.scrollToElement(fl.marketInfoAMC());
@@ -517,7 +529,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.highpointmarketandmore.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		driver.get(prop.getProperty("ammarturl"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
@@ -579,7 +591,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		lp = new UXPLoginPage(driver);
 		gs = new UXPGlobalSearchPage(driver);
 		atlgs = new ATLGlobalSearchPage(driver);
-
+		
+		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.verifyCloseBtnPopup();
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -804,7 +817,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

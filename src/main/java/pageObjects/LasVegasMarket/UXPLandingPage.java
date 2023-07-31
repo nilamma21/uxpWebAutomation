@@ -15,6 +15,7 @@ public class UXPLandingPage {
 	By iunderstandbtn = By.xpath("//button[@id='gdpr-btn']"); //Locator for I Understand button
 	By mpsignoutbtn = By.xpath("(//a[@href='/imc-api/account/v1/logout'])[position()=1]"); //Locator for Sign out button
 	By closemrktadbtn = By.xpath("//div[@class=' contact-exit']"); //Locator for Close button of Market ad
+	By planYourMarket = By.xpath("//span[@title='Plan Your Market']");//Locator for plan your market
 
 	public UXPLandingPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -47,5 +48,10 @@ public class UXPLandingPage {
 	public WebElement getCloseMarktAdBtn() throws InterruptedException{
 		Thread.sleep(5000);
 		return driver.findElement(closemrktadbtn);		
+	}
+	public WebElement getplanYourMarket() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(planYourMarket));
+		return driver.findElement(planYourMarket);
 	}
 }

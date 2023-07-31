@@ -42,22 +42,20 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//DOMConfigurator.configure("log4j.xml");
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
-		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//Navigate to Las Vegas Apparel Site
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lap.getIUnderstandBtn().click();
 	}
 	
-	@Test
+
+	@Test(priority=12)
 	public void TS001_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException{
 		//The purpose of this test case to verify:-
-		//UXP-TS009: To verify all channels links in Header
+		//UXP-TS513: To verify all channels links in Header
 
 		lvach = new LVAAllChannelsLinksPage(driver);
-		
 		driver.get(prop.getProperty("lvmappurl"));
-		utl.verifyCloseBtnPopup();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 
@@ -91,8 +89,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 
 		//Click IMC High Point Market channel link and verify result
 		lvach.getHighPoint().click();
-		Thread.sleep(1000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.highpointmarketandmore.com/"));
+		Thread.sleep(4000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		System.out.println("High Point Market channel link is working properly.");
 		driver.get(prop.getProperty("lvmappurl"));
 		utl.verifyCloseBtnPopup();
@@ -116,18 +114,19 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Thread.sleep(6000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets/Formal-Markets"));
 		System.out.println("Las Vegas Apparel channel link is working properly.");
-		driver.get(prop.getProperty("lvmappurl"));
+		
 
 	}
 	
-	@Test
+	@Test(priority=2)
 	public void TS002_LVMApp_VerifyGlobalSearchFunctionalityTest() throws InterruptedException {
 		//The purpose of this test case to verify:-
-		//UXP-T04: To verify global search functionality
+		//UXP-T512: To verify global search functionality
 		
 		lvags = new LVAGlobalSearchPage(driver);
+		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		lvags.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		lvags.getSearchButton().click();
@@ -137,22 +136,41 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
-		driver.get(prop.getProperty("lvmappurl"));
+		
 	}
 	
-	@Test(enabled=false)
+	@Test(enabled=false)//priority=3
 	public void TS003_ATLApp_VerifyExhibitorDirectoryTest() throws InterruptedException {
 		
 
 	}
 	
-	@Test
+	@Test(priority=11)
+	public void TS010_LVM_PlanYourMarkett() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T786: To verify Plan Your Market
+		lap = new UXPLandingPage(driver);
+		driver.get(prop.getProperty("lvmappurl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Verify Plan your market link is working properly
+		lap.getplanYourMarket().click();
+		Thread.sleep(2000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/App"));
+		System.out.println("Plan Your Market page is working properly.");
+		
+	}
+	
+	
+	@Test(priority=5)
 	public void TS004_LVMApp_VerifyAllLinksUnderAboutTabTest () throws InterruptedException {
 		
 		//The purpose of this test case to verify:-
-		//UXP-T06: To verify Markets Tab
+		//UXP-T508: To verify About Tab
 
 		 lvaat = new LVAAboutTab(driver);
+		 driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 
@@ -192,12 +210,16 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Verify Contact Us Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("Contact-Us"));
 		System.out.println("Verify Complete Contact Us Page");		
+		
 	}
 	
-	@Test
+	@Test(priority=6)
 	public void TS005_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest () throws InterruptedException {
+		//The purpose of this test case to verify:-
+		//UXP-T509: To verify Attend Tab
 		
 		lvaept = new LVAExhibitorAndProductTab(driver);
+		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(4000);
 /*
@@ -239,12 +261,14 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test
+	@Test(priority=7)
 	public void TS006_LVMApp_VerifyAllLinksUnderAttendTabTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
-		//UXP-T08: To verify Attend Tab
+		//UXP-T507: To verify Attend Tab
 		lvaa = new LVAAttendPage(driver);
+		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
 		Thread.sleep(3000);
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
@@ -319,12 +343,16 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Verify Hotels Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("#hotels"));
 		System.out.println("Vefiry Hotels Page");
+		
 	}
 	
-	@Test
+	@Test(priority=8)
 	public void TS007_LVMApp_VerifyAllLinksUnderExhibitTabTest () throws InterruptedException {
+		//The purpose of this test case to verify:-
+		//UXP-T506: To verify Exhibit Tab
 		
 		lvaet = new LVAExhibitTab(driver);
+		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 		
@@ -334,8 +362,10 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvaet.getLVAExhibitorPortalLogin().click();
 		System.out.println("click on Exhibitor Portal Login");
 		//Verify Exhibitor Portal Login Page
+		Thread.sleep(2000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://prodmvdp.b2clogin.com/"));
 		driver.navigate().back();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 	//Verify Exhibitor Portal Guide
 		lvaet.getLVAExhibitTab().click();
@@ -389,14 +419,13 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test
+	@Test(priority=9)
 	public void TS008_LVMApp_VerifyFooterLinksTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
-		//UXP-Ts012: To verify Footer Links Navigation
+		//UXP-T510 : To verify Footer Links Navigation
 	
 		lvafl = new LVAFooterLinksNavigationPage(driver);
 		utl=new Utility(driver);
-		
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -522,7 +551,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		for (String winHandle8 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle8);
 		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.highpointmarketandmore.com/"));
+		Thread.sleep(2000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		utl.scrollToElement(lvafl.marketInfoAMC());
@@ -553,12 +583,13 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		utl.scrollToElement(lvafl.marketInfoAMC());	
 	}
 	
-	@Test
+	@Test(priority=10)
 	public void TS009_LVMApp_VerifySocialMediaLinksTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
-		//UXP-T013: To verify the all social media links and it's redirection
+		//UXP-T511: To verify the all social media links and it's redirection
 
 		atlfo=new ATLAppFooterLinksNavigationPage(driver);
+		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Scroll till footer links
@@ -602,7 +633,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
