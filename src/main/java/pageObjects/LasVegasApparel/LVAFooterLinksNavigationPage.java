@@ -21,7 +21,7 @@ public class LVAFooterLinksNavigationPage {
 	By AtlantaApparel = By.xpath("(//a[contains(@href,'https://www.atlanta-apparel.com')])[2]"); //Locator for Atlanta Apparel in footer links
 	By AtlantaMarket = By.xpath("//div[contains(@class,'imc-accordion imc-vr--titan imc-category--heading')]//a[contains(text(),'Atlanta Market')]"); //Locator for Atlanta Matket in footer links
 	By CasualMarket = By.xpath("(//a[contains(text(),'Casual Market Atlanta')])[2]");
-	By HighPointMarket = By.xpath("//a[contains(@href,'https://www.highpointmarketandmore.com')]"); //Locator for High Point Market in footer links
+	By HighPointMarket = By.xpath("(//a[contains(text(),'ANDMORE at High Point Market')])[2]"); //Locator for High Point Market in footer links
 	By lvmlink_ATL = By.xpath("(//a[contains(text(),'Las Vegas Market')])[2]"); //Locator for Las Vegas market footer link
 	By andmore = By.xpath("(//div[contains(@class,'imc-gallery__item imc-gallery__item--minheight imc-content-nav-container--column')]/div/p/a[contains(text(),'ANDMORE')])[2]"); //Locator for ANDMORE in footer links
 	By marketInfoAMC = By.xpath("//a[@href='/about']"); //Locator for Market information in footer links AMC
