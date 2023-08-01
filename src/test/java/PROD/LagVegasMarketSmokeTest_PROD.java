@@ -608,7 +608,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.highpointmarketandmore.com"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		//driver.close();
 		driver.switchTo().window(winHandleBefore4);
 		driver.get(prop.getProperty("lvmurl"));
@@ -677,7 +677,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Directory is opened properly.");
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");
@@ -990,7 +990,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		hd.getHighPoint().click();
 		Thread.sleep(7000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.highpointmarketandmore.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		System.out.println("IMC High Point channel link is working properly.");
 		driver.get(prop.getProperty("lvmurl"));
 
@@ -1000,6 +1000,22 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas"));
 		System.out.println("Las Vegas Market channel link is working properly.");
 
+	}
+	
+	@Test(priority=3)
+	public void TS014_LVM_PlanYourMarkett() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T782: To verify Exhibitor Directory
+		lap = new UXPLandingPage(driver);
+		
+		driver.get(prop.getProperty("lvmurl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Verify Plan your market link is working properly
+		lap.getplanYourMarket().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend/App"));
+		System.out.println("Plan Your Market page is working properly.");
 	}
 
 	/*@AfterSuite
@@ -1012,7 +1028,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

@@ -10,7 +10,7 @@ public class LVAAttendPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By LVAAttendTab = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[1]/a[1]"); // Locator for Attend tab in header
+	By LVAAttendTab = By.xpath("(//a[contains(text(),'Attend')])[1]"); // Locator for Attend tab in header
 	By LVADining = By.xpath("//a[contains(text(),'Dining')]");
 	By LVATravel = By.xpath("//a[@href='/Attend/Travel']"); //Locator for Travel link
 	By LVADiningGuide = By.xpath("//a[@href='/Attend/Dining']"); //Locator for Dining Guide link

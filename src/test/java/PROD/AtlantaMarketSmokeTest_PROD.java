@@ -176,8 +176,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atled = new ATLExhibitorDirectoryPage(driver);
 		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
 
+		driver.get(prop.getProperty("atlmrkturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		//Verify exhibitor data is displayed or not as per search criteria
 
 		atled.getATLExhibitorDirectory().click();
@@ -199,7 +199,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//UXP-T006: To verify links for Market info tab at Header
 
 		atlmi = new ATLMarketInfoPage(driver);
-
+		driver.get(prop.getProperty("atlmrkturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Market Info tab at Header
@@ -340,69 +340,55 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlmrkturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);					
 
-		Thread.sleep(500);
+		Thread.sleep(2000);
+		
 		//Click on Exhibit tab
 		atlexh.getATLExhibitTab().click();
-
 		//Click on Exhibit at Atlanta Market sub-menu
 		atlexh.getATLExhibitAtAtlanta().click();
-
 		//Verify that Exhibit page should be displayed
 		Assert.assertTrue(atlexh.getATLExhibitBrdcrumb().isDisplayed());
 
 		//Click on Exhibit tab
 		atlexh.getATLExhibitTab().click();
-
 		//Click on 'Why Exhibit?' sub-menu
 		atlexh.getATLWhyExhibitMenu().click();
-
 		//Verify that 'Exhibit' page should be displayed
 		Assert.assertTrue(atlexh.getATLExhibitBrdcrumb().isDisplayed());
 
 		//Click on Exhibit tab
 		atlexh.getATLExhibitTab().click();
-
 		//Click on 'Apply to Exhibit' sub-menu
 		atlexh.getATLApplyToExhibit().click();
-
 		//Verify that 'Apply to exhibit' page should be displayed
 		Assert.assertEquals(atlexh.getATLApplyToExhibitBrdcrmb().getText(), "Apply to Exhibit");
 
 		//Click on Exhibit tab
 		atlexh.getATLExhibitTab().click();
-
 		//Click on 'Exhibitor Registration' link
 		atlexh.getATLExhibitorRegtnMenu().click();
-
 		//Verify that Exhibitor Registration page should be displayed
 		Assert.assertTrue(atlexh.getATLExhRegstnBrdcrmb().getText().contains("Exhibitor Registration"));
 
 		//Click on Exhibit tab
 		atlexh.getATLExhibitTab().click();
-
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
-
 		//Click on Exhibitor Portal Login' sub-menu
 		atlexh.getATLExhibitorPortalLoginMenu().click();
-
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(atlexh.getATLEXPLoginPageTitle().isDisplayed());
-
 		// Close the new window, if that window no more required
 		driver.close();
-
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 
 		//Click on Exhibitor Resources sub-menu
 		atlexh.getATLExhibitorResources().click();
-
 		//Verify that Exhibitor Resources page should be displayed
 		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Exhibitor Resources"));
 
@@ -457,7 +443,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Click IMC High Point Market channel link and verify result
 		atlch.getHighPoint().click();
 		Thread.sleep(1000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.highpointmarketandmore.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		System.out.println("High Point Market channel link is working properly.");
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.verifyCloseBtnPopup();
@@ -667,7 +653,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.highpointmarketandmore.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
 		utl.scrollToElement(fl.getmarketInfo());
@@ -891,6 +877,22 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			e.printStackTrace();
 		}
 */		
+	}
+	
+	@Test(priority=2)
+	public void TS014_LVM_PlanYourMarkett() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T783: To verify Exhibitor Directory
+		lap = new UXPLandingPage(driver);
+		
+		driver.get(prop.getProperty("lvmurl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Verify Plan your market link is working properly
+		lap.getplanYourMarket().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend/App"));
+		System.out.println("Plan Your Market page is working properly.");
 	}
 
 
