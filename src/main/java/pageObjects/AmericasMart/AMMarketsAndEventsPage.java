@@ -18,6 +18,8 @@ public class AMMarketsAndEventsPage {
 	By amcspringcashcarry = By.xpath("(//a[@href='/Markets/Spring-Cash-and-Carry'])[position()=1]"); //Locator for Spring Cash & Carry sub menu
 	By amcfallmarket = By.xpath("(//a[@href='/Markets/Fall-Market'])[position()=1]"); //Locator for Fall Market sub menu
 	By atlantamarket = By.xpath("(//a[@href='https://atlantamarket.com/'])[position()=2]"); //Locator for Atlanta Market logo
+	By attendournextmarket = By.xpath("//a[contains(text(),'Attend Our Next Market')]");
+	By MarketDatesAndHour = By.xpath("//a[contains(text(),'Market Dates & Hours')]");
 	
 	public AMMarketsAndEventsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -59,5 +61,15 @@ public class AMMarketsAndEventsPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(amcfallmarket));
 		return driver.findElement(amcfallmarket);
+	}
+	public WebElement getattendournextmarket() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(attendournextmarket));
+		return driver.findElement(attendournextmarket);
+	}
+	public WebElement getMarketDatesAndHour() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MarketDatesAndHour));
+		return driver.findElement(MarketDatesAndHour);
 	}
 }

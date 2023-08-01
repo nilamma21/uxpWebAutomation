@@ -28,18 +28,18 @@ public class EXPDigitalShowroomTabPage
 	} 
 
 	public WebElement getEXPYourDigiShowroom() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(EXPYourDigiShowroom));
 		return driver.findElement(EXPYourDigiShowroom);
 	}
 	
 	public WebElement getEXPProfileInfo() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(EXPProfileInfo));
 		return driver.findElement(EXPProfileInfo);
 	}
 	public WebElement getEXPYourDigiShowroomAllHeader() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		//wait.until(ExpectedConditions.elementToBeClickable(EXPYourDigiShowroomAllHeader));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPYourDigiShowroomAllHeader));
 		return driver.findElement(EXPYourDigiShowroomAllHeader);

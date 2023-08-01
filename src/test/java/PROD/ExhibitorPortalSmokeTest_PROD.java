@@ -66,12 +66,11 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		el = new EXPLoginPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		//Navigate to Exhibitor Portal
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("expurl"));
-		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		//Login to EXP
 		el.getEmailAddress().sendKeys(prop.getProperty("username"));
 		el.getPassword().sendKeys(prop.getProperty("password"));
@@ -470,7 +469,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle);
 		}
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		Thread.sleep(10000);
+		Thread.sleep(12000);
 		System.out.println(driver.getCurrentUrl());
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://auth.junipercore.com/"));
 		// Close the new window, if that window no more required
@@ -496,7 +495,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		el=new EXPLoginPage(driver);
 		mar=new EXPMarketTabPage(driver);
 		st=new EXPSettingsPage(driver);
-
+		driver.get(prop.getProperty("expurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on Registration And Services Tab 
@@ -608,7 +607,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle);
 		}
 		Thread.sleep(8000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.highpointmarketandmore.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		System.out.println("Atlanta market page is displayed properly.");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
@@ -703,7 +702,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
