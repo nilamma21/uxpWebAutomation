@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-SmokeTestSuite">
-              <span class="suite-name border-passed">SmokeTestSuite</span>
+              <span class="suite-name border-failed">SmokeTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,61 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods,   9 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-SmokeTestSuite" class="hide-methods passed suite-SmokeTestSuite"> (hide)</a> <!-- hide-methods passed suite-SmokeTestSuite -->
-                      <a href="#" panel-name="suite-SmokeTestSuite" class="show-methods passed suite-SmokeTestSuite"> (show)</a> <!-- show-methods passed suite-SmokeTestSuite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-SmokeTestSuite" class="hide-methods failed suite-SmokeTestSuite"> (hide)</a> <!-- hide-methods failed suite-SmokeTestSuite -->
+                      <a href="#" panel-name="suite-SmokeTestSuite" class="show-methods failed suite-SmokeTestSuite"> (show)</a> <!-- show-methods failed suite-SmokeTestSuite -->
                     </span>
-                    <div class="method-list-content passed suite-SmokeTestSuite">
+                    <div class="method-list-content failed suite-SmokeTestSuite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS001_SC_VerifySitecoreLoginTest">TS001_SC_VerifySitecoreLoginTest</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.AmericasMartSmokeTest_PROD" hash-for-method="TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest">TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS002_SC_VerifyContentEditorTest">TS002_SC_VerifyContentEditorTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS003_SC_VerifyControlPanelTest">TS003_SC_VerifyControlPanelTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS004_SC_VerifyShowSpecialApprovalsTest">TS004_SC_VerifyShowSpecialApprovalsTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS005_SC_VerifyEmailExperienceManagerTest">TS005_SC_VerifyEmailExperienceManagerTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS006_SC_VerifyIMCReportsTest">TS006_SC_VerifyIMCReportsTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS007_SC_VerifyTaxonomyManagerTest">TS007_SC_VerifyTaxonomyManagerTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS008_SC_VerifyExhibitorEventsApprovalTest">TS008_SC_VerifyExhibitorEventsApprovalTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTestSuite" title="PROD.SitecoreSmokeTest_PROD" hash-for-method="TS009_SC_VerifyDigitalAdminPanelTest">TS009_SC_VerifyDigitalAdminPanelTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-SmokeTestSuite -->
+                    </div> <!-- method-list-content failed suite-SmokeTestSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -156,77 +116,93 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SmokeTestSuite" class="panel SmokeTestSuite">
-          <div class="suite-SmokeTestSuite-class-passed">
+          <div class="suite-SmokeTestSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">PROD.SitecoreSmokeTest_PROD</span>
+              <img src="failed.png"/>
+              <span class="class-name">PROD.AmericasMartSmokeTest_PROD</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS001_SC_VerifySitecoreLoginTest">
-                  </a> <!-- TS001_SC_VerifySitecoreLoginTest -->
-                  <span class="method-name">TS001_SC_VerifySitecoreLoginTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS002_SC_VerifyContentEditorTest">
-                  </a> <!-- TS002_SC_VerifyContentEditorTest -->
-                  <span class="method-name">TS002_SC_VerifyContentEditorTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS003_SC_VerifyControlPanelTest">
-                  </a> <!-- TS003_SC_VerifyControlPanelTest -->
-                  <span class="method-name">TS003_SC_VerifyControlPanelTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS004_SC_VerifyShowSpecialApprovalsTest">
-                  </a> <!-- TS004_SC_VerifyShowSpecialApprovalsTest -->
-                  <span class="method-name">TS004_SC_VerifyShowSpecialApprovalsTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS005_SC_VerifyEmailExperienceManagerTest">
-                  </a> <!-- TS005_SC_VerifyEmailExperienceManagerTest -->
-                  <span class="method-name">TS005_SC_VerifyEmailExperienceManagerTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS006_SC_VerifyIMCReportsTest">
-                  </a> <!-- TS006_SC_VerifyIMCReportsTest -->
-                  <span class="method-name">TS006_SC_VerifyIMCReportsTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS007_SC_VerifyTaxonomyManagerTest">
-                  </a> <!-- TS007_SC_VerifyTaxonomyManagerTest -->
-                  <span class="method-name">TS007_SC_VerifyTaxonomyManagerTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS008_SC_VerifyExhibitorEventsApprovalTest">
-                  </a> <!-- TS008_SC_VerifyExhibitorEventsApprovalTest -->
-                  <span class="method-name">TS008_SC_VerifyExhibitorEventsApprovalTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS009_SC_VerifyDigitalAdminPanelTest">
-                  </a> <!-- TS009_SC_VerifyDigitalAdminPanelTest -->
-                  <span class="method-name">TS009_SC_VerifyDigitalAdminPanelTest</span>
+                  <a name="TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest">
+                  </a> <!-- TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest -->
+                  <span class="method-name">TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest</span>
+                  <div class="stack-trace"><b>"org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@class = &apos;imc-breadcrumb&apos;]/li[3]/a[1]&quot;}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir21964_2095232831}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:56916}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=115.0.5790.171, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: f05f2c37588b6c30311e2e92837e8878
+*** Element info: {Using=xpath, value=//ul[@class = &apos;imc-breadcrumb&apos;]/li[3]/a[1]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getVerifyExhibitorDirectory(UXPExhibitorsAndProductsTabPage.java:75)
+	at PROD.AmericasMartSmokeTest_PROD.TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest(AmericasMartSmokeTest_PROD.java:636)
+... Removed 28 stack frames<br/> org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@class = &apos;imc-breadcrumb&apos;]/li[3]/a[1]&quot;}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir21964_2095232831}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:56916}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=115.0.5790.171, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: f05f2c37588b6c30311e2e92837e8878
+*** Element info: {Using=xpath, value=//ul[@class = &apos;imc-breadcrumb&apos;]/li[3]/a[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getVerifyExhibitorDirectory(UXPExhibitorsAndProductsTabPage.java:75)
+	at PROD.AmericasMartSmokeTest_PROD.TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest(AmericasMartSmokeTest_PROD.java:636)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+"</b><br>sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br>sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)<br>sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)<br>java.lang.reflect.Constructor.newInstance(Unknown Source)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)<br>org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)<br>org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)<br>org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)<br>org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)<br>org.openqa.selenium.By$ByXPath.findElement(By.java:361)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)<br>pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getVerifyExhibitorDirectory(UXPExhibitorsAndProductsTabPage.java:75)<br>PROD.AmericasMartSmokeTest_PROD.TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest(AmericasMartSmokeTest_PROD.java:636)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)<br>
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SmokeTestSuite-class-passed -->
+          </div> <!-- suite-SmokeTestSuite-class-failed -->
         </div> <!-- panel SmokeTestSuite -->
         <div panel-name="test-xml-SmokeTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -239,7 +215,11 @@
 &lt;suite name=&quot;SmokeTestSuite&quot;&gt;
   &lt;test thread-count=&quot;6&quot; name=&quot;SequencialTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;PROD.SitecoreSmokeTest_PROD&quot;/&gt;
+      &lt;class name=&quot;PROD.AmericasMartSmokeTest_PROD&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest()&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- PROD.AmericasMartSmokeTest_PROD --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- SequencialTest --&gt;
 &lt;/suite&gt; &lt;!-- SmokeTestSuite --&gt;
@@ -279,43 +259,11 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(9);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS001_SC_VerifySitecoreLoginTest')
-data.setCell(0, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(0, 3, 35694);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TS005_SC_VerifyEmailExperienceManagerTest')
-data.setCell(1, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(1, 3, 9064);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TS009_SC_VerifyDigitalAdminPanelTest')
-data.setCell(2, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(2, 3, 8751);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TS002_SC_VerifyContentEditorTest')
-data.setCell(3, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(3, 3, 8666);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TS004_SC_VerifyShowSpecialApprovalsTest')
-data.setCell(4, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(4, 3, 8632);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TS003_SC_VerifyControlPanelTest')
-data.setCell(5, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(5, 3, 8574);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'TS007_SC_VerifyTaxonomyManagerTest')
-data.setCell(6, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(6, 3, 8429);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'TS008_SC_VerifyExhibitorEventsApprovalTest')
-data.setCell(7, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(7, 3, 7941);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'TS006_SC_VerifyIMCReportsTest')
-data.setCell(8, 2, 'PROD.SitecoreSmokeTest_PROD')
-data.setCell(8, 3, 7591);
+data.setCell(0, 1, 'TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest')
+data.setCell(0, 2, 'PROD.AmericasMartSmokeTest_PROD')
+data.setCell(0, 3, 72876);
 window.suiteTableData['SmokeTestSuite']= { tableData: data, tableDiv: 'times-div-SmokeTestSuite'}
 return data;
 }
@@ -335,9 +283,36 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-SmokeTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">11 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">PROD.AmericasMartSmokeTest_PROD</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TS004_AMC_VerifyAllLinksUnderExhibitTest</span>
+                <br/>
+                <span class="ignored-method-name">TS005_AMC_VerifyAllLinksUnderAboutTabTest</span>
+                <br/>
+                <span class="ignored-method-name">TS008_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest</span>
+                <br/>
+                <span class="ignored-method-name">TS006_AMC_VerifyAllHeaderChanelLinksTest</span>
+                <br/>
+                <span class="ignored-method-name">TS002_AMC_VerifyMarketPlannerProfileAndSettingsOptionTest</span>
+                <br/>
+                <span class="ignored-method-name">TS012_AMC_VerifyFooterLinksTest</span>
+                <br/>
+                <span class="ignored-method-name">TS003_AMC_VerifyMarketPlannerExhibitorPortalOptionTest</span>
+                <br/>
+                <span class="ignored-method-name">TS007_AMC_VerifyAllSocialMediaLinksOnFooterTest</span>
+                <br/>
+                <span class="ignored-method-name">TS001_AMC_VerifyMarketPlannerLoginTest</span>
+                <br/>
+                <span class="ignored-method-name">TS011_AMC_VerifyExhibitorDirectoryTest</span>
+                <br/>
+                <span class="ignored-method-name">TS009_AMC_VerifyGlobalSearchFunctionalityTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-SmokeTestSuite" class="panel">
@@ -346,50 +321,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">PROD.SitecoreSmokeTest_PROD</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">PROD.AmericasMartSmokeTest_PROD</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TS001_SC_VerifySitecoreLoginTest</span>
-                <span class="method-start">5084 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS002_SC_VerifyContentEditorTest</span>
-                <span class="method-start">40785 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS003_SC_VerifyControlPanelTest</span>
-                <span class="method-start">49453 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS004_SC_VerifyShowSpecialApprovalsTest</span>
-                <span class="method-start">58028 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS005_SC_VerifyEmailExperienceManagerTest</span>
-                <span class="method-start">66662 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS006_SC_VerifyIMCReportsTest</span>
-                <span class="method-start">75728 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS007_SC_VerifyTaxonomyManagerTest</span>
-                <span class="method-start">83321 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS008_SC_VerifyExhibitorEventsApprovalTest</span>
-                <span class="method-start">91751 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS009_SC_VerifyDigitalAdminPanelTest</span>
-                <span class="method-start">99693 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest</span>
+                <span class="method-start">36395 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">108445 ms</span>
+                <span class="method-start">109291 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
