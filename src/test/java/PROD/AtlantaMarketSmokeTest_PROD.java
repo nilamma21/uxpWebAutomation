@@ -78,8 +78,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Thread.sleep(3000);
 		utl.verifyCloseBtnPopup();
 	}
-
-	@Test(priority=1)
+	//Due to re-branding changes
+	@Test(enabled=false)//priority=1
 	public void TS001_ATL_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -99,8 +99,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Thread.sleep(6000);
 		utl.verifyCloseBtnPopup();
 	}
-
-	@Test(priority=2)
+	//Due to re-branding changes
+	@Test(enabled=false)//priority=2
 	public void TS002_ATL_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -137,8 +137,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
 	}
-
-	@Test(priority=4)
+	//Due to re-branding changes
+	@Test(enabled=false)//priority=4
 	public void TS004_ATL_VerifyMarketPlannerRegistrationsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -176,8 +176,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atled = new ATLExhibitorDirectoryPage(driver);
 		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
 
+		driver.get(prop.getProperty("atlmrkturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		//Verify exhibitor data is displayed or not as per search criteria
 
 		atled.getATLExhibitorDirectory().click();
@@ -199,7 +199,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//UXP-T006: To verify links for Market info tab at Header
 
 		atlmi = new ATLMarketInfoPage(driver);
-
+		driver.get(prop.getProperty("atlmrkturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Market Info tab at Header
@@ -238,7 +238,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Verify that Press Releases page should be displayed
 		Assert.assertTrue(atlmi.getATLPressCenterPageHeader().isDisplayed());
 
-		//Click Market Info tab at Header
+		//Due to re-branding changes
+/*		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
 
 		//Click on Atlanta Next sub-menu
@@ -246,6 +247,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Verify that Atlanta Next page should be displayed
 		Assert.assertTrue(atlmi.getATLAtlantaNextPageHeader().isDisplayed());
+*/
 
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
@@ -255,15 +257,17 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Verify that Video Gallery page should be displayed
 		Assert.assertTrue(atlmi.getATLVideoGalleryPageHeader().isDisplayed());
-
-		//Click Market Info tab at Header
+		
+		//Due to re-branding changes
+/*		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
 
 		//Click on Industry Partners sub-menu
 		atlmi.getATLIndustryPartSubMenu().click();
 
 		//Verify that Video Gallery page should be displayed
-		Assert.assertTrue(atlmi.getATLIndusPartPageHeader().isDisplayed());		
+		Assert.assertTrue(atlmi.getATLIndusPartPageHeader().isDisplayed());	
+*/	
 	}
 
 	@Test(priority=7)
@@ -332,71 +336,59 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		lap = new UXPLandingPage(driver);
 		atlexh = new ATLExhibitPage(driver);
+		
+		driver.get(prop.getProperty("atlmrkturl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);					
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);						
-
+		Thread.sleep(2000);
+		
 		//Click on Exhibit tab
 		atlexh.getATLExhibitTab().click();
-
 		//Click on Exhibit at Atlanta Market sub-menu
 		atlexh.getATLExhibitAtAtlanta().click();
-
 		//Verify that Exhibit page should be displayed
 		Assert.assertTrue(atlexh.getATLExhibitBrdcrumb().isDisplayed());
 
 		//Click on Exhibit tab
 		atlexh.getATLExhibitTab().click();
-
 		//Click on 'Why Exhibit?' sub-menu
 		atlexh.getATLWhyExhibitMenu().click();
-
 		//Verify that 'Exhibit' page should be displayed
 		Assert.assertTrue(atlexh.getATLExhibitBrdcrumb().isDisplayed());
 
 		//Click on Exhibit tab
 		atlexh.getATLExhibitTab().click();
-
 		//Click on 'Apply to Exhibit' sub-menu
 		atlexh.getATLApplyToExhibit().click();
-
 		//Verify that 'Apply to exhibit' page should be displayed
 		Assert.assertEquals(atlexh.getATLApplyToExhibitBrdcrmb().getText(), "Apply to Exhibit");
 
 		//Click on Exhibit tab
 		atlexh.getATLExhibitTab().click();
-
 		//Click on 'Exhibitor Registration' link
 		atlexh.getATLExhibitorRegtnMenu().click();
-
 		//Verify that Exhibitor Registration page should be displayed
 		Assert.assertTrue(atlexh.getATLExhRegstnBrdcrmb().getText().contains("Exhibitor Registration"));
 
 		//Click on Exhibit tab
 		atlexh.getATLExhibitTab().click();
-
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
-
 		//Click on Exhibitor Portal Login' sub-menu
 		atlexh.getATLExhibitorPortalLoginMenu().click();
-
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(atlexh.getATLEXPLoginPageTitle().isDisplayed());
-
 		// Close the new window, if that window no more required
 		driver.close();
-
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 
 		//Click on Exhibitor Resources sub-menu
 		atlexh.getATLExhibitorResources().click();
-
 		//Verify that Exhibitor Resources page should be displayed
 		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Exhibitor Resources"));
 
@@ -411,8 +403,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Verify that 'Juniper' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipercommerce.com/"));
 */
-		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		
 	}
 
 	@Test(priority=9)
@@ -422,8 +413,11 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//UXP-TS009: To verify all channels links in Header
 
 		atlch = new ATLAllChannelsLinksPage(driver);
-
+		
+		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 
 		//Click Atlanta Market channel link and verify result
 		atlch.getAtlantaMarket().click();
@@ -448,7 +442,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click IMC High Point Market channel link and verify result
 		atlch.getHighPoint().click();
-		Assert.assertTrue(driver.getTitle().contains("High Point"));
+		Thread.sleep(1000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		System.out.println("High Point Market channel link is working properly.");
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.verifyCloseBtnPopup();
@@ -465,8 +460,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Thread.sleep(6000);
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas Apparel"));
 		System.out.println("Las Vegas Apparel channel link is working properly.");
-		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		
 	}
 
 	@Test(priority=10)
@@ -477,7 +471,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		atlfl = new ATLFooterLinksNavigationPage(driver);
 		fl = new UXPFooterLinksNavigationPage(driver);
-
+		driver.get(prop.getProperty("atlmrkturl"));
+		utl.verifyCloseBtnPopup();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Scroll till footer links
@@ -526,7 +521,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		 
 	}
 
-	@Test(priority= 11)
+	@Test(priority= 14)
 	public void TS011_ATL_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -536,7 +531,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		fl = new UXPFooterLinksNavigationPage(driver);
 		atlfo=new ATLAppFooterLinksNavigationPage(driver);
 		utl=new Utility(driver);
-
+		
+		driver.get(prop.getProperty("atlmrkturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Scroll till footer links
@@ -599,7 +595,9 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		for (String winHandle7 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle7);
 		}
-		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
+		 //Due to re-Branding changes
+		//Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore7);
 
@@ -613,7 +611,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		for (String winHandle8 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle8);
 		}
-		Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "IMC PRIVACY STATEMENT");
+		//Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "IMC PRIVACY STATEMENT");
+		Assert.assertTrue(driver.getCurrentUrl().contains("privacy-policy"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		// utl.scrollToElement(fl.getmarketInfo());
@@ -633,7 +632,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlmrkturl"));
 		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
-		
+		Thread.sleep(500);
 		// Click Atlanta Apparel link and verify results
 		fl.getAtlantaApparel().click();
 		// Switch to new tab
@@ -642,8 +641,9 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle2);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(winHandleBefore2);
+		driver.get(prop.getProperty("atlmrkturl"));
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click on High Point Market link
@@ -653,7 +653,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
 		utl.scrollToElement(fl.getmarketInfo());
@@ -679,7 +679,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore11);
 		utl.scrollToElement(fl.getmarketInfo());		
 		
-		//Click International Market Centers link and verify results
+		//Due to re-branding changes
+/*		//Click International Market Centers link and verify results
 		fl.getInternationalMarketCenters().click();
 		//Switch to new tab
 		String winHandleBefore3 = driver.getWindowHandle();
@@ -691,7 +692,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		utl.scrollToElement(fl.getmarketInfo());		
 		
 		//Click Juniper Market Centers link and verify results
-	/*	fl.getJuniperMarket().click();
+		fl.getJuniperMarket().click();
 		//Switch to new tab
 		String winHandleBefore12 = driver.getWindowHandle();
 		for(String winHandle12 : driver.getWindowHandles()){
@@ -699,7 +700,19 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore12);
-		utl.scrollToElement(fl.getmarketInfo());	*/
+		utl.scrollToElement(fl.getmarketInfo());	
+*/
+		//Changes due to re-branding |  | New addeds
+		//Click ANDMORE link and verify results
+		fl.getandmore().click();
+		//Switch to new tab
+		String winHandleBefore3 = driver.getWindowHandle();
+		for(String winHandle3 : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle3);}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore3);
+		utl.scrollToElement(fl.getmarketInfo());		
 	}
 
 	@Test(priority=12)
@@ -711,7 +724,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		atat = new ATLAttendPage(driver);
-
+		
+		driver.get(prop.getProperty("atlmrkturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Attend tab at Header
@@ -793,13 +807,13 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click on News And Trends sub-menu and Verify Page
 		atlnt.getATLNewsAndTrendsSubmenu().click();
-		Assert.assertTrue(atlnt.getATLNewsAndTrendsPageHeader().getText().contains("News & Trends"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("News-and-Trends"));
 
 		//Click on News And Trends Tab
 		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLatlMarketSnapshot().click();
 		//Click on MarketSnapshot and Verify Page
-		Assert.assertTrue(atlnt.getATLMarketSnapshotPageHeader().getText().contains("Market Snapshot"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Snapshot"));
 		System.out.println("Market Snapshot page");
 
 		//Click on News And Trends Tab
@@ -812,7 +826,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Click on News And Trends Tab
 		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLatlAheadCurve().click();
-		Assert.assertTrue(atlnt.getATLAheadCurvePageHeader().getText().contains("Ahead of the Curve"));
+		//Assert.assertTrue(atlnt.getATLAheadCurvePageHeader().getText().contains("Ahead of the Curve"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Ahead-of-the-Curve"));
 		System.out.println("Ahead of the Curve page");
 
 		//Click on News And Trends Tab
@@ -826,21 +841,21 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLPressReleases().click();
 		//Click on Press Releases and Verify Page
-		Assert.assertTrue(atlnt.getATLPressReleasesPageHeader().getText().contains("Press Releases"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Press-Center"));
 		System.out.println("Press Releases page");
 
 		//Click on News And Trends Tab
 		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLPublicationsLibrary().click();
 		//Click on Publications Library and Verify Page
-		Assert.assertTrue(atlnt.getATLPublicationsLibraryPageHeader().getText().contains("Publications Library"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("publications"));
 		System.out.println("Publications Library page");
 
 		//Click on News And Trends Tab
 		atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLInTheNews().click();
 		//Click on In the News and Verify Page
-		Assert.assertTrue(atlnt.getATLInTheNewsPageHeader().getText().contains("In the News"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("In-the-News"));
 		System.out.println("In The News page");
 
 		//Click on News And Trends Tap
@@ -849,8 +864,9 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Click on Atlanta Next and Verify Page
 		Assert.assertTrue(atlnt.getATLAtlantaNextHeader().getText().contains("Atlanta Next"));
 		System.out.println("In Atlanta Next page");*/
-
-		//Click on News And Trends Tab
+		
+		//Due to re-branding changes
+/*		//Click on News And Trends Tab
 		atlnt.getATLNewsAndTrends().click();
 		//Click on Portman Peachtree and Verify Page
 		try {
@@ -860,6 +876,23 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		} catch (WebDriverException e) {
 			e.printStackTrace();
 		}
+*/		
+	}
+	
+	@Test(priority=2)
+	public void TS014_LVM_PlanYourMarkett() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T783: To verify Exhibitor Directory
+		lap = new UXPLandingPage(driver);
+		
+		driver.get(prop.getProperty("lvmurl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Verify Plan your market link is working properly
+		lap.getplanYourMarket().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend/App"));
+		System.out.println("Plan Your Market page is working properly.");
 	}
 
 

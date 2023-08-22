@@ -1,87 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="8" passed="7">
+<testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="342221" started-at="2023-05-15T10:40:35Z" finished-at="2023-05-15T10:46:17Z">
+  <suite name="SmokeTestSuite" duration-ms="110029" started-at="2023-08-01T09:54:47Z" finished-at="2023-08-01T09:56:37Z">
     <groups>
     </groups>
-    <test name="SequencialTest" duration-ms="342221" started-at="2023-05-15T10:40:35Z" finished-at="2023-05-15T10:46:17Z">
-      <class name="PROD.ExhibitorPortalSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@6eebc39e]" name="initialize" is-config="true" duration-ms="4556" started-at="2023-05-15T16:10:35Z" finished-at="2023-05-15T16:10:40Z">
+    <test name="SequencialTest" duration-ms="110029" started-at="2023-08-01T09:54:47Z" finished-at="2023-08-01T09:56:37Z">
+      <class name="PROD.SitecoreSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@77cd7a0]" name="initialize" is-config="true" duration-ms="5076" started-at="2023-08-01T15:24:47Z" finished-at="2023-08-01T15:24:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_EXP_VerifyExhibitorPortalLoginTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@6eebc39e]" name="TS001_EXP_VerifyExhibitorPortalLoginTest" duration-ms="32618" started-at="2023-05-15T16:10:40Z" finished-at="2023-05-15T16:11:12Z">
+        <test-method status="PASS" signature="TS001_SC_VerifySitecoreLoginTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@77cd7a0]" name="TS001_SC_VerifySitecoreLoginTest" duration-ms="35694" started-at="2023-08-01T15:24:52Z" finished-at="2023-08-01T15:25:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_EXP_VerifyExhibitorPortalLoginTest -->
-        <test-method status="PASS" signature="TS002_EXP_VerifyNotificationsTabTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@6eebc39e]" name="TS002_EXP_VerifyNotificationsTabTest" duration-ms="1936" started-at="2023-05-15T16:11:12Z" finished-at="2023-05-15T16:11:14Z">
+        </test-method> <!-- TS001_SC_VerifySitecoreLoginTest -->
+        <test-method status="PASS" signature="TS002_SC_VerifyContentEditorTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@77cd7a0]" name="TS002_SC_VerifyContentEditorTest" duration-ms="8666" started-at="2023-08-01T15:25:28Z" finished-at="2023-08-01T15:25:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_EXP_VerifyNotificationsTabTest -->
-        <test-method status="PASS" signature="TS008_EXP_VerifyExhibitorPortalFooterLinksTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@6eebc39e]" name="TS008_EXP_VerifyExhibitorPortalFooterLinksTest" duration-ms="207347" started-at="2023-05-15T16:11:14Z" finished-at="2023-05-15T16:14:42Z">
+        </test-method> <!-- TS002_SC_VerifyContentEditorTest -->
+        <test-method status="PASS" signature="TS003_SC_VerifyControlPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@77cd7a0]" name="TS003_SC_VerifyControlPanelTest" duration-ms="8574" started-at="2023-08-01T15:25:37Z" finished-at="2023-08-01T15:25:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_EXP_VerifyExhibitorPortalFooterLinksTest -->
-        <test-method status="PASS" signature="TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@6eebc39e]" name="TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest" duration-ms="23477" started-at="2023-05-15T16:14:42Z" finished-at="2023-05-15T16:15:05Z">
+        </test-method> <!-- TS003_SC_VerifyControlPanelTest -->
+        <test-method status="PASS" signature="TS004_SC_VerifyShowSpecialApprovalsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@77cd7a0]" name="TS004_SC_VerifyShowSpecialApprovalsTest" duration-ms="8632" started-at="2023-08-01T15:25:45Z" finished-at="2023-08-01T15:25:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest -->
-        <test-method status="PASS" signature="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@6eebc39e]" name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest" duration-ms="22353" started-at="2023-05-15T16:15:05Z" finished-at="2023-05-15T16:15:27Z">
+        </test-method> <!-- TS004_SC_VerifyShowSpecialApprovalsTest -->
+        <test-method status="PASS" signature="TS005_SC_VerifyEmailExperienceManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@77cd7a0]" name="TS005_SC_VerifyEmailExperienceManagerTest" duration-ms="9064" started-at="2023-08-01T15:25:54Z" finished-at="2023-08-01T15:26:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest -->
-        <test-method status="PASS" signature="TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@6eebc39e]" name="TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest" duration-ms="28971" started-at="2023-05-15T16:15:27Z" finished-at="2023-05-15T16:15:56Z">
+        </test-method> <!-- TS005_SC_VerifyEmailExperienceManagerTest -->
+        <test-method status="PASS" signature="TS006_SC_VerifyIMCReportsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@77cd7a0]" name="TS006_SC_VerifyIMCReportsTest" duration-ms="7591" started-at="2023-08-01T15:26:03Z" finished-at="2023-08-01T15:26:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest -->
-        <test-method status="PASS" signature="TS003_EXP_VerifySettingsTabTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@6eebc39e]" name="TS003_EXP_VerifySettingsTabTest" duration-ms="8548" started-at="2023-05-15T16:15:56Z" finished-at="2023-05-15T16:16:05Z">
+        </test-method> <!-- TS006_SC_VerifyIMCReportsTest -->
+        <test-method status="PASS" signature="TS007_SC_VerifyTaxonomyManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@77cd7a0]" name="TS007_SC_VerifyTaxonomyManagerTest" duration-ms="8429" started-at="2023-08-01T15:26:11Z" finished-at="2023-08-01T15:26:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS003_EXP_VerifySettingsTabTest -->
-        <test-method status="FAIL" signature="TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@6eebc39e]" name="TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest" duration-ms="12367" started-at="2023-05-15T16:16:05Z" finished-at="2023-05-15T16:16:17Z">
-          <exception class="java.lang.AssertionError">
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at PROD.ExhibitorPortalSmokeTest_PROD.TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest(ExhibitorPortalSmokeTest_PROD.java:253)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- TS007_SC_VerifyTaxonomyManagerTest -->
+        <test-method status="PASS" signature="TS008_SC_VerifyExhibitorEventsApprovalTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@77cd7a0]" name="TS008_SC_VerifyExhibitorEventsApprovalTest" duration-ms="7941" started-at="2023-08-01T15:26:19Z" finished-at="2023-08-01T15:26:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@6eebc39e]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-05-15T16:16:17Z" finished-at="2023-05-15T16:16:17Z">
+        </test-method> <!-- TS008_SC_VerifyExhibitorEventsApprovalTest -->
+        <test-method status="PASS" signature="TS009_SC_VerifyDigitalAdminPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@77cd7a0]" name="TS009_SC_VerifyDigitalAdminPanelTest" duration-ms="8751" started-at="2023-08-01T15:26:27Z" finished-at="2023-08-01T15:26:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_SC_VerifyDigitalAdminPanelTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@77cd7a0]" name="tearDown" is-config="true" duration-ms="1571" started-at="2023-08-01T15:26:36Z" finished-at="2023-08-01T15:26:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.ExhibitorPortalSmokeTest_PROD -->
+      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
     </test> <!-- SequencialTest -->
   </suite> <!-- SmokeTestSuite -->
 </testng-results>

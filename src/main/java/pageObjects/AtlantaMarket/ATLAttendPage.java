@@ -14,7 +14,7 @@ public class ATLAttendPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By ATLDownloadApp = By.xpath("(//a[@href='/Attend/App'])[position()=1]"); // Locator for Download the App link
+	By ATLDownloadApp = By.xpath("(//a[@href=\"/Attend/App\"])[2]"); // Locator for Download the App link
 	By ATLAttendTab = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[1]/a[1]"); // Locator for Attend tab in header
 	By ATLWhyAttend = By.xpath("//div[@class ='imc-section']/div[1]/div[3]/div[2]/div[1]/div[1]/a"); //Locator for Why Attend link
 	By ATLRegistration = By.xpath("(//a[@href='/Attend/Registration'])[position()=1]"); //Locator for Registration link
@@ -39,7 +39,7 @@ public class ATLAttendPage {
 	
 	public WebElement getATLAttendTab() throws InterruptedException {
 		Thread.sleep(10000);
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendTab));
 		return driver.findElement(ATLAttendTab);
 	}

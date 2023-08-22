@@ -66,12 +66,11 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		el = new EXPLoginPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		//Navigate to Exhibitor Portal
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("expurl"));
-		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		//Login to EXP
 		el.getEmailAddress().sendKeys(prop.getProperty("username"));
 		el.getPassword().sendKeys(prop.getProperty("password"));
@@ -469,8 +468,10 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(10000);
-		Assert.assertTrue(driver.getTitle().contains("Welcome to Juniper Data"));
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Thread.sleep(12000);
+		System.out.println(driver.getCurrentUrl());
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://auth.junipercore.com/"));
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
@@ -494,7 +495,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		el=new EXPLoginPage(driver);
 		mar=new EXPMarketTabPage(driver);
 		st=new EXPSettingsPage(driver);
-
+		driver.get(prop.getProperty("expurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on Registration And Services Tab 
@@ -550,24 +551,43 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());
 
 		//Click Americas Mart link and verify results
+		String winHandleBefore2 = driver.getWindowHandle();
 		efl.getAmericasMart().click();
+		for (String winHandle2 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle2);
+		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
 		System.out.println("Amricas mart page is displayed properly.");
+		driver.close();
+		driver.switchTo().window(winHandleBefore2);
+		Thread.sleep(2000);
 		driver.get(prop.getProperty("expurl"));
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());
 
 
 		//Click Atlanta Maeket link and verify results
+		String winHandleBefore3 = driver.getWindowHandle();
 		efl.getAtlantaMarket().click();
+		for (String winHandle3 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle3);
+		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
 		System.out.println("Atlanta market page is displayed properly.");
+		driver.close();
+		driver.switchTo().window(winHandleBefore3);
 		driver.get(prop.getProperty("expurl"));
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());
 
 		//Click Atlanta Apparel link and verify results
+		String winHandleBefore4 = driver.getWindowHandle();
 		efl.getAtlantaApparel().click();
+		for (String winHandle4 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle4);
+		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
 		System.out.println("Atlanta Apparel page is displayed properly.");
+		driver.close();
+		driver.switchTo().window(winHandleBefore4);
 		driver.get(prop.getProperty("expurl"));
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());
 
@@ -578,7 +598,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("expurl"));
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());
 
-		//Click IMC Highpoint Market link and verify results
+		//Click Andmore Highpoint Market link and verify results
 		efl.getHighPointMarket().click();
 		String winHandleBefore = driver.getWindowHandle();
 
@@ -587,46 +607,89 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle);
 		}
 		Thread.sleep(8000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imchighpointmarket.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		System.out.println("Atlanta market page is displayed properly.");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
 		driver.get(prop.getProperty("expurl"));
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());
+		
+		//Click Las Vegas Apparel link and verify results
+		String winHandleBefore6 = driver.getWindowHandle();
+		efl.getLasVegasApparel().click();
+		for (String winHandle6 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle6);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
+		System.out.println("Las Vegas Apparel page is displayed properly.");
+		driver.close();
+		driver.switchTo().window(winHandleBefore6);
+		driver.get(prop.getProperty("expurl"));
+		utl.scrollToElement(efl.getExhibitorPortalSymbol());
 
 		//Click Las Vegas Market link and verify results
+		String winHandleBefore7 = driver.getWindowHandle();
 		efl.getLasVegasMarket().click();
+		for (String winHandle7 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle7);
+		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
 		System.out.println("Las Vegas market page is displayed properly.");
+		driver.close();
+		driver.switchTo().window(winHandleBefore7);
 		driver.get(prop.getProperty("expurl"));
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());
 
 		//Click Las Vegas Design Center link and verify results
+		String winHandleBefore8 = driver.getWindowHandle();
 		efl.getLasVegasDesignCenter().click();
+		for (String winHandle8 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle8);
+		}
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Year-Round/LVDC"));
 		System.out.println("Las Vegas design center page is displayed properly.");
+		driver.close();
+		driver.switchTo().window(winHandleBefore8);
 		driver.get(prop.getProperty("expurl"));
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());
 
 		//Click Privacy Policy link and verify results
 		efl.getPrivacyPolicy().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Privacy-Policy"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/privacy-policy/"));
 		System.out.println("Privacy Policy page is displayed properly.");
 		driver.get(prop.getProperty("expurl"));
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());
 
 		//Click Terms and Conditions link and verify results
+		String winHandleBefore9 = driver.getWindowHandle();
 		efl.getTermsAndConditions().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/terms-of-use/"));
+		for (String winHandle9 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle9);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/terms-of-use/"));
 		System.out.println("Terms and Conditions page is displayed properly.");
+		driver.close();
+		driver.switchTo().window(winHandleBefore9);
 		driver.get(prop.getProperty("expurl"));
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());
-
-		//Click About Us link and verify results
+		
+		//Due to re-branding changes
+/*		//Click About Us link and verify results
 		efl.getAboutIMC().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/our-story/"));
 		System.out.println("About us page is displayed properly.");
 		driver.get(prop.getProperty("expurl"));
+*/		
+		//Click ANDMORE About Us link and verify results
+		efl.getandmore().click();
+		String winHandleBefore5 = driver.getWindowHandle();
+		for(String winHandle5 : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle5);}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/about-us/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore5);
+		utl.scrollToElement(efl.getExhibitorPortalSymbol());
 	}
 	
 	/*	@AfterSuite
@@ -639,7 +702,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

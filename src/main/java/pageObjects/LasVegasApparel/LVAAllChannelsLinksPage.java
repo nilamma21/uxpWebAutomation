@@ -1,32 +1,28 @@
-package pageObjects.AtlantaMarket;
-
-import java.util.List;
+package pageObjects.LasVegasApparel;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ATLAllChannelsLinksPage {
-
+public class LVAAllChannelsLinksPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
-
+	
 	By atlantamarket = By.xpath("//ul[@class='links-wrap']/li[1]/a[1]"); // Locator for Atlanta Market header link
 	By atlantaapparel = By.xpath("//ul[@class='links-wrap']/li[2]/a[1]"); // Locator for Atlanta Apparel header link
 	By americasmart = By.xpath("//ul[@class='links-wrap']/li[3]/a[1]"); // Locator for Americas Mart header link
+	By casualMarket = By.xpath("(//a[contains(text(),'Casual Market Atlanta')])[1]");
 	By highpoint = By.xpath("(//a[contains(text(),'ANDMORE at High Point Market')])[1]"); // Locator for IMC High Point Market header link
 	By lasvegas = By.xpath("(//a[contains(text(),'Las Vegas Market')])[1]"); // Locator for Las vegas Market header link
 	By lasvegasapp = By.xpath("(//a[contains(text(),'Las Vegas Apparel')])[1]"); // Locator for Las vegas Apparel header link
-
+	By formalMarkets = By.xpath("(//a[contains(text(),'Formal Markets')])[1]");
 	
-	public ATLAllChannelsLinksPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
+	public LVAAllChannelsLinksPage(WebDriver driver) {
 		this.driver = driver; 			
 	} 
-
+	
 	public WebElement getAtlantaMarket() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlantamarket));
@@ -62,6 +58,14 @@ public class ATLAllChannelsLinksPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lasvegasapp));
 		return driver.findElement(lasvegasapp);
 	}
-	
+	public WebElement getcasualMarket() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(casualMarket));
+		return driver.findElement(casualMarket);
+	}
+	public WebElement getformalMarkets() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(formalMarkets));
+		return driver.findElement(formalMarkets);
+	}
 }
-

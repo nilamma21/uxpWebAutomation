@@ -17,8 +17,8 @@ public class UXPHeaderChannelLinksPage {
 	By AtlantaMarket = By.xpath("//ul[@class='links-wrap']/li[1]/a[1]"); // Locator for Atlanta Market header link
 	By AtlantaApparel = By.xpath("//ul[@class='links-wrap']/li[2]/a[1]"); // Locator for Atlanta Apparel header link
 	By AmericasMart = By.xpath("//ul[@class='links-wrap']/li[3]/a[1]"); // Locator for Americas Mart header link
-	By HighPoint = By.xpath("//ul[@class='links-wrap']/li[4]/a[1]"); // Locator for IMC High Point Market header link
-	By LasVegas = By.xpath("//ul[@class='links-wrap']/li[5]/a[1]"); // Locator for Las vegas Market header link
+	By HighPoint = By.xpath("(//a[contains(text(),'ANDMORE at High Point Market')])[1]"); // Locator for IMC High Point Market header link
+	By LasVegas = By.xpath("(//a[contains(text(),'Las Vegas Market')])[1]"); // Locator for Las vegas Market header link
 	
 	
 	public UXPHeaderChannelLinksPage(WebDriver driver) {

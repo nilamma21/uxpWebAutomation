@@ -15,10 +15,11 @@ public class AMExhibitTabPage {
 		By amcExhibitAtAmc=By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[2]/div[1]/div[1]/a[1]"); // Locator for Exhibit at AmericasMart
 		By amcLeasingExhibitOptions=By.xpath("//a[@href='/Exhibit/Opportunities' and contains(text(),'Leasing & Exhibit Options')]");// Leasing & Exhibit Options
 		By amcAdvertising=By.xpath("//a[@href='/Exhibit/Advertising' and  contains(text(),'Advertising')]"); // Locator for Advertising
-		By amcExpLogin=By.xpath("//a[@title='The Exhibitor Portal Manages Your Exhibitor Account']");
+		By amcExpLogin=By.xpath("//a[@title='The Exhibitor Portal Manages Your Exhibitor Account']");//EXP Login
 		By amcExhFAQ=By.xpath("//a[@href='/Exhibit/FAQs' and contains(text(),'Exhibitor FAQs')]");
 		By amcExpPotalHeader=By.xpath("//h2[contains(text(),'Sign in with your existing account')]");
 		By amcexhibitbrdcrumb = By.xpath("//ul[@class='imc-breadcrumb']/li[2]/a"); //Locator for Exhibit Breadcrumb
+		By amcExpGuide=By.xpath("//a[contains(text(),'Exhibitor Portal Guide')]");//EXP Guide
 		
 		public AMExhibitTabPage(WebDriver driver) {
 			// TODO Auto-generated constructor stub
@@ -27,6 +28,8 @@ public class AMExhibitTabPage {
 
 		public WebElement getamcExhibitTab() throws InterruptedException {
 			Thread.sleep(3000);
+			wait = new WebDriverWait (driver,20);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(amcExhibitTab));
 			return driver.findElement(amcExhibitTab);
 		}
 		
@@ -64,6 +67,10 @@ public class AMExhibitTabPage {
 			Thread.sleep(8000);
 			return driver.findElement(amcexhibitbrdcrumb);
 		}
-		
+		public WebElement getExpGuide() throws InterruptedException {
+			wait = new WebDriverWait (driver,20);
+			wait.until(ExpectedConditions.elementToBeClickable(amcExpGuide));
+			return driver.findElement(amcExpGuide);
+		}
 }
 

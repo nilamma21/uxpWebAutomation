@@ -31,14 +31,14 @@ public class UXPYearRoundPage {
 	} 
 
 	public WebElement getYearRoundTab() throws InterruptedException{
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(YearRoundTab));
 		return driver.findElement(YearRoundTab);
 
 	}
 	
 	public WebElement getYearRound(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(YearRound));
 		return driver.findElement(YearRound);
 

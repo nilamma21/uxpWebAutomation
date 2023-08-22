@@ -40,7 +40,7 @@ public class UXPMarketInfoPage {
 	} 
 
 	public WebElement getMarketInfoHeader() throws InterruptedException{
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(MarketInfoHeader));
 		return driver.findElement(MarketInfoHeader);
 
