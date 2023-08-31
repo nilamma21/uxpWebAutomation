@@ -31,30 +31,95 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">SequencialTest</td><td class="numi">9</td><td class="numi">9</td><td class="numi">0</td><td class="numi">0</td><td class="numi">110.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">9</td><td class="numi">9</td><td class="numi">0</td><td class="numi">0</td><td class="numi">594.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">SequencialTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="9">PROD.SitecoreSmokeTest_PROD</td><td><a href="#m1"><b>TS001_SC_VerifySitecoreLoginTest</b>  </a></td><td class="numi">1</td><td>1690883692911</td><td class="numi">35694</td></tr><tr class="passedodd"><td><a href="#m2"><b>TS002_SC_VerifyContentEditorTest</b>  </a></td><td class="numi">1</td><td>1690883728612</td><td class="numi">8666</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS003_SC_VerifyControlPanelTest</b>  </a></td><td class="numi">1</td><td>1690883737280</td><td class="numi">8574</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS004_SC_VerifyShowSpecialApprovalsTest</b>  </a></td><td class="numi">1</td><td>1690883745855</td><td class="numi">8632</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS005_SC_VerifyEmailExperienceManagerTest</b>  </a></td><td class="numi">1</td><td>1690883754489</td><td class="numi">9064</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS006_SC_VerifyIMCReportsTest</b>  </a></td><td class="numi">1</td><td>1690883763555</td><td class="numi">7591</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS007_SC_VerifyTaxonomyManagerTest</b>  </a></td><td class="numi">1</td><td>1690883771148</td><td class="numi">8429</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS008_SC_VerifyExhibitorEventsApprovalTest</b>  </a></td><td class="numi">1</td><td>1690883779578</td><td class="numi">7941</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS009_SC_VerifyDigitalAdminPanelTest</b>  </a></td><td class="numi">1</td><td>1690883787520</td><td class="numi">8751</td></tr>
+<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">PROD.LasVegasAppSmokeTest_PROD</td><td><a href="#m1"><b>tearDown</b>  </a></td><td class="numi">1</td><td>1693455220373</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Default test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="9">PROD.LasVegasAppSmokeTest_PROD</td><td><a href="#m2"><b>TS002_LVMApp_VerifyGlobalSearchFunctionalityTest</b>  </a></td><td class="numi">1</td><td>1693454639463</td><td class="numi">12267</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS004_LVMApp_VerifyAllLinksUnderAboutTabTest</b>  </a></td><td class="numi">1</td><td>1693454651734</td><td class="numi">7657</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS005_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b>  </a></td><td class="numi">1</td><td>1693454659392</td><td class="numi">6286</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS006_LVMApp_VerifyAllLinksUnderAttendTabTest</b>  </a></td><td class="numi">1</td><td>1693454665680</td><td class="numi">11059</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS007_LVMApp_VerifyAllLinksUnderExhibitTabTest</b>  </a></td><td class="numi">1</td><td>1693454676740</td><td class="numi">27802</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS008_LVMApp_VerifyFooterLinksTest</b>  </a></td><td class="numi">1</td><td>1693454704543</td><td class="numi">194203</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS009_LVMApp_VerifySocialMediaLinksTest</b>  </a></td><td class="numi">1</td><td>1693454898747</td><td class="numi">7028</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS015_LVMApp_MarketRecap</b>  </a></td><td class="numi">1</td><td>1693454905776</td><td class="numi">8897</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS001_VerifyAllHeaderChanelLinksTest</b>  </a></td><td class="numi">1</td><td>1693454914674</td><td class="numi">305697</td></tr>
 </table>
-<h1>SequencialTest</h1>
-<h2 id="m1">PROD.SitecoreSmokeTest_PROD:TS009_SC_VerifyDigitalAdminPanelTest</h2>
+<h1>Default test</h1>
+<h2 id="m1">PROD.LasVegasAppSmokeTest_PROD:tearDown</h2>
+<div style="padding-left:3em">
+<p>Error communicating with the remote browser. It may have died.
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;EON-PRASANNSHEE&apos;, ip: &apos;172.22.22.79&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\PRASAN~1\AppData\Local\Temp\scoped_dir26564_857119188}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57053}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.111, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 6e70862f328c8b1accdac8f46f4afc40</p>
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
+<br/>at PROD.LasVegasAppSmokeTest_PROD.tearDown(LasVegasAppSmokeTest_PROD.java:653)
+<br/>25 lines not shown
+<p>Caused by Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Couldn&apos;t detect pid</p>
+org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:133)
+<br/>at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:246)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:200)
+<br/>at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:126)
+<br/>at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:153)
+<br/>at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:221)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
+<br/>at PROD.LasVegasAppSmokeTest_PROD.tearDown(LasVegasAppSmokeTest_PROD.java:653)
+<br/>25 lines not shown
+<p>Caused by Couldn&apos;t detect pid</p>
+org.openqa.selenium.os.ProcessUtils.getProcessId(ProcessUtils.java:195)
+<br/>at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:128)
+<br/>at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:246)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:200)
+<br/>at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:126)
+<br/>at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:153)
+<br/>at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:221)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
+<br/>at PROD.LasVegasAppSmokeTest_PROD.tearDown(LasVegasAppSmokeTest_PROD.java:653)
+<br/>25 lines not shown
+<p>Caused by Unable to make field private final long java.lang.ProcessImpl.handle accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @9629756</p>
+java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+<br/>at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+<br/>at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+<br/>at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
+<br/>at org.openqa.selenium.os.ProcessUtils.getProcessId(ProcessUtils.java:181)
+<br/>at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:128)
+<br/>at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:246)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:200)
+<br/>at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:126)
+<br/>at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:153)
+<br/>at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:221)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
+<br/>at PROD.LasVegasAppSmokeTest_PROD.tearDown(LasVegasAppSmokeTest_PROD.java:653)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">PROD.SitecoreSmokeTest_PROD:TS006_SC_VerifyIMCReportsTest</h2>
+<h2 id="m2">PROD.LasVegasAppSmokeTest_PROD:TS006_LVMApp_VerifyAllLinksUnderAttendTabTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">PROD.SitecoreSmokeTest_PROD:TS004_SC_VerifyShowSpecialApprovalsTest</h2>
+<h2 id="m3">PROD.LasVegasAppSmokeTest_PROD:TS015_LVMApp_MarketRecap</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">PROD.SitecoreSmokeTest_PROD:TS005_SC_VerifyEmailExperienceManagerTest</h2>
+<h2 id="m4">PROD.LasVegasAppSmokeTest_PROD:TS008_LVMApp_VerifyFooterLinksTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">PROD.SitecoreSmokeTest_PROD:TS001_SC_VerifySitecoreLoginTest</h2>
+<h2 id="m5">PROD.LasVegasAppSmokeTest_PROD:TS009_LVMApp_VerifySocialMediaLinksTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">PROD.SitecoreSmokeTest_PROD:TS007_SC_VerifyTaxonomyManagerTest</h2>
+<h2 id="m6">PROD.LasVegasAppSmokeTest_PROD:TS001_VerifyAllHeaderChanelLinksTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">PROD.SitecoreSmokeTest_PROD:TS008_SC_VerifyExhibitorEventsApprovalTest</h2>
+<h2 id="m7">PROD.LasVegasAppSmokeTest_PROD:TS007_LVMApp_VerifyAllLinksUnderExhibitTabTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">PROD.SitecoreSmokeTest_PROD:TS003_SC_VerifyControlPanelTest</h2>
+<h2 id="m8">PROD.LasVegasAppSmokeTest_PROD:TS004_LVMApp_VerifyAllLinksUnderAboutTabTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">PROD.SitecoreSmokeTest_PROD:TS002_SC_VerifyContentEditorTest</h2>
+<h2 id="m9">PROD.LasVegasAppSmokeTest_PROD:TS005_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">PROD.LasVegasAppSmokeTest_PROD:TS002_LVMApp_VerifyGlobalSearchFunctionalityTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

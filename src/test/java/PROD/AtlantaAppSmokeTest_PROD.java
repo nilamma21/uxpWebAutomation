@@ -414,21 +414,25 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on Exhibitors And Brands Tab
-		Thread.sleep(1000);
-		exhp.getExhibitorsAndProducts().click();
-		System.out.println("Click on Exhibitors And brands Tab");
-		//CLick on Exhibitor Directory
+		Thread.sleep(5000);
+		exhp.getExhibitorsAndBrands().click();
+		System.out.println("Click on Exhibitors And Brands Tab");
+		/*//CLick on Exhibitor Directory
 		
 		exhp.getExhibitorDirectory().click();
 		System.out.println("Click on Exhibitor Directory");
 		//Verify Exhibitor Directory Page
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Exhibitor Directory"));	
-		System.out.println("Verify Exhibitor Directory Page");
+		System.out.println("Verify Exhibitor Directory Page");*/
 
-		//Click on Exhibitors And brands Tab
+		//Click on Exhibitors And Products Tab
 		exhp.getExhibitorsAndProducts().click();
-		System.out.println("Click on Exhibitors And brands Tab");
+		System.out.println("Click on Exhibitors And Products Tab");
+		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Atlanta Apparel Exhibitor Directory"));	
+		System.out.println("Verify Exhibitor, Lines & Product Directory Page");
+		
 		//Click on Floor Plans
+		exhp.getExhibitorsAndBrands().click();
 		atlappexh.getATLAppFloorplans().click();
 		System.out.println("Click on Floor Plans");
 		//Verify Floor Plan Page
@@ -436,9 +440,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(atlexhp.getATLVerifyFloorPlans().isDisplayed());
 		System.out.println("Verify Floor Plan Page");
 
-		//Click on Exhibitors And brands Tab
-		exhp.getExhibitorsAndProducts().click();
-		System.out.println("Click on Exhibitors And brands Tab");
+		//Click on Exhibitors And Brands Tab
+		
+		exhp.getExhibitorsAndBrands().click();
+		System.out.println("Click on Exhibitors And Brands Tab");
 		//Click on categories
 		atlappexh.getATLAppatlaappCategories().click();
 		System.out.println("Click on Categoris");
@@ -509,7 +514,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Click Services and Amenities link
 		atat.getATLAttendTab().click();
 		atlatt.getServicesAmenities().click();
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Services & Amenities"));
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Services & Amenities"));
 		System.out.println("Services and Amenities page is displayed properly");
 		
 		//Click on Attend Tab
@@ -519,7 +524,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlatt.getATLFAQs().click(); 
 		System.out.println("Click on FAQs");
 		//Verify Faq Page
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("FAQs"));	
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("FAQs"));	
 		System.out.println("Vefiry FAQ Page");	
 
 		//Click on Attend Tab
@@ -542,7 +547,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Click on Travel");
 		//Verify Hotels Page
 		//Thread.sleep(1000);
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Travel"));	
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Travel"));	
 		System.out.println("Vefiry Travel Page ");	
 
 		//Click on Attend Tab
@@ -554,7 +559,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//	Thread.sleep(1000);
 		//Verify Hotels Page
 		//System.out.println(atlm.getATLAppHeadersnext().getText());
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Events"));	
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Events"));	
 		System.out.println("Vefiry Events Page ");	
 
 
@@ -566,7 +571,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Click on Dining");
 		//Thread.sleep(1000);
 		//Verify Hotels Page
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Dining"));	
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Dining"));	
 		System.out.println("Vefiry Dining Page ");
 
 
@@ -624,14 +629,14 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Click on Videos Link 
 		atlf.getatlAppvideosImages().click();
 		//Verify Videos  Page
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Videos"));	
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Videos"));	
 
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
 		//Click on In The News Link 
 		atlf.getatlAppNews().click();
 		//Verify In the News  Page
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("In The News"));	
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("In The News"));	
 	}
 	
 
@@ -707,7 +712,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("CLick Advertising Sponsorship");
 		//Verify Exhibit In Social Occasion 
 		//Thread.sleep(4000);
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Advertising + Sponsorship"));	
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Advertising + Sponsorship"));	
 		System.out.println("Verify Advertising Sponsorship ");
 
 		//Click on Exhibit Tab
@@ -718,7 +723,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("CLick Show Dates");
 		//Verify Show Dates 
 		Thread.sleep(4000);
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Complete Show Dates"));	
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Complete Show Dates"));	
 		System.out.println("Verify Show Dates ");
 
 		atlva.getAttend().click();
