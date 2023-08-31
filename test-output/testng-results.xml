@@ -1,73 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="9" passed="9" failed="0" skipped="0">
+<testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-31T04:03:46Z" name="Default suite" finished-at="2023-08-31T04:13:40Z" duration-ms="594657">
+  <suite started-at="2023-08-31T05:02:45Z" name="Default suite" finished-at="2023-08-31T05:03:13Z" duration-ms="28954">
     <groups>
     </groups>
-    <test started-at="2023-08-31T04:03:46Z" name="Default test" finished-at="2023-08-31T04:13:40Z" duration-ms="594657">
-      <class name="PROD.LasVegasAppSmokeTest_PROD">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@71812481]" started-at="2023-08-31T09:33:46Z" name="initialize" finished-at="2023-08-31T09:33:59Z" duration-ms="13157" status="PASS">
+    <test started-at="2023-08-31T05:02:45Z" name="Default test" finished-at="2023-08-31T05:03:13Z" duration-ms="28954">
+      <class name="PROD.AtlantaAppSmokeTest_PROD">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@6138e79a]" started-at="2023-08-31T10:32:45Z" name="initialize" finished-at="2023-08-31T10:32:57Z" duration-ms="12479" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TS002_LVMApp_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@71812481]" started-at="2023-08-31T09:33:59Z" name="TS002_LVMApp_VerifyGlobalSearchFunctionalityTest" finished-at="2023-08-31T09:34:11Z" duration-ms="12267" status="PASS">
+        <test-method signature="TS014_ATLApp_MarketRecap()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@6138e79a]" started-at="2023-08-31T10:32:57Z" name="TS014_ATLApp_MarketRecap" finished-at="2023-08-31T10:33:13Z" duration-ms="16120" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_LVMApp_VerifyGlobalSearchFunctionalityTest -->
-        <test-method signature="TS004_LVMApp_VerifyAllLinksUnderAboutTabTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@71812481]" started-at="2023-08-31T09:34:11Z" name="TS004_LVMApp_VerifyAllLinksUnderAboutTabTest" finished-at="2023-08-31T09:34:19Z" duration-ms="7657" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_LVMApp_VerifyAllLinksUnderAboutTabTest -->
-        <test-method signature="TS005_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@71812481]" started-at="2023-08-31T09:34:19Z" name="TS005_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest" finished-at="2023-08-31T09:34:25Z" duration-ms="6286" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
-        <test-method signature="TS006_LVMApp_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@71812481]" started-at="2023-08-31T09:34:25Z" name="TS006_LVMApp_VerifyAllLinksUnderAttendTabTest" finished-at="2023-08-31T09:34:36Z" duration-ms="11059" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_LVMApp_VerifyAllLinksUnderAttendTabTest -->
-        <test-method signature="TS007_LVMApp_VerifyAllLinksUnderExhibitTabTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@71812481]" started-at="2023-08-31T09:34:36Z" name="TS007_LVMApp_VerifyAllLinksUnderExhibitTabTest" finished-at="2023-08-31T09:35:04Z" duration-ms="27802" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_LVMApp_VerifyAllLinksUnderExhibitTabTest -->
-        <test-method signature="TS008_LVMApp_VerifyFooterLinksTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@71812481]" started-at="2023-08-31T09:35:04Z" name="TS008_LVMApp_VerifyFooterLinksTest" finished-at="2023-08-31T09:38:18Z" duration-ms="194203" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_LVMApp_VerifyFooterLinksTest -->
-        <test-method signature="TS009_LVMApp_VerifySocialMediaLinksTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@71812481]" started-at="2023-08-31T09:38:18Z" name="TS009_LVMApp_VerifySocialMediaLinksTest" finished-at="2023-08-31T09:38:25Z" duration-ms="7028" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_LVMApp_VerifySocialMediaLinksTest -->
-        <test-method signature="TS015_LVMApp_MarketRecap()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@71812481]" started-at="2023-08-31T09:38:25Z" name="TS015_LVMApp_MarketRecap" finished-at="2023-08-31T09:38:34Z" duration-ms="8897" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS015_LVMApp_MarketRecap -->
-        <test-method signature="TS001_VerifyAllHeaderChanelLinksTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@71812481]" started-at="2023-08-31T09:38:34Z" name="TS001_VerifyAllHeaderChanelLinksTest" finished-at="2023-08-31T09:43:40Z" duration-ms="305697" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyAllHeaderChanelLinksTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@71812481]" started-at="2023-08-31T09:43:40Z" name="tearDown" finished-at="2023-08-31T09:43:40Z" duration-ms="0" status="FAIL">
+        </test-method> <!-- TS014_ATLApp_MarketRecap -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@6138e79a]" started-at="2023-08-31T10:33:13Z" name="tearDown" finished-at="2023-08-31T10:33:13Z" duration-ms="0" status="FAIL">
           <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
               <![CDATA[Error communicating with the remote browser. It may have died.
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'EON-PRASANNSHEE', ip: '172.22.22.79', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: driver.version: RemoteWebDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\PRASAN~1\AppData\Local\Temp\scoped_dir26564_857119188}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57053}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.111, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 6e70862f328c8b1accdac8f46f4afc40]]>
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\PRASAN~1\AppData\Local\Temp\scoped_dir23636_2071791219}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:61683}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.111, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: b34797a7963a8f7de5e0ca5b179f6717]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'EON-PRASANNSHEE', ip: '172.22.22.79', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: driver.version: RemoteWebDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\PRASAN~1\AppData\Local\Temp\scoped_dir26564_857119188}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57053}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.111, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 6e70862f328c8b1accdac8f46f4afc40
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\PRASAN~1\AppData\Local\Temp\scoped_dir23636_2071791219}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:61683}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.111, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: b34797a7963a8f7de5e0ca5b179f6717
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
 	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
-	at PROD.LasVegasAppSmokeTest_PROD.tearDown(LasVegasAppSmokeTest_PROD.java:653)
+	at PROD.AtlantaAppSmokeTest_PROD.tearDown(AtlantaAppSmokeTest_PROD.java:1133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -120,7 +88,7 @@ Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field p
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.LasVegasAppSmokeTest_PROD -->
+      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

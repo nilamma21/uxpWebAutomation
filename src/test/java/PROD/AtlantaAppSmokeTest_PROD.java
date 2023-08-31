@@ -1101,6 +1101,25 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore4);*/
 	}
 
+	@Test(priority=2)
+	public void TS014_ATLApp_MarketRecap() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T798: Market Recap page opens successfully.
+		lap = new UXPLandingPage(driver);
+		
+		driver.get(prop.getProperty("atlappurl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Verify Market Recap link is working properly
+		lap.getMarketRecap().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
+		System.out.println("Market Recap page is working properly.");
+	}
+
+	
+	
+	
 	/*	@AfterSuite
 	public void sendEmail()
 	{
