@@ -1,0 +1,5 @@
+projectKey=uxpWebAutomation
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/uxpWebAutomation
+ceTaskId=AYosxL7YzTgpJ5gEyGcg
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYosxL7YzTgpJ5gEyGcg

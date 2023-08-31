@@ -14,7 +14,8 @@ public class UXPExhibitorsAndProductsTabPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By ExhibitorsAndProducts = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[1]/a[1]"); //Locator for Exhibitors and Products header tab
+	By ExhibitorsAndBrands = By.xpath("//a[@target='_self' and contains(text(),'Exhibitors & Brands')]"); //Locator for Exhibitors and Brands header tab
+	By ExhibitorsAndProducts = By.xpath("(//a[contains(text(),'Exhibitors & Products')])[1]"); //Locator for Exhibitors and Products header tab
 	By ExhibitorDirectory = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[2]/div[1]/div[1]/a[1]"); //Locator for ExhibitorDirectory header tab
 	By FloorPlans = By.xpath("//a[contains(text(), 'Floor Plans')]"); //Locator for Floor Plans header tab
 	By ShowSpecials = By.xpath("//a[contains(text(), 'Show Specials')]"); //Locator for ShowSpecials header tab
@@ -23,15 +24,23 @@ public class UXPExhibitorsAndProductsTabPage {
 	By Categories = By.xpath("//a[contains(text(), 'Categories')]"); //Locator for Categories header tab
 	By JuniperMarketProd = By.xpath("//a[contains(text(), 'JuniperMarket')]"); //Locator for Juniper Market header tab
 	By VerifyExhibitorsAndProductsSection = By.xpath("//div[@class = 'imc-section']/div[1]/div[2]/div[2]"); //Locator for verification of Exhibitors and Products section
-	By VerifyExhibitorDirectory = By.xpath("//ul[@class = 'imc-breadcrumb']/li[3]/a[1]"); // Locator for Exhibitor Directory text
+	By VerifyExhibitorDirectory = By.xpath("//a[contains(text(),'Atlanta Apparel Exhibitor Directory')]"); // Locator for Exhibitor Directory text
 	By VerifyFloorPlans = By.xpath("//div[@class = 'imc-campus-view']"); // Locator for floor plans map
 	By exhdirectsearchbx = By.xpath("(//input[@id='input-1'])[2]"); //Locator for Exhibitor Directory Search box
 	By exhdirectsearchbtn = By.xpath("(//button[@class = 'imc-searchform--button--search'])[2]"); //Locator for Exh Direct Serach btn
-
+	By verifyBreadcrumb = By.xpath("//a[@data-xpath='breadcrumb.link']");
+	By verifyPgBreadcrumb = By.xpath("(//a[@data-xpath='breadcrumb.link'])[2]");
+	
 	public UXPExhibitorsAndProductsTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
+	
+	public WebElement getExhibitorsAndBrands() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ExhibitorsAndBrands));
+		return driver.findElement(ExhibitorsAndBrands);
+	}
 
 	public WebElement getExhibitorsAndProducts() {
 		wait = new WebDriverWait (driver,20);
@@ -97,7 +106,15 @@ public class UXPExhibitorsAndProductsTabPage {
 		return driver.findElement(exhdirectsearchbtn);
 	}
 	
+	public WebElement getVerifyBreadcrumb() throws InterruptedException {
+		Thread.sleep(3000);
+		return driver.findElement(verifyBreadcrumb);
+	}
 	
+	public WebElement getVerifyPgBreadcrumb() throws InterruptedException {
+		Thread.sleep(3000);
+		return driver.findElement(verifyPgBreadcrumb);
+	}
 }
 
 

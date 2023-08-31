@@ -13,7 +13,7 @@ public class ATLAppExhibitorsAndProductTabPage
 	public WebDriverWait wait;
 
 	By atlaappfloorplans = By.xpath("//div[@class ='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[1]/a[1]"); //Locator for Floor Plans header tab
-	By atlaappCategories = By.xpath("//div[@class ='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[3]/div[1]/a[1]");
+	By atlaappCategories = By.xpath("//a[@class='imc-link imc-link--invert imc-navigation__tier2Link' and contains(text(),'Categories')]");
 	By AtlAppExhibitorsAndProducts = By.xpath("//*[contains(text(), 'Exhibitors & Products')]"); //Locator for Exhibitors and Products
 	
 	public ATLAppExhibitorsAndProductTabPage(WebDriver driver) {
