@@ -16,6 +16,7 @@ public class UXPLandingPage {
 	By mpsignoutbtn = By.xpath("(//a[@href='/imc-api/account/v1/logout'])[position()=1]"); //Locator for Sign out button
 	By closemrktadbtn = By.xpath("//div[@class=' contact-exit']"); //Locator for Close button of Market ad
 	By planYourMarket = By.xpath("//span[@title='Plan Your Market']");//Locator for plan your market
+	By marketRecap = By.xpath("//*[@class='imc-breakpoint-display--hide-mobile imc-header-subnav__link-text max-two-lines' and @title='Market Recap']");//Locator for Market Recap
 
 	public UXPLandingPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -53,5 +54,10 @@ public class UXPLandingPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(planYourMarket));
 		return driver.findElement(planYourMarket);
+	}
+	public WebElement getMarketRecap() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(marketRecap));
+		return driver.findElement(marketRecap);
 	}
 }

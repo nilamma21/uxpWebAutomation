@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [SmokeTestSuite]">
-  <test name="SequencialTest(failed)">
+<suite thread-count="7" parallel="classes" name="Failed suite [SmokeTestSuite]">
+  <test parallel="classes" name="Parallel Test(failed)">
     <classes>
-      <class name="PROD.ExhibitorPortalSmokeTest_PROD">
+      <class name="PROD.AtlantaAppSmokeTest_PROD">
         <methods>
-          <include name="initialize"/>
+          <include name="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest"/>
           <include name="tearDown"/>
-          <include name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- PROD.ExhibitorPortalSmokeTest_PROD -->
+      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
     </classes>
-  </test> <!-- SequencialTest(failed) -->
+  </test> <!-- Parallel Test(failed) -->
 </suite> <!-- Failed suite [SmokeTestSuite] -->
