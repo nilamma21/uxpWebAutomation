@@ -572,13 +572,13 @@ public class AmericasMartSmokeTest_UAT extends base {
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
 		System.out.println("open Year Round DropDown");
-		amoyr.getShoroomDirect().click();
+		amoyr.getOpenYearRoundShowrooms().click();
 		System.out.println("Showroom direct Link");
 		//Click Showroom direct Link Link
-		utl.scrollToElement(amoyr.getShowroomDirectPageHeader());
+		utl.scrollToElement(amoyr.getExhibitorDirectoryPageHeader());
 		//Verify that Showroom Direct page should be displayed
 		String actualShowroomDirectHeader="Open Year Round Directory";
-		Assert.assertTrue(amoyr.getShowroomDirectPageHeader().getText().equals(actualShowroomDirectHeader));
+		Assert.assertTrue(amoyr.getExhibitorDirectoryPageHeader().getText().equals(actualShowroomDirectHeader));
 		System.out.println("Header test");
 
 		//Click on Open Year Round Tab 
@@ -710,6 +710,3 @@ public class AmericasMartSmokeTest_UAT extends base {
 	}*/
 
 }
-
-
-
