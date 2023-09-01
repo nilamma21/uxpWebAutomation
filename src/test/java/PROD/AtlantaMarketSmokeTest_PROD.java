@@ -554,7 +554,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "App");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "App");
 		driver.get(prop.getProperty("atlmrkturl"));
 		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
@@ -583,7 +583,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		for (String winHandle6 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle6);
 		}
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Careers");
 		driver.close();
 		driver.switchTo().window(winHandleBefore6);
 		utl.scrollToElement(fl.getmarketInfo());
@@ -627,8 +627,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle9);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore9);
+		//driver.close();
+		//driver.switchTo().window(winHandleBefore9);
 		driver.get(prop.getProperty("atlmrkturl"));
 		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
@@ -733,48 +733,48 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click Why Attend tab under Attend section
 		atat.getATLWhyAttend().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Why Attend?");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Why Attend?");
 		System.out.println("Why Attend section is displayed properly");
 		atat.getATLAttendTab().click();
 
 		//Click Registration tab under Attend section
 		atat.getATLRegistration().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Registration");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Registration");
 		System.out.println("Registration section is displayed properly");
 		atat.getATLAttendTab().click();
 
 		//Click Admission Policies under Attend section
 		atat.getATLAdmissionPolicies().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Admission Policies");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Admission Policies");
 		System.out.println("Admission Policies section is displayed properly");
 		atat.getATLAttendTab().click();
 
 		//Click Download the App under Attend section
 		atat.getATLDownloadApp().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "App");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "App");
 		System.out.println("Download the App section is displayed properly");
 		atat.getATLAttendTab().click();
 
 		//Click Travel under Attend section
 		atat.getATLTravel().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Hotels & Travel");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Hotels & Travel");
 		System.out.println("Travel section is displayed properly");
 		atat.getATLAttendTab().click();
 
 		//Click Dining Guide under Attend section
 		atat.getATLDiningGuide().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Dining Guide");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Dining Guide");
 		System.out.println("Dining Guide section is displayed properly");
 		atat.getATLAttendTab().click();
 
 		//Click on Events under Attend section
 		atat.getATLEventsSubmenu().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Events");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Events");
 		atat.getATLAttendTab().click();
 
 		//Click Services and Amenities under Attend section
 		atat.getATLServicesAndAmenities().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Services & Amenities");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Services & Amenities");
 		System.out.println("Services & Amenities section is displayed properly");
 		atat.getATLAttendTab().click();
 
@@ -879,8 +879,8 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 */		
 	}
 	
-	@Test(priority=2)
-	public void TS014_LVM_PlanYourMarkett() throws InterruptedException, IOException
+	@Test(enabled=false)//priority=2
+	public void TS014_ATL_PlanYourMarkett() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T783: To verify Exhibitor Directory
@@ -893,6 +893,22 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		lap.getplanYourMarket().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend/App"));
 		System.out.println("Plan Your Market page is working properly.");
+	}
+	
+	@Test(priority=2)
+	public void TS015_ATL_MarketRecap() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T798: Market Recap page opens successfully.
+		lap = new UXPLandingPage(driver);
+		
+		driver.get(prop.getProperty("atlmrkturl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Verify Market Recap link is working properly
+		lap.getMarketRecap().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/Attend/App"));
+		System.out.println("Market Recap page is working properly.");
 	}
 
 
