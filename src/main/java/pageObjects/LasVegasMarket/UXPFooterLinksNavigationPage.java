@@ -301,7 +301,7 @@ public class UXPFooterLinksNavigationPage {
 		return driver.findElement(pressCenter);
 	}	
 	public WebElement getlvmlink_ATLM() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmlink_ATLM));
 		return driver.findElement(lvmlink_ATLM);
 	}	

@@ -31,120 +31,16 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<<<<<<< HEAD
-<tr><td style="text-align:left;padding-right:2em">SequencialTest</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">247.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">SequencialTest</td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">57.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">SequencialTest &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">PROD.ExhibitorPortalSmokeTest_PROD</td><td><a href="#m1"><b>TS008_EXP_VerifyExhibitorPortalFooterLinksTest</b>  </a></td><td class="numi">1</td><td>1693301115945</td><td class="numi">190575</td></tr>
 <tr><th colspan="4">SequencialTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">PROD.ExhibitorPortalSmokeTest_PROD</td><td><a href="#m2"><b>TS001_EXP_VerifyExhibitorPortalLoginTest</b>  </a></td><td class="numi">1</td><td>1693301066809</td><td class="numi">49126</td></tr>
+<tr class="passedodd"><td rowspan="2">PROD.ExhibitorPortalSmokeTest_PROD</td><td><a href="#m1"><b>TS001_EXP_VerifyExhibitorPortalLoginTest</b>  </a></td><td class="numi">1</td><td>1693579891968</td><td class="numi">41492</td></tr><tr class="passedodd"><td><a href="#m2"><b>TS003_EXP_VerifySettingsTabTest</b>  </a></td><td class="numi">1</td><td>1693579933468</td><td class="numi">10606</td></tr>
 </table>
 <h1>SequencialTest</h1>
-<h2 id="m1">PROD.ExhibitorPortalSmokeTest_PROD:TS008_EXP_VerifyExhibitorPortalFooterLinksTest</h2>
-<div style="padding-left:3em">
-<p>Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;EPFooter_linksColumn__3MJdw&apos;]//a[contains(text(), &apos;Las Vegas Apparel&apos;)] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
-org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-<br/>at pageObjects.ExhibitorPortal.EXPFooterLinksPage.getLasVegasApparel(EXPFooterLinksPage.java:114)
-<br/>at PROD.ExhibitorPortalSmokeTest_PROD.TS008_EXP_VerifyExhibitorPortalFooterLinksTest(ExhibitorPortalSmokeTest_PROD.java:619)
-<br/>25 lines not shown
-<p>Caused by Cannot locate an element using By.xpath: //div[@class=&apos;EPFooter_linksColumn__3MJdw&apos;]//a[contains(text(), &apos;Las Vegas Apparel&apos;)]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: driver.version: unknown</p>
-org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-<br/>at java.util.Optional.orElseThrow(Unknown Source)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-<br/>at pageObjects.ExhibitorPortal.EXPFooterLinksPage.getLasVegasApparel(EXPFooterLinksPage.java:114)
-<br/>at PROD.ExhibitorPortalSmokeTest_PROD.TS008_EXP_VerifyExhibitorPortalFooterLinksTest(ExhibitorPortalSmokeTest_PROD.java:619)
-<br/>25 lines not shown
-</div>
+<h2 id="m1">PROD.ExhibitorPortalSmokeTest_PROD:TS001_EXP_VerifyExhibitorPortalLoginTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">PROD.ExhibitorPortalSmokeTest_PROD:TS001_EXP_VerifyExhibitorPortalLoginTest</h2>
-=======
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">29.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-</table>
-<table cellspacing="0" cellpadding="0" class="passed" id="summary">
-<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
-<tr class="failedodd"><td rowspan="1">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m1"><b>tearDown</b>  </a></td><td class="numi">1</td><td>1693458193631</td><td class="numi">0</td></tr>
-<tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">PROD.AtlantaAppSmokeTest_PROD</td><td><a href="#m2"><b>TS014_ATLApp_MarketRecap</b>  </a></td><td class="numi">1</td><td>1693458177506</td><td class="numi">16120</td></tr>
-</table>
-<h1>Default test</h1>
-<h2 id="m1">PROD.AtlantaAppSmokeTest_PROD:tearDown</h2>
-<div style="padding-left:3em">
-<p>Error communicating with the remote browser. It may have died.
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;EON-PRASANNSHEE&apos;, ip: &apos;172.22.22.79&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: driver.version: RemoteWebDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\PRASAN~1\AppData\Local\Temp\scoped_dir23636_2071791219}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:61683}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.111, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: b34797a7963a8f7de5e0ca5b179f6717</p>
-org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
-<br/>at PROD.AtlantaAppSmokeTest_PROD.tearDown(AtlantaAppSmokeTest_PROD.java:1133)
-<br/>25 lines not shown
-<p>Caused by Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Couldn&apos;t detect pid</p>
-org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:133)
-<br/>at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
-<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:246)
-<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:200)
-<br/>at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:126)
-<br/>at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:153)
-<br/>at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:221)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
-<br/>at PROD.AtlantaAppSmokeTest_PROD.tearDown(AtlantaAppSmokeTest_PROD.java:1133)
-<br/>25 lines not shown
-<p>Caused by Couldn&apos;t detect pid</p>
-org.openqa.selenium.os.ProcessUtils.getProcessId(ProcessUtils.java:195)
-<br/>at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:128)
-<br/>at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
-<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:246)
-<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:200)
-<br/>at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:126)
-<br/>at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:153)
-<br/>at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:221)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
-<br/>at PROD.AtlantaAppSmokeTest_PROD.tearDown(AtlantaAppSmokeTest_PROD.java:1133)
-<br/>25 lines not shown
-<p>Caused by Unable to make field private final long java.lang.ProcessImpl.handle accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @9629756</p>
-java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
-<br/>at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
-<br/>at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
-<br/>at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
-<br/>at org.openqa.selenium.os.ProcessUtils.getProcessId(ProcessUtils.java:181)
-<br/>at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:128)
-<br/>at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
-<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:246)
-<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:200)
-<br/>at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:126)
-<br/>at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:153)
-<br/>at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:221)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
-<br/>at PROD.AtlantaAppSmokeTest_PROD.tearDown(AtlantaAppSmokeTest_PROD.java:1133)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">PROD.AtlantaAppSmokeTest_PROD:TS014_ATLApp_MarketRecap</h2>
->>>>>>> fd8ef813e828e10acb67b666df6021161fbfa27f
+<h2 id="m2">PROD.ExhibitorPortalSmokeTest_PROD:TS003_EXP_VerifySettingsTabTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
