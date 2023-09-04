@@ -537,9 +537,20 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		// Click on LVA Market link
 		// Switch to new tab
-		fl.getlvmlink_ATLM().click();
+		/*fl.getlvmlink_ATLM().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
-		driver.get(prop.getProperty("ammarturl"));
+		driver.get(prop.getProperty("ammarturl"));*/
+		
+		String winHandleBefore5 = driver.getWindowHandle();
+		fl.getlvapplink_ATL().click();
+		for (String winHandle4 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle4);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
+		//driver.close();
+		driver.switchTo().window(winHandleBefore5);
+		
+		
 		utl.scrollToElement(fl.marketInfoAMC());
 
 		// Click on LVM Market link

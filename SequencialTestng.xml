@@ -9,11 +9,11 @@
 	<test thread-count="6" name="SequencialTest">
 		<classes>
 
-	 	 	 <class name="PROD.SitecoreSmokeTest_PROD" />
+	 	 	 <class name="PROD.LasVegasAppSmokeTest_PROD" />
 	 	 	 <methods>
 
-			<!--	   <include name="TS012_AMC_VerifyFooterLinksTest"/>   
-	 			<include name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest"/>   -->
+				   <include name="TS008_LVMApp_VerifyFooterLinksTest"/>   
+	 			<!--<include name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest"/>   -->
 
 	 	 	 </methods>
 

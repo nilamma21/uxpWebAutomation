@@ -474,6 +474,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlatt=new ATLAppAttendTabPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+		Thread.sleep(10000);
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
 		System.out.println("Click on Attend Tab");
@@ -609,7 +610,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
 		//CLick on Click on Images sub-menu 
@@ -950,8 +951,19 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		// Click on LVA Market link
 		// Switch to new tab
+		/*fl.getlvapplink_ATL().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));*/
+		
+		
+		String winHandleBefore12 = driver.getWindowHandle();
 		fl.getlvapplink_ATL().click();
+		for (String winHandle4 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle4);
+		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
+		//driver.close();
+		driver.switchTo().window(winHandleBefore12);
+		
 		driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
