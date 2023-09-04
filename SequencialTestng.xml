@@ -20,7 +20,7 @@
 	 	 	 <methods>
 
 				   <include name="TS008_LVM_VerifyFooterLinksTest"/>   
-	 			
+	 		<!-- 	<include name="TS006_LVM_VerifyHeaderChannelLinksTest"/>   -->
 
 	 	 	 </methods>
 
