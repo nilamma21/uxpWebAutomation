@@ -19,8 +19,8 @@
 			<class name="PROD.LasVegasAppSmokeTest_PROD" />-->
 	 	 	 <methods>
 
-				<!--    <include name="TS008_LVM_VerifyFooterLinksTest"/>   
-	 			<include name="TS006_LVM_VerifyHeaderChannelLinksTest"/>   -->
+				    <include name="TS008_LVM_VerifyFooterLinksTest"/>   
+	 			<!--<include name="TS006_LVM_VerifyHeaderChannelLinksTest"/>   -->
 
 	 	 	 </methods>
 
