@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite parallel="none" name="Failed suite [Default suite]">
+  <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="UAT.AtlantaMarketLoginTest_UAT">
+      <class name="PROD.ExhibitorPortalSmokeTest_PROD">
         <methods>
-          <include name="atlMarketOpen"/>
-          <include name="quitBrowser"/>
-          <include name="driverInitialize"/>
+          <include name="initialize"/>
+          <include name="TS003_EXP_VerifySettingsTabTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- UAT.AtlantaMarketLoginTest_UAT -->
+      </class> <!-- PROD.ExhibitorPortalSmokeTest_PROD -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

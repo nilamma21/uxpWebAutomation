@@ -13,9 +13,11 @@ public class AMOpenYearRoundPage {
 	By amcOpenYearRoundTab = By.xpath("//a[contains(text(),'Open Year Round')]"); // Locator for Open Year Round Tab
 	By amcAboutYearRound=By.xpath("//a[@title='About Year Round at AmericasMart']"); // Locator for About Year Round
 	By amcAboutYearRoundHeader=By.xpath("(//a[contains(text(),'Open Year Round')])[2]");// Locator for About Year Round page Header
-	By howtoregister = By.xpath("//div[@class = 'imc-section']/div[1]/div[2]/div[2]/div[1]/div[2]/a[1]");
-	By amcShoroomDirect=By.xpath("//a[contains(text(),'Showroom Directory')]"); // Locator for Showroom Direct
-	By amcShowroomDirectHeader=By.xpath("//h2[contains(text(),'Exhibitor Directory')]");// Locator for Showroom Direct page Header
+	By howtoregister = By.xpath("//a[contains(text(),'How to Register') and @class='imc-link imc-link--invert imc-navigation__tier2Link']");
+	By amcOpenYearRoundShowrooms=By.xpath("//a[contains(text(),'Open Year Round Showrooms') and @class='imc-link imc-link--invert imc-navigation__tier2Link']"); // Locator for Showroom Direct
+	By amcExhibitorDirectory=By.xpath("//a[@href='/exhibitor/exhibitor-directory' and contains(text(), 'Exhibitor Directory')]");
+	By amcOpenYearRoundShowroomsHeader=By.xpath("//h1[contains(text(),'Open Year Round Showrooms at AmericasMart')]");// Locator for Open Year Round Showrooms page Header
+	By amcExhibitorDirectoryHeader=By.xpath("//h2[contains(text(),'Exhibitor Directory')]");// Locator for Exhibitor Directory page Header
 	By amcFloorPlans=By.xpath("//a[@href='/Market-Map' or contains(text(),'Floor Plans')]"); // Locator for Floor Plan
 	By amcCampOverview=By.xpath("//a[@href='/Year-Round/Campus-Overview']"); // Locator for Camp Overview
 	By amcVisit=By.xpath("//a[@href='/Year-Round/Visit']"); //Locator for Visit
@@ -46,16 +48,25 @@ public class AMOpenYearRoundPage {
 		wait.until(ExpectedConditions.elementToBeClickable(amcAboutYearRoundHeader));
 		return driver.findElement(amcAboutYearRoundHeader);
 	}
-	public WebElement getShoroomDirect() throws InterruptedException {
+	public WebElement getOpenYearRoundShowrooms() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(amcShoroomDirect));
-		return driver.findElement(amcShoroomDirect);
+		wait.until(ExpectedConditions.elementToBeClickable(amcOpenYearRoundShowrooms));
+		return driver.findElement(amcOpenYearRoundShowrooms);
+	}	
+	public WebElement getExhibitorDirectory() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(amcExhibitorDirectory));
+		return driver.findElement(amcExhibitorDirectory);			
 	}
-	public WebElement getShowroomDirectPageHeader() throws InterruptedException {
+	public WebElement getOpenYearRoundShowroomsPageHeader() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(amcShowroomDirectHeader));
-		return driver.findElement(amcShowroomDirectHeader);
-		
+		wait.until(ExpectedConditions.elementToBeClickable(amcOpenYearRoundShowroomsHeader));
+		return driver.findElement(amcOpenYearRoundShowroomsHeader);		
+	}
+	public WebElement getExhibitorDirectoryPageHeader() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(amcExhibitorDirectoryHeader));
+		return driver.findElement(amcExhibitorDirectoryHeader);		
 	}
 	public WebElement getFloorPlans() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);

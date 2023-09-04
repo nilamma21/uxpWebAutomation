@@ -144,7 +144,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//utl.verifyCloseBtnPopup();
 		//Verify exhibitor directory page is successfully opened
 		ed.getExhibitorDirectory().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor Directory");
+		Assert.assertEquals(exhp.getVerifyPgBreadcrumb().getText(), "Exhibitor Directory");
 
 
 		exhp.getExhDirectSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
@@ -234,7 +234,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		//Click Press Center option under About tab
 		mi.getMarketDatesAndHrs().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Press Releases");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Press Releases");
 		System.out.println("Press Center section is displayed properly");
 		mi.getMarketInfoHeader().click();
 		
@@ -247,14 +247,14 @@ public class AmericasMartSmokeTest_PROD extends base {
 */
 		//Click History option under About tab
 		mi.getContactUs().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "History");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "History");
 		System.out.println("History section is displayed properly");
 		mi.getMarketInfoHeader().click();
 
 		//Click Careers option under About tab
 
 		amab.getCareers().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Careers");
 		System.out.println("Careers section is displayed properly");
 		mi.getMarketInfoHeader().click();
 
@@ -268,7 +268,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Click Industry Partners option under Market Info
 
 		amab.getIndustryPartners().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Industry Partners");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Industry Partners");
 		System.out.println("Industry Partners section is displayed properly");
 	}
 
@@ -355,7 +355,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Click Market Dates and Hours tab under Markets and Events section
 
 		amme.getMarketDatesAndHour().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market Dates and Hours");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Market Dates and Hours");
 		System.out.println("Market Dates and Hours section is displayed properly");
 
 		atat.getATLAttendTab().click();
@@ -371,14 +371,14 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Click Spring Cash & Carry under Markets and Events section
 
 		amme.getAMCSpringCashnCarry().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Spring Cash & Carry");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Spring Cash & Carry");
 		System.out.println("Spring Cash & Carry section is displayed properly");
 		atat.getATLAttendTab().click();
 
 		//Click Fall Market under Markets and Events section
 
 		amme.getAMCFallMarket().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Fall Market");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Fall Market");
 		System.out.println("Fall Market section is displayed properly");
 		atat.getATLAttendTab().click();
 
@@ -392,7 +392,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Click Open Year Round under Markets and Events section
 
 		amme.getYearRoundEvents().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Calendar of Events");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Calendar of Events");
 		System.out.println("Open Year Round section is displayed properly");
 		atat.getATLAttendTab().click();
 
@@ -464,7 +464,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		// Click Careers link and verify results		
 		fl.getCareersATL().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Careers");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Careers");
 		// driver.get(prop.getProperty("atlappurl"));
 		driver.get(prop.getProperty("ammarturl"));
 		utl.scrollToElement(fl.marketInfoAMC());
@@ -633,18 +633,28 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Verify how to register 
 		amoyr.getOpenYearRoundTab().click();
 		amoyr.gethowtoregister().click();
-		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("How to Register"));
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("How to Register"));
 		System.out.println("How to regiter opened");
+		
+		//Click on Open Year Round Tab 
+		amoyr.getOpenYearRoundTab().click();
+		//Click Open Year Round Showrooms Link
+		amoyr.getOpenYearRoundShowrooms().click();
+		//Thread.sleep(5000);
+		utl.scrollToElement(amoyr.getOpenYearRoundShowroomsPageHeader());
+		//Verify that Open Year Round Showrooms page should be displayed
+		String actualShowroomDirectHeader="Open Year Round Showrooms at AmericasMart";
+		Assert.assertTrue(amoyr.getOpenYearRoundShowroomsPageHeader().getText().equals(actualShowroomDirectHeader));
 
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
-		//Click Showroom direct Link Link
-		amoyr.getShoroomDirect().click();
+		//Click Exhibitor Directory Link
+		amoyr.getExhibitorDirectory().click();
 		//Thread.sleep(5000);
-		utl.scrollToElement(amoyr.getShowroomDirectPageHeader());
-		//Verify that Showroom Direct page should be displayed
-		String actualShowroomDirectHeader="Exhibitor Directory";
-		Assert.assertTrue(amoyr.getShowroomDirectPageHeader().getText().equals(actualShowroomDirectHeader));
+		utl.scrollToElement(amoyr.getExhibitorDirectoryPageHeader());
+		//Verify that Exhibitor Directory page should be displayed
+		String actualExhibitorDirectoryHeader="Exhibitor Directory";
+		Assert.assertTrue(amoyr.getExhibitorDirectoryPageHeader().getText().equals(actualExhibitorDirectoryHeader));
 
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
@@ -657,17 +667,17 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Click Campus Overview Link
 		amoyr.getCampOverview().click();
 		//Verify that Campus Overview page should be displayed	
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Campus Overview");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Campus Overview");
 
 		amoyr.getOpenYearRoundTab().click();
 		System.out.println("open Year Round DropDown");
 		amoyr.getVisit().click();
 		System.out.println("Visit Link");
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Visit");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"Visit");
 
 		amoyr.getOpenYearRoundTab().click();
 		amoyr.getParknTranspSubmenu().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Parking & Transportation");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Parking & Transportation");
 
 		amoyr.getOpenYearRoundTab().click();
 		amoyr.getHotelsSubmenu().click();
@@ -675,15 +685,15 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		amoyr.getOpenYearRoundTab().click();
 		amoyr.getHowToReg().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "How to Register");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "How to Register");
 
 		amoyr.getOpenYearRoundTab().click();
 		amoyr.getCalendarEvents().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Calendar of Events");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"Calendar of Events");
 
 		amoyr.getOpenYearRoundTab().click();
 		amoyr.getDesigners().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"For Designers");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"For Designers");
 	}
 
 	@Test(priority=11)
@@ -724,7 +734,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Click Advertising Link
 		amexh.getAdvertising().click();
 		//Verify that Advertising page should be displayed
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(),"Advertising");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"Advertising");
 		
 		//Exhibitor Portal Login
 		amexh.getamcExhibitTab().click();	
@@ -750,7 +760,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Click Advertising Link
 		amexh.getExpFAQs().click();
 		//Verify that FAQs page should be displayed
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Exhibitor FAQs");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Exhibitor FAQs");
 
 
 	}

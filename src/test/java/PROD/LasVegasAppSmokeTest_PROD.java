@@ -145,7 +145,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 
 	}
 	
-	@Test(priority=11)
+	@Test(enabled=false)//(priority=11)
 	public void TS010_LVM_PlanYourMarkett() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -160,6 +160,23 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/App"));
 		System.out.println("Plan Your Market page is working properly.");
 		
+	}
+	
+	@Test(priority=11)
+	public void TS015_LVMApp_MarketRecap() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T797: Market Recap page opens successfully.
+		lap = new UXPLandingPage(driver);
+		
+		driver.get(prop.getProperty("lvmappurl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Verify Market Recap link is working properly
+		lap.getMarketRecap().click();
+		Thread.sleep(2000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/App"));
+		System.out.println("Market Recap page is working properly.");
 	}
 	
 	
