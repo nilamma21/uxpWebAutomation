@@ -11,16 +11,16 @@
 
 	 	 	
 			   <class name="PROD.LagVegasMarketSmokeTest_PROD" />
-		 	<class name="PROD.AtlantaMarketSmokeTest_PROD" />
+		<!-- 	<class name="PROD.AtlantaMarketSmokeTest_PROD" />
  			<class name="PROD.AmericasMartSmokeTest_PROD" />
  			<class name="PROD.AtlantaAppSmokeTest_PROD" />
 			<class name="PROD.ExhibitorPortalSmokeTest_PROD" />
 			<class name="PROD.SitecoreSmokeTest_PROD" />
-			<class name="PROD.LasVegasAppSmokeTest_PROD" />
+			<class name="PROD.LasVegasAppSmokeTest_PROD" />-->
 	 	 	 <methods>
 
-			<!--	   <include name="TS012_AMC_VerifyFooterLinksTest"/>   
-	 			<include name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest"/>   -->
+				   <include name="TS012_AMC_VerifyFooterLinksTest"/>   
+	 		<!-- 	<include name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest"/>   -->
 
 	 	 	 </methods>
 
