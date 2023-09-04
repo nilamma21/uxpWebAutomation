@@ -27,10 +27,7 @@
 						<suiteXmlFiles>
 							<suiteXmlFile>Paralleltestng.xml</suiteXmlFile>
 							<!--<suiteXmlFile>SequencialTestng.xml</suiteXmlFile>-->
-					
-
-
-						</suiteXmlFiles>
+					</suiteXmlFiles>
 						<trimStackTrace>false</trimStackTrace>
 						<rerunFailingTestsCount>1</rerunFailingTestsCount>
 					</configuration>
