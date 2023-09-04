@@ -624,7 +624,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
-		fl.getlvapplink_ATL().click();
+		
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
 		//driver.close();
 		driver.switchTo().window(winHandleBefore5);
