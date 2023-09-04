@@ -57,7 +57,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvach = new LVAAllChannelsLinksPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 
 		//Click Atlanta Market channel link and verify result
 		lvach.getAtlantaMarket().click();

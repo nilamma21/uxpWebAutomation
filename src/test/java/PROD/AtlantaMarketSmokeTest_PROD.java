@@ -621,7 +621,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		utl.scrollToElement(fl.getmarketInfo());
 		
 		// Click Americas Mart link and verify results
-		fl.getAmericasMart_ATLApp().click();
+		fl.getAmericasMart_ATLAppFooter().click();
 		String winHandleBefore9 = driver.getWindowHandle();
 		for (String winHandle9 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle9);

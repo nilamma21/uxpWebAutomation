@@ -710,6 +710,3 @@ public class AmericasMartSmokeTest_UAT extends base {
 	}*/
 
 }
-
-
-

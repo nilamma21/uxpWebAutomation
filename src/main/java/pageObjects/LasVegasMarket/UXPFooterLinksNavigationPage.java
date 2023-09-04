@@ -35,6 +35,8 @@ public class UXPFooterLinksNavigationPage {
 	By TermsAndConditions = By.partialLinkText("Terms"); // Locator for Terms and Conditions in footer links
 	By AmericasMart = By.xpath("//a[@href='https://www.americasmart.com']"); //Locator for Americas Mart in footer links
 	By AmericasMart_ATLApp = By.xpath("(//a[contains(text(),'AmericasMart')])[2]"); //Locator for Americas Mart in footer links of ATLApp
+	By AmericasMart_ATLAppFooter = By.xpath("(//a[contains(@href,'https://www.americasmart.com/?')])[2]"); //Locator for Americas Mart in footer links of ATLApp
+	
 	By lvapplink_ATL = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/')])[2]"); //Locator for Las Vegas Apparel footer link
 	By lvmlink_ATL = By.xpath("(//a[contains(text(),'Las Vegas Market')])[2]"); //Locator for Las Vegas market footer link
 	By lvmlink_ATLM = By.xpath("//a[contains(@href,'https://www.lasvegas-apparel.com/')]"); //Locator for Las Vegas market footer link
@@ -264,6 +266,16 @@ public class UXPFooterLinksNavigationPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AmericasMart_ATLApp));
 		return driver.findElement(AmericasMart_ATLApp);
 	}
+	public WebElement getAmericasMart_ATLAppFooter() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AmericasMart_ATLAppFooter));
+		return driver.findElement(AmericasMart_ATLAppFooter);
+	}
+	
+	
+	
+	
+	
 	public WebElement getatlprivacypolicy() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlprivacypolicy));

@@ -617,8 +617,16 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		// Click on LVA Market link
 		// Switch to new tab
-		fl.getlvmlink_ATLM().click();
+		
+		String winHandleBefore5 = driver.getWindowHandle();
+		fl.getlvapplink_ATL().click();
+		for (String winHandle4 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle4);
+		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
+		//driver.close();
+		driver.switchTo().window(winHandleBefore5);
+	
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
@@ -962,7 +970,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Atlanta Market channel link and verify result
-
+		Thread.sleep(5000);
 		hd.getAtlantaMarket().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
 		System.out.println("Atlanta Market channel link is working properly.");
