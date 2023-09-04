@@ -618,8 +618,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		// Click on LVA Market link
 		// Switch to new tab
-		Thread.sleep(5000);
-		//fl.getlvapplink_ATL.click();
+		//Thread.sleep(5000);
+		fl.getlvapplink_ATL.click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
