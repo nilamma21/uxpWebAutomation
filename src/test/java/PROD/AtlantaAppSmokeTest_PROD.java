@@ -964,7 +964,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		String winHandleBefore12 = driver.getWindowHandle();
 		System.out.println("Las Vegas App market link");
-		fl.getlvapplink_ATL().click();
+		fl.getlvapplink_ATL_Footer().click();
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
