@@ -446,10 +446,10 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-/*		//Scroll till footer links
-		utl.scrollToElement(fl.getmarketInfoATL());
+		//Scroll till footer links
+		utl.scrollToElement(lvafl.getourBrandsLVA());
 		
-		//Click Market Info link and verify results
+	/*	//Click Market Info link and verify results
 		fl.getmarketInfoATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets"));
 		driver.get(prop.getProperty("atlappurl"));
