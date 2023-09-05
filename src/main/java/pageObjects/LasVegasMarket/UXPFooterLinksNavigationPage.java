@@ -38,6 +38,7 @@ public class UXPFooterLinksNavigationPage {
 	By AmericasMart_ATLAppFooter = By.xpath("(//a[contains(@href,'https://www.americasmart.com/?')])[2]"); //Locator for Americas Mart in footer links of ATLApp
 	
 	By lvapplink_ATL = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/')])[2]"); //Locator for Las Vegas Apparel footer link
+	By lvapplink_ATL_Footer = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/?')])[3]"); //Locator for Las Vegas Apparel footer link
 	By lvmlink_ATL = By.xpath("(//a[contains(text(),'Las Vegas Market')])[2]"); //Locator for Las Vegas market footer link
 	By lvmlink_ATLM = By.xpath("//a[contains(@href,'https://www.lasvegas-apparel.com/')]"); //Locator for Las Vegas market footer link
 	
@@ -98,6 +99,13 @@ public class UXPFooterLinksNavigationPage {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
+
+	public WebElement getlvapplink_ATL_Footer() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvapplink_ATL_Footer));
+		return driver.findElement(lvapplink_ATL_Footer);
+
+	}
 
 	public WebElement getHighPointMarket() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
