@@ -342,7 +342,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Verify Hotels Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("#flights"));	
 		System.out.println("Vefiry Events Page ");
-		
+		Thread.sleep(5000);
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
 		//CLick on Parking
