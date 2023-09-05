@@ -916,7 +916,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore8);
 		// utl.scrollToElement(fl.getmarketInfoATL());
 		driver.get(prop.getProperty("atlappurl"));
-		utl.scrollToElement(fl.getmarketInfoATL());
+		//utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click Americas Mart link and verify results
 		fl.getAmericasMart_ATLApp().click();
