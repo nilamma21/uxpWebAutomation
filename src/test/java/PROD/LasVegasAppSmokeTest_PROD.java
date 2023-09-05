@@ -180,7 +180,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	}
 	
 	
-	@Test(priority=11)
+	@Test(priority=9)
 	public void TS004_LVMApp_VerifyAllLinksUnderAboutTabTest () throws InterruptedException {
 		
 		//The purpose of this test case to verify:-
@@ -438,7 +438,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test(priority=9)
+	@Test(priority=11)
 	public void TS008_LVMApp_VerifyFooterLinksTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T510 : To verify Footer Links Navigation
