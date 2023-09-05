@@ -243,6 +243,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Verify exhibitor data is displayed or not as per search criteria
 		System.out.println("Exhibitor Directory is opened properly.");
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
+		Thread.sleep(5000);
 		gs.getSearchButton().click();
 
 		/*utl.scrollToElement(mi.getVerifyContactUs());
@@ -393,7 +394,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 */
 	}
 
-	@Test(priority=7)
+	@Test(priority=9)
 	public void TS007_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -453,7 +454,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 
 	}
-	@Test(priority=9)
+	@Test(priority=7)
 	public void TS013_ATLApp_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -842,24 +843,28 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		fl.getmarketInfoATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets"));
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(5000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		//Click on Press Center
 		fl.getpressCenterATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets/Press-Center"));
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(5000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(5000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		//Click on Our Brand link
 		fl.getOurBrandsATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/exhibitor/directory"));
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(5000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click Contact Us link and verify results
@@ -1010,7 +1015,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore3);
-		utl.scrollToElement(fl.getmarketInfoATL());	
+		
 		
 	}
 
