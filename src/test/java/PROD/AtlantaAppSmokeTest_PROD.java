@@ -257,7 +257,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 	}
 
-	@Test(priority=6)
+	@Test(priority=13)
 	public void TS006_ATLApp_VerifyAllLinksUnderMarketsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -394,7 +394,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 */
 	}
 
-	@Test(priority=13)
+	@Test(priority=6)
 	public void TS007_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
