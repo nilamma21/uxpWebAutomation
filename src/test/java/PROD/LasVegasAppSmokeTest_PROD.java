@@ -350,7 +350,9 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		System.out.println("Click on Parking");
 		//Verify Faq Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("#parking"));
-		System.out.println("Vefiry FAQ Page");
+		System.out.println("Vefiry Parking Page");
+		Thread.sleep(5000);
+
 		utl.scrollToElement(lvaa.getLVAAttendTab());
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
