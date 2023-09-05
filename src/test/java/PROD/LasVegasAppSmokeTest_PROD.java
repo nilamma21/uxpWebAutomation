@@ -365,7 +365,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test(priority=12)
+	@Test(priority=10)
 	public void TS007_LVMApp_VerifyAllLinksUnderExhibitTabTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T506: To verify Exhibit Tab
@@ -602,7 +602,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		utl.scrollToElement(lvafl.marketInfoAMC());	
 	}
 	
-	@Test(priority=10)
+	@Test(priority=12)
 	public void TS009_LVMApp_VerifySocialMediaLinksTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T511: To verify the all social media links and it's redirection
