@@ -973,7 +973,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore12);
 		
 		driver.get(prop.getProperty("atlappurl"));
-		//utl.scrollToElement(fl.getmarketInfoATL());
+		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click on LVM Market link
 		// Switch to new tab
