@@ -1040,7 +1040,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlappurl"));
 		//Scroll till footer links
 		utl.scrollToElement(atlfo.getfacebookfootericon());
-		
+		Thread.sleep(5000);
 		//Click on Facebook Icon
 		atlfo.getfacebookfootericon().click();
 		String winHandleBefore = driver.getWindowHandle();
