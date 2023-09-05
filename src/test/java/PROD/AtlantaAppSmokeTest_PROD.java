@@ -953,6 +953,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
+		System.out.println("High Point market link");
 		//utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click on LVA Market link
@@ -962,6 +963,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		
 		String winHandleBefore12 = driver.getWindowHandle();
+		System.out.println("Las Vegas App market link");
 		fl.getlvapplink_ATL().click();
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
