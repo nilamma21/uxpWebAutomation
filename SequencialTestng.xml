@@ -20,7 +20,7 @@
 			<class name="PROD.LasVegasAppSmokeTest_PROD" /> -->
 	 	 	 <methods>
 
-				  <include name="TS007_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest"/>   
+				  <include name="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest"/>   
 	 			 <!-- <include name="TS006_LVM_VerifyHeaderChannelLinksTest"/>   -->
 
 
