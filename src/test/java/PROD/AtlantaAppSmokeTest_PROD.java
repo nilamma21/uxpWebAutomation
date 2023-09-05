@@ -953,7 +953,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
-		utl.scrollToElement(fl.getmarketInfoATL());
+		//utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click on LVA Market link
 		// Switch to new tab
@@ -971,7 +971,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore12);
 		
 		driver.get(prop.getProperty("atlappurl"));
-		utl.scrollToElement(fl.getmarketInfoATL());
+		//utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click on LVM Market link
 		// Switch to new tab
@@ -983,7 +983,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore11);
-		utl.scrollToElement(fl.getmarketInfoATL());		
+		//utl.scrollToElement(fl.getmarketInfoATL());		
 		
 		//Due to re-branding changes
 /*		//Click International Market Centers link and verify results
