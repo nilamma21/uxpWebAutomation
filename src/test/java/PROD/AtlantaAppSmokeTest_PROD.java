@@ -1037,7 +1037,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		driver.get(prop.getProperty("atlappurl"));
 		//Scroll till footer links
 		utl.scrollToElement(atlfo.getfacebookfootericon());
 		
