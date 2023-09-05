@@ -49,7 +49,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	}
 	
 
-	@Test(priority=12)
+	@Test(priority=8)
 	public void TS001_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException{
 		//The purpose of this test case to verify:-
 		//UXP-TS513: To verify all channels links in Header
@@ -162,7 +162,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test(priority=11)
+	@Test(priority=5)
 	public void TS015_LVMApp_MarketRecap() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -180,7 +180,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	}
 	
 	
-	@Test(priority=5)
+	@Test(priority=11)
 	public void TS004_LVMApp_VerifyAllLinksUnderAboutTabTest () throws InterruptedException {
 		
 		//The purpose of this test case to verify:-
@@ -363,7 +363,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test(priority=8)
+	@Test(priority=12)
 	public void TS007_LVMApp_VerifyAllLinksUnderExhibitTabTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T506: To verify Exhibit Tab
