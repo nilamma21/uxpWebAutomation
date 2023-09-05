@@ -904,6 +904,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		// Click Privacy Policy and verify results
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(5000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		// Click Privacy Policy link and verify results
 		fl.getatlprivacypolicy().click();
