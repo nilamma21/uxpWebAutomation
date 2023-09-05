@@ -57,7 +57,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvach = new LVAAllChannelsLinksPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 
 		//Click Atlanta Market channel link and verify result
 		lvach.getAtlantaMarket().click();
@@ -171,7 +171,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(10000);
 		//Verify Market Recap link is working properly
 		lap.getMarketRecap().click();
 		Thread.sleep(2000);
@@ -455,7 +455,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.marketInfoAMC());
 */
-		
+		Thread.sleep(10000);
 		//Click on Our Brand link
 		lvafl.getourBrandsLVA().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/exhibitor/directory"));
