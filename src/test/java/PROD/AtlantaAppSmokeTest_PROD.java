@@ -838,7 +838,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfoATL());
-
+		Thread.sleep(5000);
 		//Click Market Info link and verify results
 		fl.getmarketInfoATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets"));
