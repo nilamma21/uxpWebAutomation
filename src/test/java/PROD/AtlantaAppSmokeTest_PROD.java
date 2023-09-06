@@ -476,7 +476,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlatt=new ATLAppAttendTabPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		Thread.sleep(10000);
+		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(5000);
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
 		System.out.println("Click on Attend Tab");
@@ -623,8 +624,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Thread.sleep(5000);
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
+		Thread.sleep(2000);
 		//CLick on Click on Images sub-menu 
 		atlf.getatlAppfashionGalleryLink().click();
+		Thread.sleep(3000);
 		//Verify Images page 
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlappurl")+"The-Best-Of/Lookbooks-and-Brand-Books"));	
 
@@ -637,6 +640,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
+		Thread.sleep(2000);
 		//Click on Videos Link 
 		atlf.getatlAppvideosImages().click();
 		Thread.sleep(3000);
