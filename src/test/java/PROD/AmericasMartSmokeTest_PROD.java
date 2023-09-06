@@ -651,6 +651,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Verify how to register 
 		amoyr.getOpenYearRoundTab().click();
 		amoyr.gethowtoregister().click();
+		Thread.sleep(3000);
 		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("How to Register"));
 		System.out.println("How to regiter opened");
 		
@@ -668,7 +669,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		amoyr.getOpenYearRoundTab().click();
 		//Click Exhibitor Directory Link
 		amoyr.getExhibitorDirectory().click();
-		//Thread.sleep(5000);
+		Thread.sleep(3000);
 		utl.scrollToElement(amoyr.getExhibitorDirectoryPageHeader());
 		//Verify that Exhibitor Directory page should be displayed
 		String actualExhibitorDirectoryHeader="Exhibitor Directory";
