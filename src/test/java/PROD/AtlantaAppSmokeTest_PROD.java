@@ -575,7 +575,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 */
 	}
 
-	@Test(priority=9)
+	@Test(priority=1)
 	public void TS011_ATLApp_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
