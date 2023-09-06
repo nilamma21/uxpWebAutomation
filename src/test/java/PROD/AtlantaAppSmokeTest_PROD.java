@@ -1032,6 +1032,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore3);
 		
+		driver.get(prop.getProperty("atlappurl"));
 		
 	}
 
@@ -1133,6 +1134,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore4);*/
+		driver.get(prop.getProperty("atlappurl"));
 	}
 
 	@Test(priority=2)
@@ -1149,6 +1151,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		lap.getMarketRecap().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
 		System.out.println("Market Recap page is working properly.");
+		driver.get(prop.getProperty("atlappurl"));
 	}
 
 	
