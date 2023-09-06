@@ -37,33 +37,44 @@ public class ATLExhibitorsAndProductsTabPage {
 	} 
 
 	public WebElement getATLExhibitorsAndProducts() throws InterruptedException {
-		Thread.sleep(3000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorsnproducts));
 		return driver.findElement(atlexhibitorsnproducts);
 	}
 
 	public WebElement getATLExhibitorDirectory() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitordirectory));
 		return driver.findElement(atlexhibitordirectory);
 	}
 
 	public WebElement getATLFloorPlans() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlfloorplans));
 		return driver.findElement(atlfloorplans);
 	}
 
 	public WebElement getATLTemporaries() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atltemporaries));
 		return driver.findElement(atltemporaries);
 	}
 
 	public WebElement getATLCategories() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlcategories));
 		return driver.findElement(atlcategories);
 	}
 
 	public WebElement getATLVerifyExhibitorsAndProductsSection() throws InterruptedException {
-		Thread.sleep(3000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifyexhibitorsnproductssection));
 		return driver.findElement(atlverifyexhibitorsnproductssection);
 	}
 
 	public WebElement getATLVerifyExhibitorDirectory() throws InterruptedException {
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifyexhibitordirectory));
 		return driver.findElement(atlverifyexhibitordirectory);
 	}
 

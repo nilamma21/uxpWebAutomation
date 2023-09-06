@@ -43,7 +43,8 @@ public class ATLNewsAndTrendsTabPage
 	} 
 
 	public WebElement getATLNewsAndTrendsTap() throws InterruptedException {
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlNewsAndTrendsTap));
 		return driver.findElement(atlNewsAndTrendsTap);
 	}
 	
