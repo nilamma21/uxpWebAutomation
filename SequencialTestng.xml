@@ -9,7 +9,7 @@
 	<test thread-count="6" name="SequencialTest">
 		<classes>
 
-	 	 	 <class name="PROD.AtlantaMarketSmokeTest_PROD" />
+	 	 	 <class name="PROD.LagVegasMarketSmokeTest_PROD" />
 	 	 	 <methods>
 
 					
