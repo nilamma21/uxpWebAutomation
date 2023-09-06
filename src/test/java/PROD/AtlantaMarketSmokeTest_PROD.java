@@ -669,9 +669,9 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		// Click on LVA Market link
 		// Switch to new tab
 		
-		Thread.sleep(6000);
+		Thread.sleep(3000);
 		String winHandleBefore11 = driver.getWindowHandle();
-		fl.getlvmlink_ATLM().click();
+		fl.getlvmlink_ATL_Footerr().click();
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
