@@ -12,8 +12,11 @@
 	 	 	 <class name="PROD.LasVegasAppSmokeTest_PROD" />
 	 	 	 <methods>
 
-				   <include name="TS008_LVMApp_VerifyFooterLinksTest"/>   
-	 			<!--<include name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest"/>   -->
+					
+				 <!-- <include name="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest"/>   
+	 			<include name="TS013_LVM_VerifyAllLinksUnderExploreMarketTabTest"/>   -->
+	 			<!-- <include name="TS013_ATL_VerifyAllNewsAndTrendsMenuTest"/> --> -->
+	 			
 
 	 	 	 </methods>
 

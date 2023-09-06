@@ -113,7 +113,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvach.getformalMarkets().click();
 		Thread.sleep(6000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets/Formal-Markets"));
-		System.out.println("Las Vegas Apparel channel link is working properly.");
+		System.out.println("Formal-Markets channel link is working properly.");
 		
 
 	}
@@ -343,6 +343,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("#flights"));	
 		System.out.println("Vefiry Events Page ");
 		
+		utl.scrollToElement(lvaa.getLVAAttendTab());
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
 		//CLick on Parking
@@ -350,8 +351,9 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		System.out.println("Click on Parking");
 		//Verify Faq Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("#parking"));
-		System.out.println("Vefiry FAQ Page");
+		System.out.println("Vefiry Parking Page");
 
+		utl.scrollToElement(lvaa.getLVAAttendTab());
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
 		//Click on Hotels
@@ -455,7 +457,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.marketInfoAMC());
 */
-		
+		utl.scrollToElement(lvafl.getourBrandsLVA());
 		//Click on Our Brand link
 		lvafl.getourBrandsLVA().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/exhibitor/directory"));
@@ -486,9 +488,10 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		utl.scrollToElement(lvafl.marketInfoAMC());
 				
 		// Click on Terms & condition link
-		lvafl.getTermsAndConditions().click();
+		
 		// Switch to new tab
 		String winHandleBefore2 = driver.getWindowHandle();
+		lvafl.getTermsAndConditions().click();
 		for (String winHandle2 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle2);
 		}
@@ -496,12 +499,13 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore2);
 		// Click Privacy Policy and verify results
-		driver.get(prop.getProperty("lvmappurl"));
-		utl.scrollToElement(lvafl.marketInfoAMC());
+		/*driver.get(prop.getProperty("lvmappurl"));
+		utl.scrollToElement(lvafl.marketInfoAMC());*/
 		
 		// Click Privacy Policy link and verify results
-		lvafl.getatlprivacypolicy().click();
+		
 		String winHandleBefore3 = driver.getWindowHandle();
+		lvafl.getatlprivacypolicy().click();
 		for (String winHandle3 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle3);
 		}
@@ -509,45 +513,48 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore3);
 		// utl.scrollToElement(fl.getmarketInfoATL());
-		driver.get(prop.getProperty("lvmappurl"));
-		utl.scrollToElement(lvafl.marketInfoAMC());
+		/*driver.get(prop.getProperty("lvmappurl"));
+		utl.scrollToElement(lvafl.marketInfoAMC());*/
 
 		// Click Americas Mart link and verify results
-		lvafl.getAmericasMart_ATLApp().click();
+		
 		String winHandleBefore4 = driver.getWindowHandle();
+		lvafl.getAmericasMart_ATLApp().click();
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
-		driver.get(prop.getProperty("lvmappurl"));
-		utl.scrollToElement(lvafl.marketInfoAMC());
+		/*driver.get(prop.getProperty("lvmappurl"));
+		utl.scrollToElement(lvafl.marketInfoAMC());*/
 		
 		// Click Atlanta Apparel link and verify results
-		lvafl.getAtlantaApparel().click();
+		
 		// Switch to new tab
 		String winHandleBefore5 = driver.getWindowHandle();
+		lvafl.getAtlantaApparel().click();
 		for (String winHandle5 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle5);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
 		driver.get(prop.getProperty("lvmappurl"));
-		//driver.close();
+		driver.close();
 		driver.switchTo().window(winHandleBefore5);
-		utl.scrollToElement(lvafl.marketInfoAMC());
+		//utl.scrollToElement(lvafl.marketInfoAMC());
 				
 		// Click Atlanta Market link and verify results
-		lvafl.getAtlantaMarket().click();
+		
 		// Switch to new tab
 		String winHandleBefore6 = driver.getWindowHandle();
+		lvafl.getAtlantaMarket().click();
 		for (String winHandle6 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle6);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore6);
-		utl.scrollToElement(lvafl.marketInfoAMC());
+	//	utl.scrollToElement(lvafl.marketInfoAMC());
 		
 		// Click on Casual Market link
 				// Switch to new tab
@@ -559,7 +566,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://casualmarketatlanta.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore7);
-		utl.scrollToElement(lvafl.marketInfoAMC());
+		//utl.scrollToElement(lvafl.marketInfoAMC());
 
 		// Click on High Point Market link
 		// Switch to new tab
@@ -572,7 +579,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore8);
-		utl.scrollToElement(lvafl.marketInfoAMC());
+		//utl.scrollToElement(lvafl.marketInfoAMC());
 				
 				
 		// Click on LVM Market link
@@ -585,19 +592,20 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore9);
-		utl.scrollToElement(lvafl.marketInfoAMC());		
+		//utl.scrollToElement(lvafl.marketInfoAMC());		
 				
 		// Click on ANDMORE link
 		// Switch to new tab
-		lvafl.getandmore().click();
+		
 		//Switch to new tab
 		String winHandleBefore10 = driver.getWindowHandle();
+		lvafl.getandmore().click();
 		for(String winHandle10 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle10);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore10);
-		utl.scrollToElement(lvafl.marketInfoAMC());	
+		//utl.scrollToElement(lvafl.marketInfoAMC());	
 	}
 	
 	@Test(priority=10)

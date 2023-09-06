@@ -29,12 +29,20 @@ public class UXPExhibitorsAndProductsTabPage {
 	By exhdirectsearchbx = By.xpath("(//input[@id='input-1'])[2]"); //Locator for Exhibitor Directory Search box
 	By exhdirectsearchbtn = By.xpath("(//button[@class = 'imc-searchform--button--search'])[2]"); //Locator for Exh Direct Serach btn
 	By verifyBreadcrumb = By.xpath("//a[@data-xpath='breadcrumb.link']");
+	By verifyBreadcrumb_ATLAPP = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div/ul/li[3]/a[1]");
+	
 	By verifyPgBreadcrumb = By.xpath("(//a[@data-xpath='breadcrumb.link'])[2]");
 	
 	public UXPExhibitorsAndProductsTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
+	
+	public WebElement getverifyBreadcrumb_ATLAPP() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(verifyBreadcrumb_ATLAPP));
+		return driver.findElement(verifyBreadcrumb_ATLAPP);
+	}
 	
 	public WebElement getExhibitorsAndBrands() {
 		wait = new WebDriverWait (driver,20);
@@ -55,37 +63,51 @@ public class UXPExhibitorsAndProductsTabPage {
 	}
 
 	public WebElement getFloorPlans() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(FloorPlans));
 		return driver.findElement(FloorPlans);
 	}
 
 	public WebElement getShowSpecials() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ShowSpecials));
+
 		return driver.findElement(ShowSpecials);
 	}
 
 	public WebElement getTemporaries() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Temporaries));
 		return driver.findElement(Temporaries);
 	}
 
 	public WebElement getNewProductIntroductions() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(NewProductIntroductions));
 		return driver.findElement(NewProductIntroductions);
 	}
 
 	public WebElement getCategories() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Categories));
 		return driver.findElement(Categories);
 	}
 
 	public WebElement getVerifyExhibitorsAndProductsSection() throws InterruptedException {
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(VerifyExhibitorsAndProductsSection));
 		return driver.findElement(VerifyExhibitorsAndProductsSection);
 	}
 
 	public WebElement getVerifyExhibitorDirectory() throws InterruptedException {
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(VerifyExhibitorDirectory));
 		return driver.findElement(VerifyExhibitorDirectory);
 	}
 
 	public WebElement getVerifyFloorPlans() throws InterruptedException {
-		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(VerifyFloorPlans));
 		return driver.findElement(VerifyFloorPlans);
 	}
 
@@ -107,12 +129,14 @@ public class UXPExhibitorsAndProductsTabPage {
 	}
 	
 	public WebElement getVerifyBreadcrumb() throws InterruptedException {
-		Thread.sleep(3000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(verifyBreadcrumb));
 		return driver.findElement(verifyBreadcrumb);
 	}
 	
 	public WebElement getVerifyPgBreadcrumb() throws InterruptedException {
-		Thread.sleep(3000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(verifyPgBreadcrumb));
 		return driver.findElement(verifyPgBreadcrumb);
 	}
 }
