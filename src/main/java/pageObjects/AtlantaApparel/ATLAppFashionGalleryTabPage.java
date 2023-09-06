@@ -11,7 +11,7 @@ public class ATLAppFashionGalleryTabPage
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By atlAppFashionGalleryTab = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[1]/a[1]"); 
+	By atlAppFashionGalleryTab = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[1]"); 
 	By atlAppfashionGalleryLink = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[1]/div[1]/a[1]"); 
 	By atlAppfashionGalleryLinkImg = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[1]/div[1]/a[2]");
 	By atlAppLookBook = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[2]/div[1]/a[1]");

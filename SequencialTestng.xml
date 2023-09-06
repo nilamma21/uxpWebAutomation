@@ -16,7 +16,7 @@
 				 <!-- <include name="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest"/>   
 	 			<include name="TS013_LVM_VerifyAllLinksUnderExploreMarketTabTest"/>   -->
 	 			<!-- <include name="TS013_ATL_VerifyAllNewsAndTrendsMenuTest"/> --> -->
-	 			
+
 
 	 	 	 </methods>
 

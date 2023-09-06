@@ -40,8 +40,7 @@ public class UXPFooterLinksNavigationPage {
 	By lvapplink_ATL = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/')])[2]"); //Locator for Las Vegas Apparel footer link
 	
 	By lvapplink_ATL_Footer = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/?')])[3]"); //Locator for Las Vegas Apparel footer link
-	
-	
+
 	By lvmlink_ATL = By.xpath("(//a[contains(text(),'Las Vegas Market')])[2]"); //Locator for Las Vegas market footer link
 	By lvmlink_ATLM = By.xpath("//a[contains(@href,'https://www.lasvegas-apparel.com/')]"); //Locator for Las Vegas market footer link
 	
@@ -110,8 +109,6 @@ public class UXPFooterLinksNavigationPage {
 
 	}
 
-	
-	
 	public WebElement getHighPointMarket() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(HighPointMarket));

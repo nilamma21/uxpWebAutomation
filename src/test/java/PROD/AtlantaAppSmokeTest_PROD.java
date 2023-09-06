@@ -243,6 +243,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Verify exhibitor data is displayed or not as per search criteria
 		System.out.println("Exhibitor Directory is opened properly.");
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
+		Thread.sleep(5000);
 		gs.getSearchButton().click();
 
 		/*utl.scrollToElement(mi.getVerifyContactUs());
@@ -256,7 +257,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 	}
 
-	@Test(priority=6)
+	@Test(priority=13)
 	public void TS006_ATLApp_VerifyAllLinksUnderMarketsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -393,7 +394,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 */
 	}
 
-	@Test(priority=7)
+	@Test(priority=6)
 	public void TS007_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -453,7 +454,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 
 	}
-	@Test(priority=9)
+	@Test(priority=7)
 	public void TS013_ATLApp_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -594,7 +595,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Vefiry Download App Page ");
 	}
 
-	@Test(priority=13)
+	@Test(priority=9)
 	public void TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -846,29 +847,33 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfoATL());
-
+		Thread.sleep(5000);
 		//Click Market Info link and verify results
 		fl.getmarketInfoATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets"));
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(5000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		//Click on Press Center
 		fl.getpressCenterATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets/Press-Center"));
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(5000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(5000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		//Click on Our Brand link
 		fl.getOurBrandsATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/exhibitor/directory"));
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(5000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click Contact Us link and verify results
@@ -909,8 +914,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore7);
 
 		// Click Privacy Policy and verify results
+
 		/*driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.getmarketInfoATL());*/
+
 		// Click Privacy Policy link and verify results
 		fl.getatlprivacypolicy().click();
 		String winHandleBefore8 = driver.getWindowHandle();
@@ -921,9 +928,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		// utl.scrollToElement(fl.getmarketInfoATL());
+
 		/*driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.getmarketInfoATL());*/
-		
+
 		// Click Americas Mart link and verify results
 		
 		String winHandleBefore9 = driver.getWindowHandle();
@@ -960,6 +968,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
+
+		System.out.println("High Point market link");
 		//utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click on LVA Market link
@@ -969,6 +979,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		
 		String winHandleBefore12 = driver.getWindowHandle();
+
+		System.out.println("Las Vegas App market link");
 		fl.getlvapplink_ATL_Footer().click();
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
@@ -990,7 +1002,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore11);
-			
+
+		//utl.scrollToElement(fl.getmarketInfoATL());
 		
 		//Due to re-branding changes
 /*		//Click International Market Centers link and verify results
@@ -1045,7 +1058,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlappurl"));
 		//Scroll till footer links
 		utl.scrollToElement(atlfo.getfacebookfootericon());
-		
+		Thread.sleep(5000);
 		//Click on Facebook Icon
 		
 		String winHandleBefore = driver.getWindowHandle();
