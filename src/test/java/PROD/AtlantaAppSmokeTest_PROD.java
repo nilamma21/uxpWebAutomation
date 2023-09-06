@@ -458,7 +458,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	
 	
 
-	@Test(priority=10)//Previous priority is 10
+	@Test(priority=16)//Previous priority is 10
 	public void TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
