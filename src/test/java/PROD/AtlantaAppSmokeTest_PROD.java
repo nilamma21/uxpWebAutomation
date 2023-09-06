@@ -455,7 +455,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 
 	}
-	@Test(priority=9)
+	@Test(priority=13)
 	public void TS013_ATLApp_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -597,7 +597,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Vefiry Download App Page ");
 	}
 
-	@Test(priority=13)
+	@Test(priority=9)
 	public void TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
