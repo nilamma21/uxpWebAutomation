@@ -10,18 +10,13 @@
 		<classes>
 
 	 	 	 <class name="PROD.LasVegasAppSmokeTest_PROD" />
-	 	 	 
-		<!-- 	<class name="PROD.AtlantaMarketSmokeTest_PROD" />
- 			<class name="PROD.AmericasMartSmokeTest_PROD" />
- 			<class name="PROD.AtlantaAppSmokeTest_PROD" />
-			<class name="PROD.ExhibitorPortalSmokeTest_PROD" />
-			<class name="PROD.SitecoreSmokeTest_PROD" />
-			<class name="PROD.LasVegasAppSmokeTest_PROD" />-->
 	 	 	 <methods>
 
-				    <include name="TS008_LVM_VerifyFooterLinksTest"/>   
-	 			<!--<include name="TS006_LVM_VerifyHeaderChannelLinksTest"/>   -->
-
+					
+				 <!-- <include name="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest"/>   
+	 			<include name="TS013_LVM_VerifyAllLinksUnderExploreMarketTabTest"/>   -->
+	 			<!-- <include name="TS013_ATL_VerifyAllNewsAndTrendsMenuTest"/> --> -->
+	 			
 
 	 	 	 </methods>
 
