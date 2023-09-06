@@ -668,23 +668,26 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		
 		// Click on LVA Market link
 		// Switch to new tab
-		fl.getlvmlink_ATLM().click();
-		Thread.sleep(6000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
-		driver.get(prop.getProperty("atlmrkturl"));
-		//utl.verifyCloseBtnPopup();
-		utl.scrollToElement(fl.getmarketInfo());
 		
+		Thread.sleep(6000);
+		String winHandleBefore11 = driver.getWindowHandle();
+		fl.getlvmlink_ATLM().click();
+		for (String winHandle4 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle4);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore11);
 		// Click on LVM Market link
 		// Switch to new tab
-		String winHandleBefore11 = driver.getWindowHandle();
+		String winHandleBefore12 = driver.getWindowHandle();
 		fl.getlvmlink_ATL().click();
 		for (String winHandle11 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle11);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
 		driver.close();
-		driver.switchTo().window(winHandleBefore11);
+		driver.switchTo().window(winHandleBefore12);
 		//utl.scrollToElement(fl.getmarketInfo());		
 		
 		//Due to re-branding changes
