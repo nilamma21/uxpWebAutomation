@@ -250,6 +250,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		gs.getSearchButton().click();*/
 		Thread.sleep(10000);
 		utl.scrollToElement(mi.getVerifyContactUs());
+		Thread.sleep(3000);
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
 		System.out.println("Exhibitor Directory page is working properly.");
@@ -780,16 +781,17 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		fl.getmarketInfoATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets"));
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(2000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		//Click on Press Center
 		fl.getpressCenterATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets/Press-Center"));
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(2000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click Download The App link and verify results
-		Thread.sleep(2000);
 		fl.getDownloadTheApp().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
 		driver.get(prop.getProperty("atlappurl"));
@@ -799,6 +801,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		fl.getOurBrandsATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/exhibitor/directory"));
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(2000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click Contact Us link and verify results
