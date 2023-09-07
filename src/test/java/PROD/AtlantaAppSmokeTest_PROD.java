@@ -523,6 +523,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 */
 		//Click on Exhibit Tab
+		utl.scrollToElement(atlva.getAttend());
 		atlva.getAttend().click();
 		System.out.println("Click on Exhibit Tab");
 		//CLick Exhibit at atlanta apparel Link 
@@ -788,6 +789,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click Download The App link and verify results
+		Thread.sleep(2000);
 		fl.getDownloadTheApp().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
 		driver.get(prop.getProperty("atlappurl"));
