@@ -347,6 +347,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlexh.getATLExhibitTab().click();
 		//Click on Exhibit at Atlanta Market sub-menu
 		atlexh.getATLExhibitAtAtlanta().click();
+		Thread.sleep(2000);
 		//Verify that Exhibit page should be displayed
 		Assert.assertTrue(atlexh.getATLExhibitBrdcrumb().isDisplayed());
 
@@ -354,6 +355,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlexh.getATLExhibitTab().click();
 		//Click on 'Why Exhibit?' sub-menu
 		atlexh.getATLWhyExhibitMenu().click();
+		Thread.sleep(2000);
 		//Verify that 'Exhibit' page should be displayed
 		Assert.assertTrue(atlexh.getATLExhibitBrdcrumb().isDisplayed());
 
@@ -361,6 +363,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlexh.getATLExhibitTab().click();
 		//Click on 'Apply to Exhibit' sub-menu
 		atlexh.getATLApplyToExhibit().click();
+		Thread.sleep(2000);
 		//Verify that 'Apply to exhibit' page should be displayed
 		Assert.assertEquals(atlexh.getATLApplyToExhibitBrdcrmb().getText(), "Apply to Exhibit");
 
@@ -368,6 +371,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlexh.getATLExhibitTab().click();
 		//Click on 'Exhibitor Registration' link
 		atlexh.getATLExhibitorRegtnMenu().click();
+		Thread.sleep(2000);
 		//Verify that Exhibitor Registration page should be displayed
 		Assert.assertTrue(atlexh.getATLExhRegstnBrdcrmb().getText().contains("Exhibitor Registration"));
 
