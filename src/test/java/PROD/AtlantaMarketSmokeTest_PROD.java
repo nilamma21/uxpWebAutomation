@@ -752,6 +752,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		
 		//Click Registration tab under Attend section
 		atat.getATLRegistration().click();
+		Thread.sleep(2000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Registration");
 		System.out.println("Registration section is displayed properly");
 		Thread.sleep(2000);
@@ -759,6 +760,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click Admission Policies under Attend section
 		atat.getATLAdmissionPolicies().click();
+		Thread.sleep(2000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Admission Policies");
 		System.out.println("Admission Policies section is displayed properly");
 		Thread.sleep(2000);
@@ -766,6 +768,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click Download the App under Attend section
 		atat.getATLDownloadApp().click();
+		Thread.sleep(2000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "App");
 		System.out.println("Download the App section is displayed properly");
 		Thread.sleep(2000);
@@ -773,6 +776,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click Travel under Attend section
 		atat.getATLTravel().click();
+		Thread.sleep(2000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Hotels & Travel");
 		System.out.println("Travel section is displayed properly");
 		Thread.sleep(2000);
@@ -780,6 +784,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click Dining Guide under Attend section
 		atat.getATLDiningGuide().click();
+		Thread.sleep(2000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Dining Guide");
 		System.out.println("Dining Guide section is displayed properly");
 		Thread.sleep(2000);
@@ -787,12 +792,14 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click on Events under Attend section
 		atat.getATLEventsSubmenu().click();
+		Thread.sleep(2000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Events");
 		Thread.sleep(2000);
 		atat.getATLAttendTab().click();
 
 		//Click Services and Amenities under Attend section
 		atat.getATLServicesAndAmenities().click();
+		Thread.sleep(2000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Services & Amenities");
 		System.out.println("Services & Amenities section is displayed properly");
 		atat.getATLAttendTab().click();
