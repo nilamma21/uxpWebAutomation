@@ -823,7 +823,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	}
 
 
-	@Test(priority=16)
+	@Test(priority=13)
 	public void TS011_LVM_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -837,6 +837,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("lvmurl"));
 		Thread.sleep(3000);
+		utl.scrollToElement(yr.getYearRoundTab());
 		//Click Year Round tab at Header
 
 		yr.getYearRoundTab().click();
