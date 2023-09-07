@@ -985,6 +985,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlappurl"));
 		Thread.sleep(5000);
 		//Click on Fashion Gallery Tab
+		utl.scrollToElement(atlf.getatlAppFashionGalleryTab());
 		atlf.getatlAppFashionGalleryTab().click();
 		Thread.sleep(2000);
 		//CLick on Click on Images sub-menu 
