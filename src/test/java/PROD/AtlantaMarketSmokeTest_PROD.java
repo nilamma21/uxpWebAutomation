@@ -747,41 +747,48 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atat.getATLWhyAttend().click();
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Why Attend?");
 		System.out.println("Why Attend section is displayed properly");
+		Thread.sleep(2000);
 		atat.getATLAttendTab().click();
-
+		
 		//Click Registration tab under Attend section
 		atat.getATLRegistration().click();
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Registration");
 		System.out.println("Registration section is displayed properly");
+		Thread.sleep(2000);
 		atat.getATLAttendTab().click();
 
 		//Click Admission Policies under Attend section
 		atat.getATLAdmissionPolicies().click();
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Admission Policies");
 		System.out.println("Admission Policies section is displayed properly");
+		Thread.sleep(2000);
 		atat.getATLAttendTab().click();
 
 		//Click Download the App under Attend section
 		atat.getATLDownloadApp().click();
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "App");
 		System.out.println("Download the App section is displayed properly");
+		Thread.sleep(2000);
 		atat.getATLAttendTab().click();
 
 		//Click Travel under Attend section
 		atat.getATLTravel().click();
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Hotels & Travel");
 		System.out.println("Travel section is displayed properly");
+		Thread.sleep(2000);
 		atat.getATLAttendTab().click();
 
 		//Click Dining Guide under Attend section
 		atat.getATLDiningGuide().click();
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Dining Guide");
 		System.out.println("Dining Guide section is displayed properly");
+		Thread.sleep(2000);
 		atat.getATLAttendTab().click();
 
 		//Click on Events under Attend section
 		atat.getATLEventsSubmenu().click();
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Events");
+		Thread.sleep(2000);
 		atat.getATLAttendTab().click();
 
 		//Click Services and Amenities under Attend section
@@ -797,7 +804,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
 		System.out.println("Together Safely section is displayed properly");*/
 		driver.get(prop.getProperty("atlmrkturl"));
-		utl.verifyCloseBtnPopup();
+		//utl.verifyCloseBtnPopup();
 	}
 
 	@Test(priority=8)
