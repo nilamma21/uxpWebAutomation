@@ -463,6 +463,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		utl.scrollToElement(fl.marketInfoAMC());
 */
 		utl.scrollToElement(lvafl.getourBrandsLVA());
+		Thread.sleep(2000);
 		//Click on Our Brand link
 		lvafl.getourBrandsLVA().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/exhibitor/directory"));
@@ -471,12 +472,14 @@ public class LasVegasAppSmokeTest_PROD extends base {
 				
 		// Click Download The App link and verify results
 		lvafl.getDownloadTheApp().click();
+		Thread.sleep(2000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/App"));
 		driver.get(prop.getProperty("lvmappurl"));
 		utl.scrollToElement(lvafl.marketInfoAMC());
 		
 		// Click Contact Us link and verify results
 		lvafl.getContactUsLVA().click();
+		Thread.sleep(2000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("about/contact-us"));
 		driver.get(prop.getProperty("lvmappurl"));
 		utl.scrollToElement(lvafl.marketInfoAMC());
