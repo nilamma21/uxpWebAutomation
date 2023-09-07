@@ -49,7 +49,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	}
 	
 
-	@Test(priority=8)
+	@Test(priority=12)
 	public void TS001_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException{
 		//The purpose of this test case to verify:-
 		//UXP-TS513: To verify all channels links in Header
@@ -57,7 +57,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvach = new LVAAllChannelsLinksPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(10000);
+		Thread.sleep(8000);
 
 		//Click Atlanta Market channel link and verify result
 		lvach.getAtlantaMarket().click();
@@ -162,7 +162,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test(priority=5)
+	@Test(priority=11)
 	public void TS015_LVMApp_MarketRecap() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -171,7 +171,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(10000);
+
 		//Verify Market Recap link is working properly
 		lap.getMarketRecap().click();
 		Thread.sleep(2000);
@@ -180,7 +180,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	}
 	
 	
-	@Test(priority=9)
+	@Test(priority=5)
 	public void TS004_LVMApp_VerifyAllLinksUnderAboutTabTest () throws InterruptedException {
 		
 		//The purpose of this test case to verify:-
@@ -342,8 +342,9 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Verify Hotels Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("#flights"));	
 		System.out.println("Vefiry Events Page ");
-
+		
 		utl.scrollToElement(lvaa.getLVAAttendTab());
+		Thread.sleep(2000);
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
 		//CLick on Parking
@@ -353,10 +354,9 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("#parking"));
 		System.out.println("Vefiry Parking Page");
 
-		Thread.sleep(5000);
-
 		utl.scrollToElement(lvaa.getLVAAttendTab());
 		//Click on Attend Tab
+		Thread.sleep(2000);
 		lvaa.getLVAAttendTab().click();
 		//Click on Hotels
 		lvaa.getLVHotels().click(); 
@@ -367,7 +367,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test(priority=10)
+	@Test(priority=8)
 	public void TS007_LVMApp_VerifyAllLinksUnderExhibitTabTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T506: To verify Exhibit Tab
@@ -440,7 +440,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test(priority=11)
+	@Test(priority=9)
 	public void TS008_LVMApp_VerifyFooterLinksTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T510 : To verify Footer Links Navigation
@@ -450,17 +450,16 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//Scroll till footer links
-		utl.scrollToElement(lvafl.getourBrandsLVA());
+/*		//Scroll till footer links
+		utl.scrollToElement(fl.getmarketInfoATL());
 		
-	/*	//Click Market Info link and verify results
+		//Click Market Info link and verify results
 		fl.getmarketInfoATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets"));
 		driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.marketInfoAMC());
 */
-
-		Thread.sleep(10000);
+		utl.scrollToElement(lvafl.getourBrandsLVA());
 		//Click on Our Brand link
 		lvafl.getourBrandsLVA().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/exhibitor/directory"));
@@ -611,7 +610,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//utl.scrollToElement(lvafl.marketInfoAMC());	
 	}
 	
-	@Test(priority=12)
+	@Test(priority=10)
 	public void TS009_LVMApp_VerifySocialMediaLinksTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T511: To verify the all social media links and it's redirection
