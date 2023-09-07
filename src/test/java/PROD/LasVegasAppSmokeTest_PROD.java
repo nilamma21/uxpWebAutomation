@@ -59,6 +59,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(8000);
 
+		utl.scrollToElement(lvach.getAtlantaMarket());
 		//Click Atlanta Market channel link and verify result
 		lvach.getAtlantaMarket().click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
@@ -172,6 +173,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+		Thread.sleep(2000);
+		utl.scrollToElement(lap.getMarketRecap());
 		//Verify Market Recap link is working properly
 		lap.getMarketRecap().click();
 		Thread.sleep(2000);
@@ -344,7 +347,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		System.out.println("Vefiry Events Page ");
 		
 		utl.scrollToElement(lvaa.getLVAAttendTab());
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
 		//CLick on Parking
@@ -356,7 +359,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 
 		utl.scrollToElement(lvaa.getLVAAttendTab());
 		//Click on Attend Tab
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		lvaa.getLVAAttendTab().click();
 		//Click on Hotels
 		lvaa.getLVHotels().click(); 
