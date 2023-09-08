@@ -24,6 +24,8 @@ public class ATLExhibitorDirectoryPage {
 	} 
 
 	public WebElement getATLExhibitorDirectory() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitordirectoryoptn));
 		return driver.findElement(atlexhibitordirectoryoptn);
 	}
 
@@ -33,6 +35,8 @@ public class ATLExhibitorDirectoryPage {
 		return driver.findElement(atlexhdirtsearchtxtbx);
 	}
 	public WebElement getATLExhDirtSearchBtn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhdirtsearchbtn));
 		return driver.findElement(atlexhdirtsearchbtn);
 	}
 }
