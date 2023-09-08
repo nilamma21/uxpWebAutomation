@@ -25,7 +25,8 @@ public class EXPRegistrationAndServicesTabPage {
 	} 
 
 	public WebElement getEXPRegAndServicesTab() throws InterruptedException {
-		//Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(EXPRegAndServicesTab));
 		return driver.findElement(EXPRegAndServicesTab);
 	}
 	public WebElement getEXPExhibitorReg() throws InterruptedException {

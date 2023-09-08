@@ -3,6 +3,9 @@
 
 <suite name="SmokeTestSuite" parallel="classes" thread-count="7" >
 
+
+	<test thread-count="2" name="Parallel Test">
+
 	<test name="Parallel Test">
 
 		<classes>

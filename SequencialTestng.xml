@@ -9,14 +9,14 @@
 	<test thread-count="6" name="SequencialTest">
 		<classes>
 
-	 	 	 <class name="PROD.LasVegasAppSmokeTest_PROD" />
+	 	 	 <class name="PROD.AtlantaAppSmokeTest_PROD" />
 	 	 	 <methods>
 
-					
-				 <!-- <include name="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest"/>   
-	 			<include name="TS013_LVM_VerifyAllLinksUnderExploreMarketTabTest"/>   -->
-	 			<!-- <include name="TS013_ATL_VerifyAllNewsAndTrendsMenuTest"/> --> -->
-
+			 		 <include name="TS005_ATLApp_VerifyExhibitorDirectoryTest"/>  
+				  <!-- <include name="TS011_LVM_VerifyAllLinksUnderYearRoundTabTest"/>  -->  
+	 			
+	 			<!-- <include name="TS013_ATL_VerifyAllNewsAndTrendsMenuTest"/> --> 
+	 			
 
 	 	 	 </methods>
 

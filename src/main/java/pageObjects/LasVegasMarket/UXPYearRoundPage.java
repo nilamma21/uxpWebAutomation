@@ -14,7 +14,7 @@ public class UXPYearRoundPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By YearRoundTab = By.xpath("//div[@class ='imc-section']/div[1]/div[6]/div[1]/a[1]"); //Locator for Year Round tab in header
+	By YearRoundTab = By.xpath("//div[@class ='imc-section']/div[1]/div[6]/div[1]"); //Locator for Year Round tab in header
 	By YearRound = By.xpath("//div[@class ='imc-section']/div[1]/div[6]/div[2]/div[1]/div[1]/a[1]"); //Locator for Year Round option under Year Round
 	By LasVegasDesignCenter = By.xpath("//div[@class ='imc-section']/div[1]/div[6]/div[2]/div[2]/div[1]/a[1]"); //Locator for Las Vegas Design Center option under Year Round
 	By Expo = By.xpath("//div[@class ='imc-section']/div[1]/div[6]/div[2]/div[3]/div[1]/a[1]"); //Locator for The Expo under Year Round
