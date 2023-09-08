@@ -140,6 +140,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		//Click Manage Users icon and verify results
 
 		st.getManageUsers().click();
+		Thread.sleep(3000);
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Users"));
 		System.out.println("Manage Users page is displayed properly.");
 		st.getSettings().click();
@@ -147,6 +148,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		//Click Corporate Info icon and verify results
 
 		st.getCorporateInfo().click();
+		Thread.sleep(3000);
 		Assert.assertEquals(st.getVerifyManageUsers().getText(), "Corporate Info");
 		System.out.println("Corporate Info page is displayed properly.");
 
@@ -180,13 +182,14 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		//Click on Registration And Services Tab 
-
+		
 		try {
 		rs.getEXPRegAndServicesTab().click();
 		Assert.assertTrue(st.getVerifySettings().isDisplayed());
 
 		//Exhibitor Registration
 		rs.getEXPExhibitorReg().click();
+		Thread.sleep(3000);
 		//Verify Exhibitor Registration Page Header
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Market Registrations"));
 		driver.navigate().back();
@@ -195,7 +198,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		//Click on Atlanta Services
 		String winHandleBefore1 = driver.getWindowHandle();
 		rs.getEXPAtlantaServices().click();		
-
+		Thread.sleep(3000);
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
@@ -281,6 +284,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		al.getEXPApplicationsAndLeasesTab().click();
 		System.out.println("Applications And Leases Tab ");
+		Thread.sleep(3000);
 		Assert.assertTrue(st.getVerifySettings().isDisplayed());
 		System.out.println("Registration and Services section is displayed properly.");
 
@@ -294,6 +298,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		al.getEXPApplicationsAndLeasesTab().click();
 		System.out.println("Applications And Leases Tab ");
+		Thread.sleep(3000);
 		//Click Apply for Trade show Space
 		System.out.println("Atlanta Apply For Tradeshow Space");
 		// Store the current window handle
@@ -314,6 +319,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		System.out.println("Applications And Leases Tab ");
 		//Click on Atlanta Manager Trade show
 		System.out.println("Atlanta Manage Tradeshow Space");
+		Thread.sleep(3000);
 		// Store the current window handle
 		String winHandleBefore1 = driver.getWindowHandle();
 		al.getEXPAtlantaApplyForTradeshowSpace().click();		
@@ -330,7 +336,8 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		System.out.println("Applications And Leases Tab ");
 		System.out.println("Atlanta Payment ");
-		//String winHandleBefore2 = driver.getWindowHandle();
+		Thread.sleep(3000);	
+		String winHandleBefore2 = driver.getWindowHandle();
 		rs.getEXPAtlantaServices().click();	
 		//Click on Exhibitor Portal Login' sub-menu
 
@@ -345,7 +352,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore1);
+		driver.switchTo().window(winHandleBefore2);
 
 
 
@@ -353,7 +360,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		System.out.println("Las Vegas Permanent Space");
 		//Click on Las Vegas Permanent Space
 		//al.getEXPApplicationsAndLeasesTab().click();
-		//String winHandleBefore3 = driver.getWindowHandle();
+		String winHandleBefore3 = driver.getWindowHandle();
 		rs.getEXPAAmericasMartLogisticsExhibitorToolkit().click();		
 		//Click on Exhibitor Portal Login' sub-menu
 		// Switch to new window opened
@@ -367,15 +374,15 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore1);
+		driver.switchTo().window(winHandleBefore3);
 
 
 		System.out.println("Applications And Leases Tab ");
 		//Click on Las Vegas Gift and Trade show Space
 		System.out.println("Las Vegas Gift and Trade show Space ");
 
-
-		//	String winHandleBefore4 = driver.getWindowHandle();
+		Thread.sleep(3000);
+		String winHandleBefore4 = driver.getWindowHandle();
 		al.getEXPLasVegasGiftHomeTradeshowSpace().click();		
 		//Click on Exhibitor Portal Login' sub-menu
 		// Switch to new window opened
@@ -387,7 +394,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore1);
+		driver.switchTo().window(winHandleBefore4);
 		System.out.println("Applications And Leases Tab ");
 		System.out.println("Las Vegas Furnitre and Trade show Space ");
 		//Click on Las Vegas Furnitre and Trade show Space
@@ -426,44 +433,54 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		//Click on Your Digital Showroom Drop-down
 		yd.getEXPYourDigiShowroom().click();
+		Thread.sleep(3000);
 		Assert.assertTrue(st.getVerifySettings().isDisplayed());
 		System.out.println("Digital Showroom is displayed properly.");
 
 		//Click on Profile Info
 		rs.getEXPExhibitorReg().click();
+		Thread.sleep(3000);
 		//verify profile info page
 		Assert.assertTrue(yd.getEXPValidateProfile().isDisplayed());
 
 		//Click on Your Digital Showroom Dropdown
 		yd.getEXPYourDigiShowroom().click();
+		Thread.sleep(3000);
 		//Click on Lines
 		rs.getEXPAtlantaServices().click();
+		Thread.sleep(3000);
 		//verify Lines page
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Managing Your Manufacturing Lines"));
 
 		//Click on Your Digital Showroom Dropdown
 		yd.getEXPYourDigiShowroom().click();
+		Thread.sleep(3000);
 		//Click on Product
 		rs.getEXPAtlantaAdvertisingAndSponcership().click();
+		Thread.sleep(3000);
 		//verify Product page
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Products"));
 
 		//Click on Your Digital Showroom Dropdown
-		yd.getEXPYourDigiShowroom().click();;
+		yd.getEXPYourDigiShowroom().click();
+		Thread.sleep(3000);
 		System.out.println("Your Digital Showroom");
 		//Click on Catalog Flipbook
 		rs.getEXPAtlantaPayment().click();
+		Thread.sleep(3000);
 		System.out.println("Catalog Flipbook");
 		//verify Catalog page
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Catalogs"));
 
 		//Click on Your Digital Showroom Dropdown
 		yd.getEXPYourDigiShowroom().click();
+		Thread.sleep(3000);
 
 		//Click on JuniperData Link
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		yd.getEXPJuniperData().click();	
+		Thread.sleep(3000);
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
