@@ -694,7 +694,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		System.out.println("open Year Round DropDown");
 		amoyr.getVisit().click();
 		System.out.println("Visit Link");
-		Thread.sleep(3000);
+		Thread.sleep(15000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"Visit");
 
 		amoyr.getOpenYearRoundTab().click();
