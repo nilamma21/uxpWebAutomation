@@ -359,7 +359,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 
 		utl.scrollToElement(lvaa.getLVAAttendTab());
 		//Click on Attend Tab
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		lvaa.getLVAAttendTab().click();
 		//Click on Hotels
 		lvaa.getLVHotels().click(); 
