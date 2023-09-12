@@ -796,7 +796,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
 		driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.getmarketInfoATL());
-		
+		Thread.sleep(6000);
+
 		//Click on Our Brand link
 		fl.getOurBrandsATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/exhibitor/directory"));
