@@ -342,6 +342,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		//Click Admission Policies option under Market Info
 
+		Thread.sleep(5000);
 		mi.getAdmissionPolicies().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Admission Policies");
@@ -350,8 +351,9 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		//Click Industry Partners option under Market Info
 
+		Thread.sleep(5000);
 		mi.getIndustryPartners().click();
-		Thread.sleep(3000);
+		Thread.sleep(9000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Industry Partners");
 		System.out.println("Industry Partners section is displayed properly");
 		mi.getMarketInfoHeader().click();
@@ -403,8 +405,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
+		Thread.sleep(3000);
 		//Click on Explore Las Vegas Market sub-menu
 		expmrkt.getExploreLVMMenu().click();
+		Thread.sleep(9000);
 		//Verify that 'Explore LVM' page should be displayed
 		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Explore Market");
 
@@ -790,13 +794,14 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		at.getAttend().click();
 
 		//Click Dining tab at Header
-
+        Thread.sleep(3000);
 		at.getDining().click();
-		Thread.sleep(3000);
+		Thread.sleep(9000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Dining");
 		System.out.println("Dining section is displayed properly");
+		Thread.sleep(3000);
 		at.getAttend().click();
-
+		Thread.sleep(9000);
 		//Click Amenities and Services tab at Header
 
 		at.getAmenities().click();
