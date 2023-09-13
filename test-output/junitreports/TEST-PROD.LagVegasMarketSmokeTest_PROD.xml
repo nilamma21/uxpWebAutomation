@@ -341,4 +341,5 @@ Session ID: 0793310d8fe2d5841476178d5ba0ba12
     </failure>
   </testcase> <!-- TS005_LVM_VerifyAllLinksUnderMarketInfoTabTest -->
   <testcase name="TS011_LVM_VerifyAllLinksUnderYearRoundTabTest" time="11.392" classname="PROD.LagVegasMarketSmokeTest_PROD"/>
+
 </testsuite> <!-- PROD.LagVegasMarketSmokeTest_PROD -->

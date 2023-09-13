@@ -38,9 +38,13 @@ public class UXPFooterLinksNavigationPage {
 	By AmericasMart_ATLAppFooter = By.xpath("(//a[contains(@href,'https://www.americasmart.com/?')])[2]"); //Locator for Americas Mart in footer links of ATLApp
 	
 	By lvapplink_ATL = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/')])[2]"); //Locator for Las Vegas Apparel footer link
+	
+	By lvapplink_ATL_Footer = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/?')])[3]"); //Locator for Las Vegas Apparel footer link
+	
+	
 	By lvmlink_ATL = By.xpath("(//a[contains(text(),'Las Vegas Market')])[2]"); //Locator for Las Vegas market footer link
 	By lvmlink_ATLM = By.xpath("//a[contains(@href,'https://www.lasvegas-apparel.com/')]"); //Locator for Las Vegas market footer link
-	
+	By lvmlink_ATL_Footer = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/')])[2]"); //Locator for Las Vegas market footer link
 	By AtlantaApparel = By.xpath("(//a[contains(@href,'https://www.atlanta-apparel.com')])[2]"); //Locator for Atlanta Apparel in footer links
 	By AtlantaMarket = By.xpath("//div[contains(@class,'imc-accordion imc-vr--titan imc-category--heading')]//a[contains(text(),'Atlanta Market')]"); //Locator for Atlanta Matket in footer links
 	By HighPointMarket = By.xpath("(//a[contains(text(),'ANDMORE at High Point Market')])[2]"); //Locator for High Point Market in footer links
@@ -99,6 +103,25 @@ public class UXPFooterLinksNavigationPage {
 		this.driver = driver; 			
 	} 
 
+	
+	
+	public WebElement getlvmlink_ATL_Footerr() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmlink_ATL_Footer));
+		return driver.findElement(lvmlink_ATL_Footer);
+
+	}
+
+	
+	public WebElement getlvapplink_ATL_Footer() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvapplink_ATL_Footer));
+		return driver.findElement(lvapplink_ATL_Footer);
+
+	}
+
+	
+	
 	public WebElement getHighPointMarket() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(HighPointMarket));

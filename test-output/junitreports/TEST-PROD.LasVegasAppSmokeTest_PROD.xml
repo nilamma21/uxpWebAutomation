@@ -7,4 +7,5 @@
 <testsuite hostname="eon-swapnili" name="PROD.LasVegasAppSmokeTest_PROD" tests="1" failures="0" timestamp="4 Sep 2023 11:49:18 GMT" time="221.370" errors="0">
   <testcase name="TS008_LVMApp_VerifyFooterLinksTest" time="221.370" classname="PROD.LasVegasAppSmokeTest_PROD"/>
 
+
 </testsuite> <!-- PROD.LasVegasAppSmokeTest_PROD -->

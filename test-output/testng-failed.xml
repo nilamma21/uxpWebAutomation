@@ -5,10 +5,10 @@
     <classes>
       <class name="PROD.AtlantaMarketSmokeTest_PROD">
         <methods>
-          <include name="TS013_ATL_VerifyAllNewsAndTrendsMenuTest"/>
-          <include name="TS010_ATL_VerifyAllSocialMediaLinksOnFooterTest"/>
-          <include name="TS012_ATL_VerifyAllLinksUnderAttendTabTest"/>
-          <include name="TS015_ATL_MarketRecap"/>
+
+          <include name="TS005_LVM_VerifyAllLinksUnderMarketInfoTabTest"/>
+          <include name="initialize"/>
+
           <include name="tearDown"/>
           <include name="TS008_ATL_VerifAllLinksUnderExhibitTabTest"/>
           <include name="TS007_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>
