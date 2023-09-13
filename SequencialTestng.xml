@@ -9,20 +9,10 @@
 	<test thread-count="6" name="SequencialTest">
 		<classes>
 
-
-	 	 	 <class name="PROD.ExhibitorPortalSmokeTest_PROD" />
+	 	 	 <class name="PROD.AtlantaMarketSmokeTest_PROD" />
 	 	 	 <methods>
-
-			 <include name="TS001_EXP_VerifyExhibitorPortalLoginTest"/>   
-	 	 	  <include name="TS003_EXP_VerifySettingsTabTest"/> 
-
-	 	 	 <class name="PROD.LasVegasAppSmokeTest_PROD" />
-	 	 	 <methods>
-
-				   <include name="TS008_LVMApp_VerifyFooterLinksTest"/>   
-	 			<!--<include name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest"/>   -->
-
-
+				<!--   <include name="TS008_LVMApp_VerifyFooterLinksTest"/>   
+	 			<include name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest"/>   -->
 	 	 	 </methods>
 
 		</classes>
