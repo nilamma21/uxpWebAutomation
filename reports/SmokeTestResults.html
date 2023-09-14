@@ -35,11 +35,7 @@
 <a href="#"><span class="badge badge-primary">UXP Automation Results</span></a>
 </li>
 <li class="m-r-10">
-<<<<<<< HEAD
-<a href="#"><span class="badge badge-primary">Sep 8, 2023 11:50:20 AM</span></a>
-=======
-<a href="#"><span class="badge badge-primary">Sep 7, 2023 11:48:47 AM</span></a>
->>>>>>> 45782e6ffd6ea07ddf0d1010fe52a288f7a2dc0e
+<a href="#"><span class="badge badge-primary">Sep 14, 2023 05:10:44 PM</span></a>
 </li>
 </ul>
 </div>
@@ -49,11 +45,6 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -76,7 +67,6 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -84,39 +74,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-<<<<<<< HEAD
-            <p class="name">TS015_ATL_MarketRecap</p>
+            <p class="name">TS001_ATL_MarketRecap</p>
             <p class="text-sm">
-              <span>11:51:10 AM</span> / <span>00:00:33:496</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-=======
-            <p class="name">TS008_LVM_VerifyFooterLinksTest</p>
-            <p class="text-sm">
-              <span>11:49:19 AM</span> / <span>00:06:06:731</span>
+              <span>17:11:43 PM</span> / <span>00:00:00:483</span>
               <span class="badge pass-bg log float-right">Pass</span>
->>>>>>> 45782e6ffd6ea07ddf0d1010fe52a288f7a2dc0e
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<<<<<<< HEAD
-<h5 class="test-status text-fail">TS015_ATL_MarketRecap</h5>
-<span class='badge badge-success'>09.08.2023 11:51:10</span>
-<span class='badge badge-danger'>09.08.2023 11:51:44</span>
-<span class='badge badge-default'>00:00:33:496</span>
-=======
-<h5 class="test-status text-pass">TS008_LVM_VerifyFooterLinksTest</h5>
-<span class='badge badge-success'>09.07.2023 11:49:19</span>
-<span class='badge badge-danger'>09.07.2023 11:55:25</span>
-<span class='badge badge-default'>00:06:06:731</span>
->>>>>>> 45782e6ffd6ea07ddf0d1010fe52a288f7a2dc0e
+<h5 class="test-status text-pass">TS001_ATL_MarketRecap</h5>
+<span class='badge badge-success'>09.14.2023 17:11:43</span>
+<span class='badge badge-danger'>09.14.2023 17:11:43</span>
+<span class='badge badge-default'>00:00:00:483</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 </div>
@@ -125,92 +101,8 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:51:44 AM</td>
-        <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@class='imc-breakpoint-display--hide-mobile imc-header-subnav__link-text max-two-lines' and @title='Market Recap'] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.UXPLandingPage.getMarketRecap(UXPLandingPage.java:60)
-	at PROD.AtlantaMarketSmokeTest_PROD.TS015_ATL_MarketRecap(AtlantaMarketSmokeTest_PROD.java:909)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //*[@class='imc-breakpoint-display--hide-mobile imc-header-subnav__link-text max-two-lines' and @title='Market Recap']
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_381'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-</textarea>
-          
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="2"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TS003_ATL_VerifyGlobalSearchFunctionalityTest</p>
-            <p class="text-sm">
-              <span>11:51:44 AM</span> / <span>00:00:24:884</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TS003_ATL_VerifyGlobalSearchFunctionalityTest</h5>
-<span class='badge badge-success'>09.08.2023 11:51:44</span>
-<span class='badge badge-danger'>09.08.2023 11:52:09</span>
-<span class='badge badge-default'>00:00:24:884</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-<<<<<<< HEAD
-        <td>11:52:09 AM</td>
-=======
-        <td>11:55:25 AM</td>
+        <td>5:11:43 PM</td>
         <td>
           Test Passed
         </td>
@@ -225,9 +117,9 @@ Driver info: driver.version: unknown
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS011_LVM_VerifyAllLinksUnderYearRoundTabTest</p>
+            <p class="name">TS002_ATL_VerifyGlobalSearchFunctionalityTest</p>
             <p class="text-sm">
-              <span>11:55:25 AM</span> / <span>00:00:22:098</span>
+              <span>17:11:43 PM</span> / <span>00:00:25:098</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -235,10 +127,10 @@ Driver info: driver.version: unknown
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">TS011_LVM_VerifyAllLinksUnderYearRoundTabTest</h5>
-<span class='badge badge-success'>09.07.2023 11:55:25</span>
-<span class='badge badge-danger'>09.07.2023 11:55:47</span>
-<span class='badge badge-default'>00:00:22:098</span>
+<h5 class="test-status text-pass">TS002_ATL_VerifyGlobalSearchFunctionalityTest</h5>
+<span class='badge badge-success'>09.14.2023 17:11:43</span>
+<span class='badge badge-danger'>09.14.2023 17:12:08</span>
+<span class='badge badge-default'>00:00:25:098</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 </div>
 </div>
@@ -248,8 +140,7 @@ Driver info: driver.version: unknown
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:55:47 AM</td>
->>>>>>> 45782e6ffd6ea07ddf0d1010fe52a288f7a2dc0e
+        <td>5:12:08 PM</td>
         <td>
           Test Passed
         </td>
@@ -264,9 +155,9 @@ Driver info: driver.version: unknown
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS005_ATL_VerifyExhibitorDirectoryTest</p>
+            <p class="name">TS003_ATL_VerifyExhibitorDirectoryTest</p>
             <p class="text-sm">
-              <span>11:52:09 AM</span> / <span>00:00:23:519</span>
+              <span>17:12:08 PM</span> / <span>00:00:16:307</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -274,10 +165,10 @@ Driver info: driver.version: unknown
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">TS005_ATL_VerifyExhibitorDirectoryTest</h5>
-<span class='badge badge-success'>09.08.2023 11:52:09</span>
-<span class='badge badge-danger'>09.08.2023 11:52:32</span>
-<span class='badge badge-default'>00:00:23:519</span>
+<h5 class="test-status text-pass">TS003_ATL_VerifyExhibitorDirectoryTest</h5>
+<span class='badge badge-success'>09.14.2023 17:12:08</span>
+<span class='badge badge-danger'>09.14.2023 17:12:25</span>
+<span class='badge badge-default'>00:00:16:307</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 </div>
 </div>
@@ -287,7 +178,7 @@ Driver info: driver.version: unknown
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:52:32 AM</td>
+        <td>5:12:25 PM</td>
         <td>
           Test Passed
         </td>
@@ -302,9 +193,9 @@ Driver info: driver.version: unknown
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS006_ATL_VerifyAllLinksUnderMarketInfoTabTest</p>
+            <p class="name">TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest</p>
             <p class="text-sm">
-              <span>11:52:32 AM</span> / <span>00:00:47:486</span>
+              <span>17:12:25 PM</span> / <span>00:00:35:904</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -312,10 +203,10 @@ Driver info: driver.version: unknown
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">TS006_ATL_VerifyAllLinksUnderMarketInfoTabTest</h5>
-<span class='badge badge-success'>09.08.2023 11:52:32</span>
-<span class='badge badge-danger'>09.08.2023 11:53:20</span>
-<span class='badge badge-default'>00:00:47:486</span>
+<h5 class="test-status text-pass">TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest</h5>
+<span class='badge badge-success'>09.14.2023 17:12:25</span>
+<span class='badge badge-danger'>09.14.2023 17:13:00</span>
+<span class='badge badge-default'>00:00:35:904</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 </div>
 </div>
@@ -325,7 +216,7 @@ Driver info: driver.version: unknown
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:53:20 AM</td>
+        <td>5:13:00 PM</td>
         <td>
           Test Passed
         </td>
@@ -335,25 +226,25 @@ Driver info: driver.version: unknown
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="5"
+        <li class="test-item"  status="pass" test-id="5"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS007_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest</p>
+            <p class="name">TS005_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest</p>
             <p class="text-sm">
-              <span>11:53:20 AM</span> / <span>00:00:31:293</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:13:00 PM</span> / <span>00:00:15:708</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS007_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest</h5>
-<span class='badge badge-success'>09.08.2023 11:53:20</span>
-<span class='badge badge-danger'>09.08.2023 11:53:51</span>
-<span class='badge badge-default'>00:00:31:293</span>
+<h5 class="test-status text-pass">TS005_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest</h5>
+<span class='badge badge-success'>09.14.2023 17:13:00</span>
+<span class='badge badge-danger'>09.14.2023 17:13:16</span>
+<span class='badge badge-default'>00:00:15:708</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 </div>
 </div>
@@ -362,55 +253,10 @@ Driver info: driver.version: unknown
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:53:51 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:13:16 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.WebDriverException: element click intercepted: Element <a href="/" class="imc-navigation__tier1Link" aria-expanded="false" aria-controls="navigation-tier2-" data-xpath="navigation.tier1Link" target="_self">...</a> is not clickable at point (483, 166). Other element would receive the click: <button class="imc-button--accent1-inverted imc-button--round imc-button ">...</button>
-  (Session info: chrome=116.0.5845.180)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_381'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir2844_1614418965}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:64772}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.180, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: a5f0f7c12a3f6610151240d423e3c2b4
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at PROD.AtlantaMarketSmokeTest_PROD.TS007_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest(AtlantaMarketSmokeTest_PROD.java:305)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -418,25 +264,25 @@ Session ID: a5f0f7c12a3f6610151240d423e3c2b4
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="6"
+        <li class="test-item"  status="pass" test-id="6"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS013_ATL_VerifyAllNewsAndTrendsMenuTest</p>
+            <p class="name">TS006_ATL_VerifyAllNewsAndTrendsMenuTest</p>
             <p class="text-sm">
-              <span>11:53:51 AM</span> / <span>00:00:06:248</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:13:16 PM</span> / <span>00:00:47:212</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS013_ATL_VerifyAllNewsAndTrendsMenuTest</h5>
-<span class='badge badge-success'>09.08.2023 11:53:51</span>
-<span class='badge badge-danger'>09.08.2023 11:53:57</span>
-<span class='badge badge-default'>00:00:06:248</span>
+<h5 class="test-status text-pass">TS006_ATL_VerifyAllNewsAndTrendsMenuTest</h5>
+<span class='badge badge-success'>09.14.2023 17:13:16</span>
+<span class='badge badge-danger'>09.14.2023 17:14:03</span>
+<span class='badge badge-default'>00:00:47:212</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 </div>
 </div>
@@ -445,55 +291,10 @@ Session ID: a5f0f7c12a3f6610151240d423e3c2b4
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:53:57 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:14:03 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.WebDriverException: element click intercepted: Element <a href="/" class="imc-navigation__tier1Link" aria-expanded="false" aria-controls="navigation-tier2-" data-xpath="navigation.tier1Link" target="_self">...</a> is not clickable at point (1071, 166). Other element would receive the click: <div class="imc-content imc-content--right">...</div>
-  (Session info: chrome=116.0.5845.180)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_381'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir2844_1614418965}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:64772}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.180, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: a5f0f7c12a3f6610151240d423e3c2b4
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at PROD.AtlantaMarketSmokeTest_PROD.TS013_ATL_VerifyAllNewsAndTrendsMenuTest(AtlantaMarketSmokeTest_PROD.java:804)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -501,25 +302,25 @@ Session ID: a5f0f7c12a3f6610151240d423e3c2b4
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="7"
+        <li class="test-item"  status="pass" test-id="7"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS009_ATL_VerifyAllChannelsLinksTest</p>
+            <p class="name">TS007_ATL_VerifyAllChannelsLinksTest</p>
             <p class="text-sm">
-              <span>11:53:57 AM</span> / <span>00:01:21:186</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:14:03 PM</span> / <span>00:04:41:548</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS009_ATL_VerifyAllChannelsLinksTest</h5>
-<span class='badge badge-success'>09.08.2023 11:53:57</span>
-<span class='badge badge-danger'>09.08.2023 11:55:19</span>
-<span class='badge badge-default'>00:01:21:186</span>
+<h5 class="test-status text-pass">TS007_ATL_VerifyAllChannelsLinksTest</h5>
+<span class='badge badge-success'>09.14.2023 17:14:03</span>
+<span class='badge badge-danger'>09.14.2023 17:18:45</span>
+<span class='badge badge-default'>00:04:41:548</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 </div>
 </div>
@@ -528,40 +329,10 @@ Session ID: a5f0f7c12a3f6610151240d423e3c2b4
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:55:19 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:18:45 PM</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at PROD.AtlantaMarketSmokeTest_PROD.TS009_ATL_VerifyAllChannelsLinksTest(AtlantaMarketSmokeTest_PROD.java:431)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -569,25 +340,25 @@ Session ID: a5f0f7c12a3f6610151240d423e3c2b4
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="8"
+        <li class="test-item"  status="pass" test-id="8"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS010_ATL_VerifyAllSocialMediaLinksOnFooterTest</p>
+            <p class="name">TS008_ATL_VerifyAllSocialMediaLinksOnFooterTest</p>
             <p class="text-sm">
-              <span>11:55:19 AM</span> / <span>00:01:20:609</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:18:45 PM</span> / <span>00:01:32:125</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS010_ATL_VerifyAllSocialMediaLinksOnFooterTest</h5>
-<span class='badge badge-success'>09.08.2023 11:55:19</span>
-<span class='badge badge-danger'>09.08.2023 11:56:39</span>
-<span class='badge badge-default'>00:01:20:609</span>
+<h5 class="test-status text-pass">TS008_ATL_VerifyAllSocialMediaLinksOnFooterTest</h5>
+<span class='badge badge-success'>09.14.2023 17:18:45</span>
+<span class='badge badge-danger'>09.14.2023 17:20:17</span>
+<span class='badge badge-default'>00:01:32:125</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 </div>
 </div>
@@ -596,53 +367,10 @@ Session ID: a5f0f7c12a3f6610151240d423e3c2b4
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:56:39 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:20:17 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@href='/market-info'] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.UXPFooterLinksNavigationPage.getmarketInfo(UXPFooterLinksNavigationPage.java:246)
-	at PROD.AtlantaMarketSmokeTest_PROD.TS010_ATL_VerifyAllSocialMediaLinksOnFooterTest(AtlantaMarketSmokeTest_PROD.java:479)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@href='/market-info']
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_381'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -650,25 +378,25 @@ Driver info: driver.version: unknown
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="9"
+        <li class="test-item"  status="pass" test-id="9"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS012_ATL_VerifyAllLinksUnderAttendTabTest</p>
+            <p class="name">TS009_ATL_VerifyAllLinksUnderAttendTabTest</p>
             <p class="text-sm">
-              <span>11:56:39 AM</span> / <span>00:00:43:571</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:20:17 PM</span> / <span>00:02:19:471</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS012_ATL_VerifyAllLinksUnderAttendTabTest</h5>
-<span class='badge badge-success'>09.08.2023 11:56:39</span>
-<span class='badge badge-danger'>09.08.2023 11:57:23</span>
-<span class='badge badge-default'>00:00:43:571</span>
+<h5 class="test-status text-pass">TS009_ATL_VerifyAllLinksUnderAttendTabTest</h5>
+<span class='badge badge-success'>09.14.2023 17:20:17</span>
+<span class='badge badge-danger'>09.14.2023 17:22:37</span>
+<span class='badge badge-default'>00:02:19:471</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 </div>
 </div>
@@ -677,39 +405,10 @@ Driver info: driver.version: unknown
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:57:23 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:22:37 PM</td>
         <td>
-          <textarea readonly class="code-block">org.junit.ComparisonFailure: expected:<[Why Attend?]> but was:<[Registration]>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at PROD.AtlantaMarketSmokeTest_PROD.TS012_ATL_VerifyAllLinksUnderAttendTabTest(AtlantaMarketSmokeTest_PROD.java:742)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -717,25 +416,25 @@ Driver info: driver.version: unknown
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="10"
+        <li class="test-item"  status="pass" test-id="10"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS008_ATL_VerifAllLinksUnderExhibitTabTest</p>
+            <p class="name">TS010_ATL_VerifAllLinksUnderExhibitTabTest</p>
             <p class="text-sm">
-              <span>11:57:23 AM</span> / <span>00:00:30:793</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:22:37 PM</span> / <span>00:00:59:074</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS008_ATL_VerifAllLinksUnderExhibitTabTest</h5>
-<span class='badge badge-success'>09.08.2023 11:57:23</span>
-<span class='badge badge-danger'>09.08.2023 11:57:54</span>
-<span class='badge badge-default'>00:00:30:793</span>
+<h5 class="test-status text-pass">TS010_ATL_VerifAllLinksUnderExhibitTabTest</h5>
+<span class='badge badge-success'>09.14.2023 17:22:37</span>
+<span class='badge badge-danger'>09.14.2023 17:23:36</span>
+<span class='badge badge-default'>00:00:59:074</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 </div>
 </div>
@@ -744,39 +443,10 @@ Driver info: driver.version: unknown
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:57:54 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:23:36 PM</td>
         <td>
-          <textarea readonly class="code-block">org.junit.ComparisonFailure: expected:<[Why Exhibit?]> but was:<[Apply to Exhibit]>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at PROD.AtlantaMarketSmokeTest_PROD.TS008_ATL_VerifAllLinksUnderExhibitTabTest(AtlantaMarketSmokeTest_PROD.java:364)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -784,25 +454,25 @@ Driver info: driver.version: unknown
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="11"
+        <li class="test-item"  status="pass" test-id="11"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">TS011_ATL_VerifyFooterLinksTest</p>
             <p class="text-sm">
-              <span>11:57:54 AM</span> / <span>00:00:12:016</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:23:36 PM</span> / <span>00:01:07:376</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS011_ATL_VerifyFooterLinksTest</h5>
-<span class='badge badge-success'>09.08.2023 11:57:54</span>
-<span class='badge badge-danger'>09.08.2023 11:58:06</span>
-<span class='badge badge-default'>00:00:12:016</span>
+<h5 class="test-status text-pass">TS011_ATL_VerifyFooterLinksTest</h5>
+<span class='badge badge-success'>09.14.2023 17:23:36</span>
+<span class='badge badge-danger'>09.14.2023 17:24:43</span>
+<span class='badge badge-default'>00:01:07:376</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 </div>
 </div>
@@ -811,40 +481,10 @@ Driver info: driver.version: unknown
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:58:06 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:24:43 PM</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at PROD.AtlantaMarketSmokeTest_PROD.TS011_ATL_VerifyFooterLinksTest(AtlantaMarketSmokeTest_PROD.java:543)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -861,218 +501,30 @@ Driver info: driver.version: unknown
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">4</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">org.openqa.selenium.WebDriverException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.WebDriverException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:53:20 AM</td>
-<td>
-<a href="#" class="linked" test-id='5' id='5'>TS007_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:53:51 AM</td>
-<td>
-<a href="#" class="linked" test-id='6' id='6'>TS013_ATL_VerifyAllNewsAndTrendsMenuTest</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">org.openqa.selenium.TimeoutException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.TimeoutException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:51:10 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='1'>TS015_ATL_MarketRecap</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:55:19 AM</td>
-<td>
-<a href="#" class="linked" test-id='8' id='8'>TS010_ATL_VerifyAllSocialMediaLinksOnFooterTest</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">org.junit.ComparisonFailure</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.junit.ComparisonFailure</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:56:39 AM</td>
-<td>
-<a href="#" class="linked" test-id='9' id='9'>TS012_ATL_VerifyAllLinksUnderAttendTabTest</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:57:23 AM</td>
-<td>
-<a href="#" class="linked" test-id='10' id='10'>TS008_ATL_VerifAllLinksUnderExhibitTabTest</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:53:57 AM</td>
-<td>
-<a href="#" class="linked" test-id='7' id='7'>TS009_ATL_VerifyAllChannelsLinksTest</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:57:54 AM</td>
-<td>
-<a href="#" class="linked" test-id='11' id='11'>TS011_ATL_VerifyFooterLinksTest</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="container-fluid p-4 view dashboard-view">
+<div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<<<<<<< HEAD
-<h3>Sep 8, 2023 11:50:20 AM</h3>
-=======
-<h3>Sep 7, 2023 11:48:47 AM</h3>
->>>>>>> 45782e6ffd6ea07ddf0d1010fe52a288f7a2dc0e
+<h3>Sep 14, 2023 05:10:44 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<<<<<<< HEAD
-<h3>Sep 8, 2023 11:58:06 AM</h3>
-=======
-<h3>Sep 7, 2023 11:55:48 AM</h3>
->>>>>>> 45782e6ffd6ea07ddf0d1010fe52a288f7a2dc0e
+<h3>Sep 14, 2023 05:24:45 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<<<<<<< HEAD
-<h3>3</h3>
-=======
-<h3>2</h3>
->>>>>>> 45782e6ffd6ea07ddf0d1010fe52a288f7a2dc0e
+<h3>11</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>8</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -1088,17 +540,12 @@ Driver info: driver.version: unknown
 </div>
 </div>
 <div class="card-footer">
-<<<<<<< HEAD
-<div><small data-tooltip='27%'>
-<b>3</b> tests passed
-=======
 <div><small data-tooltip='100%'>
-<b>2</b> tests passed
->>>>>>> 45782e6ffd6ea07ddf0d1010fe52a288f7a2dc0e
+<b>11</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='72%'><b>8</b> tests failed,
+<small data-tooltip='0%'><b>0</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -1116,13 +563,9 @@ Driver info: driver.version: unknown
 </div>
 </div>
 <div class="card-footer">
-<<<<<<< HEAD
-<div><small data-tooltip='27%'><b>3</b> events passed</small></div>
-=======
-<div><small data-tooltip='100%'><b>2</b> events passed</small></div>
->>>>>>> 45782e6ffd6ea07ddf0d1010fe52a288f7a2dc0e
+<div><small data-tooltip='100%'><b>11</b> events passed</small></div>
 <div>
-<small data-tooltip='72%'><b>8</b> events failed,
+<small data-tooltip='0%'><b>0</b> events failed,
 <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -1139,11 +582,7 @@ Driver info: driver.version: unknown
 </div></div>
 <script>
 var timeline = {
-<<<<<<< HEAD
-"TS015_ATL_MarketRecap":33.496,"TS003_ATL_VerifyGlobalSearchFunctionalityTest":24.884,"TS005_ATL_VerifyExhibitorDirectoryTest":23.519,"TS006_ATL_VerifyAllLinksUnderMarketInfoTabTest":47.486,"TS007_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest":31.293,"TS013_ATL_VerifyAllNewsAndTrendsMenuTest":6.248,"TS009_ATL_VerifyAllChannelsLinksTest":81.186,"TS010_ATL_VerifyAllSocialMediaLinksOnFooterTest":80.609,"TS012_ATL_VerifyAllLinksUnderAttendTabTest":43.571,"TS008_ATL_VerifAllLinksUnderExhibitTabTest":30.793,"TS011_ATL_VerifyFooterLinksTest":12.016
-=======
-"TS008_LVM_VerifyFooterLinksTest":366.731,"TS011_LVM_VerifyAllLinksUnderYearRoundTabTest":22.098
->>>>>>> 45782e6ffd6ea07ddf0d1010fe52a288f7a2dc0e
+"TS001_ATL_MarketRecap":0.483,"TS002_ATL_VerifyGlobalSearchFunctionalityTest":25.098,"TS003_ATL_VerifyExhibitorDirectoryTest":16.307,"TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest":35.904,"TS005_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest":15.708,"TS006_ATL_VerifyAllNewsAndTrendsMenuTest":47.212,"TS007_ATL_VerifyAllChannelsLinksTest":281.548,"TS008_ATL_VerifyAllSocialMediaLinksOnFooterTest":92.125,"TS009_ATL_VerifyAllLinksUnderAttendTabTest":139.471,"TS010_ATL_VerifAllLinksUnderExhibitTabTest":59.074,"TS011_ATL_VerifyFooterLinksTest":67.376
 };
 </script>
 <div class="row">
@@ -1166,13 +605,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-<<<<<<< HEAD
-passParent: 3,
-failParent: 8,
-=======
-passParent: 2,
+passParent: 11,
 failParent: 0,
->>>>>>> 45782e6ffd6ea07ddf0d1010fe52a288f7a2dc0e
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -1188,13 +622,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-<<<<<<< HEAD
-passEvents: 3,
-failEvents: 8,
-=======
-passEvents: 2,
+passEvents: 11,
 failEvents: 0,
->>>>>>> 45782e6ffd6ea07ddf0d1010fe52a288f7a2dc0e
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0

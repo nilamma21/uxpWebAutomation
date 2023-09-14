@@ -49,7 +49,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	}
 	
 
-	@Test(priority=12)
+	@Test(priority=1)
 	public void TS001_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException{
 		//The purpose of this test case to verify:-
 		//UXP-TS513: To verify all channels links in Header
@@ -115,8 +115,6 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Thread.sleep(6000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets/Formal-Markets"));
 		System.out.println("Formal-Markets channel link is working properly.");
-		
-
 	}
 	
 	@Test(priority=2)
@@ -139,52 +137,9 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		System.out.println("Global Search functionality is working properly.");
 		
 	}
-	
-	@Test(enabled=false)//priority=3
-	public void TS003_ATLApp_VerifyExhibitorDirectoryTest() throws InterruptedException {
-		
 
-	}
-	
-	@Test(enabled=false)//(priority=11)
-	public void TS010_LVM_PlanYourMarkett() throws InterruptedException, IOException
-	{
-		//The purpose of this test case to verify:-
-		//UXP-T786: To verify Plan Your Market
-		lap = new UXPLandingPage(driver);
-		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		//Verify Plan your market link is working properly
-		lap.getplanYourMarket().click();
-		Thread.sleep(2000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/App"));
-		System.out.println("Plan Your Market page is working properly.");
-		
-	}
-	
-	@Test(priority=11)
-	public void TS015_LVMApp_MarketRecap() throws InterruptedException, IOException
-	{
-		//The purpose of this test case to verify:-
-		//UXP-T797: Market Recap page opens successfully.
-		lap = new UXPLandingPage(driver);
-		
-		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		Thread.sleep(2000);
-		utl.scrollToElement(lap.getMarketRecap());
-		//Verify Market Recap link is working properly
-		lap.getMarketRecap().click();
-		Thread.sleep(2000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/App"));
-		System.out.println("Market Recap page is working properly.");
-	}
-	
-	
-	@Test(priority=5)
-	public void TS004_LVMApp_VerifyAllLinksUnderAboutTabTest () throws InterruptedException {
+	@Test(priority=3)
+	public void TS003_LVMApp_VerifyAllLinksUnderAboutTabTest () throws InterruptedException {
 		
 		//The purpose of this test case to verify:-
 		//UXP-T508: To verify About Tab
@@ -233,8 +188,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test(priority=6)
-	public void TS005_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest () throws InterruptedException {
+	@Test(priority=4)
+	public void TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T509: To verify Attend Tab
 		
@@ -281,8 +236,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test(priority=7)
-	public void TS006_LVMApp_VerifyAllLinksUnderAttendTabTest () throws InterruptedException {
+	@Test(priority=5)
+	public void TS005_LVMApp_VerifyAllLinksUnderAttendTabTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T507: To verify Attend Tab
 		lvaa = new LVAAttendPage(driver);
@@ -346,7 +301,10 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("#flights"));	
 		System.out.println("Vefiry Events Page ");
 		
-		utl.scrollToElement(lvaa.getLVAAttendTab());
+		driver.get(prop.getProperty("lvmappurl"));
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		//utl.scrollToElement(lvaa.getLVAAttendTab());
+		
 		Thread.sleep(5000);
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
@@ -357,7 +315,9 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("#parking"));
 		System.out.println("Vefiry Parking Page");
 
-		utl.scrollToElement(lvaa.getLVAAttendTab());
+		//utl.scrollToElement(lvaa.getLVAAttendTab());
+		driver.get(prop.getProperty("lvmappurl"));
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		//Click on Attend Tab
 		Thread.sleep(5000);
 		lvaa.getLVAAttendTab().click();
@@ -370,8 +330,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test(priority=8)
-	public void TS007_LVMApp_VerifyAllLinksUnderExhibitTabTest () throws InterruptedException {
+	@Test(priority=6)
+	public void TS006_LVMApp_VerifyAllLinksUnderExhibitTabTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T506: To verify Exhibit Tab
 		
@@ -443,8 +403,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test(priority=9)
-	public void TS008_LVMApp_VerifyFooterLinksTest () throws InterruptedException {
+	@Test(priority=7)
+	public void TS007_LVMApp_VerifyFooterLinksTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T510 : To verify Footer Links Navigation
 	
@@ -616,8 +576,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//utl.scrollToElement(lvafl.marketInfoAMC());	
 	}
 	
-	@Test(priority=10)
-	public void TS009_LVMApp_VerifySocialMediaLinksTest () throws InterruptedException {
+	@Test(priority=8)
+	public void TS008_LVMApp_VerifySocialMediaLinksTest () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T511: To verify the all social media links and it's redirection
 
@@ -661,6 +621,47 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore2);
 */		
+	}
+	
+	@Test(priority=9)
+	public void TS009_LVMApp_MarketRecap() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T797: Market Recap page opens successfully.
+		lap = new UXPLandingPage(driver);
+		
+		driver.get(prop.getProperty("lvmappurl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		Thread.sleep(2000);
+		utl.scrollToElement(lap.getMarketRecap());
+		//Verify Market Recap link is working properly
+		lap.getMarketRecap().click();
+		Thread.sleep(2000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/App"));
+		System.out.println("Market Recap page is working properly.");
+	}
+	
+	@Test(enabled=false)//priority=3
+	public void TS010_ATLApp_VerifyExhibitorDirectoryTest() throws InterruptedException {
+		
+	}
+	
+	@Test(enabled=false)//(priority=11)
+	public void TS011_LVM_PlanYourMarkett() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T786: To verify Plan Your Market
+		lap = new UXPLandingPage(driver);
+		driver.get(prop.getProperty("lvmappurl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Verify Plan your market link is working properly
+		lap.getplanYourMarket().click();
+		Thread.sleep(2000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/App"));
+		System.out.println("Plan Your Market page is working properly.");
+		
 	}
 	
 	@AfterClass

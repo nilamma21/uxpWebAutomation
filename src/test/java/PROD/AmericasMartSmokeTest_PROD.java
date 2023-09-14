@@ -96,192 +96,17 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//utl.verifyCloseBtnPopup();
 	}
 	
-	//Due to re-branding changes
-	@Test(enabled=false)//priority=1
-	public void TS001_AMC_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
+
+
+
+
+
+
+
+
+	@Test(priority=1)
+	public void TS001_AMC_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException
 	{
-		//The purpose of this test case to verify:-
-		//UXP-T101: To verify the Market Planner overview and it's functionality
-
-		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);
-		amhe = new AMHeaderLinksPage(driver);
-		utl = new Utility(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		/*//Navigate to Atlanta Market site
-		driver.manage().window().maximize();
-		driver.get(prop.getProperty("ammarturl"));
-		//Thread.sleep(5000);
-		lap.getIUnderstandBtn().click();
-		//Thread.sleep(5000);
-		utl.verifyCloseBtnPopup();*/
-
-		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-		utl.verifyCloseBtnPopup();
-		//Verify that Market Planner Home page should be displayed
-		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
-	}
-
-	@Test(priority=13)
-	public void TS011_AMC_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
-	{
-
-		//The purpose of this test case to verify:-
-		//UXP-T121: To verify Exhibitor Directory
-
-		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);
-		amhe = new AMHeaderLinksPage(driver);
-		ed = new UXPExhibitorDirectoryPage(driver);
-		gs = new UXPGlobalSearchPage(driver);
-		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-		mi = new UXPMarketInfoPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		//utl.verifyCloseBtnPopup();
-		//Verify exhibitor directory page is successfully opened
-		ed.getExhibitorDirectory().click();
-		Assert.assertEquals(exhp.getVerifyPgBreadcrumb().getText(), "Exhibitor Directory");
-
-
-		exhp.getExhDirectSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
-		exhp.getExhDirectSearchBtn().click();
-		Thread.sleep(10000);
-
-		utl.scrollToElement(mi.getVerifyContactUs());
-		String searchterm = gs.getVerifyGlobalSeacrh().getText();
-		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
-		driver.get(prop.getProperty("ammarturl"));
-	}
-
-	@Test(priority=7)
-	public void TS007_AMC_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
-	{
-		//The purpose of this test case to verify:-
-		//UXP-013: To verify the all social media links and it's redirection
-
-		amfl = new AMFooterLinksNavigationPage(driver);
-		utl = new Utility(driver); 
-		fl = new UXPFooterLinksNavigationPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		//Scroll till footer links
-		utl.scrollToElement(fl.marketInfoAMC());
-		//Thread.sleep(5000);
-
-		//In app footer click on 'Facebook' icon and verify results
-		amfl.getFacebookIcon().click();
-
-		//Verify that 'AMC Facebook' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/AmericasmartAtl"));
-		System.out.println("Facebook opened successfully");
-		driver.get(prop.getProperty("ammarturl"));
-		utl.verifyCloseBtnPopup();
-
-		//In app footer click on 'Twitter' icon and verify results
-		/*amfl.getTwitterIcon().click();
-
-		//Verify that 'AMC Twitter' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://twitter.com/americasmartatl"));
-		System.out.println("Twitter opened successfully");
-		driver.get(prop.getProperty("ammarturl"));
-
-
-		//Click on Instagram icon
-		amfl.getInstagramIcon().click();
-
-		//Verify that 'AMC Instagram' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.instagram.com/americasmartatl/"));
-		System.out.println("Instagram opened successfully");
-		driver.get(prop.getProperty("ammarturl"));
-
-		Thread.sleep(8000);
-		//Click on Youtube icon
-		amfl.getYoutubeIcon().click();
-
-		//Verify that 'AMC Instagram' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.youtube.com/user/AmericasMart"));
-		System.out.println("Instagram opened successfully");
-		driver.get(prop.getProperty("ammarturl"));*/
-	}
-
-	@Test(priority=10)
-	public void TS005_AMC_VerifyAllLinksUnderAboutTabTest() throws InterruptedException, IOException
-	{
-		//The purpose of this test case to verify:-
-		//UXP-T005: To verify links for Market info tab at Header
-
-		mi = new UXPMarketInfoPage(driver);
-		amab = new AMAboutTabPage(driver);
-		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-		
-		driver.get(prop.getProperty("ammarturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		utl.verifyCloseBtnPopup();
-		//Click About tab at Header
-		mi.getMarketInfoHeader().click();
-		Assert.assertTrue(mi.getVerifyMarketInfoSection().isDisplayed());
-
-		//Click About Americas Mart option under About tab
-		mi.getAboutLasVegasMarket().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(mi.getVerifyContactUs().getText(), "About");
-		System.out.println("About Americas Mart section is displayed properly");
-		mi.getMarketInfoHeader().click();
-
-		//Click Press Center option under About tab
-		mi.getMarketDatesAndHrs().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Press Releases");
-		System.out.println("Press Center section is displayed properly");
-		mi.getMarketInfoHeader().click();
-		
-		//Due to re-branding changes
-/*		//Click Atlanta Next option under About tab
-		mi.getFAQs().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Next");
-		System.out.println("Atlanta Next section is displayed properly");
-		mi.getMarketInfoHeader().click();
-*/
-		//Click History option under About tab
-		mi.getContactUs().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "History");
-		System.out.println("History section is displayed properly");
-		mi.getMarketInfoHeader().click();
-
-		//Click Careers option under About tab
-
-		amab.getCareers().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Careers");
-		System.out.println("Careers section is displayed properly");
-		mi.getMarketInfoHeader().click();
-
-		//Click Contact Us option under Market Info
-
-		amab.getContactUs().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("ammarturl")+"About/Contact-Us");
-		utl.verifyCloseBtnPopup();
-		mi.getMarketInfoHeader().click();
-
-		//Click Industry Partners option under Market Info
-
-		amab.getIndustryPartners().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Industry Partners");
-		System.out.println("Industry Partners section is displayed properly");
-	}
-
-	@Test(priority=6)
-	public void TS006_AMC_VerifyAllHeaderChanelLinksTest() throws InterruptedException, IOException
-	{
-
 		//The purpose of this test case to verify:-
 		//UXP-T101: To verify the Market Planner overview and it's functionality
 
@@ -327,14 +152,64 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas Apparel"));
 		driver.get(prop.getProperty("ammarturl"));
 	}
+	
+	@Test(priority=2)
+	public void TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-013: To verify the all social media links and it's redirection
+
+		amfl = new AMFooterLinksNavigationPage(driver);
+		utl = new Utility(driver); 
+		fl = new UXPFooterLinksNavigationPage(driver);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Scroll till footer links
+		utl.scrollToElement(fl.marketInfoAMC());
+		//Thread.sleep(5000);
+
+		//In app footer click on 'Facebook' icon and verify results
+		amfl.getFacebookIcon().click();
+
+		//Verify that 'AMC Facebook' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/AmericasmartAtl"));
+		System.out.println("Facebook opened successfully");
+		driver.get(prop.getProperty("ammarturl"));
+		utl.verifyCloseBtnPopup();
+
+		//In app footer click on 'Twitter' icon and verify results
+		/*amfl.getTwitterIcon().click();
+
+		//Verify that 'AMC Twitter' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://twitter.com/americasmartatl"));
+		System.out.println("Twitter opened successfully");
+		driver.get(prop.getProperty("ammarturl"));
 
 
-	@Test(priority=8)
-	public void TS008_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
+		//Click on Instagram icon
+		amfl.getInstagramIcon().click();
+
+		//Verify that 'AMC Instagram' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.instagram.com/americasmartatl/"));
+		System.out.println("Instagram opened successfully");
+		driver.get(prop.getProperty("ammarturl"));
+
+		Thread.sleep(8000);
+		//Click on Youtube icon
+		amfl.getYoutubeIcon().click();
+
+		//Verify that 'AMC Instagram' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.youtube.com/user/AmericasMart"));
+		System.out.println("Instagram opened successfully");
+		driver.get(prop.getProperty("ammarturl"));*/
+	}
+
+
+	@Test(priority=3)
+	public void TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T012: To verify links for Attend tab at Header
-
 		mi = new UXPMarketInfoPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		atat = new ATLAttendPage(driver);
@@ -344,7 +219,6 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.verifyCloseBtnPopup();
 		//Click Markets and Events tab at Header
 		//Thread.sleep(3000);
-		
 		atat.getATLAttendTab().click();
 
 		//Click Attend our next market tab under Markets and Events section
@@ -357,7 +231,6 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.verifyCloseBtnPopup();
 		
 		atat.getATLAttendTab().click();
-
 		//Click Market Dates and Hours tab under Markets and Events section
 
 		amme.getMarketDatesAndHour().click();
@@ -427,178 +300,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 	}
 
-	@Test(priority=14)//Previous priority is 5
-	public void TS012_AMC_VerifyFooterLinksTest() throws InterruptedException, IOException
-	{
-		//The purpose of this test case to verify:-
-		//UXP-T69: To verify Footer Links Navigation
-
-		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-		mi = new UXPMarketInfoPage(driver);
-		fl = new UXPFooterLinksNavigationPage(driver);
-		amfl = new AMFooterLinksNavigationPage(driver);
-		atlfl = new ATLFooterLinksNavigationPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		//	utl.verifyCloseBtnPopup();
-
-
-		utl.scrollToElement(fl.marketInfoAMC());
-
-		//Click Market Info link and verify results
-		fl.marketInfoAMC().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/about"));
-		driver.get(prop.getProperty("ammarturl"));
-		utl.scrollToElement(fl.marketInfoAMC());
-
-		//Click on Press Center
-		fl.getpressCenterAMC().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/About/Press-Center"));
-		driver.get(prop.getProperty("ammarturl"));
-		utl.scrollToElement(fl.marketInfoAMC());
-		
-		// Click Download The App link and verify results
-		fl.getDownloadTheApp().click();
-		Assert.assertEquals(driver.getTitle(), "Download the @Market ANDMORE App");
-		driver.get(prop.getProperty("ammarturl"));
-		utl.scrollToElement(fl.marketInfoAMC());
-
-		//Click on Our Brands link
-		fl.getOurBrandsATL().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/exhibitor/directory"));
-		driver.get(prop.getProperty("ammarturl"));
-		utl.scrollToElement(fl.marketInfoAMC());
-
-		// Click Contact Us link and verify results
-		fl.getContactUsATL().click();	
-		Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
-		System.out.println("Contact us Page open successfully");
-		driver.get(prop.getProperty("ammarturl"));
-		utl.scrollToElement(fl.marketInfoAMC());
-
-		// Click Careers link and verify results		
-		fl.getCareersATL().click();
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Careers");
-		// driver.get(prop.getProperty("atlappurl"));
-		driver.get(prop.getProperty("ammarturl"));
-		utl.scrollToElement(fl.marketInfoAMC());
-
-		// Click on Terms & conditions link
-		
-		// Switch to new tab
-		String winHandleBefore7 = driver.getWindowHandle();
-		fl.getTermsAndConditions().click();
-		for (String winHandle7 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle7);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/terms-of-use"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore7);
-
-		// Click Privacy Policy and verify results
-		
-		
-		// Click Privacy Policy link and verify results
-		
-		String winHandleBefore8 = driver.getWindowHandle();
-		fl.getatlprivacypolicy().click();
-		for (String winHandle8 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle8);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/privacy-policy"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore8);
-		
-		// Click Atlanta Apparel link and verify results
-		
-		// Switch to new tab
-		String winHandleBefore9 = driver.getWindowHandle();
-		fl.getAtlantaApparel().click();
-		for (String winHandle9 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle9);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore9);
-
-		// Click Atlanta Market link and verify results
-		
-		// Switch to new tab
-		String winHandleBefore1 = driver.getWindowHandle();
-		fl.getAtlantaMarket().click();
-		for (String winHandle1 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle1);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore1);
-
-		// Click on High Point Market link
-		// Switch to new tab
-		String winHandleBefore4 = driver.getWindowHandle();
-		fl.getHighPointMarket().click();
-		for (String winHandle4 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle4);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore4);
-		
-
-		// Click on LVA Market link
-		// Switch to new tab
-		/*fl.getlvmlink_ATLM().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
-		driver.get(prop.getProperty("ammarturl"));*/
-		
-		String winHandleBefore5 = driver.getWindowHandle();
-		fl.getlvapplink_ATL().click();
-		for (String winHandle4 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle4);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
-		//driver.close();
-		driver.switchTo().window(winHandleBefore5);
-
-		// Click on LVM Market link
-		// Switch to new tab
-		String winHandleBefore11 = driver.getWindowHandle();
-		fl.getlvmlink_ATL().click();
-		for (String winHandle11 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle11);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore11);
-		
-		//Click International Market Centers link and verify results
-		//fl.getInternationalMarketCenters().click();//Change for re-branding
-		
-		//Switch to new tab
-		String winHandleBefore3 = driver.getWindowHandle();
-		fl.getandmore().click();
-		for(String winHandle3 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle3);}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore3);
-		//utl.scrollToElement(fl.marketInfoAMC());
-
-		//Click Juniper Market Centers link and verify results
-		/*fl.getJuniperMarket().click();
-		//Switch to new tab
-		String winHandleBefore12 = driver.getWindowHandle();
-		for(String winHandle12 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle12);}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
-		driver.get(prop.getProperty("ammarturl"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore12);
-		utl.scrollToElement(fl.marketInfoAMC());*/
-	}
-
-	@Test(priority=9)
-	public void TS009_AMC_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+	@Test(priority=4)
+	public void TS004_AMC_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T63: To verify global search functionality
@@ -619,112 +322,78 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
 	}
-
-	@Test(priority=12)
-	public void TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest() throws InterruptedException, IOException
+	
+	@Test(priority=5)
+	public void TS005_AMC_VerifyAllLinksUnderAboutTabTest() throws InterruptedException, IOException
 	{
-
 		//The purpose of this test case to verify:-
-		//UXP-T104: To verify the Open year round links and it's functionality
+		//UXP-T005: To verify links for Market info tab at Header
 
-		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);
-		amhe = new AMHeaderLinksPage(driver);
 		mi = new UXPMarketInfoPage(driver);
 		amab = new AMAboutTabPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-		amoyr=new AMOpenYearRoundPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		utl.verifyCloseBtnPopup();
-		//Click on Open Year Round Tab 
-		amoyr.getOpenYearRoundTab().click();
-
-		//Click About Open Year Round Link
-		amoyr.getAboutYearRound().click();
-		Thread.sleep(3000);
-		//Verify that About Open Year Round page should be displayed
-		String actualHeader="Open Year Round";
-		Assert.assertTrue(amoyr.getAboutYearRoundPageHeader().getText().equals(actualHeader));
-
-		//Verify how to register 
-		amoyr.getOpenYearRoundTab().click();
-		amoyr.gethowtoregister().click();
-		Thread.sleep(3000);
-		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("How to Register"));
-		System.out.println("How to regiter opened");
 		
-		//Click on Open Year Round Tab 
-		amoyr.getOpenYearRoundTab().click();
-		//Click Open Year Round Showrooms Link
-		amoyr.getOpenYearRoundShowrooms().click();
-		Thread.sleep(3000);
-		utl.scrollToElement(amoyr.getOpenYearRoundShowroomsPageHeader());
-		//Verify that Open Year Round Showrooms page should be displayed
-		String actualShowroomDirectHeader="Open Year Round Showrooms at AmericasMart";
-		Assert.assertTrue(amoyr.getOpenYearRoundShowroomsPageHeader().getText().equals(actualShowroomDirectHeader));
+		driver.get(prop.getProperty("ammarturl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		utl.verifyCloseBtnPopup();
+		//Click About tab at Header
+		mi.getMarketInfoHeader().click();
+		Assert.assertTrue(mi.getVerifyMarketInfoSection().isDisplayed());
 
-		//Click on Open Year Round Tab 
-		amoyr.getOpenYearRoundTab().click();
-		//Click Exhibitor Directory Link
-		amoyr.getExhibitorDirectory().click();
+		//Click About Americas Mart option under About tab
+		mi.getAboutLasVegasMarket().click();
 		Thread.sleep(3000);
-		utl.scrollToElement(amoyr.getExhibitorDirectoryPageHeader());
-		//Verify that Exhibitor Directory page should be displayed
-		String actualExhibitorDirectoryHeader="Exhibitor Directory";
-		Assert.assertTrue(amoyr.getExhibitorDirectoryPageHeader().getText().equals(actualExhibitorDirectoryHeader));
+		Assert.assertEquals(mi.getVerifyContactUs().getText(), "About");
+		System.out.println("About Americas Mart section is displayed properly");
+		mi.getMarketInfoHeader().click();
 
-		//Click on Open Year Round Tab 
-		amoyr.getOpenYearRoundTab().click();
-		//Click Floor Plans Link
-		amoyr.getFloorPlans().click();
+		//Click Press Center option under About tab
+		mi.getMarketDatesAndHrs().click();
 		Thread.sleep(3000);
-		//Verify that Floor Plans page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("/Market-Map"));
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Press Releases");
+		System.out.println("Press Center section is displayed properly");
+		mi.getMarketInfoHeader().click();
+		
+		//Due to re-branding changes
+/*		//Click Atlanta Next option under About tab
+		mi.getFAQs().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Next");
+		System.out.println("Atlanta Next section is displayed properly");
+		mi.getMarketInfoHeader().click();
+*/
+		//Click History option under About tab
+		mi.getContactUs().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "History");
+		System.out.println("History section is displayed properly");
+		mi.getMarketInfoHeader().click();
 
-		amoyr.getOpenYearRoundTab().click();
-		//Click Campus Overview Link
-		amoyr.getCampOverview().click();
-		Thread.sleep(3000);
-		//Verify that Campus Overview page should be displayed	
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Campus Overview");
+		//Click Careers option under About tab
 
-		amoyr.getOpenYearRoundTab().click();
-		System.out.println("open Year Round DropDown");
-		amoyr.getVisit().click();
-		System.out.println("Visit Link");
+		amab.getCareers().click();
 		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"Visit");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Careers");
+		System.out.println("Careers section is displayed properly");
+		mi.getMarketInfoHeader().click();
 
-		amoyr.getOpenYearRoundTab().click();
-		amoyr.getParknTranspSubmenu().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Parking & Transportation");
+		//Click Contact Us option under Market Info
 
-		amoyr.getOpenYearRoundTab().click();
-		amoyr.getHotelsSubmenu().click();
+		amab.getContactUs().click();
 		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+"Markets/Hotels"));
+		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("ammarturl")+"About/Contact-Us");
+		utl.verifyCloseBtnPopup();
+		mi.getMarketInfoHeader().click();
 
-		amoyr.getOpenYearRoundTab().click();
-		amoyr.getHowToReg().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "How to Register");
+		//Click Industry Partners option under Market Info
 
-		amoyr.getOpenYearRoundTab().click();
-		amoyr.getCalendarEvents().click();
+		amab.getIndustryPartners().click();
 		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"Calendar of Events");
-
-		amoyr.getOpenYearRoundTab().click();
-		amoyr.getDesigners().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"For Designers");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Industry Partners");
+		System.out.println("Industry Partners section is displayed properly");
 	}
-
-	@Test(priority=11)
-	public void TS004_AMC_VerifyAllLinksUnderExhibitTest() throws InterruptedException, IOException
+	
+	@Test(priority=6)
+	public void TS006_AMC_VerifyAllLinksUnderExhibitTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T107: To verify the Exhibit tab overview and it's functionality
@@ -795,12 +464,343 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Verify that FAQs page should be displayed
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Exhibitor FAQs");
 
+	}
 
+	@Test(priority=7)
+	public void TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T104: To verify the Open year round links and it's functionality
+
+		lap = new UXPLandingPage(driver);
+		lp = new UXPLoginPage(driver);
+		amhe = new AMHeaderLinksPage(driver);
+		mi = new UXPMarketInfoPage(driver);
+		amab = new AMAboutTabPage(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		amoyr=new AMOpenYearRoundPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		utl.verifyCloseBtnPopup();
+		//Click on Open Year Round Tab 
+		amoyr.getOpenYearRoundTab().click();
+
+		//Click About Open Year Round Link
+		amoyr.getAboutYearRound().click();
+		Thread.sleep(3000);
+		//Verify that About Open Year Round page should be displayed
+		String actualHeader="Open Year Round";
+		Assert.assertTrue(amoyr.getAboutYearRoundPageHeader().getText().equals(actualHeader));
+
+		//Verify how to register 
+		amoyr.getOpenYearRoundTab().click();
+		amoyr.gethowtoregister().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("How to Register"));
+		System.out.println("How to regiter opened");
+		
+		//Click on Open Year Round Tab 
+		amoyr.getOpenYearRoundTab().click();
+		//Click Open Year Round Showrooms Link
+		amoyr.getOpenYearRoundShowrooms().click();
+		Thread.sleep(3000);
+		utl.scrollToElement(amoyr.getOpenYearRoundShowroomsPageHeader());
+		//Verify that Open Year Round Showrooms page should be displayed
+		String actualShowroomDirectHeader="Open Year Round Showrooms at AmericasMart";
+		Assert.assertTrue(amoyr.getOpenYearRoundShowroomsPageHeader().getText().equals(actualShowroomDirectHeader));
+		
+		utl.scrollToTop();
+		//Click on Open Year Round Tab 
+		amoyr.getOpenYearRoundTab().click();
+		//Click Exhibitor Directory Link
+		amoyr.getExhibitorDirectory().click();
+		Thread.sleep(3000);
+		utl.scrollToElement(amoyr.getExhibitorDirectoryPageHeader());
+		//Verify that Exhibitor Directory page should be displayed
+		String actualExhibitorDirectoryHeader="Exhibitor Directory";
+		Assert.assertTrue(amoyr.getExhibitorDirectoryPageHeader().getText().equals(actualExhibitorDirectoryHeader));
+
+		utl.scrollToTop();
+		//Click on Open Year Round Tab 
+		amoyr.getOpenYearRoundTab().click();
+		//Click Floor Plans Link
+		amoyr.getFloorPlans().click();
+		Thread.sleep(3000);
+		//Verify that Floor Plans page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("/Market-Map"));
+
+		utl.scrollToTop();
+		amoyr.getOpenYearRoundTab().click();
+		//Click Campus Overview Link
+		amoyr.getCampOverview().click();
+		Thread.sleep(3000);
+		//Verify that Campus Overview page should be displayed	
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Campus Overview");
+
+		utl.scrollToTop();
+		amoyr.getOpenYearRoundTab().click();
+		System.out.println("open Year Round DropDown");
+		amoyr.getVisit().click();
+		System.out.println("Visit Link");
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"Visit");
+
+		utl.scrollToTop();
+		amoyr.getOpenYearRoundTab().click();
+		amoyr.getParknTranspSubmenu().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Parking & Transportation");
+
+		amoyr.getOpenYearRoundTab().click();
+		amoyr.getHotelsSubmenu().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+"Markets/Hotels"));
+
+		amoyr.getOpenYearRoundTab().click();
+		amoyr.getHowToReg().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "How to Register");
+
+		amoyr.getOpenYearRoundTab().click();
+		amoyr.getCalendarEvents().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"Calendar of Events");
+
+		amoyr.getOpenYearRoundTab().click();
+		amoyr.getDesigners().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"For Designers");
+	}
+	
+	@Test(priority=8)
+	public void TS008_AMC_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T121: To verify Exhibitor Directory
+
+		lap = new UXPLandingPage(driver);
+		lp = new UXPLoginPage(driver);
+		amhe = new AMHeaderLinksPage(driver);
+		ed = new UXPExhibitorDirectoryPage(driver);
+		gs = new UXPGlobalSearchPage(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		mi = new UXPMarketInfoPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//utl.verifyCloseBtnPopup();
+		//Verify exhibitor directory page is successfully opened
+		ed.getExhibitorDirectory().click();
+		Assert.assertEquals(exhp.getVerifyPgBreadcrumb().getText(), "Exhibitor Directory");
+
+		exhp.getExhDirectSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
+		exhp.getExhDirectSearchBtn().click();
+		Thread.sleep(10000);
+
+		utl.scrollToElement(mi.getVerifyContactUs());
+		String searchterm = gs.getVerifyGlobalSeacrh().getText();
+		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
+		driver.get(prop.getProperty("ammarturl"));
+	}
+	
+	@Test(priority=9)//Previous priority is 5
+	public void TS009_AMC_VerifyFooterLinksTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T69: To verify Footer Links Navigation
+
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		mi = new UXPMarketInfoPage(driver);
+		fl = new UXPFooterLinksNavigationPage(driver);
+		amfl = new AMFooterLinksNavigationPage(driver);
+		atlfl = new ATLFooterLinksNavigationPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//	utl.verifyCloseBtnPopup();
+
+		utl.scrollToElement(fl.marketInfoAMC());
+
+		//Click Market Info link and verify results
+		fl.marketInfoAMC().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/about"));
+		driver.get(prop.getProperty("ammarturl"));
+		utl.scrollToElement(fl.marketInfoAMC());
+
+		//Click on Press Center
+		fl.getpressCenterAMC().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/About/Press-Center"));
+		driver.get(prop.getProperty("ammarturl"));
+		utl.scrollToElement(fl.marketInfoAMC());
+		
+		// Click Download The App link and verify results
+		fl.getDownloadTheApp().click();
+		Assert.assertEquals(driver.getTitle(), "Download the @Market ANDMORE App");
+		driver.get(prop.getProperty("ammarturl"));
+		utl.scrollToElement(fl.marketInfoAMC());
+
+		//Click on Our Brands link
+		fl.getOurBrandsATL().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/exhibitor/directory"));
+		driver.get(prop.getProperty("ammarturl"));
+		utl.scrollToElement(fl.marketInfoAMC());
+
+		// Click Contact Us link and verify results
+		fl.getContactUsATL().click();	
+		Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
+		System.out.println("Contact us Page open successfully");
+		driver.get(prop.getProperty("ammarturl"));
+		utl.scrollToElement(fl.marketInfoAMC());
+
+		// Click Careers link and verify results		
+		fl.getCareersATL().click();
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Careers");
+		// driver.get(prop.getProperty("atlappurl"));
+		driver.get(prop.getProperty("ammarturl"));
+		utl.scrollToElement(fl.marketInfoAMC());
+
+		// Click on Terms & conditions link
+		
+		// Switch to new tab
+		String winHandleBefore7 = driver.getWindowHandle();
+		fl.getTermsAndConditions().click();
+		for (String winHandle7 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle7);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/terms-of-use"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore7);
+
+		// Click Privacy Policy and verify results
+		
+		// Click Privacy Policy link and verify results
+		
+		String winHandleBefore8 = driver.getWindowHandle();
+		fl.getatlprivacypolicy().click();
+		for (String winHandle8 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle8);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/privacy-policy"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore8);
+		
+		// Click Atlanta Apparel link and verify results
+		
+		// Switch to new tab
+		String winHandleBefore9 = driver.getWindowHandle();
+		fl.getAtlantaApparel().click();
+		for (String winHandle9 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle9);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore9);
+
+		// Click Atlanta Market link and verify results
+		
+		// Switch to new tab
+		String winHandleBefore1 = driver.getWindowHandle();
+		fl.getAtlantaMarket().click();
+		for (String winHandle1 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle1);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore1);
+
+		// Click on High Point Market link
+		// Switch to new tab
+		String winHandleBefore4 = driver.getWindowHandle();
+		fl.getHighPointMarket().click();
+		for (String winHandle4 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle4);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore4);
+		
+		// Click on LVA Market link
+		// Switch to new tab
+		/*fl.getlvmlink_ATLM().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
+		driver.get(prop.getProperty("ammarturl"));*/
+		
+		String winHandleBefore5 = driver.getWindowHandle();
+		fl.getlvapplink_ATL().click();
+		for (String winHandle4 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle4);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
+		//driver.close();
+		driver.switchTo().window(winHandleBefore5);
+
+		// Click on LVM Market link
+		// Switch to new tab
+		String winHandleBefore11 = driver.getWindowHandle();
+		fl.getlvmlink_ATL().click();
+		for (String winHandle11 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle11);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore11);
+		
+		//Click International Market Centers link and verify results
+		//fl.getInternationalMarketCenters().click();//Change for re-branding
+		
+		//Switch to new tab
+		String winHandleBefore3 = driver.getWindowHandle();
+		fl.getandmore().click();
+		for(String winHandle3 : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle3);}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore3);
+		//utl.scrollToElement(fl.marketInfoAMC());
+
+		//Click Juniper Market Centers link and verify results
+		/*fl.getJuniperMarket().click();
+		//Switch to new tab
+		String winHandleBefore12 = driver.getWindowHandle();
+		for(String winHandle12 : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle12);}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
+		driver.get(prop.getProperty("ammarturl"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore12);
+		utl.scrollToElement(fl.marketInfoAMC());*/
 	}
 	
 	//Due to re-branding changes
+	@Test(enabled=false)//priority=1
+	public void TS010_AMC_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T101: To verify the Market Planner overview and it's functionality
+
+		lap = new UXPLandingPage(driver);
+		lp = new UXPLoginPage(driver);
+		amhe = new AMHeaderLinksPage(driver);
+		utl = new Utility(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		/*//Navigate to Atlanta Market site
+		driver.manage().window().maximize();
+		driver.get(prop.getProperty("ammarturl"));
+		//Thread.sleep(5000);
+		lap.getIUnderstandBtn().click();
+		//Thread.sleep(5000);
+		utl.verifyCloseBtnPopup();*/
+
+		//Login to Market Planner
+		utl.verifyMPLoginFunctionality();
+		utl.verifyCloseBtnPopup();
+		//Verify that Market Planner Home page should be displayed
+		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
+	}
+
+	//Due to re-branding changes
 	@Test(enabled=false)//priority=2
-	public void TS002_AMC_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
+	public void TS011_AMC_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-002: To verify Profile and Settings option in Market Planner
@@ -822,7 +822,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	
 	//Due to re-branding changes
 	@Test(enabled=false)//priority=3
-	public void TS003_AMC_VerifyMarketPlannerExhibitorPortalOptionTest() throws InterruptedException, IOException
+	public void TS012_AMC_VerifyMarketPlannerExhibitorPortalOptionTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-003: To verify Exhibitor Portal option in Market Planner
@@ -848,7 +848,6 @@ public class AmericasMartSmokeTest_PROD extends base {
 		lap.getMPSignOutBtn().click();
 		Thread.sleep(10000);*/
 	}
-
 
 	/*	@AfterSuite
 	public void sendEmail()

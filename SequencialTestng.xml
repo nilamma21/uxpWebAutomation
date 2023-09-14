@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="SmokeTestSuite">
+<suite name="SmokeTestSuite"  parallel="classes"  >
 	<listners>
 		<listner class-name="PROD.TestListeners" />
 	</listners>
 
 	<test thread-count="6" name="SequencialTest">
 		<classes>
+		
+		 <class name="PROD.AtlantaMarketSmokeTest_PROD" />
 
-
-	 	 	 <class name="PROD.AtlantaMarketSmokeTest_PROD" />
-	 	 	 <methods>
-				<!--   <include name="TS008_LVMApp_VerifyFooterLinksTest"/>   
-	 			<include name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest"/>   -->
-
-	 	 	 </methods>
-
+<!-- 		 
+	 	 <methods>
+	 			<include name="TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest()"/> 
+	 	 </methods>
+ -->
 		</classes>
 	</test>
 </suite>

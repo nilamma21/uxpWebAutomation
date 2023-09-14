@@ -27,7 +27,12 @@ public class Utility extends base {
 		Thread.sleep(4000);
 		return element;
 	}
-
+	
+	public void scrollToTop() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
+		Thread.sleep(4000);
+	}
 
 	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
