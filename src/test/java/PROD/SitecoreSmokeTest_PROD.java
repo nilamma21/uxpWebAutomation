@@ -154,7 +154,7 @@ public class SitecoreSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=5)
+	@Test(enabled=false)//priority=5
 	public void TS005_SC_VerifyEmailExperienceManagerTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-

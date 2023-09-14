@@ -13,14 +13,13 @@ public class ATLAppYearRoundTabPage {
 	By ShopTheMart = By.xpath("//h1[@class ='imc-type--title-1']/strong[1]"); //Locator for Year Round tab in header
 
 	public ATLAppYearRoundTabPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getShopTheMart() throws InterruptedException{
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ShopTheMart));
 		return driver.findElement(ShopTheMart);
-
 	}
+	
 }

@@ -62,30 +62,60 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Thread.sleep(3000);
 		utl.verifyCloseBtnPopup();
 	}
-	//Due to re-branding changes
-	@Test(enabled=false)//priority=01
-	public void TS001_LVM_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
+
+	
+	@Test(priority=1)
+	public void TS001_LVM_VerifyHeaderChannelLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-001: To verify the Market Planner overview and it's functionality
+		//UXP-: To verify header channel links
 
-		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);
-
+		hd = new UXPHeaderChannelLinksPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//		driver.get(prop.getProperty("lvmurl"));
-		//		utl.verifyCloseBtnPopup();
+		//Click Atlanta Market channel link and verify result
+		Thread.sleep(5000);
+		hd.getAtlantaMarket().click();
+		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
+		System.out.println("Atlanta Market channel link is working properly.");
+		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
 
-		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();
+		//Click Atlanta Apparel channel link and verify result
 
-		//Verify that Market Planner Home page should be displayed
-		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
-		Thread.sleep(1000);
+		hd.getAtlantaApparel().click();
+		Thread.sleep(5000);
+		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Apparel at AmericasMart"));
+		System.out.println("Atlanta Apparel channel link is working properly.");
+		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
+
+		//Click Americas Mart channel link and verify result
+
+		hd.getAmericasMart().click();
+		Thread.sleep(000);
+		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Wholesale Gift, Home, Rug and Apparel Markets"));
+		System.out.println("Americas Mart channel link is working properly.");
+		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
+
+		//Click IMC High Point Market channel link and verify result
+
+		hd.getHighPoint().click();
+		Thread.sleep(7000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
+		System.out.println("IMC High Point channel link is working properly.");
+		driver.get(prop.getProperty("lvmurl"));
+
+		//Click Lav Vegas Market channel link and verify result
+
+		hd.getLasVegas().click();
+		Assert.assertTrue(driver.getTitle().contains("Las Vegas"));
+		System.out.println("Las Vegas Market channel link is working properly.");
+
 	}
-
+	
 	@Test(priority=02)
 	public void TS002_LVM_VerifAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
 	{
@@ -210,25 +240,21 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();*/
 	}
-	//Due to re-branding changes
-	@Test(enabled=false)//priority=03
-	public void TS003_LVM_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
+	
+	@Test(priority=3)
+	public void TS003_LVM_MarketRecap() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-003: To verify Profile and Settings option in Market Planner
-
-		ps = new UXPProfileAndSettingsPage(driver);
-
+		//UXP-T797: Market Recap page opens successfully.
+		lap = new UXPLandingPage(driver);
+		
+		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//Click Profile and Settings tab under Market Planner and verify result
-
-		ps.getWelcomeText().click();
-		ps.getProfileAndSettings().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(ps.getVerifyProfile().getText(), "My profile");
-		System.out.println("Profile and Settings section options are displayed properly");
-
+		//Verify Market Recap link is working properly
+		lap.getMarketRecap().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend/App"));
+		System.out.println("Market Recap page is working properly.");
 	}
 
 	@Test(priority=04)
@@ -388,9 +414,111 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Press Center");
 		System.out.println("Press Center section is displayed properly");
 	}
+	
+	@Test(priority=06)
+	public void TS006_LVM_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T005: To verify links for Market info tab at Header
 
-	@Test(priority=6)
-	public void TS013_LVM_VerifyAllLinksUnderExploreMarketTabTest() throws InterruptedException, IOException
+		mi = new UXPMarketInfoPage(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		at = new UXPAttendPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click Attend tab at Header
+
+		at.getAttend().click();
+		Assert.assertTrue(at.getVerifyAttendSection().isDisplayed());
+		System.out.println("Attend section options are displayed properly");
+
+		//Click Why Attend tab under Attend section
+
+		at.getWhyAttend().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend"));
+		System.out.println("Why Attend section is displayed properly");
+		driver.get(prop.getProperty("lvmurl"));
+		utl.verifyCloseBtnPopup();
+		//Thread.sleep(6000);
+		at.getAttend().click();
+
+		//Click Registration tab under Attend section
+
+		at.getRegistration().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Market-Info/Registration-Details"));
+		System.out.println("Registration section is displayed properly");
+		at.getAttend().click();
+
+		//Click International tab under Attend section
+
+		at.getInternational().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend/International"));
+		System.out.println("International section is displayed properly");
+		at.getAttend().click();
+
+		//Click Hotels tab at Header
+
+		at.getHotels().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Hotels");
+		System.out.println("Hotels section is displayed properly");
+		at.getAttend().click();
+
+
+		//Click Travel tab at Header
+
+		at.getTravel().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Travel");
+		System.out.println("Travel section is displayed properly");
+		
+		//Due to re-branding changes
+/*		at.getAttend().click();
+
+		//Click Market Planner tab at Header
+
+		at.getMarketPlanner().click();
+		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market Planner");
+		System.out.println("Market Planner section is displayed properly");
+*/
+		at.getAttend().click();
+
+		//Click Dining tab at Header
+
+		at.getDining().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Dining");
+		System.out.println("Dining section is displayed properly");
+		at.getAttend().click();
+
+		//Click Amenities and Services tab at Header
+
+		at.getAmenities().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Amenities and Services");
+		System.out.println("Amenities and Services section is displayed properly");
+		at.getAttend().click();
+
+		//Click Accessibility and ADA Information tab at Header
+
+		at.getAccessibility().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Accessibility and ADA Information");
+		System.out.println("Accessibility and ADA Information section is displayed properly");
+		at.getAttend().click();
+
+		//Click Download the App tab at Header
+		
+		at.getDownloadApp().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Market App");
+		System.out.println("Market App section is displayed properly");
+
+	}
+
+	@Test(priority=7)
+	public void TS007_LVM_VerifyAllLinksUnderExploreMarketTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T006: To verify links for Explore Market tab at Header
@@ -470,9 +598,38 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Verify that 'Social Media' page should be displayed
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Social Media");*/
 	}
+	
+	@Test(priority=8)
+	public void TS008_LVM_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T64: To verify Exhibitor Directory
 
-	@Test(priority=10)
-	public void TS010_LVM_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+		lap = new UXPLandingPage(driver);
+		lp = new UXPLoginPage(driver);
+		ps = new UXPProfileAndSettingsPage(driver);
+		gs = new UXPGlobalSearchPage(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		ed = new UXPExhibitorDirectoryPage(driver);
+		
+		driver.get(prop.getProperty("lvmurl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Verify exhibitor data is displayed or not as per search criteria
+
+		ed.getExhibitorDirectory().click();
+		Assert.assertEquals(exhp.getVerifyPgBreadcrumb().getText(), "Exhibitor & Product Directory");
+		System.out.println("Exhibitor Directory is opened properly.");
+		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
+		gs.getSearchButton().click();
+		Thread.sleep(4000);
+		String searchterm = gs.getVerifyGlobalSeacrh().getText();
+		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
+		System.out.println("Exhibitor Directory page is working properly.");
+	}
+
+	@Test(priority=9)
+	public void TS009_LVM_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T63: To verify global search functionality
@@ -493,8 +650,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	}
 
 
-	@Test(priority= 12) // previous priority= 8
-	public void TS008_LVM_VerifyFooterLinksTest() throws InterruptedException, IOException
+	@Test(priority= 10) // previous priority= 8
+	public void TS010_LVM_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T69: To verify Footer Links Navigation
@@ -613,7 +770,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		/*driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
-*/
+		 */
 		// Click Atlanta Market link and verify results
 		
 		// Switch to new tab
@@ -691,214 +848,13 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=9)
-	public void TS009_LVM_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
-	{
-		//The purpose of this test case to verify:-
-		//UXP-T64: To verify Exhibitor Directory
-
-		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);
-		ps = new UXPProfileAndSettingsPage(driver);
-		gs = new UXPGlobalSearchPage(driver);
-		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-		ed = new UXPExhibitorDirectoryPage(driver);
-		
-		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		//Verify exhibitor data is displayed or not as per search criteria
-
-		ed.getExhibitorDirectory().click();
-		Assert.assertEquals(exhp.getVerifyPgBreadcrumb().getText(), "Exhibitor & Product Directory");
-		System.out.println("Exhibitor Directory is opened properly.");
-		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
-		gs.getSearchButton().click();
-		Thread.sleep(4000);
-		String searchterm = gs.getVerifyGlobalSeacrh().getText();
-		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
-		System.out.println("Exhibitor Directory page is working properly.");
-	}
-
-	@Test(priority=07)
-	public void TS007_LVM_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
-	{
-		//The purpose of this test case to verify:-
-		//UXP-T005: To verify links for Market info tab at Header
-
-		mi = new UXPMarketInfoPage(driver);
-		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-		at = new UXPAttendPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		//Click Attend tab at Header
-
-		at.getAttend().click();
-		Assert.assertTrue(at.getVerifyAttendSection().isDisplayed());
-		System.out.println("Attend section options are displayed properly");
-
-		//Click Why Attend tab under Attend section
-
-		at.getWhyAttend().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend"));
-		System.out.println("Why Attend section is displayed properly");
-		driver.get(prop.getProperty("lvmurl"));
-		utl.verifyCloseBtnPopup();
-		//Thread.sleep(6000);
-		at.getAttend().click();
-
-		//Click Registration tab under Attend section
-
-		at.getRegistration().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Market-Info/Registration-Details"));
-		System.out.println("Registration section is displayed properly");
-		at.getAttend().click();
-
-		//Click International tab under Attend section
-
-		at.getInternational().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend/International"));
-		System.out.println("International section is displayed properly");
-		at.getAttend().click();
-
-		//Click Hotels tab at Header
-
-		at.getHotels().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Hotels");
-		System.out.println("Hotels section is displayed properly");
-		at.getAttend().click();
-
-
-		//Click Travel tab at Header
-
-		at.getTravel().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Travel");
-		System.out.println("Travel section is displayed properly");
-		
-		//Due to re-branding changes
-/*		at.getAttend().click();
-
-		//Click Market Planner tab at Header
-
-		at.getMarketPlanner().click();
-		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Market Planner");
-		System.out.println("Market Planner section is displayed properly");
-*/
-		at.getAttend().click();
-
-		//Click Dining tab at Header
-
-		at.getDining().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Dining");
-		System.out.println("Dining section is displayed properly");
-		at.getAttend().click();
-
-		//Click Amenities and Services tab at Header
-
-		at.getAmenities().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Amenities and Services");
-		System.out.println("Amenities and Services section is displayed properly");
-		at.getAttend().click();
-
-		//Click Accessibility and ADA Information tab at Header
-
-		at.getAccessibility().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Accessibility and ADA Information");
-		System.out.println("Accessibility and ADA Information section is displayed properly");
-		at.getAttend().click();
-
-		//Click Download the App tab at Header
-		
-		at.getDownloadApp().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Market App");
-		System.out.println("Market App section is displayed properly");
-
-	}
-
-
-	@Test(priority=13)
-	public void TS011_LVM_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
-	{
-		//The purpose of this test case to verify:-
-		//UXP-T005: To verify links for Market info tab at Header
-
-		mi = new UXPMarketInfoPage(driver);
-		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-		yr = new UXPYearRoundPage(driver);
-		
-		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get(prop.getProperty("lvmurl"));
-		Thread.sleep(3000);
-		utl.scrollToElement(yr.getYearRoundTab());
-		//Click Year Round tab at Header
-
-		yr.getYearRoundTab().click();
-		Assert.assertTrue(yr.getVerifyYearRoundSection().isDisplayed());
-		System.out.println("Year round section options are displayed properly");
-
-		//Click Why Year Round tab under Year Round section
-
-		yr.getYearRound().click();
-		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round"));
-		System.out.println("Year Round section is displayed properly");
-		yr.getYearRoundTab().click();
-
-		//Click LVDC tab under Year Round section
-
-		yr.getLasVegasDesignCenter().click();
-		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/LVDC"));
-		System.out.println("LVDC section is displayed properly");
-		yr.getYearRoundTab().click();
-
-		//Click The Expo tab under Year Round section
-
-		yr.getExpo().click();
-		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/The-Expo"));
-		System.out.println("The Expo section is displayed properly");
-		yr.getYearRoundTab().click();
-
-		//Click Off-Market Events tab under Year Round section
-
-		yr.getMarketEvents().click();
-		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Off-Market-Events"));
-		System.out.println("Off-Market Events section is displayed properly");
-		yr.getYearRoundTab().click();
-
-		//Click Venue Rental tab under Year Round section
-
-		yr.getVenueRental().click();
-		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Venue-Rental"));
-		System.out.println("Venue Rental section is displayed properly");
-		yr.getYearRoundTab().click();
-
-		/*//Click LVDC tab under Year Round section
-		//Junipermarket link is removed
-		yr.getShopzio().click();
-		Assert.assertTrue(yr.getVerifyShopzio().isDisplayed());
-		System.out.println("Shopzio Exhibitors section is displayed properly");	*/
-	}
-
-	@Test(priority=012)
-	public void TS012_LVM_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
+	@Test(priority=11)
+	public void TS011_LVM_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-013: To verify the all social media links and it's redirection
 
 		fl = new UXPFooterLinksNavigationPage(driver);
-
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// Store the current window handle
@@ -1001,64 +957,81 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore);*/
 	}
 
-	@Test(priority=1)
-	public void TS006_LVM_VerifyHeaderChannelLinksTest() throws InterruptedException, IOException
+
+
+	@Test(priority=12)
+	public void TS012_LVM_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-: To verify header channel links
+		//UXP-T005: To verify links for Market info tab at Header
 
-		hd = new UXPHeaderChannelLinksPage(driver);
-
+		mi = new UXPMarketInfoPage(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		yr = new UXPYearRoundPage(driver);
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		//Click Atlanta Market channel link and verify result
-		Thread.sleep(5000);
-		hd.getAtlantaMarket().click();
-		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
-		System.out.println("Atlanta Market channel link is working properly.");
 		driver.get(prop.getProperty("lvmurl"));
-		utl.verifyCloseBtnPopup();
+		Thread.sleep(3000);
+		utl.scrollToElement(yr.getYearRoundTab());
+		
+		//Click Year Round tab at Header
+		yr.getYearRoundTab().click();
+		Assert.assertTrue(yr.getVerifyYearRoundSection().isDisplayed());
+		System.out.println("Year round section options are displayed properly");
 
-		//Click Atlanta Apparel channel link and verify result
+		//Click Why Year Round tab under Year Round section
 
-		hd.getAtlantaApparel().click();
-		Thread.sleep(5000);
-		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Apparel at AmericasMart"));
-		System.out.println("Atlanta Apparel channel link is working properly.");
-		driver.get(prop.getProperty("lvmurl"));
-		utl.verifyCloseBtnPopup();
+		yr.getYearRound().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round"));
+		System.out.println("Year Round section is displayed properly");
+		yr.getYearRoundTab().click();
 
-		//Click Americas Mart channel link and verify result
+		//Click LVDC tab under Year Round section
 
-		hd.getAmericasMart().click();
-		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Wholesale Gift, Home, Rug and Apparel Markets"));
-		System.out.println("Americas Mart channel link is working properly.");
-		driver.get(prop.getProperty("lvmurl"));
-		utl.verifyCloseBtnPopup();
+		yr.getLasVegasDesignCenter().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/LVDC"));
+		System.out.println("LVDC section is displayed properly");
+		yr.getYearRoundTab().click();
 
-		//Click IMC High Point Market channel link and verify result
+		//Click The Expo tab under Year Round section
 
-		hd.getHighPoint().click();
-		Thread.sleep(7000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
-		System.out.println("IMC High Point channel link is working properly.");
-		driver.get(prop.getProperty("lvmurl"));
+		yr.getExpo().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/The-Expo"));
+		System.out.println("The Expo section is displayed properly");
+		yr.getYearRoundTab().click();
 
-		//Click Lav Vegas Market channel link and verify result
+		//Click Off-Market Events tab under Year Round section
 
-		hd.getLasVegas().click();
-		Assert.assertTrue(driver.getTitle().contains("Las Vegas"));
-		System.out.println("Las Vegas Market channel link is working properly.");
+		yr.getMarketEvents().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Off-Market-Events"));
+		System.out.println("Off-Market Events section is displayed properly");
+		yr.getYearRoundTab().click();
 
+		//Click Venue Rental tab under Year Round section
+
+		yr.getVenueRental().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Venue-Rental"));
+		System.out.println("Venue Rental section is displayed properly");
+		yr.getYearRoundTab().click();
+
+		/*//Click LVDC tab under Year Round section
+		//Junipermarket link is removed
+		yr.getShopzio().click();
+		Assert.assertTrue(yr.getVerifyShopzio().isDisplayed());
+		System.out.println("Shopzio Exhibitors section is displayed properly");	*/
 	}
-	
+
 	@Test (enabled=false)//priority=3
-	public void TS014_LVM_PlanYourMarkett() throws InterruptedException, IOException
+	public void TS013_LVM_PlanYourMarkett() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T782: To verify Exhibitor Directory
 		lap = new UXPLandingPage(driver);
-		
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -1068,20 +1041,44 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Plan Your Market page is working properly.");
 	}
 
-	@Test(priority=3)
-	public void TS015_LVM_MarketRecap() throws InterruptedException, IOException
+	//Due to re-branding changes
+	@Test(enabled=false)//priority=01
+	public void TS014_LVM_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//UXP-T797: Market Recap page opens successfully.
+		//UXP-001: To verify the Market Planner overview and it's functionality
 		lap = new UXPLandingPage(driver);
-		
-		driver.get(prop.getProperty("lvmurl"));
+		lp = new UXPLoginPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//		driver.get(prop.getProperty("lvmurl"));
+		//		utl.verifyCloseBtnPopup();
+
+		//Login to Market Planner
+		utl.verifyMPLoginFunctionality();
+
+		//Verify that Market Planner Home page should be displayed
+		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
+		Thread.sleep(1000);
+	}
+	
+	//Due to re-branding changes
+	@Test(enabled=false)//priority=03
+	public void TS015_LVM_VerifyMarketPlannerProfileAndSettingsOptionTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-003: To verify Profile and Settings option in Market Planner
+
+		ps = new UXPProfileAndSettingsPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//Verify Market Recap link is working properly
-		lap.getMarketRecap().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Attend/App"));
-		System.out.println("Market Recap page is working properly.");
+		//Click Profile and Settings tab under Market Planner and verify result
+		ps.getWelcomeText().click();
+		ps.getProfileAndSettings().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(ps.getVerifyProfile().getText(), "My profile");
+		System.out.println("Profile and Settings section options are displayed properly");
+
 	}
 	
 	/*@AfterSuite

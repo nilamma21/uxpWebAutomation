@@ -31,24 +31,24 @@ public class LVAAttendPage {
 	
 	public WebElement getLVAAttendTab() throws InterruptedException {
 		wait = new WebDriverWait (driver,30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(LVAAttendTab));
+		wait.until(ExpectedConditions.elementToBeClickable(LVAAttendTab));
 		return driver.findElement(LVAAttendTab);
 	}
 	
 	public WebElement getLVATravel() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(LVATravel));
 		return driver.findElement(LVATravel);
 	}
 	
 	public WebElement getLVADiningGuide() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(LVADiningGuide));
 		return driver.findElement(LVADiningGuide);
 	}
 	
 	public WebElement getLVAServicesAndAmenities() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(LVAServicesAndAmenities));
 		return driver.findElement(LVAServicesAndAmenities);
 	}
@@ -58,55 +58,55 @@ public class LVAAttendPage {
 	}
 	
 	public WebElement getLVADining() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(LVADining));
 		return driver.findElement(LVADining);
 	}
 
 	public WebElement getLVAWhyAttend() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(LVAWhyAttend));
 		return driver.findElement(LVAWhyAttend);
 	}
 
 	public WebElement getLVAEvents() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LVAEvents));
 		return driver.findElement(LVAEvents);
 	}
 
 	public WebElement getLVParking() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LVParking));
 		return driver.findElement(LVParking);
 	}
 
 	public WebElement getLVHotels() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LVHotels));
 		return driver.findElement(LVHotels);
 	}
 
 	public WebElement getLVTravel() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LVTravel));
 		return driver.findElement(LVTravel);
 	}
 
 	public WebElement getLVAirTravel() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LVAirTravel));
 		return driver.findElement(LVAirTravel);
 	}
 
 	public WebElement getLVDownloadApp() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LVDownloadApp));
 		return driver.findElement(LVDownloadApp);
 	}

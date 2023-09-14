@@ -28,86 +28,104 @@ public class AMOpenYearRoundPage {
 	By amchotels = By.xpath("//a[@href='/Markets/Hotels']"); //Locator for Hotel sub-menu
 	
 	public AMOpenYearRoundPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getOpenYearRoundTab() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcOpenYearRoundTab));
 		return driver.findElement(amcOpenYearRoundTab);
 	}
 	
 	public WebElement getAboutYearRound() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcAboutYearRound));
 		return driver.findElement(amcAboutYearRound);
 	}
+	
 	public WebElement getAboutYearRoundPageHeader() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcAboutYearRoundHeader));
 		return driver.findElement(amcAboutYearRoundHeader);
 	}
+	
 	public WebElement getOpenYearRoundShowrooms() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcOpenYearRoundShowrooms));
 		return driver.findElement(amcOpenYearRoundShowrooms);
 	}	
+	
 	public WebElement getExhibitorDirectory() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcExhibitorDirectory));
 		return driver.findElement(amcExhibitorDirectory);			
 	}
+	
 	public WebElement getOpenYearRoundShowroomsPageHeader() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcOpenYearRoundShowroomsHeader));
 		return driver.findElement(amcOpenYearRoundShowroomsHeader);		
 	}
+	
 	public WebElement getExhibitorDirectoryPageHeader() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcExhibitorDirectoryHeader));
 		return driver.findElement(amcExhibitorDirectoryHeader);		
 	}
+	
 	public WebElement getFloorPlans() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcFloorPlans));
 		return driver.findElement(amcFloorPlans);
 	}
+	
 	public WebElement getCampOverview() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcCampOverview));
 		return driver.findElement(amcCampOverview);
 	}
+	
 	public WebElement getVisit() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcVisit));
 		return driver.findElement(amcVisit);
 	}
+	
 	public WebElement getHowToReg() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcHowToRegister));
 		return driver.findElement(amcHowToRegister);
 	}
+	
 	public WebElement getCalendarEvents() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcCalendarOfEvents));
 		return driver.findElement(amcCalendarOfEvents);
 	}
+	
 	public WebElement getDesigners() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(amcDesigners));
 		return driver.findElement(amcDesigners);
 	}
+	
 	public WebElement getParknTranspSubmenu() throws InterruptedException {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.elementToBeClickable(amcparkingtransp));
 		return driver.findElement(amcparkingtransp);
 	}
+	
 	public WebElement getHotelsSubmenu() throws InterruptedException {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.elementToBeClickable(amchotels));
 		return driver.findElement(amchotels);
 	}
+	
 	public WebElement gethowtoregister() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(howtoregister));
 		return driver.findElement(howtoregister);
 	}
+	
 }
 

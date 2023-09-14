@@ -1,15 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [SmokeTestSuite]">
-  <test name="SequencialTest(failed)">
+<suite name="Failed suite [SmokeTestSuite]" parallel="classes">
+  <test name="SequencialTest(failed)" parallel="classes">
     <classes>
+      <class name="PROD.AtlantaAppSmokeTest_PROD">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
       <class name="PROD.LagVegasMarketSmokeTest_PROD">
         <methods>
-          <include name="TS005_LVM_VerifyAllLinksUnderMarketInfoTabTest"/>
           <include name="initialize"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
+      <class name="PROD.LasVegasAppSmokeTest_PROD">
+        <methods>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- PROD.LasVegasAppSmokeTest_PROD -->
+      <class name="PROD.AtlantaMarketSmokeTest_PROD">
+        <methods>
+          <include name="TS010_ATL_VerifAllLinksUnderExhibitTabTest"/>
+          <include name="TS008_ATL_VerifyAllSocialMediaLinksOnFooterTest"/>
+          <include name="TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest"/>
+          <include name="TS007_ATL_VerifyAllChannelsLinksTest"/>
+          <include name="TS002_ATL_VerifyGlobalSearchFunctionalityTest"/>
+          <include name="TS009_ATL_VerifyAllLinksUnderAttendTabTest"/>
+          <include name="TS011_ATL_VerifyFooterLinksTest"/>
+          <include name="initialize"/>
+          <include name="TS001_ATL_MarketRecap"/>
+          <include name="TS003_ATL_VerifyExhibitorDirectoryTest"/>
+          <include name="TS006_ATL_VerifyAllNewsAndTrendsMenuTest"/>
+          <include name="TS005_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>
+        </methods>
+      </class> <!-- PROD.AtlantaMarketSmokeTest_PROD -->
+      <class name="PROD.AmericasMartSmokeTest_PROD">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
     </classes>
   </test> <!-- SequencialTest(failed) -->
 </suite> <!-- Failed suite [SmokeTestSuite] -->
