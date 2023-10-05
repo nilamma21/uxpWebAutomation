@@ -28,50 +28,50 @@ public class ATLAppFashionGalleryTabPage
 	} 
 
 	public WebElement getatlAppFashionGalleryTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlAppFashionGalleryTab));
 		return driver.findElement(atlAppFashionGalleryTab);		
 	}
 
 	public WebElement getatlAppfashionGalleryLink() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAppfashionGalleryLink));
 		return driver.findElement(atlAppfashionGalleryLink);		
 	}
 
 	public WebElement getatlAppfashionGalleryLinkImg() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlAppfashionGalleryLinkImg));
 		return driver.findElement(atlAppfashionGalleryLinkImg);		
 	}
 
 	public WebElement getatlAppLookBook() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAppLookBook));
 		return driver.findElement(atlAppLookBook);		
 	}
 	public WebElement getatlAppLookBookImg() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAppLookBookImg));
 		return driver.findElement(atlAppLookBookImg);		
 	}
 	public WebElement getatlAppvideosImages() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAppvideosImages));
 		return driver.findElement(atlAppvideosImages);		
 	}
 	public WebElement getatlAppvideosImagesImg() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAppvideosImagesImg));
 		return driver.findElement(atlAppvideosImagesImg);		
 	}
 	public WebElement getatlAppNews() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAppNews));
 		return driver.findElement(atlAppNews);		
 	}
 	public WebElement getatlAppatlAppNewsImg() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAppNewsImg));
 		return driver.findElement(atlAppNewsImg);		
 	}

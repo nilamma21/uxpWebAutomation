@@ -24,28 +24,28 @@ public class EXPLoginPage {
 	
 	public WebElement getEmailAddress() {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(emailaddress));
 		return driver.findElement(emailaddress);		
 	}
 	
 	public WebElement getPassword() {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(password));
 		return driver.findElement(password);		
 	}
 	
 	public WebElement getSignInBtn() {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(signinbtn));
 		return driver.findElement(signinbtn);		
 	}
 
 	public WebElement getVerifyExpHomePage() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyExpHomePage));
 		Thread.sleep(10000);
 		return driver.findElement(VerifyExpHomePage);		
@@ -53,7 +53,7 @@ public class EXPLoginPage {
 	
 	public WebElement getHomeIcon() {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(HomeIcon));
 		return driver.findElement(HomeIcon);		
 	}

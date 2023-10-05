@@ -33,70 +33,70 @@ public class EXPFooterLinksPage {
 
 	public WebElement getExhibitorPortalSymbol() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(ExhibitorPortalSymbol));
 		return driver.findElement(ExhibitorPortalSymbol);
 
 	}
 	
 	public WebElement getAmericasMart() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(AmericasMart));
 		return driver.findElement(AmericasMart);
 
 	}
 	
 	public WebElement getAtlantaMarket() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(AtlantaMarket));
 		return driver.findElement(AtlantaMarket);
 
 	}
 	
 	public WebElement getAtlantaApparel() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(AtlantaApparel));
 		return driver.findElement(AtlantaApparel);
 
 	}
 	
 	public WebElement getADAC() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(ADAC));
 		return driver.findElement(ADAC);
 
 	}
 	
 	public WebElement getHighPointMarket() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(HighPointMarket));
 		return driver.findElement(HighPointMarket);
 
 	}
 	
 	public WebElement getLasVegasMarket() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(LasVegasMarket));
 		return driver.findElement(LasVegasMarket);
 
 	}
 	
 	public WebElement getLasVegasDesignCenter() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(LasVegasDesignCenter));
 		return driver.findElement(LasVegasDesignCenter);
 
 	}
 	
 	public WebElement getPrivacyPolicy() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(PrivacyPolicy));
 		return driver.findElement(PrivacyPolicy);
 
 	}
 	
 	public WebElement getTermsAndConditions() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(TermsAndConditions));
 		return driver.findElement(TermsAndConditions);
 
@@ -110,14 +110,14 @@ public class EXPFooterLinksPage {
 	}
 	
 	public WebElement getLasVegasApparel() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(LasVegasApparel));
 		return driver.findElement(LasVegasApparel);
 
 	}
 	
 	public WebElement getandmore() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(andmore));;
 		return driver.findElement(andmore);
 	}

@@ -188,16 +188,33 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		Assert.assertTrue(st.getVerifySettings().isDisplayed());
 
 		//Exhibitor Registration
-		rs.getEXPExhibitorReg().click();
+		rs.getMarketBadgeRegistration().click();
 		Thread.sleep(3000);
 		//Verify Exhibitor Registration Page Header
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Market Registrations"));
 		driver.navigate().back();
-
+		
 		rs.getEXPRegAndServicesTab().click();
+		//Click on Atlanta Technology Services
+		String winHandleBefore5 = driver.getWindowHandle();
+		rs.getATLTechnologyServiceTab().click();
+		Thread.sleep(3000);
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		//Verify that 'EXP Login' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://andmore.safetynetaccess.com/"));
+		// Close the new window, if that window no more required
+		//driver.close();
+		driver.close();
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore5);
+		
+
 		//Click on Atlanta Services
 		String winHandleBefore1 = driver.getWindowHandle();
-		rs.getEXPAtlantaServices().click();		
+		rs.getATLServices().click();		
 		Thread.sleep(3000);
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
@@ -214,7 +231,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		
 		//Click on Atlanta Advertising and services
 		String winHandleBefore2 = driver.getWindowHandle();
-		rs.getEXPAtlantaAdvertisingAndSponcership().click();		
+		rs.getATLAdvertisingAndSponsorship().click();		
 		//Click on Exhibitor Portal Login' sub-menu
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
@@ -229,7 +246,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		//Click on Atlanta Payments
 		String winHandleBefore3 = driver.getWindowHandle();
-		rs.getEXPAtlantaPayment().click();		
+		rs.getATLPayments().click();		
 		//Click on Exhibitor Portal Login' sub-menu
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
@@ -243,7 +260,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore3);
 
 		//Click on AmericasMart Exhibitor Tool Kit
-		rs.getEXPAAmericasMartLogisticsExhibitorToolkit().click();
+		rs.getAMCLogisticsAndExhToolkit().click();
 		String winHandleBefore4 = driver.getWindowHandle();
 
 		//Click on Exhibitor Portal Login' sub-menu
@@ -255,6 +272,24 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.expotoolkit.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
+		
+	
+		//Click on Las Vegas Technology Services
+		String winHandleBefore6 = driver.getWindowHandle();
+		rs.getLVMTechnologyServiceTab().click();
+		Thread.sleep(3000);
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		//Verify that 'EXP Login' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://andmore.safetynetaccess.com/"));
+		// Close the new window, if that window no more required
+		//driver.close();
+		driver.close();
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore6);
+		
 		
 		} catch(StaleElementReferenceException e) {
         }
@@ -291,7 +326,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		//Click on Atlanta Permenat Space
 		rs.getEXPExhibitorReg().click();
 
-
+		
 		System.out.println("Atlanta Permenat Space");
 		//Verify Atlanta Permanent Space page
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Apply for Permanent Showroom Space at AmericasMart"));
@@ -719,7 +754,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

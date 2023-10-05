@@ -22,17 +22,17 @@ public class ATLAppExhibitorsAndProductTabPage
 	} 
 
 	public WebElement getATLAppFloorplans()throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlaappfloorplans));
 		return driver.findElement(atlaappfloorplans);
 	}
 	public WebElement getATLAppatlaappCategories()throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlaappCategories));
 		return driver.findElement(atlaappCategories);
 	}
 	public WebElement getAtlAppExhibitorsAndProducts()throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlAppExhibitorsAndProducts));
 		return driver.findElement(AtlAppExhibitorsAndProducts);
 	}

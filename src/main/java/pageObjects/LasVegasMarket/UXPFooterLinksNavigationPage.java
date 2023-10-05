@@ -45,7 +45,7 @@ public class UXPFooterLinksNavigationPage {
 	By lvmlink_ATL = By.xpath("(//a[contains(text(),'Las Vegas Market')])[2]"); //Locator for Las Vegas market footer link
 	By lvmlink_ATLM = By.xpath("//a[contains(@href,'https://www.lasvegas-apparel.com/')]"); //Locator for Las Vegas market footer link
 	By lvmlink_ATL_Footer = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/')])[2]"); //Locator for Las Vegas market footer link
-	By AtlantaApparel = By.xpath("(//a[contains(@href,'https://www.atlanta-apparel.com')])[2]"); //Locator for Atlanta Apparel in footer links
+	By AtlantaApparel = By.xpath("//div[@class='imc-accordion imc-vr--titan imc-category--heading']/descendant::a[text()='Atlanta Apparel']"); //Locator for Atlanta Apparel in footer links
 	By AtlantaMarket = By.xpath("//div[contains(@class,'imc-accordion imc-vr--titan imc-category--heading')]//a[contains(text(),'Atlanta Market')]"); //Locator for Atlanta Matket in footer links
 	By HighPointMarket = By.xpath("(//a[contains(text(),'ANDMORE at High Point Market')])[2]"); //Locator for High Point Market in footer links
 	By lvapplink = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com')])[2]"); //Locator for Las Vegas Apparel footer link
