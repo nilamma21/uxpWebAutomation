@@ -875,7 +875,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		utl=new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfoATL());
 
@@ -1136,7 +1136,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

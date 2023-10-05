@@ -9,11 +9,11 @@
 	<test thread-count="6" name="SequencialTest">
 		<classes>
 		
-		 <class name="PROD.AtlantaMarketSmokeTest_PROD" />
+		 <class name="PROD.AmericasMartSmokeTest_PROD" />
 
-<!-- 		 
+<!-- 
 	 	 <methods>
-	 			<include name="TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest()"/> 
+	 			<include name="TS009_AMC_VerifyFooterLinksTest"/> 
 	 	 </methods>
  -->
 		</classes>

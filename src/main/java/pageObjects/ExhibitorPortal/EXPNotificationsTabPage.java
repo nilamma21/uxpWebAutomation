@@ -20,7 +20,7 @@ public class EXPNotificationsTabPage {
 	} 
 
 	public WebElement getNotifications() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(Notifications));
 		return driver.findElement(Notifications);
 

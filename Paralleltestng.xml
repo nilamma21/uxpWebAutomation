@@ -4,7 +4,7 @@
 <suite name="SmokeTestSuite" parallel="classes"  >
 
 	<test thread-count="7" name="Parallel Test">
-
+	
 		<classes>
  	 		<class name="PROD.LagVegasMarketSmokeTest_PROD" />
 		 	<class name="PROD.AtlantaMarketSmokeTest_PROD" />

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Parallel Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>66/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>67/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 14 10:52:33 IST 2023</td>
+<td>Started on:</td><td>Thu Oct 05 13:14:07 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>1765 seconds (1765401 ms)</td>
+<tr><td>Total time:</td><td>1462 seconds (1462195 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,174 +68,6 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='PROD.SitecoreSmokeTest_PROD.tearDown()'><b>tearDown</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
-<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: driver.version: RemoteWebDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir18312_836024728}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57260}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.188, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: c3dfa269dd0f2f4d4e48e6f3a7b2e5dc
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
-	at PROD.SitecoreSmokeTest_PROD.tearDown(SitecoreSmokeTest_PROD.java:197)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.RuntimeException: Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Timeout waiting for process to die
-	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:133)
-	at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:246)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:200)
-	at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:126)
-	at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:153)
-	at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:221)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	... 16 more
-Caused by: org.openqa.selenium.os.ProcessUtils$ProcessStillAliveException: Timeout waiting for process to die
-	at org.openqa.selenium.os.ProcessUtils.waitForProcessDeath(ProcessUtils.java:67)
-	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:129)
-	... 24 more
-Caused by: java.lang.InterruptedException
-	at java.lang.ProcessImpl.waitFor(Unknown Source)
-	at org.openqa.selenium.os.ProcessUtils$ProcessWaiter.run(ProcessUtils.java:154)
-	... 1 more
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1984607153", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1984607153'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: driver.version: RemoteWebDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir18312_836024728}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57260}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.188, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: c3dfa269dd0f2f4d4e48e6f3a7b2e5dc
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
-	at PROD.SitecoreSmokeTest_PROD.tearDown(SitecoreSmokeTest_PROD.java:197)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:225)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:114)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.RuntimeException: Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Timeout waiting for process to die
-	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:133)
-	at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:246)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:200)
-	at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:126)
-	at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:153)
-	at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:221)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	... 16 more
-Caused by: org.openqa.selenium.os.ProcessUtils$ProcessStillAliveException: Timeout waiting for process to die
-	at org.openqa.selenium.os.ProcessUtils.waitForProcessDeath(ProcessUtils.java:67)
-	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:129)
-	... 24 more
-Caused by: java.lang.InterruptedException
-	at java.lang.ProcessImpl.waitFor(Unknown Source)
-	at org.openqa.selenium.os.ProcessUtils$ProcessWaiter.run(ProcessUtils.java:154)
-	... 1 more
-</pre></div></td>
-<td>0</td>
-<td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
-<tr>
-<td title='PROD.ExhibitorPortalSmokeTest_PROD.tearDown()'><b>tearDown</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
-<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: driver.version: RemoteWebDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir18388_564057433}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57263}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.188, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 5e78fe9fd334064f56d4b6d36b88eceb
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
-	at PROD.ExhibitorPortalSmokeTest_PROD.tearDown(ExhibitorPortalSmokeTest_PROD.java:722)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.RuntimeException: Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Timeout waiting for process to die
-	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:133)
-	at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:246)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:200)
-	at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:126)
-	at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:153)
-	at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:221)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	... 16 more
-Caused by: org.openqa.selenium.os.ProcessUtils$ProcessStillAliveException: Timeout waiting for process to die
-	at org.openqa.selenium.os.ProcessUtils.waitForProcessDeath(ProcessUtils.java:67)
-	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:129)
-	... 24 more
-Caused by: java.lang.InterruptedException
-	at java.lang.ProcessImpl.waitFor(Unknown Source)
-	at org.openqa.selenium.os.ProcessUtils$ProcessWaiter.run(ProcessUtils.java:154)
-	... 1 more
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace652543251", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace652543251'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: driver.version: RemoteWebDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir18388_564057433}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57263}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.188, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 5e78fe9fd334064f56d4b6d36b88eceb
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
-	at PROD.ExhibitorPortalSmokeTest_PROD.tearDown(ExhibitorPortalSmokeTest_PROD.java:722)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:225)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:114)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.RuntimeException: Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Timeout waiting for process to die
-	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:133)
-	at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:246)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:200)
-	at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:126)
-	at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:153)
-	at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:221)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	... 16 more
-Caused by: org.openqa.selenium.os.ProcessUtils$ProcessStillAliveException: Timeout waiting for process to die
-	at org.openqa.selenium.os.ProcessUtils.waitForProcessDeath(ProcessUtils.java:67)
-	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:129)
-	... 24 more
-Caused by: java.lang.InterruptedException
-	at java.lang.ProcessImpl.waitFor(Unknown Source)
-	at org.openqa.selenium.os.ProcessUtils$ProcessWaiter.run(ProcessUtils.java:154)
-	... 1 more
-</pre></div></td>
-<td>0</td>
-<td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -243,16 +75,16 @@ Caused by: java.lang.InterruptedException
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='PROD.SitecoreSmokeTest_PROD.TS005_SC_VerifyEmailExperienceManagerTest()'><b>TS005_SC_VerifyEmailExperienceManagerTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@title = &apos;Email Experience Manager&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+<td title='PROD.AmericasMartSmokeTest_PROD.TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest()'><b>TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),&apos;Open Year Round&apos;)] (tried for 30 second(s) with 500 MILLISECONDS interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.Sitecore.SitecoreSmokeTestLinks.getEmailExperienceManager(SitecoreSmokeTestLinks.java:121)
-	at PROD.SitecoreSmokeTest_PROD.TS005_SC_VerifyEmailExperienceManagerTest(SitecoreSmokeTest_PROD.java:166)
+	at pageObjects.AmericasMart.AMOpenYearRoundPage.getOpenYearRoundTab(AMOpenYearRoundPage.java:36)
+	at PROD.AmericasMartSmokeTest_PROD.TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest(AmericasMartSmokeTest_PROD.java:552)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@title = &apos;Email Experience Manager&apos;]
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[contains(text(),&apos;Open Year Round&apos;)]
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
@@ -267,12 +99,12 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
 	... 15 more
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace9158475", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace9158475'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@title = &apos;Email Experience Manager&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1005499954", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1005499954'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),&apos;Open Year Round&apos;)] (tried for 30 second(s) with 500 MILLISECONDS interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.Sitecore.SitecoreSmokeTestLinks.getEmailExperienceManager(SitecoreSmokeTestLinks.java:121)
-	at PROD.SitecoreSmokeTest_PROD.TS005_SC_VerifyEmailExperienceManagerTest(SitecoreSmokeTest_PROD.java:166)
+	at pageObjects.AmericasMart.AMOpenYearRoundPage.getOpenYearRoundTab(AMOpenYearRoundPage.java:36)
+	at PROD.AmericasMartSmokeTest_PROD.TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest(AmericasMartSmokeTest_PROD.java:552)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -286,7 +118,7 @@ Driver info: driver.version: unknown
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@title = &apos;Email Experience Manager&apos;]
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[contains(text(),&apos;Open Year Round&apos;)]
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
@@ -302,160 +134,8 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
 	... 15 more
 </pre></div></td>
-<td>28</td>
-<td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
-<tr>
-<td title='PROD.AtlantaAppSmokeTest_PROD.TS011_ATLApp_VerifyAllLinksUnderYearRoundTabTest()'><b>TS011_ATLApp_VerifyAllLinksUnderYearRoundTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
-<td><div><pre>org.openqa.selenium.ScriptTimeoutException: script timeout
-  (Session info: chrome=116.0.5845.188)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir18236_1904014458}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57257}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.188, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: d35492fc74aaf800730f8ffdc1ca18fb
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:313)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	at pageObjects.LasVegasMarket.UXPYearRoundPage.getYearRoundTab(UXPYearRoundPage.java:35)
-	at PROD.AtlantaAppSmokeTest_PROD.TS011_ATLApp_VerifyAllLinksUnderYearRoundTabTest(AtlantaAppSmokeTest_PROD.java:616)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace842653264", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace842653264'><pre>org.openqa.selenium.ScriptTimeoutException: script timeout
-  (Session info: chrome=116.0.5845.188)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir18236_1904014458}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57257}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.188, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: d35492fc74aaf800730f8ffdc1ca18fb
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:313)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	at pageObjects.LasVegasMarket.UXPYearRoundPage.getYearRoundTab(UXPYearRoundPage.java:35)
-	at PROD.AtlantaAppSmokeTest_PROD.TS011_ATLApp_VerifyAllLinksUnderYearRoundTabTest(AtlantaAppSmokeTest_PROD.java:616)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-</pre></div></td>
-<td>349</td>
-<td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
-<tr>
-<td title='PROD.AtlantaMarketSmokeTest_PROD.TS011_ATL_VerifyFooterLinksTest()'><b>TS011_ATL_VerifyFooterLinksTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from no such window
-  (Session info: chrome=116.0.5845.188)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir18268_2003966837}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57259}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.188, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: b921cc7c7de2cd080cf7f5dca2d8a079
-*** Element info: {Using=xpath, value=//a[@data-xpath=&apos;breadcrumb.link&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:437)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
-	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getVerifyBreadcrumb(UXPExhibitorsAndProductsTabPage.java:133)
-	at PROD.AtlantaMarketSmokeTest_PROD.TS011_ATL_VerifyFooterLinksTest(AtlantaMarketSmokeTest_PROD.java:593)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace64706306", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace64706306'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from no such window
-  (Session info: chrome=116.0.5845.188)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=116.0.5845.96 (1a391816688002153ef791ffe60d9e899a71a037-refs/branch-heads/5845@{#1382}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir18268_2003966837}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57259}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=116.0.5845.188, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: b921cc7c7de2cd080cf7f5dca2d8a079
-*** Element info: {Using=xpath, value=//a[@data-xpath=&apos;breadcrumb.link&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:437)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
-	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	at pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage.getVerifyBreadcrumb(UXPExhibitorsAndProductsTabPage.java:133)
-	at PROD.AtlantaMarketSmokeTest_PROD.TS011_ATL_VerifyFooterLinksTest(AtlantaMarketSmokeTest_PROD.java:593)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-</pre></div></td>
-<td>63</td>
-<td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
+<td>175</td>
+<td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -465,224 +145,279 @@ Session ID: b921cc7c7de2cd080cf7f5dca2d8a079
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS001_AMC_VerifyAllHeaderChanelLinksTest()'><b>TS001_AMC_VerifyAllHeaderChanelLinksTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
+<td></td>
+<td>488</td>
+<td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
+<tr>
+<td title='PROD.AtlantaAppSmokeTest_PROD.TS001_ATLApp_VerifyAllLinksUnderYearRoundTabTest()'><b>TS001_ATLApp_VerifyAllLinksUnderYearRoundTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
+<td></td>
+<td>123</td>
+<td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
+<tr>
+<td title='PROD.AtlantaMarketSmokeTest_PROD.TS001_ATL_MarketRecap()'><b>TS001_ATL_MarketRecap</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td></td>
+<td>0</td>
+<td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
+<tr>
 <td title='PROD.ExhibitorPortalSmokeTest_PROD.TS001_EXP_VerifyExhibitorPortalLoginTest()'><b>TS001_EXP_VerifyExhibitorPortalLoginTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
 <td></td>
-<td>168</td>
+<td>107</td>
 <td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
+<tr>
+<td title='PROD.LagVegasMarketSmokeTest_PROD.TS001_LVM_VerifyHeaderChannelLinksTest()'><b>TS001_LVM_VerifyHeaderChannelLinksTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
+<td></td>
+<td>336</td>
+<td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS001_SC_VerifySitecoreLoginTest()'><b>TS001_SC_VerifySitecoreLoginTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>101</td>
+<td>76</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
 <td title='PROD.LasVegasAppSmokeTest_PROD.TS001_VerifyAllHeaderChanelLinksTest()'><b>TS001_VerifyAllHeaderChanelLinksTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>427</td>
+<td>538</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
+<tr>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest()'><b>TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
+<td></td>
+<td>73</td>
+<td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
+<tr>
+<td title='PROD.AtlantaAppSmokeTest_PROD.TS002_ATLApp_MarketRecap()'><b>TS002_ATLApp_MarketRecap</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
+<td></td>
+<td>11</td>
+<td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
+<tr>
+<td title='PROD.AtlantaMarketSmokeTest_PROD.TS002_ATL_VerifyGlobalSearchFunctionalityTest()'><b>TS002_ATL_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td></td>
+<td>39</td>
+<td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
 <td title='PROD.ExhibitorPortalSmokeTest_PROD.TS002_EXP_VerifyNotificationsTabTest()'><b>TS002_EXP_VerifyNotificationsTabTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
 <td></td>
-<td>3</td>
+<td>18</td>
 <td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
 <td title='PROD.LasVegasAppSmokeTest_PROD.TS002_LVMApp_VerifyGlobalSearchFunctionalityTest()'><b>TS002_LVMApp_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>43</td>
+<td>23</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS002_LVM_VerifAllLinksUnderExhibitTabTest()'><b>TS002_LVM_VerifAllLinksUnderExhibitTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>11</td>
+<td>124</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS002_SC_VerifyContentEditorTest()'><b>TS002_SC_VerifyContentEditorTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>52</td>
+<td>18</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
-<td title='PROD.AtlantaMarketSmokeTest_PROD.TS003_ATL_VerifyGlobalSearchFunctionalityTest()'><b>TS003_ATL_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest()'><b>TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>58</td>
+<td>308</td>
+<td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
+<tr>
+<td title='PROD.AtlantaAppSmokeTest_PROD.TS003_ATLApp_VerifyAllLinksUnderAttendTabTest()'><b>TS003_ATLApp_VerifyAllLinksUnderAttendTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
+<td></td>
+<td>268</td>
+<td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
+<tr>
+<td title='PROD.AtlantaMarketSmokeTest_PROD.TS003_ATL_VerifyExhibitorDirectoryTest()'><b>TS003_ATL_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td></td>
+<td>45</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
 <td title='PROD.ExhibitorPortalSmokeTest_PROD.TS003_EXP_VerifySettingsTabTest()'><b>TS003_EXP_VerifySettingsTabTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
 <td></td>
-<td>23</td>
+<td>18</td>
 <td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
+<tr>
+<td title='PROD.LasVegasAppSmokeTest_PROD.TS003_LVMApp_VerifyAllLinksUnderAboutTabTest()'><b>TS003_LVMApp_VerifyAllLinksUnderAboutTabTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
+<td></td>
+<td>21</td>
+<td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
+<tr>
+<td title='PROD.LagVegasMarketSmokeTest_PROD.TS003_LVM_MarketRecap()'><b>TS003_LVM_MarketRecap</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
+<td></td>
+<td>17</td>
+<td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS003_SC_VerifyControlPanelTest()'><b>TS003_SC_VerifyControlPanelTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>13</td>
+<td>21</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
-<td title='PROD.AmericasMartSmokeTest_PROD.TS004_AMC_VerifyAllLinksUnderExhibitTest()'><b>TS004_AMC_VerifyAllLinksUnderExhibitTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS004_AMC_VerifyGlobalSearchFunctionalityTest()'><b>TS004_AMC_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>74</td>
+<td>58</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS004_ATLApp_VerifyGlobalSearchFunctionalityTest()'><b>TS004_ATLApp_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>29</td>
+<td>93</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
+<tr>
+<td title='PROD.AtlantaMarketSmokeTest_PROD.TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest()'><b>TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td></td>
+<td>113</td>
+<td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
 <td title='PROD.ExhibitorPortalSmokeTest_PROD.TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest()'><b>TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
 <td></td>
-<td>89</td>
+<td>77</td>
 <td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
-<td title='PROD.LasVegasAppSmokeTest_PROD.TS004_LVMApp_VerifyAllLinksUnderAboutTabTest()'><b>TS004_LVMApp_VerifyAllLinksUnderAboutTabTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
+<td title='PROD.LasVegasAppSmokeTest_PROD.TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest()'><b>TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>65</td>
+<td>10</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS004_LVM_VerifyAllLinksUnderExhibitorsAndProductsTabTest()'><b>TS004_LVM_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>40</td>
+<td>52</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS004_SC_VerifyShowSpecialApprovalsTest()'><b>TS004_SC_VerifyShowSpecialApprovalsTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>20</td>
+<td>32</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
 <td title='PROD.AmericasMartSmokeTest_PROD.TS005_AMC_VerifyAllLinksUnderAboutTabTest()'><b>TS005_AMC_VerifyAllLinksUnderAboutTabTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>148</td>
+<td>103</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS005_ATLApp_VerifyExhibitorDirectoryTest()'><b>TS005_ATLApp_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>32</td>
+<td>76</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
-<td title='PROD.AtlantaMarketSmokeTest_PROD.TS005_ATL_VerifyExhibitorDirectoryTest()'><b>TS005_ATL_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td title='PROD.AtlantaMarketSmokeTest_PROD.TS005_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest()'><b>TS005_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>91</td>
+<td>49</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
 <td title='PROD.ExhibitorPortalSmokeTest_PROD.TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest()'><b>TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
 <td></td>
-<td>113</td>
+<td>127</td>
 <td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
-<td title='PROD.LasVegasAppSmokeTest_PROD.TS005_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest()'><b>TS005_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
+<td title='PROD.LasVegasAppSmokeTest_PROD.TS005_LVMApp_VerifyAllLinksUnderAttendTabTest()'><b>TS005_LVMApp_VerifyAllLinksUnderAttendTabTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>12</td>
+<td>90</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS005_LVM_VerifyAllLinksUnderMarketInfoTabTest()'><b>TS005_LVM_VerifyAllLinksUnderMarketInfoTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>116</td>
+<td>144</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
-<td title='PROD.AmericasMartSmokeTest_PROD.TS006_AMC_VerifyAllHeaderChanelLinksTest()'><b>TS006_AMC_VerifyAllHeaderChanelLinksTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS006_AMC_VerifyAllLinksUnderExhibitTest()'><b>TS006_AMC_VerifyAllLinksUnderExhibitTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>637</td>
+<td>60</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS006_ATLApp_VerifyAllLinksUnderMarketsTabTest()'><b>TS006_ATLApp_VerifyAllLinksUnderMarketsTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>84</td>
+<td>107</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
-<td title='PROD.AtlantaMarketSmokeTest_PROD.TS006_ATL_VerifyAllLinksUnderMarketInfoTabTest()'><b>TS006_ATL_VerifyAllLinksUnderMarketInfoTabTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td title='PROD.AtlantaMarketSmokeTest_PROD.TS006_ATL_VerifyAllNewsAndTrendsMenuTest()'><b>TS006_ATL_VerifyAllNewsAndTrendsMenuTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>71</td>
+<td>233</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
 <td title='PROD.ExhibitorPortalSmokeTest_PROD.TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest()'><b>TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
 <td></td>
-<td>132</td>
+<td>82</td>
 <td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
-<td title='PROD.LasVegasAppSmokeTest_PROD.TS006_LVMApp_VerifyAllLinksUnderAttendTabTest()'><b>TS006_LVMApp_VerifyAllLinksUnderAttendTabTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
+<td title='PROD.LasVegasAppSmokeTest_PROD.TS006_LVMApp_VerifyAllLinksUnderExhibitTabTest()'><b>TS006_LVMApp_VerifyAllLinksUnderExhibitTabTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>174</td>
+<td>53</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
-<td title='PROD.LagVegasMarketSmokeTest_PROD.TS006_LVM_VerifyHeaderChannelLinksTest()'><b>TS006_LVM_VerifyHeaderChannelLinksTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
+<td title='PROD.LagVegasMarketSmokeTest_PROD.TS006_LVM_VerifyAllLinksUnderAttendTabTest()'><b>TS006_LVM_VerifyAllLinksUnderAttendTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>549</td>
+<td>212</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS006_SC_VerifyIMCReportsTest()'><b>TS006_SC_VerifyIMCReportsTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>40</td>
+<td>21</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
-<tr>
-<td title='PROD.AmericasMartSmokeTest_PROD.TS007_AMC_VerifyAllSocialMediaLinksOnFooterTest()'><b>TS007_AMC_VerifyAllSocialMediaLinksOnFooterTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
-<td></td>
-<td>52</td>
-<td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS007_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest()'><b>TS007_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>17</td>
+<td>34</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
-<td title='PROD.AtlantaMarketSmokeTest_PROD.TS007_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest()'><b>TS007_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td title='PROD.AtlantaMarketSmokeTest_PROD.TS007_ATL_VerifyAllChannelsLinksTest()'><b>TS007_ATL_VerifyAllChannelsLinksTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>59</td>
+<td>419</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
 <td title='PROD.ExhibitorPortalSmokeTest_PROD.TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest()'><b>TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
 <td></td>
-<td>30</td>
+<td>34</td>
 <td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
-<td title='PROD.LasVegasAppSmokeTest_PROD.TS007_LVMApp_VerifyAllLinksUnderExhibitTabTest()'><b>TS007_LVMApp_VerifyAllLinksUnderExhibitTabTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
+<td title='PROD.LasVegasAppSmokeTest_PROD.TS007_LVMApp_VerifyFooterLinksTest()'><b>TS007_LVMApp_VerifyFooterLinksTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>96</td>
+<td>129</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
-<td title='PROD.LagVegasMarketSmokeTest_PROD.TS007_LVM_VerifyAllLinksUnderAttendTabTest()'><b>TS007_LVM_VerifyAllLinksUnderAttendTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
+<td title='PROD.LagVegasMarketSmokeTest_PROD.TS007_LVM_VerifyAllLinksUnderExploreMarketTabTest()'><b>TS007_LVM_VerifyAllLinksUnderExploreMarketTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>230</td>
+<td>37</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS007_SC_VerifyTaxonomyManagerTest()'><b>TS007_SC_VerifyTaxonomyManagerTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>60</td>
+<td>11</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
-<td title='PROD.AmericasMartSmokeTest_PROD.TS008_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest()'><b>TS008_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS008_AMC_VerifyExhibitorDirectoryTest()'><b>TS008_AMC_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>345</td>
+<td>28</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS008_ATLApp_VerifySocialMediaLinksTest()'><b>TS008_ATLApp_VerifySocialMediaLinksTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>14</td>
+<td>15</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
-<td title='PROD.AtlantaMarketSmokeTest_PROD.TS008_ATL_VerifAllLinksUnderExhibitTabTest()'><b>TS008_ATL_VerifAllLinksUnderExhibitTabTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td title='PROD.AtlantaMarketSmokeTest_PROD.TS008_ATL_VerifyAllSocialMediaLinksOnFooterTest()'><b>TS008_ATL_VerifyAllSocialMediaLinksOnFooterTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>92</td>
+<td>94</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
 <td title='PROD.ExhibitorPortalSmokeTest_PROD.TS008_EXP_VerifyExhibitorPortalFooterLinksTest()'><b>TS008_EXP_VerifyExhibitorPortalFooterLinksTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
 <td></td>
-<td>671</td>
+<td>508</td>
 <td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
-<td title='PROD.LasVegasAppSmokeTest_PROD.TS008_LVMApp_VerifyFooterLinksTest()'><b>TS008_LVMApp_VerifyFooterLinksTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
+<td title='PROD.LasVegasAppSmokeTest_PROD.TS008_LVMApp_VerifySocialMediaLinksTest()'><b>TS008_LVMApp_VerifySocialMediaLinksTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>366</td>
+<td>19</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
-<td title='PROD.LagVegasMarketSmokeTest_PROD.TS008_LVM_VerifyFooterLinksTest()'><b>TS008_LVM_VerifyFooterLinksTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
+<td title='PROD.LagVegasMarketSmokeTest_PROD.TS008_LVM_VerifyExhibitorDirectoryTest()'><b>TS008_LVM_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>413</td>
+<td>13</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS008_SC_VerifyExhibitorEventsApprovalTest()'><b>TS008_SC_VerifyExhibitorEventsApprovalTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>48</td>
+<td>36</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
-<td title='PROD.AmericasMartSmokeTest_PROD.TS009_AMC_VerifyGlobalSearchFunctionalityTest()'><b>TS009_AMC_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS009_AMC_VerifyFooterLinksTest()'><b>TS009_AMC_VerifyFooterLinksTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>57</td>
+<td>113</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest()'><b>TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
@@ -690,109 +425,59 @@ Session ID: b921cc7c7de2cd080cf7f5dca2d8a079
 <td>36</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
-<td title='PROD.AtlantaMarketSmokeTest_PROD.TS009_ATL_VerifyAllChannelsLinksTest()'><b>TS009_ATL_VerifyAllChannelsLinksTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td title='PROD.AtlantaMarketSmokeTest_PROD.TS009_ATL_VerifyAllLinksUnderAttendTabTest()'><b>TS009_ATL_VerifyAllLinksUnderAttendTabTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>507</td>
+<td>153</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
-<td title='PROD.LasVegasAppSmokeTest_PROD.TS009_LVMApp_VerifySocialMediaLinksTest()'><b>TS009_LVMApp_VerifySocialMediaLinksTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
+<td title='PROD.LasVegasAppSmokeTest_PROD.TS009_LVMApp_MarketRecap()'><b>TS009_LVMApp_MarketRecap</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>11</td>
+<td>32</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
-<td title='PROD.LagVegasMarketSmokeTest_PROD.TS009_LVM_VerifyExhibitorDirectoryTest()'><b>TS009_LVM_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
+<td title='PROD.LagVegasMarketSmokeTest_PROD.TS009_LVM_VerifyGlobalSearchFunctionalityTest()'><b>TS009_LVM_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>40</td>
+<td>5</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS009_SC_VerifyDigitalAdminPanelTest()'><b>TS009_SC_VerifyDigitalAdminPanelTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>24</td>
+<td>37</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
-<tr>
-<td title='PROD.AmericasMartSmokeTest_PROD.TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest()'><b>TS010_AMC_VerifyAllLinksUnderOpenYearRoundTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
-<td></td>
-<td>208</td>
-<td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest()'><b>TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>54</td>
+<td>61</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
-<td title='PROD.AtlantaMarketSmokeTest_PROD.TS010_ATL_VerifyAllSocialMediaLinksOnFooterTest()'><b>TS010_ATL_VerifyAllSocialMediaLinksOnFooterTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td title='PROD.AtlantaMarketSmokeTest_PROD.TS010_ATL_VerifAllLinksUnderExhibitTabTest()'><b>TS010_ATL_VerifAllLinksUnderExhibitTabTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>118</td>
+<td>53</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
-<td title='PROD.LagVegasMarketSmokeTest_PROD.TS010_LVM_VerifyGlobalSearchFunctionalityTest()'><b>TS010_LVM_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
+<td title='PROD.LagVegasMarketSmokeTest_PROD.TS010_LVM_VerifyFooterLinksTest()'><b>TS010_LVM_VerifyFooterLinksTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>9</td>
+<td>321</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
-<td title='PROD.AmericasMartSmokeTest_PROD.TS011_AMC_VerifyExhibitorDirectoryTest()'><b>TS011_AMC_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
+<td title='PROD.AtlantaAppSmokeTest_PROD.TS011_ATLApp_VerifyFooterLinksTest()'><b>TS011_ATLApp_VerifyFooterLinksTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>47</td>
-<td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
-<tr>
-<td title='PROD.LagVegasMarketSmokeTest_PROD.TS011_LVM_VerifyAllLinksUnderYearRoundTabTest()'><b>TS011_LVM_VerifyAllLinksUnderYearRoundTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
-<td></td>
-<td>31</td>
-<td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
-<tr>
-<td title='PROD.AmericasMartSmokeTest_PROD.TS012_AMC_VerifyFooterLinksTest()'><b>TS012_AMC_VerifyFooterLinksTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
-<td></td>
-<td>123</td>
-<td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
-<tr>
-<td title='PROD.AtlantaAppSmokeTest_PROD.TS012_ATLApp_VerifyFooterLinksTest()'><b>TS012_ATLApp_VerifyFooterLinksTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
-<td></td>
-<td>137</td>
+<td>164</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
-<td title='PROD.AtlantaMarketSmokeTest_PROD.TS012_ATL_VerifyAllLinksUnderAttendTabTest()'><b>TS012_ATL_VerifyAllLinksUnderAttendTabTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td title='PROD.AtlantaMarketSmokeTest_PROD.TS011_ATL_VerifyFooterLinksTest()'><b>TS011_ATL_VerifyFooterLinksTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>183</td>
+<td>124</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
-<td title='PROD.LagVegasMarketSmokeTest_PROD.TS012_LVM_VerifyAllSocialMediaLinksOnFooterTest()'><b>TS012_LVM_VerifyAllSocialMediaLinksOnFooterTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
-<td></td>
-<td>7</td>
-<td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
-<tr>
-<td title='PROD.AtlantaAppSmokeTest_PROD.TS013_ATLApp_VerifyAllLinksUnderAttendTabTest()'><b>TS013_ATLApp_VerifyAllLinksUnderAttendTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
-<td></td>
-<td>393</td>
-<td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
-<tr>
-<td title='PROD.AtlantaMarketSmokeTest_PROD.TS013_ATL_VerifyAllNewsAndTrendsMenuTest()'><b>TS013_ATL_VerifyAllNewsAndTrendsMenuTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
-<td></td>
-<td>65</td>
-<td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
-<tr>
-<td title='PROD.LagVegasMarketSmokeTest_PROD.TS013_LVM_VerifyAllLinksUnderExploreMarketTabTest()'><b>TS013_LVM_VerifyAllLinksUnderExploreMarketTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
-<td></td>
-<td>83</td>
-<td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
-<tr>
-<td title='PROD.AtlantaAppSmokeTest_PROD.TS014_ATLApp_MarketRecap()'><b>TS014_ATLApp_MarketRecap</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
-<td></td>
-<td>498</td>
-<td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
-<tr>
-<td title='PROD.AtlantaMarketSmokeTest_PROD.TS015_ATL_MarketRecap()'><b>TS015_ATL_MarketRecap</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
+<td title='PROD.LagVegasMarketSmokeTest_PROD.TS011_LVM_VerifyAllSocialMediaLinksOnFooterTest()'><b>TS011_LVM_VerifyAllSocialMediaLinksOnFooterTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
 <td>10</td>
-<td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
+<td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
-<td title='PROD.LasVegasAppSmokeTest_PROD.TS015_LVMApp_MarketRecap()'><b>TS015_LVMApp_MarketRecap</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
+<td title='PROD.LagVegasMarketSmokeTest_PROD.TS012_LVM_VerifyAllLinksUnderYearRoundTabTest()'><b>TS012_LVM_VerifyAllLinksUnderYearRoundTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>13</td>
-<td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
-<tr>
-<td title='PROD.LagVegasMarketSmokeTest_PROD.TS015_LVM_MarketRecap()'><b>TS015_LVM_MarketRecap</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
-<td></td>
-<td>43</td>
+<td>52</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 </table><p>
 </body>

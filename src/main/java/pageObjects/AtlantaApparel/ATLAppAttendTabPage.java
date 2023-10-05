@@ -30,21 +30,21 @@ public class ATLAppAttendTabPage {
 	} 
 
 	public WebElement getATLAttendingMarkets() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(ATLAttendingMarkets));
 		return driver.findElement(ATLAttendingMarkets);
 	}
 
 	public WebElement getATLAttendingMarketsImg() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendingMarketsImg));
 		return driver.findElement(ATLAttendingMarketsImg);
 	}
 
 	public WebElement getATLBuyrsGuide() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLBuyersGuide));
 		return driver.findElement(ATLBuyersGuide);
 	}
@@ -52,69 +52,69 @@ public class ATLAppAttendTabPage {
 
 	public WebElement getATLFAQs() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLFAQs));
 		return driver.findElement(ATLFAQs);
 	}
 	public WebElement getATLFAQ() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLFAQ));
 		return driver.findElement(ATLFAQ);
 	}
 
 	public WebElement getATLHotels() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLHotels));
 		return driver.findElement(ATLHotels);
 	}
 
 	public WebElement getATLHotelsImg() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLHotelsImg));
 		return driver.findElement(ATLHotelsImg);
 	}
 
 	public WebElement getATLTravel() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLTravel));
 		return driver.findElement(ATLTravel);
 	}
 
 	public WebElement getATLEvents() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLEvents));
 		return driver.findElement(ATLEvents);
 	}
 
 	public WebElement getATLDining() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLDining));
 		return driver.findElement(ATLDining);
 	}
 
 	public WebElement getATLDownloadApp() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLDownloadApp));
 		return driver.findElement(ATLDownloadApp);
 	}
 	
 	public WebElement getATLVerifyHotels() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLVerifyHotels));
 		return driver.findElement(ATLVerifyHotels);
 	}
 	
 	public WebElement getServicesAmenities() throws InterruptedException {
 
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ServicesAmenities));
 		return driver.findElement(ServicesAmenities);
 	}

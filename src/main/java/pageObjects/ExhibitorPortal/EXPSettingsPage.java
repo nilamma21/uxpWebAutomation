@@ -31,35 +31,35 @@ public class EXPSettingsPage {
 	} 
 
 	public WebElement getSettings() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(Settings));
 		return driver.findElement(Settings);
 
 	}
 	
 	public WebElement getVerifySettings() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(VerifySettings));
 		return driver.findElement(VerifySettings);
 
 	}
 	
 	public WebElement getEXPGuide() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(EXPGuide));
 		return driver.findElement(EXPGuide);
 
 	}
 	
 	public WebElement getVerifyEXPGuide() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyEXPGuide));
 		return driver.findElement(VerifyEXPGuide);
 
 	}
 	
 	public WebElement getManageUsers() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(ManageUsers));
 		return driver.findElement(ManageUsers);
 
@@ -73,21 +73,21 @@ public class EXPSettingsPage {
 	}
 	
 	public WebElement getCorporateInfo() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(CorporateInfo));
 		return driver.findElement(CorporateInfo);
 
 	}
 	
 	public WebElement getContactCustomerSupport() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(ContactCustomerSupport));
 		return driver.findElement(ContactCustomerSupport);
 
 	}
 	
 	public WebElement getVerifyContactCustomerSupport() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyContactCustomerSupport));
 		return driver.findElement(VerifyContactCustomerSupport);
 

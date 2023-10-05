@@ -95,13 +95,6 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Thread.sleep(5000);
 		//utl.verifyCloseBtnPopup();
 	}
-	
-
-
-
-
-
-
 
 
 	@Test(priority=1)
@@ -586,6 +579,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		mi = new UXPMarketInfoPage(driver);
 
+		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//utl.verifyCloseBtnPopup();
 		//Verify exhibitor directory page is successfully opened
@@ -859,7 +853,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }
