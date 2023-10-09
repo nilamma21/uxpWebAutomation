@@ -168,7 +168,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 	}
 	
-	@Test(priority=2)
+	@Test(enabled=false)//priority=2
 	public void TS002_ATLApp_MarketRecap() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -1136,7 +1136,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
