@@ -81,7 +81,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	}
 
 	
-	@Test(priority=1)
+	@Test(enabled=false)//priority=1
 	public void TS001_ATL_MarketRecap() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-

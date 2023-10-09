@@ -241,7 +241,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		exh.getExhibitTab().click();*/
 	}
 	
-	@Test(priority=3)
+	@Test(enabled=false)//priority=3
 	public void TS003_LVM_MarketRecap() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-

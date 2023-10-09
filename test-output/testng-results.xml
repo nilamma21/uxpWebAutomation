@@ -1,394 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="68" passed="67">
+<testng-results skipped="0" failed="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTestSuite" duration-ms="1462195" started-at="2023-10-05T07:44:07Z" finished-at="2023-10-05T08:08:29Z">
+  <suite name="SmokeTestSuite" duration-ms="547695" started-at="2023-10-09T09:03:09Z" finished-at="2023-10-09T09:12:17Z">
     <groups>
     </groups>
-    <test name="Parallel Test" duration-ms="1462195" started-at="2023-10-05T07:44:07Z" finished-at="2023-10-05T08:08:29Z">
-      <class name="PROD.LagVegasMarketSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="initialize" is-config="true" duration-ms="92695" started-at="2023-10-05T13:14:07Z" finished-at="2023-10-05T13:15:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_LVM_VerifyHeaderChannelLinksTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="TS001_LVM_VerifyHeaderChannelLinksTest" duration-ms="336454" started-at="2023-10-05T13:15:39Z" finished-at="2023-10-05T13:21:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_LVM_VerifyHeaderChannelLinksTest -->
-        <test-method status="PASS" signature="TS002_LVM_VerifAllLinksUnderExhibitTabTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="TS002_LVM_VerifAllLinksUnderExhibitTabTest" duration-ms="124040" started-at="2023-10-05T13:21:16Z" finished-at="2023-10-05T13:23:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_LVM_VerifAllLinksUnderExhibitTabTest -->
-        <test-method status="PASS" signature="TS003_LVM_MarketRecap()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="TS003_LVM_MarketRecap" duration-ms="17327" started-at="2023-10-05T13:23:20Z" finished-at="2023-10-05T13:23:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_LVM_MarketRecap -->
-        <test-method status="PASS" signature="TS004_LVM_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="TS004_LVM_VerifyAllLinksUnderExhibitorsAndProductsTabTest" duration-ms="52377" started-at="2023-10-05T13:23:37Z" finished-at="2023-10-05T13:24:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_LVM_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
-        <test-method status="PASS" signature="TS005_LVM_VerifyAllLinksUnderMarketInfoTabTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="TS005_LVM_VerifyAllLinksUnderMarketInfoTabTest" duration-ms="144673" started-at="2023-10-05T13:24:29Z" finished-at="2023-10-05T13:26:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_LVM_VerifyAllLinksUnderMarketInfoTabTest -->
-        <test-method status="PASS" signature="TS006_LVM_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="TS006_LVM_VerifyAllLinksUnderAttendTabTest" duration-ms="212404" started-at="2023-10-05T13:26:54Z" finished-at="2023-10-05T13:30:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_LVM_VerifyAllLinksUnderAttendTabTest -->
-        <test-method status="PASS" signature="TS007_LVM_VerifyAllLinksUnderExploreMarketTabTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="TS007_LVM_VerifyAllLinksUnderExploreMarketTabTest" duration-ms="37077" started-at="2023-10-05T13:30:27Z" finished-at="2023-10-05T13:31:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_LVM_VerifyAllLinksUnderExploreMarketTabTest -->
-        <test-method status="PASS" signature="TS008_LVM_VerifyExhibitorDirectoryTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="TS008_LVM_VerifyExhibitorDirectoryTest" duration-ms="13897" started-at="2023-10-05T13:31:04Z" finished-at="2023-10-05T13:31:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_LVM_VerifyExhibitorDirectoryTest -->
-        <test-method status="PASS" signature="TS009_LVM_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="TS009_LVM_VerifyGlobalSearchFunctionalityTest" duration-ms="5248" started-at="2023-10-05T13:31:18Z" finished-at="2023-10-05T13:31:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_LVM_VerifyGlobalSearchFunctionalityTest -->
-        <test-method status="PASS" signature="TS010_LVM_VerifyFooterLinksTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="TS010_LVM_VerifyFooterLinksTest" duration-ms="321583" started-at="2023-10-05T13:31:23Z" finished-at="2023-10-05T13:36:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_LVM_VerifyFooterLinksTest -->
-        <test-method status="PASS" signature="TS011_LVM_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="TS011_LVM_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="10310" started-at="2023-10-05T13:36:44Z" finished-at="2023-10-05T13:36:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_LVM_VerifyAllSocialMediaLinksOnFooterTest -->
-        <test-method status="PASS" signature="TS012_LVM_VerifyAllLinksUnderYearRoundTabTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="TS012_LVM_VerifyAllLinksUnderYearRoundTabTest" duration-ms="52453" started-at="2023-10-05T13:36:55Z" finished-at="2023-10-05T13:37:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS012_LVM_VerifyAllLinksUnderYearRoundTabTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@7085bdee]" name="tearDown" is-config="true" duration-ms="3644" started-at="2023-10-05T13:37:47Z" finished-at="2023-10-05T13:37:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
-      <class name="PROD.AtlantaMarketSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="initialize" is-config="true" duration-ms="108311" started-at="2023-10-05T13:14:07Z" finished-at="2023-10-05T13:15:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_ATL_MarketRecap()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="TS001_ATL_MarketRecap" duration-ms="491" started-at="2023-10-05T13:15:55Z" finished-at="2023-10-05T13:15:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_ATL_MarketRecap -->
-        <test-method status="PASS" signature="TS002_ATL_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="TS002_ATL_VerifyGlobalSearchFunctionalityTest" duration-ms="39937" started-at="2023-10-05T13:15:55Z" finished-at="2023-10-05T13:16:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_ATL_VerifyGlobalSearchFunctionalityTest -->
-        <test-method status="PASS" signature="TS003_ATL_VerifyExhibitorDirectoryTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="TS003_ATL_VerifyExhibitorDirectoryTest" duration-ms="45086" started-at="2023-10-05T13:16:35Z" finished-at="2023-10-05T13:17:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_ATL_VerifyExhibitorDirectoryTest -->
-        <test-method status="PASS" signature="TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest" duration-ms="113820" started-at="2023-10-05T13:17:20Z" finished-at="2023-10-05T13:19:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest -->
-        <test-method status="PASS" signature="TS005_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="TS005_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest" duration-ms="49337" started-at="2023-10-05T13:19:14Z" finished-at="2023-10-05T13:20:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
-        <test-method status="PASS" signature="TS006_ATL_VerifyAllNewsAndTrendsMenuTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="TS006_ATL_VerifyAllNewsAndTrendsMenuTest" duration-ms="233579" started-at="2023-10-05T13:20:04Z" finished-at="2023-10-05T13:23:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_ATL_VerifyAllNewsAndTrendsMenuTest -->
-        <test-method status="PASS" signature="TS007_ATL_VerifyAllChannelsLinksTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="TS007_ATL_VerifyAllChannelsLinksTest" duration-ms="419579" started-at="2023-10-05T13:23:57Z" finished-at="2023-10-05T13:30:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_ATL_VerifyAllChannelsLinksTest -->
-        <test-method status="PASS" signature="TS008_ATL_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="TS008_ATL_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="94139" started-at="2023-10-05T13:30:57Z" finished-at="2023-10-05T13:32:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_ATL_VerifyAllSocialMediaLinksOnFooterTest -->
-        <test-method status="PASS" signature="TS009_ATL_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="TS009_ATL_VerifyAllLinksUnderAttendTabTest" duration-ms="153353" started-at="2023-10-05T13:32:31Z" finished-at="2023-10-05T13:35:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_ATL_VerifyAllLinksUnderAttendTabTest -->
-        <test-method status="PASS" signature="TS010_ATL_VerifAllLinksUnderExhibitTabTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="TS010_ATL_VerifAllLinksUnderExhibitTabTest" duration-ms="53513" started-at="2023-10-05T13:35:04Z" finished-at="2023-10-05T13:35:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_ATL_VerifAllLinksUnderExhibitTabTest -->
-        <test-method status="PASS" signature="TS011_ATL_VerifyFooterLinksTest()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="TS011_ATL_VerifyFooterLinksTest" duration-ms="124276" started-at="2023-10-05T13:35:58Z" finished-at="2023-10-05T13:38:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_ATL_VerifyFooterLinksTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AtlantaMarketSmokeTest_PROD@f6c48ac]" name="tearDown" is-config="true" duration-ms="4552" started-at="2023-10-05T13:38:02Z" finished-at="2023-10-05T13:38:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- PROD.AtlantaMarketSmokeTest_PROD -->
-      <class name="PROD.AtlantaAppSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="initialize" is-config="true" duration-ms="35159" started-at="2023-10-05T13:14:07Z" finished-at="2023-10-05T13:14:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_ATLApp_VerifyAllLinksUnderYearRoundTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="TS001_ATLApp_VerifyAllLinksUnderYearRoundTabTest" duration-ms="123816" started-at="2023-10-05T13:14:42Z" finished-at="2023-10-05T13:16:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_ATLApp_VerifyAllLinksUnderYearRoundTabTest -->
-        <test-method status="PASS" signature="TS002_ATLApp_MarketRecap()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="TS002_ATLApp_MarketRecap" duration-ms="11350" started-at="2023-10-05T13:16:46Z" finished-at="2023-10-05T13:16:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_ATLApp_MarketRecap -->
-        <test-method status="PASS" signature="TS003_ATLApp_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="TS003_ATLApp_VerifyAllLinksUnderAttendTabTest" duration-ms="268581" started-at="2023-10-05T13:16:57Z" finished-at="2023-10-05T13:21:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_ATLApp_VerifyAllLinksUnderAttendTabTest -->
-        <test-method status="PASS" signature="TS004_ATLApp_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="TS004_ATLApp_VerifyGlobalSearchFunctionalityTest" duration-ms="93932" started-at="2023-10-05T13:21:25Z" finished-at="2023-10-05T13:22:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_ATLApp_VerifyGlobalSearchFunctionalityTest -->
-        <test-method status="PASS" signature="TS005_ATLApp_VerifyExhibitorDirectoryTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="TS005_ATLApp_VerifyExhibitorDirectoryTest" duration-ms="76310" started-at="2023-10-05T13:22:59Z" finished-at="2023-10-05T13:24:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_ATLApp_VerifyExhibitorDirectoryTest -->
-        <test-method status="PASS" signature="TS006_ATLApp_VerifyAllLinksUnderMarketsTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="TS006_ATLApp_VerifyAllLinksUnderMarketsTabTest" duration-ms="107820" started-at="2023-10-05T13:24:16Z" finished-at="2023-10-05T13:26:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_ATLApp_VerifyAllLinksUnderMarketsTabTest -->
-        <test-method status="PASS" signature="TS007_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="TS007_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest" duration-ms="34317" started-at="2023-10-05T13:26:04Z" finished-at="2023-10-05T13:26:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest -->
-        <test-method status="PASS" signature="TS008_ATLApp_VerifySocialMediaLinksTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="TS008_ATLApp_VerifySocialMediaLinksTest" duration-ms="15178" started-at="2023-10-05T13:26:38Z" finished-at="2023-10-05T13:26:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_ATLApp_VerifySocialMediaLinksTest -->
-        <test-method status="PASS" signature="TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest" duration-ms="61873" started-at="2023-10-05T13:26:53Z" finished-at="2023-10-05T13:27:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest -->
-        <test-method status="PASS" signature="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest" duration-ms="36003" started-at="2023-10-05T13:27:55Z" finished-at="2023-10-05T13:28:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest -->
-        <test-method status="PASS" signature="TS011_ATLApp_VerifyFooterLinksTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="TS011_ATLApp_VerifyFooterLinksTest" duration-ms="164181" started-at="2023-10-05T13:28:31Z" finished-at="2023-10-05T13:31:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_ATLApp_VerifyFooterLinksTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@59ec2012]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-10-05T13:31:15Z" finished-at="2023-10-05T13:31:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
+    <test name="SequencialTest" duration-ms="547695" started-at="2023-10-09T09:03:09Z" finished-at="2023-10-09T09:12:17Z">
       <class name="PROD.ExhibitorPortalSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8]" name="initialize" is-config="true" duration-ms="11336" started-at="2023-10-05T13:14:07Z" finished-at="2023-10-05T13:14:18Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@e25b2fe]" name="initialize" is-config="true" duration-ms="4976" started-at="2023-10-09T14:33:09Z" finished-at="2023-10-09T14:33:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_EXP_VerifyExhibitorPortalLoginTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8]" name="TS001_EXP_VerifyExhibitorPortalLoginTest" duration-ms="107475" started-at="2023-10-05T13:14:18Z" finished-at="2023-10-05T13:16:05Z">
+        <test-method status="PASS" signature="TS001_EXP_VerifyExhibitorPortalLoginTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@e25b2fe]" name="TS001_EXP_VerifyExhibitorPortalLoginTest" duration-ms="46244" started-at="2023-10-09T14:33:14Z" finished-at="2023-10-09T14:34:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_EXP_VerifyExhibitorPortalLoginTest -->
-        <test-method status="PASS" signature="TS002_EXP_VerifyNotificationsTabTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8]" name="TS002_EXP_VerifyNotificationsTabTest" duration-ms="18802" started-at="2023-10-05T13:16:05Z" finished-at="2023-10-05T13:16:24Z">
+        <test-method status="PASS" signature="TS002_EXP_VerifyNotificationsTabTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@e25b2fe]" name="TS002_EXP_VerifyNotificationsTabTest" duration-ms="2758" started-at="2023-10-09T14:34:01Z" finished-at="2023-10-09T14:34:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS002_EXP_VerifyNotificationsTabTest -->
-        <test-method status="PASS" signature="TS008_EXP_VerifyExhibitorPortalFooterLinksTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8]" name="TS008_EXP_VerifyExhibitorPortalFooterLinksTest" duration-ms="508190" started-at="2023-10-05T13:16:24Z" finished-at="2023-10-05T13:24:52Z">
+        <test-method status="PASS" signature="TS008_EXP_VerifyExhibitorPortalFooterLinksTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@e25b2fe]" name="TS008_EXP_VerifyExhibitorPortalFooterLinksTest" duration-ms="262832" started-at="2023-10-09T14:34:03Z" finished-at="2023-10-09T14:38:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS008_EXP_VerifyExhibitorPortalFooterLinksTest -->
-        <test-method status="PASS" signature="TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8]" name="TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest" duration-ms="127397" started-at="2023-10-05T13:24:52Z" finished-at="2023-10-05T13:27:00Z">
+        <test-method status="PASS" signature="TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@e25b2fe]" name="TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest" duration-ms="74206" started-at="2023-10-09T14:38:26Z" finished-at="2023-10-09T14:39:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest -->
-        <test-method status="PASS" signature="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8]" name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest" duration-ms="82968" started-at="2023-10-05T13:27:00Z" finished-at="2023-10-05T13:28:23Z">
+        <test-method status="PASS" signature="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@e25b2fe]" name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest" duration-ms="60024" started-at="2023-10-09T14:39:40Z" finished-at="2023-10-09T14:40:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest -->
-        <test-method status="PASS" signature="TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8]" name="TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest" duration-ms="34573" started-at="2023-10-05T13:28:23Z" finished-at="2023-10-05T13:28:57Z">
+        <test-method status="PASS" signature="TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@e25b2fe]" name="TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest" duration-ms="25438" started-at="2023-10-09T14:40:41Z" finished-at="2023-10-09T14:41:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest -->
-        <test-method status="PASS" signature="TS003_EXP_VerifySettingsTabTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8]" name="TS003_EXP_VerifySettingsTabTest" duration-ms="18878" started-at="2023-10-05T13:28:57Z" finished-at="2023-10-05T13:29:16Z">
+        <test-method status="PASS" signature="TS003_EXP_VerifySettingsTabTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@e25b2fe]" name="TS003_EXP_VerifySettingsTabTest" duration-ms="17555" started-at="2023-10-09T14:41:06Z" finished-at="2023-10-09T14:41:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS003_EXP_VerifySettingsTabTest -->
-        <test-method status="PASS" signature="TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8]" name="TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest" duration-ms="77628" started-at="2023-10-05T13:29:16Z" finished-at="2023-10-05T13:30:34Z">
+        <test-method status="PASS" signature="TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@e25b2fe]" name="TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest" duration-ms="51254" started-at="2023-10-09T14:41:24Z" finished-at="2023-10-09T14:42:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-10-05T13:30:34Z" finished-at="2023-10-05T13:30:34Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.ExhibitorPortalSmokeTest_PROD@e25b2fe]" name="tearDown" is-config="true" duration-ms="2359" started-at="2023-10-09T14:42:15Z" finished-at="2023-10-09T14:42:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- PROD.ExhibitorPortalSmokeTest_PROD -->
-      <class name="PROD.AmericasMartSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@73ad2d6]" name="initialize" is-config="true" duration-ms="51530" started-at="2023-10-05T13:14:07Z" finished-at="2023-10-05T13:14:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_AMC_VerifyAllHeaderChanelLinksTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@73ad2d6]" name="TS001_AMC_VerifyAllHeaderChanelLinksTest" duration-ms="488650" started-at="2023-10-05T13:14:58Z" finished-at="2023-10-05T13:23:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_AMC_VerifyAllHeaderChanelLinksTest -->
-        <test-method status="PASS" signature="TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@73ad2d6]" name="TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest" duration-ms="73700" started-at="2023-10-05T13:23:07Z" finished-at="2023-10-05T13:24:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest -->
-        <test-method status="PASS" signature="TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@73ad2d6]" name="TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest" duration-ms="308564" started-at="2023-10-05T13:24:20Z" finished-at="2023-10-05T13:29:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest -->
-        <test-method status="PASS" signature="TS004_AMC_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@73ad2d6]" name="TS004_AMC_VerifyGlobalSearchFunctionalityTest" duration-ms="58671" started-at="2023-10-05T13:29:29Z" finished-at="2023-10-05T13:30:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_AMC_VerifyGlobalSearchFunctionalityTest -->
-        <test-method status="PASS" signature="TS005_AMC_VerifyAllLinksUnderAboutTabTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@73ad2d6]" name="TS005_AMC_VerifyAllLinksUnderAboutTabTest" duration-ms="103385" started-at="2023-10-05T13:30:28Z" finished-at="2023-10-05T13:32:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_AMC_VerifyAllLinksUnderAboutTabTest -->
-        <test-method status="PASS" signature="TS006_AMC_VerifyAllLinksUnderExhibitTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@73ad2d6]" name="TS006_AMC_VerifyAllLinksUnderExhibitTest" duration-ms="60657" started-at="2023-10-05T13:32:11Z" finished-at="2023-10-05T13:33:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_AMC_VerifyAllLinksUnderExhibitTest -->
-        <test-method status="FAIL" signature="TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@73ad2d6]" name="TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest" duration-ms="175581" started-at="2023-10-05T13:33:12Z" finished-at="2023-10-05T13:36:07Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),'Open Year Round')] (tried for 30 second(s) with 500 MILLISECONDS interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),'Open Year Round')] (tried for 30 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.AmericasMart.AMOpenYearRoundPage.getOpenYearRoundTab(AMOpenYearRoundPage.java:36)
-	at PROD.AmericasMartSmokeTest_PROD.TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest(AmericasMartSmokeTest_PROD.java:552)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[contains(text(),'Open Year Round')]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_381'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 15 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest -->
-        <test-method status="PASS" signature="TS008_AMC_VerifyExhibitorDirectoryTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@73ad2d6]" name="TS008_AMC_VerifyExhibitorDirectoryTest" duration-ms="28234" started-at="2023-10-05T13:36:07Z" finished-at="2023-10-05T13:36:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_AMC_VerifyExhibitorDirectoryTest -->
-        <test-method status="PASS" signature="TS009_AMC_VerifyFooterLinksTest()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@73ad2d6]" name="TS009_AMC_VerifyFooterLinksTest" duration-ms="113184" started-at="2023-10-05T13:36:36Z" finished-at="2023-10-05T13:38:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_AMC_VerifyFooterLinksTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@73ad2d6]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-10-05T13:38:29Z" finished-at="2023-10-05T13:38:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
-      <class name="PROD.LasVegasAppSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@3fee9989]" name="initialize" is-config="true" duration-ms="39820" started-at="2023-10-05T13:14:07Z" finished-at="2023-10-05T13:14:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyAllHeaderChanelLinksTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@3fee9989]" name="TS001_VerifyAllHeaderChanelLinksTest" duration-ms="538029" started-at="2023-10-05T13:14:46Z" finished-at="2023-10-05T13:23:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyAllHeaderChanelLinksTest -->
-        <test-method status="PASS" signature="TS002_LVMApp_VerifyGlobalSearchFunctionalityTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@3fee9989]" name="TS002_LVMApp_VerifyGlobalSearchFunctionalityTest" duration-ms="23275" started-at="2023-10-05T13:23:44Z" finished-at="2023-10-05T13:24:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_LVMApp_VerifyGlobalSearchFunctionalityTest -->
-        <test-method status="PASS" signature="TS003_LVMApp_VerifyAllLinksUnderAboutTabTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@3fee9989]" name="TS003_LVMApp_VerifyAllLinksUnderAboutTabTest" duration-ms="21343" started-at="2023-10-05T13:24:08Z" finished-at="2023-10-05T13:24:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_LVMApp_VerifyAllLinksUnderAboutTabTest -->
-        <test-method status="PASS" signature="TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@3fee9989]" name="TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest" duration-ms="10647" started-at="2023-10-05T13:24:29Z" finished-at="2023-10-05T13:24:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest -->
-        <test-method status="PASS" signature="TS005_LVMApp_VerifyAllLinksUnderAttendTabTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@3fee9989]" name="TS005_LVMApp_VerifyAllLinksUnderAttendTabTest" duration-ms="90671" started-at="2023-10-05T13:24:40Z" finished-at="2023-10-05T13:26:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_LVMApp_VerifyAllLinksUnderAttendTabTest -->
-        <test-method status="PASS" signature="TS006_LVMApp_VerifyAllLinksUnderExhibitTabTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@3fee9989]" name="TS006_LVMApp_VerifyAllLinksUnderExhibitTabTest" duration-ms="53180" started-at="2023-10-05T13:26:10Z" finished-at="2023-10-05T13:27:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_LVMApp_VerifyAllLinksUnderExhibitTabTest -->
-        <test-method status="PASS" signature="TS007_LVMApp_VerifyFooterLinksTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@3fee9989]" name="TS007_LVMApp_VerifyFooterLinksTest" duration-ms="129132" started-at="2023-10-05T13:27:04Z" finished-at="2023-10-05T13:29:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_LVMApp_VerifyFooterLinksTest -->
-        <test-method status="PASS" signature="TS008_LVMApp_VerifySocialMediaLinksTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@3fee9989]" name="TS008_LVMApp_VerifySocialMediaLinksTest" duration-ms="19933" started-at="2023-10-05T13:29:13Z" finished-at="2023-10-05T13:29:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_LVMApp_VerifySocialMediaLinksTest -->
-        <test-method status="PASS" signature="TS009_LVMApp_MarketRecap()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@3fee9989]" name="TS009_LVMApp_MarketRecap" duration-ms="32079" started-at="2023-10-05T13:29:33Z" finished-at="2023-10-05T13:30:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_LVMApp_MarketRecap -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@3fee9989]" name="tearDown" is-config="true" duration-ms="21836" started-at="2023-10-05T13:30:05Z" finished-at="2023-10-05T13:30:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- PROD.LasVegasAppSmokeTest_PROD -->
-      <class name="PROD.SitecoreSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@2f686d1f]" name="initialize" is-config="true" duration-ms="11642" started-at="2023-10-05T13:14:07Z" finished-at="2023-10-05T13:14:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_SC_VerifySitecoreLoginTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@2f686d1f]" name="TS001_SC_VerifySitecoreLoginTest" duration-ms="76055" started-at="2023-10-05T13:14:18Z" finished-at="2023-10-05T13:15:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_SC_VerifySitecoreLoginTest -->
-        <test-method status="PASS" signature="TS002_SC_VerifyContentEditorTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@2f686d1f]" name="TS002_SC_VerifyContentEditorTest" duration-ms="18831" started-at="2023-10-05T13:15:34Z" finished-at="2023-10-05T13:15:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_SC_VerifyContentEditorTest -->
-        <test-method status="PASS" signature="TS003_SC_VerifyControlPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@2f686d1f]" name="TS003_SC_VerifyControlPanelTest" duration-ms="21384" started-at="2023-10-05T13:15:53Z" finished-at="2023-10-05T13:16:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_SC_VerifyControlPanelTest -->
-        <test-method status="PASS" signature="TS004_SC_VerifyShowSpecialApprovalsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@2f686d1f]" name="TS004_SC_VerifyShowSpecialApprovalsTest" duration-ms="32699" started-at="2023-10-05T13:16:14Z" finished-at="2023-10-05T13:16:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_SC_VerifyShowSpecialApprovalsTest -->
-        <test-method status="PASS" signature="TS006_SC_VerifyIMCReportsTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@2f686d1f]" name="TS006_SC_VerifyIMCReportsTest" duration-ms="21408" started-at="2023-10-05T13:16:47Z" finished-at="2023-10-05T13:17:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_SC_VerifyIMCReportsTest -->
-        <test-method status="PASS" signature="TS007_SC_VerifyTaxonomyManagerTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@2f686d1f]" name="TS007_SC_VerifyTaxonomyManagerTest" duration-ms="11704" started-at="2023-10-05T13:17:09Z" finished-at="2023-10-05T13:17:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_SC_VerifyTaxonomyManagerTest -->
-        <test-method status="PASS" signature="TS008_SC_VerifyExhibitorEventsApprovalTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@2f686d1f]" name="TS008_SC_VerifyExhibitorEventsApprovalTest" duration-ms="36387" started-at="2023-10-05T13:17:20Z" finished-at="2023-10-05T13:17:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_SC_VerifyExhibitorEventsApprovalTest -->
-        <test-method status="PASS" signature="TS009_SC_VerifyDigitalAdminPanelTest()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@2f686d1f]" name="TS009_SC_VerifyDigitalAdminPanelTest" duration-ms="37153" started-at="2023-10-05T13:17:57Z" finished-at="2023-10-05T13:18:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_SC_VerifyDigitalAdminPanelTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@2f686d1f]" name="tearDown" is-config="true" duration-ms="73528" started-at="2023-10-05T13:18:34Z" finished-at="2023-10-05T13:19:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
-    </test> <!-- Parallel Test -->
+    </test> <!-- SequencialTest -->
   </suite> <!-- SmokeTestSuite -->
 </testng-results>

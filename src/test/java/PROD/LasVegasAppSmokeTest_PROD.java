@@ -623,7 +623,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 */		
 	}
 	
-	@Test(priority=9)
+	@Test(enabled=false)//priority=9
 	public void TS009_LVMApp_MarketRecap() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-

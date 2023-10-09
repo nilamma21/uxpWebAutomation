@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Parallel Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>67/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>58/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Oct 05 13:14:07 IST 2023</td>
+<td>Started on:</td><td>Mon Oct 09 12:53:00 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>1462 seconds (1462195 ms)</td>
+<tr><td>Total time:</td><td>1849 seconds (1849348 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -74,6 +74,250 @@ function toggleAllBoxes() {
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
+<tr>
+<td title='PROD.ExhibitorPortalSmokeTest_PROD.TS001_EXP_VerifyExhibitorPortalLoginTest()'><b>TS001_EXP_VerifyExhibitorPortalLoginTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@id=&apos;gdpr-btn&apos;] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.UXPLandingPage.getIUnderstandBtn(UXPLandingPage.java:41)
+	at PROD.ExhibitorPortalSmokeTest_PROD.TS001_EXP_VerifyExhibitorPortalLoginTest(ExhibitorPortalSmokeTest_PROD.java:79)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //button[@id=&apos;gdpr-btn&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 15 more
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1975627201", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1975627201'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@id=&apos;gdpr-btn&apos;] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.UXPLandingPage.getIUnderstandBtn(UXPLandingPage.java:41)
+	at PROD.ExhibitorPortalSmokeTest_PROD.TS001_EXP_VerifyExhibitorPortalLoginTest(ExhibitorPortalSmokeTest_PROD.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //button[@id=&apos;gdpr-btn&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 15 more
+</pre></div></td>
+<td>211</td>
+<td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
+<tr>
+<td title='PROD.ExhibitorPortalSmokeTest_PROD.TS002_EXP_VerifyNotificationsTabTest()'><b>TS002_EXP_VerifyNotificationsTabTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@href = &apos;/Notifications&apos;] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.ExhibitorPortal.EXPNotificationsTabPage.getNotifications(EXPNotificationsTabPage.java:24)
+	at PROD.ExhibitorPortalSmokeTest_PROD.TS002_EXP_VerifyNotificationsTabTest(ExhibitorPortalSmokeTest_PROD.java:102)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@href = &apos;/Notifications&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 15 more
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace711231359", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace711231359'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@href = &apos;/Notifications&apos;] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.ExhibitorPortal.EXPNotificationsTabPage.getNotifications(EXPNotificationsTabPage.java:24)
+	at PROD.ExhibitorPortalSmokeTest_PROD.TS002_EXP_VerifyNotificationsTabTest(ExhibitorPortalSmokeTest_PROD.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@href = &apos;/Notifications&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 15 more
+</pre></div></td>
+<td>31</td>
+<td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
+<tr>
+<td title='PROD.ExhibitorPortalSmokeTest_PROD.TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest()'><b>TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id = &apos;root&apos;]/header[1]/div[1]/div[1]/div[1]/span[3] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.ExhibitorPortal.EXPApplicationsAndLeasesTabPage.getEXPApplicationsAndLeasesTab(EXPApplicationsAndLeasesTabPage.java:35)
+	at PROD.ExhibitorPortalSmokeTest_PROD.TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest(ExhibitorPortalSmokeTest_PROD.java:320)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@id = &apos;root&apos;]/header[1]/div[1]/div[1]/div[1]/span[3]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 15 more
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace7676248", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace7676248'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id = &apos;root&apos;]/header[1]/div[1]/div[1]/div[1]/span[3] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.ExhibitorPortal.EXPApplicationsAndLeasesTabPage.getEXPApplicationsAndLeasesTab(EXPApplicationsAndLeasesTabPage.java:35)
+	at PROD.ExhibitorPortalSmokeTest_PROD.TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest(ExhibitorPortalSmokeTest_PROD.java:320)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@id = &apos;root&apos;]/header[1]/div[1]/div[1]/div[1]/span[3]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 15 more
+</pre></div></td>
+<td>30</td>
+<td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
+<tr>
+<td title='PROD.ExhibitorPortalSmokeTest_PROD.TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest()'><b>TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id = &apos;root&apos;]/header[1]/div[1]/div[1]/div[1]/span[1] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.ExhibitorPortal.EXPDigitalShowroomTabPage.getEXPYourDigiShowroom(EXPDigitalShowroomTabPage.java:32)
+	at PROD.ExhibitorPortalSmokeTest_PROD.TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest(ExhibitorPortalSmokeTest_PROD.java:470)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@id = &apos;root&apos;]/header[1]/div[1]/div[1]/div[1]/span[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 15 more
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1776693352", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1776693352'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id = &apos;root&apos;]/header[1]/div[1]/div[1]/div[1]/span[1] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.ExhibitorPortal.EXPDigitalShowroomTabPage.getEXPYourDigiShowroom(EXPDigitalShowroomTabPage.java:32)
+	at PROD.ExhibitorPortalSmokeTest_PROD.TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest(ExhibitorPortalSmokeTest_PROD.java:470)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@id = &apos;root&apos;]/header[1]/div[1]/div[1]/div[1]/span[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 15 more
+</pre></div></td>
+<td>34</td>
+<td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
 <td title='PROD.AmericasMartSmokeTest_PROD.TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest()'><b>TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),&apos;Open Year Round&apos;)] (tried for 30 second(s) with 500 MILLISECONDS interval)
@@ -99,8 +343,8 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
 	... 15 more
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1005499954", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1005499954'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),&apos;Open Year Round&apos;)] (tried for 30 second(s) with 500 MILLISECONDS interval)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1435793650", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1435793650'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),&apos;Open Year Round&apos;)] (tried for 30 second(s) with 500 MILLISECONDS interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
 	at pageObjects.AmericasMart.AMOpenYearRoundPage.getOpenYearRoundTab(AMOpenYearRoundPage.java:36)
@@ -134,8 +378,70 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
 	... 15 more
 </pre></div></td>
-<td>175</td>
+<td>155</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
+<tr>
+<td title='PROD.ExhibitorPortalSmokeTest_PROD.TS008_EXP_VerifyExhibitorPortalFooterLinksTest()'><b>TS008_EXP_VerifyExhibitorPortalFooterLinksTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@href=&apos;/&apos;]/img (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.ExhibitorPortal.EXPFooterLinksPage.getExhibitorPortalSymbol(EXPFooterLinksPage.java:37)
+	at PROD.ExhibitorPortalSmokeTest_PROD.TS008_EXP_VerifyExhibitorPortalFooterLinksTest(ExhibitorPortalSmokeTest_PROD.java:595)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@href=&apos;/&apos;]/img
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 15 more
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1661302045", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1661302045'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@href=&apos;/&apos;]/img (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.ExhibitorPortal.EXPFooterLinksPage.getExhibitorPortalSymbol(EXPFooterLinksPage.java:37)
+	at PROD.ExhibitorPortalSmokeTest_PROD.TS008_EXP_VerifyExhibitorPortalFooterLinksTest(ExhibitorPortalSmokeTest_PROD.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@href=&apos;/&apos;]/img
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 15 more
+</pre></div></td>
+<td>36</td>
+<td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -147,307 +453,262 @@ Driver info: driver.version: unknown
 <tr>
 <td title='PROD.AmericasMartSmokeTest_PROD.TS001_AMC_VerifyAllHeaderChanelLinksTest()'><b>TS001_AMC_VerifyAllHeaderChanelLinksTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>488</td>
+<td>861</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS001_ATLApp_VerifyAllLinksUnderYearRoundTabTest()'><b>TS001_ATLApp_VerifyAllLinksUnderYearRoundTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>123</td>
+<td>168</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
-<tr>
-<td title='PROD.AtlantaMarketSmokeTest_PROD.TS001_ATL_MarketRecap()'><b>TS001_ATL_MarketRecap</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
-<td></td>
-<td>0</td>
-<td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
-<tr>
-<td title='PROD.ExhibitorPortalSmokeTest_PROD.TS001_EXP_VerifyExhibitorPortalLoginTest()'><b>TS001_EXP_VerifyExhibitorPortalLoginTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
-<td></td>
-<td>107</td>
-<td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS001_LVM_VerifyHeaderChannelLinksTest()'><b>TS001_LVM_VerifyHeaderChannelLinksTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>336</td>
+<td>663</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS001_SC_VerifySitecoreLoginTest()'><b>TS001_SC_VerifySitecoreLoginTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>76</td>
+<td>209</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
 <td title='PROD.LasVegasAppSmokeTest_PROD.TS001_VerifyAllHeaderChanelLinksTest()'><b>TS001_VerifyAllHeaderChanelLinksTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>538</td>
+<td>871</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
 <td title='PROD.AmericasMartSmokeTest_PROD.TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest()'><b>TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>73</td>
+<td>56</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
-<tr>
-<td title='PROD.AtlantaAppSmokeTest_PROD.TS002_ATLApp_MarketRecap()'><b>TS002_ATLApp_MarketRecap</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
-<td></td>
-<td>11</td>
-<td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
 <td title='PROD.AtlantaMarketSmokeTest_PROD.TS002_ATL_VerifyGlobalSearchFunctionalityTest()'><b>TS002_ATL_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>39</td>
+<td>35</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
-<tr>
-<td title='PROD.ExhibitorPortalSmokeTest_PROD.TS002_EXP_VerifyNotificationsTabTest()'><b>TS002_EXP_VerifyNotificationsTabTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
-<td></td>
-<td>18</td>
-<td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
 <td title='PROD.LasVegasAppSmokeTest_PROD.TS002_LVMApp_VerifyGlobalSearchFunctionalityTest()'><b>TS002_LVMApp_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>23</td>
+<td>17</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS002_LVM_VerifAllLinksUnderExhibitTabTest()'><b>TS002_LVM_VerifAllLinksUnderExhibitTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>124</td>
+<td>63</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS002_SC_VerifyContentEditorTest()'><b>TS002_SC_VerifyContentEditorTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>18</td>
+<td>44</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
 <td title='PROD.AmericasMartSmokeTest_PROD.TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest()'><b>TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>308</td>
+<td>346</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS003_ATLApp_VerifyAllLinksUnderAttendTabTest()'><b>TS003_ATLApp_VerifyAllLinksUnderAttendTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>268</td>
+<td>431</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
 <td title='PROD.AtlantaMarketSmokeTest_PROD.TS003_ATL_VerifyExhibitorDirectoryTest()'><b>TS003_ATL_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>45</td>
+<td>42</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
 <td title='PROD.ExhibitorPortalSmokeTest_PROD.TS003_EXP_VerifySettingsTabTest()'><b>TS003_EXP_VerifySettingsTabTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
 <td></td>
-<td>18</td>
+<td>40</td>
 <td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
 <td title='PROD.LasVegasAppSmokeTest_PROD.TS003_LVMApp_VerifyAllLinksUnderAboutTabTest()'><b>TS003_LVMApp_VerifyAllLinksUnderAboutTabTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>21</td>
+<td>15</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
-<tr>
-<td title='PROD.LagVegasMarketSmokeTest_PROD.TS003_LVM_MarketRecap()'><b>TS003_LVM_MarketRecap</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
-<td></td>
-<td>17</td>
-<td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS003_SC_VerifyControlPanelTest()'><b>TS003_SC_VerifyControlPanelTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>21</td>
+<td>24</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
 <td title='PROD.AmericasMartSmokeTest_PROD.TS004_AMC_VerifyGlobalSearchFunctionalityTest()'><b>TS004_AMC_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>58</td>
+<td>56</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS004_ATLApp_VerifyGlobalSearchFunctionalityTest()'><b>TS004_ATLApp_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>93</td>
+<td>52</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
 <td title='PROD.AtlantaMarketSmokeTest_PROD.TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest()'><b>TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>113</td>
+<td>262</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
 <td title='PROD.ExhibitorPortalSmokeTest_PROD.TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest()'><b>TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
 <td></td>
-<td>77</td>
+<td>124</td>
 <td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
 <td title='PROD.LasVegasAppSmokeTest_PROD.TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest()'><b>TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>10</td>
+<td>19</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS004_LVM_VerifyAllLinksUnderExhibitorsAndProductsTabTest()'><b>TS004_LVM_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>52</td>
+<td>107</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS004_SC_VerifyShowSpecialApprovalsTest()'><b>TS004_SC_VerifyShowSpecialApprovalsTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>32</td>
+<td>67</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
 <td title='PROD.AmericasMartSmokeTest_PROD.TS005_AMC_VerifyAllLinksUnderAboutTabTest()'><b>TS005_AMC_VerifyAllLinksUnderAboutTabTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>103</td>
+<td>102</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS005_ATLApp_VerifyExhibitorDirectoryTest()'><b>TS005_ATLApp_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>76</td>
+<td>36</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
 <td title='PROD.AtlantaMarketSmokeTest_PROD.TS005_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest()'><b>TS005_ATL_VerifyAllLinksUnderExhibitorsAndProductsTabTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>49</td>
+<td>85</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
-<tr>
-<td title='PROD.ExhibitorPortalSmokeTest_PROD.TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest()'><b>TS005_EXP_VerifyAllLinkUnderEXPApplicationsAndLeasesTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
-<td></td>
-<td>127</td>
-<td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
 <td title='PROD.LasVegasAppSmokeTest_PROD.TS005_LVMApp_VerifyAllLinksUnderAttendTabTest()'><b>TS005_LVMApp_VerifyAllLinksUnderAttendTabTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>90</td>
+<td>61</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS005_LVM_VerifyAllLinksUnderMarketInfoTabTest()'><b>TS005_LVM_VerifyAllLinksUnderMarketInfoTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>144</td>
+<td>108</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.AmericasMartSmokeTest_PROD.TS006_AMC_VerifyAllLinksUnderExhibitTest()'><b>TS006_AMC_VerifyAllLinksUnderExhibitTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>60</td>
+<td>63</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS006_ATLApp_VerifyAllLinksUnderMarketsTabTest()'><b>TS006_ATLApp_VerifyAllLinksUnderMarketsTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>107</td>
+<td>210</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
 <td title='PROD.AtlantaMarketSmokeTest_PROD.TS006_ATL_VerifyAllNewsAndTrendsMenuTest()'><b>TS006_ATL_VerifyAllNewsAndTrendsMenuTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>233</td>
+<td>101</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
-<tr>
-<td title='PROD.ExhibitorPortalSmokeTest_PROD.TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest()'><b>TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
-<td></td>
-<td>82</td>
-<td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
 <td title='PROD.LasVegasAppSmokeTest_PROD.TS006_LVMApp_VerifyAllLinksUnderExhibitTabTest()'><b>TS006_LVMApp_VerifyAllLinksUnderExhibitTabTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>53</td>
+<td>117</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS006_LVM_VerifyAllLinksUnderAttendTabTest()'><b>TS006_LVM_VerifyAllLinksUnderAttendTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>212</td>
+<td>206</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS006_SC_VerifyIMCReportsTest()'><b>TS006_SC_VerifyIMCReportsTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>21</td>
+<td>93</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS007_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest()'><b>TS007_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>34</td>
+<td>22</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
 <td title='PROD.AtlantaMarketSmokeTest_PROD.TS007_ATL_VerifyAllChannelsLinksTest()'><b>TS007_ATL_VerifyAllChannelsLinksTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>419</td>
+<td>536</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
 <td title='PROD.ExhibitorPortalSmokeTest_PROD.TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest()'><b>TS007_EXP_VerifyAllLinkUnderEXPMarketTabTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
 <td></td>
-<td>34</td>
+<td>213</td>
 <td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
 <td title='PROD.LasVegasAppSmokeTest_PROD.TS007_LVMApp_VerifyFooterLinksTest()'><b>TS007_LVMApp_VerifyFooterLinksTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>129</td>
+<td>157</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS007_LVM_VerifyAllLinksUnderExploreMarketTabTest()'><b>TS007_LVM_VerifyAllLinksUnderExploreMarketTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>37</td>
+<td>51</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS007_SC_VerifyTaxonomyManagerTest()'><b>TS007_SC_VerifyTaxonomyManagerTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>11</td>
+<td>81</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
 <td title='PROD.AmericasMartSmokeTest_PROD.TS008_AMC_VerifyExhibitorDirectoryTest()'><b>TS008_AMC_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>28</td>
+<td>26</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS008_ATLApp_VerifySocialMediaLinksTest()'><b>TS008_ATLApp_VerifySocialMediaLinksTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>15</td>
+<td>18</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
 <td title='PROD.AtlantaMarketSmokeTest_PROD.TS008_ATL_VerifyAllSocialMediaLinksOnFooterTest()'><b>TS008_ATL_VerifyAllSocialMediaLinksOnFooterTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>94</td>
+<td>102</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
-<tr>
-<td title='PROD.ExhibitorPortalSmokeTest_PROD.TS008_EXP_VerifyExhibitorPortalFooterLinksTest()'><b>TS008_EXP_VerifyExhibitorPortalFooterLinksTest</b><br>Test class: PROD.ExhibitorPortalSmokeTest_PROD</td>
-<td></td>
-<td>508</td>
-<td>PROD.ExhibitorPortalSmokeTest_PROD@4cf777e8</td></tr>
 <tr>
 <td title='PROD.LasVegasAppSmokeTest_PROD.TS008_LVMApp_VerifySocialMediaLinksTest()'><b>TS008_LVMApp_VerifySocialMediaLinksTest</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
 <td></td>
-<td>19</td>
+<td>15</td>
 <td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS008_LVM_VerifyExhibitorDirectoryTest()'><b>TS008_LVM_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>13</td>
+<td>32</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS008_SC_VerifyExhibitorEventsApprovalTest()'><b>TS008_SC_VerifyExhibitorEventsApprovalTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>36</td>
+<td>31</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
 <td title='PROD.AmericasMartSmokeTest_PROD.TS009_AMC_VerifyFooterLinksTest()'><b>TS009_AMC_VerifyFooterLinksTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>113</td>
+<td>94</td>
 <td>PROD.AmericasMartSmokeTest_PROD@73ad2d6</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest()'><b>TS009_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>36</td>
+<td>55</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
 <td title='PROD.AtlantaMarketSmokeTest_PROD.TS009_ATL_VerifyAllLinksUnderAttendTabTest()'><b>TS009_ATL_VerifyAllLinksUnderAttendTabTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>153</td>
+<td>152</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
-<tr>
-<td title='PROD.LasVegasAppSmokeTest_PROD.TS009_LVMApp_MarketRecap()'><b>TS009_LVMApp_MarketRecap</b><br>Test class: PROD.LasVegasAppSmokeTest_PROD</td>
-<td></td>
-<td>32</td>
-<td>PROD.LasVegasAppSmokeTest_PROD@3fee9989</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS009_LVM_VerifyGlobalSearchFunctionalityTest()'><b>TS009_LVM_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>5</td>
+<td>4</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.SitecoreSmokeTest_PROD.TS009_SC_VerifyDigitalAdminPanelTest()'><b>TS009_SC_VerifyDigitalAdminPanelTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
 <td></td>
-<td>37</td>
+<td>20</td>
 <td>PROD.SitecoreSmokeTest_PROD@2f686d1f</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest()'><b>TS010_ATLApp_VerifyAllLinksUnderExhibitTabTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>61</td>
+<td>78</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
 <td title='PROD.AtlantaMarketSmokeTest_PROD.TS010_ATL_VerifAllLinksUnderExhibitTabTest()'><b>TS010_ATL_VerifAllLinksUnderExhibitTabTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
@@ -457,27 +718,27 @@ Driver info: driver.version: unknown
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS010_LVM_VerifyFooterLinksTest()'><b>TS010_LVM_VerifyFooterLinksTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>321</td>
+<td>328</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.AtlantaAppSmokeTest_PROD.TS011_ATLApp_VerifyFooterLinksTest()'><b>TS011_ATLApp_VerifyFooterLinksTest</b><br>Test class: PROD.AtlantaAppSmokeTest_PROD</td>
 <td></td>
-<td>164</td>
+<td>190</td>
 <td>PROD.AtlantaAppSmokeTest_PROD@59ec2012</td></tr>
 <tr>
 <td title='PROD.AtlantaMarketSmokeTest_PROD.TS011_ATL_VerifyFooterLinksTest()'><b>TS011_ATL_VerifyFooterLinksTest</b><br>Test class: PROD.AtlantaMarketSmokeTest_PROD</td>
 <td></td>
-<td>124</td>
+<td>89</td>
 <td>PROD.AtlantaMarketSmokeTest_PROD@f6c48ac</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS011_LVM_VerifyAllSocialMediaLinksOnFooterTest()'><b>TS011_LVM_VerifyAllSocialMediaLinksOnFooterTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>10</td>
+<td>6</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 <tr>
 <td title='PROD.LagVegasMarketSmokeTest_PROD.TS012_LVM_VerifyAllLinksUnderYearRoundTabTest()'><b>TS012_LVM_VerifyAllLinksUnderYearRoundTabTest</b><br>Test class: PROD.LagVegasMarketSmokeTest_PROD</td>
 <td></td>
-<td>52</td>
+<td>27</td>
 <td>PROD.LagVegasMarketSmokeTest_PROD@7085bdee</td></tr>
 </table><p>
 </body>

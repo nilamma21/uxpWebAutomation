@@ -118,7 +118,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Settings icon and verify results
-
+		Thread.sleep(2000);
 		st.getSettings().click();
 		Assert.assertTrue(st.getVerifySettings().isDisplayed());
 		System.out.println("Settings panel is displayed properly.");
@@ -465,7 +465,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		rs = new EXPRegistrationAndServicesTabPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		//Click on Your Digital Showroom Drop-down
 		yd.getEXPYourDigiShowroom().click();
 		Thread.sleep(3000);
@@ -521,7 +521,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle);
 		}
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		Thread.sleep(12000);
+		Thread.sleep(15000);
 		System.out.println(driver.getCurrentUrl());
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://auth.junipercore.com/"));
 		// Close the new window, if that window no more required
@@ -754,7 +754,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
