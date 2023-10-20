@@ -9,11 +9,10 @@
 	<test thread-count="6" name="SequencialTest">
 		<classes>
 		
-		 <class name="PROD.ExhibitorPortalSmokeTest_PROD" />
+		 <class name="PROD.AmericasMartSmokeTest_PROD" />
 <!-- 
 	 	 <methods>
-	 			<include name="TS001_EXP_VerifyExhibitorPortalLoginTest()"/> 
-	 			<include name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest()"/> 
+	 			<include name="TS005_ATLApp_VerifyExhibitorDirectoryTest"/> 
 	 	 </methods>
  -->
 		</classes>

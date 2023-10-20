@@ -14,7 +14,7 @@ public class AMOpenYearRoundPage {
 	By amcAboutYearRound=By.xpath("//a[@title='About Year Round at AmericasMart']"); // Locator for About Year Round
 	By amcAboutYearRoundHeader=By.xpath("(//a[contains(text(),'Open Year Round')])[2]");// Locator for About Year Round page Header
 	By howtoregister = By.xpath("//a[contains(text(),'How to Register') and @class='imc-link imc-link--invert imc-navigation__tier2Link']");
-	By amcOpenYearRoundShowrooms=By.xpath("//a[contains(text(),'Open Year Round Showrooms') and @class='imc-link imc-link--invert imc-navigation__tier2Link']"); // Locator for Showroom Direct
+	By amcOpenYearRoundShowrooms=By.xpath("//a[contains(text(),'Open Year Round Showrooms')]"); // Locator for Showroom Direct
 	By amcExhibitorDirectory=By.xpath("//a[@href='/exhibitor/exhibitor-directory' and contains(text(), 'Exhibitor Directory')]");
 	By amcOpenYearRoundShowroomsHeader=By.xpath("//h1[contains(text(),'Open Year Round Showrooms at AmericasMart')]");// Locator for Open Year Round Showrooms page Header
 	By amcExhibitorDirectoryHeader=By.xpath("//h2[contains(text(),'Exhibitor Directory')]");// Locator for Exhibitor Directory page Header

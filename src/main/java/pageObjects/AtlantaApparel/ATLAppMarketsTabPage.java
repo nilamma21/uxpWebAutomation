@@ -15,19 +15,19 @@ public class ATLAppMarketsTabPage {
 	By ATLCompleteShowDates = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[1]/div[2]/a[1]");
 	By ATLPressReleases = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[1]/div[3]/a[1]");
 	By ATLInTheNews = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[1]/div[4]/a[1]");
-	By ATLAppImage = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[1]/a[2]");
+	By ATLAppImage = By.xpath("//a[@href='/Markets/atlanta-apparel']//img[@class='imc-image--responsive imc-navigation-2tier-image']");
 	By ATLAppHeadersnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]");
 	By ATLAppHeadersnextnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]");
 	By ATLAppHeadersnextnextnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]");
 	By ATLAppLink = By.xpath("//div[@class='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[2]/a[1]");
 	By ATLAppHeadersProduct = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[5]/a[1]");
 
-	By ATLVowImg = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[3]/div[1]/a[2]");
+	By ATLVowImg = By.xpath("//a[@href='/Markets/Formal-Markets']//img[@class='imc-image--responsive imc-navigation-2tier-image']");
 	By ATLVowLink = By.xpath("//div[@class='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[3]/div[2]/a[1]");
 	By ATLWorldOfPromImg = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[4]/div[1]/a[2]");
 	By ATLWorldOfPromLink = By.xpath("//div[@class='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[4]/div[2]/a[1]");
 
-	By ATLLasVegasAppImg = By.xpath("(//div[@class='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//a[contains(text(),'Las Vegas Apparel')])[2]");
+	By ATLLasVegasAppImg = By.xpath("//img[@alt='Las Vegas Apparel Nav Menu Image']");
 	By ATLLasVegasAppLink = By.xpath("//div[@class='imc-section']/div[1]/div[1]/div[2]/div[5]/div[2]/a[1]");
 	//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[3]/div[1]/a[2]
 	

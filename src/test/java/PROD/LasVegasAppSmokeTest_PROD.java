@@ -445,14 +445,15 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		utl.scrollToElement(lvafl.marketInfoAMC());
 		
 		// Click Careers link and verify results
-		String winHandleBefore = driver.getWindowHandle();
+		//String winHandleBefore = driver.getWindowHandle();
 		lvafl.getCareersATL().click();
-		for (String winHandle : driver.getWindowHandles()) {
+	/*	for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
-		}
+		}*/
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/careers"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore);
+/*		driver.close();
+		driver.switchTo().window(winHandleBefore);*/
+		driver.navigate().back();
 		utl.scrollToElement(lvafl.marketInfoAMC());
 				
 		// Click on Terms & condition link
