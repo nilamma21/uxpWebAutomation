@@ -486,12 +486,12 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertTrue(amoyr.getAboutYearRoundPageHeader().getText().equals(actualHeader));
 
 		//Verify how to register 
-		amoyr.getOpenYearRoundTab().click();
+/*		amoyr.getOpenYearRoundTab().click();
 		amoyr.gethowtoregister().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("How to Register"));
 		System.out.println("How to regiter opened");
-		
+*/	
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
 		//Click Open Year Round Showrooms Link

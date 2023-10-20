@@ -855,6 +855,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//UXP-013: To verify the all social media links and it's redirection
 
 		fl = new UXPFooterLinksNavigationPage(driver);
+		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// Store the current window handle
@@ -1091,7 +1092,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+	 driver.quit();
 	}
 
 }
