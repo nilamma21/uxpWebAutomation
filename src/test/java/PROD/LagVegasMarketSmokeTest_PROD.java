@@ -705,7 +705,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		// Click Careers link and verify results
 		fl.getCareersATL().click();
 		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Careers");
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/careers"));
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
@@ -1092,7 +1092,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-	 driver.quit();
+	  driver.quit();
 	}
 
 }

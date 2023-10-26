@@ -321,7 +321,7 @@ Thread.sleep(5000);
 		//Assert.assertTrue(atlnt.getATLAheadCurvePageHeader().getText().contains("Ahead of the Curve"));
 		Assert.assertTrue(driver.getCurrentUrl().contains("Ahead-of-the-Curve"));
 		System.out.println("Ahead of the Curve page");
-
+		Thread.sleep(2000);
 		//Click on News And Trends Tab
 		/*atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLShopTheShow().click();
@@ -331,6 +331,7 @@ Thread.sleep(5000);
 
 		//Click on News And Trends Tab
 		//atlnt.getATLNewsAndTrends().click();
+		utl.scrollToElement(atlnt.getATLNewsAndTrendsTap());
 		atlnt.getATLNewsAndTrendsTap().click();
 		atlnt.getATLPressReleases().click();
 		//Click on Press Releases and Verify Page
@@ -339,6 +340,7 @@ Thread.sleep(5000);
 
 		//Click on News And Trends Tab
 		//atlnt.getATLNewsAndTrends().click();
+		utl.scrollToElement(atlnt.getATLNewsAndTrendsTap());
 		atlnt.getATLNewsAndTrendsTap().click();
 		atlnt.getATLPublicationsLibrary().click();
 		//Click on Publications Library and Verify Page
@@ -347,6 +349,7 @@ Thread.sleep(5000);
 
 		//Click on News And Trends Tab
 		//atlnt.getATLNewsAndTrends().click();
+		utl.scrollToElement(atlnt.getATLNewsAndTrendsTap());
 		atlnt.getATLNewsAndTrendsTap().click();
 		atlnt.getATLInTheNews().click();
 		//Click on In the News and Verify Page
@@ -717,16 +720,18 @@ Thread.sleep(5000);
 		
 		// Click Careers link and verify results
 		
-		String winHandleBefore6 = driver.getWindowHandle();
+		//String winHandleBefore6 = driver.getWindowHandle();
 		fl.getCareersATL().click();
-		for (String winHandle6 : driver.getWindowHandles()) {
+/*		for (String winHandle6 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle6);
-		}
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Careers");
-		driver.close();
-		driver.switchTo().window(winHandleBefore6);
+		}*/
+		System.out.println(driver.getCurrentUrl());
+		Thread.sleep(1000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/careers"));
+/*		driver.close();
+		driver.switchTo().window(winHandleBefore6);*/
 		//utl.scrollToElement(fl.getmarketInfo());
-		
+		driver.navigate().back();
 		// Click on Terms & condition link
 		
 		// Switch to new tab

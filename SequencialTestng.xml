@@ -9,10 +9,10 @@
 	<test thread-count="6" name="SequencialTest">
 		<classes>
 		
-		 <class name="PROD.AmericasMartSmokeTest_PROD" />
+		 <class name="PROD.AtlantaAppSmokeTest_PROD" />
 <!-- 
 	 	 <methods>
-	 			<include name="TS005_ATLApp_VerifyExhibitorDirectoryTest"/> 
+	 			<include name="TS011_ATLApp_VerifyFooterLinksTest()"/> 
 	 	 </methods>
  -->
 		</classes>

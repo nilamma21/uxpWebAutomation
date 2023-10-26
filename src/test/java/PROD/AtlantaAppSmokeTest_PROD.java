@@ -919,15 +919,15 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore5);
 		
 		// Click Careers link and verify results
-		String winHandleBefore6 = driver.getWindowHandle();
+		//String winHandleBefore6 = driver.getWindowHandle();
 		fl.getCareersATL().click();
-		for (String winHandle6 : driver.getWindowHandles()) {
+/*		for (String winHandle6 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle6);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("/About/Careers"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore6);
-		
+		}*/
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/careers"));
+/*		driver.close();
+		driver.switchTo().window(winHandleBefore6);*/
+		driver.navigate().back();
 		// Click on Terms & condition link
 		
 		// Switch to new tab
