@@ -646,8 +646,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		// Click Careers link and verify results		
 		fl.getCareersATL().click();
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Careers");
-		// driver.get(prop.getProperty("atlappurl"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/careers"));
 		driver.get(prop.getProperty("ammarturl"));
 		utl.scrollToElement(fl.marketInfoAMC());
 
@@ -723,7 +722,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle4);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
-		//driver.close();
+		driver.close();
 		driver.switchTo().window(winHandleBefore5);
 
 		// Click on LVM Market link

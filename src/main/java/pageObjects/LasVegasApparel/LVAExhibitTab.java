@@ -23,7 +23,7 @@ public class LVAExhibitTab{
 	}
 
 	public WebElement getLVAExhibitTab() throws InterruptedException {
-	  Thread.sleep(1000);
+	  Thread.sleep(2000);
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(LVAExhibitTab));
 		return driver.findElement(LVAExhibitTab);
