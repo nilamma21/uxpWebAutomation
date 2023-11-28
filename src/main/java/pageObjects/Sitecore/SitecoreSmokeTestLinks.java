@@ -35,21 +35,18 @@ public class SitecoreSmokeTestLinks {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(UserName));
 		return driver.findElement(UserName);
-
 	}
 	
 	public WebElement getPassword() throws InterruptedException {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(Password));
 		return driver.findElement(Password);
-
 	}
 	
 	public WebElement getLoginbtn() throws InterruptedException {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(Loginbtn));
 		return driver.findElement(Loginbtn);
-
 	}
 	
 	public WebElement getVerifyHomePage() throws InterruptedException {
@@ -57,77 +54,66 @@ public class SitecoreSmokeTestLinks {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyHomePage));
 		return driver.findElement(VerifyHomePage);
-
 	}
 	
 	public WebElement getContentEditor() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(ContentEditor));
 		return driver.findElement(ContentEditor);
-
 	}
 	
 	public WebElement getVerifyContentEditor() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyContentEditor));
 		return driver.findElement(VerifyContentEditor);
-
 	}
 	
 	public WebElement getDigitalAdminPanel() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(DigitalAdminPanel));
 		return driver.findElement(DigitalAdminPanel);
-
 	}
 	
 	public WebElement getVerifyDigitalAdminPanel() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(VerifyDigitalAdminPanel));
 		return driver.findElement(VerifyDigitalAdminPanel);
-
 	}
 	
 	public WebElement getExhibitorEventsApproval() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(ExhibitorEventsApproval));
 		return driver.findElement(ExhibitorEventsApproval);
-
 	}
 	
 	public WebElement getShowSpecialApprovals() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(ShowSpecialApprovals));
 		return driver.findElement(ShowSpecialApprovals);
-
 	}
 	
 	public WebElement getIMCReports() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(IMCReports));
 		return driver.findElement(IMCReports);
-
 	}
 	
 	public WebElement getTaxonomyManager() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(TaxonomyManager));
 		return driver.findElement(TaxonomyManager);
-
 	}
 	
 	public WebElement getEmailExperienceManager() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(EmailExperienceManager));
 		return driver.findElement(EmailExperienceManager);
-
 	}
 	
 	public WebElement getControlPanel() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(ControlPanel));
 		return driver.findElement(ControlPanel);
-
 	}
 	
 }

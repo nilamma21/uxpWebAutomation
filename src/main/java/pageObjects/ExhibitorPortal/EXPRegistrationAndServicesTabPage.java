@@ -20,12 +20,14 @@ public class EXPRegistrationAndServicesTabPage {
 	By VerifyAMCToolKit = By.xpath("//span[id = 'lblCompany']"); //Locator for verification tool kit page
 	
 	By MarketBadgeRegistration = By.xpath("//a[contains(text(),'Market Badge Registration')]");
-	By ATLTechnologyServiceTab = By.xpath("//a[contains(text(),'Atlanta | Technology Services')]"); //Locator for Atlanta Technology Service
+	By ATLTechnologyServiceTab = By.xpath("//a[contains(text(),'Atlanta') and contains(text(),'Temporary Booths') and contains(text(),'Technology Services')]"); //Locator for Atlanta Technology Service
 	By ATLServices = By.xpath("//a[contains(text(),'Atlanta | Services')]");
 	By ATLAdvertisingAndSponsorship = By.xpath("//a[contains(text(),'Atlanta | Advertising & Sponsorship')]");
 	By ATLPayments = By.xpath("//a[contains(text(),'Atlanta | Payments')]");
 	By AMCLogisticsAndExhToolkit = By.xpath("//a[contains(text(),'AmericasMart Logistics | Exhibitor Toolkit')]");
-	By LVMTechnologyServiceTab = By.xpath("//a[contains(text(),'Las Vegas | Technology Services')]"); //Locator for Las Vegas Technology Service
+	By LVMTechnologyServiceTab = By.xpath("//a[contains(text(),'Las Vegas') and contains(text(),'Technology Services')]"); //Locator for Las Vegas Technology Service
+	By ATLTechnologyServicePermenantTab = By.xpath("//a[contains(text(),'Atlanta') and contains(text(),'Permanent Exhibits') and contains(text(),'Technology Services')]");//Locator for Atlanta | Permanent Exhibits | Technology Services Page
+	
 	
 	public EXPRegistrationAndServicesTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -116,6 +118,12 @@ public class EXPRegistrationAndServicesTabPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AMCLogisticsAndExhToolkit));
 		return driver.findElement(AMCLogisticsAndExhToolkit);
 	}
+	
+    public WebElement getATLTechnologyServicePermenantTab() {
+      wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.visibilityOfElementLocated(ATLTechnologyServicePermenantTab));
+      return driver.findElement(ATLTechnologyServicePermenantTab);
+  }
 	
 }
 

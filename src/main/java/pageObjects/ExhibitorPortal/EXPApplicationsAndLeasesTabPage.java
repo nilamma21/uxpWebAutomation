@@ -42,7 +42,6 @@ public class EXPApplicationsAndLeasesTabPage
 		return driver.findElement(EXPAtlantaApplyForTradeshowSpace);
 	}
 
-
 	public WebElement getEXPLasVegasGiftHomeTradeshowSpace() throws InterruptedException {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(EXPLasVegasGiftHomeTradeshowSpace));

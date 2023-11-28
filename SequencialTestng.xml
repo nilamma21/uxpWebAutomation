@@ -12,7 +12,7 @@
 		 <class name="PROD.AtlantaAppSmokeTest_PROD" />
 <!-- 
 	 	 <methods>
-	 			<include name="TS011_ATLApp_VerifyFooterLinksTest()"/> 
+	 	 	 	<include name="TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>  
 	 	 </methods>
  -->
 		</classes>

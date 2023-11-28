@@ -30,7 +30,7 @@ public class LVAAttendPage {
 	} 
 	
 	public WebElement getLVAAttendTab() throws InterruptedException {
-	  Thread.sleep(2000);
+	  Thread.sleep(5000);
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(LVAAttendTab));
 		return driver.findElement(LVAAttendTab);

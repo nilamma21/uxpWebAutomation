@@ -308,9 +308,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.verifyCloseBtnPopup();
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		gs.getSearchButton().click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		String searchterm = atlgs.getATLVerifyGlobalSeacrh().getText();
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
@@ -355,7 +355,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		mi.getMarketInfoHeader().click();
 */
 		//Click History option under About tab
-		mi.getContactUs().click();
+		amab.getHistory().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "History");
 		System.out.println("History section is displayed properly");
@@ -588,7 +588,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		exhp.getExhDirectSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		exhp.getExhDirectSearchBtn().click();
-		Thread.sleep(10000);
+		Thread.sleep(12000);
 
 		utl.scrollToElement(mi.getVerifyContactUs());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
@@ -627,6 +627,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
+		Thread.sleep(2000);
 		Assert.assertEquals(driver.getTitle(), "Download the @Market ANDMORE App");
 		driver.get(prop.getProperty("ammarturl"));
 		utl.scrollToElement(fl.marketInfoAMC());

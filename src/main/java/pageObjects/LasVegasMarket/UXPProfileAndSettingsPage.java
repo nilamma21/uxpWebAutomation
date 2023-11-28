@@ -26,21 +26,24 @@ public class UXPProfileAndSettingsPage {
 	public WebElement getWelcomeText() throws InterruptedException {
 		//Wait till Sign In page is displayed
 		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(WelcomeText));
 		return driver.findElement(WelcomeText);
-
 	}
 
 	public WebElement getProfileAndSettings() {
 		//Wait till Sign In page is displayed
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.visibilityOfElementLocated(ProfileAndSettings));
 		return driver.findElement(ProfileAndSettings);
-
 	}
 	
 	public WebElement getVerifyProfile() throws InterruptedException {
 		//Wait till Sign In page is displayed
 		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,30);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyProfile));
 		return driver.findElement(VerifyProfile);
-
 	}
 	
 }

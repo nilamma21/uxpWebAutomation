@@ -28,38 +28,38 @@ public class AMExhibitTabPage {
 
 		public WebElement getamcExhibitTab() throws InterruptedException {
 			Thread.sleep(3000);
-			wait = new WebDriverWait (driver,20);
+			wait = new WebDriverWait (driver,30);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(amcExhibitTab));
 			return driver.findElement(amcExhibitTab);
 		}
 		
 		public WebElement getExhibitAtAmc() throws InterruptedException {
-			wait = new WebDriverWait (driver,20);
+			wait = new WebDriverWait (driver,30);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(amcExhibitAtAmc));
 			return driver.findElement(amcExhibitAtAmc);
 		}
 		public WebElement getLeasingandExhibitOptions() throws InterruptedException {
-			wait = new WebDriverWait (driver,20);
+			wait = new WebDriverWait (driver,30);
 			wait.until(ExpectedConditions.elementToBeClickable(amcLeasingExhibitOptions));
 			return driver.findElement(amcLeasingExhibitOptions);
 		}
 		public WebElement getAdvertising() throws InterruptedException {
-			wait = new WebDriverWait (driver,20);
+			wait = new WebDriverWait (driver,30);
 			wait.until(ExpectedConditions.elementToBeClickable(amcAdvertising));
 			return driver.findElement(amcAdvertising);
 		}
 		public WebElement getExpLogin() throws InterruptedException {
-			wait = new WebDriverWait (driver,20);
+			wait = new WebDriverWait (driver,30);
 			wait.until(ExpectedConditions.elementToBeClickable(amcExpLogin));
 			return driver.findElement(amcExpLogin);
 		}
 		public WebElement getExpPortalHeader() throws InterruptedException {
-			wait = new WebDriverWait (driver,20);
+			wait = new WebDriverWait (driver,30);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(amcExpPotalHeader));
 			return driver.findElement(amcExpPotalHeader);
 		}
 		public WebElement getExpFAQs() throws InterruptedException {
-			wait = new WebDriverWait (driver,20);
+			wait = new WebDriverWait (driver,30);
 			wait.until(ExpectedConditions.elementToBeClickable(amcExhFAQ));
 			return driver.findElement(amcExhFAQ);
 		}
@@ -68,7 +68,7 @@ public class AMExhibitTabPage {
 			return driver.findElement(amcexhibitbrdcrumb);
 		}
 		public WebElement getExpGuide() throws InterruptedException {
-			wait = new WebDriverWait (driver,20);
+			wait = new WebDriverWait (driver,30);
 			wait.until(ExpectedConditions.elementToBeClickable(amcExpGuide));
 			return driver.findElement(amcExpGuide);
 		}

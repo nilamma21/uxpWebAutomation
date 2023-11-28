@@ -6,15 +6,8 @@
       <class name="PROD.LasVegasAppSmokeTest_PROD">
         <methods>
           <include name="TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>
-          <include name="TS008_LVMApp_VerifySocialMediaLinksTest"/>
-          <include name="TS001_VerifyAllHeaderChanelLinksTest"/>
-          <include name="TS002_LVMApp_VerifyGlobalSearchFunctionalityTest"/>
-          <include name="TS007_LVMApp_VerifyFooterLinksTest"/>
           <include name="initialize"/>
-          <include name="TS003_LVMApp_VerifyAllLinksUnderAboutTabTest"/>
-          <include name="TS005_LVMApp_VerifyAllLinksUnderAttendTabTest"/>
           <include name="tearDown"/>
-          <include name="TS006_LVMApp_VerifyAllLinksUnderExhibitTabTest"/>
         </methods>
       </class> <!-- PROD.LasVegasAppSmokeTest_PROD -->
     </classes>

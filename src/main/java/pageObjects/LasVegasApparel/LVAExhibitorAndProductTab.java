@@ -20,7 +20,8 @@ public class LVAExhibitorAndProductTab {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
-	public WebElement getLVAExhibitorAndProductTab() {
+	public WebElement getLVAExhibitorAndProductTab() throws InterruptedException {
+	  Thread.sleep(2000);
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(LVAExhibitorAndProductTab));
 		return driver.findElement(LVAExhibitorAndProductTab);

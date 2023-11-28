@@ -31,28 +31,28 @@ public class ATLExhibitPage {
 	} 
 	
 	public WebElement getATLExhibitTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlexhibittab));
 		return driver.findElement(atlexhibittab);		
 	}
 	
 	public WebElement getATLWhyExhibitMenu() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlwhyexhibitmenu));
 		return driver.findElement(atlwhyexhibitmenu);		
 	}
 	public WebElement getATLExhibitorRegtnMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorregtn));
 		return driver.findElement(atlexhibitorregtn);		
 	}
 	public WebElement getATLExhibitorPortalLoginMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexplogin));
 		return driver.findElement(atlexplogin);		
 	}
 	public WebElement getATLJuniperMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atljunipersubmenu));
 		return driver.findElement(atljunipersubmenu);		
 	}

@@ -26,22 +26,24 @@ public class ATLProfileAndSettingsPage {
 
 	public WebElement getATLWelcomeText() throws InterruptedException {
 		Thread.sleep(5000);
+		wait = new WebDriverWait (driver,30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(atlwelcometext));
 		return driver.findElement(atlwelcometext);
 	}
 
 	public WebElement getATLProfileAndSettings() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlprofileandsettings));
 		return driver.findElement(atlprofileandsettings);
 	}
 	
 	public WebElement getAMCExhibitorPortalOptn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(amcexhibitorportal));
 		return driver.findElement(amcexhibitorportal);
 	}
 	public WebElement getAMCExhibitorPortalHome() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(amcexhphome));
 		return driver.findElement(amcexhphome);
 	}

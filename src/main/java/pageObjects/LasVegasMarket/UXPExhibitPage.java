@@ -32,63 +32,63 @@ public class UXPExhibitPage {
 	} 
 	
 	public WebElement getExhibitTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(exhibittab));
 		return driver.findElement(exhibittab);		
 	}
 	
 	public WebElement getWhyExhibitMenu() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(whyexhibitmenu));
 		return driver.findElement(whyexhibitmenu);		
 	}
 	public WebElement getExhibitOpptMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitoppt));
 		return driver.findElement(exhibitoppt);		
 	}
 	public WebElement getAdvertisingnSponsershipsMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(advnspnrshp));
 		return driver.findElement(advnspnrshp);		
 	}
 	public WebElement getTipsForExhibitorsMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(tipsforexhibitors));
 		return driver.findElement(tipsforexhibitors);		
 	}
 	public WebElement getExhibitorRegtnMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitorregtn));
 		return driver.findElement(exhibitorregtn);		
 	}
 	public WebElement getExhibitorPortalLoginMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(explogin));
 		return driver.findElement(explogin);		
 	}
 	public WebElement getJuniperMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(junipersubmenu));
 		return driver.findElement(junipersubmenu);		
 	}
 	public WebElement getAdvertisingnSponsershipsTitle() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(advnspnrshptitle));
 		return driver.findElement(advnspnrshptitle);		
 	}
 	public WebElement getExhibitorTipsTitle() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhtipstitle));
 		return driver.findElement(exhtipstitle);		
 	}
 	public WebElement getExhibitBrdcrumb() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitbrdcrumb));
 		return driver.findElement(exhibitbrdcrumb);		
 	}
 	public WebElement getExhibitOpprBrdcrumb() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitopprbrdcrumb));
 		return driver.findElement(exhibitopprbrdcrumb);		
 	}
@@ -98,12 +98,12 @@ public class UXPExhibitPage {
 		return driver.findElement(exploginpagetitle);		
 	}
 	public WebElement getAdvSpnsershpBrdcrumbUAT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(advnspnshpbrdcrumbuat));
 		return driver.findElement(advnspnshpbrdcrumbuat);		
 	}
 	public WebElement getexhibitorresourcesprod() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitorresourcesprod));
 		return driver.findElement(exhibitorresourcesprod);		
 	}
