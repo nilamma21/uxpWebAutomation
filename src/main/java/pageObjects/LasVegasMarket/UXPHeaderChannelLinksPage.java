@@ -1,12 +1,9 @@
 package pageObjects.LasVegasMarket;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UXPHeaderChannelLinksPage {
@@ -27,38 +24,33 @@ public class UXPHeaderChannelLinksPage {
 	} 
 
 	public WebElement getAtlantaMarket() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlantaMarket));
 		return driver.findElement(AtlantaMarket);
-
 	}
 
 	public WebElement getAtlantaApparel() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlantaApparel));
 		return driver.findElement(AtlantaApparel);
-
 	}
 	
 	public WebElement getAmericasMart() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AmericasMart));
 		return driver.findElement(AmericasMart);
-
 	}
 	
 	public WebElement getHighPoint() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(HighPoint));
 		return driver.findElement(HighPoint);
-
 	}
 	
 	public WebElement getLasVegas() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LasVegas));
 		return driver.findElement(LasVegas);
-
 	}
 	
 }

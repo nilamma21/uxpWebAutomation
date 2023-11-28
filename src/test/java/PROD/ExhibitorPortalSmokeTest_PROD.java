@@ -181,20 +181,40 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
+		//Verify Exhibitor Registration Page
 		//Click on Registration And Services Tab 
-		
-		try {
 		rs.getEXPRegAndServicesTab().click();
 		Assert.assertTrue(st.getVerifySettings().isDisplayed());
-
-		//Exhibitor Registration
+		//Click on Market Badge Registration
 		rs.getMarketBadgeRegistration().click();
 		Thread.sleep(3000);
 		//Verify Exhibitor Registration Page Header
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Market Registrations"));
+		System.out.println("Exhibitor Registration Page Successfully Opened");
 		driver.navigate().back();
 		
-		rs.getEXPRegAndServicesTab().click();
+		
+	    //Verify Atlanta | Permanent Exhibits | Technology Services Page
+        rs.getEXPRegAndServicesTab().click();
+        //Click on Atlanta | Permanent Exhibits | Technology Services
+        String winHandleBefore7 = driver.getWindowHandle();
+        rs.getATLTechnologyServicePermenantTab().click();
+        Thread.sleep(3000);
+        // Switch to new window opened
+        for(String winHandle : driver.getWindowHandles()){
+            driver.switchTo().window(winHandle);
+        }
+        //Verify that 'EXP Login' page should be displayed
+        Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/exhibportal"));
+        System.out.println("Atlanta | Permanent Exhibits | Technology Services Page Successfully Opened");
+        // Close the new window, if that window no more required
+        //driver.close();
+        driver.close();
+        // Switch back to original browser (first window)
+        driver.switchTo().window(winHandleBefore7);
+		
+		
+		//Verify Atlanta | Temporary Booths | Technology Services Page
 		//Click on Atlanta Technology Services
 		String winHandleBefore5 = driver.getWindowHandle();
 		rs.getATLTechnologyServiceTab().click();
@@ -205,33 +225,37 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		}
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://andmore.safetynetaccess.com/"));
+		System.out.println("Atlanta | Temporary Booths | Technology Services Page Successfully Opened");
 		// Close the new window, if that window no more required
 		//driver.close();
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore5);
-		
 
+
+		//Verify Atlanta Services Page
 		//Click on Atlanta Services
 		String winHandleBefore1 = driver.getWindowHandle();
 		rs.getATLServices().click();		
-		Thread.sleep(3000);
+		Thread.sleep(7000);
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
+		System.out.println("Atlanta Services Page Successfully Opened");
 		// Close the new window, if that window no more required
 		//driver.close();
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore1);
 
-		
+
+		//Verify Atlanta | Advertising & Sponsorship Page
 		//Click on Atlanta Advertising and services
 		String winHandleBefore2 = driver.getWindowHandle();
-		rs.getATLAdvertisingAndSponsorship().click();		
+		rs.getATLAdvertisingAndSponsorship().click();
 		//Click on Exhibitor Portal Login' sub-menu
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
@@ -239,14 +263,17 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		}
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
+		System.out.println("Atlanta | Advertising & Sponsorship Page Successfully Opened");
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore2);
 
+
+		//Verify Atlanta | Payments Page
 		//Click on Atlanta Payments
 		String winHandleBefore3 = driver.getWindowHandle();
-		rs.getATLPayments().click();		
+		rs.getATLPayments().click();
 		//Click on Exhibitor Portal Login' sub-menu
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
@@ -254,26 +281,29 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		}
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
+		System.out.println("Atlanta | Payments Page Successfully Opened");
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore3);
 
+		
+		//Verify AmericasMart Logistics | Exhibitor Toolkit Page
 		//Click on AmericasMart Exhibitor Tool Kit
 		rs.getAMCLogisticsAndExhToolkit().click();
 		String winHandleBefore4 = driver.getWindowHandle();
-
 		//Click on Exhibitor Portal Login' sub-menu
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.expotoolkit.com/"));
+		System.out.println("AmericasMart Logistics | Exhibitor Toolkit Page Successfully Opened");
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
 		
-	
+		
+		//Verify Las Vegas | Temporary Booths | Technology Services Page
 		//Click on Las Vegas Technology Services
 		String winHandleBefore6 = driver.getWindowHandle();
 		rs.getLVMTechnologyServiceTab().click();
@@ -284,15 +314,12 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		}
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://andmore.safetynetaccess.com/"));
+		System.out.println("Las Vegas | Temporary Booths | Technology Services Page Successfully Opened");
 		// Close the new window, if that window no more required
 		//driver.close();
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore6);
-		
-		
-		} catch(StaleElementReferenceException e) {
-        }
 	}
 
 	@Test(priority=5)

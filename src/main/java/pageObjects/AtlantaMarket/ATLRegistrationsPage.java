@@ -24,13 +24,13 @@ public class ATLRegistrationsPage {
 	} 
 
 	public WebElement getATLRegistrationsOptn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlregistrations));
 		return driver.findElement(atlregistrations);
 	}
 	
 	public WebElement getATLRegistrationsInfoTab() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlregstninfotab));
 		return driver.findElement(atlregstninfotab);
 	}

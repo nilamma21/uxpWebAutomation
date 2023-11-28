@@ -19,6 +19,7 @@ public class AMAboutTabPage {
 	By IndustryPartners = By.xpath("//a[@href='/About/Industry-Partners']"); // Locator for Instagram icon in footer links
 	By ErrorAdvancedBtn = By.xpath("//button[@id = 'details-button']");
 	By ErrorUnsafeWebLink = By.xpath("//a[@id = 'proceed-link']");
+	By History = By.xpath("(//a[@href='/About/History'])[position()=1]");// Locator for Careers in History tab
 	
 	public AMAboutTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -59,5 +60,12 @@ public class AMAboutTabPage {
 		return driver.findElement(ErrorUnsafeWebLink);
 
 	}
+	
+	   public WebElement getHistory() throws InterruptedException {
+	        wait = new WebDriverWait (driver,20);
+	        wait.until(ExpectedConditions.elementToBeClickable(History));
+	        return driver.findElement(History);
+
+	    }
 
 }

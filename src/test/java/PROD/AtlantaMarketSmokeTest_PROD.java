@@ -150,64 +150,112 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlmrkturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+		//Verify About Page
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-
 		//Click on About sub-menu
 		atlmi.getATLAboutSubMenu().click();
-
 		//Verify that About Us page should be displayed
 		Assert.assertTrue(atlmi.getATLAboutUsPageHeader().isDisplayed());
+		System.out.println("About page is present");
+		
+		//Verify Floor Plans Page
+		//Click Market Info tab at Header
+        atlmi.getATLMarketInfoHeader().click();
+        //Click on Floor Plans sub-menu
+        atlmi.getATLFloorPlan().click();
+        Thread.sleep(3000);
+        //Verify that Market Info page should be displayed
+        Assert.assertTrue(driver.getTitle().contains("Floor Plans"));
+        System.out.println("Floor Plans page is present");
+        
+		//Verify Getting to Market Page
+        //Click Market Info tab at Header
+        atlmi.getATLMarketInfoHeader().click();
+        //Click on Getting to Market sub-menu
+        atlmi.getATLGettingToMarket().click();
+        //Verify that Getting to Market page should be displayed
+        Assert.assertTrue(atlmi.getATLGettingToMarketHeader().isDisplayed());
+        System.out.println("Getting to Market page is present");
 
+		//Verify Industry Partners Page
+        //Click Market Info tab at Header
+        atlmi.getATLMarketInfoHeader().click();
+        //Click on Industry Partners sub-menu
+		atlmi.getATLIndustryPartners().click();
+		Thread.sleep(3000);
+		//Verify that Industry Partners page should be displayed
+		Assert.assertTrue(driver.getTitle().contains("Industry Partners"));
+        System.out.println("Industry Partners page is present");
+		
+		//Verify Dates & Hours Page
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-
 		//Click on Dates & Hours sub-menu
 		atlmi.getATLDatesAndHrsSubMenu().click();
-
 		//Verify that Dates & Hours page should be displayed
 		Assert.assertTrue(atlmi.getATLMrketDatesHrsPageHeader().isDisplayed());
-
+		System.out.println("Dates & Hours page is present");
+		
+		//Verify Market 101 Page
+		//Click Market Info tab at Header
+        atlmi.getATLMarketInfoHeader().click();
+        //Click on Market101 sub-menu
+		atlmi.getATLMarket101().click();
+		Thread.sleep(3000);
+		//Verify that Market101 page should be displayed
+        Assert.assertTrue(driver.getTitle().contains("Market 101"));
+        System.out.println("Market 101 page is present");
+        
+		//Verify Registration Page
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-
 		//Click on Registration sub-menu
 		atlmi.getATLRegistrationsSubMenu().click();
-
-		//Verify that Registration  page should be displayed
+		//Verify that Registration page should be displayed
 		Assert.assertTrue(atlmi.getATLRegstnPageHeader().isDisplayed());
-
+		System.out.println("Registration page is present");
+		
+		//Verify Press Center Page
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-
 		//Click on Press Center sub-menu
 		atlmi.getATLPressCenterSubMenu().click();
-
 		//Verify that Press Releases page should be displayed
 		Assert.assertTrue(atlmi.getATLPressCenterPageHeader().isDisplayed());
+		System.out.println("Press Center page is present");
 
-		//Due to re-branding changes
-/*		//Click Market Info tab at Header
-		atlmi.getATLMarketInfoHeader().click();
-
-		//Click on Atlanta Next sub-menu
-		atlmi.getAtlantaNextSubMenu().click();
-
-		//Verify that Atlanta Next page should be displayed
-		Assert.assertTrue(atlmi.getATLAtlantaNextPageHeader().isDisplayed());
-*/
-
+		//Verify Video Gallery Page
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-
 		//Click on Video Gallery sub-menu
 		atlmi.getATLVideoGallerySubMenu().click();
-
 		//Verify that Video Gallery page should be displayed
 		Assert.assertTrue(atlmi.getATLVideoGalleryPageHeader().isDisplayed());
+		System.out.println("Video Gallery page is present");
 		
-		//Due to re-branding changes
-/*		//Click Market Info tab at Header
+		//Verify Download our NEW App Page
+		//Click Market Info tab at Header
+        atlmi.getATLMarketInfoHeader().click();
+        //Click on Download our NEW App sub-menu
+        atlmi.getATLDownloadOurNewApp().click();
+        Thread.sleep(3000);
+        //Verify that Download ourNEW App page should be displayed
+        Assert.assertTrue(driver.getTitle().contains("Download the @Market ANDMORE App"));
+        System.out.println("Download the NEW App page is present");
+		
+        //Due to re-branding changes
+/*      //Click Market Info tab at Header
+        atlmi.getATLMarketInfoHeader().click();
+
+        //Click on Atlanta Next sub-menu
+        atlmi.getAtlantaNextSubMenu().click();
+
+        //Verify that Atlanta Next page should be displayed
+        Assert.assertTrue(atlmi.getATLAtlantaNextPageHeader().isDisplayed());
+
+	
+	    //Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
 
 		//Click on Industry Partners sub-menu

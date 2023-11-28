@@ -1,12 +1,9 @@
 package pageObjects.LasVegasMarket;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UXPFooterLinksNavigationPage {
@@ -17,31 +14,22 @@ public class UXPFooterLinksNavigationPage {
 	By marketInfo = By.xpath("//a[@href='/market-info']"); //Locator for Market information in footer links
 	By marketInfoATL = By.xpath("//a[@href='/Markets']"); //Locator for Market information in footer links
 	By marketInfoAMC = By.xpath("//a[@href='/about']"); //Locator for Market information in footer links AMC
-	
 	By pressCenter = By.xpath("//a[@href='/Market-Info/Press-Center']"); //Locator for Press Center in footer links
 	By pressCenterAMC = By.xpath("//a[@href='/About/Press-Center']"); //Locator for Press Center in footer links
-	
 	By pressCenterATL = By.xpath("//a[@href='/Markets/Press-Center']"); //Locator for Press Center in footer links
 	By ourBrandsATL = By.xpath("//a[@href='/exhibitor/directory']"); //Locator for Our brands in footer links ATL
-	
 	By DownloadTheApp = By.xpath("//a[contains(text(),'Download the @Market App')]"); //Locator for Download The App in footer links
 	By ContactUs = By.xpath("(//a[contains(text(),'Contact Us')])[2]"); //Locator for Contact Us in footer links
 	By ContactUsATL = By.xpath("//a[contains(text(),'Contact Us')]"); //Locator for Contact Us in footer links
-	
 	By Careers = By.xpath("//a[@href='/market-info/careers']"); //Locator for Careers in footer links
 	By CareersATL = By.xpath("//a[contains(text(),'Careers')]"); //Locator for Careers in footer links
-	
 	By PrivacyPolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); // Locator for Privacy Policy in footer links
 	By TermsAndConditions = By.partialLinkText("Terms"); // Locator for Terms and Conditions in footer links
 	By AmericasMart = By.xpath("//a[@href='https://www.americasmart.com']"); //Locator for Americas Mart in footer links
 	By AmericasMart_ATLApp = By.xpath("(//a[contains(text(),'AmericasMart')])[2]"); //Locator for Americas Mart in footer links of ATLApp
 	By AmericasMart_ATLAppFooter = By.xpath("(//div[@class='imc-section imc-section--padded']//preceding::a[contains(text(),'AmericasMart')])[2]"); //Locator for Americas Mart in footer links of ATLApp
-	
 	By lvapplink_ATL = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/')])[2]"); //Locator for Las Vegas Apparel footer link
-	
 	By lvapplink_ATL_Footer = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com/?')])[3]"); //Locator for Las Vegas Apparel footer link
-	
-	
 	By lvmlink_ATL = By.xpath("(//a[contains(text(),'Las Vegas Market')])[2]"); //Locator for Las Vegas market footer link
 	By lvmlink_ATLM = By.xpath("//a[contains(@href,'https://www.lasvegas-apparel.com/')]"); //Locator for Las Vegas market footer link
 	By lvmlink_ATL_Footer = By.xpath("(//div[@class='imc-section imc-section--padded']//preceding::a[contains(text(),'Las Vegas Apparel')])[2]"); //Locator for Las Vegas market footer link
@@ -54,15 +42,12 @@ public class UXPFooterLinksNavigationPage {
 	By facebookicon = By.xpath("//a[@href='https://www.facebook.com/lvmarket']//div//*[name()='svg']"); //Locator for Facebook link in footer
 	By instagramicon =  By.xpath("//a[@href='https://www.instagram.com/lasvegasmarket/']//div//*[name()='svg']"); //Locator for Instagram link in footer
 	By instagramiconATLM =  By.xpath("//a[@href='https://www.instagram.com/americasmartatl/']//div//*[name()='svg']"); //Locator for Instagram link in footer
-	
 	By youtubeicon = By.xpath("//a[@href='https://www.youtube.com/channel/UCh8pZYxnmh7Wjrnf3d_OsWg']//div//*[name()='svg']"); //Locator You Tube icon
 	By pinteresticon = By.xpath("//a[@href='https://www.pinterest.com/lasvegasmarket/']//div//*[name()='svg']"); //Locator for Pinterest icon
 	By twittericon = By.xpath("//a[@href='https://twitter.com/lasvegasmarket']//div//*[name()='svg']"); //Locator for Twitter icon
 	By twittericonATLM = By.xpath("//a[@href='https://twitter.com/americasmartatl']//div//*[name()='svg']"); //Locator for Twitter icon
-	
 	By linkedinicon = By.xpath("//a[@href='https://www.linkedin.com/company/las-vegas-market']//div//*[name()='svg']"); //Locator for LinkedIn icon
 	By footerLVMLogo = By.xpath("//img[@src='https://www.lasvegasmarket.com/-/media/Channel-Logos/LVM-footer.svg']"); //Locator for Footer LVM logo
-	
 	By VerifyCareers = By.xpath("//div[@id = 'content']/div[1]/div[1]/h1[1]"); //Locator for verify Careers
 	By VerifyTermsOfUse = By.xpath("//div[@id = 'primary']/h1"); //Locator for Terms of Use
 	By VerifyPrivacyPolicy = By.xpath("//*[contains (text(), 'WEB PRIVACY STATEMENT']"); //Locator for privacy Policy
