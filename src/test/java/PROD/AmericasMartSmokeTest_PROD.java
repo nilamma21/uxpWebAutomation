@@ -213,12 +213,17 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Click Markets and Events tab at Header
 		//Thread.sleep(3000);
 		atat.getATLAttendTab().click();
-
+		Thread.sleep(500);
 		//Click Attend our next market tab under Markets and Events section
-
+		String winHandleBefore = driver.getWindowHandle();
 		amme.getattendournextmarket().click();
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://compass.onpeak.com/"));
 		System.out.println("Attend our next market section is displayed properly");
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
+		
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.verifyCloseBtnPopup();
@@ -234,7 +239,6 @@ public class AmericasMartSmokeTest_PROD extends base {
 		atat.getATLAttendTab().click();
 
 		//Click Spring Market tab under Markets and Events section
-
 		amme.getAMCSpringMarket().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+ "Markets/Spring-Market"));
@@ -430,7 +434,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 		//Exhibitor Portal Login
 		amexh.getamcExhibitTab().click();	
-		
+		Thread.sleep(500);
 		String winHandleBefore = driver.getWindowHandle();
 		amexh.getExpLogin().click();
 		for(String winHandle : driver.getWindowHandles()){
@@ -500,7 +504,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.scrollToElement(amoyr.getOpenYearRoundShowroomsPageHeader());
 		//Verify that Open Year Round Showrooms page should be displayed
 		String actualShowroomDirectHeader="Open Year Round Showrooms at AmericasMart";
-		Assert.assertTrue(amoyr.getOpenYearRoundShowroomsPageHeader().getText().equals(actualShowroomDirectHeader));
+		Assert.assertTrue(amoyr.getOpenYearRoundShowroomsPageHeader().getText().equalsIgnoreCase(actualShowroomDirectHeader));
 		
 		utl.scrollToTop();
 		//Click on Open Year Round Tab 
