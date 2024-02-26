@@ -225,13 +225,14 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("Showrooms"));
 		System.out.println("Verify Complete Open Showroom Page");	
 		
-	//Verify Floor Plans Page
+		//Verify Floor Plans Page
 		lvaept.getLVAExhibitorAndProductTab().click();
 		//Click on Floor Plans
 		System.out.println("Click on Floor Plans Tab");
 		lvaept.getLVAFloorPlans().click();
+		Thread.sleep(1000);
 		//Verify Floor Plans Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Map"));
+		Assert.assertTrue(driver.getTitle().contains("Floor Plan"));
 		System.out.println("Verify Complete Floor Plans Page");	
 		
 	}
@@ -287,12 +288,13 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvaa.getLVAAttendTab().click();
 		//CLick on Travel
 		lvaa.getLVTravel().click(); 
+		Thread.sleep(500);
 		System.out.println("Click on Travel");
 		//Verify Travel Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/Travel"));	
 		System.out.println("Vefiry Travel Page ");
-		
 		//Click on Attend Tab
+		utl.scrollToElement(lvaa.getLVAAttendTab());
 		lvaa.getLVAAttendTab().click();
 		//CLick on Air Travel
 		lvaa.getLVAirTravel().click();

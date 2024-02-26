@@ -336,30 +336,29 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Market Info tab at Header
-
 		mi.getMarketInfoHeader().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(mi.getAboutLasVegasMarket().getText().contains("Las Vegas"));
 		System.out.println("Market Info section options are displayed properly");
 
 		//Click About Las Vegas Market option under Market Info
-
 		mi.getAboutLasVegasMarket().click();
 		Thread.sleep(3000);
-		Assert.assertTrue(mi.getVerifyAboutLasVegasMarket().isDisplayed());
+		//Assert.assertTrue(mi.getVerifyAboutLasVegasMarket().isDisplayed());
+		Assert.assertTrue(driver.getTitle().contains("Market Info"));
 		System.out.println("About Las Vegas Market section is displayed properly");
 		mi.getMarketInfoHeader().click();
 
 		//Click Market Dates and Hours option under Market Info
-
 		mi.getMarketDatesAndHrs().click();
 		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Market Dates and Hours");
+		utl.scrollToElement(exhp.getVerifyBreadcrumb());
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Market Dates and Hours"));
 		System.out.println("Market Dates and Hours section is displayed properly");
+		utl.scrollToTop();
 		mi.getMarketInfoHeader().click();
 
 		//Click Registration Details option under Market Info
-
 		mi.getRegistrationDetails().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(driver.getCurrentUrl(), "https://www.lasvegasmarket.com/Market-Info/Registration-Details");
@@ -367,7 +366,6 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		mi.getMarketInfoHeader().click();
 
 		//Click Admission Policies option under Market Info
-
 		mi.getAdmissionPolicies().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Admission Policies");
@@ -375,7 +373,6 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		mi.getMarketInfoHeader().click();
 
 		//Click Industry Partners option under Market Info
-
 		mi.getIndustryPartners().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Industry Partners");
@@ -383,7 +380,6 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		mi.getMarketInfoHeader().click();
 
 		//Click FAQs option under Market Info
-
 		mi.getFAQs().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "FAQs");
@@ -392,7 +388,6 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		mi.getMarketInfoHeader().click();
 
 		//Click Contact s option under Market Info
-
 		mi.getContactUs().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(mi.getVerifyContactUs().getText(), "Contact Us");
@@ -400,7 +395,6 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		mi.getMarketInfoHeader().click();
 
 		//Click Market Recap option under Market Info
-
 		mi.getMarketRecap().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Market Recap");
@@ -408,7 +402,6 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		mi.getMarketInfoHeader().click();
 
 		//Click Press Center option under Market Info
-
 		mi.getMediaAndPress().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Press Center");

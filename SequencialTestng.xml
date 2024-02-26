@@ -9,12 +9,12 @@
 	<test thread-count="6" name="SequencialTest">
 		<classes>
 		
-		 <class name="PROD.AtlantaAppSmokeTest_PROD" />
-<!-- 
+		 <class name="PROD.AtlantaMarketSmokeTest_PROD" />
+
 	 	 <methods>
-	 	 	 	<include name="TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>  
+	 	 	 	<include name="TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest"/>  
 	 	 </methods>
- -->
+
 		</classes>
 	</test>
 </suite>
