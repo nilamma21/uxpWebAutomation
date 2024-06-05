@@ -17,12 +17,12 @@ public class LVAFooterLinksNavigationPage {
 	By CareersATL = By.xpath("//a[contains(text(),'Careers')]"); //Locator for Careers in footer links
 	By TermsAndConditions = By.partialLinkText("Terms"); // Locator for Terms and Conditions in footer links
 	By atlprivacypolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); //Locator for Privacy Policy on LVM Footer
-	By AmericasMart_ATLApp = By.xpath("(//a[contains(text(),'AmericasMart')])[2]"); //Locator for Americas Mart in footer links of ATLApp
-	By AtlantaApparel = By.xpath("(//a[contains(@href,'https://www.atlanta-apparel.com')])[2]"); //Locator for Atlanta Apparel in footer links
+	By AmericasMart_ATLApp = By.xpath("(//a[contains(text(),'AmericasMart')])[1]"); //Locator for Americas Mart in footer links of ATLApp
+	By AtlantaApparel = By.xpath("(//a[contains(@href,'https://www.atlanta-apparel.com')])[1]"); //Locator for Atlanta Apparel in footer links
 	By AtlantaMarket = By.xpath("//div[contains(@class,'imc-accordion imc-vr--titan imc-category--heading')]//a[contains(text(),'Atlanta Market')]"); //Locator for Atlanta Matket in footer links
-	By CasualMarket = By.xpath("(//a[contains(text(),'Casual Market Atlanta')])[2]");
-	By HighPointMarket = By.xpath("(//a[contains(text(),'ANDMORE at High Point Market')])[2]"); //Locator for High Point Market in footer links
-	By lvmlink_ATL = By.xpath("(//a[contains(text(),'Las Vegas Market')])[2]"); //Locator for Las Vegas market footer link
+	By CasualMarket = By.xpath("(//a[contains(text(),'Casual Market Atlanta')])[1]");
+	By HighPointMarket = By.xpath("(//a[contains(text(),'ANDMORE at High Point Market')])[1]"); //Locator for High Point Market in footer links
+	By lvmlink_ATL = By.xpath("(//a[contains(text(),'Las Vegas Market')])[1]"); //Locator for Las Vegas market footer link
 	By andmore = By.xpath("(//div[contains(@class,'imc-gallery__item imc-gallery__item--minheight imc-content-nav-container--column')]/div/p/a[contains(text(),'ANDMORE')])[2]"); //Locator for ANDMORE in footer links
 	By marketInfoAMC = By.xpath("//a[@href='/about']"); //Locator for Market information in footer links AMC
 	

@@ -21,7 +21,7 @@ public class EXPApplicationsAndLeasesTabPage
 	By EXPLasVegasFurnitureTradeshowSpace = By.xpath("//div[@id = 'root']/header[1]/div[1]/nav[1]/div[1]/div[4]/div[3]/a[1]");//Locator Las Vegas | Furniture Tradeshow Space
 	By EXPAtlantaPermanentSpaceHeader = By.xpath("//div[@class='EPPageHeader_block__1JPqk']/div[4]/p[1]");//Header Atlanta Permanent space
 	By EXPLasVegasGiftAndHomeTradeshowSpaceHeader = By.xpath("//div[@class='sg-question-set']/div[1]/div[1]/div[1]/span[1]/strong[1]");//Header Las Vegas Gift & Home Tradeshow Space
-	By VerifyPermanantSpace = By.xpath("//h1[@class = 'sg-title']"); //Locator for Leasing Contact Fomr
+	By VerifyPermanantSpace = By.xpath("//h1[@class = 'sg-title']/span"); //Locator for Leasing Contact Fomr
 	By VerifyGiftHomeTradeshow = By.xpath("//div[@class = 'sg-instructions']"); //Locator for verification of gift and tradeshow
 	
 	

@@ -20,6 +20,7 @@ public class ATLAppFashionGalleryTabPage
 	By atlAppvideosImagesImg = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[3]/div[1]/a[2]");
 	By atlAppNews = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[3]/div[1]/a[1]");
 	By atlAppNewsImg = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[4]/div[1]/a[2]");
+	By Trends = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Trends')]");
 	
 	
 	public ATLAppFashionGalleryTabPage(WebDriver driver) {
@@ -74,6 +75,11 @@ public class ATLAppFashionGalleryTabPage
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAppNewsImg));
 		return driver.findElement(atlAppNewsImg);		
+	}
+	public WebElement getTrends() throws InterruptedException {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Trends));
+		return driver.findElement(Trends);		
 	}
 
 }
