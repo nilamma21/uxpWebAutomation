@@ -161,11 +161,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("CLick Shop The Mart Link ");
 		//Verify Shop The Mart Link 
 		//Thread.sleep(4000);
-		Assert.assertTrue(atlyr.getShopTheMart().getText().contains("SHOP THE BEST KEPT SECRET IN JEWELRY & FASHION"));	
+		Assert.assertTrue(driver.getTitle().contains("Shop the Mart"));	
 		System.out.println("Verify Shop The Mart page ");
 
-		driver.get(prop.getProperty("atlappurl"));	
-
+		//driver.get(prop.getProperty("atlappurl"));	
 	}
 	
 	@Test(enabled=false)//priority=2
@@ -183,7 +182,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		lap.getMarketRecap().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
 		System.out.println("Market Recap page is working properly.");
-		driver.get(prop.getProperty("atlappurl"));
+		//driver.get(prop.getProperty("atlappurl"));
 	}
 	
 	@Test(priority=3)
@@ -330,6 +329,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		gbs = new ATLAppGlobalSearchPage(driver);
 		atlm = new ATLAppMarketsTabPage(driver);
 
+		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(3000);
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -340,7 +340,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Thread.sleep(8000);
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
-		driver.get(prop.getProperty("atlappurl"));
+		//driver.get(prop.getProperty("atlappurl"));
 		
 	}
 
@@ -360,6 +360,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 		atled = new ATLExhibitorDirectoryPage (driver);
 
+		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Verify exhibitor directory page is successfully opened
@@ -503,7 +504,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Verify Atlanta Apparel Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));	
 		System.out.println("Verify Las Vegas App Img Page");
-		driver.get(prop.getProperty("atlappurl"));
+		//driver.get(prop.getProperty("atlappurl"));
 		
 /*Thread.sleep(2000);
 		mi.getMarketInfoHeader().click();
@@ -706,7 +707,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlappurl"));
 		Thread.sleep(5000);
 		//Click on Fashion Gallery Tab
-		utl.scrollToElement(atlf.getatlAppFashionGalleryTab());
+		//utl.scrollToElement(atlf.getatlAppFashionGalleryTab());
 		atlf.getatlAppFashionGalleryTab().click();
 		Thread.sleep(2000);
 		//CLick on Click on Images sub-menu 
@@ -726,20 +727,34 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlf.getatlAppFashionGalleryTab().click();
 		Thread.sleep(2000);
 		//Click on Videos Link 
+		String winHandleBefore = driver.getWindowHandle();
 		atlf.getatlAppvideosImages().click();
 		Thread.sleep(3000);
+		for (String winHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle);
+		}
 		//Verify Videos  Page
-		Assert.assertTrue(exhp.getverifyBreadcrumb_ATLAPP().getText().contains("Videos"));	
+		//Assert.assertTrue(exhp.getverifyBreadcrumb_ATLAPP().getText().contains("Videos"));	
+		Assert.assertTrue(driver.getCurrentUrl().contains("youtube.com"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
 
 		//Click on Fashion Gallery Tab
-		atlf.getatlAppFashionGalleryTab().click();
+		//atlf.getatlAppFashionGalleryTab().click();
 		//Click on In The News Link 
 		atlf.getatlAppNews().click();
 		Thread.sleep(3000);
 		//Verify In the News  Page
 		Assert.assertTrue(exhp.getverifyBreadcrumb_ATLAPP().getText().contains("In The News"));	
+		
+		//Click on Fashion Gallery Tab
+		atlf.getatlAppFashionGalleryTab().click();
+		//Click on In Trends Link 
+		atlf.getTrends().click();
+		Thread.sleep(3000);
+		//Verify In the Trends  Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Trends"));	
 	}
-	
 	
 
 	@Test(priority=10)
@@ -808,7 +823,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 */
 		//Click on Exhibit Tab
-		utl.scrollToElement(atlva.getAttend());
+		//utl.scrollToElement(atlva.getAttend());
 		atlva.getAttend().click();
 		System.out.println("Click on Exhibit Tab");
 		//CLick Exhibit at atlanta apparel Link 
@@ -874,6 +889,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlfo=new ATLAppFooterLinksNavigationPage(driver);
 		utl=new Utility(driver);
 
+		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		//Scroll till footer links
@@ -924,7 +940,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 /*		for (String winHandle6 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle6);
 		}*/
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/careers"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("www.andmore.com/our-team"));
 /*		driver.close();
 		driver.switchTo().window(winHandleBefore6);*/
 		driver.navigate().back();

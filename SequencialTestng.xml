@@ -6,13 +6,14 @@
 		<listner class-name="PROD.TestListeners" />
 	</listners>
 
-	<test thread-count="6" name="SequencialTest">
+	<test thread-count="1" name="SequencialTest">
 		<classes>
 		
-		 <class name="PROD.AtlantaMarketSmokeTest_PROD" />
+		 <class name="PROD.ExhibitorPortalSmokeTest_PROD" />
 
 	 	 <methods>
-	 	 	 	<include name="TS004_ATL_VerifyAllLinksUnderMarketInfoTabTest"/>  
+	 	 	<include name="TS001_EXP_VerifyExhibitorPortalLoginTest()"/> 
+	 	 	<include name="TS004_EXP_VerifyAllLinkUnderEXPRegistrationsAndServicesTabTest"/> 
 	 	 </methods>
 
 		</classes>

@@ -178,7 +178,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		rs=new EXPRegistrationAndServicesTabPage(driver);
 		el=new EXPLoginPage(driver);
 		st = new EXPSettingsPage(driver);
-
+		//driver.get(prop.getProperty("expurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		//Verify Exhibitor Registration Page
@@ -197,24 +197,26 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	    //Verify Atlanta | Permanent Exhibits | Technology Services Page
         rs.getEXPRegAndServicesTab().click();
         //Click on Atlanta | Permanent Exhibits | Technology Services
-        String winHandleBefore7 = driver.getWindowHandle();
+        //String winHandleBefore7 = driver.getWindowHandle();
         rs.getATLTechnologyServicePermenantTab().click();
         Thread.sleep(3000);
         // Switch to new window opened
-        for(String winHandle : driver.getWindowHandles()){
+     /*   for(String winHandle : driver.getWindowHandles()){
             driver.switchTo().window(winHandle);
-        }
+        }*/
         //Verify that 'EXP Login' page should be displayed
-        Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/exhibportal"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("https://exhibitors.andmore.com/Technology"));
         System.out.println("Atlanta | Permanent Exhibits | Technology Services Page Successfully Opened");
         // Close the new window, if that window no more required
         //driver.close();
-        driver.close();
+        //driver.close();
         // Switch back to original browser (first window)
-        driver.switchTo().window(winHandleBefore7);
+        //driver.switchTo().window(winHandleBefore7);
 		
 		
 		//Verify Atlanta | Temporary Booths | Technology Services Page
+      //Click on Registration And Services Tab 
+      	rs.getEXPRegAndServicesTab().click();
 		//Click on Atlanta Technology Services
 		String winHandleBefore5 = driver.getWindowHandle();
 		rs.getATLTechnologyServiceTab().click();
@@ -337,13 +339,13 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		el=new EXPLoginPage(driver);
 		st = new EXPSettingsPage(driver);
 
-
+		driver.get(prop.getProperty("expurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("EXP page");
 
-
+		Thread.sleep(1000);
 		//Click on Applications And Leases Tab 
-
+		utl.scrollToTop();
 		al.getEXPApplicationsAndLeasesTab().click();
 		System.out.println("Applications And Leases Tab ");
 		Thread.sleep(3000);
@@ -364,63 +366,66 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		//Click Apply for Trade show Space
 		System.out.println("Atlanta Apply For Tradeshow Space");
 		// Store the current window handle
-		String winHandleBefore = driver.getWindowHandle();
+		//String winHandleBefore = driver.getWindowHandle();
 		al.getEXPAtlantaApplyForTradeshowSpace().click();		
 
 		// Switch to new window opened
-		for(String winHandle : driver.getWindowHandles()){
+/*		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
-		}
+		}*/
 		//Verify that 'EXP Login' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://exhibitors.andmore.com/Apply-For-Space"));
 		// Close the new window, if that window no more required
-		driver.close();
+/*		driver.close();
 		// Switch back to original browser (first window)
 
-		driver.switchTo().window(winHandleBefore);
+		driver.switchTo().window(winHandleBefore);*/
 		System.out.println("Applications And Leases Tab ");
 		//Click on Atlanta Manager Trade show
 		System.out.println("Atlanta Manage Tradeshow Space");
 		Thread.sleep(3000);
+		al.getEXPApplicationsAndLeasesTab().click();
 		// Store the current window handle
-		String winHandleBefore1 = driver.getWindowHandle();
+		//String winHandleBefore1 = driver.getWindowHandle();
 		al.getEXPAtlantaApplyForTradeshowSpace().click();		
 		//Click on Exhibitor Portal Login' sub-menu
 		// Switch to new window opened
-		for(String winHandle : driver.getWindowHandles()){
+/*		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
-		}
+		}*/
 		//Verify that 'EXP Login' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore1);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://exhibitors.andmore.com/Apply-For-Space"));
+/*		driver.close();
+		driver.switchTo().window(winHandleBefore1);*/
 
-
+		
 		System.out.println("Applications And Leases Tab ");
 		System.out.println("Atlanta Payment ");
 		Thread.sleep(3000);	
-		String winHandleBefore2 = driver.getWindowHandle();
+		al.getEXPApplicationsAndLeasesTab().click();
+		//String winHandleBefore2 = driver.getWindowHandle();
 		rs.getEXPAtlantaServices().click();	
 		//Click on Exhibitor Portal Login' sub-menu
 
 		// Switch to new window opened
-		for(String winHandle : driver.getWindowHandles()){
+/*		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
-		}
+		}*/
 
 		//Verify that 'EXP Login' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://exhibitors.andmore.com/payments"));
 		System.out.println("Verify AtlPayment");
-		// Close the new window, if that window no more required
+/*		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore2);
+		driver.switchTo().window(winHandleBefore2);*/
 
 
 
 		System.out.println("Applications And Leases Tab");
 		System.out.println("Las Vegas Permanent Space");
 		//Click on Las Vegas Permanent Space
+		al.getEXPApplicationsAndLeasesTab().click();
 		//al.getEXPApplicationsAndLeasesTab().click();
 		String winHandleBefore3 = driver.getWindowHandle();
 		rs.getEXPAAmericasMartLogisticsExhibitorToolkit().click();		
@@ -490,9 +495,10 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		el = new EXPLoginPage(driver);
 		st = new EXPSettingsPage(driver);
 		rs = new EXPRegistrationAndServicesTabPage(driver);
-
+		driver.get(prop.getProperty("expurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
+		//utl.scrollToTop();
 		//Click on Your Digital Showroom Drop-down
 		yd.getEXPYourDigiShowroom().click();
 		Thread.sleep(3000);
@@ -574,7 +580,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		el=new EXPLoginPage(driver);
 		mar=new EXPMarketTabPage(driver);
 		st=new EXPSettingsPage(driver);
-		driver.get(prop.getProperty("expurl"));
+		//driver.get(prop.getProperty("expurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on Registration And Services Tab 
@@ -735,7 +741,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		//Click Privacy Policy link and verify results
 		efl.getPrivacyPolicy().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/privacy-policy/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/privacy-policy"));
 		System.out.println("Privacy Policy page is displayed properly.");
 		driver.get(prop.getProperty("expurl"));
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());
@@ -746,7 +752,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for (String winHandle9 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle9);
 		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/terms-of-use/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/terms-of-use"));
 		System.out.println("Terms and Conditions page is displayed properly.");
 		driver.close();
 		driver.switchTo().window(winHandleBefore9);
@@ -765,7 +771,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		String winHandleBefore5 = driver.getWindowHandle();
 		for(String winHandle5 : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle5);}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/about-us/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/about-us"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore5);
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());

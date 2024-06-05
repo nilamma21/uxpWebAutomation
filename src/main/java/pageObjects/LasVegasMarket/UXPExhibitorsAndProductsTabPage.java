@@ -24,7 +24,7 @@ public class UXPExhibitorsAndProductsTabPage {
 	By VerifyExhibitorDirectory = By.xpath("//a[contains(text(),'Atlanta Apparel Exhibitor Directory')]"); // Locator for Exhibitor Directory text
 	By VerifyFloorPlans = By.xpath("//div[@class = 'imc-campus-view']"); // Locator for floor plans map
 	By exhdirectsearchbx = By.xpath("(//input[@id='input-1'])[2]"); //Locator for Exhibitor Directory Search box
-	By exhdirectsearchbtn = By.xpath("(//button[@class = 'imc-searchform--button--search'])[2]"); //Locator for Exh Direct Serach btn
+	By exhdirectsearchbtn = By.xpath("(//div[@class = 'imc-searchform--button--search'])[2]"); //Locator for Exh Direct Serach btn
 	By verifyBreadcrumb = By.xpath("//a[@data-xpath='breadcrumb.link']");
 	By verifyBreadcrumb_ATLAPP = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div/ul/li[3]/a[1]");
 	

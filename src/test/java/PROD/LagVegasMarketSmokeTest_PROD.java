@@ -73,7 +73,9 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		hd = new UXPHeaderChannelLinksPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
+		//Old Code
+/*		
 		//Click Atlanta Market channel link and verify result
 		Thread.sleep(5000);
 		hd.getAtlantaMarket().click();
@@ -113,7 +115,164 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		hd.getLasVegas().click();
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas"));
 		System.out.println("Las Vegas Market channel link is working properly.");
+*/
+		
+		//New Code for Header Channel Links
 
+		//Verify that Atlanta link is present
+		Assert.assertTrue(hd.getAtlanta().getText().equalsIgnoreCase("ATLANTA"));
+		
+		//Check Atlanta Apparel
+		hd.getAtlanta().click();
+		Assert.assertTrue(hd.getAtlantaApparel().getText().equalsIgnoreCase("Atlanta Apparel"));
+		hd.getAtlantaApparel().click();
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Apparel"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+
+		//Check Casual Market Atlanta
+		hd.getAtlanta().click();
+		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Casual Market Atlanta"));
+		hd.getCasualMarketAtlanta().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getTitle().contains("Casual Market Atlanta"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Check Atlanta Market
+		hd.getAtlanta().click();
+		Assert.assertTrue(hd.getAtlantaMarket().getText().equalsIgnoreCase("Atlanta Market"));
+		hd.getAtlantaMarket().click();
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Market"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Check Formal Markets
+		hd.getAtlanta().click();
+		Thread.sleep(500);
+		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
+		hd.getFormalMarkets().click();
+		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Check Mid-Season Buying Event: Fall Market
+		hd.getAtlanta().click();
+		Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
+		hd.getMidSeasonBuyingEventFallMarket().click();
+		Assert.assertTrue(driver.getTitle().contains("Fall Market at AmericasMart"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Check Cash & Carry Markets: Spring and Fall
+		hd.getAtlanta().click();
+		Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Cash & Carry Markets: Spring and Fall"));
+		hd.getCashAndCarryMarketsSpringandFall().click();
+		Assert.assertTrue(driver.getTitle().contains("Spring Cash & Carry"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Check ADAC
+		hd.getAtlanta().click();
+		Assert.assertTrue(hd.getADAC().getText().equalsIgnoreCase("ADAC"));
+		hd.getADAC().click();
+		Thread.sleep(5000);
+		Assert.assertTrue(driver.getTitle().contains("ADAC"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Check AmericasMart
+		hd.getAtlanta().click();
+		Assert.assertTrue(hd.getAmericasMart().getText().equalsIgnoreCase("AmericasMart"));
+		hd.getAmericasMart().click();
+		Assert.assertTrue(driver.getTitle().contains("Wholesale Gift, Home, Rug and Apparel Markets"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Check Atlanta Convention Center
+		hd.getAtlanta().click();
+		Assert.assertTrue(hd.getAtlantaConventionCenter().getText().equalsIgnoreCase("Atlanta Convention Center"));
+		hd.getAtlantaConventionCenter().click();
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Convention Center"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Verify that Las Vegas link is present
+		Assert.assertTrue(hd.getLasVegas().getText().equalsIgnoreCase("LAS VEGAS"));
+		
+		//Check Las Vegas Market
+		hd.getLasVegas().click();
+		Assert.assertTrue(hd.getLasVegasMarket().getText().equalsIgnoreCase("Las Vegas Market"));
+		hd.getLasVegasMarket().click();
+		Assert.assertTrue(driver.getTitle().contains("Las Vegas Market"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Check Formal Markets
+		hd.getLasVegas().click();
+		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
+		hd.getFormalMarkets().click();
+		Assert.assertTrue(driver.getTitle().contains("Formal Markets LAS VEGAS"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Check Las Vegas Apparel
+		hd.getLasVegas().click();
+		Assert.assertTrue(hd.getLasVegasApparel().getText().equalsIgnoreCase("Las Vegas Apparel"));
+		hd.getLasVegasApparel().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getTitle().contains("Las Vegas Apparel"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Check Las Vegas Design Center (LVDC)
+		hd.getLasVegas().click();
+		Assert.assertTrue(hd.getLasVegasDesignCenter().getText().equalsIgnoreCase("Las Vegas Design Center (LVDC)"));
+		hd.getLasVegasDesignCenter().click();
+		Assert.assertTrue(driver.getTitle().contains("Las Vegas Design Center"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+	
+		//Check EXPO at World Market Center Las Vegas
+		hd.getLasVegas().click();
+		Assert.assertTrue(hd.getEXPOatWorldMarketCenterLasVegas().getText().equalsIgnoreCase("EXPO at World Market Center Las Vegas"));
+		hd.getEXPOatWorldMarketCenterLasVegas().click();
+		Assert.assertTrue(driver.getTitle().contains("The Expo At World Market Center"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Verify that High Point link is present
+		Assert.assertTrue(hd.getHighPoint().getText().equalsIgnoreCase("HIGH POINT"));
+		
+		//Check ANDMORE at High Point Market
+		hd.getHighPoint().click();
+		Assert.assertTrue(hd.getANDMOREatHighPointMarket().getText().equalsIgnoreCase("ANDMORE at High Point Market"));
+		hd.getANDMOREatHighPointMarket().click();
+		Assert.assertTrue(driver.getTitle().contains("High Point Spring Market"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Check SHOPPE OBJECT High Point
+		hd.getHighPoint().click();
+		Assert.assertTrue(hd.getSHOPPEOBJECTHighPoint().getText().equalsIgnoreCase("SHOPPE OBJECT High Point"));
+		hd.getSHOPPEOBJECTHighPoint().click();
+		Thread.sleep(5000);
+		Assert.assertTrue(driver.getTitle().contains("High Point Market | Shoppe Object - High Point"));
+		driver.get(prop.getProperty("lvmurl"));
+		Thread.sleep(2000);
+		
+		//Verify that New York link is present
+		Assert.assertTrue(hd.getNewYork().getText().equalsIgnoreCase("NEW YORK"));
+		
+		//Check SHOPPE OBJECT
+		hd.getNewYork().click();
+		Assert.assertTrue(hd.getSHOPPEOBJECT().getText().equalsIgnoreCase("SHOPPE OBJECT"));
+		hd.getSHOPPEOBJECT().click();
+		Assert.assertTrue(driver.getTitle().contains("Shoppe Object"));
+		//driver.get(prop.getProperty("atlmrkturl"));
+		Thread.sleep(2000);
+	
+		
 	}
 	
 	@Test(priority=02)
@@ -126,7 +285,9 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		exh = new UXPExhibitPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);						
+		driver.get(prop.getProperty("lvmurl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);			
+		Thread.sleep(1000);
 
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
@@ -137,7 +298,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Verify that 'Exhibit' page should be displayed
 		Assert.assertTrue(exh.getExhibitBrdcrumb().isDisplayed());
 		System.out.println("Why Exhibit page is opened properly.");
-
+/*
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
 
@@ -150,7 +311,18 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
+*/
+		//Click on Exhibit tab
+		exh.getExhibitTab().click();
 
+		//Click on 'Apply to exhibit' sub-menu
+		exh.getapplytoexhibit().click();
+
+		//Verify that 'Apply to exhibit' page should be displayed
+		Assert.assertTrue(exh.getExhibitOpprBrdcrumb().isDisplayed());
+		System.out.println("Apply to Exhibit  page is opened properly.");
+
+		
 		/*//Click on 'Advertising & Sponsorships' link
 		exh.getAdvertisingnSponsershipsMenu().click();
 
@@ -207,6 +379,9 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);*/
 
+		//Click on Exhibit tab
+		exh.getExhibitTab().click();
+				
 		//Click Exhibitor Resources link
 		exh.getexhibitorresourcesprod().click();
 		Thread.sleep(3000);
@@ -264,7 +439,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//UXP-004: To verify the Exhibitors & Products menu overview and it's functionality
 
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-
+		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click ExhibitorsAndProductsTab at Header
@@ -332,9 +507,9 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		mi = new UXPMarketInfoPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-
+		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		//Click Market Info tab at Header
 		mi.getMarketInfoHeader().click();
 		Thread.sleep(3000);
@@ -417,7 +592,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		at = new UXPAttendPage(driver);
-
+		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click Attend tab at Header
@@ -519,9 +694,9 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		expmrkt = new UXPExploreMarketPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		mi = new UXPMarketInfoPage(driver);
-
+		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
 		//Click on Explore Las Vegas Market sub-menu
@@ -533,7 +708,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		expmrkt.getExploreMarketTab().click();
 		//Click on 'Events and Seminars' sub-menu
 		expmrkt.getWebinarsnEventsMenu().click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		//Verify that 'Events and Seminars' page should be displayed
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Events and Seminars");
 
@@ -698,7 +873,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		// Click Careers link and verify results
 		fl.getCareersATL().click();
 		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/careers"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("www.andmore.com/our-team"));
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
@@ -966,7 +1141,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("lvmurl"));
 		Thread.sleep(3000);
-		utl.scrollToElement(yr.getYearRoundTab());
+		//utl.scrollToElement(yr.getYearRoundTab());
 		
 		//Click Year Round tab at Header
 		yr.getYearRoundTab().click();

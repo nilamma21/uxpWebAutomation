@@ -16,7 +16,7 @@ public class ATLExhibitorDirectoryPage {
 
 	By atlexhibitordirectoryoptn = By.xpath("//span[@title='Exhibitor Directory'][1]"); // Locator for Exhibitor Directory on Home Page
 	By atlexhdirtsearchtxtbx = By.xpath("(//input[@id='input-1'])[position()=2]"); //Locator for Exhibitor Directory Search text box
-	By atlexhdirtsearchbtn = By.xpath("(//button[@class = 'imc-searchform--button--search'])[position()=2]"); //Locator for Exhibitor Directory Search btn
+	By atlexhdirtsearchbtn = By.xpath("(//div[@class = 'imc-searchform--button--search'])[position()=2]"); //Locator for Exhibitor Directory Search btn
 	
 	public ATLExhibitorDirectoryPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub

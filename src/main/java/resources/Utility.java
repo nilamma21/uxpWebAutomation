@@ -1,11 +1,10 @@
 package resources;
 
 import java.io.IOException;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 
@@ -14,6 +13,7 @@ public class Utility extends base {
 	// public WebDriver driver;
 	UXPLandingPage lap;
 	UXPLoginPage lp;
+	public WebDriverWait wait;
 
 	@SuppressWarnings("static-access")
 	public Utility(WebDriver driver) {
@@ -62,4 +62,6 @@ public class Utility extends base {
 		  e.getMessage();
 		}
 	}
+
+	
 }
