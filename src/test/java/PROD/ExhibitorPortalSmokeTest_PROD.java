@@ -75,7 +75,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		el.getEmailAddress().sendKeys(prop.getProperty("username"));
 		el.getPassword().sendKeys(prop.getProperty("password"));
 		el.getSignInBtn().click();
-		//Thread.sleep(5000);
+		Thread.sleep(1000);
 		lap.getIUnderstandBtn().click();
 		//Thread.sleep(5000);
 
@@ -234,11 +234,11 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore5);
 
-
+/*
 		//Verify Atlanta Services Page
 		//Click on Atlanta Services
 		String winHandleBefore1 = driver.getWindowHandle();
-		rs.getATLServices().click();		
+		rs.getATLServices().click();
 		Thread.sleep(7000);
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
@@ -252,9 +252,19 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore1);
-
-
+*/
+		
+		//Verify Atlanta | Electrical & Lighting Services Page
+		//Click on Atlanta | Electrical & Lighting Services
+		rs.getATLElectricalAndLightingServices().click();
+		Thread.sleep(7000);
+		//Verify that 'EXP Login' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://exhibitors.andmore.com/services"));
+		System.out.println("Atlanta | Electrical & Lighting Services Page Successfully Opened");
+		
 		//Verify Atlanta | Advertising & Sponsorship Page
+		//Click on Registration And Services Tab 
+      	rs.getEXPRegAndServicesTab().click();
 		//Click on Atlanta Advertising and services
 		String winHandleBefore2 = driver.getWindowHandle();
 		rs.getATLAdvertisingAndSponsorship().click();
@@ -271,26 +281,16 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore2);
 
-
 		//Verify Atlanta | Payments Page
 		//Click on Atlanta Payments
-		String winHandleBefore3 = driver.getWindowHandle();
 		rs.getATLPayments().click();
-		//Click on Exhibitor Portal Login' sub-menu
-		// Switch to new window opened
-		for(String winHandle : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle);
-		}
 		//Verify that 'EXP Login' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://wem.americasmart.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://exhibitors.andmore.com/payments"));
 		System.out.println("Atlanta | Payments Page Successfully Opened");
-		// Close the new window, if that window no more required
-		driver.close();
-		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore3);
 
-		
 		//Verify AmericasMart Logistics | Exhibitor Toolkit Page
+		//Click on Registration And Services Tab 
+      	rs.getEXPRegAndServicesTab().click();
 		//Click on AmericasMart Exhibitor Tool Kit
 		rs.getAMCLogisticsAndExhToolkit().click();
 		String winHandleBefore4 = driver.getWindowHandle();
@@ -303,12 +303,22 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		System.out.println("AmericasMart Logistics | Exhibitor Toolkit Page Successfully Opened");
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
-		
+
+		//Verify Las Vegas | Permanent Booths | Technology Services Page
+		//Click on Las Vegas Permanent Technology Services
+		rs.getLVMPermanentTechnologyServiceTab().click();
+		Thread.sleep(3000);
+		//Verify that 'EXP Login' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://exhibitors.andmore.com/Technology"));
+		System.out.println("Las Vegas | Permanent Booths | Technology Services Page Successfully Opened");
+		// Close the new window, if that window no more required
 		
 		//Verify Las Vegas | Temporary Booths | Technology Services Page
+		//Click on Temporary Registration And Services Tab 
+      	rs.getEXPRegAndServicesTab().click();
 		//Click on Las Vegas Technology Services
 		String winHandleBefore6 = driver.getWindowHandle();
-		rs.getLVMTechnologyServiceTab().click();
+		rs.getLVMTemporaryTechnologyServiceTab().click();
 		Thread.sleep(3000);
 		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
@@ -322,6 +332,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore6);
+		
 	}
 
 	@Test(priority=5)
@@ -457,7 +468,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle);
 		}
 		//Verify that 'EXP Login' page should be displayed
-		Assert.assertTrue(al.getVerifyGiftHomeTradeshow().getText().contains("Gift and Home Temporaries"));
+		Assert.assertTrue(driver.getTitle().contains("Leasing Contact Form"));
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)

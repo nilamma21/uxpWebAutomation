@@ -240,7 +240,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		hd.getLasVegas().click();
 		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
 		hd.getFormalMarkets().click();
-		Assert.assertTrue(driver.getTitle().contains("Formal Markets LAS VEGAS"));
+		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
 		driver.navigate().back();
 		Thread.sleep(2000);
 		
@@ -786,7 +786,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
 		Thread.sleep(2000);
-		Assert.assertEquals(driver.getTitle(), "Download the @Market ANDMORE App");
+		Assert.assertEquals(driver.getTitle(), "Plan Your Market");
 		driver.get(prop.getProperty("ammarturl"));
 		utl.scrollToElement(fl.marketInfoAMC());
 

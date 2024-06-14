@@ -25,9 +25,11 @@ public class EXPRegistrationAndServicesTabPage {
 	By ATLAdvertisingAndSponsorship = By.xpath("//a[contains(text(),'Atlanta | Advertising & Sponsorship')]");
 	By ATLPayments = By.xpath("//a[contains(text(),'Atlanta | Payments')]");
 	By AMCLogisticsAndExhToolkit = By.xpath("//a[contains(text(),'AmericasMart Logistics | Exhibitor Toolkit')]");
-	By LVMTechnologyServiceTab = By.xpath("//a[contains(text(),'Las Vegas') and contains(text(),'Technology Services')]"); //Locator for Las Vegas Technology Service
+	By LVMPermanentTechnologyServiceTab = By.xpath("//a[contains(text(),'Las Vegas') and contains(text(),'Technology Services') and contains(text(),'Permanent')]"); //Locator for Las Vegas Permanent Technology Service
 	By ATLTechnologyServicePermenantTab = By.xpath("//a[contains(text(),'Atlanta') and contains(text(),'Permanent Exhibits') and contains(text(),'Technology Services')]");//Locator for Atlanta | Permanent Exhibits | Technology Services Page
-	
+	By ATLElectricalAndLightingServices = By.xpath("//a[contains(text(),'Atlanta') and contains(text(),'Electrical & Lighting Services')]");
+	By LVMTemporaryTechnologyServiceTab = By.xpath("//a[contains(text(),'Las Vegas') and contains(text(),'Technology Services') and contains(text(),'Temporary')]"); //Locator for Las Vegas Temporary Technology Service
+
 	
 	public EXPRegistrationAndServicesTabPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -83,10 +85,10 @@ public class EXPRegistrationAndServicesTabPage {
 		return driver.findElement(ATLTechnologyServiceTab);
 	}
 	
-	public WebElement getLVMTechnologyServiceTab() {
+	public WebElement getLVMPermanentTechnologyServiceTab() {
 		wait = new WebDriverWait (driver,30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(LVMTechnologyServiceTab));
-		return driver.findElement(LVMTechnologyServiceTab);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LVMPermanentTechnologyServiceTab));
+		return driver.findElement(LVMPermanentTechnologyServiceTab);
 	}
 	
 	public WebElement getMarketBadgeRegistration() {
@@ -123,6 +125,18 @@ public class EXPRegistrationAndServicesTabPage {
       wait = new WebDriverWait (driver,30);
       wait.until(ExpectedConditions.visibilityOfElementLocated(ATLTechnologyServicePermenantTab));
       return driver.findElement(ATLTechnologyServicePermenantTab);
+  }
+	
+    public WebElement getATLElectricalAndLightingServices() {
+        wait = new WebDriverWait (driver,30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(ATLElectricalAndLightingServices));
+        return driver.findElement(ATLElectricalAndLightingServices);
+    }
+  
+  public WebElement getLVMTemporaryTechnologyServiceTab() {
+      wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.visibilityOfElementLocated(LVMTemporaryTechnologyServiceTab));
+      return driver.findElement(LVMTemporaryTechnologyServiceTab);
   }
 	
 }

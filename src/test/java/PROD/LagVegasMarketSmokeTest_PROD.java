@@ -212,7 +212,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		hd.getLasVegas().click();
 		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
 		hd.getFormalMarkets().click();
-		Assert.assertTrue(driver.getTitle().contains("Formal Markets LAS VEGAS"));
+		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
 		driver.get(prop.getProperty("lvmurl"));
 		Thread.sleep(2000);
 		
@@ -675,14 +675,21 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Accessibility and ADA Information");
 		System.out.println("Accessibility and ADA Information section is displayed properly");
 		at.getAttend().click();
-
+/*
 		//Click Download the App tab at Header
-		
 		at.getDownloadApp().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Market App");
 		System.out.println("Market App section is displayed properly");
-
+*/
+		
+		//Click on Plan Your Market sub-menu
+		at.getLVMPlanYourMarket().click();
+	    Thread.sleep(3000);
+	    //Verify that Plan Your Market page should be displayed
+	    Assert.assertTrue(driver.getTitle().contains("Plan Your Market"));
+	    System.out.println("Plan Your Market page is present");
+		
 	}
 
 	@Test(priority=7)

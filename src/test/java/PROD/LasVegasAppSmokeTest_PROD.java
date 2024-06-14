@@ -424,6 +424,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvaa.getLVAAttendTab().click();
 		//Click on Click on Events
 		lvaa.getLVAEvents().click();
+		Thread.sleep(1000);
 		System.out.println("Click on Events");
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/Events"));	
 		System.out.println("Vefiry Why Ateend Page");
@@ -432,19 +433,19 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvaa.getLVAAttendTab().click();
 		//CLick on Registration Markets
 		lvaa.getLVADining().click();
+		Thread.sleep(1000);
 		System.out.println("Click on Dining");
 		//Verify reg Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/Dining"));
 		System.out.println("Vefiry Dining Page");		
 		
-		
+		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
 		//CLick on Download app img
 		lvaa.getLVDownloadApp().click(); 
 		System.out.println("Click on Donwload App");
-		//Thread.sleep(3000);
-		//Verify Hotels Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/App"));	
+		Thread.sleep(2000);
+		Assert.assertTrue(driver.getTitle().contains("Plan Your Market"));	
 		System.out.println("Vefiry Download App Page ");
 		
 		//Click on Attend Tab

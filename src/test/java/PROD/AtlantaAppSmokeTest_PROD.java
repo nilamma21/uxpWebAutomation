@@ -312,7 +312,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		System.out.println("Click on Donwload App");
 		//Thread.sleep(3000);
 		//Verify Hotels Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));	
+		Assert.assertTrue(driver.getTitle().contains("Plan Your Market"));	
 		System.out.println("Vefiry Download App Page ");
 	}
 
@@ -911,12 +911,14 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
+		Thread.sleep(1000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
 		driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		//Click on Our Brand link
 		fl.getOurBrandsATL().click();
+		Thread.sleep(1000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/exhibitor/directory"));
 		driver.get(prop.getProperty("atlappurl"));
 		Thread.sleep(2000);
@@ -935,15 +937,17 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore5);
 		
 		// Click Careers link and verify results
-		//String winHandleBefore6 = driver.getWindowHandle();
 		fl.getCareersATL().click();
-/*		for (String winHandle6 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle6);
-		}*/
 		Assert.assertTrue(driver.getCurrentUrl().contains("www.andmore.com/our-team"));
-/*		driver.close();
-		driver.switchTo().window(winHandleBefore6);*/
 		driver.navigate().back();
+		/*			
+		//String winHandleBefore6 = driver.getWindowHandle();
+		for (String winHandle6 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle6);
+		}
+		driver.close();
+		driver.switchTo().window(winHandleBefore6);
+*/	
 		// Click on Terms & condition link
 		
 		// Switch to new tab
@@ -962,6 +966,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		utl.scrollToElement(fl.getmarketInfoATL());*/
 		// Click Privacy Policy link and verify results
 		fl.getatlprivacypolicy().click();
+		Thread.sleep(500);
 		String winHandleBefore8 = driver.getWindowHandle();
 		for (String winHandle8 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle8);

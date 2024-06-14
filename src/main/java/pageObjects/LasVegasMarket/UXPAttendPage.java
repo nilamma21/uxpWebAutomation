@@ -26,7 +26,7 @@ public class UXPAttendPage {
 	By Accessibility = By.xpath("//div[contains(@class,'imc-navigation-col')]/div/a[contains(text(),'Accessibility and ADA')]"); //Locator for Accessibility under Attend
 	By DownloadApp = By.xpath("//div[contains(@class,'imc-navigation-col')]/div/a[contains(text(),'Download the App')]"); //Locator for DownloadApp under Attend
 	By VerifyAttendSection = By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[2]"); // Locator for Attend section verification
-	
+	By LVMPlanYourMarket = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Plan Your Market')]");
 	
 	public UXPAttendPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -116,6 +116,12 @@ public class UXPAttendPage {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(VerifyAttendSection));
 		return driver.findElement(VerifyAttendSection);
 	}
+	public WebElement getLVMPlanYourMarket() {
+		wait = new WebDriverWait (driver,30);
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(LVMPlanYourMarket));
+		return driver.findElement(LVMPlanYourMarket);
+	}
+	
 }
 
 

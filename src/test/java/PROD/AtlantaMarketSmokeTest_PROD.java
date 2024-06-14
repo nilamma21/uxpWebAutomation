@@ -241,16 +241,26 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore7);
 		System.out.println("Video gallery is redirecting to the youtube channel");
 		
+		//Verify Plan your Market Page
+		//Click Market Info tab at Header
+        //atlmi.getATLMarketInfoHeader().click();
+        //Click on Plan Your Market sub-menu
+       atlmi.getATLPlanYourMarket().click();
+        Thread.sleep(3000);
+        //Verify that Plan Your Market page should be displayed
+        Assert.assertTrue(driver.getTitle().contains("Plan Your Market"));
+        System.out.println("Plan Your Market page is present");
+		/* 		
 		//Verify Download our NEW App Page
 		//Click Market Info tab at Header
         //atlmi.getATLMarketInfoHeader().click();
         //Click on Download our NEW App sub-menu
-        atlmi.getATLDownloadOurNewApp().click();
+       atlmi.getATLDownloadOurNewApp().click();
         Thread.sleep(3000);
         //Verify that Download ourNEW App page should be displayed
         Assert.assertTrue(driver.getTitle().contains("Download the @Market ANDMORE App"));
         System.out.println("Download the NEW App page is present");
-		
+		*/
         //Due to re-branding changes
 /*      //Click Market Info tab at Header
         atlmi.getATLMarketInfoHeader().click();
@@ -587,7 +597,7 @@ Thread.sleep(5000);
 		hd.getLasVegas().click();
 		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
 		hd.getFormalMarkets().click();
-		Assert.assertTrue(driver.getTitle().contains("Formal Markets LAS VEGAS"));
+		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
 		
@@ -612,6 +622,7 @@ Thread.sleep(5000);
 		hd.getLasVegas().click();
 		Assert.assertTrue(hd.getEXPOatWorldMarketCenterLasVegas().getText().equalsIgnoreCase("EXPO at World Market Center Las Vegas"));
 		hd.getEXPOatWorldMarketCenterLasVegas().click();
+		System.out.println("Title of page: "+driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("The Expo At World Market Center"));
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
@@ -623,7 +634,8 @@ Thread.sleep(5000);
 		hd.getHighPoint().click();
 		Assert.assertTrue(hd.getANDMOREatHighPointMarket().getText().equalsIgnoreCase("ANDMORE at High Point Market"));
 		hd.getANDMOREatHighPointMarket().click();
-		Assert.assertTrue(driver.getTitle().contains("High Point Spring Market"));
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getTitle().contains("High Point"));
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
 		
@@ -643,6 +655,8 @@ Thread.sleep(5000);
 		hd.getNewYork().click();
 		Assert.assertTrue(hd.getSHOPPEOBJECT().getText().equalsIgnoreCase("SHOPPE OBJECT"));
 		hd.getSHOPPEOBJECT().click();
+		Thread.sleep(2000);
+		System.out.println(driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Shoppe Object"));
 		//driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
@@ -746,6 +760,7 @@ Thread.sleep(5000);
 		Thread.sleep(2000);
 		atat.getATLAttendTab().click();
 
+/*		
 		//Click Download the App under Attend section
 		atat.getATLDownloadApp().click();
 		Thread.sleep(2000);
@@ -753,6 +768,16 @@ Thread.sleep(5000);
 		System.out.println("Download the App section is displayed properly");
 		Thread.sleep(2000);
 		atat.getATLAttendTab().click();
+		*/
+		
+		//Click on Plan Your Market sub-menu
+		atat.getATLPlanYourMarket().click();
+        Thread.sleep(2000);
+        //Verify that Plan Your Market page should be displayed
+        Assert.assertTrue(driver.getTitle().contains("Plan Your Market"));
+        System.out.println("Plan Your Market page is present");
+        Thread.sleep(2000);
+        atat.getATLAttendTab().click();
 
 		//Click Travel under Attend section
 		atat.getATLTravel().click();
