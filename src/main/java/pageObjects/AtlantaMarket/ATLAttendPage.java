@@ -25,6 +25,7 @@ public class ATLAttendPage {
 	By ATLTogetherSafely = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[4]/div[1]/a[2]"); //Locator for Together Safely logo
 	By VerifyATLAttendSection = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]"); //Locator for verification for Attend section
 	By atlevents = By.xpath("//a[@href='/Attend/Events']"); //Locator for Events sub-menu
+	By ATLPlanYourMarket = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Plan Your Market')]");
 	
 	public ATLAttendPage(WebDriver driver) {
 		this.driver = driver; 			
@@ -98,6 +99,11 @@ public class ATLAttendPage {
 		wait.until(ExpectedConditions.elementToBeClickable(atlevents));
 		return driver.findElement(atlevents);
 	}
+	  public WebElement getATLPlanYourMarket() throws InterruptedException {
+		    wait = new WebDriverWait (driver,30);
+		    wait.until(ExpectedConditions.visibilityOfElementLocated(ATLPlanYourMarket));
+		    return driver.findElement(ATLPlanYourMarket);
+		  }
 
 }
 

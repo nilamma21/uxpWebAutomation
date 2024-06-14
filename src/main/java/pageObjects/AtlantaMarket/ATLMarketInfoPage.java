@@ -32,7 +32,7 @@ public class ATLMarketInfoPage {
 	By ATLIndustryPartners = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Industry Partners')]");
 	By ATLGettingToMarketHeader = By.xpath("//strong[contains(text(), 'GETTING TO')]"); //Locator for getting to market page header
 	By ATLDownloadOurNewApp = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Download our NEW App!')]");//Locator for Download ourNEW App menu
-	
+	By ATLPlanYourMarket = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Plan Your Market')]");
 	
 	public ATLMarketInfoPage(WebDriver driver) {
 		this.driver = driver; 			
@@ -146,5 +146,11 @@ public class ATLMarketInfoPage {
     wait = new WebDriverWait (driver,30);
     wait.until(ExpectedConditions.visibilityOfElementLocated(ATLDownloadOurNewApp));
     return driver.findElement(ATLDownloadOurNewApp);
-} 
+  } 
+  public WebElement getATLPlanYourMarket() throws InterruptedException {
+	    wait = new WebDriverWait (driver,30);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(ATLPlanYourMarket));
+	    return driver.findElement(ATLPlanYourMarket);
+	  }
+  
 }
