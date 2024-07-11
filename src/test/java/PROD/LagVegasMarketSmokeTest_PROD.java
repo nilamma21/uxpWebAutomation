@@ -2,16 +2,12 @@ package PROD;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import pageObjects.LasVegasMarket.UXPAttendPage;
 import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorDirectoryPage;
@@ -57,10 +53,18 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
 
+		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(3000);
 		utl.verifyCloseBtnPopup();
+		
+/*		driver.get(prop.getProperty("lvmurl"));
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(3000);
+		utl.verifyCloseBtnPopup();*/
 	}
 
 	
@@ -858,7 +862,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
 		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Market App");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Plan Your Market");
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());

@@ -594,6 +594,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(1000);
 		
 		//Scroll till footer links
 		utl.scrollToElement(atlfo.getfacebookfootericon());
@@ -911,8 +912,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
-		Thread.sleep(1000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
+		Thread.sleep(2000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Plan Your Market");
 		driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.getmarketInfoATL());
 		

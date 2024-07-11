@@ -934,7 +934,7 @@ Thread.sleep(5000);
 		
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "App");
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Plan Your Market");
 		driver.get(prop.getProperty("atlmrkturl"));
 		//utl.verifyCloseBtnPopup();
 		utl.scrollToElement(fl.getmarketInfo());
