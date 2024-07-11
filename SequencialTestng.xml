@@ -9,7 +9,7 @@
 	<test thread-count="1" name="SequencialTest">
 		<classes>
 		
-		 <class name="PROD.LasVegasAppSmokeTest_PROD" />
+		 <class name="PROD.ExhibitorPortalSmokeTest_PROD" />
 <!-- 
 	 	 <methods>
 	 	 	<include name="TS007_LVMApp_VerifyFooterLinksTest()"/>

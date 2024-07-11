@@ -15,6 +15,7 @@ import pageObjects.LasVegasApparel.LVAExhibitorAndProductTab;
 import pageObjects.LasVegasApparel.LVAFooterLinksNavigationPage;
 import pageObjects.LasVegasApparel.LVAGlobalSearchPage;
 import pageObjects.AtlantaApparel.ATLAppFooterLinksNavigationPage;
+import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPHeaderChannelLinksPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import resources.GenerateData;
@@ -36,6 +37,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	LVAExhibitorAndProductTab lvaept;
 	LVAExhibitTab lvaet;
 	UXPHeaderChannelLinksPage hd;
+	UXPExhibitorsAndProductsTabPage exhp;
 	
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
@@ -577,6 +579,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	
 		lvafl = new LVAFooterLinksNavigationPage(driver);
 		utl=new Utility(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -600,7 +604,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		// Click Download The App link and verify results
 		lvafl.getDownloadTheApp().click();
 		Thread.sleep(2000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/App"));
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Plan Your Market");
 		driver.get(prop.getProperty("lvmappurl"));
 		utl.scrollToElement(lvafl.marketInfoAMC());
 		
