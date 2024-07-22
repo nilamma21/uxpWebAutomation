@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47788" started-at="2024-07-11T06:16:01Z" finished-at="2024-07-11T06:16:49Z">
+  <suite name="Default suite" duration-ms="100960" started-at="2024-07-22T10:50:40Z" finished-at="2024-07-22T10:52:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47788" started-at="2024-07-11T06:16:01Z" finished-at="2024-07-11T06:16:49Z">
-      <class name="PROD.AtlantaAppSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="initialize" is-config="true" duration-ms="31976" started-at="2024-07-11T11:46:01Z" finished-at="2024-07-11T11:46:33Z">
+    <test name="Default test" duration-ms="100960" started-at="2024-07-22T10:50:40Z" finished-at="2024-07-22T10:52:21Z">
+      <class name="PROD.LagVegasMarketSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@4dfa3a9d]" name="initialize" is-config="true" duration-ms="75759" started-at="2024-07-22T16:20:40Z" finished-at="2024-07-22T16:21:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS008_ATLApp_VerifySocialMediaLinksTest()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="TS008_ATLApp_VerifySocialMediaLinksTest" duration-ms="12117" started-at="2024-07-11T11:46:33Z" finished-at="2024-07-11T11:46:45Z">
+        <test-method status="PASS" signature="TS012_LVM_VerifyAllLinksUnderYearRoundTabTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@4dfa3a9d]" name="TS012_LVM_VerifyAllLinksUnderYearRoundTabTest" duration-ms="25176" started-at="2024-07-22T16:21:56Z" finished-at="2024-07-22T16:22:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_ATLApp_VerifySocialMediaLinksTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.AtlantaAppSmokeTest_PROD@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="3661" started-at="2024-07-11T11:46:45Z" finished-at="2024-07-11T11:46:49Z">
+        </test-method> <!-- TS012_LVM_VerifyAllLinksUnderYearRoundTabTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2024-07-22T16:22:21Z" finished-at="2024-07-22T16:22:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
+      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
