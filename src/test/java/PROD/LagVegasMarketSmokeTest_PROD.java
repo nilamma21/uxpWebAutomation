@@ -1160,7 +1160,6 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		System.out.println("Year round section options are displayed properly");
 
 		//Click Why Year Round tab under Year Round section
-
 		yr.getYearRound().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round"));
@@ -1168,7 +1167,6 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		yr.getYearRoundTab().click();
 
 		//Click LVDC tab under Year Round section
-
 		yr.getLasVegasDesignCenter().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/LVDC"));
@@ -1176,15 +1174,19 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		yr.getYearRoundTab().click();
 
 		//Click The Expo tab under Year Round section
-
+		String winHandleBefore = driver.getWindowHandle();
 		yr.getExpo().click();
-		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/The-Expo"));
+		for (String winHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(5000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.expowmclv.com/"));
 		System.out.println("The Expo section is displayed properly");
-		yr.getYearRoundTab().click();
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
+		//yr.getYearRoundTab().click();
 
 		//Click Off-Market Events tab under Year Round section
-
 		yr.getMarketEvents().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Off-Market-Events"));
@@ -1192,7 +1194,6 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		yr.getYearRoundTab().click();
 
 		//Click Venue Rental tab under Year Round section
-
 		yr.getVenueRental().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Venue-Rental"));
