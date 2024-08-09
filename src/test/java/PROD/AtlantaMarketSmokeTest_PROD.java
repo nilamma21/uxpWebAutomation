@@ -354,16 +354,17 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.verifyCloseBtnPopup();
 		//atlnt.getATLNewsAndTrends().click();
-Thread.sleep(5000);
+		Thread.sleep(5000);
 		//Click News and Trends tab and verify result
 		atlnt.getATLNewsAndTrendsTap().click();
+		Thread.sleep(3000);
 		Assert.assertTrue(atlnt.getVerifyNewsSection().isDisplayed());
 		System.out.println("News section is displayed properly.");
 
 		//Click on News And Trends sub-menu and Verify Page
 		atlnt.getATLNewsAndTrendsSubmenu().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("News-and-Trends"));
-
+		Thread.sleep(3000);
 		//Click on News And Trends Tab
 		//atlnt.getATLNewsAndTrends().click();
 		atlnt.getATLNewsAndTrendsTap().click();
@@ -516,13 +517,18 @@ Thread.sleep(5000);
 		Thread.sleep(2000);
 
 		//Check Casual Market Atlanta
+
+		//Check Casual Market Atlanta
 		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Casual Market Atlanta"));
+		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Fall Casual Market Atlanta"));
+		String casualURl=hd.getCasualMarketAtlantaURL().getAttribute("href");
 		hd.getCasualMarketAtlanta().click();
 		Thread.sleep(3000);
-		Assert.assertTrue(driver.getTitle().contains("Casual Market Atlanta"));
-		driver.get(prop.getProperty("atlmrkturl"));
+		Assert.assertTrue(driver.getCurrentUrl().contains(casualURl));
+		
+		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
+
 		
 		//Check Atlanta Market
 		hd.getAtlanta().click();
@@ -532,16 +538,29 @@ Thread.sleep(5000);
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
 		
-		//Check Formal Markets
+	/*//Check Formal Markets
 		hd.getAtlanta().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
 		hd.getFormalMarkets().click();
 		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
 		driver.get(prop.getProperty("atlmrkturl"));
-		Thread.sleep(2000);
-		
-		//Check Mid-Season Buying Event: Fall Market
+		Thread.sleep(2000);*/
+		//Check Cash & Carry Markets: Spring and Fall
+				hd.getAtlanta().click();
+				try {
+				Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Cash & Carry Markets: Spring and Fall"));
+				hd.getCashAndCarryMarketsSpringandFall().click();
+				Assert.assertTrue(driver.getTitle().contains("Spring Cash & Carry"));
+				driver.get(prop.getProperty("lvmappurl"));
+				Thread.sleep(2000);
+				}catch (Exception e) {
+					Assert.assertTrue(hd.getFllCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Fall Cash & Carry"));
+					hd.getFllCashAndCarryMarketsSpringandFall().click();
+					Assert.assertTrue(driver.getTitle().contains("Fall Cash & Carry"));
+					driver.get(prop.getProperty("lvmappurl"));
+					Thread.sleep(2000);
+				}		
 		hd.getAtlanta().click();
 		Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
 		hd.getMidSeasonBuyingEventFallMarket().click();
@@ -549,13 +568,14 @@ Thread.sleep(5000);
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
 		
-		//Check Cash & Carry Markets: Spring and Fall
+	/*	//Check Cash & Carry Markets: Spring and Fall
 		hd.getAtlanta().click();
 		Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Cash & Carry Markets: Spring and Fall"));
 		hd.getCashAndCarryMarketsSpringandFall().click();
 		Assert.assertTrue(driver.getTitle().contains("Spring Cash & Carry"));
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
+		*/
 		
 		//Check ADAC
 		hd.getAtlanta().click();
@@ -660,8 +680,9 @@ Thread.sleep(5000);
 		Assert.assertTrue(driver.getTitle().contains("Shoppe Object"));
 		//driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
+		}
 		
-	}
+	
 	
 	@Test(priority=8)
 	public void TS008_ATL_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException

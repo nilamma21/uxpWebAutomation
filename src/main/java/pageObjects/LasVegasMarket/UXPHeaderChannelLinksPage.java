@@ -44,12 +44,28 @@ public class UXPHeaderChannelLinksPage {
 	By NewYork = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'NEW YORK')]"); // Locator for New York header link
 		By SHOPPEOBJECT = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'SHOPPE OBJECT')]");  //Locator For Drop down SHOPPE OBJECT Link
 		
+		By CasualMarketAtlantaURL = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Casual Market Atlanta')]/../../.."); //Locator For Drop down Casual Market Atlanta Link		
+		By FllCashAndCarryMarketsSpringandFall = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Fall Cash & Carry')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
+		
 		
 	public UXPHeaderChannelLinksPage(WebDriver driver) {
 		this.driver = driver; 			
 	} 
 
 	// For Atlanta
+	public WebElement getFllCashAndCarryMarketsSpringandFall() throws InterruptedException {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(FllCashAndCarryMarketsSpringandFall));
+		return driver.findElement(FllCashAndCarryMarketsSpringandFall);
+	}
+	
+	// For Atlanta
+	public WebElement getCasualMarketAtlantaURL() throws InterruptedException {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(CasualMarketAtlantaURL));
+		return driver.findElement(CasualMarketAtlantaURL);
+	}
+	
 	
 	public WebElement getAtlanta() throws InterruptedException {
 		wait = new WebDriverWait (driver,30);
