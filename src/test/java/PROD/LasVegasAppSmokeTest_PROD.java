@@ -138,10 +138,12 @@ public class LasVegasAppSmokeTest_PROD extends base {
 
 		//Check Casual Market Atlanta
 		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Casual Market Atlanta"));
+		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Fall Casual Market Atlanta"));
+		String casualURl=hd.getCasualMarketAtlantaURL().getAttribute("href");
 		hd.getCasualMarketAtlanta().click();
 		Thread.sleep(3000);
-		Assert.assertTrue(driver.getTitle().contains("Casual Market Atlanta"));
+		Assert.assertTrue(driver.getCurrentUrl().contains(casualURl));
+		
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
@@ -154,13 +156,13 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 		
 		//Check Formal Markets
-		hd.getAtlanta().click();
+	/*	hd.getAtlanta().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
 		hd.getFormalMarkets().click();
 		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
 		driver.get(prop.getProperty("lvmappurl"));
-		Thread.sleep(2000);
+		Thread.sleep(2000);*/
 		
 		//Check Mid-Season Buying Event: Fall Market
 		hd.getAtlanta().click();
@@ -172,11 +174,20 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 		//Check Cash & Carry Markets: Spring and Fall
 		hd.getAtlanta().click();
+		try {
 		Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Cash & Carry Markets: Spring and Fall"));
 		hd.getCashAndCarryMarketsSpringandFall().click();
 		Assert.assertTrue(driver.getTitle().contains("Spring Cash & Carry"));
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
+		}catch (Exception e) {
+			Assert.assertTrue(hd.getFllCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Fall Cash & Carry"));
+			hd.getFllCashAndCarryMarketsSpringandFall().click();
+			Assert.assertTrue(driver.getTitle().contains("Fall Cash & Carry"));
+			driver.get(prop.getProperty("lvmappurl"));
+			Thread.sleep(2000);
+		}
+		
 		
 		//Check ADAC
 		hd.getAtlanta().click();

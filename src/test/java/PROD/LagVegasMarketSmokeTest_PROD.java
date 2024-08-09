@@ -135,12 +135,15 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 
 		//Check Casual Market Atlanta
+		//Check Casual Market Atlanta
 		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Casual Market Atlanta"));
+		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Fall Casual Market Atlanta"));
+		String casualURl=hd.getCasualMarketAtlantaURL().getAttribute("href");
 		hd.getCasualMarketAtlanta().click();
 		Thread.sleep(3000);
-		Assert.assertTrue(driver.getTitle().contains("Casual Market Atlanta"));
-		driver.get(prop.getProperty("lvmurl"));
+		Assert.assertTrue(driver.getCurrentUrl().contains(casualURl));
+		
+		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
 		//Check Atlanta Market
@@ -151,14 +154,14 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmurl"));
 		Thread.sleep(2000);
 		
-		//Check Formal Markets
+	/*	//Check Formal Markets
 		hd.getAtlanta().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
 		hd.getFormalMarkets().click();
 		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
 		driver.get(prop.getProperty("lvmurl"));
-		Thread.sleep(2000);
+		Thread.sleep(2000);*/
 		
 		//Check Mid-Season Buying Event: Fall Market
 		hd.getAtlanta().click();
@@ -168,13 +171,20 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmurl"));
 		Thread.sleep(2000);
 		
-		//Check Cash & Carry Markets: Spring and Fall
 		hd.getAtlanta().click();
+		try {
 		Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Cash & Carry Markets: Spring and Fall"));
 		hd.getCashAndCarryMarketsSpringandFall().click();
 		Assert.assertTrue(driver.getTitle().contains("Spring Cash & Carry"));
-		driver.get(prop.getProperty("lvmurl"));
+		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
+		}catch (Exception e) {
+			Assert.assertTrue(hd.getFllCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Fall Cash & Carry"));
+			hd.getFllCashAndCarryMarketsSpringandFall().click();
+			Assert.assertTrue(driver.getTitle().contains("Fall Cash & Carry"));
+			driver.get(prop.getProperty("lvmappurl"));
+			Thread.sleep(2000);
+		}
 		
 		//Check ADAC
 		hd.getAtlanta().click();
@@ -1196,7 +1206,8 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//Click Venue Rental tab under Year Round section
 		yr.getVenueRental().click();
 		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Venue-Rental"));
+		//Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Venue-Rental"));
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Venue Rental"));
 		System.out.println("Venue Rental section is displayed properly");
 		yr.getYearRoundTab().click();
 

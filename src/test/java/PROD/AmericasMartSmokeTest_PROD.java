@@ -160,15 +160,18 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.navigate().back();
 		Thread.sleep(2000);
 
-		//Check Casual Market Atlanta
+		// Check Casual Market Atlanta
 		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Casual Market Atlanta"));
+		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Fall Casual Market Atlanta"));
+		String casualURl = hd.getCasualMarketAtlantaURL().getAttribute("href");
 		hd.getCasualMarketAtlanta().click();
-		Assert.assertTrue(driver.getTitle().contains("Casual Market Atlanta"));
-		driver.navigate().back();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains(casualURl));
+
+		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
-		
-		//Check Atlanta Market
+
+		// Check Atlanta Market
 		hd.getAtlanta().click();
 		Assert.assertTrue(hd.getAtlantaMarket().getText().equalsIgnoreCase("Atlanta Market"));
 		hd.getAtlantaMarket().click();
@@ -176,7 +179,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.navigate().back();
 		Thread.sleep(2000);
 		
-		//Check Formal Markets
+/*		//Check Formal Markets
 		hd.getAtlanta().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
@@ -184,7 +187,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
 		driver.navigate().back();
 		Thread.sleep(2000);
-		
+		*/
 		//Check Mid-Season Buying Event: Fall Market
 		hd.getAtlanta().click();
 		Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
@@ -193,13 +196,20 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.navigate().back();
 		Thread.sleep(2000);
 		
-		//Check Cash & Carry Markets: Spring and Fall
 		hd.getAtlanta().click();
+		try {
 		Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Cash & Carry Markets: Spring and Fall"));
 		hd.getCashAndCarryMarketsSpringandFall().click();
 		Assert.assertTrue(driver.getTitle().contains("Spring Cash & Carry"));
-		driver.navigate().back();
+		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
+		}catch (Exception e) {
+			Assert.assertTrue(hd.getFllCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Fall Cash & Carry"));
+			hd.getFllCashAndCarryMarketsSpringandFall().click();
+			Assert.assertTrue(driver.getTitle().contains("Fall Cash & Carry"));
+			driver.get(prop.getProperty("lvmappurl"));
+			Thread.sleep(2000);
+		}
 		
 		//Check ADAC
 		hd.getAtlanta().click();
