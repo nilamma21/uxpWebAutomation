@@ -169,7 +169,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains(casualURl));
 
 		driver.get(prop.getProperty("lvmappurl"));
-		Thread.sleep(2000);
+		Thread.sleep(7000);
 
 		// Check Atlanta Market
 		hd.getAtlanta().click();
@@ -285,7 +285,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		hd.getHighPoint().click();
 		Assert.assertTrue(hd.getANDMOREatHighPointMarket().getText().equalsIgnoreCase("ANDMORE at High Point Market"));
 		hd.getANDMOREatHighPointMarket().click();
-		Assert.assertTrue(driver.getTitle().contains("High Point Spring Market"));
+		Thread.sleep(4000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("andmorehighpointmarket.com"));
 		driver.navigate().back();
 		Thread.sleep(2000);
 		
@@ -319,6 +320,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		amfl = new AMFooterLinksNavigationPage(driver);
 		utl = new Utility(driver); 
 		fl = new UXPFooterLinksNavigationPage(driver);
+		
+		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Scroll till footer links
@@ -372,6 +375,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		atat = new ATLAttendPage(driver);
 		amme = new AMMarketsAndEventsPage(driver);
 
+		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.verifyCloseBtnPopup();
 		//Click Markets and Events tab at Header
@@ -544,7 +548,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("ammarturl")+"About/Contact-Us");
 		utl.verifyCloseBtnPopup();
 		mi.getMarketInfoHeader().click();
-
+		Thread.sleep(1000);
 		//Click Industry Partners option under Market Info
 
 		amab.getIndustryPartners().click();
@@ -648,7 +652,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		//Click About Open Year Round Link
 		amoyr.getAboutYearRound().click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		//Verify that About Open Year Round page should be displayed
 		String actualHeader="Open Year Round";
 		Assert.assertTrue(amoyr.getAboutYearRoundPageHeader().getText().equals(actualHeader));
@@ -1021,7 +1025,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

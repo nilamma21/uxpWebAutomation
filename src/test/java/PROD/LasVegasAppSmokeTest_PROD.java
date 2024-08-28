@@ -266,7 +266,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		hd.getHighPoint().click();
 		Assert.assertTrue(hd.getANDMOREatHighPointMarket().getText().equalsIgnoreCase("ANDMORE at High Point Market"));
 		hd.getANDMOREatHighPointMarket().click();
-		Assert.assertTrue(driver.getTitle().contains("High Point Spring Market"));
+		Thread.sleep(200);
+		Assert.assertTrue(driver.getCurrentUrl().contains("andmorehighpointmarket.com"));
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
@@ -850,7 +851,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

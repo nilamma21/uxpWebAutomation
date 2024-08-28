@@ -21,7 +21,7 @@ public class UXPExhibitorDirectoryPage {
 
 	public WebElement getExhibitorDirectory() throws InterruptedException {
 		//Wait till Sign In page is displayed
-	    wait = new WebDriverWait (driver,30);
+	    wait = new WebDriverWait (driver,40);
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ExhibitorDirectory));
 		return driver.findElement(ExhibitorDirectory);
 

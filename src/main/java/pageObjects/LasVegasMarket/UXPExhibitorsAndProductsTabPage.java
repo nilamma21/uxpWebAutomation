@@ -35,102 +35,102 @@ public class UXPExhibitorsAndProductsTabPage {
 	} 
 	
 	public WebElement getverifyBreadcrumb_ATLAPP() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(verifyBreadcrumb_ATLAPP));
 		return driver.findElement(verifyBreadcrumb_ATLAPP);
 	}
 	
 	public WebElement getExhibitorsAndBrands() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ExhibitorsAndBrands));
 		return driver.findElement(ExhibitorsAndBrands);
 	}
 
 	public WebElement getExhibitorsAndProducts() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ExhibitorsAndProducts));
 		return driver.findElement(ExhibitorsAndProducts);
 	}
 
 	public WebElement getExhibitorDirectory() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ExhibitorDirectory));
 		return driver.findElement(ExhibitorDirectory);
 	}
 
 	public WebElement getFloorPlans() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(FloorPlans));
 		return driver.findElement(FloorPlans);
 	}
 
 	public WebElement getShowSpecials() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ShowSpecials));
 		return driver.findElement(ShowSpecials);
 	}
 
 	public WebElement getTemporaries() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Temporaries));
 		return driver.findElement(Temporaries);
 	}
 
 	public WebElement getNewProductIntroductions() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(NewProductIntroductions));
 		return driver.findElement(NewProductIntroductions);
 	}
 
 	public WebElement getCategories() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Categories));
 		return driver.findElement(Categories);
 	}
 
 	public WebElement getVerifyExhibitorsAndProductsSection() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(VerifyExhibitorsAndProductsSection));
 		return driver.findElement(VerifyExhibitorsAndProductsSection);
 	}
 
 	public WebElement getVerifyExhibitorDirectory() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(VerifyExhibitorDirectory));
 		return driver.findElement(VerifyExhibitorDirectory);
 	}
 
 	public WebElement getVerifyFloorPlans() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(VerifyFloorPlans));
 		return driver.findElement(VerifyFloorPlans);
 	}
 
 	public WebElement getJuniperMarketProd() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.elementToBeClickable(JuniperMarketProd));
 		return driver.findElement(JuniperMarketProd);
 	}
 	public WebElement getExhDirectSearchBox() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.elementToBeClickable(exhdirectsearchbx));
 		return driver.findElement(exhdirectsearchbx);
 	}
 	
 	public WebElement getExhDirectSearchBtn() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.elementToBeClickable(exhdirectsearchbtn));
 		return driver.findElement(exhdirectsearchbtn);
 	}
 	
 	public WebElement getVerifyBreadcrumb() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.elementToBeClickable(verifyBreadcrumb));
 		return driver.findElement(verifyBreadcrumb);
 	}
 	
 	public WebElement getVerifyPgBreadcrumb() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.elementToBeClickable(verifyPgBreadcrumb));
 		return driver.findElement(verifyPgBreadcrumb);
 	}

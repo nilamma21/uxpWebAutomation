@@ -1,51 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeTestSuite]" parallel="classes">
-  <test name="Parallel Test(failed)" parallel="classes">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="PROD.AmericasMartSmokeTest_PROD">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
-      <class name="PROD.AtlantaMarketSmokeTest_PROD">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- PROD.AtlantaMarketSmokeTest_PROD -->
-      <class name="PROD.SitecoreSmokeTest_PROD">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
-      <class name="PROD.AtlantaAppSmokeTest_PROD">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- PROD.AtlantaAppSmokeTest_PROD -->
-      <class name="PROD.LagVegasMarketSmokeTest_PROD">
-        <methods>
-          <include name="initialize"/>
-          <include name="TS012_LVM_VerifyAllLinksUnderYearRoundTabTest"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
       <class name="PROD.LasVegasAppSmokeTest_PROD">
         <methods>
           <include name="initialize"/>
+          <include name="TS001_LVMApp_VerifyAllHeaderChanelLinksTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- PROD.LasVegasAppSmokeTest_PROD -->
-      <class name="PROD.ExhibitorPortalSmokeTest_PROD">
-        <methods>
-          <include name="initialize"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- PROD.ExhibitorPortalSmokeTest_PROD -->
     </classes>
-  </test> <!-- Parallel Test(failed) -->
-</suite> <!-- Failed suite [SmokeTestSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
