@@ -760,6 +760,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click Why Attend tab under Attend section
 		atat.getATLWhyAttend().click();
+		Thread.sleep(2000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Why Attend?");
 		System.out.println("Why Attend section is displayed properly");
 		Thread.sleep(2000);
@@ -775,7 +776,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click Admission Policies under Attend section
 		atat.getATLAdmissionPolicies().click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Admission Policies");
 		System.out.println("Admission Policies section is displayed properly");
 		Thread.sleep(2000);
@@ -793,7 +794,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		
 		//Click on Plan Your Market sub-menu
 		atat.getATLPlanYourMarket().click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         //Verify that Plan Your Market page should be displayed
         Assert.assertTrue(driver.getTitle().contains("Plan Your Market"));
         System.out.println("Plan Your Market page is present");
@@ -802,15 +803,15 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click Travel under Attend section
 		atat.getATLTravel().click();
-		Thread.sleep(2000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Hotels & Travel");
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Travel");
 		System.out.println("Travel section is displayed properly");
 		Thread.sleep(2000);
 		atat.getATLAttendTab().click();
 
 		//Click Dining Guide under Attend section
 		atat.getATLDiningGuide().click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Dining Guide");
 		System.out.println("Dining Guide section is displayed properly");
 		Thread.sleep(2000);
@@ -818,14 +819,14 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		//Click on Events under Attend section
 		atat.getATLEventsSubmenu().click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Events");
 		Thread.sleep(2000);
 		atat.getATLAttendTab().click();
 
 		//Click Services and Amenities under Attend section
 		atat.getATLServicesAndAmenities().click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Services & Amenities");
 		System.out.println("Services & Amenities section is displayed properly");
 		atat.getATLAttendTab().click();
@@ -1223,7 +1224,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

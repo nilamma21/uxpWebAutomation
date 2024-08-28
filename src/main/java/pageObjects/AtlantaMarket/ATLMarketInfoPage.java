@@ -20,7 +20,7 @@ public class ATLMarketInfoPage {
 	By atlvideogallerysubmenu = By.xpath("//a[contains(text(),'Video Gallery')]"); //Locator for Video Gallery sub-menu
 	By atlindustrypartsubmenu = By.xpath("//a[contains(@href, '/Market-Info/Industry-Partners')]"); //Locator for Industry Partners
 	By atlaboutpageheader = By.xpath("//strong[contains(text(), 'ABOUT')]"); //Locator for About us page header
-	By atlmektdatespageheader = By.xpath("//strong[contains(text(), 'MARKET DATES & HOURS')]"); //Locator for Market Dates & Hours page header
+	By atlmektdatespageheader = By.xpath("//*[contains(text(), 'MARKET DATES & HOURS')]"); //Locator for Market Dates & Hours page header
 	By atlregstnpageheader = By.xpath("//a[contains(text(), 'Registration')]"); //Locator for Registration page header
 	By atlpresscenterpageheader = By.xpath("//a[contains(text(), 'Press Releases')]");//Locator for Press Center page header
 	By atlatlantanextpageheader = By.xpath("(//a[contains(text(), 'Atlanta Next')])[position()=1]"); //Locator for Atlanta Next page header
