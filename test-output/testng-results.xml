@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="332644" started-at="2024-08-28T03:49:59Z" finished-at="2024-08-28T03:55:31Z">
+  <suite name="Default suite" duration-ms="100121" started-at="2024-09-03T07:51:06Z" finished-at="2024-09-03T07:52:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="332644" started-at="2024-08-28T03:49:59Z" finished-at="2024-08-28T03:55:31Z">
-      <class name="PROD.LasVegasAppSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@4dfa3a9d]" name="initialize" is-config="true" duration-ms="24854" started-at="2024-08-28T09:19:59Z" finished-at="2024-08-28T09:20:23Z">
+    <test name="Default test" duration-ms="100121" started-at="2024-09-03T07:51:06Z" finished-at="2024-09-03T07:52:46Z">
+      <class name="PROD.LagVegasMarketSmokeTest_PROD">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@4dfa3a9d]" name="initialize" is-config="true" duration-ms="73552" started-at="2024-09-03T13:21:06Z" finished-at="2024-09-03T13:22:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_LVMApp_VerifyAllHeaderChanelLinksTest()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@4dfa3a9d]" name="TS001_LVMApp_VerifyAllHeaderChanelLinksTest" duration-ms="307767" started-at="2024-08-28T09:20:23Z" finished-at="2024-08-28T09:25:31Z">
+        <test-method status="PASS" signature="TS012_LVM_VerifyAllLinksUnderYearRoundTabTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@4dfa3a9d]" name="TS012_LVM_VerifyAllLinksUnderYearRoundTabTest" duration-ms="26548" started-at="2024-09-03T13:22:19Z" finished-at="2024-09-03T13:22:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_LVMApp_VerifyAllHeaderChanelLinksTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.LasVegasAppSmokeTest_PROD@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2024-08-28T09:25:31Z" finished-at="2024-08-28T09:25:31Z">
+        </test-method> <!-- TS012_LVM_VerifyAllLinksUnderYearRoundTabTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2024-09-03T13:22:46Z" finished-at="2024-09-03T13:22:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.LasVegasAppSmokeTest_PROD -->
+      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1207,13 +1207,18 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		yr.getYearRoundTab().click();
 
 		//Click Venue Rental tab under Year Round section
+		String winHandleBefore2 = driver.getWindowHandle();
 		yr.getVenueRental().click();
-		Thread.sleep(7000);
-		//Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Venue-Rental"));
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl")+"Year-Round/Venue Rental"));
-		System.out.println("Venue Rental section is displayed properly");
-		yr.getYearRoundTab().click();
-
+		for (String winHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(5000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("www.wmclv.com"));
+		System.out.println("Venue Rental section is redirected to WMCLV URL properly");
+		driver.close();
+		driver.switchTo().window(winHandleBefore2);
+		
+		//yr.getYearRoundTab().click();
 		/*//Click LVDC tab under Year Round section
 		//Junipermarket link is removed
 		yr.getShopzio().click();
