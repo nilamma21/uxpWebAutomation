@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="PROD.LasVegasAppSmokeTest_PROD">
+      <class name="PROD.LagVegasMarketSmokeTest_PROD">
         <methods>
           <include name="initialize"/>
-          <include name="TS001_LVMApp_VerifyAllHeaderChanelLinksTest"/>
+          <include name="TS012_LVM_VerifyAllLinksUnderYearRoundTabTest"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- PROD.LasVegasAppSmokeTest_PROD -->
+      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
