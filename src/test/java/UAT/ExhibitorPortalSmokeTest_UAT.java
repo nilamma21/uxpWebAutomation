@@ -1,17 +1,14 @@
 package UAT;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Assert;
+import java.time.Duration;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import pageObjects.ExhibitorPortal.*;
 import pageObjects.AmericasMart.AMHeaderLinksPage;
-import pageObjects.AmericasMart.AMOpenYearRoundPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import resources.GenerateData;
@@ -61,7 +58,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				lp = new UXPLoginPage(driver);
 				el = new EXPLoginPage(driver);
 				
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				
 				//Login to Market Planner
 				el.getEmailAddress().sendKeys(prop.getProperty("username"));
@@ -88,7 +85,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				nt = new EXPNotificationsTabPage(driver);
 				st = new EXPSettingsPage(driver);
 				
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				
 				//Click Notifications icon and verify results
 				nt.getNotifications().click();
@@ -107,7 +104,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				lp = new UXPLoginPage(driver);
 				st = new EXPSettingsPage(driver);
 				
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				
 				//Click Settings icon and verify results
 				
@@ -171,7 +168,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				el=new EXPLoginPage(driver);
 				
 
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				System.out.println("EXP page");
 			
 				
@@ -286,7 +283,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				st = new EXPSettingsPage(driver);
 				
 
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				System.out.println("EXP page");
 			
 				
@@ -434,7 +431,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				el=new EXPLoginPage(driver);
 				
 
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				System.out.println("EXP page");
 			
 				
@@ -516,7 +513,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				mar=new EXPMarketTabPage(driver);
 				
 
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				System.out.println("EXP page");
 				//Click on Registration And Services Tab 
 				mar.getEXPMarketTab().click();
@@ -573,7 +570,7 @@ public class ExhibitorPortalSmokeTest_UAT extends base {
 				el = new EXPLoginPage(driver);
 				efl = new EXPFooterLinksPage(driver);
 				
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				
 				//Scroll till footer links
 				utl.scrollToElement(efl.getAboutIMC());

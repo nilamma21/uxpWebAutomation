@@ -1,17 +1,13 @@
 package PROD;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Assert;
+import java.time.Duration;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import pageObjects.AmericasMart.AMAboutTabPage;
 import pageObjects.AmericasMart.AMExhibitTabPage;
 import pageObjects.AmericasMart.AMFooterLinksNavigationPage;
@@ -29,8 +25,6 @@ import pageObjects.AtlantaMarket.ATLMarketInfoPage;
 import pageObjects.AtlantaMarket.ATLNewsAndTrendsTabPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.AtlantaMarket.ATLRegistrationsPage;
-import pageObjects.LasVegasMarket.UXPAttendPage;
-import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorDirectoryPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPExploreMarketPage;
@@ -40,7 +34,6 @@ import pageObjects.LasVegasMarket.UXPHeaderChannelLinksPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import pageObjects.LasVegasMarket.UXPMarketInfoPage;
-import pageObjects.LasVegasMarket.UXPProfileAndSettingsPage;
 import resources.GenerateData;
 import resources.SendEmail;
 import resources.Utility;
@@ -109,7 +102,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		hd = new UXPHeaderChannelLinksPage(driver);
 		atlch = new ATLAllChannelsLinksPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
 		
 		//Old code for Header Channel Links
@@ -322,7 +315,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		fl = new UXPFooterLinksNavigationPage(driver);
 		
 		driver.get(prop.getProperty("ammarturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Scroll till footer links
 		utl.scrollToElement(fl.marketInfoAMC());
@@ -376,7 +369,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		amme = new AMMarketsAndEventsPage(driver);
 
 		driver.get(prop.getProperty("ammarturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
 		//Click Markets and Events tab at Header
 		//Thread.sleep(3000);
@@ -393,7 +386,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore);
 		
 		driver.get(prop.getProperty("ammarturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
 		
 		atat.getATLAttendTab().click();
@@ -477,7 +470,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		
 		driver.get(prop.getProperty("ammarturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		Thread.sleep(5000);
@@ -499,7 +492,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		
 		driver.get(prop.getProperty("ammarturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
 		//Click About tab at Header
 		mi.getMarketInfoHeader().click();
@@ -573,7 +566,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		atlps = new ATLProfileAndSettingsPage(driver);
 		atlexh = new ATLExhibitPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Exhibit Tab 
 		//Thread.sleep(3000);
@@ -645,7 +638,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		amoyr=new AMOpenYearRoundPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
@@ -752,7 +745,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 
 		driver.get(prop.getProperty("ammarturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//utl.verifyCloseBtnPopup();
 		//Verify exhibitor directory page is successfully opened
 		ed.getExhibitorDirectory().click();
@@ -780,7 +773,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		amfl = new AMFooterLinksNavigationPage(driver);
 		atlfl = new ATLFooterLinksNavigationPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//	utl.verifyCloseBtnPopup();
 
 		utl.scrollToElement(fl.marketInfoAMC());
@@ -947,7 +940,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		amhe = new AMHeaderLinksPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		/*//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
@@ -974,7 +967,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Profile and Settings tab under Market Planner and verify result
 		//Thread.sleep(5000);
@@ -997,7 +990,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		atlps = new ATLProfileAndSettingsPage(driver);
 		atlexh = new ATLExhibitPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 
 		atlps.getATLWelcomeText().click();
@@ -1025,7 +1018,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

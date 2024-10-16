@@ -2,7 +2,7 @@ package UAT;
 
 import java.io.IOException;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;

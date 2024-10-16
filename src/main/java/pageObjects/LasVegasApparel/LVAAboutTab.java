@@ -1,5 +1,7 @@
 package pageObjects.LasVegasApparel;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,27 +23,27 @@ public class LVAAboutTab {
 	} 
 	
 	public WebElement getLVAAboutTab() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAAboutTab));
 		return driver.findElement(LVAAboutTab);
 	}
 	public WebElement getLVADatesAndHours() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVADatesAndHours));
 		return driver.findElement(LVADatesAndHours);
 	}
 	public WebElement getLVAPressCenter() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAPressCenter));
 		return driver.findElement(LVAPressCenter);
 	}
 	public WebElement getLVAInTheNews() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAInTheNews));
 		return driver.findElement(LVAInTheNews);
 	}
 	public WebElement getLVAContactUs() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAContactUs));
 		return driver.findElement(LVAContactUs);
 	}

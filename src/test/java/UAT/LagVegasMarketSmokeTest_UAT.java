@@ -1,15 +1,12 @@
 package UAT;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Assert;
+import java.time.Duration;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import pageObjects.LasVegasMarket.UXPAttendPage;
 import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorDirectoryPage;
@@ -72,7 +69,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -90,7 +87,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		lap = new UXPLandingPage(driver);
 		exh = new UXPExhibitPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);						
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));						
 
 		//Click on Exhibit tab
 		exh.getExhibitTab().click();
@@ -199,7 +196,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		ps = new UXPProfileAndSettingsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Profile and Settings tab under Market Planner and verify result
 
@@ -218,7 +215,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click ExhibitorsAndProductsTab at Header
 
@@ -277,7 +274,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		mi = new UXPMarketInfoPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Market Info tab at Header
 
@@ -357,7 +354,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		expmrkt = new UXPExploreMarketPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
@@ -463,7 +460,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		ps = new UXPProfileAndSettingsPage(driver);
 		gs = new UXPGlobalSearchPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
@@ -483,7 +480,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		mi = new UXPMarketInfoPage(driver);
 		fl = new UXPFooterLinksNavigationPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Scroll till footer links
 
@@ -631,7 +628,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		ed = new UXPExhibitorDirectoryPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify exhibitor data is displayed or not as per search criteria
 
@@ -655,7 +652,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		at = new UXPAttendPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Attend tab at Header
 
@@ -746,7 +743,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		yr = new UXPYearRoundPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Year Round tab at Header
 
@@ -804,7 +801,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		fl = new UXPFooterLinksNavigationPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
@@ -923,7 +920,7 @@ public class LagVegasMarketSmokeTest_UAT extends base {
 
 		hd = new UXPHeaderChannelLinksPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Atlanta Market channel link and verify result
 

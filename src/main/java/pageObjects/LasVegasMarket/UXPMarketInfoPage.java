@@ -1,5 +1,7 @@
 package pageObjects.LasVegasMarket;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -35,104 +37,104 @@ public class UXPMarketInfoPage {
 	} 
 
 	public WebElement getMarketInfoHeader() throws InterruptedException{
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(MarketInfoHeader));
 		return driver.findElement(MarketInfoHeader);
 	}
 	
 	public WebElement getAboutLasVegasMarket(){
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(AboutLasVegasMarket));
 		return driver.findElement(AboutLasVegasMarket);
 	}
 
 	public WebElement getMarketDatesAndHrs() {
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(MarketDatesAndHrs));
 		return driver.findElement(MarketDatesAndHrs);
 	}
 	
 	public WebElement getRegistrationDetails() throws InterruptedException {
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(RegistrationDetails));
 		return driver.findElement(RegistrationDetails);
 	}
 	
 	public WebElement getAdmissionPolicies() {
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(AdmissionPolicies));
 		return driver.findElement(AdmissionPolicies);
 	}
 	
 	public WebElement getIndustryPartners() {
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(IndustryPartners));
 		return driver.findElement(IndustryPartners);
 	}
 	
 	public WebElement getFAQs() {
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(FAQs));
 		return driver.findElement(FAQs);
 	}
 	
 	public WebElement getContactUs() throws InterruptedException {
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ContactUs));
 		return driver.findElement(ContactUs);
 	}
 	
 	public WebElement getMarketRecap() {
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(MarketRecap));
 		return driver.findElement(MarketRecap);
 	}
 	
 	public WebElement getMediaAndPress() {
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(MediaAndPress));
 		return driver.findElement(MediaAndPress);
 	}
 	
 	public WebElement getVerifyAboutLasVegasMarket() throws InterruptedException {
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyAboutLasVegasMarket));
 		return driver.findElement(VerifyAboutLasVegasMarket);
 	}
 	
 	public WebElement getVerifyFAQs() throws InterruptedException {
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyFAQs));
 		return driver.findElement(VerifyFAQs);
 	}
 	
 	public WebElement getVerifyContactUs() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyContactUs));
 		return driver.findElement(VerifyContactUs);
 	}
 	
 	public WebElement getVerifyMarketInfoSection() {
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyMarketInfoSection));
 		return driver.findElement(VerifyMarketInfoSection);
 	}
 	
 	public WebElement getVerifyRegistrationDetailsProd(){
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyRegistrationDetailsProd));
 		return driver.findElement(VerifyRegistrationDetailsProd);
 	}
 	
 	public WebElement getVerifyFAQsProd(){
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyFAQsProd));
 		return driver.findElement(VerifyFAQsProd);
 	}
 	
 	public WebElement getverifyContactUsATL(){
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyContactUsATL));
 		return driver.findElement(VerifyContactUsATL);
 	}

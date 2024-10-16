@@ -1,14 +1,12 @@
 package UAT;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Assert;
+import java.time.Duration;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import pageObjects.AmericasMart.AMAboutTabPage;
 import pageObjects.AmericasMart.AMExhibitTabPage;
 import pageObjects.AmericasMart.AMFooterLinksNavigationPage;
@@ -26,8 +24,6 @@ import pageObjects.AtlantaMarket.ATLMarketInfoPage;
 import pageObjects.AtlantaMarket.ATLNewsAndTrendsTabPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.AtlantaMarket.ATLRegistrationsPage;
-import pageObjects.LasVegasMarket.UXPAttendPage;
-import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorDirectoryPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPExploreMarketPage;
@@ -37,7 +33,6 @@ import pageObjects.LasVegasMarket.UXPHeaderChannelLinksPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import pageObjects.LasVegasMarket.UXPMarketInfoPage;
-import pageObjects.LasVegasMarket.UXPProfileAndSettingsPage;
 import resources.GenerateData;
 import resources.SendEmail;
 import resources.Utility;
@@ -104,7 +99,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 		lp = new UXPLoginPage(driver);
 		amhe = new AMHeaderLinksPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -128,7 +123,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		mi = new UXPMarketInfoPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify exhibitor directory page is successfully opened
 
@@ -164,7 +159,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 		utl = new Utility(driver); 
 		fl = new UXPFooterLinksNavigationPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Scroll till footer links
 		utl.scrollToElement(fl.getHighPointMarket());
@@ -215,7 +210,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 		amab = new AMAboutTabPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click About tab at Header
 
@@ -291,7 +286,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 		amhe = new AMHeaderLinksPage(driver);
 		//cl = new AMCAllChannelsLinksPage(driver);
 		hd=new UXPHeaderChannelLinksPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Atlanta Market 
 		hd.getAtlantaMarket().click();
@@ -352,7 +347,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 		atat = new ATLAttendPage(driver);
 		amme = new AMMarketsAndEventsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Markets and Events tab at Header
 		atat.getATLAttendTab().click();
@@ -427,7 +422,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 		fl = new UXPFooterLinksNavigationPage(driver);
 		amfl = new AMFooterLinksNavigationPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Scroll till footer links
 
@@ -532,7 +527,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 		lp = new UXPLoginPage(driver);
 		gs = new UXPGlobalSearchPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
@@ -556,7 +551,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		amoyr=new AMOpenYearRoundPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
@@ -644,7 +639,7 @@ public class AmericasMartSmokeTest_UAT extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		amexh=new AMExhibitTabPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Exhibit Tab 
 		amexh.getamcExhibitTab().click();

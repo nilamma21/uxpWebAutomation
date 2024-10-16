@@ -1,12 +1,10 @@
 package pageObjects.AtlantaMarket;
 
-import java.util.List;
-
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ATLProfileAndSettingsPage {
@@ -20,30 +18,29 @@ public class ATLProfileAndSettingsPage {
 	By amcexhphome = By.xpath("//h1[contains(text(), 'Exhibitor Dashboard')]"); //Locator for EXP Home page title
 	
 	public ATLProfileAndSettingsPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getATLWelcomeText() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfElementLocated(atlwelcometext));
 		return driver.findElement(atlwelcometext);
 	}
 
 	public WebElement getATLProfileAndSettings() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlprofileandsettings));
 		return driver.findElement(atlprofileandsettings);
 	}
 	
 	public WebElement getAMCExhibitorPortalOptn() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(amcexhibitorportal));
 		return driver.findElement(amcexhibitorportal);
 	}
 	public WebElement getAMCExhibitorPortalHome() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(amcexhphome));
 		return driver.findElement(amcexhphome);
 	}

@@ -1,7 +1,7 @@
 package PROD;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-import org.junit.Assert;
+import java.time.Duration;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -46,7 +46,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//DOMConfigurator.configure("log4j.xml");
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//Navigate to Las Vegas Apparel Site
 		driver.get(prop.getProperty("lvmappurl"));
 		lap.getIUnderstandBtn().click();
@@ -61,7 +61,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvach = new LVAAllChannelsLinksPage(driver);
 		hd = new UXPHeaderChannelLinksPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(8000);
 
 		//Old Code
@@ -301,7 +301,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 		lvags = new LVAGlobalSearchPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		
 		lvags.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -323,7 +323,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 
 		 lvaat = new LVAAboutTab(driver);
 		 driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 
 	//Verify Dates & Hours Page
@@ -372,7 +372,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 		lvaept = new LVAExhibitorAndProductTab(driver);
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(4000);
 /*
 	//Verify Exhibitor Directory Page
@@ -420,7 +420,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//UXP-T507: To verify Attend Tab
 		lvaa = new LVAAttendPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	
 		Thread.sleep(3000);
 		//Click on Attend Tab
@@ -483,7 +483,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		System.out.println("Vefiry Events Page ");
 		
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//utl.scrollToElement(lvaa.getLVAAttendTab());
 		
 		Thread.sleep(5000);
@@ -498,7 +498,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 
 		//utl.scrollToElement(lvaa.getLVAAttendTab());
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//Click on Attend Tab
 		Thread.sleep(5000);
 		lvaa.getLVAAttendTab().click();
@@ -518,7 +518,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 		lvaet = new LVAExhibitTab(driver);
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		
 	//Verify Exhibitor Portal Login
@@ -530,7 +530,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://prodmvdp.b2clogin.com/"));
 		driver.navigate().back();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 	//Verify Exhibitor Portal Guide
 		lvaet.getLVAExhibitTab().click();
@@ -548,7 +548,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore);
 		
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 	//Verify Market Toolkit
 		lvaet.getLVAExhibitTab().click();
@@ -594,7 +594,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 /*		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfoATL());
@@ -767,7 +767,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 
 		atlfo=new ATLAppFooterLinksNavigationPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Scroll till footer links
 		utl.scrollToElement(atlfo.getfacebookfootericon());
@@ -815,7 +815,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		Thread.sleep(2000);
 		utl.scrollToElement(lap.getMarketRecap());
@@ -838,7 +838,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//UXP-T786: To verify Plan Your Market
 		lap = new UXPLandingPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify Plan your market link is working properly
 		lap.getplanYourMarket().click();
@@ -851,7 +851,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

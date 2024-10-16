@@ -1,5 +1,6 @@
 package pageObjects.AtlantaMarket;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -24,13 +25,13 @@ public class ATLRegistrationsPage {
 	} 
 
 	public WebElement getATLRegistrationsOptn() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlregistrations));
 		return driver.findElement(atlregistrations);
 	}
 	
 	public WebElement getATLRegistrationsInfoTab() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlregstninfotab));
 		return driver.findElement(atlregstninfotab);
 	}

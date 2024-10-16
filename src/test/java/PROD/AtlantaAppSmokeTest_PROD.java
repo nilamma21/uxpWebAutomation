@@ -1,19 +1,13 @@
 package PROD;
 
-import static org.testng.Assert.assertTrue;
-
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Assert;
+import java.time.Duration;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import pageObjects.ExhibitorPortal.EXPLoginPage;
 import pageObjects.AmericasMart.AMAboutTabPage;
 import pageObjects.AmericasMart.AMExhibitTabPage;
@@ -41,7 +35,6 @@ import pageObjects.AtlantaMarket.ATLNewsAndTrendsTabPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.AtlantaMarket.ATLRegistrationsPage;
 import pageObjects.LasVegasMarket.UXPAttendPage;
-import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorDirectoryPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPExploreMarketPage;
@@ -133,7 +126,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlyr=new ATLAppYearRoundTabPage(driver);
 		
 		driver.get(prop.getProperty("atlappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		//Click on Year Round Tab
 		atly.getYearRoundTab().click();
@@ -176,7 +169,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		
 		driver.get(prop.getProperty("atlappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify Market Recap link is working properly
 		lap.getMarketRecap().click();
@@ -199,7 +192,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 		
 		driver.get(prop.getProperty("atlappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
@@ -330,7 +323,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlm = new ATLAppMarketsTabPage(driver);
 
 		driver.get(prop.getProperty("atlappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(3000);
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
@@ -361,7 +354,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atled = new ATLExhibitorDirectoryPage (driver);
 
 		driver.get(prop.getProperty("atlappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify exhibitor directory page is successfully opened
 		atled.getATLExhibitorDirectory().click();
@@ -397,7 +390,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 		atlm=new ATLAppMarketsTabPage(driver);
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get(prop.getProperty("atlappurl"));
 		Thread.sleep(5000);
 		//Due to re-branding changes
@@ -538,7 +531,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlappexh=new ATLAppExhibitorsAndProductTabPage(driver);
 		atlexhp=new ATLExhibitorsAndProductsTabPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Exhibitors And Brands Tab
 		driver.get(prop.getProperty("atlappurl"));
@@ -593,7 +586,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		utl=new Utility(driver);
 
 		driver.get(prop.getProperty("atlappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(1000);
 		
 		//Scroll till footer links
@@ -704,7 +697,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlf=new ATLAppFashionGalleryTabPage(driver);
 		
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get(prop.getProperty("atlappurl"));
 		Thread.sleep(5000);
 		//Click on Fashion Gallery Tab
@@ -785,7 +778,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		el=new EXPLoginPage(driver);
 		
 		driver.get(prop.getProperty("atlappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		/*//Click on Exhibit Tab
 		atlva.getAttend().click();
@@ -891,7 +884,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		utl=new Utility(driver);
 
 		driver.get(prop.getProperty("atlappurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfoATL());
@@ -1092,7 +1085,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		lp = new UXPLoginPage(driver);
 		utl = new Utility(driver);
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		/*//Navigate to Atlanta Apparel site
 		driver.get(prop.getProperty("atlappurl"));;
 		Thread.sleep(8000);
@@ -1114,7 +1107,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
 		ps = new UXPProfileAndSettingsPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Profile and Settings tab under Market Planner and verify result
 		ps.getWelcomeText().click();
@@ -1135,7 +1128,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		atlps = new ATLProfileAndSettingsPage(driver);
 		amexh = new AMExhibitTabPage(driver);
 		el = new pageObjects.ExhibitorPortal.EXPLoginPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlps.getATLWelcomeText().click();
 		atlps.getAMCExhibitorPortalOptn().click();

@@ -1,8 +1,8 @@
 package PROD;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-import org.junit.Assert;
+import java.time.Duration;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -55,7 +55,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(3000);
@@ -74,7 +74,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//The purpose of this test case to verify:-
 		//UXP-: To verify header channel links
 		hd = new UXPHeaderChannelLinksPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		//Old Code
 /*		
@@ -314,7 +314,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 
 		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);			
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));			
 		Thread.sleep(3000);
 
 		//Click on Exhibit tab
@@ -452,7 +452,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(4000);
 
 		//Click ExhibitorsAndProductsTab at Header
@@ -520,7 +520,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		mi = new UXPMarketInfoPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		//Click Market Info tab at Header
 		mi.getMarketInfoHeader().click();
@@ -605,7 +605,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		at = new UXPAttendPage(driver);
 		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Attend tab at Header
 
@@ -718,7 +718,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		mi = new UXPMarketInfoPage(driver);
 		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(7000);
 		//Click on Explore Market tab
 		expmrkt.getExploreMarketTab().click();
@@ -804,7 +804,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		ed = new UXPExhibitorDirectoryPage(driver);
 		
 		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify exhibitor data is displayed or not as per search criteria
 
@@ -830,7 +830,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		ps = new UXPProfileAndSettingsPage(driver);
 		gs = new UXPGlobalSearchPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		gs.getGlobalSearchTextBox().click();
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitordirectory")));
 		gs.getSearchButton().click();
@@ -852,7 +852,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		fl = new UXPFooterLinksNavigationPage(driver);
 		
 		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(1000);
 		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfo());
@@ -1047,7 +1047,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		fl = new UXPFooterLinksNavigationPage(driver);
 		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
@@ -1162,7 +1162,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		yr = new UXPYearRoundPage(driver);
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get(prop.getProperty("lvmurl"));
 		Thread.sleep(3000);
 		//utl.scrollToElement(yr.getYearRoundTab());
@@ -1234,7 +1234,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		
 		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify Market Recap link is working properly
 		lap.getMarketRecap().click();
@@ -1249,7 +1249,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//UXP-T782: To verify Exhibitor Directory
 		lap = new UXPLandingPage(driver);
 		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify Plan your market link is working properly
 		lap.getplanYourMarket().click();
@@ -1266,7 +1266,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//		driver.get(prop.getProperty("lvmurl"));
 		//		utl.verifyCloseBtnPopup();
 
@@ -1286,7 +1286,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		//UXP-003: To verify Profile and Settings option in Market Planner
 
 		ps = new UXPProfileAndSettingsPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Profile and Settings tab under Market Planner and verify result
 		ps.getWelcomeText().click();

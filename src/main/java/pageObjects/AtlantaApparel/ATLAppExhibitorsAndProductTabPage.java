@@ -1,5 +1,7 @@
 package pageObjects.AtlantaApparel;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,22 +19,21 @@ public class ATLAppExhibitorsAndProductTabPage
 	By AtlAppExhibitorsAndProducts = By.xpath("//*[contains(text(), 'Exhibitors & Products')]"); //Locator for Exhibitors and Products
 	
 	public ATLAppExhibitorsAndProductTabPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getATLAppFloorplans()throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlaappfloorplans));
 		return driver.findElement(atlaappfloorplans);
 	}
 	public WebElement getATLAppatlaappCategories()throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlaappCategories));
 		return driver.findElement(atlaappCategories);
 	}
 	public WebElement getAtlAppExhibitorsAndProducts()throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlAppExhibitorsAndProducts));
 		return driver.findElement(AtlAppExhibitorsAndProducts);
 	}

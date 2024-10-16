@@ -1,5 +1,7 @@
 package pageObjects.AmericasMart;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,53 +24,54 @@ public class AMExhibitTabPage {
 		By amcExpGuide=By.xpath("//a[contains(text(),'Exhibitor Portal Guide')]");//EXP Guide
 		
 		public AMExhibitTabPage(WebDriver driver) {
-			// TODO Auto-generated constructor stub
 			this.driver = driver; 			
 		} 
 
 		public WebElement getamcExhibitTab() throws InterruptedException {
 			Thread.sleep(3000);
-			wait = new WebDriverWait (driver,30);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(amcExhibitTab));
 			return driver.findElement(amcExhibitTab);
 		}
 		
 		public WebElement getExhibitAtAmc() throws InterruptedException {
-			wait = new WebDriverWait (driver,30);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(amcExhibitAtAmc));
 			return driver.findElement(amcExhibitAtAmc);
 		}
 		public WebElement getLeasingandExhibitOptions() throws InterruptedException {
-			wait = new WebDriverWait (driver,30);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 			wait.until(ExpectedConditions.elementToBeClickable(amcLeasingExhibitOptions));
 			return driver.findElement(amcLeasingExhibitOptions);
 		}
 		public WebElement getAdvertising() throws InterruptedException {
-			wait = new WebDriverWait (driver,30);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 			wait.until(ExpectedConditions.elementToBeClickable(amcAdvertising));
 			return driver.findElement(amcAdvertising);
 		}
 		public WebElement getExpLogin() throws InterruptedException {
-			wait = new WebDriverWait (driver,30);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 			wait.until(ExpectedConditions.elementToBeClickable(amcExpLogin));
 			return driver.findElement(amcExpLogin);
 		}
 		public WebElement getExpPortalHeader() throws InterruptedException {
-			wait = new WebDriverWait (driver,30);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(amcExpPotalHeader));
 			return driver.findElement(amcExpPotalHeader);
 		}
 		public WebElement getExpFAQs() throws InterruptedException {
-			wait = new WebDriverWait (driver,30);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 			wait.until(ExpectedConditions.elementToBeClickable(amcExhFAQ));
 			return driver.findElement(amcExhFAQ);
 		}
 		public WebElement getAMCExhibitBrdcrumb() throws InterruptedException {
 			Thread.sleep(8000);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+			wait.until(ExpectedConditions.elementToBeClickable(amcexhibitbrdcrumb));
 			return driver.findElement(amcexhibitbrdcrumb);
 		}
 		public WebElement getExpGuide() throws InterruptedException {
-			wait = new WebDriverWait (driver,30);
+			wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 			wait.until(ExpectedConditions.elementToBeClickable(amcExpGuide));
 			return driver.findElement(amcExpGuide);
 		}

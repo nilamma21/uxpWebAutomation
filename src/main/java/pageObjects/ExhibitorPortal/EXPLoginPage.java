@@ -1,5 +1,7 @@
 package pageObjects.ExhibitorPortal;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,34 +20,33 @@ public class EXPLoginPage {
 	By HomeIcon = By.xpath("//svg[contains(id(), 'Capa' ]"); //Locator for Home icon
 	
 	public EXPLoginPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 	
 	public WebElement getEmailAddress() {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(emailaddress));
 		return driver.findElement(emailaddress);		
 	}
 	
 	public WebElement getPassword() {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(password));
 		return driver.findElement(password);		
 	}
 	
 	public WebElement getSignInBtn() {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(signinbtn));
 		return driver.findElement(signinbtn);		
 	}
 
 	public WebElement getVerifyExpHomePage() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyExpHomePage));
 		Thread.sleep(10000);
 		return driver.findElement(VerifyExpHomePage);		
@@ -53,7 +54,7 @@ public class EXPLoginPage {
 	
 	public WebElement getHomeIcon() {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(HomeIcon));
 		return driver.findElement(HomeIcon);		
 	}
