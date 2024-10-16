@@ -1,5 +1,7 @@
 package pageObjects.ExhibitorPortal;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,12 +17,11 @@ public class EXPNotificationsTabPage {
 	
 	
 	public EXPNotificationsTabPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getNotifications() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(Notifications));
 		return driver.findElement(Notifications);
 

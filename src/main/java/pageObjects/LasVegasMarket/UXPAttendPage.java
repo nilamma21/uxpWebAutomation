@@ -1,12 +1,11 @@
 package pageObjects.LasVegasMarket;
 
-import java.util.List;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UXPAttendPage {
@@ -29,95 +28,94 @@ public class UXPAttendPage {
 	By LVMPlanYourMarket = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Plan Your Market')]");
 	
 	public UXPAttendPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getWhyAttend() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(WhyAttend));
 		return driver.findElement(WhyAttend);
 	}
 	
 	public WebElement getRegistration() throws InterruptedException{
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Registration));
 		return driver.findElement(Registration);
 	}
 
 	public WebElement getInternational() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(International));
 		return driver.findElement(International);
 	}
 	
 	public WebElement getHotels() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Hotels));
 		return driver.findElement(Hotels);
 	}
 	
 	public WebElement getTravel() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Travel));
 		return driver.findElement(Travel);
 	}
 	
 	public WebElement getMarketPlanner() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(MarketPlanner));
 		return driver.findElement(MarketPlanner);
 	}
 	
 	public WebElement getDining() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Dining));
 		return driver.findElement(Dining);
 	}
 	
 	public WebElement getAmenities() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Amenities));
 		return driver.findElement(Amenities);
 	}
 	
 	public WebElement getAccessibility() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Accessibility));
 		return driver.findElement(Accessibility);
 	}
 	
 	public WebElement getDownloadApp() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(DownloadApp));
 		return driver.findElement(DownloadApp);
 	}
 	
 	public WebElement getAttend() throws InterruptedException{
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Attend));
 		return driver.findElement(Attend);
 	}
 	
 	public WebElement getVerifyAttendSection() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(VerifyAttendSection));
 		return driver.findElement(VerifyAttendSection);
 	}
 	public WebElement getLVMPlanYourMarket() {
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(LVMPlanYourMarket));
 		return driver.findElement(LVMPlanYourMarket);
 	}

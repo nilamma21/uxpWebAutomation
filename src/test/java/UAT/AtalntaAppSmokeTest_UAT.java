@@ -1,14 +1,12 @@
 package UAT;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Assert;
+import java.time.Duration;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import pageObjects.AmericasMart.AMAboutTabPage;
 import pageObjects.AmericasMart.AMExhibitTabPage;
 import pageObjects.AmericasMart.AMFooterLinksNavigationPage;
@@ -35,7 +33,6 @@ import pageObjects.AtlantaMarket.ATLNewsAndTrendsTabPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.AtlantaMarket.ATLRegistrationsPage;
 import pageObjects.LasVegasMarket.UXPAttendPage;
-import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorDirectoryPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPExploreMarketPage;
@@ -122,7 +119,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -141,7 +138,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		atlps = new ATLProfileAndSettingsPage(driver);
 		ps = new UXPProfileAndSettingsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Profile and Settings tab under Market Planner and verify result
 		ps.getWelcomeText().click();
@@ -161,7 +158,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		atlps = new ATLProfileAndSettingsPage(driver);
 		amexh = new AMExhibitTabPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlps.getATLWelcomeText().click();
 		atlps.getAMCExhibitorPortalOptn().click();
@@ -190,7 +187,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		gbs = new ATLAppGlobalSearchPage(driver);
 		atlm = new ATLAppMarketsTabPage(driver);
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		gs.getSearchButton().click();
@@ -216,7 +213,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		mi = new UXPMarketInfoPage(driver);
 		atled = new ATLExhibitorDirectoryPage (driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify exhibitor directory page is successfully opened
 		atled.getATLExhibitorDirectory().click();
@@ -256,7 +253,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		atled = new ATLExhibitorDirectoryPage (driver);
 		atlm=new ATLAppMarketsTabPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Markets Tab
 		mi.getMarketInfoHeader().click();
@@ -397,7 +394,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		atlappexh=new ATLAppExhibitorsAndProductTabPage(driver);
 		atlexhp=new ATLExhibitorsAndProductsTabPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Exhibitors And Brands Tab
 		exhp.getExhibitorsAndProducts().click();
@@ -451,7 +448,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		atlexhp=new ATLExhibitorsAndProductsTabPage(driver);
 		atat=new ATLAttendPage(driver);		
 		atlatt=new ATLAppAttendTabPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
@@ -604,7 +601,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		atat=new ATLAttendPage(driver);		
 		atlatt=new ATLAppAttendTabPage(driver);
 		atlf=new ATLAppFashionGalleryTabPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
@@ -717,7 +714,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		atlva=new UXPAttendPage(driver);
 		atlExhi=new ATLAppExhibitTabPage(driver);
 		atlexh=new ATLExhibitPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Exhibit Tab
 		atlva.getAttend().click();
@@ -830,7 +827,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		atlexh=new ATLExhibitPage(driver);
 		atly=new UXPYearRoundPage(driver);
 		atlyr=new ATLAppYearRoundTabPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Year Round Tab
 		atly.getYearRoundTab().click();
@@ -874,7 +871,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		fl = new UXPFooterLinksNavigationPage(driver);
 		atlfo=new ATLAppFooterLinksNavigationPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Scroll till footer links
 
@@ -992,7 +989,7 @@ public class AtalntaAppSmokeTest_UAT extends base {
 		atlfo=new ATLAppFooterLinksNavigationPage(driver);
 
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Scroll till footer links
 		utl.scrollToElement(atlfo.getAmericasMart());

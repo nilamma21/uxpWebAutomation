@@ -1,5 +1,7 @@
 package pageObjects.LasVegasMarket;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,27 +17,26 @@ public class UXPLoginPage {
 	By signinbtn= By.xpath("//button[@id='next']"); //Locator for field to click on Sign In button from Login Page
 	
 	public UXPLoginPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 	
 	public WebElement getEmailAddress() {
 		//Wait till Sign In page is displayed
-	  wait = new WebDriverWait (driver,30);
+	  wait = new WebDriverWait(driver, Duration.ofSeconds(40));
       wait.until(ExpectedConditions.elementToBeClickable(emailaddress));
 		return driver.findElement(emailaddress);		
 	}
 	
 	public WebElement getPassword() {
 		//Wait till Sign In page is displayed
-	  wait = new WebDriverWait (driver,30);
+	  wait = new WebDriverWait(driver, Duration.ofSeconds(40));
       wait.until(ExpectedConditions.elementToBeClickable(password));
 		return driver.findElement(password);		
 	}
 	
 	public WebElement getSignInBtn() {
 		//Wait till Sign In page is displayed
-	  wait = new WebDriverWait (driver,30);
+	  wait = new WebDriverWait(driver, Duration.ofSeconds(40));
       wait.until(ExpectedConditions.elementToBeClickable(signinbtn));
 		return driver.findElement(signinbtn);		
 	}

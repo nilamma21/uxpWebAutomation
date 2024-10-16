@@ -1,12 +1,10 @@
 package pageObjects.AtlantaMarket;
 
-import java.util.List;
-
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ATLExhibitorsAndProductsTabPage {
@@ -32,88 +30,93 @@ public class ATLExhibitorsAndProductsTabPage {
 
 
 	public ATLExhibitorsAndProductsTabPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getATLExhibitorsAndProducts() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorsnproducts));
 		return driver.findElement(atlexhibitorsnproducts);
 	}
 
 	public WebElement getATLExhibitorDirectory() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitordirectory));
 		return driver.findElement(atlexhibitordirectory);
 	}
 
 	public WebElement getATLFloorPlans() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlfloorplans));
 		return driver.findElement(atlfloorplans);
 	}
 
 	public WebElement getATLTemporaries() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atltemporaries));
 		return driver.findElement(atltemporaries);
 	}
 
 	public WebElement getATLCategories() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlcategories));
 		return driver.findElement(atlcategories);
 	}
 
 	public WebElement getATLVerifyExhibitorsAndProductsSection() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifyexhibitorsnproductssection));
 		return driver.findElement(atlverifyexhibitorsnproductssection);
 	}
 
 	public WebElement getATLVerifyExhibitorDirectory() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifyexhibitordirectory));
 		return driver.findElement(atlverifyexhibitordirectory);
 	}
 
 	public WebElement getATLVerifyFloorPlans() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifyfloorplans));
 		return driver.findElement(atlverifyfloorplans);
 	}
 
 	public WebElement getATLVerifyCatalogsConnectPage() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifycatalogconnectpage));
 		return driver.findElement(atlverifycatalogconnectpage);
 	}
 	
 	public WebElement getJuniperMarketProd() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(JuniperMarketProd));
 		return driver.findElement(JuniperMarketProd);
 	}
 	public WebElement getATLShopZioLink() {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlshopzio));
 		return driver.findElement(atlshopzio);
 	}
 
 	public WebElement getATLCatalogConnection() {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlcatalogconnection));
 		return driver.findElement(atlcatalogconnection);
 	}
 
 	public WebElement getATLJunpiperMrktUAT() {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atljunipermarketuat));
 		return driver.findElement(atljunipermarketuat);
 	}
 	
 	public WebElement getATLVerifyJuniperMarketUAT() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlverifyjunipermrktpage));
 		return driver.findElement(atlverifyjunipermrktpage);
 	}
 	public WebElement getATLShowSpecialsPROD() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlshowspecialsprod));
 		return driver.findElement(atlshowspecialsprod);
 	}

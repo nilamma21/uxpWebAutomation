@@ -1,12 +1,10 @@
 package pageObjects.AmericasMart;
 
-import java.util.List;
-
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AMFooterLinksNavigationPage {
@@ -22,45 +20,44 @@ public class AMFooterLinksNavigationPage {
 	By lasvegasapparellink = By.xpath("(//a[@href='https://www.lasvegas-apparel.com/'])[position()=2]"); //Locator for Las Vegas Apparel footer link
 	
 	public AMFooterLinksNavigationPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getFacebookIcon() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(FacebookIcon));
 		return driver.findElement(FacebookIcon);
 
 	}
 	
 	public WebElement getTwitterIcon() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(TwitterIcon));
 		return driver.findElement(TwitterIcon);
 
 	}
 
 	public WebElement getInstagramIcon() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(InstagramIcon));
 		return driver.findElement(InstagramIcon);
 
 	}
 
 	public WebElement getYoutubeIcon() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(YoutubeIcon));
 		return driver.findElement(YoutubeIcon);
 	}
 	
 	public WebElement getinternationalmarketcenters() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(internationalmarketcenters));
 		return driver.findElement(internationalmarketcenters);
 	}
 	
 	public WebElement getLasVegasApparelLink() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lasvegasapparellink));
 		return driver.findElement(lasvegasapparellink);
 	}

@@ -1,5 +1,7 @@
 package pageObjects.AmericasMart;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,53 +24,52 @@ public class AMMarketsAndEventsPage {
 	By MarketDatesAndHour = By.xpath("//a[contains(text(),'Market Dates & Hours')]");
 	
 	public AMMarketsAndEventsPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 	
 	public WebElement getFallCashCarry() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(amcfallcashcarry));
 		return driver.findElement(amcfallcashcarry);
 	}
 	
 	public WebElement getYearRoundEvents() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(amcyearroundevents));
 		return driver.findElement(amcyearroundevents);
 	}
 	public WebElement getAtlantaMarket() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlantamarket));
 		return driver.findElement(atlantamarket);
 	}
 	public WebElement getAtlantaApparel() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlantaapparel));
 		return driver.findElement(atlantaapparel);
 	}
 	public WebElement getAMCSpringMarket() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(amcspringmrkt));
 		return driver.findElement(amcspringmrkt);
 	}
 	public WebElement getAMCSpringCashnCarry() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(amcspringcashcarry));
 		return driver.findElement(amcspringcashcarry);
 	}
 	public WebElement getAMCFallMarket() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(amcfallmarket));
 		return driver.findElement(amcfallmarket);
 	}
 	public WebElement getattendournextmarket() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(attendournextmarket));
 		return driver.findElement(attendournextmarket);
 	}
 	public WebElement getMarketDatesAndHour() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MarketDatesAndHour));
 		return driver.findElement(MarketDatesAndHour);
 	}

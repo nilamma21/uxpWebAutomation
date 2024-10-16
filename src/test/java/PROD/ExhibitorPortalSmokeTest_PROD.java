@@ -1,21 +1,15 @@
 package PROD;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Assert;
-import org.openqa.selenium.StaleElementReferenceException;
+import java.time.Duration;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import pageObjects.ExhibitorPortal.*;
 import pageObjects.AmericasMart.AMHeaderLinksPage;
-import pageObjects.AmericasMart.AMOpenYearRoundPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import resources.GenerateData;
@@ -69,7 +63,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		//Navigate to Exhibitor Portal
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("expurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		//Login to EXP
 		el.getEmailAddress().sendKeys(prop.getProperty("username"));
@@ -96,7 +90,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		nt = new EXPNotificationsTabPage(driver);
 		st = new EXPSettingsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Notifications icon and verify results
 		nt.getNotifications().click();
@@ -115,7 +109,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		lp = new UXPLoginPage(driver);
 		st = new EXPSettingsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Settings icon and verify results
 		Thread.sleep(2000);
@@ -179,7 +173,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		el=new EXPLoginPage(driver);
 		st = new EXPSettingsPage(driver);
 		//driver.get(prop.getProperty("expurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		//Verify Exhibitor Registration Page
 		//Click on Registration And Services Tab 
@@ -351,7 +345,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		st = new EXPSettingsPage(driver);
 
 		driver.get(prop.getProperty("expurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("EXP page");
 
 		Thread.sleep(1000);
@@ -507,7 +501,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		st = new EXPSettingsPage(driver);
 		rs = new EXPRegistrationAndServicesTabPage(driver);
 		driver.get(prop.getProperty("expurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		//utl.scrollToTop();
 		//Click on Your Digital Showroom Drop-down
@@ -564,7 +558,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(15000);
 		System.out.println(driver.getCurrentUrl());
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://auth.junipercore.com/"));
@@ -592,7 +586,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		mar=new EXPMarketTabPage(driver);
 		st=new EXPSettingsPage(driver);
 		//driver.get(prop.getProperty("expurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Registration And Services Tab 
 		mar.getEXPMarketTab().click();
@@ -633,7 +627,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		el = new EXPLoginPage(driver);
 		efl = new EXPFooterLinksPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Scroll till footer links
 		utl.scrollToElement(efl.getExhibitorPortalSymbol());
@@ -742,7 +736,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for (String winHandle8 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle8);
 		}
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/Year-Round/LVDC"));
 		System.out.println("Las Vegas design center page is displayed properly.");
 		driver.close();

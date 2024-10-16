@@ -1,12 +1,10 @@
 package pageObjects.LasVegasMarket;
 
-import java.util.List;
-
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UXPProfileAndSettingsPage {
@@ -19,21 +17,20 @@ public class UXPProfileAndSettingsPage {
 	By VerifyProfile = By.xpath("//ul[@class = 'imc-breadcrumb']/li[2]/a[1]"); // Locator for Profile and Settings verification
 	
 	public UXPProfileAndSettingsPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getWelcomeText() throws InterruptedException {
 		//Wait till Sign In page is displayed
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfElementLocated(WelcomeText));
 		return driver.findElement(WelcomeText);
 	}
 
 	public WebElement getProfileAndSettings() {
 		//Wait till Sign In page is displayed
-	  wait = new WebDriverWait (driver,30);
+	  wait = new WebDriverWait(driver, Duration.ofSeconds(40));
       wait.until(ExpectedConditions.visibilityOfElementLocated(ProfileAndSettings));
 		return driver.findElement(ProfileAndSettings);
 	}
@@ -41,7 +38,7 @@ public class UXPProfileAndSettingsPage {
 	public WebElement getVerifyProfile() throws InterruptedException {
 		//Wait till Sign In page is displayed
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyProfile));
 		return driver.findElement(VerifyProfile);
 	}

@@ -1,17 +1,10 @@
 package UAT;
 
 import org.testng.annotations.Test;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import resources.Utility;
@@ -35,14 +28,14 @@ public class AtlantaMarketLoginTest_UAT extends base {
 	public void atlMarketOpen() throws InterruptedException {
 		driver.get(prop.getProperty("atlmarketurl"));
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		lap.getLogin().click();
 		Thread.sleep(5000);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		lp.getEmailAddress().sendKeys(prop.getProperty("username"));
 		lp.getPassword().sendKeys(prop.getProperty("password"));
 		lp.getSignInBtn().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		
 		

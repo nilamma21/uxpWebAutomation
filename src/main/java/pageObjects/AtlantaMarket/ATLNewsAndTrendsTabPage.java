@@ -1,5 +1,7 @@
 package pageObjects.AtlantaMarket;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,130 +40,129 @@ public class ATLNewsAndTrendsTabPage
 	By atlPortmanPeachtreeHeader=By.xpath("//img[@src='https://uat-atlmkt.imcmvdp.com/-/media/Atlanta-Market/Blog/PortmanPeachtree_Logo_wTagline_Horizontal.svg']");//Locator for PortmanPeachtree header
 	
 	public ATLNewsAndTrendsTabPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getATLNewsAndTrendsTap() throws InterruptedException {
 	  Thread.sleep(1000);
-		wait = new WebDriverWait (driver,40);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlNewsAndTrendsTap));
 		return driver.findElement(atlNewsAndTrendsTap);
 	}
 	
 	public WebElement getATLNewsAndTrends() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlNewsAndTrends));
 		return driver.findElement(atlNewsAndTrends);
 	}
 	
 	public WebElement getATLNewsAndTrendsSubmenu() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlsewsntrendssubmenu));
 		return driver.findElement(atlsewsntrendssubmenu);
 	}
 	
 	public WebElement getATLNewsAndTrendsPageHeader() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlNewsAndTrendsPageHeader));
 		return driver.findElement(atlNewsAndTrendsPageHeader);
 	}
 	
 	public WebElement getATLatlMarketSnapshot() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlMarketSnapshot));
 		return driver.findElement(atlMarketSnapshot);
 	}
 	
 	public WebElement getATLMarketSnapshotPageHeader() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlMarketSnapshotPageHeader));
 		return driver.findElement(atlMarketSnapshotPageHeader);
 	}
 	
 	public WebElement getATLWebinarAndEducation() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlWebinarAndEducation));
 		return driver.findElement(atlWebinarAndEducation);
 	}
 	public WebElement getATLWebinarAndEducationPageHeader() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlWebinarAndEducationHeader));
 		return driver.findElement(atlWebinarAndEducationHeader);
 	}
 	public WebElement getATLatlAheadCurve() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlAheadCurve));
 		return driver.findElement(atlAheadCurve);
 	}
 	public WebElement getATLAheadCurvePageHeader() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAheadCurvePageHeader));
 		return driver.findElement(atlAheadCurvePageHeader);
 	}
 	public WebElement getATLShopTheShow() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlShopTheShow));
 		return driver.findElement(atlShopTheShow);
 	}
 	public WebElement getATLShopTheShowPageHeader() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlShopTheShowPageHeader));
 		return driver.findElement(atlShopTheShowPageHeader);
 	}
 	public WebElement getATLPressReleases() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlPressReleases));
 		return driver.findElement(atlPressReleases);
 	}
 	public WebElement getATLPressReleasesPageHeader() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlPressReleasesHeader));
 		return driver.findElement(atlPressReleasesHeader);
 	}
 	public WebElement getATLPublicationsLibrary() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlPublicationsLibrary));
 		return driver.findElement(atlPublicationsLibrary);
 	}
 	public WebElement getATLPublicationsLibraryPageHeader() throws InterruptedException {
 		Thread.sleep(7000);
-//		wait = new WebDriverWait (driver,30);
+//		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(atlPublicationsLibraryHeader));
 		return driver.findElement(atlPublicationsLibraryHeader);
 	}
 	public WebElement getATLInTheNews() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlInTheNews));
 		return driver.findElement(atlInTheNews);
 	}
 	public WebElement getATLInTheNewsPageHeader() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlInTheNewsHeader));
 		return driver.findElement(atlInTheNewsHeader);
 	}
 	public WebElement getATLAtlantaNext() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlAtlantaNext));
 		return driver.findElement(atlAtlantaNext);
 	}
 	public WebElement getATLAtlantaNextHeader() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAtlantaNextHeader));
 		return driver.findElement(atlAtlantaNextHeader);
 	}
 	public WebElement getATLPortmanPeachtree() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlPortmanPeachtree));
 		return driver.findElement(atlPortmanPeachtree);
 	}
 	public WebElement getATLPortmanPeachtreetHeader() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAtlantaNextHeader));
 		return driver.findElement(atlAtlantaNextHeader);
 	}
 	public WebElement getVerifyNewsSection() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyNewsSection));
 		return driver.findElement(VerifyNewsSection);
 	}

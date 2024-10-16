@@ -1,5 +1,7 @@
 package pageObjects.ExhibitorPortal;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,56 +25,55 @@ public class EXPDigitalShowroomTabPage
 	By EXPvalidateprofile = By.xpath("//div[@class='mainContainer']"); //Locator to validate EXP Profile page
 	
 	public EXPDigitalShowroomTabPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getEXPYourDigiShowroom() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPYourDigiShowroom));
 		return driver.findElement(EXPYourDigiShowroom);
 	}
 	
 	public WebElement getEXPProfileInfo() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPProfileInfo));
 		return driver.findElement(EXPProfileInfo);
 	}
 	public WebElement getEXPYourDigiShowroomAllHeader() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		//wait.until(ExpectedConditions.elementToBeClickable(EXPYourDigiShowroomAllHeader));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPYourDigiShowroomAllHeader));
 		return driver.findElement(EXPYourDigiShowroomAllHeader);
 	}
 	public WebElement getEXPlines() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPlines));
 		return driver.findElement(EXPlines);
 	}
 	public WebElement getEXPProduct() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPProduct));
 		return driver.findElement(EXPProduct);
 	}
 	public WebElement getEXPCatalogFlipbooks() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPCatalogFlipbooks));
 		return driver.findElement(EXPCatalogFlipbooks);
 	}
 	public WebElement getEXPJuniperData() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPJuniperData));
 		return driver.findElement(EXPJuniperData);
 	}
 	
 	public WebElement getEXPJuniperDataHeader() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPJuniperDataHeader));
 		return driver.findElement(EXPJuniperDataHeader);
 	}
 	
 	public WebElement getEXPValidateProfile() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPvalidateprofile));
 		return driver.findElement(EXPvalidateprofile);
 	}

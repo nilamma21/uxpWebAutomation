@@ -1,19 +1,13 @@
 package PROD;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Assert;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriverException;
+import java.time.Duration;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import pageObjects.AtlantaApparel.ATLAppFooterLinksNavigationPage;
 import pageObjects.AtlantaMarket.ATLAllChannelsLinksPage;
 import pageObjects.AtlantaMarket.ATLAttendPage;
@@ -26,8 +20,6 @@ import pageObjects.AtlantaMarket.ATLMarketInfoPage;
 import pageObjects.AtlantaMarket.ATLNewsAndTrendsTabPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.AtlantaMarket.ATLRegistrationsPage;
-import pageObjects.LasVegasMarket.UXPAttendPage;
-import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPFooterLinksNavigationPage;
 import pageObjects.LasVegasMarket.UXPHeaderChannelLinksPage;
@@ -74,13 +66,12 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(3000);
 		utl.verifyCloseBtnPopup();
 	}
-
 	
 	@Test(enabled=false)//priority=1
 	public void TS001_ATL_MarketRecap() throws InterruptedException, IOException
@@ -90,7 +81,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		
 		//driver.get(prop.getProperty("atlmrkturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify Market Recap link is working properly
 		lap.getMarketRecap().click();
@@ -104,7 +95,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//The purpose of this test case to verify:-
 		//UXP-T003: To verify global search functionality
 		atlgs = new ATLGlobalSearchPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -113,8 +104,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
 		System.out.println("Global Search functionality is working properly.");
 	}
-
-
+	
 	@Test(priority=3)
 	public void TS003_ATL_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
@@ -126,7 +116,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//Verify exhibitor data is displayed or not as per search criteria
 
 		atled.getATLExhibitorDirectory().click();
@@ -149,7 +139,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		atlmi = new ATLMarketInfoPage(driver);
 		driver.get(prop.getProperty("atlmrkturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify About Page
 		//Click Market Info tab at Header
@@ -274,10 +264,10 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	
 	    //Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
-
+		
 		//Click on Industry Partners sub-menu
 		atlmi.getATLIndustryPartSubMenu().click();
-
+		
 		//Verify that Video Gallery page should be displayed
 		Assert.assertTrue(atlmi.getATLIndusPartPageHeader().isDisplayed());	
 */	
@@ -291,7 +281,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click ExhibitorsAndProductsTab at Header
 		atlexhp.getATLExhibitorsAndProducts().click();
@@ -350,7 +340,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		atlnt = new ATLNewsAndTrendsTabPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.verifyCloseBtnPopup();
 		//atlnt.getATLNewsAndTrends().click();
@@ -457,7 +447,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlmrkturl"));
 		//utl.verifyCloseBtnPopup();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		//Old Code
@@ -694,7 +684,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		fl = new UXPFooterLinksNavigationPage(driver);
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.verifyCloseBtnPopup();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfo());
@@ -753,7 +743,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atat = new ATLAttendPage(driver);
 		
 		driver.get(prop.getProperty("atlmrkturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Attend tab at Header
 		atat.getATLAttendTab().click();
@@ -851,7 +841,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlexh = new ATLExhibitPage(driver);
 		
 		driver.get(prop.getProperty("atlmrkturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);					
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));					
 
 		Thread.sleep(2000);
 		
@@ -935,7 +925,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		utl=new Utility(driver);
 		
 		driver.get(prop.getProperty("atlmrkturl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfo());
@@ -1137,7 +1127,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		//UXP-T783: To verify Exhibitor Directory
 		lap = new UXPLandingPage(driver);
 		driver.get(prop.getProperty("lvmurl"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify Plan your market link is working properly
 		lap.getplanYourMarket().click();
@@ -1155,7 +1145,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
 		utl = new Utility(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -1174,7 +1164,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 
 		lap = new UXPLandingPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Profile and Settings tab under Market Planner and verify result
 		//Thread.sleep(5000);
@@ -1196,7 +1186,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
 		atlregp = new ATLRegistrationsPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Welcome text
 		atlps.getATLWelcomeText().click();
@@ -1224,7 +1214,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

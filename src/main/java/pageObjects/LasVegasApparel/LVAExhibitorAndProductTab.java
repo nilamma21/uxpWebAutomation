@@ -1,5 +1,7 @@
 package pageObjects.LasVegasApparel;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,32 +19,31 @@ public class LVAExhibitorAndProductTab {
 	By LVAFloorPlans = By.xpath("(//a[contains(text(),'Floor Plans')])[1]");
 	
 	public LVAExhibitorAndProductTab(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 	public WebElement getLVAExhibitorAndProductTab() throws InterruptedException {
 	  Thread.sleep(2000);
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAExhibitorAndProductTab));
 		return driver.findElement(LVAExhibitorAndProductTab);
 	}
 	public WebElement getLVAExhibitorDirectory() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAExhibitorDirectory));
 		return driver.findElement(LVAExhibitorDirectory);
 	}
 	public WebElement getLVAListOfBrands() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAListOfBrands));
 		return driver.findElement(LVAListOfBrands);
 	}
 	public WebElement getLVAOpenShowroom() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAOpenShowroom));
 		return driver.findElement(LVAOpenShowroom);
 	}
 	public WebElement getLVAFloorPlans() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAFloorPlans));
 		return driver.findElement(LVAFloorPlans);
 	}

@@ -1,5 +1,7 @@
 package pageObjects.LasVegasMarket;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,13 +17,12 @@ public class UXPExhibitorDirectoryPage {
 	
 	
 	public UXPExhibitorDirectoryPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getExhibitorDirectory() throws InterruptedException {
 		//Wait till Sign In page is displayed
-	    wait = new WebDriverWait (driver,40);
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ExhibitorDirectory));
 		return driver.findElement(ExhibitorDirectory);
 

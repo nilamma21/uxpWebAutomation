@@ -1,14 +1,12 @@
 package UAT;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Assert;
+import java.time.Duration;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import pageObjects.AtlantaMarket.ATLAllChannelsLinksPage;
 import pageObjects.AtlantaMarket.ATLAttendPage;
 import pageObjects.AtlantaMarket.ATLExhibitPage;
@@ -20,11 +18,8 @@ import pageObjects.AtlantaMarket.ATLMarketInfoPage;
 import pageObjects.AtlantaMarket.ATLNewsAndTrendsTabPage;
 import pageObjects.AtlantaMarket.ATLProfileAndSettingsPage;
 import pageObjects.AtlantaMarket.ATLRegistrationsPage;
-import pageObjects.LasVegasMarket.UXPAttendPage;
-import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
 import pageObjects.LasVegasMarket.UXPFooterLinksNavigationPage;
-import pageObjects.LasVegasMarket.UXPHeaderChannelLinksPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import pageObjects.LasVegasMarket.UXPMarketInfoPage;
@@ -81,7 +76,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		lp = new UXPLoginPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
@@ -102,7 +97,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		lap = new UXPLandingPage(driver);
 		atlps = new ATLProfileAndSettingsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Profile and Settings tab under Market Planner and verify result
 		atlps.getATLWelcomeText().click();
@@ -119,7 +114,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 
 		atlgs = new ATLGlobalSearchPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -138,7 +133,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		atlps = new ATLProfileAndSettingsPage(driver);
 		atlregp = new ATLRegistrationsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click on Welcome text
 		atlps.getATLWelcomeText().click();
@@ -160,7 +155,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		atled = new ATLExhibitorDirectoryPage(driver);
 		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Verify exhibitor data is displayed or not as per search criteria
 
@@ -183,7 +178,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 
 		atlmi = new ATLMarketInfoPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Market Info tab at Header
 		atlmi.getATLMarketInfoHeader().click();
@@ -257,7 +252,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 
 		atlexhp = new ATLExhibitorsAndProductsTabPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click ExhibitorsAndProductsTab at Header
 
@@ -326,7 +321,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		lap = new UXPLandingPage(driver);
 		atlexh = new ATLExhibitPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);						
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));						
 
 		//Click on Exhibit tab
 		atlexh.getATLExhibitTab().click();
@@ -414,7 +409,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	
 		atlch = new ATLAllChannelsLinksPage(driver);
 	
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	
 		//Click Atlanta Market channel link and verify result
 		atlch.getAtlantaMarket().click();
@@ -455,7 +450,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 	
 		atlfl = new ATLFooterLinksNavigationPage(driver);
 	
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	
 		//Scroll till footer links
 		utl.scrollToElement(atlfl.getHighPointMarket());
@@ -513,7 +508,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		mi = new UXPMarketInfoPage(driver);
 		fl = new UXPFooterLinksNavigationPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Scroll till footer links
 
@@ -614,7 +609,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		atat = new ATLAttendPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//Click Attend tab at Header
 		atat.getATLAttendTab().click();
@@ -682,7 +677,7 @@ public class AtlantaMarketSmokeTest_UAT extends base {
 		//UXP-T013: To verify the all News & Trends tap Menu and it's redirection
 	
 		atlnt = new ATLNewsAndTrendsTabPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlnt.getATLNewsAndTrends().click();
 	

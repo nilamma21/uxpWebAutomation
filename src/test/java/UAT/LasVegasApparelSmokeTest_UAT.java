@@ -1,17 +1,14 @@
 package UAT;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Assert;
+import java.time.Duration;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import pageObjects.ExhibitorPortal.*;
 import pageObjects.AmericasMart.AMHeaderLinksPage;
-import pageObjects.AmericasMart.AMOpenYearRoundPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 import resources.GenerateData;
@@ -60,7 +57,7 @@ public class LasVegasApparelSmokeTest_UAT extends base {
 				lp = new UXPLoginPage(driver);
 				el = new EXPLoginPage(driver);
 				
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				
 				//Login to Market Planner
 				el.getEmailAddress().sendKeys(prop.getProperty("username"));

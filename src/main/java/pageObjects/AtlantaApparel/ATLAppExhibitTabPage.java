@@ -1,5 +1,7 @@
 package pageObjects.AtlantaApparel;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,12 +19,11 @@ public class ATLAppExhibitTabPage {
 
 
 	public ATLAppExhibitTabPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
 	public WebElement getatlAppExhibitInSocialOccasion() throws InterruptedException {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(atlAppExhibitInSocialOccasion));
 		return driver.findElement(atlAppExhibitInSocialOccasion);
 	}
