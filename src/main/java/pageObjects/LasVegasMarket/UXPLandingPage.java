@@ -26,45 +26,45 @@ public class UXPLandingPage {
 	
 	public WebElement getLogin() throws InterruptedException {
 		Thread.sleep(3000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(loginbtn));
 		return driver.findElement(loginbtn);		
 	}
 	
 	public WebElement getMPLinkText() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(marketplannerlinktext));
 		return driver.findElement(marketplannerlinktext);		
 	}	
 	
 	public WebElement getIUnderstandBtn() throws InterruptedException {
 		Thread.sleep(3000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(iunderstandbtn));
 		return driver.findElement(iunderstandbtn);		
 	}
 	
 	public WebElement getMPSignOutBtn() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpsignoutbtn));
 		return driver.findElement(mpsignoutbtn);		
 	}	
 	
 	public WebElement getCloseMarktAdBtn() throws InterruptedException{
 		Thread.sleep(5000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(closemrktadbtn));
 		return driver.findElement(closemrktadbtn);		
 	}
 	
 	public WebElement getplanYourMarket() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(planYourMarket));
 		return driver.findElement(planYourMarket);
 	}
 	
 	public WebElement getMarketRecap() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(marketRecap));
 		return driver.findElement(marketRecap);
 	}

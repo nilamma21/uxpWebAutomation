@@ -31,74 +31,74 @@ public class ATLAppGlobalSearchPage {
 	} 
 
 	public WebElement getExhibitor()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Exhibitor));
 		return driver.findElement(Exhibitor);
 
 	}
 	public WebElement getProduct()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Product));
 		return driver.findElement(Product);
 
 	}
 	public WebElement getProductHeader()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ProductHeader));
 		return driver.findElement(ProductHeader);
 
 	}
 	public WebElement getProductName()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ProductName));
 		return driver.findElement(ProductName);
 
 	}
 	
 	public WebElement getProductBlock()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ProductBlock));
 		return driver.findElement(ProductBlock);
 
 	}
 
 	public WebElement getAMCProductBlock()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(AMCProductBlock));
 		return driver.findElement(AMCProductBlock);
 
 	}
 
 	public WebElement getAMCProductNameDetails()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(AMCProductNameDetails));
 		return driver.findElement(AMCProductNameDetails);
 
 	}
 
 	public WebElement getAMCProductName()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(AMCProductName));
 		return driver.findElement(AMCProductName);
 
 	}
 
 	public WebElement getATLAPPProductName()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLAPPProductName));
 		return driver.findElement(ATLAPPProductName);
 
 	}
 
 	public WebElement getATLMarktProductName()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLMatktProductName));
 		return driver.findElement(ATLMatktProductName);
 
 	}
 	
 	public WebElement getVerifyGlobalSearch()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLMatktProductName));
 		return driver.findElement(VerifyGlobalSearch);
 

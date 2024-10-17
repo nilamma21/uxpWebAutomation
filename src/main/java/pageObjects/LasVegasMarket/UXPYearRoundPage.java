@@ -29,55 +29,55 @@ public class UXPYearRoundPage {
 	} 
 
 	public WebElement getYearRoundTab() throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(YearRoundTab));
 		return driver.findElement(YearRoundTab);
 	}
 	
 	public WebElement getYearRound(){
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(YearRound));
 		return driver.findElement(YearRound);
 	}
 
 	public WebElement getLasVegasDesignCenter() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LasVegasDesignCenter));
 		return driver.findElement(LasVegasDesignCenter);
 	}
 	
 	public WebElement getExpo() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Expo));
 		return driver.findElement(Expo);
 	}
 	
 	public WebElement getMarketEvents() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MarketEvents));
 		return driver.findElement(MarketEvents);
 	}
 	
 	public WebElement getVenueRental() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(VenueRental));
 		return driver.findElement(VenueRental);
 	}
 	
 	public WebElement getShopzio() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Shopzio));
 		return driver.findElement(Shopzio);
 	}
 	
 	public WebElement getVerifyShopzio() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyShopzio));
 		return driver.findElement(VerifyShopzio);
 	}
 	
 	public WebElement getVerifyYearRoundSection() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyYearRoundSection));
 		return driver.findElement(VerifyYearRoundSection);
 	}

@@ -22,21 +22,21 @@ public class LVAGlobalSearchPage {
 	} 
 	
 	public WebElement getGlobalSearchTextBox() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(GlobalSearchTextBox));
 		return driver.findElement(GlobalSearchTextBox);
 	}
 
 	public WebElement getSearchButton() {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SearchButton));
 		return driver.findElement(SearchButton);
 	}
 	
 	public WebElement getVerifyGlobalSeacrh() throws InterruptedException {
 		//Wait till Sign In page is displayed
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyGlobalSeacrh));
 		return driver.findElement(VerifyGlobalSeacrh);
 	}

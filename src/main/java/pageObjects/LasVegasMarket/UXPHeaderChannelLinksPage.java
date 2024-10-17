@@ -56,75 +56,75 @@ public class UXPHeaderChannelLinksPage {
 
 	// For Atlanta
 	public WebElement getFllCashAndCarryMarketsSpringandFall() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FllCashAndCarryMarketsSpringandFall));
 		return driver.findElement(FllCashAndCarryMarketsSpringandFall);
 	}
 	
 	// For Atlanta
 	public WebElement getCasualMarketAtlantaURL() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(CasualMarketAtlantaURL));
 		return driver.findElement(CasualMarketAtlantaURL);
 	}
 	
 	
 	public WebElement getAtlanta() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Atlanta));
 		return driver.findElement(Atlanta);
 	}
 	
 	public WebElement getAtlantaApparel() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlantaApparel));
 		return driver.findElement(AtlantaApparel);
 	}
 	
 	public WebElement getCasualMarketAtlanta() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(CasualMarketAtlanta));
 		return driver.findElement(CasualMarketAtlanta);
 	}
 	
 	public WebElement getAtlantaMarket() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlantaMarket));
 		return driver.findElement(AtlantaMarket);
 	}
 	
 	public WebElement getFormalMarkets() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FormalMarkets));
 		return driver.findElement(FormalMarkets);
 	}
 	
 	public WebElement getMidSeasonBuyingEventFallMarket() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MidSeasonBuyingEventFallMarket));
 		return driver.findElement(MidSeasonBuyingEventFallMarket);
 	}
 	
 	public WebElement getCashAndCarryMarketsSpringandFall() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(CashAndCarryMarketsSpringandFall));
 		return driver.findElement(CashAndCarryMarketsSpringandFall);
 	}
 	
 	public WebElement getADAC() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ADAC));
 		return driver.findElement(ADAC);
 	}
 	
 	public WebElement getAmericasMart() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AmericasMart));
 		return driver.findElement(AmericasMart);
 	}
 	
 	public WebElement getAtlantaConventionCenter() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlantaConventionCenter));
 		return driver.findElement(AtlantaConventionCenter);
 	}
@@ -132,31 +132,31 @@ public class UXPHeaderChannelLinksPage {
 	// For LasVegas
 	
 	public WebElement getLasVegas() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LasVegas));
 		return driver.findElement(LasVegas);
 	}
 	
 	public WebElement getLasVegasMarket() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LasVegasMarket));
 		return driver.findElement(LasVegasMarket);
 	}
 	
 	public WebElement getLasVegasApparel() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LasVegasApparel));
 		return driver.findElement(LasVegasApparel);
 	}
 	
 	public WebElement getLasVegasDesignCenter() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LasVegasDesignCenter));
 		return driver.findElement(LasVegasDesignCenter);
 	}
 	
 	public WebElement getEXPOatWorldMarketCenterLasVegas() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPOatWorldMarketCenterLasVegas));
 		return driver.findElement(EXPOatWorldMarketCenterLasVegas);
 	}
@@ -164,19 +164,19 @@ public class UXPHeaderChannelLinksPage {
 	// For High Point
 	
 	public WebElement getHighPoint() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(HighPoint));
 		return driver.findElement(HighPoint);
 	}
 	
 	public WebElement getANDMOREatHighPointMarket() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ANDMOREatHighPointMarket));
 		return driver.findElement(ANDMOREatHighPointMarket);
 	}
 	
 	public WebElement getSHOPPEOBJECTHighPoint() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SHOPPEOBJECTHighPoint));
 		return driver.findElement(SHOPPEOBJECTHighPoint);
 	}
@@ -184,13 +184,13 @@ public class UXPHeaderChannelLinksPage {
 	//For New York
 	
 	public WebElement getNewYork() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(NewYork));
 		return driver.findElement(NewYork);
 	}
 	
 	public WebElement getSHOPPEOBJECT() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SHOPPEOBJECT));
 		return driver.findElement(SHOPPEOBJECT);
 	}

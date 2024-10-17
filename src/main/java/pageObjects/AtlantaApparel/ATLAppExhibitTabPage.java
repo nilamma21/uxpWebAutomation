@@ -23,7 +23,7 @@ public class ATLAppExhibitTabPage {
 	} 
 
 	public WebElement getatlAppExhibitInSocialOccasion() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(atlAppExhibitInSocialOccasion));
 		return driver.findElement(atlAppExhibitInSocialOccasion);
 	}

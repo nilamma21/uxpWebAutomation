@@ -26,49 +26,49 @@ public class LVAAllChannelsLinksPage {
 	} 
 	
 	public WebElement getAtlantaMarket() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlantamarket));
 		return driver.findElement(atlantamarket);
 	}
 
 	public WebElement getAtlantaApparel() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlantaapparel));
 		return driver.findElement(atlantaapparel);
 	}
 	
 	public WebElement getAmericasMart() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(americasmart));
 		return driver.findElement(americasmart);
 	}
 	
 	public WebElement getHighPoint() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(highpoint));
 		return driver.findElement(highpoint);
 	}
 	
 	public WebElement getLasVegas() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lasvegas));
 		return driver.findElement(lasvegas);
 	}
 	
 	public WebElement getLasVegasApp() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lasvegasapp));
 		return driver.findElement(lasvegasapp);
 	}
 	
 	public WebElement getcasualMarket() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(casualMarket));
 		return driver.findElement(casualMarket);
 	}
 	
 	public WebElement getformalMarkets() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(formalMarkets));
 		return driver.findElement(formalMarkets);
 	}

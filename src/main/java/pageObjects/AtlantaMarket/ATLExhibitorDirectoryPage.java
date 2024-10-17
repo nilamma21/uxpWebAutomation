@@ -21,18 +21,18 @@ public class ATLExhibitorDirectoryPage {
 	} 
 
 	public WebElement getATLExhibitorDirectory() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitordirectoryoptn));
 		return driver.findElement(atlexhibitordirectoryoptn);
 	}
 
 	public WebElement getATLExhDirtSearchBox() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhdirtsearchtxtbx));
 		return driver.findElement(atlexhdirtsearchtxtbx);
 	}
 	public WebElement getATLExhDirtSearchBtn() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhdirtsearchbtn));
 		return driver.findElement(atlexhdirtsearchbtn);
 	}
