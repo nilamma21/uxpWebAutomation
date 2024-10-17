@@ -31,28 +31,28 @@ public class AMAboutTabPage {
 	}
 	
 	public WebElement getContactUs() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ContactUs));
 		return driver.findElement(ContactUs);
 
 	}
 
 	public WebElement getIndustryPartners() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(IndustryPartners));
 		return driver.findElement(IndustryPartners);
 
 	}
 	
 	public WebElement getErrorAdvancedBtn() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ErrorAdvancedBtn));
 		return driver.findElement(ErrorAdvancedBtn);
 
 	}
 	
 	public WebElement getErrorUnsafeWebLink() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ErrorUnsafeWebLink));
 		return driver.findElement(ErrorUnsafeWebLink);
 

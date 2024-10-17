@@ -127,8 +127,8 @@ public class ATLNewsAndTrendsTabPage
 	}
 	public WebElement getATLPublicationsLibraryPageHeader() throws InterruptedException {
 		Thread.sleep(7000);
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-//		wait.until(ExpectedConditions.visibilityOfElementLocated(atlPublicationsLibraryHeader));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlPublicationsLibraryHeader));
 		return driver.findElement(atlPublicationsLibraryHeader);
 	}
 	public WebElement getATLInTheNews() {
