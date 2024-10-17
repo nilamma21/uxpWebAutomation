@@ -26,37 +26,37 @@ public class LVAExhibitTab{
 
 	public WebElement getLVAExhibitTab() throws InterruptedException {
 	  Thread.sleep(5000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAExhibitTab));
 		return driver.findElement(LVAExhibitTab);
 	}
 	public WebElement getLVAExhibitorPortalLogin() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAExhibitorPortalLogin));
 		return driver.findElement(LVAExhibitorPortalLogin);
 	}
 	public WebElement getLVAExhibitorPortalGuide() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAExhibitorPortalGuide));
 		return driver.findElement(LVAExhibitorPortalGuide);
 	}
 	public WebElement getLVAMarketToolkit() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAMarketToolkit));
 		return driver.findElement(LVAMarketToolkit);
 	}
 	public WebElement getLVAWhyExhibit() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAWhyExhibit));
 		return driver.findElement(LVAWhyExhibit);
 	}
 	public WebElement getLVAAdvertisingAndSponsorship() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAAdvertisingAndSponsorship));
 		return driver.findElement(LVAAdvertisingAndSponsorship);
 	}
 	public WebElement getLVALeasingInquiry() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVALeasingInquiry));
 		return driver.findElement(LVALeasingInquiry);
 	}

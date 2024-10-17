@@ -24,40 +24,40 @@ public class AMFooterLinksNavigationPage {
 	} 
 
 	public WebElement getFacebookIcon() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(FacebookIcon));
 		return driver.findElement(FacebookIcon);
 
 	}
 	
 	public WebElement getTwitterIcon() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(TwitterIcon));
 		return driver.findElement(TwitterIcon);
 
 	}
 
 	public WebElement getInstagramIcon() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(InstagramIcon));
 		return driver.findElement(InstagramIcon);
 
 	}
 
 	public WebElement getYoutubeIcon() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(YoutubeIcon));
 		return driver.findElement(YoutubeIcon);
 	}
 	
 	public WebElement getinternationalmarketcenters() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(internationalmarketcenters));
 		return driver.findElement(internationalmarketcenters);
 	}
 	
 	public WebElement getLasVegasApparelLink() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lasvegasapparellink));
 		return driver.findElement(lasvegasapparellink);
 	}

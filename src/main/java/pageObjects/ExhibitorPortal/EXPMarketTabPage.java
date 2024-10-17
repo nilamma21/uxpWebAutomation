@@ -30,32 +30,32 @@ public class EXPMarketTabPage {
 		return driver.findElement(EXPMarketTab);
 	}
 	public WebElement getEXPManageYourMarket() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPManageYourMarket));
 		return driver.findElement(EXPManageYourMarket);
 	}
 	public WebElement getEXPExhibitorResources() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPExhibitorResources));
 		return driver.findElement(EXPExhibitorResources);
 	}
 	public WebElement getEXPMarket() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPMarket));
 		return driver.findElement(EXPMarket);
 	}
 	public WebElement getEXPManageMarketHeader() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPManageMarketHeader));
 		return driver.findElement(EXPManageMarketHeader);
 	}
 	public WebElement getEXPExhibitorResourcesHeader() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPExhibitorResourcesHeader));
 		return driver.findElement(EXPExhibitorResourcesHeader);
 	}
 	public WebElement getEXPMarketHeader() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPMarketHeader));
 		return driver.findElement(EXPMarketHeader);
 	}

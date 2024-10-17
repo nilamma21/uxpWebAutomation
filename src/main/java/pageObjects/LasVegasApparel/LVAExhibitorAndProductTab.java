@@ -23,27 +23,27 @@ public class LVAExhibitorAndProductTab {
 	} 
 	public WebElement getLVAExhibitorAndProductTab() throws InterruptedException {
 	  Thread.sleep(2000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAExhibitorAndProductTab));
 		return driver.findElement(LVAExhibitorAndProductTab);
 	}
 	public WebElement getLVAExhibitorDirectory() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAExhibitorDirectory));
 		return driver.findElement(LVAExhibitorDirectory);
 	}
 	public WebElement getLVAListOfBrands() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAListOfBrands));
 		return driver.findElement(LVAListOfBrands);
 	}
 	public WebElement getLVAOpenShowroom() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAOpenShowroom));
 		return driver.findElement(LVAOpenShowroom);
 	}
 	public WebElement getLVAFloorPlans() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVAFloorPlans));
 		return driver.findElement(LVAFloorPlans);
 	}

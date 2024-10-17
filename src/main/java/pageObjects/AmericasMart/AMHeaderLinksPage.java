@@ -21,21 +21,21 @@ public class AMHeaderLinksPage {
 	} 
 
 	public WebElement getClosePrompt() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ClosePrompt));
 		return driver.findElement(ClosePrompt);
 
 	}
 	
 	public WebElement getExploreMaketBtn() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ExploreMaketBtn));
 		return driver.findElement(ExploreMaketBtn);
 
 	}
 
 	public WebElement getExhbAndProdsTab() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ExhbAndProdsTab));
 		return driver.findElement(ExhbAndProdsTab);
 

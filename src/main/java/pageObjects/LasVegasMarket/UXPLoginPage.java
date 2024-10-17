@@ -22,21 +22,21 @@ public class UXPLoginPage {
 	
 	public WebElement getEmailAddress() {
 		//Wait till Sign In page is displayed
-	  wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
       wait.until(ExpectedConditions.elementToBeClickable(emailaddress));
 		return driver.findElement(emailaddress);		
 	}
 	
 	public WebElement getPassword() {
 		//Wait till Sign In page is displayed
-	  wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
       wait.until(ExpectedConditions.elementToBeClickable(password));
 		return driver.findElement(password);		
 	}
 	
 	public WebElement getSignInBtn() {
 		//Wait till Sign In page is displayed
-	  wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
       wait.until(ExpectedConditions.elementToBeClickable(signinbtn));
 		return driver.findElement(signinbtn);		
 	}

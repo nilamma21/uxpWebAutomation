@@ -24,7 +24,7 @@ public class AMAboutTabPage {
 	} 
 
 	public WebElement getCareers() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(Careers));
 		return driver.findElement(Careers);
 
@@ -58,11 +58,11 @@ public class AMAboutTabPage {
 
 	}
 	
-	   public WebElement getHistory() throws InterruptedException {
-	        wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-	        wait.until(ExpectedConditions.elementToBeClickable(History));
-	        return driver.findElement(History);
+	public WebElement getHistory() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(History));
+		return driver.findElement(History);
 
-	    }
+	}
 
 }

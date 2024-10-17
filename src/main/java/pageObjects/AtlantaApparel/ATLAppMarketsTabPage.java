@@ -38,97 +38,97 @@ public class ATLAppMarketsTabPage {
 	} 
 
 	public WebElement getATLAppHeaders()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLAppHeaders));
 		return driver.findElement(ATLAppHeaders);
 
 	}
 	public WebElement getATLAppHeadersnext()throws InterruptedException{
 		Thread.sleep(5000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLAppHeadersnext));
 		return driver.findElement(ATLAppHeadersnext);
 
 	}
 	public WebElement getATLAppHeadersnextnext()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLAppHeadersnextnext));
 		return driver.findElement(ATLAppHeadersnextnext);
 
 	}
 	public WebElement getATLAppHeadersnextnextnext()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLAppHeadersnextnextnext));
 		return driver.findElement(ATLAppHeadersnextnextnext);
 
 	}
 	public WebElement getATLAppHeadersProduct()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLAppHeadersProduct));
 		return driver.findElement(ATLAppHeadersProduct);
 	}
 
 	public WebElement getATLCompleteShowDates()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLCompleteShowDates));
 		return driver.findElement(ATLCompleteShowDates);
 
 	}
 	public WebElement getATLPressReleases()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLPressReleases));
 		return driver.findElement(ATLPressReleases);
 
 	}
 	public WebElement getATLInTheNews()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLInTheNews));
 		return driver.findElement(ATLInTheNews);
 
 	}
 	public WebElement getATLAppImage()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLAppImage));
 		return driver.findElement(ATLAppImage);
 	}
 
 	public WebElement getATLAppLink()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLAppLink));
 		return driver.findElement(ATLAppLink);
 	}
 	public WebElement getATLVowImage()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLVowImg));
 		return driver.findElement(ATLVowImg);
 	}
 
 	public WebElement getATLVowLink()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLVowLink));
 		return driver.findElement(ATLVowLink);
 	}
 
 	public WebElement getATLWorldOfPromImg()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLWorldOfPromImg));
 		return driver.findElement(ATLWorldOfPromImg);
 	}
 
 	public WebElement getATLWorldOfPromLink()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLWorldOfPromLink));
 		return driver.findElement(ATLWorldOfPromLink);
 	}
 
 	public WebElement getATLLasVegasAppImg()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLLasVegasAppImg));
 		return driver.findElement(ATLLasVegasAppImg);
 	}
 
 	public WebElement getATLLasVegasAppLink()throws InterruptedException{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLLasVegasAppLink));
 		return driver.findElement(ATLLasVegasAppLink);
 	}

@@ -32,46 +32,46 @@ public class EXPApplicationsAndLeasesTabPage
 	} 
 
 	public WebElement getEXPApplicationsAndLeasesTab() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPApplicationsAndLeasesTab));
 		return driver.findElement(EXPApplicationsAndLeasesTab);
 	}
 
 	public WebElement getEXPAtlantaApplyForTradeshowSpace() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPAtlantaApplyForTradeshowSpace));
 		return driver.findElement(EXPAtlantaApplyForTradeshowSpace);
 	}
 
 	public WebElement getEXPLasVegasGiftHomeTradeshowSpace() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPLasVegasGiftHomeTradeshowSpace));
 		return driver.findElement(EXPLasVegasGiftHomeTradeshowSpace);
 	}
 	public WebElement getEXPLasVegasFurnitureTradeshowSpace() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(EXPLasVegasFurnitureTradeshowSpace));
 		return driver.findElement(EXPLasVegasFurnitureTradeshowSpace);
 	}
 	public WebElement getEXPAtlantaPermanentSpaceHeader() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPAtlantaPermanentSpaceHeader));
 		return driver.findElement(EXPAtlantaPermanentSpaceHeader);
 	}
 	public WebElement getEXPLasVegasGiftAndHomeTradeshowSpaceHeader() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPLasVegasGiftAndHomeTradeshowSpaceHeader));
 		return driver.findElement(EXPLasVegasGiftAndHomeTradeshowSpaceHeader);
 	}
 
 	public WebElement getVerifyPermanantSpace() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyPermanantSpace));
 		return driver.findElement(VerifyPermanantSpace);
 	}
 	
 	public WebElement getVerifyGiftHomeTradeshow() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyGiftHomeTradeshow));
 		return driver.findElement(VerifyGiftHomeTradeshow);
 	}

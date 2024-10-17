@@ -30,75 +30,75 @@ public class ATLAttendPage {
 	} 
 	
 	public WebElement getATLDownloadApp() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ATLDownloadApp));
 		return driver.findElement(ATLDownloadApp);
 	}
 	
 	public WebElement getATLAttendTab() throws InterruptedException {
 		Thread.sleep(10000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendTab));
 		return driver.findElement(ATLAttendTab);
 	}
 	
 	public WebElement getATLWhyAttend() throws InterruptedException {
 		Thread.sleep(10000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ATLWhyAttend));
 		return driver.findElement(ATLWhyAttend);
 	}
 
 	public WebElement getATLRegistration() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ATLRegistration));
 		return driver.findElement(ATLRegistration);
 	}
 	
 	public WebElement getATLAdmissionPolicies() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ATLAdmissionPolicies));
 		return driver.findElement(ATLAdmissionPolicies);
 	}
 	
 	public WebElement getATLTravel() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ATLTravel));
 		return driver.findElement(ATLTravel);
 	}
 	
 	public WebElement getATLDiningGuide() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ATLDiningGuide));
 		return driver.findElement(ATLDiningGuide);
 	}
 	
 	public WebElement getATLServicesAndAmenities() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ATLServicesAndAmenities));
 		return driver.findElement(ATLServicesAndAmenities);
 	}
 	
 	public WebElement getATLTogetherSafely() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(ATLTogetherSafely));
 		return driver.findElement(ATLTogetherSafely);
 	}
 
 	public WebElement getVerifyATLAttendSection() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(VerifyATLAttendSection));
 		return driver.findElement(VerifyATLAttendSection);
 	}
 	
 	public WebElement getATLEventsSubmenu() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlevents));
 		return driver.findElement(atlevents);
 	}
 	  public WebElement getATLPlanYourMarket() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLPlanYourMarket));
 		return driver.findElement(ATLPlanYourMarket);
 	}

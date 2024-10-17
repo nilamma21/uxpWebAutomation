@@ -32,83 +32,83 @@ public class ATLExhibitPage {
 	} 
 	
 	public WebElement getATLExhibitTab() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlexhibittab));
 		return driver.findElement(atlexhibittab);		
 	}
 	
 	public WebElement getATLWhyExhibitMenu() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlwhyexhibitmenu));
 		return driver.findElement(atlwhyexhibitmenu);		
 	}
 	public WebElement getATLExhibitorRegtnMenu() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorregtn));
 		return driver.findElement(atlexhibitorregtn);		
 	}
 	public WebElement getATLExhibitorPortalLoginMenu() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexplogin));
 		return driver.findElement(atlexplogin);		
 	}
 	public WebElement getATLJuniperMenu() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atljunipersubmenu));
 		return driver.findElement(atljunipersubmenu);		
 	}
 	
 	public WebElement getATLExhibitBrdcrumb() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitbrdcrumb));
 		return driver.findElement(atlexhibitbrdcrumb);		
 	}
 
 	public WebElement getATLEXPLoginPageTitle() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexploginpagetitle));
 		return driver.findElement(atlexploginpagetitle);		
 	}
 
 	public WebElement getATLExhibitorResources() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorresources));
 		return driver.findElement(atlexhibitorresources);		
 	}
 	public WebElement getATLExhibitAtAtlanta() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitatatlanta));
 		return driver.findElement(atlexhibitatatlanta);		
 	}
 	public WebElement getATLApplyToExhibit() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlapplytoexhibit));
 		return driver.findElement(atlapplytoexhibit);		
 	}
 
 	public WebElement getATLApplyToExhibitBrdcrmb() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlapplytoexhibitbrdcrmb));
 		return driver.findElement(atlapplytoexhibitbrdcrmb);		
 	}
 	
 	public WebElement getATLExhRegstnBrdcrmb() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhregstnbrdcrmb));
 		return driver.findElement(atlexhregstnbrdcrmb);		
 	}
 
 	public WebElement getATLExhResourcesBrdcrmb() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhresourcesbrdcrumb));
 		return driver.findElement(atlexhresourcesbrdcrumb);		
 	}
 	public WebElement getbuyerFactSheet() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(buyerFactSheet));
 		return driver.findElement(buyerFactSheet);		
 	}

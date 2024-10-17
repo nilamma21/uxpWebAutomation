@@ -9,7 +9,7 @@
   
   <test thread-count="5" name="Test">
     <classes>
-      <class name="AtlantaMarketSmokeTest_PROD"/>
+      <class name="PROD.AtlantaMarketSmokeTest_PROD"/>
     </classes>
   </test>
   
