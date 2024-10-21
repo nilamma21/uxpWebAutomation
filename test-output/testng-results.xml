@@ -1,25 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="100121" started-at="2024-09-03T07:51:06Z" finished-at="2024-09-03T07:52:46Z">
+  <suite started-at="2024-10-21T12:18:39 IST" name="Default suite" finished-at="2024-10-21T12:21:51 IST" duration-ms="192103">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="100121" started-at="2024-09-03T07:51:06Z" finished-at="2024-09-03T07:52:46Z">
-      <class name="PROD.LagVegasMarketSmokeTest_PROD">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@4dfa3a9d]" name="initialize" is-config="true" duration-ms="73552" started-at="2024-09-03T13:21:06Z" finished-at="2024-09-03T13:22:19Z">
+    <test started-at="2024-10-21T12:18:39 IST" name="Default test" finished-at="2024-10-21T12:21:51 IST" duration-ms="192103">
+      <class name="PROD.LVMSmoke_PROD">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:PROD.LVMSmoke_PROD@7139992f]" started-at="2024-10-21T12:18:39 IST" name="initialize" finished-at="2024-10-21T12:20:48 IST" duration-ms="128755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS012_LVM_VerifyAllLinksUnderYearRoundTabTest()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@4dfa3a9d]" name="TS012_LVM_VerifyAllLinksUnderYearRoundTabTest" duration-ms="26548" started-at="2024-09-03T13:22:19Z" finished-at="2024-09-03T13:22:46Z">
+        <test-method signature="TS002_LVM_VerifAllLinksUnderExhibitTabTest()[pri:2, instance:PROD.LVMSmoke_PROD@7139992f]" started-at="2024-10-21T12:20:48 IST" name="TS002_LVM_VerifAllLinksUnderExhibitTabTest" finished-at="2024-10-21T12:21:51 IST" duration-ms="63113" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <span style="pointer-events:none" class="">...</span> is not clickable at point (631, 81). Other element would receive the click: <button class="imc-button imc-navigation--block mobile-menu-1 imc-button imc-section--padded-xlarge imc-section--padded-left-xlarge imc-section--padded-right-xlarge imc-content--gamma imc-content--bold imc-content--height-fit-content imc-content--min-height-100 null " aria-expanded="false" aria-haspopup="true">...</button>
+  (Session info: chrome=129.0.6668.101)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0bf2518915928edd95bc4acaf1fc6db, clickElement {id=f.763AF6A06593D55FB43FB54CD28B34EE.d.9306CD5D79F691B79CA56CDBF2781D11.e.156}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61423}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61423/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f0bf2518915928edd95bc4acaf1fc6db)] -> xpath: (//span[text()='Visit'])[1]]
+Session ID: f0bf2518915928edd95bc4acaf1fc6db]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span style="pointer-events:none" class="">...</span> is not clickable at point (631, 81). Other element would receive the click: <button class="imc-button imc-navigation--block mobile-menu-1 imc-button imc-section--padded-xlarge imc-section--padded-left-xlarge imc-section--padded-right-xlarge imc-content--gamma imc-content--bold imc-content--height-fit-content imc-content--min-height-100 null " aria-expanded="false" aria-haspopup="true">...</button>
+  (Session info: chrome=129.0.6668.101)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0bf2518915928edd95bc4acaf1fc6db, clickElement {id=f.763AF6A06593D55FB43FB54CD28B34EE.d.9306CD5D79F691B79CA56CDBF2781D11.e.156}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61423}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61423/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f0bf2518915928edd95bc4acaf1fc6db)] -> xpath: (//span[text()='Visit'])[1]]
+Session ID: f0bf2518915928edd95bc4acaf1fc6db
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at PROD.LVMSmoke_PROD.TS002_LVM_VerifAllLinksUnderExhibitTabTest(LVMSmoke_PROD.java:331)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS012_LVM_VerifyAllLinksUnderYearRoundTabTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PROD.LagVegasMarketSmokeTest_PROD@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2024-09-03T13:22:46Z" finished-at="2024-09-03T13:22:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- PROD.LagVegasMarketSmokeTest_PROD -->
+        </test-method> <!-- TS002_LVM_VerifAllLinksUnderExhibitTabTest -->
+      </class> <!-- PROD.LVMSmoke_PROD -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
