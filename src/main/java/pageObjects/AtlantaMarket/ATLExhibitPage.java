@@ -31,7 +31,8 @@ public class ATLExhibitPage {
 		this.driver = driver; 			
 	} 
 	
-	public WebElement getATLExhibitTab() {
+	public WebElement getATLExhibitTab() throws InterruptedException {
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlexhibittab));
 		return driver.findElement(atlexhibittab);		
