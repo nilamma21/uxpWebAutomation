@@ -24,7 +24,7 @@ public class UXPHeaderChannelLinksPage {
 	//New Channel Links
 	By Atlanta = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'ATLANTA')]"); // Locator for New Atlanta header link
 		By AtlantaApparel = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Atlanta Apparel')]"); //Locator For Drop down Atlanta Apparel Link
-		By CasualMarketAtlanta = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Casual Market Atlanta')]"); //Locator For Drop down Casual Market Atlanta Link
+		By CasualMarketAtlanta = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Fall Cash & Carry')]"); //Locator For Drop down Casual Market Atlanta Link
 		By AtlantaMarket = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Atlanta Market')]"); //Locator For Drop down Atlanta Market Link
 		By FormalMarkets = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Formal Markets')]"); //Locator For Drop down Formal Markets Link
 		By MidSeasonBuyingEventFallMarket = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Mid-Season Buying Event: Fall Market')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
@@ -46,8 +46,10 @@ public class UXPHeaderChannelLinksPage {
 	By NewYork = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'NEW YORK')]"); // Locator for New York header link
 		By SHOPPEOBJECT = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'SHOPPE OBJECT')]");  //Locator For Drop down SHOPPE OBJECT Link
 		
-		By CasualMarketAtlantaURL = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Casual Market Atlanta')]/../../.."); //Locator For Drop down Casual Market Atlanta Link		
+		By CasualMarketAtlantaURL = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Casual Market Atlanta')]"); //Locator For Drop down Casual Market Atlanta Link		
 		By FllCashAndCarryMarketsSpringandFall = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Fall Cash & Carry')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
+		
+		//By MidSeasonBuyingEventFallMarket = By.xpath("Mid-Season Buying Event: Fall Market"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
 		
 		
 	public UXPHeaderChannelLinksPage(WebDriver driver) {
