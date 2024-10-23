@@ -14,7 +14,7 @@ public class UXPGlobalSearchPage {
 
 	By GlobalSearchTextBox = By.xpath("//input[@id='input-1']"); // Locator for Global Search field 
 	By SearchButton = By.xpath("//div[@class = 'imc-searchform--button--search']"); //Locator for Seach button for global search
-	By VerifyGlobalSeacrh = By.xpath("//section[@class = 'imc-searchform--section ']/span[1]/div[1]"); // Locator for global search verification
+	By VerifyGlobalSeacrh = By.xpath("(//h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover'])[1]"); // Locator for global search verification
 	
 	public UXPGlobalSearchPage(WebDriver driver) {
 		this.driver = driver; 			
