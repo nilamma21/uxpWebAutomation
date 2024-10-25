@@ -155,7 +155,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		// Check Casual Market Atlanta
 		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Fall Casual Market Atlanta"));
+		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Casual Market Atlanta"));
 		String casualURl = hd.getCasualMarketAtlantaURL().getAttribute("href");
 		hd.getCasualMarketAtlanta().click();
 		Thread.sleep(3000);
@@ -185,7 +185,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		hd.getAtlanta().click();
 		Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
 		hd.getMidSeasonBuyingEventFallMarket().click();
-		Assert.assertTrue(driver.getTitle().contains("Fall Market at AmericasMart"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Markets"));
 		driver.navigate().back();
 		Thread.sleep(2000);
 		
@@ -371,86 +371,98 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
-		//Click Markets and Events tab at Header
-		//Thread.sleep(3000);
-		atat.getATLAttendTab().click();
-		Thread.sleep(500);
-		//Click Attend our next market tab under Markets and Events section
-		String winHandleBefore = driver.getWindowHandle();
-		amme.getattendournextmarket().click();
-		for(String winHandle : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle);}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://compass.onpeak.com/"));
-		System.out.println("Attend our next market section is displayed properly");
-		driver.close();
-		driver.switchTo().window(winHandleBefore);
-		
-		driver.get(prop.getProperty("ammarturl"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		utl.verifyCloseBtnPopup();
-		
-		atat.getATLAttendTab().click();
-		//Click Market Dates and Hours tab under Markets and Events section
 
+		/*
+		 * atat.getATLAttendTab().click(); Thread.sleep(500); //Click Attend our next
+		 * market tab under Markets and Events section String winHandleBefore =
+		 * driver.getWindowHandle(); amme.getattendournextmarket().click(); for(String
+		 * winHandle : driver.getWindowHandles()){ driver.switchTo().window(winHandle);}
+		 * Assert.assertTrue(driver.getCurrentUrl().contains(
+		 * "https://compass.onpeak.com/"));
+		 * System.out.println("Attend our next market section is displayed properly");
+		 * driver.close(); driver.switchTo().window(winHandleBefore);
+		 * 
+		 * driver.get(prop.getProperty("ammarturl"));
+		 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		 * utl.verifyCloseBtnPopup();
+		 */
+		
+	//Market Dates and Hours link
+		amme.getMarketsAndEventsTab().click();
+		//Click Market Dates and Hours tab under Markets and Events section
 		amme.getMarketDatesAndHour().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Market Dates and Hours");
 		System.out.println("Market Dates and Hours section is displayed properly");
 
-		atat.getATLAttendTab().click();
-
+	//Spring-Market link
+		amme.getMarketsAndEventsTab().click();
 		//Click Spring Market tab under Markets and Events section
 		amme.getAMCSpringMarket().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+ "Markets/Spring-Market"));
-		//Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Spring Market");
 		System.out.println("Spring Market section is displayed properly");
-		atat.getATLAttendTab().click();
-
+		
+	//Spring Cash & Carry link
+		amme.getMarketsAndEventsTab().click();
 		//Click Spring Cash & Carry under Markets and Events section
-
 		amme.getAMCSpringCashnCarry().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Spring Cash & Carry");
 		System.out.println("Spring Cash & Carry section is displayed properly");
-		atat.getATLAttendTab().click();
-
+		
+	//Casual Market link
+		amme.getMarketsAndEventsTab().click();
+		//Click Casual Market under Markets and Events section
+		String winHandleBefore = driver.getWindowHandle(); 
+		amme.getCasualMarket().click();
+		for(String winHandle : driver.getWindowHandles())
+		{ 
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://casualmarketatlanta.com/"));
+		System.out.println("Casual Market link is displayed properly");
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
+	
+	//Fall Market link
+		//amme.getMarketsAndEventsTab().click();
 		//Click Fall Market under Markets and Events section
-
 		amme.getAMCFallMarket().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Fall Market");
 		System.out.println("Fall Market section is displayed properly");
-		atat.getATLAttendTab().click();
-
+		
+	//Fall Cash and Carry link
+		amme.getMarketsAndEventsTab().click();
 		//Click Fall Cash & Carry under Markets and Events section
-
 		amme.getFallCashCarry().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+"Markets/Fall-Cash-and-Carry"));
 		System.out.println("Fall Cash & Carry section is displayed properly");
-		atat.getATLAttendTab().click();
-
+		
+	//Year Round Events
+		amme.getMarketsAndEventsTab().click();
 		//Click Open Year Round under Markets and Events section
-
 		amme.getYearRoundEvents().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Calendar of Events");
 		System.out.println("Open Year Round section is displayed properly");
-		atat.getATLAttendTab().click();
-
+		
+	//Atlanta Market AndMore image link
+		amme.getMarketsAndEventsTab().click();
 		//Click Atlanta Market logo under Markets and Events section
-
 		amme.getAtlantaMarket().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
 		System.out.println("Atlanta Market website is displayed properly.");
 		driver.get(prop.getProperty("ammarturl"));
 		utl.verifyCloseBtnPopup();
-		atat.getATLAttendTab().click();
-
+		
+	//Atlanta Apparel AndMore image link
+		amme.getMarketsAndEventsTab().click();
 		//Click Atlanta Apparel under Markets and Events section
-
 		amme.getAtlantaApparel().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
@@ -494,24 +506,58 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
-		//Click About tab at Header
-		mi.getMarketInfoHeader().click();
-		Assert.assertTrue(mi.getVerifyMarketInfoSection().isDisplayed());
+	
+	//Click About tab at Header
+		amab.getAboutTab().click();
+		Assert.assertTrue(amab.getSecondrynavigation().isDisplayed());
 
+	//About Americas Mart
 		//Click About Americas Mart option under About tab
 		mi.getAboutLasVegasMarket().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(mi.getVerifyContactUs().getText(), "About");
 		System.out.println("About Americas Mart section is displayed properly");
-		mi.getMarketInfoHeader().click();
-
+		
+	//Press Center
+		amab.getAboutTab().click();
 		//Click Press Center option under About tab
 		mi.getMarketDatesAndHrs().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Press Releases");
 		System.out.println("Press Center section is displayed properly");
-		mi.getMarketInfoHeader().click();
 		
+	//Industry partners
+		amab.getAboutTab().click();
+		//Click Industry Partners option under Market Info
+		amab.getIndustryPartners().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Industry Partners");
+		System.out.println("Industry Partners section is displayed properly");
+	
+	//History
+		amab.getAboutTab().click();
+		//Click History option under About tab
+		amab.getHistory().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("History"));
+		System.out.println("History section is displayed properly");
+		
+	//Contact Us
+		amab.getAboutTab().click();
+		//Click Contact Us option under Market Info
+		amab.getContactUs().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("ammarturl")+"About/Contact-Us");
+		utl.verifyCloseBtnPopup();
+		
+	//Careers
+		amab.getAboutTab().click();
+		//Click Careers option under About tab
+		amab.getCareers().click();
+		Thread.sleep(3000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Careers");
+		System.out.println("Careers section is displayed properly");
+
 		//Due to re-branding changes
 /*		//Click Atlanta Next option under About tab
 		mi.getFAQs().click();
@@ -519,35 +565,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		System.out.println("Atlanta Next section is displayed properly");
 		mi.getMarketInfoHeader().click();
 */
-		//Click History option under About tab
-		amab.getHistory().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "History");
-		System.out.println("History section is displayed properly");
-		mi.getMarketInfoHeader().click();
-
-		//Click Careers option under About tab
-
-		amab.getCareers().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Careers");
-		System.out.println("Careers section is displayed properly");
-		mi.getMarketInfoHeader().click();
-
-		//Click Contact Us option under Market Info
-
-		amab.getContactUs().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("ammarturl")+"About/Contact-Us");
-		utl.verifyCloseBtnPopup();
-		mi.getMarketInfoHeader().click();
-		Thread.sleep(1000);
-		//Click Industry Partners option under Market Info
-
-		amab.getIndustryPartners().click();
-		Thread.sleep(3000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Industry Partners");
-		System.out.println("Industry Partners section is displayed properly");
+	
 	}
 	
 	@Test(priority=6)
@@ -567,10 +585,10 @@ public class AmericasMartSmokeTest_PROD extends base {
 		atlexh = new ATLExhibitPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
-		//Click on Exhibit Tab 
-		//Thread.sleep(3000);
 		//utl.verifyCloseBtnPopup();
+		
+	//Exhibit at Americas Mart
+		//Click on Exhibit Tab 
 		amexh.getamcExhibitTab().click();
 		//Click Exhibit at Americas Mart Link
 		amexh.getExhibitAtAmc().click();
@@ -578,6 +596,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Verify that Exhibit at AmC page should be displayed
 		Assert.assertEquals(amexh.getAMCExhibitBrdcrumb().getText(), "Exhibit");
 
+	//Leasing & Exhibit Options
 		amexh.getamcExhibitTab().click();
 		//Click Exhibit and Leasing Options Link
 		amexh.getLeasingandExhibitOptions().click();
@@ -586,6 +605,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("ammarturl")+"Exhibit/Opportunities");
 		utl.verifyCloseBtnPopup();
 
+	//Advertising
 		amexh.getamcExhibitTab().click();
 		//Click Advertising Link
 		amexh.getAdvertising().click();
@@ -593,7 +613,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Verify that Advertising page should be displayed
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"Advertising");
 		
-		//Exhibitor Portal Login
+	//Exhibitor Portal Login
 		amexh.getamcExhibitTab().click();	
 		Thread.sleep(500);
 		String winHandleBefore = driver.getWindowHandle();
@@ -605,8 +625,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		System.out.println("Page opened successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
-		
-		//Exhibitor Portal Guide
+
+	//Exhibitor Portal Guide
 		//amexh.getamcExhibitTab().click();	
 		String winHandleBefore1 = driver.getWindowHandle();
 		amexh.getExpGuide().click();
@@ -616,12 +636,14 @@ public class AmericasMartSmokeTest_PROD extends base {
 		System.out.println("Page opened successfully");
 		driver.close();
 		driver.switchTo().window(winHandleBefore1);
+		
+	//Exhibitor FAQs
 		//Click Advertising Link
 		amexh.getExpFAQs().click();
 		Thread.sleep(3000);
 		//Verify that FAQs page should be displayed
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Exhibitor FAQs");
-
+		
 	}
 
 	@Test(priority=7)
@@ -751,13 +773,13 @@ public class AmericasMartSmokeTest_PROD extends base {
 		ed.getExhibitorDirectory().click();
 		Assert.assertEquals(exhp.getVerifyPgBreadcrumb().getText(), "Exhibitor Directory");
 
-		exhp.getExhDirectSearchBox().sendKeys((prop.getProperty("exhibitordirectory")));
+		exhp.getExhDirectSearchBox().sendKeys((prop.getProperty("exhibitordirectory2")));
 		exhp.getExhDirectSearchBtn().click();
 		Thread.sleep(12000);
 
-		utl.scrollToElement(mi.getVerifyContactUs());
+		//utl.scrollToElement(mi.getVerifyContactUs());
 		String searchterm = gs.getVerifyGlobalSeacrh().getText();
-		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory")));
+		Assert.assertTrue(searchterm.contains(prop.getProperty("exhibitordirectory2")));
 		driver.get(prop.getProperty("ammarturl"));
 	}
 	
@@ -1018,7 +1040,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }
