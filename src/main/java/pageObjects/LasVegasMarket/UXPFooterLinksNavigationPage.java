@@ -84,10 +84,39 @@ public class UXPFooterLinksNavigationPage {
 	By lvapplink = By.xpath("(//a[@href='https://www.lasvegas-apparel.com/'])[position()=2]"); //Locator for Las Vegas Apparel footer link
 	By lvmprivacypolicy = By.xpath("(//a[contains(text(),'Privacy Policy')])[position()=2]"); //Locator for Privacy Policy on LVM Footer
 	*/
+	
+	By lvmfooterLinkAbout = By.xpath("//a[@href='/visit/about']"); //Locator for Privacy Policy on LVM Footer
+	By lvmfooterLinkPressCenter = By.xpath("//a[@href='/Press-Center']"); //Locator for press Center on LVM Footer
+	By lvmfooterLinkOurBrands = By.xpath("//div[@class='imc-rich-text']//a[@href='/exhibitor/directory']"); //Locator for press Center on LVM Footer
+	
+	By lvmfooterLinkPrivacyPolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); //Locator for Privacy Policy on LVM Footer
+	
+	 
+	
+	
 	public UXPFooterLinksNavigationPage(WebDriver driver) {
 		this.driver = driver; 			
 	} 
-
+	public WebElement getlvmfooterLinkPrivacyPolicy() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmfooterLinkPrivacyPolicy));
+		return driver.findElement(lvmfooterLinkPrivacyPolicy);
+	}
+	public WebElement getlvmfooterLinkOurBrands() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmfooterLinkOurBrands));
+		return driver.findElement(lvmfooterLinkOurBrands);
+	}
+	public WebElement getlvmfooterLinkPressCenter() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmfooterLinkPressCenter));
+		return driver.findElement(lvmfooterLinkPressCenter);
+	}
+	public WebElement getlvmfooterLinkAbout() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmfooterLinkAbout));
+		return driver.findElement(lvmfooterLinkAbout);
+	}
 	public WebElement getlvmlink_ATL_Footerr() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmlink_ATL_Footer));

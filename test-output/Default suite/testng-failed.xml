@@ -5,8 +5,9 @@
     <classes>
       <class name="PROD.LVMSmoke_PROD">
         <methods>
+          <include name="TS008_LVM_VerifyGlobalSearchFunctionalityTest"/>
           <include name="initialize"/>
-          <include name="TS002_LVM_VerifAllLinksUnderExhibitTabTest"/>
+          <include name="TS001_LVM_VerifyHeaderChannelLinksTest"/>
         </methods>
       </class> <!-- PROD.LVMSmoke_PROD -->
     </classes>

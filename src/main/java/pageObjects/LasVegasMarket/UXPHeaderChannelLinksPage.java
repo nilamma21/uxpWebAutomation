@@ -23,39 +23,50 @@ public class UXPHeaderChannelLinksPage {
 	
 	//New Channel Links
 	By Atlanta = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'ATLANTA')]"); // Locator for New Atlanta header link
-		By AtlantaApparel = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Atlanta Apparel')]"); //Locator For Drop down Atlanta Apparel Link
-		By CasualMarketAtlanta = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Fall Cash & Carry')]"); //Locator For Drop down Casual Market Atlanta Link
-		By AtlantaMarket = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Atlanta Market')]"); //Locator For Drop down Atlanta Market Link
-		By FormalMarkets = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Formal Markets')]"); //Locator For Drop down Formal Markets Link
-		By MidSeasonBuyingEventFallMarket = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Mid-Season Buying Event: Fall Market')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
-		By CashAndCarryMarketsSpringandFall = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Cash & Carry Markets: Spring and Fall')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
-		By ADAC = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'ADAC')]"); //Locator For Drop down ADAC Link
-		By AmericasMart =  By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'AmericasMart')]"); //Locator For Drop down Americas Mart Link
-		By AtlantaConventionCenter = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Atlanta Convention Center')]"); //Locator For Drop down Atlanta Convention Center Link
+	By AtlantaApparel = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Atlanta Apparel')]"); //Locator For Drop down Atlanta Apparel Link
+	By CasualMarketAtlanta = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Fall Cash & Carry')]"); //Locator For Drop down Casual Market Atlanta Link		
+	By AtlantaMarket = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Atlanta Market')]"); //Locator For Drop down Atlanta Market Link		
+	By FormalMarkets = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Formal Markets')]"); //Locator For Drop down Formal Markets Link
+	By MidSeasonBuyingEventFallMarket = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Mid-Season Buying Event: Fall Market')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
+	By CashAndCarryMarketsSpringandFall = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Cash & Carry Markets: Spring and Fall')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
+	By ADAC = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'ADAC')]"); //Locator For Drop down ADAC Link
+	By AmericasMart =  By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'AmericasMart')]"); //Locator For Drop down Americas Mart Link
+	By AtlantaConventionCenter = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Atlanta Convention Center')]"); //Locator For Drop down Atlanta Convention Center Link
 	
 	By LasVegas = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'LAS VEGAS')]"); // Locator for New Las Vegas header link
-		By LasVegasMarket = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Las Vegas Market')]"); //Locator For Drop down Las Vegas Market Link
-		By LasVegasApparel = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Las Vegas Apparel')]"); //Locator For Drop down Las Vegas Apparel Link
-		By LasVegasDesignCenter = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Las Vegas Design Center (LVDC)')]"); //Locator For Drop down Las Vegas Design Center Link
-		By EXPOatWorldMarketCenterLasVegas = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'EXPO at World Market Center Las Vegas')]"); //Locator For Drop down EXPO at World Market Center Las Vegas Link
+	By LasVegasMarket = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Las Vegas Market')]"); //Locator For Drop down Las Vegas Market Link
+	By LasVegasApparel = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Las Vegas Apparel')]"); //Locator For Drop down Las Vegas Apparel Link
+	By LasVegasDesignCenter = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Las Vegas Design Center (LVDC)')]"); //Locator For Drop down Las Vegas Design Center Link
+	By EXPOatWorldMarketCenterLasVegas = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'EXPO at World Market Center Las Vegas')]"); //Locator For Drop down EXPO at World Market Center Las Vegas Link
 		
 	By HighPoint = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'HIGH POINT')]"); // Locator for New High Point header link
-		By ANDMOREatHighPointMarket = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'ANDMORE at High Point Market')]"); //Locator For Drop down ANDMORE at High Point Market Link
-		By SHOPPEOBJECTHighPoint  = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'SHOPPE OBJECT High Point')]"); //Locator For Drop down SHOPPE OBJECT High Point Link
+	By ANDMOREatHighPointMarket = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'ANDMORE at High Point Market')]"); //Locator For Drop down ANDMORE at High Point Market Link
+	By SHOPPEOBJECTHighPoint  = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'SHOPPE OBJECT High Point')]"); //Locator For Drop down SHOPPE OBJECT High Point Link
 		
 	By NewYork = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'NEW YORK')]"); // Locator for New York header link
-		By SHOPPEOBJECT = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'SHOPPE OBJECT')]");  //Locator For Drop down SHOPPE OBJECT Link
+	By SHOPPEOBJECT = By.xpath("//div[@class='top-nav-campus']/descendant::span[contains(text(),'SHOPPE OBJECT')]");  //Locator For Drop down SHOPPE OBJECT Link
 		
-		By CasualMarketAtlantaURL = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Casual Market Atlanta')]"); //Locator For Drop down Casual Market Atlanta Link		
-		By FllCashAndCarryMarketsSpringandFall = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Fall Cash & Carry')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
+	By CasualMarketAtlantaURL = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Casual Market Atlanta')]"); //Locator For Drop down Casual Market Atlanta Link		
+	By FllCashAndCarryMarketsSpringandFall = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Fall Cash & Carry')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
+	By RigisterBtn = By.xpath("//div[@class='top-nav section-wrapper campus-bar']/section/a"); //Locator For Register Btn
+	By SignInBtn = By.xpath("//div[@class='top-nav section-wrapper campus-bar']/section/div[3]/button"); //Locator For Register Btn
 		
-		//By MidSeasonBuyingEventFallMarket = By.xpath("Mid-Season Buying Event: Fall Market"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
 		
 		
 	public UXPHeaderChannelLinksPage(WebDriver driver) {
 		this.driver = driver; 			
 	} 
 
+	public WebElement getSignInBtn() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SignInBtn));
+		return driver.findElement(SignInBtn);
+	}
+	public WebElement getRigisterBtn() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(RigisterBtn));
+		return driver.findElement(RigisterBtn);
+	}
 	// For Atlanta
 	public WebElement getFllCashAndCarryMarketsSpringandFall() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));

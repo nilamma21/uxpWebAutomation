@@ -7,6 +7,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import pageObjects.LasVegasMarket.UXPLoginPage;
 
@@ -78,6 +82,19 @@ public class Utility extends base {
 		  e.getMessage();
 		}
 	}
+    public void clickAndAssertUrl( WebElement linkElement) throws InterruptedException {
+        
+    	
+    	Thread.sleep(2000);
+        String expectedUrl = linkElement.getAttribute("href");  // Get the href attribute
+        linkElement.click();  // Click the link
+        Thread.sleep(2000);
+       // System.out.println("Click on "+linkElement.getText());
+        Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrl));  // Assert the current URL
+        Thread.sleep(3000); 
+        
+    }
+
 
 	
 }
