@@ -12,12 +12,12 @@ public class ATLExhibitorsAndProductsTabPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By atlexhibitorsnproducts = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[1]/a[1]"); //Locator for Exhibitors and Products header tab
+	By atlexhibitorsnproducts = By.xpath("//nav[@class='imc-navigation-container']/descendant::a[contains(text(),'Exhibitors & Products')]"); //Locator for Exhibitors and Products header tab
 	By atlexhibitordirectory = By.xpath("(//a[contains(@href,'/exhibitor/exhibitor-directory')])[position()=2]"); //Locator for ExhibitorDirectory header tab
 	By atlfloorplans = By.xpath("//a[contains(text(), 'Floor Plans')]"); //Locator for Floor Plans header tab
 	By atltemporaries = By.xpath("//a[contains(text(), 'Temporaries')]"); //Locator for Temporaries header tab
 	By atlcategories = By.xpath("//a[contains(text(), 'Categories')]"); //Locator for Categories header tab
-	By atlverifyexhibitorsnproductssection = By.xpath("//div[@class = 'imc-section']/div[1]/div[2]/div[2]"); //Locator for verification of Exhibitors and Products section
+	By atlverifyexhibitorsnproductssection = By.xpath("//div[@class='imc-navigation-2tier']"); //Locator for verification of Exhibitors and Products section
 	By atlverifyexhibitordirectory = By.xpath("//ul[@class = 'imc-breadcrumb']/li[3]/a[1]"); // Locator for Exhibitor Directory text
 	By atlverifyfloorplans = By.xpath("//div[@class = 'imc-campus-view']"); // Locator for floor plans map
 	By atlshopzio = By.xpath("//a[contains(text(), 'ShopZio')]"); //Locator for ShopZio sub-menu

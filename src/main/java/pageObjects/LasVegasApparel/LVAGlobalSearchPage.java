@@ -15,7 +15,7 @@ public class LVAGlobalSearchPage {
 	
 	By GlobalSearchTextBox = By.xpath("//input[@id='input-1']"); // Locator for Global Search field 
 	By SearchButton = By.xpath("//div[@class = 'imc-searchform--button--search']"); //Locator for Seach button for global search
-	By VerifyGlobalSeacrh = By.xpath("//section[@class = 'imc-searchform--section ']/span[1]/div[1]"); // Locator for global search verification
+	By VerifyGlobalSeacrh = By.xpath("//input[@class='imc-searchform--input imc-type--title-1-ui']"); // Locator for global search verification
 	
 	public LVAGlobalSearchPage(WebDriver driver) {
 		this.driver = driver; 			
