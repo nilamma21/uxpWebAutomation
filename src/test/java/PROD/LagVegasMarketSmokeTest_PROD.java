@@ -855,7 +855,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(1000);
 		//Scroll till footer links
-		utl.scrollToElement(fl.getmarketInfo());
+		//utl.scrollToElement(fl.getmarketInfo());
 
 		//Click Market Info link and verify results
 		fl.getmarketInfo().click();
@@ -1052,7 +1052,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		//Scroll till footer links
-		utl.scrollElementIntoMiddle(fl.getmarketInfo());
+		//utl.scrollElementIntoMiddle(fl.getmarketInfo());
 		Thread.sleep(1000);
 		//In app footer click on 'Facebook' icon and verify results
 		fl.getFacebookIcon().click();

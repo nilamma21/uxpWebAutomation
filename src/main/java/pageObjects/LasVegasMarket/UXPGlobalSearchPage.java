@@ -19,7 +19,31 @@ public class UXPGlobalSearchPage {
 	public UXPGlobalSearchPage(WebDriver driver) {
 		this.driver = driver; 			
 	} 
+	public WebElement getGlobalSearchEnterText() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(GlobalSearchEnterText));
+		return driver.findElement(GlobalSearchEnterText);
 
+	}
+
+	public WebElement getVerifyGlobalSeacrhNew() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyGlobalSeacrhNew));
+		return driver.findElement(VerifyGlobalSeacrhNew);
+
+	}
+	public WebElement getSearchButtonNew() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(SearchButtonNew));
+		return driver.findElement(SearchButtonNew);
+
+	}
+	public WebElement getGlobalSearchTextBoxNew() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(GlobalSearchTextBoxNew));
+		return driver.findElement(GlobalSearchTextBoxNew);
+
+	}
 	public WebElement getGlobalSearchTextBox() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(GlobalSearchTextBox));

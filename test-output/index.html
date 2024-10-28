@@ -2,10 +2,12 @@
 
 <html>
   <head>
+  <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -22,21 +24,22 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
+            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
               <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
@@ -47,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\anuppa\AppData\Local\Temp\testng-eclipse-99271555\testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                    <span>C:\Users\swapnili\AppData\Local\Temp\testng-eclipse-1590657380\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -90,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">10 methods,   10 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,8 +103,53 @@
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="PROD.LagVegasMarketSmokeTest_PROD" hash-for-method="TS012_LVM_VerifyAllLinksUnderYearRoundTabTest">TS012_LVM_VerifyAllLinksUnderYearRoundTabTest</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="PROD.LVMSmoke_PROD" class="method navigator-link" hash-for-method="TS001_LVM_VerifyHeaderChannelLinksTest">TS001_LVM_VerifyHeaderChannelLinksTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="PROD.LVMSmoke_PROD" class="method navigator-link" hash-for-method="TS002_LVM_VerifAllLinksUnderExhibitorDirectoryTabTest">TS002_LVM_VerifAllLinksUnderExhibitorDirectoryTabTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="PROD.LVMSmoke_PROD" class="method navigator-link" hash-for-method="TS003_LVM_VerifAllLinksUnderVisitTabTest">TS003_LVM_VerifAllLinksUnderVisitTabTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="PROD.LVMSmoke_PROD" class="method navigator-link" hash-for-method="TS004_LVM_VerifAllLinksUnderDiscoverTabTest">TS004_LVM_VerifAllLinksUnderDiscoverTabTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="PROD.LVMSmoke_PROD" class="method navigator-link" hash-for-method="TS005_LVM_VerifAllLinksUnderExhibitTabTest">TS005_LVM_VerifAllLinksUnderExhibitTabTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="PROD.LVMSmoke_PROD" class="method navigator-link" hash-for-method="TS006_LVM_VerifAllLinksUnderSourceYearRoundTabTest">TS006_LVM_VerifAllLinksUnderSourceYearRoundTabTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="PROD.LVMSmoke_PROD" class="method navigator-link" hash-for-method="TS008_LVM_VerifyGlobalSearchFunctionalityTest">TS008_LVM_VerifyGlobalSearchFunctionalityTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="PROD.LVMSmoke_PROD" class="method navigator-link" hash-for-method="TS009_LVM_VerifyFooterLinksTest">TS009_LVM_VerifyFooterLinksTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="PROD.LVMSmoke_PROD" class="method navigator-link" hash-for-method="TS010_LVM_VerifRegisterButtonTest">TS010_LVM_VerifRegisterButtonTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="PROD.LVMSmoke_PROD" class="method navigator-link" hash-for-method="TS07_LVM_VerifyAllSocialMediaLinksOnFooterTest">TS07_LVM_VerifyAllSocialMediaLinksOnFooterTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +167,77 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">PROD.LagVegasMarketSmokeTest_PROD</span>
+              <span class="class-name">PROD.LVMSmoke_PROD</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS012_LVM_VerifyAllLinksUnderYearRoundTabTest">
-                  </a> <!-- TS012_LVM_VerifyAllLinksUnderYearRoundTabTest -->
-                  <span class="method-name">TS012_LVM_VerifyAllLinksUnderYearRoundTabTest</span>
+                  <a name="TS001_LVM_VerifyHeaderChannelLinksTest">
+                  </a> <!-- TS001_LVM_VerifyHeaderChannelLinksTest -->
+                  <span class="method-name">TS001_LVM_VerifyHeaderChannelLinksTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS002_LVM_VerifAllLinksUnderExhibitorDirectoryTabTest">
+                  </a> <!-- TS002_LVM_VerifAllLinksUnderExhibitorDirectoryTabTest -->
+                  <span class="method-name">TS002_LVM_VerifAllLinksUnderExhibitorDirectoryTabTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS003_LVM_VerifAllLinksUnderVisitTabTest">
+                  </a> <!-- TS003_LVM_VerifAllLinksUnderVisitTabTest -->
+                  <span class="method-name">TS003_LVM_VerifAllLinksUnderVisitTabTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS004_LVM_VerifAllLinksUnderDiscoverTabTest">
+                  </a> <!-- TS004_LVM_VerifAllLinksUnderDiscoverTabTest -->
+                  <span class="method-name">TS004_LVM_VerifAllLinksUnderDiscoverTabTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS005_LVM_VerifAllLinksUnderExhibitTabTest">
+                  </a> <!-- TS005_LVM_VerifAllLinksUnderExhibitTabTest -->
+                  <span class="method-name">TS005_LVM_VerifAllLinksUnderExhibitTabTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS006_LVM_VerifAllLinksUnderSourceYearRoundTabTest">
+                  </a> <!-- TS006_LVM_VerifAllLinksUnderSourceYearRoundTabTest -->
+                  <span class="method-name">TS006_LVM_VerifAllLinksUnderSourceYearRoundTabTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS008_LVM_VerifyGlobalSearchFunctionalityTest">
+                  </a> <!-- TS008_LVM_VerifyGlobalSearchFunctionalityTest -->
+                  <span class="method-name">TS008_LVM_VerifyGlobalSearchFunctionalityTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS009_LVM_VerifyFooterLinksTest">
+                  </a> <!-- TS009_LVM_VerifyFooterLinksTest -->
+                  <span class="method-name">TS009_LVM_VerifyFooterLinksTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS010_LVM_VerifRegisterButtonTest">
+                  </a> <!-- TS010_LVM_VerifRegisterButtonTest -->
+                  <span class="method-name">TS010_LVM_VerifRegisterButtonTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS07_LVM_VerifyAllSocialMediaLinksOnFooterTest">
+                  </a> <!-- TS07_LVM_VerifyAllSocialMediaLinksOnFooterTest -->
+                  <span class="method-name">TS07_LVM_VerifyAllSocialMediaLinksOnFooterTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,20 +245,16 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\anuppa\AppData\Local\Temp\testng-eclipse-99271555\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\swapnili\AppData\Local\Temp\testng-eclipse-1590657380\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot;&gt;
-  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;PROD.LagVegasMarketSmokeTest_PROD&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;TS012_LVM_VerifyAllLinksUnderYearRoundTabTest&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- PROD.LagVegasMarketSmokeTest_PROD --&gt;
+      &lt;class name=&quot;PROD.LVMSmoke_PROD&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -187,16 +294,52 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS012_LVM_VerifyAllLinksUnderYearRoundTabTest')
-data.setCell(0, 2, 'PROD.LagVegasMarketSmokeTest_PROD')
-data.setCell(0, 3, 26548);
+data.setCell(0, 1, 'TS001_LVM_VerifyHeaderChannelLinksTest')
+data.setCell(0, 2, 'PROD.LVMSmoke_PROD')
+data.setCell(0, 3, 430916);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TS009_LVM_VerifyFooterLinksTest')
+data.setCell(1, 2, 'PROD.LVMSmoke_PROD')
+data.setCell(1, 3, 203325);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TS003_LVM_VerifAllLinksUnderVisitTabTest')
+data.setCell(2, 2, 'PROD.LVMSmoke_PROD')
+data.setCell(2, 3, 66314);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TS004_LVM_VerifAllLinksUnderDiscoverTabTest')
+data.setCell(3, 2, 'PROD.LVMSmoke_PROD')
+data.setCell(3, 3, 49491);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'TS006_LVM_VerifAllLinksUnderSourceYearRoundTabTest')
+data.setCell(4, 2, 'PROD.LVMSmoke_PROD')
+data.setCell(4, 3, 26186);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'TS005_LVM_VerifAllLinksUnderExhibitTabTest')
+data.setCell(5, 2, 'PROD.LVMSmoke_PROD')
+data.setCell(5, 3, 22717);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'TS010_LVM_VerifRegisterButtonTest')
+data.setCell(6, 2, 'PROD.LVMSmoke_PROD')
+data.setCell(6, 3, 14804);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'TS008_LVM_VerifyGlobalSearchFunctionalityTest')
+data.setCell(7, 2, 'PROD.LVMSmoke_PROD')
+data.setCell(7, 3, 9519);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'TS07_LVM_VerifyAllSocialMediaLinksOnFooterTest')
+data.setCell(8, 2, 'PROD.LVMSmoke_PROD')
+data.setCell(8, 3, 8539);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'TS002_LVM_VerifAllLinksUnderExhibitorDirectoryTabTest')
+data.setCell(9, 2, 'PROD.LVMSmoke_PROD')
+data.setCell(9, 3, 6002);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 13 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -211,42 +354,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">14 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">PROD.LagVegasMarketSmokeTest_PROD</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS008_LVM_VerifyExhibitorDirectoryTest</span>
-                <br/>
-                <span class="ignored-method-name">TS015_LVM_VerifyMarketPlannerProfileAndSettingsOptionTest</span>
-                <br/>
-                <span class="ignored-method-name">TS004_LVM_VerifyAllLinksUnderExhibitorsAndProductsTabTest</span>
-                <br/>
-                <span class="ignored-method-name">TS001_LVM_VerifyHeaderChannelLinksTest</span>
-                <br/>
-                <span class="ignored-method-name">TS011_LVM_VerifyAllSocialMediaLinksOnFooterTest</span>
-                <br/>
-                <span class="ignored-method-name">TS009_LVM_VerifyGlobalSearchFunctionalityTest</span>
-                <br/>
-                <span class="ignored-method-name">TS002_LVM_VerifAllLinksUnderExhibitTabTest</span>
-                <br/>
-                <span class="ignored-method-name">TS007_LVM_VerifyAllLinksUnderExploreMarketTabTest</span>
-                <br/>
-                <span class="ignored-method-name">TS003_LVM_MarketRecap</span>
-                <br/>
-                <span class="ignored-method-name">TS006_LVM_VerifyAllLinksUnderAttendTabTest</span>
-                <br/>
-                <span class="ignored-method-name">TS005_LVM_VerifyAllLinksUnderMarketInfoTabTest</span>
-                <br/>
-                <span class="ignored-method-name">TS010_LVM_VerifyFooterLinksTest</span>
-                <br/>
-                <span class="ignored-method-name">TS013_LVM_PlanYourMarkett</span>
-                <br/>
-                <span class="ignored-method-name">TS014_LVM_VerifyMarketPlannerLoginTest</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -255,22 +365,55 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">PROD.LagVegasMarketSmokeTest_PROD</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">PROD.LVMSmoke_PROD</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TS012_LVM_VerifyAllLinksUnderYearRoundTabTest</span>
-                <span class="method-start">73554 ms</span>
+                <span class="method-name">TS001_LVM_VerifyHeaderChannelLinksTest</span>
+                <span class="method-start">64455 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">100111 ms</span>
-              </div> <!-- configuration-class after -->
+              <div class="test-method">
+                <span class="method-name">TS002_LVM_VerifAllLinksUnderExhibitorDirectoryTabTest</span>
+                <span class="method-start">495371 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS003_LVM_VerifAllLinksUnderVisitTabTest</span>
+                <span class="method-start">501375 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS004_LVM_VerifAllLinksUnderDiscoverTabTest</span>
+                <span class="method-start">567690 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS005_LVM_VerifAllLinksUnderExhibitTabTest</span>
+                <span class="method-start">617182 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS006_LVM_VerifAllLinksUnderSourceYearRoundTabTest</span>
+                <span class="method-start">639900 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS07_LVM_VerifyAllSocialMediaLinksOnFooterTest</span>
+                <span class="method-start">666089 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS008_LVM_VerifyGlobalSearchFunctionalityTest</span>
+                <span class="method-start">674628 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS009_LVM_VerifyFooterLinksTest</span>
+                <span class="method-start">684149 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS010_LVM_VerifRegisterButtonTest</span>
+                <span class="method-start">887476 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>
