@@ -9,11 +9,11 @@
 	<test thread-count="1" name="SequencialTest">
 		<classes>
 		
-		 <class name="PROD.LagVegasMarketSmokeTest_PROD" />
-		<class name="PROD.AtlantaMarketSmokeTest_PROD" />
-	 	 <!-- <methods>
-	 	 	<include name="TS001_LVM_VerifyHeaderChannelLinksTest"/>
-	 	 </methods> -->
+		 <class name="PROD.LVMSmoke_PROD" />
+		<!--<class name="PROD.AtlantaMarketSmokeTest_PROD" />-->
+	 	  <methods>
+	 	 	<include name="TS002_LVM_VerifAllLinksUnderExhibitorDirectoryTabTest"/>
+	 	 </methods> 
 
 		</classes>
 	</test>
