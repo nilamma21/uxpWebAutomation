@@ -13,6 +13,7 @@ public class AMMarketsAndEventsPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
+	By MarketsAndEventsTab = By.xpath("//a[@class='imc-navigation__tier1Link' and contains(text(),'Markets & Events')]");
 	By amcfallcashcarry = By.xpath("(//a[@href='/Markets/Fall-Cash-and-Carry'])[position()=1]"); // Locator for Fall Cash and Carry
 	By amcyearroundevents = By.xpath("//a[@href='/Year-Round/Calendar-of-Events']"); // Locator for Year Round Events
 	By atlantaapparel = By.xpath("(//a[@href='https://atlanta-apparel.com/'])[position()=2]"); //Locator for Atlanta Apparel logo
@@ -22,6 +23,7 @@ public class AMMarketsAndEventsPage {
 	By atlantamarket = By.xpath("(//a[@href='https://atlantamarket.com/'])[position()=2]"); //Locator for Atlanta Market logo
 	By attendournextmarket = By.xpath("//a[contains(text(),'Attend Our Next Market')]");
 	By MarketDatesAndHour = By.xpath("//a[contains(text(),'Market Dates & Hours')]");
+	By CasualMarket = By.xpath("//a[@href='https://casualmarketatlanta.com/']");
 	
 	public AMMarketsAndEventsPage(WebDriver driver) {
 		this.driver = driver; 			
@@ -73,4 +75,15 @@ public class AMMarketsAndEventsPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MarketDatesAndHour));
 		return driver.findElement(MarketDatesAndHour);
 	}
+	public WebElement getMarketsAndEventsTab() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MarketsAndEventsTab));
+		return driver.findElement(MarketsAndEventsTab);
+	}
+	public WebElement getCasualMarket() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(CasualMarket));
+		return driver.findElement(CasualMarket);
+	}
+	
 }

@@ -13,7 +13,7 @@ public class ATLMarketInfoPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By atlmarketinfoheader = By.xpath("//div[@class ='imc-section']/div[1]/div[1]/div[1]/a[1]"); //Locator for Market Info tab in header
+	By atlmarketinfoheader = By.xpath("//nav[@class='imc-navigation-container']/descendant::a[contains(text(),'Market Info')]"); //Locator for Market Info tab in header
 	By atlaboutsubmenu = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[1]/div[1]/a[1]"); // Locator for About option in Market Info
 	By atldatesandhrssubmenu = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[1]/a[1]"); // Locator for Dates and Hours sub-menu
 	By atlregistrationsubmenu = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Registration')]"); // Locator for Registration sub-menu
@@ -35,6 +35,8 @@ public class ATLMarketInfoPage {
 	By ATLGettingToMarketHeader = By.xpath("//strong[contains(text(), 'GETTING TO')]"); //Locator for getting to market page header
 	By ATLDownloadOurNewApp = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Download our NEW App!')]");//Locator for Download ourNEW App menu
 	By ATLPlanYourMarket = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Plan Your Market')]");
+	By ATLWhatsNew = By.xpath("//a[@href='/Market-Info/Whats-New']");
+	By ATLSafetyandSecurity = By.xpath("//a[@href='/Market-Info/Safety-and-Security']");
 	
 	public ATLMarketInfoPage(WebDriver driver) {
 		this.driver = driver; 			
@@ -154,5 +156,16 @@ public class ATLMarketInfoPage {
 	  wait.until(ExpectedConditions.visibilityOfElementLocated(ATLPlanYourMarket));
 	  return driver.findElement(ATLPlanYourMarket);
   }
+	public WebElement getATLWhatsNew() throws InterruptedException {
+		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		  wait.until(ExpectedConditions.visibilityOfElementLocated(ATLWhatsNew));
+		  return driver.findElement(ATLWhatsNew);
+	  }
+	public WebElement getATLSafetyandSecurity() throws InterruptedException {
+		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		  wait.until(ExpectedConditions.visibilityOfElementLocated(ATLSafetyandSecurity));
+		  return driver.findElement(ATLSafetyandSecurity);
+	  }
   
 }
+

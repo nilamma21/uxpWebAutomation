@@ -13,7 +13,7 @@ public class UXPAttendPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By Attend = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[1]/a[1]"); //Locator for Attend tab in header
+	By Attend = By.xpath("//nav[@class='imc-navigation-container']/descendant::a[contains(text(),'Attend')]"); //Locator for Attend tab in header
 	By WhyAttend = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[1]/div[1]/a[1]"); //Locator for Why Attend tab in header
 	By Registration = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[2]/div[1]/a[1]"); //Locator for Registration under Attend
 	By International = By.xpath("//div[@class ='imc-section']/div[1]/div[4]/div[2]/div[2]/div[2]/a[1]"); //Locator for International under Attend
@@ -26,7 +26,7 @@ public class UXPAttendPage {
 	By DownloadApp = By.xpath("//div[contains(@class,'imc-navigation-col')]/div/a[contains(text(),'Download the App')]"); //Locator for DownloadApp under Attend
 	By VerifyAttendSection = By.xpath("//div[@class = 'imc-section']/div[1]/div[4]/div[2]"); // Locator for Attend section verification
 	By LVMPlanYourMarket = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Plan Your Market')]");
-	
+
 	public UXPAttendPage(WebDriver driver) {
 		this.driver = driver; 			
 	} 
@@ -119,7 +119,7 @@ public class UXPAttendPage {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(LVMPlanYourMarket));
 		return driver.findElement(LVMPlanYourMarket);
 	}
-	
+
 }
 
 
