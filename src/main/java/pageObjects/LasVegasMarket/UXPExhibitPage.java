@@ -29,7 +29,7 @@ public class UXPExhibitPage {
 	By exhibitorresourcesprod = By.xpath("//div[@class = 'imc-section']/div[1]/div[5]/div[2]/div[3]/div[1]/a[1]"); // Locator for Exhibitor Resources option in Exhibit menu
 	By applytoexhibit = By.xpath("(//a[contains(text(),'Apply to Exhibit')])[1]");
 	
-	By exhibittabNew = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/div[1]/div[1]"); //Locator for Exhibit tab
+	By exhibittabNew = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/div[1]/div[4]"); //Locator for Exhibit tab
 	By visitTabNew = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/div[1]/div[2]"); //Locator for Visit tab
 	By discoverTabNew = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/div[1]/div[3]"); //Locator for Discover tab
 	By sourceYearRoundTabNew = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/div[1]/div[5]"); //Locator for Discover tab
@@ -50,16 +50,87 @@ public class UXPExhibitPage {
 	By PlanYourMarketUnderDiscoverTab = By.xpath("(//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Visit/Plan-Your-Market'])[2]"); //Locator for FAQs
 	By WhatsNewUnderDiscoverTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Discover/Whats-New']"); //Locator for FAQs
 	By EventsUnderDiscoverTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Discover/Events-and-Seminars']"); //Locator for FAQs
-	By ExhibitorDirectoryUnderDiscoverTab = By.xpath("(//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/exhibitor/exhibitor-directory'])[2]"); //Locator for FAQs
+	By ExhibitorDirectoryUnderDiscoverTab = By.xpath("(//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Exhibitor Directory')])[1]"); //Locator for FAQs
 	By ExhibitAtLasVegasMarketUnderExhibitTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Exhibit']"); //Locator for FAQs
 	By ExhibitorResourcesUnderExhibitTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Exhibit/Exhibitor-Resources']"); //Locator for FAQs
 	By YearRoundUndersourceYearRoundTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Year-Round']"); //Locator for FAQs
 	By ExhibitorDirectoryUndersourceYearRoundTab = By.xpath("(//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/exhibitor/exhibitor-directory'])[3]"); //Locator for FAQs
 	By ContactUsUndersourceYearRoundTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Contact-Us']"); //Locator for FAQs
 	
+	By exhibitAtLVM = By.xpath("//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Exhibit at Las Vegas Market')]"); //Locator for Exhitbit at LVM
+	By exhibitAtResources = By.xpath("//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Exhibitor Resources')]"); //Locator for Exhitbit at Resources
+	By marketingToolKit = By.xpath("//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Marketing Toolkit')]"); //Locator for Exhitbit at Resources
+	By advertisingAndSponsAndOpprtu = By.xpath("//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Advertising & Sponsorship Opportunities')]"); //Locator for Exhitbit at Resources
+	By alreadyAnExhibitor = By.xpath("//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Already an Exhibitor? Sign In')]"); //Locator for Exhitbit at Resources
+	
+	By atoZBrandList = By.xpath("(//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'A-Z Brand Listing')])[2]"); //Locator for A - Z Brand Listing
+	
+	By floorPlans = By.xpath("(//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Floor Plans')])[2]"); //Locator for Floor Plans
+	By exhibitorDirectoryUnderSourceYearTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/div[1]/div[2]/a[1]"); //Locator for Floor Plans
+	
+	By atoZBrandListUnderSourceYearTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/div[1]/div[2]/a[2]"); //Locator for A - Z Brand Listing
+	By floorPlansUnderSourceYearTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/div[1]/div[2]/a[3]"); //Locator for A - Z Brand Listing
+	By ContactUsUnderSourceYearTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/div[1]/div[3]/a[1]"); //Locator for A - Z Brand Listing
+	
+	
 	public UXPExhibitPage(WebDriver driver) {
 		this.driver = driver; 			
 	}
+	public WebElement getContactUsUnderSourceYearTab() {
+	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(ContactUsUnderSourceYearTab));
+	        return driver.findElement(ContactUsUnderSourceYearTab);
+	    }
+	public WebElement getfloorPlansUnderSourceYearTab() {
+	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(floorPlansUnderSourceYearTab));
+	        return driver.findElement(floorPlansUnderSourceYearTab);
+	    }
+	public WebElement getatoZBrandListUnderSourceYearTab() {
+	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(atoZBrandListUnderSourceYearTab));
+	        return driver.findElement(atoZBrandListUnderSourceYearTab);
+	    }
+	public WebElement getexhibitorDirectoryUnderSourceYearTab() {
+	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(exhibitorDirectoryUnderSourceYearTab));
+	        return driver.findElement(exhibitorDirectoryUnderSourceYearTab);
+	    }
+	public WebElement getfloorPlans() {
+	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(floorPlans));
+	        return driver.findElement(floorPlans);
+	    }
+	public WebElement getatoZBrandList() {
+	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(atoZBrandList));
+	        return driver.findElement(atoZBrandList);
+	    }
+	public WebElement getalreadyAnExhibitor() {
+	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(alreadyAnExhibitor));
+	        return driver.findElement(alreadyAnExhibitor);
+	    }
+	public WebElement getadvertisingAndSponsAndOpprtu() {
+	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(advertisingAndSponsAndOpprtu));
+	        return driver.findElement(advertisingAndSponsAndOpprtu);
+	    }
+	public WebElement getmarketingToolKit() {
+	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(marketingToolKit));
+	        return driver.findElement(marketingToolKit);
+	    }
+	public WebElement getexhibitAtResources() {
+	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(exhibitAtResources));
+	        return driver.findElement(exhibitAtResources);
+	    }
+	public WebElement getexhibitAtLVM() {
+	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(exhibitAtLVM));
+	        return driver.findElement(exhibitAtLVM);
+	    }
 	public WebElement getExhibitAtLasVegasMarketUnderExhibitTab() {
 	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	        wait.until(ExpectedConditions.elementToBeClickable(ExhibitAtLasVegasMarketUnderExhibitTab));

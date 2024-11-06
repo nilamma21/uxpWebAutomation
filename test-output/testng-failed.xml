@@ -3,13 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PROD.LVMSmoke_PROD">
+      <class name="PROD.AmericasMartSmokeTest_PROD">
         <methods>
-          <include name="TS008_LVM_VerifyGlobalSearchFunctionalityTest"/>
           <include name="initialize"/>
-          <include name="TS001_LVM_VerifyHeaderChannelLinksTest"/>
+          <include name="TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest"/>
+          <include name="TS006_AMC_VerifyAllLinksUnderExhibitTest"/>
+          <include name="tearDown"/>
+          <include name="TS008_AMC_VerifyExhibitorDirectoryTest"/>
+          <include name="TS005_AMC_VerifyAllLinksUnderAboutTabTest"/>
+          <include name="TS001_AMC_VerifyAllHeaderChanelLinksTest"/>
         </methods>
-      </class> <!-- PROD.LVMSmoke_PROD -->
+      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
