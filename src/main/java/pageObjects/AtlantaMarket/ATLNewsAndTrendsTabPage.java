@@ -18,29 +18,29 @@ public class ATLNewsAndTrendsTabPage
 	By atlNewsAndTrendsTap = By.xpath("//a[@class='imc-navigation__tier1Link' and contains(text(),'News & Trends')]"); //Locator for News & Trends header tab
 	By VerifyNewsSection = By.xpath("//a[@class='imc-link imc-navigation__tier2Link']"); //Locator for verification of news and trends section
 	By atlNewsAndTrends = By.xpath("//a[contains(text(),'News & Trends')]"); //Locator for News & Trends under header tab
-	By atlsewsntrendssubmenu = By.xpath("(//a[contains(@href,'/News-and-Trends')])[position()=1]"); ////Locator for News & Trends sub menu
+	By atlsewsntrendssubmenu = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'News & Trends')]"); ////Locator for News & Trends sub menu
 	By atlNewsAndTrendsPageHeader = By.xpath("(//a[contains(text(),'News & Trends')])[2]"); //Locator for News & Trends page Header
-	By atlMarketSnapshot = By.xpath("//a[@href='/News-and-Trends/Market-Snapshot' and contains(text(),'Market Snapshot')]"); //Locator for Market Snapshot
+	By atlMarketSnapshot = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Market Snapshot')]"); //Locator for Market Snapshot
 	By atlMarketSnapshotPageHeader = By.xpath("//a[contains(text(),'Market Snapshot')]"); //Locator for Market Snapshot page Header
 	By atlWebinarAndEducation=By.xpath("//a[@href='/News-and-Trends/Webinars-and-Education' and contains(text(),'Webinars & Education')]");////Locator for Webinar & Education page
 	By atlWebinarAndEducationHeader=By.xpath("//a[contains(text(),'Webinars & Education')]");////Locator for Webinar & Education page Header
 	By atlAheadCurve=By.xpath("//a[@href='/News-and-Trends/Ahead-of-the-Curve' and contains(text(),'Ahead of the Curve')]");////Locator for Ahead of the Curve
-	By atlAheadCurvePageHeader=By.xpath("//a[contains(text(),'Ahead of the Curve')]");////Locator for Ahead of the Curve Header
+	By atlAheadCurvePageHeader=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Ahead of the Curve')]");////Locator for Ahead of the Curve Header
 	By atlShopTheShow=By.xpath("//a[@href='/News-and-Trends/Shop-the-Show']");////Locator for Shop the show
 	By atlShopTheShowPageHeader=By.xpath("//a[contains(text(),'Shop the ')]");////Locator for Shop the show page header
-	By atlPressReleases=By.xpath("(//a[@href='/Market-Info/Press-Center' and contains(text(),'Press Releases')])[1]");////Locator for Press Releases
-	By atlPressReleasesHeader=By.xpath("(//a[contains(text(),'Press Releases')])[1]");////Locator for Press Releases header
+	By atlPressReleases=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Press Releases')]");////Locator for Press Releases
+	By atlPressReleasesHeader=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Press Releases')]");////Locator for Press Releases header
 	By atlPublicationsLibrary=By.xpath("//a[@href='/News-and-Trends/publications']");////Locator for Publications Library
-	By atlPublicationsLibraryHeader=By.xpath("//a[contains(text(),'Publications Library')]");//Locator for Publications Library header
+	By atlPublicationsLibraryHeader=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Publications Library')]");//Locator for Publications Library header
 	By atlInTheNews=By.xpath("//a[@href='/News-and-Trends/In-the-News']");////Locator for In the News
-	By atlInTheNewsHeader=By.xpath("//a[contains(text(),'In the News')]");//Locator for In the News header
+	By atlInTheNewsHeader=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'In the News')]");//Locator for In the News header
 	By atlAtlantaNext=By.xpath("//a[@href='/News-and-Trends/Atlanta-Next']");////Locator for Atlanta Next
 	By atlAtlantaNextHeader=By.xpath("(//a[contains(text(),'Atlanta Next')])[1]");//Locator for Atlanta Next header
 	By atlPortmanPeachtree=By.xpath("(//a[@href='/News-and-Trends/Blog'])[position()=2]");////Locator for Portman Peachtree
 	By atlPortmanPeachtreeHeader=By.xpath("//img[@src='https://uat-atlmkt.imcmvdp.com/-/media/Atlanta-Market/Blog/PortmanPeachtree_Logo_wTagline_Horizontal.svg']");//Locator for PortmanPeachtree header
-	By atlMarketPros = By.xpath("//a[@href='/News-and-Trends/Market-Pros']");//Locator for ATL Market Pros
-	By alTheAList = By.xpath("//a[@href='/News-and-Trends/The-A-List']");//Locator for ATL The A A List
-	By atlBlogPost = By.xpath("(//a[@href='/News-and-Trends/Blog'])[position()=1]");//Locator for ATL Blog Post
+	By atlMarketPros = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Market Pros')]");//Locator for ATL Market Pros
+	By alTheAList = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'The ( A ) List')]");//Locator for ATL The A A List
+	By atlBlogPost = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Blog Posts')]");//Locator for ATL Blog Post
 	
 	public ATLNewsAndTrendsTabPage(WebDriver driver) {
 		this.driver = driver;

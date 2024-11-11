@@ -13,12 +13,12 @@ public class AMAboutTabPage {
 	public WebDriverWait wait;
 
 	By AboutTab = By.xpath("//nav[@class='imc-navigation-container']/descendant::a[contains(text(),'About')]"); //About tab
-	By Careers = By.xpath("(//a[@href='/About/Careers'])[position()=1]"); // Locator for Careers in About tab
-	By ContactUs = By.xpath("(//a[@href='/About/Contact-Us'])[position()=1]"); // Locator for Contact Us in About tab
-	By IndustryPartners = By.xpath("//a[@href='/About/Industry-Partners']"); // Locator for Instagram icon in footer links
+	By Careers = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Careers')]"); // Locator for Careers in About tab
+	By ContactUs = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Contact Us')]"); // Locator for Contact Us in About tab
+	By IndustryPartners = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Industry Partners')]"); // Locator for Instagram icon in footer links
 	By ErrorAdvancedBtn = By.xpath("//button[@id = 'details-button']");
 	By ErrorUnsafeWebLink = By.xpath("//a[@id = 'proceed-link']");
-	By History = By.xpath("(//a[@href='/About/History'])[position()=1]");// Locator for Careers in History tab
+	By History = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'History')]");// Locator for Careers in History tab
 	By Secondrynavigation = By.xpath("//div[@class='imc-navigation-2tier']");
 	
 	public AMAboutTabPage(WebDriver driver) {

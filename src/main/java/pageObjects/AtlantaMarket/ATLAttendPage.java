@@ -15,14 +15,14 @@ public class ATLAttendPage {
 	By ATLDownloadApp = By.xpath("//a[@class='imc-navigation-2tier-imageLink']"); // Locator for Download the App link
 	By ATLAttendTab = By.xpath("//nav[@class='imc-navigation-container']/descendant::a[contains(text(),'Attend')]"); // Locator for Attend tab in header
 	By ATLWhyAttend = By.xpath("(//a[@href='/Attend/Why-Attend'])[position()=1]"); //Locator for Why Attend link
-	By ATLRegistration = By.xpath("(//a[@href='/Attend/Registration'])[position()=1]"); //Locator for Registration link
+	By ATLRegistration = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Registration')]"); //Locator for Registration link
 	By ATLAdmissionPolicies = By.xpath("(//a[@href='/Attend/Admission-Policies'])[position()=1]"); //Locator for Admission Policies link
-	By ATLTravel = By.xpath("//a[@href='/Attend/Travel']"); //Locator for Travel link
-	By ATLDiningGuide = By.xpath("//a[@href='/Attend/Dining']"); //Locator for Dining Guide link
-	By ATLServicesAndAmenities = By.xpath("//a[@href='/Attend/Services-and-Amenities']"); //Locator for Service and Amenities
+	By ATLTravel = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Travel')]"); //Locator for Travel link
+	By ATLDiningGuide = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Dining')]"); //Locator for Dining Guide link
+	By ATLServicesAndAmenities = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Services & Amenities')]"); //Locator for Service and Amenities
 	By ATLTogetherSafely = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]/div[4]/div[1]/a[2]"); //Locator for Together Safely logo
 	By VerifyATLAttendSection = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[2]"); //Locator for verification for Attend section
-	By atlevents = By.xpath("//a[@href='/Attend/Events']"); //Locator for Events sub-menu
+	By atlevents = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Events')]"); //Locator for Events sub-menu
 	By ATLPlanYourMarket = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Plan Your Market')]");
 	
 	public ATLAttendPage(WebDriver driver) {

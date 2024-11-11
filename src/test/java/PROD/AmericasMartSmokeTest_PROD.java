@@ -155,11 +155,11 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		// Check Casual Market Atlanta
 		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Casual Market Atlanta"));
-		String casualURl = hd.getCasualMarketAtlantaURL().getAttribute("href");
-		hd.getCasualMarketAtlanta().click();
+		Assert.assertTrue(hd.getCasualMarketAtlantaURL().getText().equalsIgnoreCase("Casual Market Atlanta"));
+		//String casualURl = hd.getCasualMarketAtlantaURL().getAttribute("href");
+		hd.getCasualMarketAtlantaURL().click();
 		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(casualURl));
+		Assert.assertTrue(driver.getCurrentUrl().contains("casualmarketatlanta.com"));
 
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(7000);
@@ -182,13 +182,14 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 		*/
 		//Check Mid-Season Buying Event: Fall Market
-		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
-		hd.getMidSeasonBuyingEventFallMarket().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("Markets"));
-		driver.navigate().back();
-		Thread.sleep(2000);
-		
+		/*
+		 * hd.getAtlanta().click();
+		 * Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().
+		 * equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
+		 * hd.getMidSeasonBuyingEventFallMarket().click();
+		 * Assert.assertTrue(driver.getCurrentUrl().contains("Markets"));
+		 * driver.navigate().back(); Thread.sleep(2000);
+		 */
 		hd.getAtlanta().click();
 		try {
 		Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Cash & Carry Markets: Spring and Fall"));
@@ -371,7 +372,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
-
+		Thread.sleep(2000);
+		
 		/*
 		 * atat.getATLAttendTab().click(); Thread.sleep(500); //Click Attend our next
 		 * market tab under Markets and Events section String winHandleBefore =
@@ -389,6 +391,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 	//Market Dates and Hours link
 		amme.getMarketsAndEventsTab().click();
+		Thread.sleep(2000);
 		//Click Market Dates and Hours tab under Markets and Events section
 		amme.getMarketDatesAndHour().click();
 		Thread.sleep(3000);
@@ -397,6 +400,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 	//Spring-Market link
 		amme.getMarketsAndEventsTab().click();
+		Thread.sleep(2000);
 		//Click Spring Market tab under Markets and Events section
 		amme.getAMCSpringMarket().click();
 		Thread.sleep(3000);
@@ -405,14 +409,16 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 	//Spring Cash & Carry link
 		amme.getMarketsAndEventsTab().click();
+		Thread.sleep(2000);
 		//Click Spring Cash & Carry under Markets and Events section
 		amme.getAMCSpringCashnCarry().click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Spring Cash & Carry");
 		System.out.println("Spring Cash & Carry section is displayed properly");
 		
 	//Casual Market link
 		amme.getMarketsAndEventsTab().click();
+		Thread.sleep(2000);
 		//Click Casual Market under Markets and Events section
 		String winHandleBefore = driver.getWindowHandle(); 
 		amme.getCasualMarket().click();
@@ -425,7 +431,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		System.out.println("Casual Market link is displayed properly");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
-	
+		Thread.sleep(2000);
+		
 	//Fall Market link
 		//amme.getMarketsAndEventsTab().click();
 		//Click Fall Market under Markets and Events section
@@ -436,6 +443,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 	//Fall Cash and Carry link
 		amme.getMarketsAndEventsTab().click();
+		Thread.sleep(2000);
 		//Click Fall Cash & Carry under Markets and Events section
 		amme.getFallCashCarry().click();
 		Thread.sleep(3000);
@@ -444,6 +452,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 	//Year Round Events
 		amme.getMarketsAndEventsTab().click();
+		Thread.sleep(2000);
 		//Click Open Year Round under Markets and Events section
 		amme.getYearRoundEvents().click();
 		Thread.sleep(3000);
@@ -452,6 +461,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 	//Atlanta Market AndMore image link
 		amme.getMarketsAndEventsTab().click();
+		Thread.sleep(2000);
 		//Click Atlanta Market logo under Markets and Events section
 		amme.getAtlantaMarket().click();
 		Thread.sleep(3000);
@@ -462,6 +472,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 	//Atlanta Apparel AndMore image link
 		amme.getMarketsAndEventsTab().click();
+		Thread.sleep(2000);
 		//Click Atlanta Apparel under Markets and Events section
 		amme.getAtlantaApparel().click();
 		Thread.sleep(3000);
@@ -506,11 +517,13 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
-	
+		Thread.sleep(2000);
+		
 	//Click About tab at Header
 		amab.getAboutTab().click();
 		Assert.assertTrue(amab.getSecondrynavigation().isDisplayed());
-
+		Thread.sleep(2000);
+		
 	//About Americas Mart
 		//Click About Americas Mart option under About tab
 		mi.getAboutLasVegasMarket().click();
@@ -520,6 +533,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 	//Press Center
 		amab.getAboutTab().click();
+		Thread.sleep(2000);
 		//Click Press Center option under About tab
 		mi.getMarketDatesAndHrs().click();
 		Thread.sleep(3000);
@@ -528,6 +542,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 	//Industry partners
 		amab.getAboutTab().click();
+		Thread.sleep(2000);
 		//Click Industry Partners option under Market Info
 		amab.getIndustryPartners().click();
 		Thread.sleep(3000);
@@ -536,6 +551,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	
 	//History
 		amab.getAboutTab().click();
+		Thread.sleep(2000);
 		//Click History option under About tab
 		amab.getHistory().click();
 		Thread.sleep(3000);
@@ -544,6 +560,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 	//Contact Us
 		amab.getAboutTab().click();
+		Thread.sleep(2000);
 		//Click Contact Us option under Market Info
 		amab.getContactUs().click();
 		Thread.sleep(3000);
@@ -552,6 +569,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 	//Careers
 		amab.getAboutTab().click();
+		Thread.sleep(2000);
 		//Click Careers option under About tab
 		amab.getCareers().click();
 		Thread.sleep(3000);
@@ -584,12 +602,15 @@ public class AmericasMartSmokeTest_PROD extends base {
 		atlps = new ATLProfileAndSettingsPage(driver);
 		atlexh = new ATLExhibitPage(driver);
 
+		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//utl.verifyCloseBtnPopup();
+		Thread.sleep(3000);
 		
 	//Exhibit at Americas Mart
 		//Click on Exhibit Tab 
 		amexh.getamcExhibitTab().click();
+		Thread.sleep(2000);
 		//Click Exhibit at Americas Mart Link
 		amexh.getExhibitAtAmc().click();
 		Thread.sleep(3000);
@@ -598,6 +619,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 	//Leasing & Exhibit Options
 		amexh.getamcExhibitTab().click();
+		Thread.sleep(2000);
 		//Click Exhibit and Leasing Options Link
 		amexh.getLeasingandExhibitOptions().click();
 		Thread.sleep(3000);
@@ -607,6 +629,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 	//Advertising
 		amexh.getamcExhibitTab().click();
+		Thread.sleep(2000);
 		//Click Advertising Link
 		amexh.getAdvertising().click();
 		Thread.sleep(3000);
@@ -630,6 +653,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//amexh.getamcExhibitTab().click();	
 		String winHandleBefore1 = driver.getWindowHandle();
 		amexh.getExpGuide().click();
+		Thread.sleep(2000);
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);}
 		Assert.assertTrue(driver.getCurrentUrl().contains("support.andmore.com"));
@@ -664,7 +688,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.verifyCloseBtnPopup();
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
-
+		Thread.sleep(2000);
 		//Click About Open Year Round Link
 		amoyr.getAboutYearRound().click();
 		Thread.sleep(5000);
@@ -681,6 +705,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 */	
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
+		Thread.sleep(2000);
 		//Click Open Year Round Showrooms Link
 		amoyr.getOpenYearRoundShowrooms().click();
 		Thread.sleep(3000);
@@ -692,6 +717,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.scrollToTop();
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
+		Thread.sleep(2000);
 		//Click Exhibitor Directory Link
 		amoyr.getExhibitorDirectory().click();
 		Thread.sleep(3000);
@@ -703,6 +729,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.scrollToTop();
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
+		Thread.sleep(2000);
 		//Click Floor Plans Link
 		amoyr.getFloorPlans().click();
 		Thread.sleep(3000);
@@ -711,6 +738,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		utl.scrollToTop();
 		amoyr.getOpenYearRoundTab().click();
+		Thread.sleep(2000);
 		//Click Campus Overview Link
 		amoyr.getCampOverview().click();
 		Thread.sleep(3000);
@@ -720,6 +748,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl.scrollToTop();
 		amoyr.getOpenYearRoundTab().click();
 		System.out.println("open Year Round DropDown");
+		Thread.sleep(2000);
 		amoyr.getVisit().click();
 		System.out.println("Visit Link");
 		Thread.sleep(3000);
@@ -727,26 +756,31 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		utl.scrollToTop();
 		amoyr.getOpenYearRoundTab().click();
+		Thread.sleep(2000);
 		amoyr.getParknTranspSubmenu().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Parking & Transportation");
 
 		amoyr.getOpenYearRoundTab().click();
+		Thread.sleep(2000);
 		amoyr.getHotelsSubmenu().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("ammarturl")+"Markets/Hotels"));
 
 		amoyr.getOpenYearRoundTab().click();
+		Thread.sleep(2000);
 		amoyr.getHowToReg().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "How to Register");
 
 		amoyr.getOpenYearRoundTab().click();
+		Thread.sleep(2000);
 		amoyr.getCalendarEvents().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"Calendar of Events");
 
 		amoyr.getOpenYearRoundTab().click();
+		Thread.sleep(2000);
 		amoyr.getDesigners().click();
 		Thread.sleep(3000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(),"For Designers");

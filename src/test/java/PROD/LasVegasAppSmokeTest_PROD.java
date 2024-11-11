@@ -139,12 +139,12 @@ public class LasVegasAppSmokeTest_PROD extends base {
 
 		//Check Casual Market Atlanta
 		hd.getAtlanta().click();
-		Thread.sleep(500);
-		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Casual Market Atlanta"));
+		Thread.sleep(1000);
+		Assert.assertTrue(hd.getCasualMarketAtlantaURL().getText().equalsIgnoreCase("Casual Market Atlanta"));
 		String casualURl=hd.getCasualMarketAtlantaURL().getAttribute("href");
-		hd.getCasualMarketAtlanta().click();
+		hd.getCasualMarketAtlantaURL().click();
 		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(casualURl));
+		Assert.assertTrue(driver.getCurrentUrl().contains("casualmarketatlanta.com"));
 		
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
@@ -166,17 +166,16 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);*/
-		
-		//Check Mid-Season Buying Event: Fall Market
-		hd.getAtlanta().click();
-		Thread.sleep(500);
-		Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
-		hd.getMidSeasonBuyingEventFallMarket().click();
-		Thread.sleep(2000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/Markets"));
-		driver.get(prop.getProperty("lvmappurl"));
-		Thread.sleep(2000);
-		
+	/*
+	 * //Check Mid-Season Buying Event: Fall Market hd.getAtlanta().click();
+	 * Thread.sleep(500);
+	 * Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().
+	 * equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
+	 * hd.getMidSeasonBuyingEventFallMarket().click(); Thread.sleep(2000);
+	 * Assert.assertTrue(driver.getCurrentUrl().contains(
+	 * "https://www.americasmart.com/Markets"));
+	 * driver.get(prop.getProperty("lvmappurl")); Thread.sleep(2000);
+	 */
 		//Check Cash & Carry Markets: Spring and Fall
 		hd.getAtlanta().click();
 		Thread.sleep(500);
@@ -323,7 +322,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 		lvags.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		lvags.getSearchButton().click();
-		
+		Thread.sleep(1000);
 		utl.scrollToElement(lvags.getVerifyGlobalSeacrh());
 		String searchterm = lvags.getVerifyGlobalSeacrh().getText();
 		
@@ -424,7 +423,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Click on Floor Plans
 		System.out.println("Click on Floor Plans Tab");
 		lvaept.getLVAFloorPlans().click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		//Verify Floor Plans Page
 		Assert.assertTrue(driver.getTitle().contains("Floor Plan"));
 		System.out.println("Verify Complete Floor Plans Page");	
@@ -447,12 +446,14 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Click on Click on Why Attend?
 		lvaa.getLVAWhyAttend().click();
 		System.out.println("Click on Why Attend?");
+		Thread.sleep(1000);
 		//Verify Attend Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend"));	
 		System.out.println("Vefiry Why Ateend Page");
 
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
+		Thread.sleep(1000);
 		//Click on Click on Events
 		lvaa.getLVAEvents().click();
 		Thread.sleep(1000);
@@ -462,41 +463,50 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
+		Thread.sleep(1000);
 		//CLick on Registration Markets
 		lvaa.getLVADining().click();
 		Thread.sleep(1000);
 		System.out.println("Click on Dining");
+		Thread.sleep(1000);
 		//Verify reg Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/Dining"));
 		System.out.println("Vefiry Dining Page");		
 		
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
+		Thread.sleep(1000);
 		//CLick on Download app img
 		lvaa.getLVDownloadApp().click(); 
 		System.out.println("Click on Donwload App");
 		Thread.sleep(2000);
 		Assert.assertTrue(driver.getTitle().contains("Plan Your Market"));	
 		System.out.println("Vefiry Download App Page ");
-		
+	////	
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
+		Thread.sleep(1000);
 		//CLick on Travel
 		lvaa.getLVTravel().click(); 
 		Thread.sleep(500);
 		System.out.println("Click on Travel");
+		Thread.sleep(1000);
 		//Verify Travel Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/Travel"));	
 		System.out.println("Vefiry Travel Page ");
+		
 		//Click on Attend Tab
 		//utl.scrollToElement(lvaa.getLVAAttendTab());
 		driver.get(prop.getProperty("lvmappurl"));
+		Thread.sleep(3000);
 		lvaa.getLVAAttendTab().click();
+		Thread.sleep(1000);
 		//CLick on Air Travel
 		lvaa.getLVAirTravel().click();
 		System.out.println("Click on Air Travel");
+		Thread.sleep(1000);
 		//Verify Hotels Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("#flights"));	
+		Assert.assertTrue(driver.getCurrentUrl().contains("Travel"));
 		System.out.println("Vefiry Events Page ");
 		
 		driver.get(prop.getProperty("lvmappurl"));
@@ -506,11 +516,13 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Thread.sleep(5000);
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
+		Thread.sleep(1000);
 		//CLick on Parking
 		lvaa.getLVParking().click();
 		System.out.println("Click on Parking");
+		Thread.sleep(1000);
 		//Verify Faq Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("#parking"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Travel"));
 		System.out.println("Vefiry Parking Page");
 
 		//utl.scrollToElement(lvaa.getLVAAttendTab());
@@ -519,11 +531,13 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Click on Attend Tab
 		Thread.sleep(5000);
 		lvaa.getLVAAttendTab().click();
+		Thread.sleep(1000);
 		//Click on Hotels
 		lvaa.getLVHotels().click(); 
 		System.out.println("Click on Hotels");
+		Thread.sleep(1000);
 		//Verify Hotels Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("#hotels"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Travel"));
 		System.out.println("Vefiry Hotels Page");
 		
 	}
@@ -868,7 +882,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

@@ -14,16 +14,16 @@ public class AMMarketsAndEventsPage {
 	public WebDriverWait wait;
 
 	By MarketsAndEventsTab = By.xpath("//a[@class='imc-navigation__tier1Link' and contains(text(),'Markets & Events')]");
-	By amcfallcashcarry = By.xpath("(//a[@href='/Markets/Fall-Cash-and-Carry'])[position()=1]"); // Locator for Fall Cash and Carry
-	By amcyearroundevents = By.xpath("//a[@href='/Year-Round/Calendar-of-Events']"); // Locator for Year Round Events
-	By atlantaapparel = By.xpath("(//a[@href='https://atlanta-apparel.com/'])[position()=2]"); //Locator for Atlanta Apparel logo
-	By amcspringmrkt = By.xpath("(//a[@href='/Markets/Spring-Market'])[position()=1]"); //Locator for Spring Market sub menu
-	By amcspringcashcarry = By.xpath("(//a[@href='/Markets/Spring-Cash-and-Carry'])[position()=1]"); //Locator for Spring Cash & Carry sub menu
-	By amcfallmarket = By.xpath("(//a[@href='/Markets/Fall-Market'])[position()=1]"); //Locator for Fall Market sub menu
-	By atlantamarket = By.xpath("(//a[@href='https://atlantamarket.com/'])[position()=2]"); //Locator for Atlanta Market logo
+	By amcfallcashcarry = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Fall Cash & Carry')]"); // Locator for Fall Cash and Carry
+	By amcyearroundevents = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Year Round Events')]"); // Locator for Year Round Events
+	By atlantaapparel = By.xpath("//a[@class='imc-navigation-2tier-imageLink' and @href='https://atlanta-apparel.com/']"); //Locator for Atlanta Apparel logo
+	By amcspringmrkt = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Spring Market')]"); //Locator for Spring Market sub menu
+	By amcspringcashcarry = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Spring Cash & Carry')]"); //Locator for Spring Cash & Carry sub menu
+	By amcfallmarket = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Fall Market')]"); //Locator for Fall Market sub menu
+	By atlantamarket = By.xpath("//a[@class='imc-navigation-2tier-imageLink' and @href='https://atlantamarket.com/']"); //Locator for Atlanta Market logo
 	By attendournextmarket = By.xpath("//a[contains(text(),'Attend Our Next Market')]");
-	By MarketDatesAndHour = By.xpath("//a[contains(text(),'Market Dates & Hours')]");
-	By CasualMarket = By.xpath("//a[@href='https://casualmarketatlanta.com/']");
+	By MarketDatesAndHour = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Market Dates & Hours')]");
+	By CasualMarket = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Casual Market')]");
 	
 	public AMMarketsAndEventsPage(WebDriver driver) {
 		this.driver = driver; 			

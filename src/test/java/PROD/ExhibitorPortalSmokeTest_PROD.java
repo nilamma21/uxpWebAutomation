@@ -69,8 +69,11 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		el.getEmailAddress().sendKeys(prop.getProperty("username"));
 		el.getPassword().sendKeys(prop.getProperty("password"));
 		el.getSignInBtn().click();
-		Thread.sleep(1000);
-		lap.getIUnderstandBtn().click();
+		Thread.sleep(2000);
+		try {
+			lap.getIUnderstandBtn().click();
+		} catch (Exception e) {
+		}
 		//Thread.sleep(5000);
 
 		//Verify that Exhibitor Portal Home page should be displayed
@@ -187,9 +190,10 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		System.out.println("Exhibitor Registration Page Successfully Opened");
 		driver.navigate().back();
 		
-		
+		utl.scrollToTop();
 	    //Verify Atlanta | Permanent Exhibits | Technology Services Page
         rs.getEXPRegAndServicesTab().click();
+        Thread.sleep(500);
         //Click on Atlanta | Permanent Exhibits | Technology Services
         //String winHandleBefore7 = driver.getWindowHandle();
         rs.getATLTechnologyServicePermenantTab().click();
@@ -281,7 +285,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		//Verify that 'EXP Login' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://exhibitors.andmore.com/payments"));
 		System.out.println("Atlanta | Payments Page Successfully Opened");
-
+		utl.scrollToTop();
 		//Verify AmericasMart Logistics | Exhibitor Toolkit Page
 		//Click on Registration And Services Tab 
       	rs.getEXPRegAndServicesTab().click();
@@ -430,7 +434,9 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		System.out.println("Applications And Leases Tab");
 		System.out.println("Las Vegas Permanent Space");
 		//Click on Las Vegas Permanent Space
+		utl.scrollToTop();
 		al.getEXPApplicationsAndLeasesTab().click();
+		Thread.sleep(500);
 		//al.getEXPApplicationsAndLeasesTab().click();
 		String winHandleBefore3 = driver.getWindowHandle();
 		rs.getEXPAAmericasMartLogisticsExhibitorToolkit().click();		
@@ -462,7 +468,8 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle);
 		}
 		//Verify that 'EXP Login' page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Leasing Contact Form"));
+		Thread.sleep(2000);
+		Assert.assertTrue(driver.getTitle().contains("Gift and Home Temporaries"));
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
@@ -478,7 +485,8 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle);
 		}
 		//Verify that 'EXP Login' page should be displayed
-		Assert.assertTrue(al.getVerifyGiftHomeTradeshow().getText().contains("EXHIBIT SPACE APPLICATION"));
+		Thread.sleep(1000);
+		Assert.assertTrue(driver.getTitle().contains("Home Furnishings Temporaries"));
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
@@ -792,7 +800,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

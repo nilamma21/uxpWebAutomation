@@ -14,14 +14,14 @@ public class ATLAppMarketsTabPage {
 	public WebDriverWait wait;
 
 	By ATLAppHeaders = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[2]/a[1]");
-	By ATLCompleteShowDates = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[1]/div[2]/a[1]");
-	By ATLPressReleases = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[1]/div[3]/a[1]");
-	By ATLInTheNews = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[1]/div[4]/a[1]");
-	By ATLAppImage = By.xpath("//a[@href='/Markets/atlanta-apparel']//img[@class='imc-image--responsive imc-navigation-2tier-image']");
+	By ATLCompleteShowDates = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Complete Show Dates')]");
+	By ATLPressReleases = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Press Releases')]");
+	By ATLInTheNews = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'In The News')]");
+	By ATLAppImage = By.xpath("//a[@class='imc-navigation-2tier-imageLink' and @href='https://www.atlanta-apparel.com/Markets/atlanta-apparel']");
 	By ATLAppHeadersnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]");
 	By ATLAppHeadersnextnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]");
 	By ATLAppHeadersnextnextnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]");
-	By ATLAppLink = By.xpath("//div[@class='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[2]/a[1]");
+	By ATLAppLink = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Atlanta Apparel')]");
 	By ATLAppHeadersProduct = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[5]/a[1]");
 
 	By ATLVowImg = By.xpath("//a[@href='/Markets/Formal-Markets']//img[@class='imc-image--responsive imc-navigation-2tier-image']");
@@ -29,8 +29,11 @@ public class ATLAppMarketsTabPage {
 	By ATLWorldOfPromImg = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[4]/div[1]/a[2]");
 	By ATLWorldOfPromLink = By.xpath("//div[@class='imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[4]/div[2]/a[1]");
 
-	By ATLLasVegasAppImg = By.xpath("//img[@alt='Las Vegas Apparel Nav Menu Image']");
-	By ATLLasVegasAppLink = By.xpath("//div[@class='imc-section']/div[1]/div[1]/div[2]/div[5]/div[2]/a[1]");
+	By ATLLasVegasAppImg = By.xpath("//a[@href='https://www.lasvegas-apparel.com/']//img[@class='imc-image--responsive imc-navigation-2tier-image']");
+	By ATLLasVegasAppLink = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Las Vegas Apparel')]");
+	
+	By ATLFormalMarketsImg = By.xpath("//a[@href='/Markets/Formal-Markets']//img[@class='imc-image--responsive imc-navigation-2tier-image']");
+	By ATLFormalMarketLink = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Formal Markets')]");
 	//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[3]/div[1]/a[2]
 	
 	public ATLAppMarketsTabPage(WebDriver driver) {
@@ -132,5 +135,14 @@ public class ATLAppMarketsTabPage {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLLasVegasAppLink));
 		return driver.findElement(ATLLasVegasAppLink);
 	}
-	
+	public WebElement getATLFormalMarketsImg()throws InterruptedException{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLFormalMarketsImg));
+		return driver.findElement(ATLFormalMarketsImg);
+	}
+	public WebElement getATLFormalMarketLink()throws InterruptedException{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ATLFormalMarketLink));
+		return driver.findElement(ATLFormalMarketLink);
+	}
 }

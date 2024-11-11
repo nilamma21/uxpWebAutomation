@@ -16,18 +16,18 @@ public class AMOpenYearRoundPage {
 	By amcAboutYearRound=By.xpath("//a[@title='About Year Round at AmericasMart']"); // Locator for About Year Round
 	By amcAboutYearRoundHeader=By.xpath("(//a[contains(text(),'Open Year Round')])[2]");// Locator for About Year Round page Header
 	By howtoregister = By.xpath("//a[contains(text(),'How to Register') and @class='imc-link imc-link--invert imc-navigation__tier2Link']");
-	By amcOpenYearRoundShowrooms=By.xpath("//a[contains(text(),'Open Year Round Showrooms')]"); // Locator for Showroom Direct
-	By amcExhibitorDirectory=By.xpath("//a[@href='/exhibitor/exhibitor-directory' and contains(text(), 'Exhibitor Directory')]");
+	By amcOpenYearRoundShowrooms=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Open Year Round Showrooms')]"); // Locator for Showroom Direct
+	By amcExhibitorDirectory=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Exhibitor Directory')]");
 	By amcOpenYearRoundShowroomsHeader=By.xpath("//span[@class='imc-type--color-basic-white']");// Locator for Open Year Round Showrooms page Header
 	By amcExhibitorDirectoryHeader=By.xpath("//h2[contains(text(),'Exhibitor Directory')]");// Locator for Exhibitor Directory page Header
-	By amcFloorPlans=By.xpath("//a[@href='/Market-Map' or contains(text(),'Floor Plans')]"); // Locator for Floor Plan
-	By amcCampOverview=By.xpath("//a[@href='/Year-Round/Campus-Overview']"); // Locator for Camp Overview
-	By amcVisit=By.xpath("//a[@href='/Year-Round/Visit']"); //Locator for Visit
-	By amcHowToRegister=By.xpath("//a[@href='/Year-Round/How-to-Register' and contains(text(),'How to Register')]"); //Locator for How to Register
-	By amcCalendarOfEvents=By.xpath("//a[@href='/Year-Round/Calendar-of-Events' and contains(text(),'Calendar of Events')]");
-	By amcDesigners=By.xpath("//a[@href='/Year-Round/For-Designers']");	
-	By amcparkingtransp = By.xpath("//a[@href='/Year-Round/Parking-and-Transportation']"); //Locator for Parking & Trasp. sub-menu
-	By amchotels = By.xpath("//a[@href='/Markets/Hotels']"); //Locator for Hotel sub-menu
+	By amcFloorPlans=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Floor Plans')]"); // Locator for Floor Plan
+	By amcCampOverview=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Campus Overview')]"); // Locator for Camp Overview
+	By amcVisit=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Visit')]"); //Locator for Visit
+	By amcHowToRegister=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'How to Register')]"); //Locator for How to Register
+	By amcCalendarOfEvents=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Calendar of Events')]");
+	By amcDesigners=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'For Designers')]");	
+	By amcparkingtransp = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Parking & Transportation')]"); //Locator for Parking & Trasp. sub-menu
+	By amchotels = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Hotels')]"); //Locator for Hotel sub-menu
 	
 	public AMOpenYearRoundPage(WebDriver driver) {
 		this.driver = driver; 			

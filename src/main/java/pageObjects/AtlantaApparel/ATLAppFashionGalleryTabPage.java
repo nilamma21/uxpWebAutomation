@@ -18,12 +18,12 @@ public class ATLAppFashionGalleryTabPage
 	By atlAppfashionGalleryLinkImg = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[1]/div[1]/a[2]");
 	By atlAppLookBook = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[2]/div[1]/a[1]");
 	By atlAppLookBookImg = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[2]/div[1]/a[2]");
-	By atlAppvideosImages = By.xpath("(//a[@href='http://www.youtube.com/@AtlantaApparel'])[1]");
+	By atlAppvideosImages = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Videos')]");
 	By atlAppvideosImagesImg = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[3]/div[1]/a[2]");
-	By atlAppNews = By.xpath("(//a[@href='/The-Best-Of/In-The-News'])[1]");
+	By atlAppNews = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'In The News')]");
 	By atlAppNewsImg = By.xpath("//div[@class='imc-section']/div[1]/div[5]/div[2]/div[4]/div[1]/a[2]");
 	By Trends = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Trends')]");
-	By LookbooksAndBrandBooks = By.xpath("(//a[@href=\"/The-Best-Of/Lookbooks-and-Brand-Books\"])[1]");
+	By LookbooksAndBrandBooks = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Lookbooks and Brand Books')]");
 	
 	public ATLAppFashionGalleryTabPage(WebDriver driver) {
 		this.driver = driver; 			
