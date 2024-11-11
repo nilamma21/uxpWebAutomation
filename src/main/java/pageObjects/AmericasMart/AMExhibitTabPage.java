@@ -15,10 +15,10 @@ public class AMExhibitTabPage {
 
 		By amcExhibitTab = By.xpath("(//a[contains(text(),'Exhibit')])[1]"); // Locator for Exhibit Tab
 		By amcExhibitAtAmc=By.xpath("//a[@href='/Exhibit']"); // Locator for Exhibit at AmericasMart
-		By amcLeasingExhibitOptions=By.xpath("//a[@href='/Exhibit/Opportunities' and contains(text(),'Leasing & Exhibit Options')]");// Leasing & Exhibit Options
-		By amcAdvertising=By.xpath("//a[@href='/Exhibit/Advertising' and  contains(text(),'Advertising')]"); // Locator for Advertising
-		By amcExpLogin=By.xpath("//a[@title='The Exhibitor Portal Manages Your Exhibitor Account']");//EXP Login
-		By amcExhFAQ=By.xpath("//a[@href='/Exhibit/FAQs' and contains(text(),'Exhibitor FAQs')]");
+		By amcLeasingExhibitOptions=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Leasing & Exhibit Options')]");// Leasing & Exhibit Options
+		By amcAdvertising=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Advertising')]"); // Locator for Advertising
+		By amcExpLogin=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Exhibitor Portal Login')]");//EXP Login
+		By amcExhFAQ=By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Exhibitor FAQs')]");
 		By amcExpPotalHeader=By.xpath("//h2[contains(text(),'Sign in with your existing account')]");
 		By amcexhibitbrdcrumb = By.xpath("//ul[@class='imc-breadcrumb']/li[2]/a"); //Locator for Exhibit Breadcrumb
 		By amcExpGuide=By.xpath("//a[contains(text(),'Exhibitor Portal Guide')]");//EXP Guide

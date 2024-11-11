@@ -3,12 +3,13 @@
 <suite parallel="classes" name="Failed suite [SmokeTestSuite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="classes" name="SequencialTest(failed)">
     <classes>
-      <class name="PROD.LVMSmoke_PROD">
+      <class name="PROD.ExhibitorPortalSmokeTest_PROD">
         <methods>
           <include name="initialize"/>
-          <include name="TS002_LVM_VerifAllLinksUnderExhibitorDirectoryTabTest"/>
+          <include name="tearDown"/>
+          <include name="TS001_EXP_VerifyExhibitorPortalLoginTest"/>
         </methods>
-      </class> <!-- PROD.LVMSmoke_PROD -->
+      </class> <!-- PROD.ExhibitorPortalSmokeTest_PROD -->
     </classes>
   </test> <!-- SequencialTest(failed) -->
 </suite> <!-- Failed suite [SmokeTestSuite] -->

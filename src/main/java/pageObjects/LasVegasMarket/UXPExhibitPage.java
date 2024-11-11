@@ -12,7 +12,7 @@ public class UXPExhibitPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 	
-	By exhibittab = By.xpath("(//a[contains(text(),'Exhibit')])[2]"); //Locator for Exhibit tab
+	By exhibittab = By.xpath("//div[@class='imc-header__container-wrapper ']/descendant::span[contains(text(),'Exhibitor Directory')]"); //Locator for Exhibit tab
 	By whyexhibitmenu = By.xpath("//a[contains(text(),'Why Exhibit?')]"); //Locator for Why Exhibit sub-menu
 	By exhibitoppt = By.xpath("//a[contains(text(),'Exhibit Opportunities')]"); //Locator for Exhibit Opportunities sub-menu
 	By advnspnrshp = By.xpath("//a[contains(text(),'Advertising & Sponsorships')]"); //Locator for Advertising & Sponsorships sub-menu

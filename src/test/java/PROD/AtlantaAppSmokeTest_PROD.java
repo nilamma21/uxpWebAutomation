@@ -185,6 +185,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Verify Attending our markets link
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
+		Thread.sleep(1000);
 		//Click on Attending our markets link
 		atlatt.getATLAttendingMarkets().click();
 		Thread.sleep(3000);
@@ -194,6 +195,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Verify Buyer's Guide link
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
+		Thread.sleep(1000);
 		//Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		//Click on Buyer's Guide link
@@ -213,6 +215,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Verify Registration link
 		//Click on Attend Tab
 		atat.getATLRegistration().click(); 
+		Thread.sleep(1000);
 		//Click on Registration link
 		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Registration"));	
 		System.out.println("Registration page is displayed properly");		
@@ -220,15 +223,17 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Verify Services at Market link
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
+		Thread.sleep(1000);
 		//Click on Services at Market link
 		atlatt.getATlAppServices().click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		Assert.assertTrue(exhp.getverifyBreadcrumb_ATLAPP().getText().contains("Services & Amenities"));
 		System.out.println("Services at Maket page is displayed properly");
 		
 	//Verify FAQ's link
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
+		Thread.sleep(1000);
 		//Click on FAQ's link
 		atlatt.getATLFAQs().click();
 		Thread.sleep(3000);
@@ -238,6 +243,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Verify Hotel link
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
+		Thread.sleep(1000);
 		//Click on Hotel link
 		atlatt.getATLHotels().click();
 		Thread.sleep(3000);
@@ -247,6 +253,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Verify Travel Link
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
+		Thread.sleep(1000);
 		//Click on Travel Link
 		atlatt.getATLTravel().click();
 		Thread.sleep(3000);
@@ -256,6 +263,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Verify Explore Atlanta link
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
+		Thread.sleep(1000);
 		//Click on Explore Atlanta link
 		atlatt.getExploreAtlanta().click();
 		Thread.sleep(3000);
@@ -265,6 +273,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Verify Safety & Security link
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
+		Thread.sleep(1000);
 		//Click on Safety & Security link
 		atlatt.getSafetyAndSecurity().click();
 		Thread.sleep(3000);
@@ -274,17 +283,17 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Verify Events & Amenities link
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
+		Thread.sleep(1000);
 		//Click on Events & Amenities link
 		atlatt.getATLEvents().click(); 
 		Thread.sleep(3000);
 		Assert.assertTrue(exhp.getverifyBreadcrumb_ATLAPP().getText().contains("Events"));	
 		System.out.println("Events & Amenities Page is displayed properly");	
-	//
-		
-		
+
 	//Verify Dining link
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
+		Thread.sleep(1000);
 		//Click on Dining link
 		atlatt.getATLDining().click();
 		Thread.sleep(3000);
@@ -294,9 +303,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Verify Download the App link
 		//Click on Attend Tab
 		atat.getATLAttendTab().click();
+		Thread.sleep(1000);
 		//Click on Download the App link
 		atlatt.getDownloadTheApp().click();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		Assert.assertTrue(exhp.getverifyBreadcrumb_ATLAPP().getText().contains("Plan Your Market"));	
 		System.out.println("Download the App Page is displayed properly");
 
@@ -390,6 +400,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Complete Show Dates link
 		//Click on Markets Tab
 		mi.getMarketInfoHeader().click();
+		Thread.sleep(1000);
 		//Click on Complete show dates
 		atlm.getATLCompleteShowDates().click();
 		//Verify About Page
@@ -400,6 +411,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Press Releases link
 		//Click on Markets Tab
 		mi.getMarketInfoHeader().click();
+		Thread.sleep(1000);
 		//Click on press releases
 		atlm.getATLPressReleases().click();
 		//Verify Press Releases Page
@@ -410,6 +422,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//In The News link
 		//Click on Markets Tab
 		mi.getMarketInfoHeader().click();
+		Thread.sleep(1000);
 		//Click on Click on In the News
 		atlm.getATLInTheNews().click();
 		//Verify In the News Page
@@ -419,39 +432,66 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 	//Atlanta Apparel Image Link
 		mi.getMarketInfoHeader().click();
+		Thread.sleep(1000);
 		//Click on Atlanta App Image
 		atlm.getATLAppImage().click();
 		//Verify Atlanta Apparel Page
 		Thread.sleep(2000);
 		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Atlanta Apparel"));	
-		System.out.println("Verify Atlanta Apparel Page");
+		System.out.println("Verify Atlanta Apparel Image Link");
 
 	//Atlanta Apparel Link
 		mi.getMarketInfoHeader().click();
-		//Click on Atlanta App Image
+		Thread.sleep(1000);
+		//Click on Atlanta App Link
 		atlm.getATLAppLink().click();
 		//Verify Atlanta Apparel Page
 		Thread.sleep(2000);
 		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Atlanta Apparel"));
-		System.out.println("Verify Atlanta Apparel Link Page");
+		System.out.println("Verify Atlanta Apparel Link");
+
+	//Formal Markets Image
+		mi.getMarketInfoHeader().click();
+		Thread.sleep(1000);
+		//Click on Formal Markets Image
+		atlm.getATLFormalMarketsImg().click();
+		//Verify Atlanta Apparel Page
+		Thread.sleep(2000);
+		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Formal Markets"));
+		System.out.println("Verify Formal Markets Image Link");
 
 	//Formal Markets link
 		mi.getMarketInfoHeader().click();
-		//Click on Atlanta App Image
-		atlm.getATLVowImage().click();
+		Thread.sleep(1000);
+		//Click on Formal Markets Link
+		atlm.getATLFormalMarketLink().click();
 		//Verify Atlanta Apparel Page
 		Thread.sleep(2000);
-		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Formal Markets"));	//Due to re-branding changes. previous 'VOW', now 'Formal Markets'
-		System.out.println("Verify Formal Markets Page");
+		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Formal Markets"));
+		System.out.println("Verify Formal Markets Link");
 		
-	//Las Vegas Apparel link
+	//Las Vegas Apparel Image
 		mi.getMarketInfoHeader().click();
+		Thread.sleep(1000);
 		//Click on Atlanta App Image
 		atlm.getATLLasVegasAppImg().click();
 		//Verify Atlanta Apparel Page
 		Thread.sleep(2000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));	
-		System.out.println("Verify Las Vegas App Img Page");
+		System.out.println("Verify Las Vegas App Img Link");
+		driver.navigate().back();
+		
+		Thread.sleep(4000);
+	//Las Vegas Apparel link
+		mi.getMarketInfoHeader().click();
+		Thread.sleep(1000);
+		//Click on Atlanta link
+		atlm.getATLLasVegasAppLink().click();
+		//Verify Atlanta Apparel Page
+		Thread.sleep(2000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));	
+		System.out.println("Verify Las Vegas App Link");
+		driver.navigate().back();
 		
 		//Due to re-branding changes
 /*		//Click on Markets Tab
@@ -524,17 +564,20 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Thread.sleep(5000);
 		exhp.getExhibitorsAndBrands().click();
 		System.out.println("Click on Exhibitors And Brands Tab");
-
+		Thread.sleep(1000);
 	//Click on Exhibitors And Products Tab
 		exhp.getExhibitorsAndProducts().click();
+		Thread.sleep(1000);
 		System.out.println("Click on Exhibitors And Products Tab");
 		Assert.assertTrue(exhp.getVerifyExhibitorDirectory().getText().contains("Atlanta Apparel Exhibitor Directory"));	
 		System.out.println("Verify Exhibitor, Lines & Product Directory Page");
 		
 	//Click on Floor Plans
 		exhp.getExhibitorsAndBrands().click();
+		Thread.sleep(1000);
 		atlappexh.getATLAppFloorplans().click();
 		System.out.println("Click on Floor Plans");
+		Thread.sleep(1000);
 		//Verify Floor Plan Page
 		//Assert.assertTrue(atlexhp.getATLVerifyFloorPlans().isDisplayed());
 		Assert.assertTrue(atlexhp.getATLVerifyFloorPlans().isDisplayed());
@@ -543,9 +586,11 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Click on Exhibitors And Brands Tab
 		exhp.getExhibitorsAndBrands().click();
 		System.out.println("Click on Exhibitors And Brands Tab");
+		Thread.sleep(1000);
 		//Click on categories
 		atlappexh.getATLAppatlaappCategories().click();
 		System.out.println("Click on Categoris");
+		Thread.sleep(1000);
 		//Verify All Brands Page
 		Assert.assertTrue(atlm.getATLAppHeadersnext().getText().contains("Categories"));
 		System.out.println("Verify Categories Page");
@@ -690,10 +735,12 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("Lookbooks-and-Brand-Books"));
 		System.out.println("Lookbooks and Brand Books page opens successfully");
+		Thread.sleep(5000);
 		
 	//Verify Videos ljnk
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
+		Thread.sleep(1000);
 		String winHandleBefore = driver.getWindowHandle();
 		//Click on Videos Link 
 		atlf.getatlAppvideosImages().click();
@@ -711,6 +758,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Click on Fashion Gallery Tab
 		//atlf.getatlAppFashionGalleryTab().click();
 		//Click on In The News Link 
+		Thread.sleep(500);
 		atlf.getatlAppNews().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(exhp.getverifyBreadcrumb_ATLAPP().getText().contains("In The News"));
@@ -719,6 +767,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Verify Trends link
 		//Click on Fashion Gallery Tab
 		atlf.getatlAppFashionGalleryTab().click();
+		Thread.sleep(1000);
 		//Click on In Trends Link 
 		atlf.getTrends().click();
 		Thread.sleep(3000);
@@ -732,7 +781,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T010: To verify Exhibit Tab
-
+		
 		utl=new Utility(driver);
 		lap = new UXPLandingPage(driver);
 		lp = new UXPLoginPage(driver);
@@ -755,11 +804,12 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		
 	//Exhibit With Us link
 		//Click on Exhibit Tab
 		atlexh.getATLExhibitTab().click();
+		Thread.sleep(1000);
 		//Click on Exhibit With Us link
 		atlexh.getExhibitWithUs().click();
 		Thread.sleep(4000);
@@ -769,6 +819,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Exhibit at Atlanta Apparel link
 		//Click on Exhibit Tab
 		atlexh.getATLExhibitTab().click();
+		Thread.sleep(1000);
 		//Click on Exhibit at Atlanta Apparel link
 		atlexh.getExhibitAtAtlantaApparel().click();
 		Thread.sleep(4000);
@@ -778,6 +829,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Exhibit in Social Occasion link
 		//Click on Exhibit Tab
 		atlexh.getATLExhibitTab().click();
+		Thread.sleep(1000);
 		//Click on Exhibit in Social Occasion link
 		atlexh.getExhibitInSocialOccasion().click();
 		Thread.sleep(4000);
@@ -787,6 +839,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Advertising and sponsorship link
 		//Click on Exhibit Tab
 		atlexh.getATLExhibitTab().click();
+		Thread.sleep(1000);
 		//Click on Advertising and sponsorship link
 		atlexh.getAdvertisingAndSponsorship().click();
 		Thread.sleep(5000);
@@ -796,15 +849,17 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Show Dates link
 		//Click on Exhibit Tab
 		atlexh.getATLExhibitTab().click();
+		Thread.sleep(1000);
 		//Click Show Dates Link 
 		atlexh.getShowDates().click();
 		//Verify Show Dates 
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Complete Show Dates"));	
 		System.out.println("Show Dates page opens successfully");
 
 	//Exhibitor Portal Login link
 		atlexh.getATLExhibitTab().click();
+		Thread.sleep(1000);
 		String winHandleBefore = driver.getWindowHandle();
 		//Click on Exhibitor Portal Login' sub-menu
 		atlexh.getATLExhibitorPortalLoginMenu().click();
@@ -851,6 +906,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfoATL());
 
+		Thread.sleep(2000);
 		//Click Market Info link and verify results
 		fl.getmarketInfoATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets"));
@@ -858,6 +914,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
+		Thread.sleep(2000);
 		//Click on Press Center
 		fl.getpressCenterATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets/Press-Center"));
@@ -865,6 +922,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
+		Thread.sleep(2000);
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
 		Thread.sleep(2000);
@@ -872,6 +930,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
+		Thread.sleep(2000);
 		//Click on Our Brand link
 		fl.getOurBrandsATL().click();
 		Thread.sleep(1000);
@@ -881,7 +940,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
 		// Click Contact Us link and verify results
-		
+		Thread.sleep(500);
 		String winHandleBefore5 = driver.getWindowHandle();
 		fl.getContactUsATL().click();
 		for (String winHandle5 : driver.getWindowHandles()) {
@@ -892,11 +951,13 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore5);
 		
+		Thread.sleep(2000);
 		// Click Careers link and verify results
 		fl.getCareersATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("www.andmore.com/our-team"));
 		driver.navigate().back();
 
+		Thread.sleep(2000);
 		// Click on Terms & condition link
 		// Switch to new tab
 		String winHandleBefore7 = driver.getWindowHandle();
@@ -909,6 +970,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore7);
 
+		Thread.sleep(2000);
 		// Click Privacy Policy link and verify results
 		fl.getatlprivacypolicy().click();
 		Thread.sleep(500);
@@ -920,6 +982,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore8);
 	
+		Thread.sleep(2000);
 		// Click Americas Mart link and verify results
 		String winHandleBefore9 = driver.getWindowHandle();
 		fl.getAmericasMart_ATLApp().click();
@@ -930,6 +993,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore9);
 		
+		Thread.sleep(2000);
 		// Click Atlanta Market link and verify results
 		// Switch to new tab
 		String winHandleBefore1 = driver.getWindowHandle();
@@ -942,6 +1006,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore1);
 		//utl.scrollToElement(fl.getmarketInfoATL());
 
+		Thread.sleep(2000);
 		// Click on High Point Market link
 		// Switch to new tab
 		String winHandleBefore4 = driver.getWindowHandle();
@@ -954,6 +1019,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.switchTo().window(winHandleBefore4);
 		//utl.scrollToElement(fl.getmarketInfoATL());
 		
+		Thread.sleep(2000);
 		String winHandleBefore12 = driver.getWindowHandle();
 		fl.getlvapplink_ATL_Footer().click();
 		for (String winHandle4 : driver.getWindowHandles()) {
@@ -963,6 +1029,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//driver.close();
 		driver.switchTo().window(winHandleBefore12);
 		
+		Thread.sleep(2000);
 		// Click on LVM Market link
 		// Switch to new tab
 		String winHandleBefore11 = driver.getWindowHandle();
@@ -974,6 +1041,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore11);
 	
+		Thread.sleep(2000);
 		//Switch to new tab
 		String winHandleBefore3 = driver.getWindowHandle();
 		fl.getandmore().click();

@@ -13,18 +13,18 @@ public class LVAAttendPage {
 	public WebDriverWait wait;
 
 	By LVAAttendTab = By.xpath("(//a[contains(text(),'Attend')])[1]"); // Locator for Attend tab in header
-	By LVADining = By.xpath("//a[contains(text(),'Dining')]");
+	By LVADining = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Dining')]");
 	By LVATravel = By.xpath("//a[@href='/Attend/Travel']"); //Locator for Travel link
 	By LVADiningGuide = By.xpath("//a[@href='/Attend/Dining']"); //Locator for Dining Guide link
 	By LVAServicesAndAmenities = By.xpath("//a[@href='/Attend/Services-and-Amenities']"); //Locator for Service and Amenities
 	By atlevents = By.xpath("//a[@href='/Attend/Events']"); //Locator for Events sub-menu
-	By LVAWhyAttend = By.xpath("(//a[contains(text(),'Why Attend?')][1])"); //Locator for Why Attend link
-	By LVAEvents = By.xpath("//a[@href='/Attend/Events']");
-	By LVParking = By.xpath("(//a[@href='/Attend/Travel#parking'])[1]");
-	By LVHotels = By.xpath("(//a[@href='/Attend/Travel#hotels\'])[1]");
-	By LVAirTravel = By.xpath("(//a[@href='/Attend/Travel#flights\'])[1]");
+	By LVAWhyAttend = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Why Attend?')]"); //Locator for Why Attend link
+	By LVAEvents = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Events')]");
+	By LVParking = By.xpath("//a[@href='/Attend/Travel' and contains(text(),'Shuttles & Parking')]");
+	By LVHotels = By.xpath("//a[@href='/Attend/Travel' and contains(text(),'Hotels')]");
+	By LVAirTravel = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Air Travel')]");
 	By LVTravel = By.xpath("(//a[contains(text(),'Travel')])[1]");
-	By LVDownloadApp = By.xpath("//a[contains(text(),'Download the App')]");
+	By LVDownloadApp = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Download the App')]");
 	
 	public LVAAttendPage(WebDriver driver) {
 		this.driver = driver; 			

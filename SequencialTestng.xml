@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="SmokeTestSuite"  parallel="classes"  >
-	<listners>
-		<listner class-name="PROD.TestListeners" />
-	</listners>
-
+<suite name="SmokeTestSuite" parallel="classes"  >
 	<test thread-count="1" name="SequencialTest">
 		<classes>
-		
-		 <class name="PROD.LVMSmoke_PROD" />
-		<!--<class name="PROD.AtlantaMarketSmokeTest_PROD" />-->
-	 	  <methods>
-	 	 	<include name="TS002_LVM_VerifAllLinksUnderExhibitorDirectoryTabTest"/>
-	 	 </methods> 
-
+			<class name="PROD.ExhibitorPortalSmokeTest_PROD">
+	 	 		<methods>
+	 	 			<include name="TS001_EXP_VerifyExhibitorPortalLoginTest"/>
+	 	 			<include name="TS006_EXP_VerifyAllLinkUnderYourDigiShowroomTest"/>
+	 	 		</methods>
+	 	 	</class>
 		</classes>
 	</test>
 </suite>

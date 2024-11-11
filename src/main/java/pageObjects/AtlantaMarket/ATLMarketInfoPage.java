@@ -17,9 +17,9 @@ public class ATLMarketInfoPage {
 	By atlaboutsubmenu = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[1]/div[1]/a[1]"); // Locator for About option in Market Info
 	By atldatesandhrssubmenu = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']/div[2]/div[1]/a[1]"); // Locator for Dates and Hours sub-menu
 	By atlregistrationsubmenu = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Registration')]"); // Locator for Registration sub-menu
-	By atlpresscentersubmenu = By.xpath("(//a[contains(@href, '/Market-Info/Press-Center')])[position()=1]"); //Locator for Press Center sub-menu
+	By atlpresscentersubmenu = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Press Center')]"); //Locator for Press Center sub-menu
 	By atlantanextsubmenu = By.xpath("//a[contains(@href, '/News-and-Trends/Atlanta-Next')]"); //Locator for Press Center sub-menu
-	By atlvideogallerysubmenu = By.xpath("//a[contains(text(),'Video Gallery')]"); //Locator for Video Gallery sub-menu
+	By atlvideogallerysubmenu = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Video Gallery')]"); //Locator for Video Gallery sub-menu
 	By atlindustrypartsubmenu = By.xpath("//a[contains(@href, '/Market-Info/Industry-Partners')]"); //Locator for Industry Partners
 	By atlaboutpageheader = By.xpath("//strong[contains(text(), 'ABOUT')]"); //Locator for About us page header
 	By atlmektdatespageheader = By.xpath("//*[contains(text(), 'MARKET DATES & HOURS')]"); //Locator for Market Dates & Hours page header
@@ -34,9 +34,9 @@ public class ATLMarketInfoPage {
 	By ATLIndustryPartners = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Industry Partners')]");
 	By ATLGettingToMarketHeader = By.xpath("//strong[contains(text(), 'GETTING TO')]"); //Locator for getting to market page header
 	By ATLDownloadOurNewApp = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Download our NEW App!')]");//Locator for Download ourNEW App menu
-	By ATLPlanYourMarket = By.xpath("//div[@class = 'imc-navigation__menu imc-content imc-navigation__menu--active imc-navigation__menu--fullwidth']//descendant::a[contains(text(),'Plan Your Market')]");
-	By ATLWhatsNew = By.xpath("//a[@href='/Market-Info/Whats-New']");
-	By ATLSafetyandSecurity = By.xpath("//a[@href='/Market-Info/Safety-and-Security']");
+	By ATLPlanYourMarket = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Plan Your Market')]");
+	By ATLWhatsNew = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'What')]");
+	By ATLSafetyandSecurity = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Safety & Security')]");
 	
 	public ATLMarketInfoPage(WebDriver driver) {
 		this.driver = driver; 			

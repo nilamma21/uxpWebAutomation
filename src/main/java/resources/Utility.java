@@ -41,6 +41,12 @@ public class Utility extends base {
 		Thread.sleep(4000);
 	}
 	
+	public void scrollToBottom() throws InterruptedException {
+		((JavascriptExecutor) driver)
+	     .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		Thread.sleep(1000);
+	}
+	
 	public void scrollIntoView(WebElement element)
 	{
 		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
