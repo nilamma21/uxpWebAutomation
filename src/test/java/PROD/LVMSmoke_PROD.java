@@ -2,21 +2,13 @@ package PROD;
 
 import java.io.IOException;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import io.reactivex.rxjava3.functions.Action;
 import pageObjects.LasVegasMarket.UXPAttendPage;
 import pageObjects.LasVegasMarket.UXPExhibitPage;
 import pageObjects.LasVegasMarket.UXPExhibitorDirectoryPage;
@@ -303,12 +295,49 @@ public class LVMSmoke_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(3000);
 		exh.getexhibittabNew().click();
+		// URL
+		String urlString = exh.getexhibitAtLVM().getAttribute("href");
 		// Click on Exhibitor Dire
-		exh.getExhibitorDirectoryUnderExhibitorDirectoryTab().click();
-		String bredcumName = exh.getExhibitOpprBrdcrumb().getText();
-		Assert.assertTrue(bredcumName.contains("Exhibitor & Product Directory"));
-		// Click on Popular filters
+		exh.getexhibitAtLVM().click();
+		// String bredcumName = exh.getExhibitOpprBrdcrumb().getText();
+		// Assert.assertTrue(urlString.contains());
+		Assert.assertTrue(driver.getCurrentUrl().contains(urlString));
+		Thread.sleep(5000);
 
+		exh.getexhibittabNew().click(); // Click on Popular filters
+		utl.clickAndAssertUrl(exh.getexhibitAtResources());
+		Thread.sleep(5000);
+
+		exh.getexhibittabNew().click();
+		// Click on Marketing Tool Kits
+		utl.clickAndAssertUrl(exh.getmarketingToolKit());
+
+		Thread.sleep(5000);
+		exh.getexhibittabNew().click();
+		// Click on Adversing and Sponcer And Opportunity
+		utl.clickAndAssertUrl(exh.getadvertisingAndSponsAndOpprtu());
+		Thread.sleep(5000);
+		exh.getexhibittabNew().click();
+		// Click on Adversing and Sponcer And Opportunity
+
+		String winHandleBefore = driver.getWindowHandle();
+		Thread.sleep(1000);
+		exh.getalreadyAnExhibitor().click();
+		// Switch to new window opened
+		for (String winHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(8000);
+		String title=driver.getTitle();
+		//utl.clickAndAssertUrl(exh.getalreadyAnExhibitor());
+		Assert.assertTrue(title.contains("Sign In to ANDMORE"));
+		// Close the new window, if that window no more required
+		driver.close();
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);
+		
+		
+		
 	}
 
 	@Test(priority = 03)
@@ -359,16 +388,38 @@ public class LVMSmoke_PROD extends base {
 
 		Thread.sleep(2000);
 		exh.getdiscoverTabNew().click();
+		//Exhibitor Directory
 		utl.clickAndAssertUrl(exh.getExhibitorDirectoryUnderDiscoverTab());
 		exh.getdiscoverTabNew().click();
+		Thread.sleep(2000);
+		// A to Z brand list
+		utl.clickAndAssertUrl(exh.getatoZBrandList());
+		
+		exh.getdiscoverTabNew().click();
+		Thread.sleep(2000);
+		//Floor plans
+		utl.clickAndAssertUrl(exh.getfloorPlans());
+		
+		
+		
+		exh.getdiscoverTabNew().click();
+		Thread.sleep(2000);
+		//Explore Las Vegas Market
 		utl.clickAndAssertUrl(exh.getExploreLasVegasMarketUnderDiscoverTab());
 		exh.getdiscoverTabNew().click();
+		Thread.sleep(2000);
+		//Tools and Inspirational
 		utl.clickAndAssertUrl(exh.getToolsAndInspirationUnderDiscoverTab());
 		exh.getdiscoverTabNew().click();
+		//Plan Your market
 		utl.clickAndAssertUrl(exh.getPlanYourMarketUnderDiscoverTab());
 		exh.getdiscoverTabNew().click();
+		Thread.sleep(2000);
+		//Whats New
 		utl.clickAndAssertUrl(exh.getWhatsNewUnderDiscoverTab());
 		exh.getdiscoverTabNew().click();
+		Thread.sleep(2000);
+		//Events and Webinar
 		utl.clickAndAssertUrl(exh.getEventsUnderDiscoverTab());
 
 	}
@@ -414,10 +465,13 @@ public class LVMSmoke_PROD extends base {
 		exh.getsourceYearRoundTabNew().click();
 		utl.clickAndAssertUrl(exh.getYearRoundUndersourceYearRoundTab());
 		exh.getsourceYearRoundTabNew().click();
-		utl.clickAndAssertUrl(exh.getExhibitorDirectoryUndersourceYearRoundTab());
+		utl.clickAndAssertUrl(exh.getexhibitorDirectoryUnderSourceYearTab());
 		exh.getsourceYearRoundTabNew().click();
-		utl.clickAndAssertUrl(exh.getContactUsUndersourceYearRoundTab());
-
+		utl.clickAndAssertUrl(exh.getatoZBrandListUnderSourceYearTab());
+		exh.getsourceYearRoundTabNew().click();
+		utl.clickAndAssertUrl(exh.getfloorPlansUnderSourceYearTab());
+		exh.getsourceYearRoundTabNew().click();
+		utl.clickAndAssertUrl(exh.getContactUsUnderSourceYearTab());
 	}
 
 	@Test(priority = 07)
