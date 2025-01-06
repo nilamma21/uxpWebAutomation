@@ -17,7 +17,7 @@ public class ATLAppMarketsTabPage {
 	By ATLCompleteShowDates = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Complete Show Dates')]");
 	By ATLPressReleases = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Press Releases')]");
 	By ATLInTheNews = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'In The News')]");
-	By ATLAppImage = By.xpath("//a[@class='imc-navigation-2tier-imageLink' and @href='https://www.atlanta-apparel.com/Markets/atlanta-apparel']");
+	By ATLAppImage = By.xpath("//a[@href='/Markets/atlanta-apparel']//img[@class='imc-image--responsive imc-navigation-2tier-image']");
 	By ATLAppHeadersnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]");
 	By ATLAppHeadersnextnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]");
 	By ATLAppHeadersnextnextnext = By.xpath("//div[@class ='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]");

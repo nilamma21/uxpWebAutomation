@@ -12,9 +12,11 @@ public class ATLGlobalSearchPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By atlglobalsearchtxtbx = By.xpath("//input[@id='input-1']"); // Locator for Global Search field 
-	By atlsearchbtn = By.xpath("//div[@class = 'imc-searchform--button--search']"); //Locator for Seach button for global search
-	By atlverifyglobalseacrh = By.xpath("//div[@class = 'imc-gallery__item']/div[1]/section[1]/span[1]/div[1]"); // Locator for global search verification
+	By atlglobalsearchtxtbx = By.xpath("//button[@class='imc-button imc-button--search imc-button--transparent-mobile-header imc-button--transparent juniper-search-v3 ']"); // Locator for Global Search field 
+	By atlsearchbtn = By.xpath("((//div[@class = 'imc-searchform--button--search']/button))[3]"); //Locator for Seach button for global search
+	By atlverifyglobalseacrh = By.xpath("(//div[@class = 'imc-exhibitorcard-title-row ']/descendant::h2)[1]"); // Locator for global search verification
+	By GlobalSearchEnterText = By.xpath("//div[@class='top-nav-dropdown-grid imc-content--relative']/div/div/section/div/form/div/input"); // Locator for Global Search field
+
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		this.driver = driver; 			
@@ -39,6 +41,13 @@ public class ATLGlobalSearchPage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(atlverifyglobalseacrh));
 		return driver.findElement(atlverifyglobalseacrh);
+	}
+	
+	public WebElement getGlobalSearchEnterText() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(GlobalSearchEnterText));
+		return driver.findElement(GlobalSearchEnterText);
+
 	}
 	
 }

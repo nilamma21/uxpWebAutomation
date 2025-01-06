@@ -97,6 +97,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 
 		//Click Notifications icon and verify results
 		nt.getNotifications().click();
+		Thread.sleep(1000);
 		Assert.assertEquals(st.getVerifyManageUsers().getText(), "Exhibitor Portal Message Center");
 		System.out.println("Exhibitor Portal notifications page is displayed properly.");
 	}
@@ -510,7 +511,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		rs = new EXPRegistrationAndServicesTabPage(driver);
 		driver.get(prop.getProperty("expurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		//utl.scrollToTop();
 		//Click on Your Digital Showroom Drop-down
 		yd.getEXPYourDigiShowroom().click();
@@ -595,21 +596,28 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		st=new EXPSettingsPage(driver);
 		//driver.get(prop.getProperty("expurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+		Thread.sleep(2000);
+		
 		//Click on Registration And Services Tab 
 		mar.getEXPMarketTab().click();
+		Thread.sleep(500);
 		//Exhibitor Registration
 		rs.getEXPExhibitorReg().click();
+		Thread.sleep(2000);
 		//Verify Exhibitor Registration Page Header
 		Assert.assertTrue(mar.getEXPManageMarketHeader().getText().contains("Manage Your Markets"));
 
 		mar.getEXPMarketTab().click();
+		Thread.sleep(500);
 		//Click on Exhibitor Resources
 		al.getEXPAtlantaApplyForTradeshowSpace().click();
+		Thread.sleep(2000);
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Exhibitor Resources"));
 
 		mar.getEXPMarketTab().click();
+		Thread.sleep(500);
 		rs.getEXPAtlantaServices().click();
+		Thread.sleep(2000);
 		Assert.assertTrue(st.getVerifyManageUsers().getText().contains("Manage"));	
 
 		/*mar.getEXPMarketTab().click();

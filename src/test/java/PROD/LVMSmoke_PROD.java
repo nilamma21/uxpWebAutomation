@@ -327,7 +327,7 @@ public class LVMSmoke_PROD extends base {
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		String title=driver.getTitle();
 		//utl.clickAndAssertUrl(exh.getalreadyAnExhibitor());
 		Assert.assertTrue(title.contains("Sign In to ANDMORE"));
@@ -335,8 +335,6 @@ public class LVMSmoke_PROD extends base {
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
-		
-		
 		
 	}
 
@@ -487,6 +485,7 @@ public class LVMSmoke_PROD extends base {
 		String winHandleBefore = driver.getWindowHandle();
 		// Scroll till footer links
 		// utl.scrollElementIntoMiddle(fl.getlvmfooterLinkAbout());
+		utl.scrollToBottom();
 		Thread.sleep(1000);
 		// In app footer click on 'Facebook' icon and verify results
 		fl.getFacebookIcon().click();
@@ -607,14 +606,14 @@ public class LVMSmoke_PROD extends base {
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T69: To verify Footer Links Navigation
-
+		
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		mi = new UXPMarketInfoPage(driver);
 		fl = new UXPFooterLinksNavigationPage(driver);
 		
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		//Scroll till footer links
 	      utl.scrollToElement(fl.getlvmfooterLinkAbout());
 		  utl.clickAndAssertUrl(fl.getlvmfooterLinkAbout()); //Click about link
@@ -638,8 +637,9 @@ public class LVMSmoke_PROD extends base {
 		  utl.scrollToElement(fl.getlvmfooterLinkAbout());
 		  utl.clickAndAssertUrl(fl.getDownloadTheApp()); //Click Download The App link
 		  driver.get(prop.getProperty("lvmurl"));
+		  Thread.sleep(2000);
 		  //utl.verifyCloseBtnPopup(); 
-		  utl.scrollToElement(fl.getlvmfooterLinkAbout());
+		  utl.scrollToElement(fl.getContactUs());
 		  
 		 
 		// Click Contact Us link and verify results
@@ -660,7 +660,7 @@ public class LVMSmoke_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore14);
 		
-
+		
 		// Click on Terms & conditions link
 		
 		// Switch to new tab
@@ -673,7 +673,7 @@ public class LVMSmoke_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("terms-of-use"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore7);
-
+		
 		// Click Privacy Policy and verify results
 		/*driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
@@ -776,6 +776,7 @@ public class LVMSmoke_PROD extends base {
 		for (String winHandle11 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle11);
 		}
+		Thread.sleep(2000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore11);

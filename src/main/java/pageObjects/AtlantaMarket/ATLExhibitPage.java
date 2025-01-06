@@ -12,7 +12,7 @@ public class ATLExhibitPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 	
-	By atlexhibittab = By.xpath("(//a[contains(text(),'Exhibit')])[2]"); //Locator for Exhibit tab
+	By atlexhibittab = By.xpath("((//div[@class='imc-breakpoint-display--hide-tablet']/descendant::span[contains(text(),'Exhibit')]/../..))[2]"); //Locator for Exhibit tab
 	By atlexhibitatatlanta = By.xpath("(//a[contains(@href,'/Exhibit')])[position()=1]"); //Locator for Exhibitor at Atlanta Market sub-menu
 	By atlwhyexhibitmenu = By.xpath("//a[contains(text(),'Why Exhibit?')]"); //Locator for Why Exhibit sub-menu
 	By atlapplytoexhibit = By.xpath("//a[@href='/Exhibit/Apply-to-Exhibit']"); //Locator for Exhibitor at Atlanta Market sub-menu
@@ -31,7 +31,7 @@ public class ATLExhibitPage {
 	By ExhibitWithUs = By.xpath("//a[@href='/Exhibit/Atlanta-Apparel' and contains(text(),'Exhibit With Us')]");
 	By ExhibitAtAtlantaApparel = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Exhibit at Atlanta Apparel')]");
 	By ExhibitInSocialOccasion = By.xpath("//a[@href='/Exhibit/Social-Occasion']");
-	
+	By AlreadyAnExhibitor = By.xpath("//a[contains(text(),'Already an Exhibitor')]");
 	
 	public ATLExhibitPage(WebDriver driver) {
 		this.driver = driver; 			
@@ -40,7 +40,7 @@ public class ATLExhibitPage {
 	public WebElement getATLExhibitTab() throws InterruptedException {
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.elementToBeClickable(atlexhibittab));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibittab));
 		return driver.findElement(atlexhibittab);		
 	}
 	
@@ -144,7 +144,11 @@ public class ATLExhibitPage {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ExhibitInSocialOccasion));
 		return driver.findElement(ExhibitInSocialOccasion);
 	}
-	
+	public WebElement getAlreadyAnExhibitor() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(AlreadyAnExhibitor));
+		return driver.findElement(AlreadyAnExhibitor);
+	}
 }
 
 
