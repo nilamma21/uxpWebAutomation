@@ -180,7 +180,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		hd.getAtlanta().click();
 		Thread.sleep(500);
 		try {
-		Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Cash & Carry Markets: Spring and Fall"));
+		Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Spring Cash & Carry"));
 		hd.getCashAndCarryMarketsSpringandFall().click();
 		Assert.assertTrue(driver.getTitle().contains("Spring Cash & Carry"));
 		driver.get(prop.getProperty("lvmappurl"));
@@ -348,6 +348,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Click on Dates & Hours
 		lvaat.getLVADatesAndHours().click();
 		System.out.println("Click on Dates and Hourss");
+		Thread.sleep(2000);
 		//Verify Dates and Hours Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Dates-and-Hours"));
 		System.out.println("Verify Complete Dates and Hours Page");		
@@ -357,6 +358,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Click on Press Center
 		System.out.println("Click on About Tab");
 		lvaat.getLVAPressCenter().click();
+		Thread.sleep(2000);
 		//Verify Press Center Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("Press-Center"));
 		System.out.println("Verify Complete Press center Page");		
@@ -366,6 +368,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Click on In the News
 		System.out.println("Click on About Tab");
 		lvaat.getLVAInTheNews().click();
+		Thread.sleep(2000);
 		//Verify In The News Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("In-The-News"));
 		System.out.println("Verify Complete In The News Page");		
@@ -375,6 +378,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Click on Contact Us
 		System.out.println("Click on About Tab");
 		lvaat.getLVAContactUs().click();
+		Thread.sleep(2000);
 		//Verify Contact Us Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("Contact-Us"));
 		System.out.println("Verify Complete Contact Us Page");		

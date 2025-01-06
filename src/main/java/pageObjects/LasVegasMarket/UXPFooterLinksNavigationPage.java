@@ -16,12 +16,12 @@ public class UXPFooterLinksNavigationPage {
 	By marketInfoATL = By.xpath("//a[@href='/Markets']"); //Locator for Market information in footer links
 	By marketInfoAMC = By.xpath("//a[@href='/about']"); //Locator for Market information in footer links AMC
 	By pressCenter = By.xpath("//a[@href='/Market-Info/Press-Center']"); //Locator for Press Center in footer links
-	By pressCenterAMC = By.xpath("//a[@href='/About/Press-Center']"); //Locator for Press Center in footer links
-	By pressCenterATL = By.xpath("//a[@href='/Markets/Press-Center']"); //Locator for Press Center in footer links
-	By ourBrandsATL = By.xpath("//a[@href='/exhibitor/directory']"); //Locator for Our brands in footer links ATL
-	By DownloadTheApp = By.xpath("//a[contains(text(),'Download the @Market App')]"); //Locator for Download The App in footer links
+	By pressCenterAMC = By.xpath("//a[@href='/About/Press']"); //Locator for Press Center in footer links
+	By pressCenterATL = By.xpath("//a[@href='/Markets/Press Center']"); //Locator for Press Center in footer links
+	By ourBrandsATL = By.xpath("//a[@href='/exhibitor/directory' and contains(text(),'Our Brands')]"); //Locator for Our brands in footer links ATL
+	By DownloadTheApp = By.xpath("//a[contains(text(),'Download the ANDMORE Markets App')]"); //Locator for Download The App in footer links
 	By ContactUs = By.xpath("(//a[contains(text(),'Contact Us')])[2]"); //Locator for Contact Us in footer links
-	By ContactUsATL = By.xpath("//a[contains(text(),'Contact Us')]"); //Locator for Contact Us in footer links
+	By ContactUsATL = By.xpath("//div[@class='imc-section imc-section--padded']/descendant::a[contains(text(),'Contact Us')]"); //Locator for Contact Us in footer links
 	By Careers = By.xpath("//a[@href='/market-info/careers']"); //Locator for Careers in footer links
 	By CareersATL = By.xpath("//a[contains(text(),'Careers')]"); //Locator for Careers in footer links
 	By PrivacyPolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); // Locator for Privacy Policy in footer links
@@ -56,7 +56,7 @@ public class UXPFooterLinksNavigationPage {
 	By lvmprivacypolicy = By.xpath("(//a[contains(text(),'Privacy Policy')])[position()=2]"); //Locator for Privacy Policy on LVM Footer
 	By ClosePopUpAmericasmart = By.xpath("//div[@class = ' contact-exit']"); //Locator for Close Pop Up after opening Americas Mart footer link
 	By atlprivacypolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); //Locator for Privacy Policy on LVM Footer
-	By andmore = By.xpath("(//div[contains(@class,'imc-gallery__item imc-gallery__item--minheight imc-content-nav-container--column')]/div/p/a[contains(text(),'ANDMORE')])[2]"); //Locator for ANDMORE in footer links
+	By andmore = By.xpath("(//div[contains(@class,'imc-gallery__item imc-gallery__item--minheight imc-content-nav-container--column')]/div/p/a[contains(text(),'ANDMORE')])[3]"); //Locator for ANDMORE in footer links
 	By CasualMarket = By.xpath("(//a[contains(text(),'Casual Market Atlanta')])[2]");
 	By ContactUsLVA = By.xpath("//a[@href='/about/contact-us']");
 	
@@ -86,7 +86,7 @@ public class UXPFooterLinksNavigationPage {
 	*/
 	
 	By lvmfooterLinkAbout = By.xpath("//a[@href='/visit/about']"); //Locator for Privacy Policy on LVM Footer
-	By lvmfooterLinkPressCenter = By.xpath("//a[@href='/Press-Center']"); //Locator for press Center on LVM Footer
+	By lvmfooterLinkPressCenter = By.xpath("//a[@href='/press-center']"); //Locator for press Center on LVM Footer
 	By lvmfooterLinkOurBrands = By.xpath("//div[@class='imc-rich-text']//a[@href='/exhibitor/directory']"); //Locator for press Center on LVM Footer
 	
 	By lvmfooterLinkPrivacyPolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); //Locator for Privacy Policy on LVM Footer

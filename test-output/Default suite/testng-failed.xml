@@ -7,8 +7,8 @@
         <methods>
           <include name="initialize"/>
           <include name="tearDown"/>
+          <include name="TS001_LVMApp_VerifyAllHeaderChanelLinksTest"/>
           <include name="TS002_LVMApp_VerifyGlobalSearchFunctionalityTest"/>
-          <include name="TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest"/>
         </methods>
       </class> <!-- PROD.LasVegasAppSmokeTest_PROD -->
     </classes>

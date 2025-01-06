@@ -14,7 +14,7 @@ public class LVAFooterLinksNavigationPage {
 	public WebDriverWait wait;
 	
 	By ourBrandsLVA = By.xpath("//a[@href='/exhibitor/directory']"); //Locator for Our brands in footer links ATL
-	By DownloadTheApp = By.xpath("//a[contains(text(),'Download the @Market App')]"); //Locator for Download The App in footer links
+	By DownloadTheApp = By.xpath("//a[contains(text(),'Download the ANDMORE Markets App')]"); //Locator for Download The App in footer links
 	By ContactUsLVA = By.xpath("//a[@href='/about/contact-us']");
 	By CareersATL = By.xpath("//a[contains(text(),'Careers')]"); //Locator for Careers in footer links
 	By TermsAndConditions = By.partialLinkText("Terms"); // Locator for Terms and Conditions in footer links
@@ -25,7 +25,7 @@ public class LVAFooterLinksNavigationPage {
 	By CasualMarket = By.xpath("(//a[contains(text(),'Casual Market Atlanta')])[1]");
 	By HighPointMarket = By.xpath("(//a[contains(text(),'ANDMORE at High Point Market')])[1]"); //Locator for High Point Market in footer links
 	By lvmlink_ATL = By.xpath("(//a[contains(text(),'Las Vegas Market')])[1]"); //Locator for Las Vegas market footer link
-	By andmore = By.xpath("(//div[contains(@class,'imc-gallery__item imc-gallery__item--minheight imc-content-nav-container--column')]/div/p/a[contains(text(),'ANDMORE')])[2]"); //Locator for ANDMORE in footer links
+	By andmore = By.xpath("(//div[contains(@class,'imc-gallery__item imc-gallery__item--minheight imc-content-nav-container--column')]/div/p/a[contains(text(),'ANDMORE')])[3]"); //Locator for ANDMORE in footer links
 	By marketInfoAMC = By.xpath("//a[@href='/about']"); //Locator for Market information in footer links AMC
 	
 	

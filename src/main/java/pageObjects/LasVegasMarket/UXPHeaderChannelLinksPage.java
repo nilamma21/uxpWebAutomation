@@ -28,7 +28,7 @@ public class UXPHeaderChannelLinksPage {
 	By AtlantaMarket = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Atlanta Market')]"); //Locator For Drop down Atlanta Market Link		
 	By FormalMarkets = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Formal Markets')]"); //Locator For Drop down Formal Markets Link
 	By MidSeasonBuyingEventFallMarket = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Mid-Season Buying Event: Fall Market')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
-	By CashAndCarryMarketsSpringandFall = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Cash & Carry Markets: Spring and Fall')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
+	By CashAndCarryMarketsSpringandFall = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Spring Cash & Carry')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
 	By ADAC = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'ADAC')]"); //Locator For Drop down ADAC Link
 	By AmericasMart =  By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'AmericasMart')]"); //Locator For Drop down Americas Mart Link
 	By AtlantaConventionCenter = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Atlanta Convention Center')]"); //Locator For Drop down Atlanta Convention Center Link
@@ -50,7 +50,8 @@ public class UXPHeaderChannelLinksPage {
 	By FllCashAndCarryMarketsSpringandFall = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Fall Cash & Carry')]"); //Locator For Drop down Cash And Carry Markets Spring and Fall Link
 	By RigisterBtn = By.xpath("//div[@class='top-nav section-wrapper campus-bar']/section/a"); //Locator For Register Btn
 	By SignInBtn = By.xpath("//div[@class='top-nav section-wrapper campus-bar']/section/div[3]/button"); //Locator For Register Btn
-		
+	
+	By SpringCashAndCarry = By.xpath("//div[@class='top-nav-dropdown-menu']/descendant::span[contains(text(),'Spring Cash & Carry')]"); //Locator for Spring Cash And Carry
 		
 		
 	public UXPHeaderChannelLinksPage(WebDriver driver) {
@@ -206,6 +207,12 @@ public class UXPHeaderChannelLinksPage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SHOPPEOBJECT));
 		return driver.findElement(SHOPPEOBJECT);
+	}
+	
+	public WebElement getSpringCashAndCarry() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SpringCashAndCarry));
+		return driver.findElement(SpringCashAndCarry);
 	}
 
 }
