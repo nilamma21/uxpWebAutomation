@@ -126,12 +126,14 @@ public class UXPExhibitorsAndProductsTabPage {
 	}
 	
 	public WebElement getVerifyBreadcrumb() throws InterruptedException {
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(verifyBreadcrumb));
 		return driver.findElement(verifyBreadcrumb);
 	}
 	
 	public WebElement getVerifyPgBreadcrumb() throws InterruptedException {
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(verifyPgBreadcrumb));
 		return driver.findElement(verifyPgBreadcrumb);

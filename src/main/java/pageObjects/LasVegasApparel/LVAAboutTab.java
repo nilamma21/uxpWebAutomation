@@ -24,27 +24,27 @@ public class LVAAboutTab {
 	
 	public WebElement getLVAAboutTab() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.elementToBeClickable(LVAAboutTab));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LVAAboutTab));
 		return driver.findElement(LVAAboutTab);
 	}
 	public WebElement getLVADatesAndHours() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.elementToBeClickable(LVADatesAndHours));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LVADatesAndHours));
 		return driver.findElement(LVADatesAndHours);
 	}
 	public WebElement getLVAPressCenter() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.elementToBeClickable(LVAPressCenter));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LVAPressCenter));
 		return driver.findElement(LVAPressCenter);
 	}
 	public WebElement getLVAInTheNews() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.elementToBeClickable(LVAInTheNews));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LVAInTheNews));
 		return driver.findElement(LVAInTheNews);
 	}
 	public WebElement getLVAContactUs() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.elementToBeClickable(LVAContactUs));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LVAContactUs));
 		return driver.findElement(LVAContactUs);
 	}
 }

@@ -372,7 +372,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Verify In The News Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("In-The-News"));
 		System.out.println("Verify Complete In The News Page");		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	//Verify Contact Us Page
 		lvaat.getLVAAboutTab().click();
 		//Click on Contact Us
@@ -442,7 +442,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		//Click on Attend Tab
 		lvaa.getLVAAttendTab().click();
 		System.out.println("Click on Attend Tab");
@@ -630,7 +630,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+		Thread.sleep(5000);
 /*		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
@@ -803,7 +803,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		atlfo=new ATLAppFooterLinksNavigationPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+		Thread.sleep(5000);
 		//Scroll till footer links
 		utl.scrollToElement(atlfo.getfacebookfootericon());
 		

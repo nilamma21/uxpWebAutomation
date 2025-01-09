@@ -112,7 +112,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlmrkturl"));
 		//utl.verifyCloseBtnPopup();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 		//New Code for Header Channel Links
 
@@ -309,7 +309,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlmrkturl"));
 		//utl.verifyCloseBtnPopup();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 		//Search Exhibitors
 		//Click on Exhibitor Directory tab
@@ -359,7 +359,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlmrkturl"));
 		//utl.verifyCloseBtnPopup();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 		//Register
 		//Click on Exhibitor Directory tab
@@ -445,7 +445,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlmrkturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 		//Exhibitor Directory
 		//Click on Discover tab
@@ -527,7 +527,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlmrkturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 
 		//Exhibit at Atlanta Market Link
 		//Click on Exhibit tab
@@ -618,7 +618,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlmrkturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 		//Year Round
 		//Click on Source Year Round Tab
@@ -682,7 +682,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlmrkturl"));
 		utl.verifyCloseBtnPopup();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+		Thread.sleep(5000);
 		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfo());
 
@@ -743,7 +743,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlmrkturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+		Thread.sleep(5000);
 		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfo());
 

@@ -54,12 +54,12 @@ public class LVMSmoke_PROD extends base {
 		driver = initializeDriver(); // requires for Parallel text execution
 		utl = new Utility(driver);
 		lap = new UXPLandingPage(driver);
-
+		
 		driver.manage().window().maximize();
-
+		
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 		lap.getIUnderstandBtn().click();
 		/*
 		 * Thread.sleep(2000); utl.verifyCloseBtnPopup();
@@ -79,7 +79,7 @@ public class LVMSmoke_PROD extends base {
 		hd = new UXPHeaderChannelLinksPage(driver);
 		exh = new UXPExhibitPage(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		// Verify that Atlanta link is present
 		Assert.assertTrue(hd.getAtlanta().getText().equalsIgnoreCase("ATLANTA"));
 		Thread.sleep(1000);
@@ -293,7 +293,7 @@ public class LVMSmoke_PROD extends base {
 
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		exh.getexhibittabNew().click();
 		// URL
 		String urlString = exh.getexhibitAtLVM().getAttribute("href");
@@ -323,11 +323,12 @@ public class LVMSmoke_PROD extends base {
 		String winHandleBefore = driver.getWindowHandle();
 		Thread.sleep(1000);
 		exh.getalreadyAnExhibitor().click();
+		Thread.sleep(5000);
 		// Switch to new window opened
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		String title=driver.getTitle();
 		//utl.clickAndAssertUrl(exh.getalreadyAnExhibitor());
 		Assert.assertTrue(title.contains("Sign In to ANDMORE"));
@@ -351,7 +352,7 @@ public class LVMSmoke_PROD extends base {
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		exh.getvisitTabNew().click();
 		utl.clickAndAssertUrl(exh.getRegisterUnderVisitTab());
 		exh.getvisitTabNew().click();
@@ -384,7 +385,7 @@ public class LVMSmoke_PROD extends base {
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		exh.getdiscoverTabNew().click();
 		//Exhibitor Directory
 		utl.clickAndAssertUrl(exh.getExhibitorDirectoryUnderDiscoverTab());
@@ -435,7 +436,7 @@ public class LVMSmoke_PROD extends base {
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		exh.getexhibitTab().click();
 		utl.clickAndAssertUrl(exh.getExhibitAtLasVegasMarketUnderExhibitTab());
 		exh.getexhibitTab().click();
@@ -459,7 +460,7 @@ public class LVMSmoke_PROD extends base {
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		exh.getsourceYearRoundTabNew().click();
 		utl.clickAndAssertUrl(exh.getYearRoundUndersourceYearRoundTab());
 		exh.getsourceYearRoundTabNew().click();
@@ -473,7 +474,7 @@ public class LVMSmoke_PROD extends base {
 	}
 
 	@Test(priority = 07)
-	public void TS07_LVM_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException {
+	public void TS007_LVM_VerifyAllSocialMediaLinksOnFooterTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-013: To verify the all social media links and it's redirection
 
@@ -577,7 +578,7 @@ public class LVMSmoke_PROD extends base {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		gs.getGlobalSearchTextBoxNew().click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		try {
 			gs.getGlobalSearchEnterText().isDisplayed();
 			gs.getGlobalSearchEnterText().sendKeys((prop.getProperty("exhibitordirectory")));
@@ -613,23 +614,26 @@ public class LVMSmoke_PROD extends base {
 		
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(3000);
+		Thread.sleep(7000);
 		//Scroll till footer links
 	      utl.scrollToElement(fl.getlvmfooterLinkAbout());
 		  utl.clickAndAssertUrl(fl.getlvmfooterLinkAbout()); //Click about link
 		  driver.get(prop.getProperty("lvmurl")); //utl.verifyCloseBtnPopup();
+		  Thread.sleep(3000);
 		  utl.scrollToElement(fl.getlvmfooterLinkAbout());
 		  
 		  // Click on Press Center 
 		  utl.scrollToElement(fl.getlvmfooterLinkAbout());
 		  utl.clickAndAssertUrl(fl.getlvmfooterLinkPressCenter()); //Click Press link
 		  driver.get(prop.getProperty("lvmurl")); //utl.verifyCloseBtnPopup();
+		  Thread.sleep(3000);
 		  utl.scrollToElement(fl.getlvmfooterLinkAbout());
 		  
 		  // Click on Our Brands 
 		  utl.scrollToElement(fl.getlvmfooterLinkAbout());
 		  utl.clickAndAssertUrl(fl.getlvmfooterLinkOurBrands()); //Click our brands
 		  driver.get(prop.getProperty("lvmurl")); 
+		  Thread.sleep(3000);
 		  //utl.verifyCloseBtnPopup();
 		  utl.scrollToElement(fl.getlvmfooterLinkAbout());
 		  
@@ -637,7 +641,7 @@ public class LVMSmoke_PROD extends base {
 		  utl.scrollToElement(fl.getlvmfooterLinkAbout());
 		  utl.clickAndAssertUrl(fl.getDownloadTheApp()); //Click Download The App link
 		  driver.get(prop.getProperty("lvmurl"));
-		  Thread.sleep(2000);
+		  Thread.sleep(3000);
 		  //utl.verifyCloseBtnPopup(); 
 		  utl.scrollToElement(fl.getContactUs());
 		  
@@ -647,11 +651,13 @@ public class LVMSmoke_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/contact-us"));
 		driver.get(prop.getProperty("lvmurl"));
 		utl.verifyCloseBtnPopup();
+		Thread.sleep(3000);
 		utl.scrollToElement(fl.getlvmfooterLinkAbout());
 
 		// Click Careers link and verify results.
 		String winHandleBefore14 = driver.getWindowHandle();
 		fl.getCareersATL().click();
+		Thread.sleep(1000);
 		for (String winHandle14 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle14);
 		}
@@ -666,6 +672,7 @@ public class LVMSmoke_PROD extends base {
 		// Switch to new tab
 		String winHandleBefore7 = driver.getWindowHandle();
 		fl.getTermsAndConditions().click();
+		Thread.sleep(1000);
 		for (String winHandle7 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle7);
 		}
@@ -682,6 +689,7 @@ public class LVMSmoke_PROD extends base {
 		
 		String winHandleBefore8 = driver.getWindowHandle();
 		fl.getlvmfooterLinkPrivacyPolicy().click();
+		Thread.sleep(1000);
 		for (String winHandle8 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle8);
 		}
@@ -696,6 +704,7 @@ public class LVMSmoke_PROD extends base {
 		
 		String winHandleBefore9 = driver.getWindowHandle();
 		fl.getAmericasMart_ATLApp().click();
+		Thread.sleep(1000);
 		for (String winHandle9 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle9);
 		}
@@ -711,6 +720,7 @@ public class LVMSmoke_PROD extends base {
 		// Switch to new tab
 		String winHandleBefore2 = driver.getWindowHandle();
 		fl.getAtlantaApparel().click();
+		Thread.sleep(1000);
 		for (String winHandle2 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle2);
 		}
@@ -727,6 +737,7 @@ public class LVMSmoke_PROD extends base {
 		// Switch to new tab
 		String winHandleBefore3 = driver.getWindowHandle();
 		fl.getAtlantaMarket().click();
+		Thread.sleep(1000);
 		for (String winHandle3 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle3);
 		}
@@ -741,6 +752,7 @@ public class LVMSmoke_PROD extends base {
 		// Switch to new tab
 		String winHandleBefore4 = driver.getWindowHandle();
 		fl.getHighPointMarket().click();
+		Thread.sleep(1000);
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
@@ -756,6 +768,7 @@ public class LVMSmoke_PROD extends base {
 		
 		String winHandleBefore5 = driver.getWindowHandle();
 		fl.getlvapplink_ATL().click();
+		Thread.sleep(1000);
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
@@ -773,6 +786,7 @@ public class LVMSmoke_PROD extends base {
 		// Switch to new tab
 		String winHandleBefore11 = driver.getWindowHandle();
 		fl.getandmore().click();
+		Thread.sleep(1000);
 		for (String winHandle11 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle11);
 		}
@@ -813,7 +827,7 @@ public class LVMSmoke_PROD extends base {
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		//click on Register Btn
 		utl.clickAndAssertUrl(hd.getRigisterBtn());
 		

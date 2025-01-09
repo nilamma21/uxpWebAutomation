@@ -12,7 +12,7 @@ public class ATLExhibitPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 	
-	By atlexhibittab = By.xpath("((//div[@class='imc-breakpoint-display--hide-tablet']/descendant::span[contains(text(),'Exhibit')]/../..))[2]"); //Locator for Exhibit tab
+	By atlexhibittab = By.xpath("(//div[@class='imc-breakpoint-display--hide-tablet']/descendant::span[contains(text(),'Exhibit')]/../..)[2]"); //Locator for Exhibit tab
 	By atlexhibitatatlanta = By.xpath("(//a[contains(@href,'/Exhibit')])[position()=1]"); //Locator for Exhibitor at Atlanta Market sub-menu
 	By atlwhyexhibitmenu = By.xpath("//a[contains(text(),'Why Exhibit?')]"); //Locator for Why Exhibit sub-menu
 	By atlapplytoexhibit = By.xpath("//a[@href='/Exhibit/Apply-to-Exhibit']"); //Locator for Exhibitor at Atlanta Market sub-menu

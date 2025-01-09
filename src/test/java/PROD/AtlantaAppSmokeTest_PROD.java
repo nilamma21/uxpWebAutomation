@@ -108,6 +108,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Navigate to Atlanta Apparel site
 		//driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(3000);
 		//Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
 		//Thread.sleep(5000);
@@ -127,7 +128,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 	//Verify Americas mart link
 		//Click on Year Round Tab
@@ -327,7 +328,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput2")));
 		gs.getSearchButton().click();
 		Thread.sleep(10000);
@@ -368,7 +369,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+		Thread.sleep(5000);
 		//Verify exhibitor directory page is successfully opened
 		atled.getATLExhibitorDirectory().click();
 		Assert.assertEquals(exhp.getVerifyExhibitorDirectory().getText(), "Atlanta Apparel Exhibitor Directory");
@@ -637,7 +638,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		
 		//Scroll till footer links
 		utl.scrollToElement(atlfo.getfacebookfootericon());
