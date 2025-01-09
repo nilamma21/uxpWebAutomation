@@ -29,52 +29,52 @@ public class UXPExploreMarketPage {
 	
 	public WebElement getExploreMarketTab() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.elementToBeClickable(exploremarkettab));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exploremarkettab));
 		return driver.findElement(exploremarkettab);		
 	}
 	public WebElement getExploreLVMMenu(){
 	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-      wait.until(ExpectedConditions.elementToBeClickable(explorelvm));
+      wait.until(ExpectedConditions.visibilityOfElementLocated(explorelvm));
 		return driver.findElement(explorelvm);		
 	}
 	public WebElement getWebinarsnEventsMenu(){
 	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-      wait.until(ExpectedConditions.elementToBeClickable(webnevnts));
+      wait.until(ExpectedConditions.visibilityOfElementLocated(webnevnts));
 		return driver.findElement(webnevnts);		
 	}
 	public WebElement getShowSpecialsMenu(){
 	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-      wait.until(ExpectedConditions.elementToBeClickable(showspecials));
+      wait.until(ExpectedConditions.visibilityOfElementLocated(showspecials));
 		return driver.findElement(showspecials);		
 	}
 	public WebElement getVirtualResourcesMenu(){
 	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-      wait.until(ExpectedConditions.elementToBeClickable(virtualresources));
+      wait.until(ExpectedConditions.visibilityOfElementLocated(virtualresources));
 		return driver.findElement(virtualresources);		
 	}
 	public WebElement getKeyDestinationsMenu(){
 	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-      wait.until(ExpectedConditions.elementToBeClickable(keydestn));
+      wait.until(ExpectedConditions.visibilityOfElementLocated(keydestn));
 		return driver.findElement(keydestn);		
 	}
 	public WebElement getNewsnTrendsMenu(){
 	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-      wait.until(ExpectedConditions.elementToBeClickable(newsntrends));
+      wait.until(ExpectedConditions.visibilityOfElementLocated(newsntrends));
 		return driver.findElement(newsntrends);		
 	}
 	public WebElement getMarketRecapMenu(){
 	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-      wait.until(ExpectedConditions.elementToBeClickable(mrktrecap));
+      wait.until(ExpectedConditions.visibilityOfElementLocated(mrktrecap));
 		return driver.findElement(mrktrecap);		
 	}
 	public WebElement getThingsToDoMenu(){
 	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-      wait.until(ExpectedConditions.elementToBeClickable(thingstodo));
+      wait.until(ExpectedConditions.visibilityOfElementLocated(thingstodo));
 		return driver.findElement(thingstodo);		
 	}
 	public WebElement getSocialMediaMenu(){
 	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-      wait.until(ExpectedConditions.elementToBeClickable(socialmedia));
+      wait.until(ExpectedConditions.visibilityOfElementLocated(socialmedia));
 		return driver.findElement(socialmedia);		
 	}
 }

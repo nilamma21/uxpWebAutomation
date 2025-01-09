@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>8/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jan 06 16:50:34 IST 2025</td>
+<td>Started on:</td><td>Thu Jan 09 15:41:19 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>82 seconds (82236 ms)</td>
+<tr><td>Total time:</td><td>1173 seconds (1173703 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,84 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS001_AMC_VerifyAllHeaderChanelLinksTest()'><b>TS001_AMC_VerifyAllHeaderChanelLinksTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at PROD.AmericasMartSmokeTest_PROD.TS001_AMC_VerifyAllHeaderChanelLinksTest(AmericasMartSmokeTest_PROD.java:198)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace930089183", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace930089183'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at PROD.AmericasMartSmokeTest_PROD.TS001_AMC_VerifyAllHeaderChanelLinksTest(AmericasMartSmokeTest_PROD.java:198)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>130</td>
+<td>PROD.AmericasMartSmokeTest_PROD@2e3967ea</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,45 +153,45 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='PROD.SitecoreSmokeTest_PROD.TS006_SC_VerifyIMCReportsTest()'><b>TS006_SC_VerifyIMCReportsTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS009_AMC_VerifyFooterLinksTest()'><b>TS009_AMC_VerifyFooterLinksTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>7</td>
-<td>PROD.SitecoreSmokeTest_PROD@5e600dd5</td></tr>
+<td>128</td>
+<td>PROD.AmericasMartSmokeTest_PROD@2e3967ea</td></tr>
 <tr>
-<td title='PROD.SitecoreSmokeTest_PROD.TS007_SC_VerifyTaxonomyManagerTest()'><b>TS007_SC_VerifyTaxonomyManagerTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS004_AMC_VerifyGlobalSearchFunctionalityTest()'><b>TS004_AMC_VerifyGlobalSearchFunctionalityTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>8</td>
-<td>PROD.SitecoreSmokeTest_PROD@5e600dd5</td></tr>
+<td>96</td>
+<td>PROD.AmericasMartSmokeTest_PROD@2e3967ea</td></tr>
 <tr>
-<td title='PROD.SitecoreSmokeTest_PROD.TS009_SC_VerifyDigitalAdminPanelTest()'><b>TS009_SC_VerifyDigitalAdminPanelTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS006_AMC_VerifyAllLinksUnderExhibitTest()'><b>TS006_AMC_VerifyAllLinksUnderExhibitTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>8</td>
-<td>PROD.SitecoreSmokeTest_PROD@5e600dd5</td></tr>
+<td>74</td>
+<td>PROD.AmericasMartSmokeTest_PROD@2e3967ea</td></tr>
 <tr>
-<td title='PROD.SitecoreSmokeTest_PROD.TS001_SC_VerifySitecoreLoginTest()'><b>TS001_SC_VerifySitecoreLoginTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest()'><b>TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>23</td>
-<td>PROD.SitecoreSmokeTest_PROD@5e600dd5</td></tr>
+<td>84</td>
+<td>PROD.AmericasMartSmokeTest_PROD@2e3967ea</td></tr>
 <tr>
-<td title='PROD.SitecoreSmokeTest_PROD.TS004_SC_VerifyShowSpecialApprovalsTest()'><b>TS004_SC_VerifyShowSpecialApprovalsTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest()'><b>TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>7</td>
-<td>PROD.SitecoreSmokeTest_PROD@5e600dd5</td></tr>
+<td>219</td>
+<td>PROD.AmericasMartSmokeTest_PROD@2e3967ea</td></tr>
 <tr>
-<td title='PROD.SitecoreSmokeTest_PROD.TS008_SC_VerifyExhibitorEventsApprovalTest()'><b>TS008_SC_VerifyExhibitorEventsApprovalTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS008_AMC_VerifyExhibitorDirectoryTest()'><b>TS008_AMC_VerifyExhibitorDirectoryTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>7</td>
-<td>PROD.SitecoreSmokeTest_PROD@5e600dd5</td></tr>
+<td>36</td>
+<td>PROD.AmericasMartSmokeTest_PROD@2e3967ea</td></tr>
 <tr>
-<td title='PROD.SitecoreSmokeTest_PROD.TS002_SC_VerifyContentEditorTest()'><b>TS002_SC_VerifyContentEditorTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest()'><b>TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>5</td>
-<td>PROD.SitecoreSmokeTest_PROD@5e600dd5</td></tr>
+<td>180</td>
+<td>PROD.AmericasMartSmokeTest_PROD@2e3967ea</td></tr>
 <tr>
-<td title='PROD.SitecoreSmokeTest_PROD.TS003_SC_VerifyControlPanelTest()'><b>TS003_SC_VerifyControlPanelTest</b><br>Test class: PROD.SitecoreSmokeTest_PROD</td>
+<td title='PROD.AmericasMartSmokeTest_PROD.TS005_AMC_VerifyAllLinksUnderAboutTabTest()'><b>TS005_AMC_VerifyAllLinksUnderAboutTabTest</b><br>Test class: PROD.AmericasMartSmokeTest_PROD</td>
 <td></td>
-<td>8</td>
-<td>PROD.SitecoreSmokeTest_PROD@5e600dd5</td></tr>
+<td>188</td>
+<td>PROD.AmericasMartSmokeTest_PROD@2e3967ea</td></tr>
 </table><p>
 </body>
 </html>

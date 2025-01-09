@@ -85,7 +85,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		//utl.verifyCloseBtnPopup();
 	}
 
@@ -318,7 +318,8 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+		Thread.sleep(8000);
+		
 		//Scroll till footer links
 		utl.scrollToElement(fl.marketInfoAMC());
 		//Thread.sleep(5000);
@@ -373,7 +374,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		
 		/*
 		 * atat.getATLAttendTab().click(); Thread.sleep(500); //Click Attend our next
@@ -498,7 +499,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(8000);
 		utl.verifyCloseBtnPopup();
+		
 		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		System.out.println("Search Input: "+prop.getProperty("globalsearchinput"));
 		Thread.sleep(5000);
@@ -524,7 +527,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		
 	//Click About tab at Header
 		amab.getAboutTab().click();
@@ -612,7 +615,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//utl.verifyCloseBtnPopup();
-		Thread.sleep(3000);
+		Thread.sleep(8000);
 		
 	//Exhibit at Americas Mart
 		//Click on Exhibit Tab 
@@ -691,8 +694,11 @@ public class AmericasMartSmokeTest_PROD extends base {
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
 		amoyr=new AMOpenYearRoundPage(driver);
 
+		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(8000);
 		utl.verifyCloseBtnPopup();
+		
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
 		Thread.sleep(2000);
@@ -709,7 +715,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Thread.sleep(3000);
 		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("How to Register"));
 		System.out.println("How to regiter opened");
-*/	
+*/
 		//Click on Open Year Round Tab 
 		amoyr.getOpenYearRoundTab().click();
 		Thread.sleep(2000);
@@ -809,6 +815,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(8000);
 		//utl.verifyCloseBtnPopup();
 		//Verify exhibitor directory page is successfully opened
 		ed.getExhibitorDirectory().click();
@@ -836,7 +843,9 @@ public class AmericasMartSmokeTest_PROD extends base {
 		amfl = new AMFooterLinksNavigationPage(driver);
 		atlfl = new ATLFooterLinksNavigationPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.get(prop.getProperty("ammarturl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+		Thread.sleep(8000);
 		//	utl.verifyCloseBtnPopup();
 
 		utl.scrollToElement(fl.marketInfoAMC());

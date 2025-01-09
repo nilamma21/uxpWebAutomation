@@ -1,53 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="9" passed="8" failed="0" skipped="0">
+<testng-results ignored="3" total="12" passed="8" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-06T16:50:34 IST" name="Default suite" finished-at="2025-01-06T16:51:56 IST" duration-ms="82236">
+  <suite started-at="2025-01-09T15:41:19 IST" name="Default suite" finished-at="2025-01-09T16:00:53 IST" duration-ms="1173703">
     <groups>
     </groups>
-    <test started-at="2025-01-06T16:50:34 IST" name="Default test" finished-at="2025-01-06T16:51:56 IST" duration-ms="82236">
-      <class name="PROD.SitecoreSmokeTest_PROD">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@5e600dd5]" started-at="2025-01-06T16:50:34 IST" name="initialize" finished-at="2025-01-06T16:50:37 IST" duration-ms="3776" status="PASS">
+    <test started-at="2025-01-09T15:41:19 IST" name="Default test" finished-at="2025-01-09T16:00:53 IST" duration-ms="1173703">
+      <class name="PROD.AmericasMartSmokeTest_PROD">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@2e3967ea]" started-at="2025-01-09T15:41:19 IST" name="initialize" finished-at="2025-01-09T15:41:53 IST" duration-ms="33896" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TS001_SC_VerifySitecoreLoginTest()[pri:1, instance:PROD.SitecoreSmokeTest_PROD@5e600dd5]" started-at="2025-01-06T16:50:37 IST" name="TS001_SC_VerifySitecoreLoginTest" finished-at="2025-01-06T16:51:01 IST" duration-ms="23251" status="PASS">
+        <test-method signature="TS001_AMC_VerifyAllHeaderChanelLinksTest()[pri:1, instance:PROD.AmericasMartSmokeTest_PROD@2e3967ea]" started-at="2025-01-09T15:41:53 IST" name="TS001_AMC_VerifyAllHeaderChanelLinksTest" finished-at="2025-01-09T15:44:03 IST" duration-ms="130118" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at PROD.AmericasMartSmokeTest_PROD.TS001_AMC_VerifyAllHeaderChanelLinksTest(AmericasMartSmokeTest_PROD.java:198)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_SC_VerifySitecoreLoginTest -->
-        <test-method signature="TS002_SC_VerifyContentEditorTest()[pri:2, instance:PROD.SitecoreSmokeTest_PROD@5e600dd5]" started-at="2025-01-06T16:51:01 IST" name="TS002_SC_VerifyContentEditorTest" finished-at="2025-01-06T16:51:06 IST" duration-ms="5032" status="PASS">
+        </test-method> <!-- TS001_AMC_VerifyAllHeaderChanelLinksTest -->
+        <test-method signature="TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest()[pri:2, instance:PROD.AmericasMartSmokeTest_PROD@2e3967ea]" started-at="2025-01-09T15:44:03 IST" name="TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest" finished-at="2025-01-09T15:45:28 IST" duration-ms="84550" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_SC_VerifyContentEditorTest -->
-        <test-method signature="TS003_SC_VerifyControlPanelTest()[pri:3, instance:PROD.SitecoreSmokeTest_PROD@5e600dd5]" started-at="2025-01-06T16:51:06 IST" name="TS003_SC_VerifyControlPanelTest" finished-at="2025-01-06T16:51:14 IST" duration-ms="8585" status="PASS">
+        </test-method> <!-- TS002_AMC_VerifyAllSocialMediaLinksOnFooterTest -->
+        <test-method signature="TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest()[pri:3, instance:PROD.AmericasMartSmokeTest_PROD@2e3967ea]" started-at="2025-01-09T15:45:28 IST" name="TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest" finished-at="2025-01-09T15:49:07 IST" duration-ms="219351" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS003_SC_VerifyControlPanelTest -->
-        <test-method signature="TS004_SC_VerifyShowSpecialApprovalsTest()[pri:4, instance:PROD.SitecoreSmokeTest_PROD@5e600dd5]" started-at="2025-01-06T16:51:14 IST" name="TS004_SC_VerifyShowSpecialApprovalsTest" finished-at="2025-01-06T16:51:22 IST" duration-ms="7842" status="PASS">
+        </test-method> <!-- TS003_AMC_VerifyAllLinksUnderMarketsAndEventsTabTest -->
+        <test-method signature="TS004_AMC_VerifyGlobalSearchFunctionalityTest()[pri:4, instance:PROD.AmericasMartSmokeTest_PROD@2e3967ea]" started-at="2025-01-09T15:49:07 IST" name="TS004_AMC_VerifyGlobalSearchFunctionalityTest" finished-at="2025-01-09T15:50:44 IST" duration-ms="96445" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS004_SC_VerifyShowSpecialApprovalsTest -->
-        <test-method signature="TS006_SC_VerifyIMCReportsTest()[pri:6, instance:PROD.SitecoreSmokeTest_PROD@5e600dd5]" started-at="2025-01-06T16:51:22 IST" name="TS006_SC_VerifyIMCReportsTest" finished-at="2025-01-06T16:51:30 IST" duration-ms="7820" status="PASS">
+        </test-method> <!-- TS004_AMC_VerifyGlobalSearchFunctionalityTest -->
+        <test-method signature="TS005_AMC_VerifyAllLinksUnderAboutTabTest()[pri:5, instance:PROD.AmericasMartSmokeTest_PROD@2e3967ea]" started-at="2025-01-09T15:50:44 IST" name="TS005_AMC_VerifyAllLinksUnderAboutTabTest" finished-at="2025-01-09T15:53:52 IST" duration-ms="188556" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS006_SC_VerifyIMCReportsTest -->
-        <test-method signature="TS007_SC_VerifyTaxonomyManagerTest()[pri:7, instance:PROD.SitecoreSmokeTest_PROD@5e600dd5]" started-at="2025-01-06T16:51:30 IST" name="TS007_SC_VerifyTaxonomyManagerTest" finished-at="2025-01-06T16:51:39 IST" duration-ms="8833" status="PASS">
+        </test-method> <!-- TS005_AMC_VerifyAllLinksUnderAboutTabTest -->
+        <test-method signature="TS006_AMC_VerifyAllLinksUnderExhibitTest()[pri:6, instance:PROD.AmericasMartSmokeTest_PROD@2e3967ea]" started-at="2025-01-09T15:53:52 IST" name="TS006_AMC_VerifyAllLinksUnderExhibitTest" finished-at="2025-01-09T15:55:06 IST" duration-ms="74331" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_SC_VerifyTaxonomyManagerTest -->
-        <test-method signature="TS008_SC_VerifyExhibitorEventsApprovalTest()[pri:8, instance:PROD.SitecoreSmokeTest_PROD@5e600dd5]" started-at="2025-01-06T16:51:39 IST" name="TS008_SC_VerifyExhibitorEventsApprovalTest" finished-at="2025-01-06T16:51:46 IST" duration-ms="7532" status="PASS">
+        </test-method> <!-- TS006_AMC_VerifyAllLinksUnderExhibitTest -->
+        <test-method signature="TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest()[pri:7, instance:PROD.AmericasMartSmokeTest_PROD@2e3967ea]" started-at="2025-01-09T15:55:06 IST" name="TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest" finished-at="2025-01-09T15:58:07 IST" duration-ms="180756" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_SC_VerifyExhibitorEventsApprovalTest -->
-        <test-method signature="TS009_SC_VerifyDigitalAdminPanelTest()[pri:9, instance:PROD.SitecoreSmokeTest_PROD@5e600dd5]" started-at="2025-01-06T16:51:46 IST" name="TS009_SC_VerifyDigitalAdminPanelTest" finished-at="2025-01-06T16:51:55 IST" duration-ms="8905" status="PASS">
+        </test-method> <!-- TS007_AMC_VerifyAllLinksUnderOpenYearRoundTest -->
+        <test-method signature="TS008_AMC_VerifyExhibitorDirectoryTest()[pri:8, instance:PROD.AmericasMartSmokeTest_PROD@2e3967ea]" started-at="2025-01-09T15:58:07 IST" name="TS008_AMC_VerifyExhibitorDirectoryTest" finished-at="2025-01-09T15:58:44 IST" duration-ms="36805" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS009_SC_VerifyDigitalAdminPanelTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:PROD.SitecoreSmokeTest_PROD@5e600dd5]" started-at="2025-01-06T16:51:55 IST" name="tearDown" finished-at="2025-01-06T16:51:56 IST" duration-ms="579" status="PASS">
+        </test-method> <!-- TS008_AMC_VerifyExhibitorDirectoryTest -->
+        <test-method signature="TS009_AMC_VerifyFooterLinksTest()[pri:9, instance:PROD.AmericasMartSmokeTest_PROD@2e3967ea]" started-at="2025-01-09T15:58:44 IST" name="TS009_AMC_VerifyFooterLinksTest" finished-at="2025-01-09T16:00:53 IST" duration-ms="128800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_AMC_VerifyFooterLinksTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PROD.AmericasMartSmokeTest_PROD@2e3967ea]" started-at="2025-01-09T16:00:53 IST" name="tearDown" finished-at="2025-01-09T16:00:53 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PROD.SitecoreSmokeTest_PROD -->
+      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

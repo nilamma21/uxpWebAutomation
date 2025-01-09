@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PROD.LasVegasAppSmokeTest_PROD">
+      <class name="PROD.AmericasMartSmokeTest_PROD">
         <methods>
           <include name="initialize"/>
           <include name="tearDown"/>
-          <include name="TS001_LVMApp_VerifyAllHeaderChanelLinksTest"/>
-          <include name="TS002_LVMApp_VerifyGlobalSearchFunctionalityTest"/>
+          <include name="TS001_AMC_VerifyAllHeaderChanelLinksTest"/>
         </methods>
-      </class> <!-- PROD.LasVegasAppSmokeTest_PROD -->
+      </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
