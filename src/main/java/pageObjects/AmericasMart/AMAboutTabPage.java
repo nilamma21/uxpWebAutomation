@@ -12,7 +12,8 @@ public class AMAboutTabPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By AboutTab = By.xpath("//nav[@class='imc-navigation-container']/descendant::a[contains(text(),'About')]"); //About tab
+	By AboutTab = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'About')]/../.."); //About tab
+	By AboutAmericasMart = By.xpath("//a[@href=\"/About\" and contains(text(),'About AmericasMart')]");
 	By Careers = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Careers')]"); // Locator for Careers in About tab
 	By ContactUs = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Contact Us')]"); // Locator for Contact Us in About tab
 	By IndustryPartners = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Industry Partners')]"); // Locator for Instagram icon in footer links
@@ -20,6 +21,7 @@ public class AMAboutTabPage {
 	By ErrorUnsafeWebLink = By.xpath("//a[@id = 'proceed-link']");
 	By History = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'History')]");// Locator for Careers in History tab
 	By Secondrynavigation = By.xpath("//div[@class='imc-navigation-2tier']");
+	By AtlantaConventionCenter = By.xpath("//a[@href='https://www.atlconventioncenter.com/' and contains(text(),'Atlanta Convention Center')]");
 	
 	public AMAboutTabPage(WebDriver driver) {
 		this.driver = driver; 			
@@ -63,5 +65,15 @@ public class AMAboutTabPage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(Secondrynavigation));
 		return driver.findElement(Secondrynavigation);
+	}
+	public WebElement getAboutAmericasMart() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(AboutAmericasMart));
+		return driver.findElement(AboutAmericasMart);
+	}
+	public WebElement getAtlantaConventionCenter() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(AtlantaConventionCenter));
+		return driver.findElement(AtlantaConventionCenter);
 	}
 }

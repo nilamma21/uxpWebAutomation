@@ -115,7 +115,6 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Thread.sleep(5000);
 		
 		//New Code for Header Channel Links
-
 		//Verify that Atlanta link is present
 		Assert.assertTrue(hd.getAtlanta().getText().equalsIgnoreCase("ATLANTA"));
 		Thread.sleep(2000);
@@ -128,8 +127,6 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 
 		//Check Casual Market Atlanta
-
-		//Check Casual Market Atlanta
 		hd.getAtlanta().click();
 		Assert.assertTrue(hd.getCasualMarketAtlantaURL().getText().equalsIgnoreCase("Casual Market Atlanta"));
 		//String casualURl=hd.getCasualMarketAtlantaURL().getAttribute("href");
@@ -140,7 +137,6 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(5000);
 
-		
 		//Check Atlanta Market
 		hd.getAtlanta().click();
 		Assert.assertTrue(hd.getAtlantaMarket().getText().equalsIgnoreCase("Atlanta Market"));
@@ -149,40 +145,41 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
 		
-	/*//Check Formal Markets
+	//Check Formal Markets
 		hd.getAtlanta().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
 		hd.getFormalMarkets().click();
 		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
 		driver.get(prop.getProperty("atlmrkturl"));
-		Thread.sleep(2000);*/
+		Thread.sleep(2000);
+		
 		//Check Cash & Carry Markets: Spring and Fall
-				hd.getAtlanta().click();
-				//Check markets for Spring or Fall
-				try {
-					//For Spring Cash and Carry
-				Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Spring Cash & Carry"));
+		hd.getAtlanta().click();
+		//Check markets for Spring or Fall
+		try {
+			//For Spring Cash and Carry
+		Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Spring Cash & Carry"));
 				hd.getCashAndCarryMarketsSpringandFall().click();
-				Assert.assertTrue(driver.getTitle().contains("Spring Cash & Carry"));
-				driver.get(prop.getProperty("lvmappurl"));
-				Thread.sleep(2000);
-				}catch (Exception e) {
-					//For Fall Cash and Carry
-					Assert.assertTrue(hd.getFllCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Fall Cash & Carry"));
-					hd.getFllCashAndCarryMarketsSpringandFall().click();
-					Assert.assertTrue(driver.getTitle().contains("Fall Cash & Carry"));
-					driver.get(prop.getProperty("lvmappurl"));
-					Thread.sleep(2000);
-				}		
-				/*
-				 * hd.getAtlanta().click();
-				 * Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().
-				 * equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
-				 * hd.getMidSeasonBuyingEventFallMarket().click();
-				 * Assert.assertTrue(driver.getCurrentUrl().contains("Markets"));
-				 * driver.get(prop.getProperty("atlmrkturl")); Thread.sleep(2000);
-				 */
+		Assert.assertTrue(driver.getTitle().contains("Spring Cash & Carry"));
+		driver.get(prop.getProperty("atlmrkturl"));
+		Thread.sleep(2000);
+		}catch (Exception e) {
+			//For Fall Cash and Carry
+			Assert.assertTrue(hd.getFllCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Fall Cash & Carry"));
+			hd.getFllCashAndCarryMarketsSpringandFall().click();
+			Assert.assertTrue(driver.getTitle().contains("Fall Cash & Carry"));
+			driver.get(prop.getProperty("atlmrkturl"));
+			Thread.sleep(2000);
+		}		
+		/*
+		* hd.getAtlanta().click();
+		* Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().
+		* equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
+		* hd.getMidSeasonBuyingEventFallMarket().click();
+		* Assert.assertTrue(driver.getCurrentUrl().contains("Markets"));
+		* driver.get(prop.getProperty("atlmrkturl")); Thread.sleep(2000);
+		*/
 		
 	/*	//Check Cash & Carry Markets: Spring and Fall
 		hd.getAtlanta().click();
@@ -228,7 +225,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas Market"));
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
-		
+/*		
 		//Check Formal Markets
 		hd.getLasVegas().click();
 		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
@@ -236,7 +233,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
-		
+*/	
 		//Check Las Vegas Apparel
 		hd.getLasVegas().click();
 		Assert.assertTrue(hd.getLasVegasApparel().getText().equalsIgnoreCase("Las Vegas Apparel"));
@@ -751,9 +748,9 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		fl.getmarketInfo().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/market-info"));
 		driver.get(prop.getProperty("atlmrkturl"));
+		Thread.sleep(2000);
 		//utl.verifyCloseBtnPopup();
-		utl.scrollToElement(fl.getpressCenter());
-		
+		utl.scrollToBottom();
 		//Click on Press Center
 		fl.getpressCenter().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/Market-Info/Press-Center"));

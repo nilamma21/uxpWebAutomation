@@ -12,7 +12,7 @@ public class LVAAboutTab {
 	public WebDriver driver;
 	public WebDriverWait wait;
 	
-	By LVAAboutTab = By.xpath("(//a[contains(text(),'About')])[1]");
+	By LVAAboutTab = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'About')]/../..");
 	By LVADatesAndHours = By.xpath("(//a[contains(text(),'Dates & Hours')])[1]");
 	By LVAPressCenter = By.xpath("(//a[contains(text(),'Press Center')])[1]");
 	By LVAInTheNews = By.xpath("(//a[contains(text(),'In The News')])[1]");

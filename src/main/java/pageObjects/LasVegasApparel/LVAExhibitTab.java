@@ -12,13 +12,15 @@ public class LVAExhibitTab{
 	public WebDriver driver;
 	public WebDriverWait wait;
 	
-	By LVAExhibitTab = By.xpath("(//a[contains(@class,'imc-navigation__tier1Link')][contains(text(),'Exhibit')])[2]");
+	By LVAExhibitTab = By.xpath("(//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Exhibit')]/../..)[2]");
 	By LVAExhibitorPortalLogin = By.xpath("(//a[contains(text(),'Exhibitor Portal Login')])[1]");
 	By LVAExhibitorPortalGuide = By.xpath("(//a[contains(text(),'Exhibitor Portal Guide')])[1]");
 	By LVAMarketToolkit = By.xpath("(//a[contains(text(),'Market Toolkit')])[1]");
 	By LVAWhyExhibit = By.xpath("(//a[contains(text(),'Why Exhibit?')])[1]");
 	By LVAAdvertisingAndSponsorship = By.xpath("(//a[contains(text(),'Advertising & Sponsorship')])[1]");
 	By LVALeasingInquiry = By.xpath("(//a[contains(text(),'Leasing Inquiry')])[1]");
+	By LVAExhibitorResources = By.xpath("(//a[contains(text(),'Exhibitor Resources')])[1]");
+	By LVAAlreadyOnExhibitor = By.xpath("(//a[contains(text(),'Already an Exhibitor?')])[1]");
 	
 	public LVAExhibitTab(WebDriver driver) {
 		this.driver = driver;
@@ -59,5 +61,15 @@ public class LVAExhibitTab{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(LVALeasingInquiry));
 		return driver.findElement(LVALeasingInquiry);
+	}
+	public WebElement getLVAExhibitorResources() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(LVAExhibitorResources));
+		return driver.findElement(LVAExhibitorResources);
+	}
+	public WebElement getLVAAlreadyOnExhibitor() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(LVAAlreadyOnExhibitor));
+		return driver.findElement(LVAAlreadyOnExhibitor);
 	}
 }

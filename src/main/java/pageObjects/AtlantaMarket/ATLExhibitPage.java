@@ -21,7 +21,7 @@ public class ATLExhibitPage {
 	By atljunipersubmenu = By.xpath("(//a[contains(text(),'Juniper')])[position()=2]"); //Locator for Juniper sub-menu
 	By atlexhibitbrdcrumb = By.xpath("//ul[@class='imc-breadcrumb']/li[2]/a"); //Locator for Exhibit Breadcrumb menu
 	By atlexploginpagetitle = By.xpath("//h2[contains(text(),'Sign in with your existing account')]"); //Locator for Exhibitor Portals Login page title
-	By atlexhibitorresources = By.xpath("//a[contains(text(),'Exhibitor Resources')]"); // Locator for Exhibitor Resources option in Exhibit menu
+	By atlexhibitorresources = By.xpath("//a[@href='/Exhibit/Resources' and contains(text(),'Exhibitor Resources')]"); // Locator for Exhibitor Resources option in Exhibit menu
 	By atlapplytoexhibitbrdcrmb = By.xpath("//ul[@class='imc-breadcrumb']/li[3]/a"); //Locator for Apply to Exhibit breadcrumb
 	By atlexhregstnbrdcrmb = By.xpath("//ul[@class='imc-breadcrumb']/li[4]/a"); //Locator for Exhibitor Registration breadcrumb
 	By atlexhresourcesbrdcrumb = By.xpath("//ul[@class='imc-breadcrumb']/li[3]/a"); //Locator for Exhibitor Respources breadcrumb
@@ -29,8 +29,8 @@ public class ATLExhibitPage {
 	By AdvertisingAndSponsorship = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Advertising & Sponsorship')]");
 	By ShowDates = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Show Dates')]");
 	By ExhibitWithUs = By.xpath("//a[@href='/Exhibit/Atlanta-Apparel' and contains(text(),'Exhibit With Us')]");
-	By ExhibitAtAtlantaApparel = By.xpath("//a[@class='imc-link imc-navigation__tier2Link' and contains(text(),'Exhibit at Atlanta Apparel')]");
-	By ExhibitInSocialOccasion = By.xpath("//a[@href='/Exhibit/Social-Occasion']");
+	By ExhibitAtAtlantaApparel = By.xpath("//a[@href='/Exhibit/Atlanta-Apparel' and contains(text(),'Exhibit at Atlanta Apparel')]");
+	By ExhibitInSocialOccasion = By.xpath("//a[@href='/Exhibit/Social-Occasion' and contains(text(),'Exhibit in Social Occasion')]");
 	By AlreadyAnExhibitor = By.xpath("//a[contains(text(),'Already an Exhibitor')]");
 	
 	public ATLExhibitPage(WebDriver driver) {

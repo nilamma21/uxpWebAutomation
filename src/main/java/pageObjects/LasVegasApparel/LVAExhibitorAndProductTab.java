@@ -9,23 +9,26 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LVAExhibitorAndProductTab {
+	
 	public WebDriver driver;
 	public WebDriverWait wait;
 	
-	By LVAExhibitorAndProductTab = By.xpath("(//a[contains(text(),'Exhibitors & Products')])[1]");
-	By LVAExhibitorDirectory = By.xpath("(//a[contains(text(),'Exhibitor Directory')])[1]");
+	By LVAExhibitorDirectoryTab = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Exhibitor Directory')]/../..");
+	By LVAExhibitorDirectory = By.xpath("//a[contains(text(),'Exhibitor Directory')]");
 	By LVAListOfBrands = By.xpath("(//a[contains(text(),'List of Brands')])[1]");
-	By LVAOpenShowroom = By.xpath("(//a[contains(text(),'Open Showrooms')])[1]");
-	By LVAFloorPlans = By.xpath("(//a[contains(text(),'Floor Plans')])[1]");
+	By LVAOpenShowroom = By.xpath("//a[contains(text(),'Open Showrooms')]");
+	By LVAFloorPlans = By.xpath("//a[contains(text(),'Floor Plans')]");
+	By LVMTrendReport = By.xpath("//a[contains(text(),'Trend Report')]");
 	
 	public LVAExhibitorAndProductTab(WebDriver driver) {
 		this.driver = driver; 			
 	} 
-	public WebElement getLVAExhibitorAndProductTab() throws InterruptedException {
+	
+	public WebElement getLVAExhibitorDirectoryTab() throws InterruptedException {
 	  Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.elementToBeClickable(LVAExhibitorAndProductTab));
-		return driver.findElement(LVAExhibitorAndProductTab);
+		wait.until(ExpectedConditions.elementToBeClickable(LVAExhibitorDirectoryTab));
+		return driver.findElement(LVAExhibitorDirectoryTab);
 	}
 	public WebElement getLVAExhibitorDirectory() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
@@ -47,5 +50,9 @@ public class LVAExhibitorAndProductTab {
 		wait.until(ExpectedConditions.elementToBeClickable(LVAFloorPlans));
 		return driver.findElement(LVAFloorPlans);
 	}
-	
+	public WebElement getLVMTrendReport() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(LVMTrendReport));
+		return driver.findElement(LVMTrendReport);
+	}
 }
