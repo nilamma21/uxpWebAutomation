@@ -16,12 +16,16 @@ import pageObjects.AmericasMart.AMHeaderLinksPage;
 import pageObjects.AmericasMart.AMMarketsAndEventsPage;
 import pageObjects.AmericasMart.AMOpenYearRoundPage;
 import pageObjects.AtlantaApparel.ATLAppAttendTabPage;
+import pageObjects.AtlantaApparel.ATLAppDiscoverTab;
 import pageObjects.AtlantaApparel.ATLAppExhibitTabPage;
+import pageObjects.AtlantaApparel.ATLAppExhibitorDirectoryTab;
 import pageObjects.AtlantaApparel.ATLAppExhibitorsAndProductTabPage;
 import pageObjects.AtlantaApparel.ATLAppFashionGalleryTabPage;
 import pageObjects.AtlantaApparel.ATLAppFooterLinksNavigationPage;
 import pageObjects.AtlantaApparel.ATLAppGlobalSearchPage;
+import pageObjects.AtlantaApparel.ATLAppMarketsAndEventsTab;
 import pageObjects.AtlantaApparel.ATLAppMarketsTabPage;
+import pageObjects.AtlantaApparel.ATLAppVisitTabPage;
 import pageObjects.AtlantaApparel.ATLAppYearRoundTabPage;
 import pageObjects.AtlantaMarket.ATLAllChannelsLinksPage;
 import pageObjects.AtlantaMarket.ATLAttendPage;
@@ -95,6 +99,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	UXPProfileAndSettingsPage ps;
 	EXPLoginPage el;
 	SendEmail se;
+	ATLAppVisitTabPage vtp;
+	ATLAppExhibitorDirectoryTab edp;
+	ATLAppMarketsAndEventsTab mae;
+	ATLAppDiscoverTab dt;
 
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
@@ -113,10 +121,698 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		lap.getIUnderstandBtn().click();
 		//Thread.sleep(5000);
 	}
-
 	
 	@Test(priority=1)
-	public void TS001_ATLApp_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
+	public void TS001_ATLApp_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T04: To verify global search functionality
+
+		utl=new Utility(driver);
+		gs = new UXPGlobalSearchPage(driver);
+
+		driver.get(prop.getProperty("atlappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(5000);
+		try {
+			gs.getGlobalSearchEnterText().isDisplayed();
+			gs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinput2")));
+			Thread.sleep(1000);
+			gs.getSearchButtonNew().click();
+			Thread.sleep(5000);
+			String searchterm = gs.getVerifyGlobalSeacrhNewSecond().getText();
+			Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput2")));
+			System.out.println("Global Search functionality is working properly.");
+		} catch (Exception e) {
+
+			gs.getGlobalSearchTextBoxNew().click();
+
+			gs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinput2")));
+			Thread.sleep(1000);
+			gs.getSearchButtonNew().click();
+			Thread.sleep(5000);
+			String searchterm = gs.getVerifyGlobalSeacrhNewSecond().getText();
+			System.out.println(searchterm);
+			Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput2")));
+			System.out.println("Global Search functionality is working properly.");
+		}
+		
+	}
+	
+	
+	@Test(priority=2)
+	public void TS002_ATLApp_VerifyExhibitorDirectory() throws InterruptedException, IOException
+	{
+	//Exhibitor Directory 
+		utl = new Utility(driver);
+		edp = new ATLAppExhibitorDirectoryTab(driver);
+		
+		driver.get(prop.getProperty("atlappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(7000);
+		
+	//Exhibitors and Products
+		edp.getATLAppExhibitorDirectoryTab().click();
+		Thread.sleep(500);
+		//Click on Exhibitors And Products link
+		edp.getEDTExhibitorsAndProducts().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("exhibitor-directory"));	
+		System.out.println("Exhibitors and Products Page is present");
+		
+	//Floor Plans
+		edp.getATLAppExhibitorDirectoryTab().click();
+		Thread.sleep(500);
+		//Click on Floor Plans link
+		edp.getEDTFloorPlans().click();
+		Thread.sleep(3000);
+		//Verify Floor Plan Page
+		//Assert.assertTrue(atlexhp.getATLVerifyFloorPlans().isDisplayed());
+		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Map"));
+		System.out.println("Floor Plan Page is present");
+		
+	//List of Brands
+		edp.getATLAppExhibitorDirectoryTab().click();
+		Thread.sleep(500);
+		//Click on List of Brands link
+		edp.getEDTListOfBrands().click();
+		Thread.sleep(3000);
+		//Verify List of Brands Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("directory"));
+		System.out.println("List of Brands Page is present");
+		
+	//Categories
+		edp.getATLAppExhibitorDirectoryTab().click();
+		Thread.sleep(500);
+		//Click on categories
+		edp.getEDTCategories().click();
+		System.out.println("Click on Categoris");
+		Thread.sleep(3000);
+		//Verify All Brands Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Categories"));
+		System.out.println("Categories Page is present");
+		
+	}
+	
+	@Test(priority=3)
+	public void TS003_ATLApp_VerifyMarketsAndEvents() throws InterruptedException, IOException
+	{
+	//Markets and Events
+		utl = new Utility(driver);
+		mae = new ATLAppMarketsAndEventsTab(driver);
+		
+		driver.get(prop.getProperty("atlappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(7000);
+		
+	//Complete show dates
+		//Click on Markets And Events Tab
+		mae.getATLAppMarketsAndEventsTab().click();
+		Thread.sleep(500);
+		//Click on Complete show dates link
+		mae.getMAECompleteShowdates().click(); 
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("Complete-Show-Dates"));	
+		System.out.println("Complete show dates Page is displayed properly");
+		
+	//Events and amenities
+		//Click on Markets And Events Tab
+		mae.getATLAppMarketsAndEventsTab().click();
+		Thread.sleep(500);
+		//Click on Events and amenities link
+		mae.getMAEEventsAndAmenities().click();
+		Thread.sleep(5000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("Events"));	
+		System.out.println("Events and amenities Page is displayed properly");
+		
+	//Year around at AmericasMart
+		//Click on Markets And Events Tab
+		mae.getATLAppMarketsAndEventsTab().click();
+		Thread.sleep(500);
+		String winHandleBefore = driver.getWindowHandle();
+		//Click on Year around at AmericasMart link
+		mae.getMAEYearAroundAtAmericasMart().click();
+		for (String winHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("americasmart.com"));
+		System.out.println("Year around at AmericasMart Page is displayed properly");
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
+	}
+	
+	@Test(priority=4)
+	public void TS004_ATLApp_VerifyVisitTab() throws InterruptedException, IOException
+	{
+	//Visit Tab Page
+		utl = new Utility(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		atlm = new ATLAppMarketsTabPage(driver);	
+		atlatt = new ATLAppAttendTabPage(driver);
+		vtp = new ATLAppVisitTabPage(driver);
+		
+		driver.get(prop.getProperty("atlappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(5000);
+		
+	//Registration
+		//Click on Visit Tab
+		vtp.getATLAppVisitTab().click();
+		//Click on Registration link
+		vtp.getVisitTabRegistration().click();
+		Thread.sleep(3000);
+		//Click on Registration link
+		Assert.assertTrue(driver.getCurrentUrl().contains("Registration"));	
+		System.out.println("Registration page is displayed properly");		
+		
+	//Complete Show Dates
+		//Click on Visit Tab
+		vtp.getATLAppVisitTab().click();
+		//Click on Show Dates link
+		vtp.getVisitTabCompleteShowDates().click();
+		Thread.sleep(3000);
+		//Click on Registration link
+		Assert.assertTrue(driver.getCurrentUrl().contains("Complete-Show-Dates"));	
+		System.out.println("Registration page is displayed properly");		
+	
+	//Travel
+		//Click on Visit Tab
+		vtp.getATLAppVisitTab().click();
+		Thread.sleep(1000);
+		//Click on Travel Link
+		vtp.getVisitTabTravel().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("Travel"));	
+		System.out.println("Travel Page is displayed properly");	
+		
+	//Events and Amenities
+		//Click on Visit Tab
+		vtp.getATLAppVisitTab().click();
+		Thread.sleep(1000);
+		//Click on Events & Amenities link
+		vtp.getVisitTabEventsAndAmenities().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("Events"));	
+		System.out.println("Events & Amenities Page is displayed properly");	
+		
+	//Dining
+		//Click on Visit Tab
+		vtp.getATLAppVisitTab().click();
+		Thread.sleep(1000);
+		//Click on Dining link
+		vtp.getVisitTabDining().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("Dining"));	
+		System.out.println("Dining Page is displayed properly");
+		
+		
+	//Download the App
+		//Click on Visit Tab
+		vtp.getATLAppVisitTab().click();
+		Thread.sleep(1000);
+		//Click on Download the App link
+		vtp.getVisitTabDownloadTheApp().click();
+		Thread.sleep(4000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("Plan-Your-Market"));	
+		System.out.println("Download the App Page is displayed properly");
+		
+	//Services at Market
+		//Click on Visit Tab
+		vtp.getATLAppVisitTab().click();
+		Thread.sleep(1000);
+		//Click on Services at Market link
+		vtp.getVisitTabServicesAtMarket().click();
+		Thread.sleep(5000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("Services-and-Amenities"));
+		System.out.println("Services at Maket page is displayed properly");
+		
+	//FAQs
+		//Click on Visit Tab
+		vtp.getATLAppVisitTab().click();
+		Thread.sleep(1000);
+		//Click on FAQ's link
+		vtp.getVisitTabFAQs().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("FAQs"));	
+		System.out.println("FAQ page is displayed properly");
+		
+	
+
+	}
+		
+	@Test(priority=5)
+	public void TS005_ATLApp_VerifyDiscoverTab() throws InterruptedException, IOException
+	{
+	//Discover
+		utl=new Utility(driver);
+		dt = new ATLAppDiscoverTab(driver);
+		
+		driver.get(prop.getProperty("atlappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(4000);
+		
+	//Exhibitors and Products
+		dt.getATLAppDiscoverTab().click();
+		Thread.sleep(500);
+		//Click on Exhibitors And Products link
+		dt.getDTExhibitorsAndProducts().click();
+		Thread.sleep(3000);
+		//Verify Exhibitors and Products Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("exhibitor-directory"));
+		System.out.println("Exhibitors and Products Page is present");
+		
+	//Floor Plans
+		dt.getATLAppDiscoverTab().click();
+		Thread.sleep(500);
+		//Click on Floor Plans link
+		dt.getDTFloorPlans().click();
+		Thread.sleep(3000);
+		//Verify Floor Plan Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Map"));
+		System.out.println("Floor Plan Page is present");
+		
+	//List of Brands
+		dt.getATLAppDiscoverTab().click();
+		Thread.sleep(500);
+		//Click on List of Brands link
+		dt.getDTListOfBrands().click();
+		Thread.sleep(3000);
+		//Verify List of Brands Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("directory"));
+		System.out.println("List of Brands Page is present");
+		
+	//Tools and Inspirations
+		dt.getATLAppDiscoverTab().click();
+		Thread.sleep(500);
+		//Click on Tools and Inspirationss link
+		dt.getDTToolsAndInspirations().click();
+		Thread.sleep(3000);
+		//Verify Tools and Inspirations Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("The-Best-Of"));	
+		System.out.println("Tools and Inspirations Page is displayed properly");
+		
+	//Plan your Market
+		//Click on Visit Tab
+		dt.getATLAppDiscoverTab().click();
+		Thread.sleep(1000);
+		//Click on Download the App link
+		dt.getDTPlanYourMarket().click();
+		Thread.sleep(4000);
+		//Verify Plan your Market Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Plan-Your-Market"));	
+		System.out.println("Plan your Market Page is displayed properly");
+		
+	//Explore Atlanta
+		dt.getATLAppDiscoverTab().click();
+		Thread.sleep(500);
+		//Click on Explore Atlanta link
+		dt.getDTExploreAtlanta().click();
+		Thread.sleep(3000);
+		//Verify Explore Atlanta Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Explore-Atlanta"));	
+		System.out.println("Explore Atlant Page is displayed properly");
+	}
+	
+	@Test(priority=6)
+	public void TS006_ATLApp_VerifyExhibitTab() throws InterruptedException, IOException
+	{
+	//Exhibit Tab
+		utl=new Utility(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		atlexh=new ATLExhibitPage(driver);
+		
+		driver.get(prop.getProperty("atlappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(4000);
+		
+	//Exhibit at Atlanta Apparel
+		//Click on Exhibit Tab
+		atlexh.getATLExhibitTab().click();
+		Thread.sleep(1000);
+		//Click on Exhibit at Atlanta Apparel link
+		atlexh.getExhibitAtAtlantaApparel().click();
+		Thread.sleep(4000);
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Atlanta Apparel"));
+		System.out.println("Exhibit at Atlanta Apparel page opens successfully");
+		
+	//Exhibit in Social Occasion
+		//Click on Exhibit Tab
+		atlexh.getATLExhibitTab().click();
+		Thread.sleep(1000);
+		//Click on Exhibit in Social Occasion link
+		atlexh.getExhibitInSocialOccasion().click();
+		Thread.sleep(4000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("Social-Occasion"));
+		System.out.println("Exhibit in Social Occasion page opens successfully");
+		
+	//Exhibitor Resources
+		atlexh.getATLExhibitTab().click();
+		Thread.sleep(1000);
+		//Click on Exhibitor Resources link
+		atlexh.getATLExhibitorResources().click();
+		Thread.sleep(5000);
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Resources"));	
+		System.out.println("Exhibitor Resources page opens successfully");
+		
+	//Already an Exhibitor
+		atlexh.getATLExhibitTab().click();
+		Thread.sleep(2000);
+		String winHandleBefore = driver.getWindowHandle();
+		//Click on Exhibitor Portal Login' sub-menu
+		atlexh.getATLExhibitorPortalLoginMenu().click();
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(10000);
+		//Verify that 'EXP Login' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://prodmvdp.b2clogin.com/"));
+		System.out.println("Exhibitor Portal Login link opens successfully");
+		// Close the new window, if that window no more required
+		driver.close();
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);
+	
+	}
+	
+
+	@Test(priority=7)
+	public void TS007_ATLApp_VerifyFooterLinksTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-Ts012: To verify Footer Links Navigation
+
+		utl=new Utility(driver);
+		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		mi = new UXPMarketInfoPage(driver);
+		fl = new UXPFooterLinksNavigationPage(driver);
+		atlfo=new ATLAppFooterLinksNavigationPage(driver);
+		utl=new Utility(driver);
+
+		driver.get(prop.getProperty("atlappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(2000);
+		//Scroll till footer links
+		utl.scrollToElement(fl.getmarketInfoATL());
+
+		Thread.sleep(2000);
+		//Click Market Info link and verify results
+		fl.getmarketInfoATL().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets"));
+		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(2000);
+		utl.scrollToElement(fl.getmarketInfoATL());
+		
+		Thread.sleep(2000);
+		//Click on Press Center
+		fl.getpressCenterATL().click();
+		Thread.sleep(2000);
+		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Press Center"));
+		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(2000);
+		utl.scrollToElement(fl.getmarketInfoATL());
+		
+		Thread.sleep(2000);
+		// Click Download The App link and verify results
+		fl.getDownloadTheApp().click();
+		Thread.sleep(2000);
+		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Plan Your Market");
+		driver.get(prop.getProperty("atlappurl"));
+		utl.scrollToElement(fl.getmarketInfoATL());
+		
+		Thread.sleep(2000);
+		//Click on Our Brand link
+		fl.getOurBrandsATL().click();
+		Thread.sleep(1000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/exhibitor/directory"));
+		driver.get(prop.getProperty("atlappurl"));
+		Thread.sleep(2000);
+		utl.scrollToElement(fl.getmarketInfoATL());
+		
+		// Click Contact Us link and verify results
+		Thread.sleep(500);
+		String winHandleBefore5 = driver.getWindowHandle();
+		fl.getContactUsATL().click();
+		for (String winHandle5 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle5);
+		}
+		//Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
+		Assert.assertTrue(driver.getCurrentUrl().contains("/About/Contact-Us"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore5);
+		
+		Thread.sleep(2000);
+		// Click Careers link and verify results
+		fl.getCareersATL().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("www.andmore.com/our-team"));
+		driver.navigate().back();
+
+		Thread.sleep(2000);
+		// Click on Terms & condition link
+		// Switch to new tab
+		String winHandleBefore7 = driver.getWindowHandle();
+		fl.getTermsAndConditions().click();
+		for (String winHandle7 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle7);
+		}
+		//Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/terms-of-use"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore7);
+
+		Thread.sleep(2000);
+		// Click Privacy Policy link and verify results
+		
+		String winHandleBefore8 = driver.getWindowHandle();
+		fl.getatlprivacypolicy().click();
+		Thread.sleep(500);
+		for (String winHandle8 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle8);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/privacy-policy"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore8);
+	
+		Thread.sleep(2000);
+		// Click Americas Mart link and verify results
+		String winHandleBefore9 = driver.getWindowHandle();
+		fl.getAmericasMart_ATLApp().click();
+		for (String winHandle9 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle9);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore9);
+		
+		Thread.sleep(2000);
+		// Click Atlanta Market link and verify results
+		// Switch to new tab
+		String winHandleBefore1 = driver.getWindowHandle();
+		fl.getAtlantaMarket().click();
+		for (String winHandle1 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle1);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore1);
+		//utl.scrollToElement(fl.getmarketInfoATL());
+
+		Thread.sleep(2000);
+		// Click on High Point Market link
+		// Switch to new tab
+		String winHandleBefore4 = driver.getWindowHandle();
+		fl.getHighPointMarket().click();
+		for (String winHandle4 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle4);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore4);
+		//utl.scrollToElement(fl.getmarketInfoATL());
+		
+		Thread.sleep(2000);
+		String winHandleBefore12 = driver.getWindowHandle();
+		fl.getlvapplink_ATL_Footer().click();
+		for (String winHandle4 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle4);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
+		//driver.close();
+		driver.switchTo().window(winHandleBefore12);
+		
+		Thread.sleep(2000);
+		// Click on LVM Market link
+		// Switch to new tab
+		String winHandleBefore11 = driver.getWindowHandle();
+		fl.getlvmlink_ATL().click();
+		for (String winHandle11 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle11);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore11);
+	
+		Thread.sleep(2000);
+		//Switch to new tab
+		String winHandleBefore3 = driver.getWindowHandle();
+		fl.getandmore().click();
+		for(String winHandle3 : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle3);}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore3);
+			
+		// Click on LVA Market link
+		// Switch to new tab
+		/*fl.getlvapplink_ATL().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));*/
+		
+		//Due to re-branding changes
+/*		//Click International Market Centers link and verify results
+		fl.getInternationalMarketCenters().click();
+		//Switch to new tab
+		String winHandleBefore3 = driver.getWindowHandle();
+		for(String winHandle3 : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle3);}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore3);
+		utl.scrollToElement(fl.getmarketInfoATL());		
+*/		
+		//Click Juniper Market Centers link and verify results
+		/*fl.getJuniperMarket().click();
+		//Switch to new tab
+		String winHandleBefore12 = driver.getWindowHandle();
+		for(String winHandle12 : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle12);}
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore12);
+		utl.scrollToElement(fl.getmarketInfoATL());	*/	
+	
+		//driver.get(prop.getProperty("atlappurl"));
+		
+	}
+	
+	@Test(priority=8)
+	public void TS008_ATLApp_VerifySocialMediaLinksTest() throws InterruptedException, IOException
+	{
+
+		//The purpose of this test case to verify:-
+		//UXP-T013: To verify the all social media links and it's redirection
+		atlfo=new ATLAppFooterLinksNavigationPage(driver);
+		utl=new Utility(driver);
+
+		driver.get(prop.getProperty("atlappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(5000);
+		
+		//Scroll till footer links
+		utl.scrollToElement(atlfo.getfacebookfootericon());
+		
+		//Click on Facebook Icon
+		String winHandleBefore = driver.getWindowHandle();
+		atlfo.getfacebookfootericon().click();
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(2000);
+		//Verify that 'Atlapp Facebook' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/apparelmarkets/"));
+		// Close the new window, if that window no more required
+		driver.close();
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);
+
+		/*//Click on twitter Icon
+		atlfo.gettwittericonfooter().click();
+		String winHandleBefore1 = driver.getWindowHandle();
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(10000);
+		//Verify that 'Atlapp Facebook' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://twitter.com/atlantaapparel"));
+
+		// Close the new window, if that window no more required
+		driver.close();
+
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore1);
+		
+		//Click on Instagram Icon
+		atlfo.getinstagramfootericon().click();
+		String winHandleBefore2 = driver.getWindowHandle();
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(10000);
+		//Verify that 'Atlapp Facebook' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.instagram.com/apparelmarkets/"));
+
+		// Close the new window, if that window no more required
+		driver.close();
+
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore2);
+
+		//Click on Youtube Icon
+		atlfo.getyoutubefootericon().click();
+		String winHandleBefore3 = driver.getWindowHandle();
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(10000);
+		//Verify that 'Atlapp Facebook' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.youtube.com/user/AtlantaApparel"));
+
+		// Close the new window, if that window no more required
+		driver.close();
+
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore3);
+
+		//Click on SnapChat Icon
+		atlfo.getsnapchatfooter().click();
+		String winHandleBefore4 = driver.getWindowHandle();
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(10000);
+		//Verify that 'Atlapp Snapchat' page should be displayed
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.snapchat.com/add/atlantaapparel"));
+
+		// Close the new window, if that window no more required
+		driver.close();
+
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore4);*/
+		//driver.get(prop.getProperty("atlappurl"));
+	}
+
+/*
+	@Test(enabled=false)//priority=2
+	public void TS011_ATLApp_MarketRecap() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//UXP-T798: Market Recap page opens successfully.
+		utl=new Utility(driver);
+		lap = new UXPLandingPage(driver);
+		
+		driver.get(prop.getProperty("atlappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		//Verify Market Recap link is working properly
+		lap.getMarketRecap().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
+		System.out.println("Market Recap page is working properly.");
+		//driver.get(prop.getProperty("atlappurl"));
+	}
+*/	
+	
+	@Test(enabled=false)
+	public void TS00001_ATLApp_VerifyAllLinksUnderYearRoundTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T011: To Year Round Tab
@@ -166,7 +862,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 	
 	
-	@Test(priority=2)
+	@Test(enabled=false)
 	public void TS002_ATLApp_VerifyAllLinksUnderAttendTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -313,45 +1009,9 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 	}
 
-	@Test(priority=3)
-	public void TS003_ATLApp_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
-	{
-		//The purpose of this test case to verify:-
-		//UXP-T04: To verify global search functionality
 
-		utl=new Utility(driver);
-		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);
-		gs = new UXPGlobalSearchPage(driver);
-		gbs = new ATLAppGlobalSearchPage(driver);
-		atlm = new ATLAppMarketsTabPage(driver);
 
-		driver.get(prop.getProperty("atlappurl"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(5000);
-		gs.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput2")));
-		gs.getSearchButton().click();
-		Thread.sleep(10000);
-		utl.scrollToElement(gs.getVerifyGlobalSeacrh());
-		
-		try {
-			String searchterm = gs.getVerifyGlobalSeacrh().getText();
-			//Thread.sleep(8000);
-			if (searchterm.contains(prop.getProperty("globalsearchinput2"))) {
-				Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput2")));
-			}
-		} catch (Exception e) {
-			String searchterm = gs.getVerifyGlobalSeacrhSecond().getText();
-			//Thread.sleep(8000);
-			Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput2")));
-		}
-		
-		System.out.println("Global Search functionality is working properly.");
-		//driver.get(prop.getProperty("atlappurl"));
-		
-	}
-
-	@Test(priority=4)
+	@Test(enabled=false)
 	public void TS004_ATLApp_VerifyExhibitorDirectoryTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -406,7 +1066,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 	}
 
-	@Test(priority=5)
+	@Test(enabled=false)
 	public void TS005_ATLApp_VerifyAllLinksUnderMarketsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -561,7 +1221,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 */
 	}
 
-	@Test(priority=6)
+	@Test(enabled=false)
 	public void TS006_ATLApp_VerifyAllLinksUnderExhibitorsAndBrandsTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -627,103 +1287,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 	}
 	
-	@Test(priority=7)
-	public void TS007_ATLApp_VerifySocialMediaLinksTest() throws InterruptedException, IOException
-	{
-
-		//The purpose of this test case to verify:-
-		//UXP-T013: To verify the all social media links and it's redirection
-		atlfo=new ATLAppFooterLinksNavigationPage(driver);
-		utl=new Utility(driver);
-
-		driver.get(prop.getProperty("atlappurl"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(5000);
-		
-		//Scroll till footer links
-		utl.scrollToElement(atlfo.getfacebookfootericon());
-		
-		//Click on Facebook Icon
-		String winHandleBefore = driver.getWindowHandle();
-		atlfo.getfacebookfootericon().click();
-		for(String winHandle : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle);
-		}
-		Thread.sleep(2000);
-		//Verify that 'Atlapp Facebook' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/apparelmarkets/"));
-		// Close the new window, if that window no more required
-		driver.close();
-		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore);
-
-		/*//Click on twitter Icon
-		atlfo.gettwittericonfooter().click();
-		String winHandleBefore1 = driver.getWindowHandle();
-		for(String winHandle : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle);
-		}
-		Thread.sleep(10000);
-		//Verify that 'Atlapp Facebook' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://twitter.com/atlantaapparel"));
-
-		// Close the new window, if that window no more required
-		driver.close();
-
-		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore1);
-		
-		//Click on Instagram Icon
-		atlfo.getinstagramfootericon().click();
-		String winHandleBefore2 = driver.getWindowHandle();
-		for(String winHandle : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle);
-		}
-		Thread.sleep(10000);
-		//Verify that 'Atlapp Facebook' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.instagram.com/apparelmarkets/"));
-
-		// Close the new window, if that window no more required
-		driver.close();
-
-		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore2);
-
-		//Click on Youtube Icon
-		atlfo.getyoutubefootericon().click();
-		String winHandleBefore3 = driver.getWindowHandle();
-		for(String winHandle : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle);
-		}
-		Thread.sleep(10000);
-		//Verify that 'Atlapp Facebook' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.youtube.com/user/AtlantaApparel"));
-
-		// Close the new window, if that window no more required
-		driver.close();
-
-		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore3);
-
-		//Click on SnapChat Icon
-		atlfo.getsnapchatfooter().click();
-		String winHandleBefore4 = driver.getWindowHandle();
-		for(String winHandle : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle);
-		}
-		Thread.sleep(10000);
-		//Verify that 'Atlapp Snapchat' page should be displayed
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.snapchat.com/add/atlantaapparel"));
-
-		// Close the new window, if that window no more required
-		driver.close();
-
-		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore4);*/
-		//driver.get(prop.getProperty("atlappurl"));
-	}
 	
-	@Test(priority=8)
+	@Test(enabled=false)
 	public void TS008_ATLApp_VerifyAllLinksUnderTheBestOfFashionTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -799,7 +1364,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	}
 	
 
-	@Test(priority=9)
+	@Test(enabled=false)
 	public void TS009_ATLApp_VerifyAllLinksUnderExhibitTabTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
@@ -910,220 +1475,6 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	
 	}
 
-	@Test(priority=10)
-	public void TS010_ATLApp_VerifyFooterLinksTest() throws InterruptedException, IOException
-	{
-		//The purpose of this test case to verify:-
-		//UXP-Ts012: To verify Footer Links Navigation
-
-		utl=new Utility(driver);
-		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-		mi = new UXPMarketInfoPage(driver);
-		fl = new UXPFooterLinksNavigationPage(driver);
-		atlfo=new ATLAppFooterLinksNavigationPage(driver);
-		utl=new Utility(driver);
-
-		driver.get(prop.getProperty("atlappurl"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(2000);
-		//Scroll till footer links
-		utl.scrollToElement(fl.getmarketInfoATL());
-
-		Thread.sleep(2000);
-		//Click Market Info link and verify results
-		fl.getmarketInfoATL().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets"));
-		driver.get(prop.getProperty("atlappurl"));
-		Thread.sleep(2000);
-		utl.scrollToElement(fl.getmarketInfoATL());
-		
-		Thread.sleep(2000);
-		//Click on Press Center
-		fl.getpressCenterATL().click();
-		Thread.sleep(2000);
-		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Press Center"));
-		driver.get(prop.getProperty("atlappurl"));
-		Thread.sleep(2000);
-		utl.scrollToElement(fl.getmarketInfoATL());
-		
-		Thread.sleep(2000);
-		// Click Download The App link and verify results
-		fl.getDownloadTheApp().click();
-		Thread.sleep(2000);
-		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Plan Your Market");
-		driver.get(prop.getProperty("atlappurl"));
-		utl.scrollToElement(fl.getmarketInfoATL());
-		
-		Thread.sleep(2000);
-		//Click on Our Brand link
-		fl.getOurBrandsATL().click();
-		Thread.sleep(1000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/exhibitor/directory"));
-		driver.get(prop.getProperty("atlappurl"));
-		Thread.sleep(2000);
-		utl.scrollToElement(fl.getmarketInfoATL());
-		
-		// Click Contact Us link and verify results
-		Thread.sleep(500);
-		String winHandleBefore5 = driver.getWindowHandle();
-		fl.getContactUsATL().click();
-		for (String winHandle5 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle5);
-		}
-		//Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
-		Assert.assertTrue(driver.getCurrentUrl().contains("/About/Contact-Us"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore5);
-		
-		Thread.sleep(2000);
-		// Click Careers link and verify results
-		fl.getCareersATL().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("www.andmore.com/our-team"));
-		driver.navigate().back();
-
-		Thread.sleep(2000);
-		// Click on Terms & condition link
-		// Switch to new tab
-		String winHandleBefore7 = driver.getWindowHandle();
-		fl.getTermsAndConditions().click();
-		for (String winHandle7 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle7);
-		}
-		//Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/terms-of-use"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore7);
-
-		Thread.sleep(2000);
-		// Click Privacy Policy link and verify results
-		fl.getatlprivacypolicy().click();
-		Thread.sleep(500);
-		String winHandleBefore8 = driver.getWindowHandle();
-		for (String winHandle8 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle8);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/privacy-policy"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore8);
-	
-		Thread.sleep(2000);
-		// Click Americas Mart link and verify results
-		String winHandleBefore9 = driver.getWindowHandle();
-		fl.getAmericasMart_ATLApp().click();
-		for (String winHandle9 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle9);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore9);
-		
-		Thread.sleep(2000);
-		// Click Atlanta Market link and verify results
-		// Switch to new tab
-		String winHandleBefore1 = driver.getWindowHandle();
-		fl.getAtlantaMarket().click();
-		for (String winHandle1 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle1);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore1);
-		//utl.scrollToElement(fl.getmarketInfoATL());
-
-		Thread.sleep(2000);
-		// Click on High Point Market link
-		// Switch to new tab
-		String winHandleBefore4 = driver.getWindowHandle();
-		fl.getHighPointMarket().click();
-		for (String winHandle4 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle4);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore4);
-		//utl.scrollToElement(fl.getmarketInfoATL());
-		
-		Thread.sleep(2000);
-		String winHandleBefore12 = driver.getWindowHandle();
-		fl.getlvapplink_ATL_Footer().click();
-		for (String winHandle4 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle4);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
-		//driver.close();
-		driver.switchTo().window(winHandleBefore12);
-		
-		Thread.sleep(2000);
-		// Click on LVM Market link
-		// Switch to new tab
-		String winHandleBefore11 = driver.getWindowHandle();
-		fl.getlvmlink_ATL().click();
-		for (String winHandle11 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle11);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore11);
-	
-		Thread.sleep(2000);
-		//Switch to new tab
-		String winHandleBefore3 = driver.getWindowHandle();
-		fl.getandmore().click();
-		for(String winHandle3 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle3);}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore3);
-			
-		// Click on LVA Market link
-		// Switch to new tab
-		/*fl.getlvapplink_ATL().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));*/
-		
-		//Due to re-branding changes
-/*		//Click International Market Centers link and verify results
-		fl.getInternationalMarketCenters().click();
-		//Switch to new tab
-		String winHandleBefore3 = driver.getWindowHandle();
-		for(String winHandle3 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle3);}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.imcenters.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore3);
-		utl.scrollToElement(fl.getmarketInfoATL());		
-*/		
-		//Click Juniper Market Centers link and verify results
-		/*fl.getJuniperMarket().click();
-		//Switch to new tab
-		String winHandleBefore12 = driver.getWindowHandle();
-		for(String winHandle12 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle12);}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore12);
-		utl.scrollToElement(fl.getmarketInfoATL());	*/	
-	
-		//driver.get(prop.getProperty("atlappurl"));
-		
-	}
-	
-	@Test(enabled=false)//priority=2
-	public void TS011_ATLApp_MarketRecap() throws InterruptedException, IOException
-	{
-		//The purpose of this test case to verify:-
-		//UXP-T798: Market Recap page opens successfully.
-		utl=new Utility(driver);
-		lap = new UXPLandingPage(driver);
-		
-		driver.get(prop.getProperty("atlappurl"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
-		//Verify Market Recap link is working properly
-		lap.getMarketRecap().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Attend/App"));
-		System.out.println("Market Recap page is working properly.");
-		//driver.get(prop.getProperty("atlappurl"));
-	}
 	
 	//Due to re-branding changes
 	@Test(enabled=false)//priority=1

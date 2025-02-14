@@ -14,8 +14,10 @@ import pageObjects.LasVegasApparel.LVAExhibitTab;
 import pageObjects.LasVegasApparel.LVAExhibitorAndProductTab;
 import pageObjects.LasVegasApparel.LVAFooterLinksNavigationPage;
 import pageObjects.LasVegasApparel.LVAGlobalSearchPage;
+import pageObjects.LasVegasApparel.LVAVisitTab;
 import pageObjects.AtlantaApparel.ATLAppFooterLinksNavigationPage;
 import pageObjects.LasVegasMarket.UXPExhibitorsAndProductsTabPage;
+import pageObjects.LasVegasMarket.UXPGlobalSearchPage;
 import pageObjects.LasVegasMarket.UXPHeaderChannelLinksPage;
 import pageObjects.LasVegasMarket.UXPLandingPage;
 import resources.GenerateData;
@@ -38,6 +40,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	LVAExhibitTab lvaet;
 	UXPHeaderChannelLinksPage hd;
 	UXPExhibitorsAndProductsTabPage exhp;
+	UXPGlobalSearchPage gs;
+	LVAVisitTab vt;
 	
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
@@ -63,7 +67,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(8000);
-
+		
 		//Old Code
 /*		
 		//utl.scrollToElement(lvach.getAtlantaMarket());
@@ -128,7 +132,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Verify that Atlanta link is present
 		Assert.assertTrue(hd.getAtlanta().getText().equalsIgnoreCase("ATLANTA"));
 		
-		//Check Atlanta Apparel
+	//Check Atlanta Apparel
 		hd.getAtlanta().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getAtlantaApparel().getText().equalsIgnoreCase("Atlanta Apparel"));
@@ -137,11 +141,11 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 
-		//Check Casual Market Atlanta
+	//Check Casual Market Atlanta
 		hd.getAtlanta().click();
 		Thread.sleep(1000);
 		Assert.assertTrue(hd.getCasualMarketAtlantaURL().getText().equalsIgnoreCase("Casual Market Atlanta"));
-		String casualURl=hd.getCasualMarketAtlantaURL().getAttribute("href");
+		//String casualURl=hd.getCasualMarketAtlantaURL().getAttribute("href");
 		hd.getCasualMarketAtlantaURL().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("casualmarketatlanta.com"));
@@ -149,7 +153,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
-		//Check Atlanta Market
+	//Check Atlanta Market
 		hd.getAtlanta().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getAtlantaMarket().getText().equalsIgnoreCase("Atlanta Market"));
@@ -159,13 +163,13 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 		
 		//Check Formal Markets
-	/*	hd.getAtlanta().click();
+		hd.getAtlanta().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
 		hd.getFormalMarkets().click();
 		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
 		driver.get(prop.getProperty("lvmappurl"));
-		Thread.sleep(2000);*/
+		Thread.sleep(2000);
 	/*
 	 * //Check Mid-Season Buying Event: Fall Market hd.getAtlanta().click();
 	 * Thread.sleep(500);
@@ -176,7 +180,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	 * "https://www.americasmart.com/Markets"));
 	 * driver.get(prop.getProperty("lvmappurl")); Thread.sleep(2000);
 	 */
-		//Check Cash & Carry Markets: Spring and Fall
+		
+	//Check Cash & Carry Markets: Spring and Fall
 		hd.getAtlanta().click();
 		Thread.sleep(500);
 		try {
@@ -194,7 +199,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		}
 		
 		
-		//Check ADAC
+	//Check ADAC
 		hd.getAtlanta().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getADAC().getText().equalsIgnoreCase("ADAC"));
@@ -204,7 +209,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
-		//Check AmericasMart
+	//Check AmericasMart
 		hd.getAtlanta().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getAmericasMart().getText().equalsIgnoreCase("AmericasMart"));
@@ -213,7 +218,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
-		//Check Atlanta Convention Center
+	//Check Atlanta Convention Center
 		hd.getAtlanta().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getAtlantaConventionCenter().getText().equalsIgnoreCase("Atlanta Convention Center"));
@@ -222,10 +227,10 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
-		//Verify that Las Vegas link is present
+	//Verify that Las Vegas link is present
 		Assert.assertTrue(hd.getLasVegas().getText().equalsIgnoreCase("LAS VEGAS"));
 		
-		//Check Las Vegas Market
+	//Check Las Vegas Market
 		hd.getLasVegas().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getLasVegasMarket().getText().equalsIgnoreCase("Las Vegas Market"));
@@ -233,8 +238,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("Las Vegas Market"));
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
-		
-		//Check Formal Markets
+	/*	
+	//Check Formal Markets
 		hd.getLasVegas().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
@@ -243,8 +248,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
-		
-		//Check Las Vegas Apparel
+	*/	
+	//Check Las Vegas Apparel
 		hd.getLasVegas().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getLasVegasApparel().getText().equalsIgnoreCase("Las Vegas Apparel"));
@@ -254,7 +259,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
-		//Check Las Vegas Design Center (LVDC)
+	//Check Las Vegas Design Center (LVDC)
 		hd.getLasVegas().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getLasVegasDesignCenter().getText().equalsIgnoreCase("Las Vegas Design Center (LVDC)"));
@@ -263,7 +268,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
-		//Check EXPO at World Market Center Las Vegas
+	//Check EXPO at World Market Center Las Vegas
 		hd.getLasVegas().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getEXPOatWorldMarketCenterLasVegas().getText().equalsIgnoreCase("EXPO at World Market Center Las Vegas"));
@@ -272,10 +277,10 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
-		//Verify that High Point link is present
+	//Verify that High Point link is present
 		Assert.assertTrue(hd.getHighPoint().getText().equalsIgnoreCase("HIGH POINT"));
 		
-		//Check ANDMORE at High Point Market
+	//Check ANDMORE at High Point Market
 		hd.getHighPoint().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getANDMOREatHighPointMarket().getText().equalsIgnoreCase("ANDMORE at High Point Market"));
@@ -285,7 +290,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
-		//Check SHOPPE OBJECT High Point
+	//Check SHOPPE OBJECT High Point
 		hd.getHighPoint().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getSHOPPEOBJECTHighPoint().getText().equalsIgnoreCase("SHOPPE OBJECT High Point"));
@@ -295,10 +300,10 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
-		//Verify that New York link is present
+	//Verify that New York link is present
 		Assert.assertTrue(hd.getNewYork().getText().equalsIgnoreCase("NEW YORK"));
 		
-		//Check SHOPPE OBJECT
+	//Check SHOPPE OBJECT
 		hd.getNewYork().click();
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getSHOPPEOBJECT().getText().equalsIgnoreCase("SHOPPE OBJECT"));
@@ -306,8 +311,6 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("Shoppe Object"));
 		//driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
-	
-		
 	}
 	
 	@Test(priority=2)
@@ -315,45 +318,107 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//The purpose of this test case to verify:-
 		//UXP-T512: To verify global search functionality
 		
-		lvags = new LVAGlobalSearchPage(driver);
+		gs = new UXPGlobalSearchPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		
-		lvags.getGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
-		lvags.getSearchButton().click();
-		Thread.sleep(1000);
-		utl.scrollToElement(lvags.getVerifyGlobalSeacrh());
-		String searchterm = lvags.getVerifyGlobalSeacrh().getText();
-		
-		Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput")));
-		System.out.println("Global Search functionality is working properly.");
-		
+		try {
+			gs.getGlobalSearchEnterText().isDisplayed();
+			gs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinput3")));
+			Thread.sleep(1000);
+			gs.getSearchButtonNew().click();
+			Thread.sleep(5000);
+			String searchterm = gs.getVerifyGlobalSeacrhNew().getText();
+			Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput3")));
+			System.out.println("Global Search functionality is working properly.");
+		} catch (Exception e) {
+
+			gs.getGlobalSearchTextBoxNew().click();
+
+			gs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinput3")));
+			Thread.sleep(1000);
+			gs.getSearchButtonNew().click();
+			Thread.sleep(5000);
+			String searchterm = gs.getVerifyGlobalSeacrhNew().getText();
+			System.out.println(searchterm);
+			Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput3")));
+			System.out.println("Global Search functionality is working properly.");
+		}
 	}
 
 	@Test(priority=3)
-	public void TS003_LVMApp_VerifyAllLinksUnderAboutTabTest () throws InterruptedException {
+	public void TS003_LVMApp_VerifyExhibitorsDirectoryTab () throws InterruptedException {
+		//The purpose of this test case to verify:-
+		//UXP-T509: To verify Attend Tab
+		lvaept = new LVAExhibitorAndProductTab(driver);
+		driver.get(prop.getProperty("lvmappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(4000);
 		
+	//Verify Exhibitor Directory Page
+		lvaept.getLVAExhibitorDirectoryTab().click();
+		Thread.sleep(500);
+		//Click on Exhibitor Directory
+		lvaept.getLVAExhibitorDirectory().click();
+		Thread.sleep(3000);
+		//Verify Exhibitor Directory Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("exhibitors"));
+		System.out.println("Exhibitor Directory Page is present");	
+
+	//Verify Open Showrooms Page
+		lvaept.getLVAExhibitorDirectoryTab().click();
+		Thread.sleep(500);
+		//Click on Open Show Room
+		lvaept.getLVAOpenShowroom().click();
+		Thread.sleep(3000);
+		//Verify Open Show Room Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Showrooms"));
+		System.out.println("Open Showroom Page is present");	
+		
+	//Verify Floor Plans Page
+		lvaept.getLVAExhibitorDirectoryTab().click();
+		Thread.sleep(500);
+		//Click on Floor Plans
+		lvaept.getLVAFloorPlans().click();
+		Thread.sleep(3000);
+		//Verify Floor Plans Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Map"));
+		System.out.println("Floor Plans Page is present");	
+		
+	//Verify Trend Report Page
+		lvaept.getLVAExhibitorDirectoryTab().click();
+		Thread.sleep(500);
+		//Click on Trend Report
+		lvaept.getLVMTrendReport().click();
+		Thread.sleep(3000);
+		//Verify Trend Report Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Trends"));
+		System.out.println("Trend Report Page is present");	
+		
+	/*
+	//Verify List Of Brands Page
+		lvaept.getLVAExhibitorDirectoryTab().click();
+		//Click on List Of Brands
+		System.out.println("Click on List Of Brands Tab");
+		lvaept.getLVAListOfBrands().click();
+		//Verify List Of Brands Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Brands"));
+		System.out.println("Verify Complete List Of Brands Page");	
+	*/
+		
+	}
+	
+	@Test(priority=4)
+	public void TS004_LVMApp_VerifyAboutTab () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T508: To verify About Tab
-
-		 lvaat = new LVAAboutTab(driver);
-		 driver.get(prop.getProperty("lvmappurl"));
+		lvaat = new LVAAboutTab(driver);
+		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
-
-	//Verify Dates & Hours Page
-		lvaat.getLVAAboutTab().click();
-		System.out.println("Click on About Tab");
-		//Click on Dates & Hours
-		lvaat.getLVADatesAndHours().click();
-		System.out.println("Click on Dates and Hourss");
-		Thread.sleep(2000);
-		//Verify Dates and Hours Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Dates-and-Hours"));
-		System.out.println("Verify Complete Dates and Hours Page");		
-		Thread.sleep(3000);
-	//Verify Press Center Page
+	
+	//Press Center
 		lvaat.getLVAAboutTab().click();
 		//Click on Press Center
 		System.out.println("Click on About Tab");
@@ -363,17 +428,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("Press-Center"));
 		System.out.println("Verify Complete Press center Page");		
 		Thread.sleep(3000);
-	//Verify In The News Page
-		lvaat.getLVAAboutTab().click();
-		//Click on In the News
-		System.out.println("Click on About Tab");
-		lvaat.getLVAInTheNews().click();
-		Thread.sleep(2000);
-		//Verify In The News Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("In-The-News"));
-		System.out.println("Verify Complete In The News Page");		
-		Thread.sleep(5000);
-	//Verify Contact Us Page
+	
+	//Contact Us
 		lvaat.getLVAAboutTab().click();
 		//Click on Contact Us
 		System.out.println("Click on About Tab");
@@ -381,173 +437,98 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 		//Verify Contact Us Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("Contact-Us"));
-		System.out.println("Verify Complete Contact Us Page");		
+		System.out.println("Verify Complete Contact Us Page");	
 		
+	//Dates and Hours
+		lvaat.getLVAAboutTab().click();
+		System.out.println("Click on About Tab");
+		//Click on Dates & Hours
+		lvaat.getLVADatesAndHours().click();
+		System.out.println("Click on Dates and Hourss");
+		Thread.sleep(2000);
+		//Verify Dates and Hours Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Dates-and-Hours"));
+		System.out.println("Verify Complete Dates and Hours Page");
 	}
 	
-	@Test(priority=4)
-	public void TS004_LVMApp_VerifyAllLinksUnderExhibitorsAndProductsTabTest () throws InterruptedException {
-		//The purpose of this test case to verify:-
-		//UXP-T509: To verify Attend Tab
-		
-		lvaept = new LVAExhibitorAndProductTab(driver);
-		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(4000);
-/*
-	//Verify Exhibitor Directory Page
-		lvaept.getLVAExhibitorAndProductTab().click();
-		//Click on Exhibitor Directory
-		System.out.println("Click on Exhibitor Directory Tab");
-		lvaept.getLVAExhibitorDirectory().click();
-		//Verify Exhibitor Directory Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("exhibitor-directory"));
-		System.out.println("Verify Complete Exhibitor Directory Page");	
-
-	//Verify List Of Brands Page
-		lvaept.getLVAExhibitorAndProductTab().click();
-		//Click on List Of Brands
-		System.out.println("Click on List Of Brands Tab");
-		lvaept.getLVAListOfBrands().click();
-		//Verify List Of Brands Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("Brands"));
-		System.out.println("Verify Complete List Of Brands Page");	
-*/
-	//Verify Open Show Room Page
-		lvaept.getLVAExhibitorAndProductTab().click();
-		//Click on Open Show Room
-		System.out.println("Click on OpenShowroom Tab");
-		lvaept.getLVAOpenShowroom().click();
-		//Verify Open Show Room Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("Showrooms"));
-		System.out.println("Verify Complete Open Showroom Page");	
-		
-		//Verify Floor Plans Page
-		lvaept.getLVAExhibitorAndProductTab().click();
-		//Click on Floor Plans
-		System.out.println("Click on Floor Plans Tab");
-		lvaept.getLVAFloorPlans().click();
-		Thread.sleep(5000);
-		//Verify Floor Plans Page
-		Assert.assertTrue(driver.getTitle().contains("Floor Plan"));
-		System.out.println("Verify Complete Floor Plans Page");	
-		
-	}
 	
 	@Test(priority=5)
-	public void TS005_LVMApp_VerifyAllLinksUnderAttendTabTest () throws InterruptedException {
-		//The purpose of this test case to verify:-
-		//UXP-T507: To verify Attend Tab
-		lvaa = new LVAAttendPage(driver);
+	public void TS005_LVMApp_VerifyVisitTab () throws InterruptedException {
+		vt = new LVAVisitTab(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(5000);
 	
-		Thread.sleep(5000);
-		//Click on Attend Tab
-		lvaa.getLVAAttendTab().click();
-		System.out.println("Click on Attend Tab");
-		Thread.sleep(3000);
-		//Click on Click on Why Attend?
-		lvaa.getLVAWhyAttend().click();
-		System.out.println("Click on Why Attend?");
-		Thread.sleep(1000);
-		//Verify Attend Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend"));	
-		System.out.println("Vefiry Why Ateend Page");
-
-		//Click on Attend Tab
-		lvaa.getLVAAttendTab().click();
-		Thread.sleep(1000);
-		//Click on Click on Events
-		lvaa.getLVAEvents().click();
-		Thread.sleep(1000);
-		System.out.println("Click on Events");
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/Events"));	
-		System.out.println("Vefiry Why Ateend Page");
-		
-		//Click on Attend Tab
-		lvaa.getLVAAttendTab().click();
-		Thread.sleep(1000);
-		//CLick on Registration Markets
-		lvaa.getLVADining().click();
-		Thread.sleep(1000);
-		System.out.println("Click on Dining");
-		Thread.sleep(1000);
-		//Verify reg Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/Dining"));
-		System.out.println("Vefiry Dining Page");		
-		
-		//Click on Attend Tab
-		lvaa.getLVAAttendTab().click();
-		Thread.sleep(1000);
-		//CLick on Download app img
-		lvaa.getLVDownloadApp().click(); 
-		System.out.println("Click on Donwload App");
-		Thread.sleep(2000);
-		Assert.assertTrue(driver.getTitle().contains("Plan Your Market"));	
-		System.out.println("Vefiry Download App Page ");
-	////	
-		//Click on Attend Tab
-		lvaa.getLVAAttendTab().click();
-		Thread.sleep(1000);
-		//CLick on Travel
-		lvaa.getLVTravel().click(); 
+	//Why Attend?
+		vt.getLVAVisitTab().click();
 		Thread.sleep(500);
-		System.out.println("Click on Travel");
-		Thread.sleep(1000);
-		//Verify Travel Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/Travel"));	
-		System.out.println("Vefiry Travel Page ");
-		
-		//Click on Attend Tab
-		//utl.scrollToElement(lvaa.getLVAAttendTab());
-		driver.get(prop.getProperty("lvmappurl"));
+		//Click on Click on Why Attend?
+		vt.getLVAWhyAttend().click();
 		Thread.sleep(3000);
-		lvaa.getLVAAttendTab().click();
-		Thread.sleep(1000);
-		//CLick on Air Travel
-		lvaa.getLVAirTravel().click();
-		System.out.println("Click on Air Travel");
-		Thread.sleep(1000);
-		//Verify Hotels Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("Travel"));
-		System.out.println("Vefiry Events Page ");
+		//Verify Attend Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Attend"));	
+		System.out.println("Why Ateend Page is Present");
 		
-		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		//utl.scrollToElement(lvaa.getLVAAttendTab());
+	//Register
+		vt.getLVAVisitTab().click();
+		Thread.sleep(500);
+		//CLick on Registration Markets
+		vt.getLVARigister().click();
+		Thread.sleep(3000);
+		//Verify reg Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Dates-and-Hours"));
+		System.out.println("Dining Page is Present");	
 		
-		Thread.sleep(5000);
-		//Click on Attend Tab
-		lvaa.getLVAAttendTab().click();
-		Thread.sleep(1000);
-		//CLick on Parking
-		lvaa.getLVParking().click();
-		System.out.println("Click on Parking");
-		Thread.sleep(1000);
-		//Verify Faq Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("Travel"));
-		System.out.println("Vefiry Parking Page");
-
-		//utl.scrollToElement(lvaa.getLVAAttendTab());
-		driver.get(prop.getProperty("lvmappurl"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		//Click on Attend Tab
-		Thread.sleep(5000);
-		lvaa.getLVAAttendTab().click();
-		Thread.sleep(1000);
-		//Click on Hotels
-		lvaa.getLVHotels().click(); 
-		System.out.println("Click on Hotels");
-		Thread.sleep(1000);
-		//Verify Hotels Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("Travel"));
-		System.out.println("Vefiry Hotels Page");
+	//Travel
+		vt.getLVAVisitTab().click();
+		Thread.sleep(500);
+		//CLick on Travel
+		vt.getLVTravel().click();
+		Thread.sleep(3000);
+		//Verify Travel Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Travel"));	
+		System.out.println("Travel Page is Present");
+		
+	//Events
+		vt.getLVAVisitTab().click();
+		Thread.sleep(500);
+		//Click on Click on Events
+		vt.getLVAEvents().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("Events"));	
+		System.out.println("Why Ateend Page is Present");
+		
+	//Dining
+		vt.getLVAVisitTab().click();
+		Thread.sleep(500);
+		//CLick on Dining
+		vt.getLVDining().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("Dining"));	
+		System.out.println("Dining Page is Present");
+		
+	//Services and Amenities
+		vt.getLVAVisitTab().click();
+		Thread.sleep(500);
+		//CLick on Dining
+		vt.getLVServicesAndAmenities().click();
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("Services-and-Amenities"));	
+		System.out.println("Services and Amenities Page is Present");
+		
+	//Download the App
+		vt.getLVAVisitTab().click();
+		Thread.sleep(500);
+		//CLick on Download app img
+		vt.getLVDownloadApp().click(); 
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("Plan-Your-Market"));	
+		System.out.println("Download App Page is Present");
 		
 	}
-	
+
 	@Test(priority=6)
-	public void TS006_LVMApp_VerifyAllLinksUnderExhibitTabTest () throws InterruptedException {
+	public void TS006_LVMApp_VerifyExhibitTab () throws InterruptedException {
 		//The purpose of this test case to verify:-
 		//UXP-T506: To verify Exhibit Tab
 		
@@ -556,6 +537,40 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		
+	//Why Exhibit
+		lvaet.getLVAExhibitTab().click();
+		//click on Why Exhibit? link
+		lvaet.getLVAWhyExhibit().click();
+	
+		//Verify Why Exhibit? Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Exhibit"));
+		System.out.println("Why Exhibit? Page is Present");
+		
+	//Exhibitor Resources
+	
+		lvaet.getLVAExhibitTab().click(); //Click on Exhibitor Resources link
+		lvaet.getLVAExhibitorResources().click();
+		  
+		//Verify Exhibitor Resources Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Exhibit"));
+		System.out.println("Exhibitor Resources Page is Present");
+	 
+	//Already on Exhibitor?
+		lvaet.getLVAExhibitTab().click();
+		String winHandleBefore = driver.getWindowHandle();
+		//Click on Already on Exhibitor? link
+		lvaet.getLVAAlreadyOnExhibitor().click();
+		for (String winHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(5000);
+		//Verify Already on Exhibitor? Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("b2clogin.com"));
+		System.out.println("Already on Exhibitor? Page is Present");
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
+		
+/*
 	//Verify Exhibitor Portal Login
 		lvaet.getLVAExhibitTab().click();
 		//click on Exhibitor Portal Login
@@ -585,6 +600,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
+		
 	//Verify Market Toolkit
 		lvaet.getLVAExhibitTab().click();
 		//click on Market Toolkit
@@ -592,14 +608,6 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		System.out.println("click on Market Toolkit");
 		//Verify Market Toolkit Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Toolkit"));
-		
-	//Verify Why Exhibit?
-		lvaet.getLVAExhibitTab().click();
-		//click on Why Exhibit?
-		lvaet.getLVAWhyExhibit().click();
-		System.out.println("click on Why Exhibit?");
-		//Verify Why Exhibit? Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("Exhibit"));
 		
 	//Verify Advertising & Sponsorship
 		lvaet.getLVAExhibitTab().click();
@@ -616,7 +624,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		System.out.println("click on Leasing Inquiry");
 		//Verify Leasing Inquiry Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("Inquiry"));
-		
+*/		
 	}
 	
 	@Test(priority=7)
@@ -744,7 +752,6 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	//	utl.scrollToElement(lvafl.marketInfoAMC());
 		
 		// Click on Casual Market link
-				// Switch to new tab
 		String winHandleBefore7 = driver.getWindowHandle();
 		lvafl.getCasualMarket().click();
 		for (String winHandle7 : driver.getWindowHandles()) {
@@ -756,7 +763,6 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//utl.scrollToElement(lvafl.marketInfoAMC());
 
 		// Click on High Point Market link
-		// Switch to new tab
 		String winHandleBefore8 = driver.getWindowHandle();
 		lvafl.getHighPointMarket().click();
 		for (String winHandle8 : driver.getWindowHandles()) {
@@ -767,10 +773,8 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore8);
 		//utl.scrollToElement(lvafl.marketInfoAMC());
-				
-				
+		
 		// Click on LVM Market link
-		// Switch to new tab
 		String winHandleBefore9 = driver.getWindowHandle();
 		lvafl.getlvmlink_ATL().click();
 		for (String winHandle9 : driver.getWindowHandles()) {
@@ -782,8 +786,6 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//utl.scrollToElement(lvafl.marketInfoAMC());		
 				
 		// Click on ANDMORE link
-		// Switch to new tab
-		
 		//Switch to new tab
 		String winHandleBefore10 = driver.getWindowHandle();
 		lvafl.getandmore().click();
@@ -816,11 +818,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		//Thread.sleep(10000);
 		//Verify that 'Las Vegas Facebook' page should be displayed
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.facebook.com/apparelmarkets/"));
-		
-		// Close the new window, if that window no more required
 		driver.close();
-		
-		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 		
 /*		
@@ -880,6 +878,114 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/Attend/App"));
 		System.out.println("Plan Your Market page is working properly.");
+	}
+	
+	@Test(enabled=false)
+	public void TS005_LVMApp_VerifyAllLinksUnderAttendTabTest () throws InterruptedException {
+		//The purpose of this test case to verify:-
+		//UXP-T507: To verify Attend Tab
+		lvaa = new LVAAttendPage(driver);
+		driver.get(prop.getProperty("lvmappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(5000);
+
+		//Click on Attend Tab
+		//utl.scrollToElement(lvaa.getLVAAttendTab());
+		driver.get(prop.getProperty("lvmappurl"));
+		Thread.sleep(3000);
+		lvaa.getLVAAttendTab().click();
+		Thread.sleep(1000);
+		//CLick on Air Travel
+		lvaa.getLVAirTravel().click();
+		System.out.println("Click on Air Travel");
+		Thread.sleep(1000);
+		//Verify Hotels Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Travel"));
+		System.out.println("Vefiry Events Page ");
+		
+		driver.get(prop.getProperty("lvmappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		//utl.scrollToElement(lvaa.getLVAAttendTab());
+		
+		Thread.sleep(5000);
+		//Click on Attend Tab
+		lvaa.getLVAAttendTab().click();
+		Thread.sleep(1000);
+		//CLick on Parking
+		lvaa.getLVParking().click();
+		System.out.println("Click on Parking");
+		Thread.sleep(1000);
+		//Verify Faq Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Travel"));
+		System.out.println("Vefiry Parking Page");
+
+		//utl.scrollToElement(lvaa.getLVAAttendTab());
+		driver.get(prop.getProperty("lvmappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		//Click on Attend Tab
+		Thread.sleep(5000);
+		lvaa.getLVAAttendTab().click();
+		Thread.sleep(1000);
+		//Click on Hotels
+		lvaa.getLVHotels().click(); 
+		System.out.println("Click on Hotels");
+		Thread.sleep(1000);
+		//Verify Hotels Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Travel"));
+		System.out.println("Vefiry Hotels Page");
+	}
+	
+	@Test(enabled=false)
+	public void TS003_LVMApp_VerifyAllLinksUnderAboutTabTest () throws InterruptedException {
+		
+		//The purpose of this test case to verify:-
+		//UXP-T508: To verify About Tab
+
+		 lvaat = new LVAAboutTab(driver);
+		 driver.get(prop.getProperty("lvmappurl"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(5000);
+
+	//Verify Dates & Hours Page
+		lvaat.getLVAAboutTab().click();
+		System.out.println("Click on About Tab");
+		//Click on Dates & Hours
+		lvaat.getLVADatesAndHours().click();
+		System.out.println("Click on Dates and Hourss");
+		Thread.sleep(2000);
+		//Verify Dates and Hours Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Dates-and-Hours"));
+		System.out.println("Verify Complete Dates and Hours Page");		
+		Thread.sleep(3000);
+	//Verify Press Center Page
+		lvaat.getLVAAboutTab().click();
+		//Click on Press Center
+		System.out.println("Click on About Tab");
+		lvaat.getLVAPressCenter().click();
+		Thread.sleep(2000);
+		//Verify Press Center Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Press-Center"));
+		System.out.println("Verify Complete Press center Page");		
+		Thread.sleep(3000);
+	//Verify In The News Page
+		lvaat.getLVAAboutTab().click();
+		//Click on In the News
+		System.out.println("Click on About Tab");
+		lvaat.getLVAInTheNews().click();
+		Thread.sleep(2000);
+		//Verify In The News Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("In-The-News"));
+		System.out.println("Verify Complete In The News Page");		
+		Thread.sleep(5000);
+	//Verify Contact Us Page
+		lvaat.getLVAAboutTab().click();
+		//Click on Contact Us
+		System.out.println("Click on About Tab");
+		lvaat.getLVAContactUs().click();
+		Thread.sleep(2000);
+		//Verify Contact Us Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("Contact-Us"));
+		System.out.println("Verify Complete Contact Us Page");		
 		
 	}
 	

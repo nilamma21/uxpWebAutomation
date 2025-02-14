@@ -19,7 +19,7 @@ public class UXPGlobalSearchPage {
 	By SearchButtonNew = By.xpath("(//div[@class = 'imc-searchform--button--search'])[3]"); //Locator for Seach button for global search
 	
 	By VerifyGlobalSeacrhNew = By.xpath("(//div[@class = 'imc-content--full-width']/descendant::h2)[1]"); // Locator for global search verification
-	
+	By VerifyGlobalSeacrhNewSecond = By.xpath("(//div[@class = 'imc-content--full-width']/descendant::h2)[2]");
 	By GlobalSearchEnterText = By.xpath("//div[@class='top-nav-dropdown-grid imc-content--relative']/div/div/section/div/form/div/input"); // Locator for Global Search field
 	By VerifyGlobalSeacrhSecond = By.xpath("(//h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover'])[2]"); // Locator for global search verification
 	By GlobalSearchTextBoxTwo = By.xpath("(//input[@id='input-1'])[2]"); //Locator for exhibitor directory Search field 
@@ -42,6 +42,14 @@ public class UXPGlobalSearchPage {
 		return driver.findElement(VerifyGlobalSeacrhNew);
 
 	}
+	
+	public WebElement getVerifyGlobalSeacrhNewSecond() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyGlobalSeacrhNewSecond));
+		return driver.findElement(VerifyGlobalSeacrhNewSecond);
+
+	}
+	
 	public WebElement getSearchButtonNew() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SearchButtonNew));
