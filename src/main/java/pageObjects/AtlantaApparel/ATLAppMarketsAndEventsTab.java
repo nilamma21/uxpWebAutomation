@@ -14,8 +14,8 @@ public class ATLAppMarketsAndEventsTab {
 	public WebDriverWait wait;
 	
 	By ATLAppMarketsAndEventsTab = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Markets & Events')]/../..");
-	By MAECompleteShowdates = By.xpath("(//a[@href='/Markets/Complete-Show-Dates' and contains(text(),'Complete Show Dates')])[1]");
-	By MAEEventsAndAmenities = By.xpath("(//a[@href='/Attend/Events' and contains(text(),'Events & Amenities')])[1]");
+	By MAECompleteShowdates = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Complete Show Dates')]");
+	By MAEEventsAndAmenities = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Events & Amenities')]");
 	By MAEYearAroundAtAmericasMart = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Year Round at AmericasMart')]");
 	
 	

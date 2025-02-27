@@ -9,9 +9,11 @@ import java.time.Duration;
 import java.util.Properties;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -68,7 +70,10 @@ public class base {
 			//Checks for the latest browser version
 			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver_102.exe");
 			//WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless"); //To run headless mode uncomment this.
+			options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+			driver = new ChromeDriver(options);
 			driver.manage().window().maximize();
 		}
 		else if (browserName.equals("firefox"))

@@ -14,11 +14,12 @@ public class YearAround {
 	public WebDriverWait wait;
 	
 	By YearRoundTab = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/descendant::span[contains(text(),'Year Round')]/../..");
-	By YearRoundLink = By.xpath("//a[@href='/Open-Year-Round' and contains(text(),'Year Round')]");
-	By ExhibitorDirectoryLink = By.xpath("(//a[@href='/exhibitor/exhibitor-directory' and contains(text(),'Exhibitor Directory')])[2]");
-	By AZBrandListingLink = By.xpath("(//a[@href='/exhibitor' and contains(text(),'A-Z Brand Listing')])[2]");
-	By FloorPlansLink = By.xpath("(//a[@href='/Market-Map' and contains(text(),'Floor Plans')])[3]");
-	By ContactUsLink = By.xpath("(//a[contains(text(),'Contact Us')])[1]");
+	By MarketsLink = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Markets')]");
+	By YearRoundLink = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Year Round')]");
+	By ExhibitorDirectoryLink = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Exhibitor Directory')]");
+	By AZBrandListingLink = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'A-Z Brand Listing')]");
+	By FloorPlansLink = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Floor Plans')]");
+	By ContactUsLink = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Contact Us')]");
 	
 	public YearAround(WebDriver driver) {
 		this.driver = driver; 			
@@ -35,6 +36,12 @@ public class YearAround {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(YearRoundLink));
 		return driver.findElement(YearRoundLink);		
+	}
+	public WebElement getMarketsLink() throws InterruptedException {
+		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MarketsLink));
+		return driver.findElement(MarketsLink);		
 	}
 	public WebElement getExhibitorDirectoryLink() throws InterruptedException {
 		Thread.sleep(2000);

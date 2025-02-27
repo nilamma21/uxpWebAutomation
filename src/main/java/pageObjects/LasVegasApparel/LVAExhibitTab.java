@@ -16,11 +16,11 @@ public class LVAExhibitTab{
 	By LVAExhibitorPortalLogin = By.xpath("(//a[contains(text(),'Exhibitor Portal Login')])[1]");
 	By LVAExhibitorPortalGuide = By.xpath("(//a[contains(text(),'Exhibitor Portal Guide')])[1]");
 	By LVAMarketToolkit = By.xpath("(//a[contains(text(),'Market Toolkit')])[1]");
-	By LVAWhyExhibit = By.xpath("(//a[contains(text(),'Why Exhibit?')])[1]");
+	By LVAWhyExhibit = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Why Exhibit?')]");
 	By LVAAdvertisingAndSponsorship = By.xpath("(//a[contains(text(),'Advertising & Sponsorship')])[1]");
 	By LVALeasingInquiry = By.xpath("(//a[contains(text(),'Leasing Inquiry')])[1]");
-	By LVAExhibitorResources = By.xpath("(//a[contains(text(),'Exhibitor Resources')])[1]");
-	By LVAAlreadyOnExhibitor = By.xpath("(//a[contains(text(),'Already an Exhibitor?')])[1]");
+	By LVAExhibitorResources = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Exhibitor Resources')]");
+	By LVAAlreadyOnExhibitor = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Already an Exhibitor?')]");
 	
 	public LVAExhibitTab(WebDriver driver) {
 		this.driver = driver;

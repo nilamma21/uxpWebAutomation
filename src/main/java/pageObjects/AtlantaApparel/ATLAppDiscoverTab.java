@@ -14,12 +14,12 @@ public class ATLAppDiscoverTab {
 	public WebDriverWait wait;
 	
 	By ATLAppDiscoverTab = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Discover')]/../..");
-	By DTExhibitorsAndProducts = By.xpath("(//a[@href='/exhibitor/exhibitor-directory' and contains(text(),'Exhibitors & Products')])[2]");
-	By DTFloorPlans = By.xpath("(//a[@href='/Market-Map' and contains(text(),'Floor Plans')])[2]");
-	By DTListOfBrands = By.xpath("(//a[@href='/exhibitor/directory' and contains(text(),'List of Brands')])[2]");
-	By DTToolsAndInspirations = By.xpath("//a[@href='/The-Best-Of' and contains(text(),'Tools & Inspiration')]");
-	By DTPlanYourMarket = By.xpath("//a[@href='/Attend/Plan-Your-Market' and contains(text(),'Plan Your Market')]");
-	By DTExploreAtlanta = By.xpath("//a[@href='/Attend/Explore-Atlanta' and contains(text(),'Explore Atlanta')]");
+	By DTExhibitorsAndProducts = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Exhibitors & Products')]");
+	By DTFloorPlans = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Floor Plans')]");
+	By DTListOfBrands = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'List of Brands')]");
+	By DTToolsAndInspirations = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Tools & Inspiration')]");
+	By DTPlanYourMarket = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Plan Your Market')]");
+	By DTExploreAtlanta = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Explore Atlanta')]");
 	
 	public ATLAppDiscoverTab(WebDriver driver) {
 		this.driver = driver; 			

@@ -14,7 +14,7 @@ public class AMExhibitorDirectoryTab {
 	
 	By EDExhibitorDirectoryTab = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Exhibitor Directory')]/../..");
 	By EDSearchExhibitor = By.xpath("//a[@href='/exhibitor/exhibitor-directory' and contains(text(),'Search Exhibitors')]");
-	By EDAZBrandListing = By.xpath("//a[@href='/exhibitor/directory' and contains(text(),'A-Z Brand Listing')]");
+	By EDAZBrandListing = By.xpath("//a[@href='/exhibitor/Directory' and contains(text(),'A-Z Brand Listing')]");
 	By EDFloorPlans = By.xpath("(//a[@href='/Market-Map' and contains(text(),'Floor Plans')])[1]");
 	By EDCategories = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Categories')]");
 	
