@@ -119,6 +119,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Thread.sleep(3000);
 		//Thread.sleep(8000);
 		lap.getIUnderstandBtn().click();
+		utl.waitForPageToLoad();
 		//Thread.sleep(5000);
 	}
 	
@@ -133,6 +134,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 		try {
 			gs.getGlobalSearchEnterText().isDisplayed();
@@ -169,14 +171,15 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(7000);
+		utl.waitForPageToLoad();
+		Thread.sleep(5000);
 		
 	//Exhibitors and Products
 		edp.getATLAppExhibitorDirectoryTab().click();
 		Thread.sleep(500);
 		//Click on Exhibitors And Products link
 		edp.getEDTExhibitorsAndProducts().click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("exhibitor-directory"));	
 		System.out.println("Exhibitors and Products Page is present");
 		
@@ -185,7 +188,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Thread.sleep(500);
 		//Click on Floor Plans link
 		edp.getEDTFloorPlans().click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		//Verify Floor Plan Page
 		//Assert.assertTrue(atlexhp.getATLVerifyFloorPlans().isDisplayed());
 		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Map"));
@@ -196,9 +199,9 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Thread.sleep(500);
 		//Click on List of Brands link
 		edp.getEDTListOfBrands().click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		//Verify List of Brands Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("directory"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Directory"));
 		System.out.println("List of Brands Page is present");
 		
 	//Categories
@@ -206,8 +209,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		Thread.sleep(500);
 		//Click on categories
 		edp.getEDTCategories().click();
-		System.out.println("Click on Categoris");
-		Thread.sleep(3000);
+		Thread.sleep(2000);
+		//Thread.sleep(3000);
 		//Verify All Brands Page
 		Assert.assertTrue(driver.getCurrentUrl().contains("Categories"));
 		System.out.println("Categories Page is present");
@@ -223,6 +226,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(7000);
 		
 	//Complete show dates
@@ -274,11 +278,13 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 		
 	//Registration
 		//Click on Visit Tab
 		vtp.getATLAppVisitTab().click();
+		Thread.sleep(500);
 		//Click on Registration link
 		vtp.getVisitTabRegistration().click();
 		Thread.sleep(3000);
@@ -289,6 +295,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Complete Show Dates
 		//Click on Visit Tab
 		vtp.getATLAppVisitTab().click();
+		Thread.sleep(500);
 		//Click on Show Dates link
 		vtp.getVisitTabCompleteShowDates().click();
 		Thread.sleep(3000);
@@ -299,7 +306,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Travel
 		//Click on Visit Tab
 		vtp.getATLAppVisitTab().click();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		//Click on Travel Link
 		vtp.getVisitTabTravel().click();
 		Thread.sleep(3000);
@@ -309,7 +316,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Events and Amenities
 		//Click on Visit Tab
 		vtp.getATLAppVisitTab().click();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		//Click on Events & Amenities link
 		vtp.getVisitTabEventsAndAmenities().click();
 		Thread.sleep(3000);
@@ -319,7 +326,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Dining
 		//Click on Visit Tab
 		vtp.getATLAppVisitTab().click();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		//Click on Dining link
 		vtp.getVisitTabDining().click();
 		Thread.sleep(3000);
@@ -330,7 +337,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Download the App
 		//Click on Visit Tab
 		vtp.getATLAppVisitTab().click();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		//Click on Download the App link
 		vtp.getVisitTabDownloadTheApp().click();
 		Thread.sleep(4000);
@@ -340,7 +347,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//Services at Market
 		//Click on Visit Tab
 		vtp.getATLAppVisitTab().click();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		//Click on Services at Market link
 		vtp.getVisitTabServicesAtMarket().click();
 		Thread.sleep(5000);
@@ -350,15 +357,13 @@ public class AtlantaAppSmokeTest_PROD extends base {
 	//FAQs
 		//Click on Visit Tab
 		vtp.getATLAppVisitTab().click();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		//Click on FAQ's link
 		vtp.getVisitTabFAQs().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("FAQs"));	
 		System.out.println("FAQ page is displayed properly");
 		
-	
-
 	}
 		
 	@Test(priority=5)
@@ -370,7 +375,8 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(4000);
+		utl.waitForPageToLoad();
+		Thread.sleep(5000);
 		
 	//Exhibitors and Products
 		dt.getATLAppDiscoverTab().click();
@@ -399,7 +405,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		dt.getDTListOfBrands().click();
 		Thread.sleep(3000);
 		//Verify List of Brands Page
-		Assert.assertTrue(driver.getCurrentUrl().contains("directory"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Directory"));
 		System.out.println("List of Brands Page is present");
 		
 	//Tools and Inspirations
@@ -444,6 +450,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(4000);
 		
 	//Exhibit at Atlanta Apparel
@@ -477,7 +484,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		
 	//Already an Exhibitor
 		atlexh.getATLExhibitTab().click();
-		Thread.sleep(2000);
+		Thread.sleep(500);
 		String winHandleBefore = driver.getWindowHandle();
 		//Click on Exhibitor Portal Login' sub-menu
 		atlexh.getATLExhibitorPortalLoginMenu().click();
@@ -512,156 +519,191 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(2000);
+		utl.waitForPageToLoad();
+		//Thread.sleep(2000);
 		//Scroll till footer links
+		
+	//Market Information
 		utl.scrollToElement(fl.getmarketInfoATL());
-
 		Thread.sleep(2000);
 		//Click Market Info link and verify results
 		fl.getmarketInfoATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/Markets"));
 		driver.get(prop.getProperty("atlappurl"));
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
-		Thread.sleep(2000);
+	//Press Center
+		//Thread.sleep(2000);
 		//Click on Press Center
 		fl.getpressCenterATL().click();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		Assert.assertTrue(exhp.getVerifyBreadcrumb().getText().contains("Press Center"));
 		driver.get(prop.getProperty("atlappurl"));
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
-		Thread.sleep(2000);
+	//Download the ANDMORE markets App
+		//Thread.sleep(2000);
 		// Click Download The App link and verify results
 		fl.getDownloadTheApp().click();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Plan Your Market");
 		driver.get(prop.getProperty("atlappurl"));
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
-		Thread.sleep(2000);
+	//Our Brands
+		//Thread.sleep(2000);
 		//Click on Our Brand link
 		fl.getOurBrandsATL().click();
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/exhibitor/directory"));
 		driver.get(prop.getProperty("atlappurl"));
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		utl.scrollToElement(fl.getmarketInfoATL());
 		
+	//Contact Us
 		// Click Contact Us link and verify results
-		Thread.sleep(500);
-		String winHandleBefore5 = driver.getWindowHandle();
+		//Thread.sleep(500);
+		String winHandleBefore1 = driver.getWindowHandle();
 		fl.getContactUsATL().click();
-		for (String winHandle5 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle5);
+		for (String winHandle1 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle1);
 		}
 		//Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
 		Assert.assertTrue(driver.getCurrentUrl().contains("/About/Contact-Us"));
 		driver.close();
-		driver.switchTo().window(winHandleBefore5);
+		driver.switchTo().window(winHandleBefore1);
 		
-		Thread.sleep(2000);
-		// Click Careers link and verify results
+	//Careers
+		utl.scrollElementIntoMiddle(fl.getCareersATL());
 		fl.getCareersATL().click();
+		System.out.println(driver.getCurrentUrl());
+		Thread.sleep(1000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("www.andmore.com/our-team"));
 		driver.navigate().back();
-
-		Thread.sleep(2000);
-		// Click on Terms & condition link
-		// Switch to new tab
-		String winHandleBefore7 = driver.getWindowHandle();
-		fl.getTermsAndConditions().click();
-		for (String winHandle7 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle7);
-		}
-		//Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/terms-of-use"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore7);
-
-		Thread.sleep(2000);
-		// Click Privacy Policy link and verify results
+		Thread.sleep(5000);
 		
-		String winHandleBefore8 = driver.getWindowHandle();
-		fl.getatlprivacypolicy().click();
-		Thread.sleep(500);
-		for (String winHandle8 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle8);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/privacy-policy"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore8);
+	//Exhibitor Login
+		utl.scrollToBottom();
+		fl.getExhibitorLogin().click();
+		Thread.sleep(5000);
+		Assert.assertTrue(fl.getEXPloginVerify().getText().contains("Exhibitor Portal Login"));
+		System.out.println("Exhibitor Portal Login Page Opens Successifully");
+		driver.navigate().back();
+		Thread.sleep(5000);
+		
 	
-		Thread.sleep(2000);
+	//AmericasMart
 		// Click Americas Mart link and verify results
-		String winHandleBefore9 = driver.getWindowHandle();
-		fl.getAmericasMart_ATLApp().click();
-		for (String winHandle9 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle9);
+		utl.scrollElementIntoMiddle(fl.getAmericasMart_ATLAppFooter());
+		String winHandleBefore2 = driver.getWindowHandle();
+		fl.getAmericasMart_ATLAppFooter().click();
+		for (String winHandle2 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle2);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/"));
 		driver.close();
-		driver.switchTo().window(winHandleBefore9);
+		driver.switchTo().window(winHandleBefore2);
+		Thread.sleep(500);
 		
-		Thread.sleep(2000);
-		// Click Atlanta Market link and verify results
+	//Atlanta Market
 		// Switch to new tab
-		String winHandleBefore1 = driver.getWindowHandle();
+		String winHandleBefore3 = driver.getWindowHandle();
 		fl.getAtlantaMarket().click();
-		for (String winHandle1 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle1);
+		for (String winHandle3 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle3);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
 		driver.close();
-		driver.switchTo().window(winHandleBefore1);
+		driver.switchTo().window(winHandleBefore3);
 		//utl.scrollToElement(fl.getmarketInfoATL());
 
-		Thread.sleep(2000);
-		// Click on High Point Market link
+	//Casual Market Atlanta
 		// Switch to new tab
+		utl.scrollElementIntoMiddle(fl.getCasualMarketAtlanta());
 		String winHandleBefore4 = driver.getWindowHandle();
-		fl.getHighPointMarket().click();
+		fl.getCasualMarketAtlanta().click();
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
+		}
+		Thread.sleep(7000);
+		Assert.assertTrue(driver.getCurrentUrl().contains("casualmarketatlanta.com"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore4);
+		
+	//High Point Market
+		String winHandleBefore5 = driver.getWindowHandle();
+		fl.getHighPointMarket().click();
+		for (String winHandle5 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle5);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
 		driver.close();
-		driver.switchTo().window(winHandleBefore4);
+		driver.switchTo().window(winHandleBefore5);
 		//utl.scrollToElement(fl.getmarketInfoATL());
 		
-		Thread.sleep(2000);
-		String winHandleBefore12 = driver.getWindowHandle();
-		fl.getlvapplink_ATL_Footer().click();
-		for (String winHandle4 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle4);
+	//Las Vegas Apparel
+		utl.scrollElementIntoMiddle(fl.getlvapplinkNew());
+		Thread.sleep(3000);
+		String winHandleBefore6 = driver.getWindowHandle();
+		fl.getlvapplinkNew().click();
+		for (String winHandle6 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle6);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
-		//driver.close();
-		driver.switchTo().window(winHandleBefore12);
-		
-		Thread.sleep(2000);
-		// Click on LVM Market link
-		// Switch to new tab
-		String winHandleBefore11 = driver.getWindowHandle();
+		driver.close();
+		driver.switchTo().window(winHandleBefore6);
+
+	//Las Vegas Market
+		utl.scrollElementIntoMiddle(fl.getlvmlink_ATL());
+		String winHandleBefore7 = driver.getWindowHandle();
 		fl.getlvmlink_ATL().click();
-		for (String winHandle11 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle11);
+		for (String winHandle7 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle7);
 		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
 		driver.close();
-		driver.switchTo().window(winHandleBefore11);
+		driver.switchTo().window(winHandleBefore7);
 	
-		Thread.sleep(2000);
-		//Switch to new tab
-		String winHandleBefore3 = driver.getWindowHandle();
+	//ANDMORE
+		// Click ANDMORE link and verify results
+		utl.scrollElementIntoMiddle(fl.getandmore());
+		// Switch to new tab
+		String winHandleBefore8 = driver.getWindowHandle();
 		fl.getandmore().click();
-		for(String winHandle3 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle3);}
+		for (String winHandle8 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle8);
+		}
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
 		driver.close();
-		driver.switchTo().window(winHandleBefore3);
+		driver.switchTo().window(winHandleBefore8);
+		
+	//Terms & Conditions
+		// Click on Terms & condition link
+		utl.scrollToBottom();
+		Thread.sleep(200);
+		String winHandleBefore9 = driver.getWindowHandle();
+		fl.getTermsAndConditions().click();
+		for (String winHandle9 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle9);
+		}
+		// Assert.assertEquals(fl.getVerifyTermsOfUse().getText(), "TERMS OF USE");
+		Assert.assertTrue(driver.getCurrentUrl().contains("terms-of-use"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore9);
+		
+	//Privacy Policy
+		// Click Privacy Policy link and verify results
+		utl.scrollToBottom();
+		String winHandleBefore10 = driver.getWindowHandle();
+		fl.getatlprivacypolicy().click();
+		for (String winHandle10 : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle10);
+		}
+		Assert.assertTrue(driver.getCurrentUrl().contains("privacy-policy"));
+		driver.close();
+		driver.switchTo().window(winHandleBefore10);
 			
 		// Click on LVA Market link
 		// Switch to new tab
@@ -706,6 +748,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("atlappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 		
 		//Scroll till footer links

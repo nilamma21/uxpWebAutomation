@@ -16,10 +16,10 @@ public class ATLExhibitorDirectoryPage {
 	By atlexhdirtsearchtxtbx = By.xpath("(//input[@id='input-1'])[position()=2]"); //Locator for Exhibitor Directory Search text box
 	By atlexhdirtsearchbtn = By.xpath("(//div[@class = 'imc-searchform--button--search'])[position()=2]"); //Locator for Exhibitor Directory Search btn
 	By ExhibitorDitectoryTab = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/descendant::span[contains(text(),'Exhibitor Directory')]/../..");
-	By SearchExhibitors = By.xpath("//a[@href='/exhibitor/exhibitor-directory' and contains(text(),'Search Exhibitors')]");
-	By AZBrandListing = By.xpath("//a[@href='/exhibitor/directory' and contains(text(),'A-Z Brand Listing')]");
-	By FloorPlans = By.xpath("(//a[@href='/Market-Map' and contains(text(),'Floor Plans')])[1]");
-	By Categories = By.xpath("//a[@href='/exhibitor/Categories' and contains(text(),'Categories')]");
+	By SearchExhibitors = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Search Exhibitors')]");
+	By AZBrandListing = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'A-Z Brand Listing')]");
+	By FloorPlans = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Floor Plans')]");
+	By Categories = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Categories')]");
 	
 	public ATLExhibitorDirectoryPage(WebDriver driver) {
 		this.driver = driver; 			

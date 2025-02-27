@@ -14,13 +14,13 @@ public class LVAVisitTab {
 	public WebDriverWait wait;
 	
 	By LVAVisitTab = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Visit')]/../..");
-	By LVAWhyAttend = By.xpath("//a[@href='/Attend' and contains(text(),'Why Attend?')]"); //Locator for Why Attend link
-	By LVARigister = By.xpath("//a[@href='/About/Market-Dates-and-Hours' and contains(text(),'Register')]");
-	By LVTravel = By.xpath("//a[@href='/Attend/Travel' and contains(text(),'Travel')]");
-	By LVAEvents = By.xpath("//a[@href='/Attend/Events' and contains(text(),'Events')]");
-	By LVDining = By.xpath("//a[@href='/Attend/Dining' and contains(text(),'Dining')]");
-	By LVServicesAndAmenities = By.xpath("//a[@href='/Attend/Services-and-Amenities' and contains(text(),'Services & Amenities')]");
-	By LVDownloadApp = By.xpath("//a[@href='/Attend/Plan-Your-Market' and contains(text(),'Download the App')]");
+	By LVAWhyAttend = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Why Attend?')]"); //Locator for Why Attend link
+	By LVARigister = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Register')]");
+	By LVTravel = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Travel')]");
+	By LVAEvents = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Events')]");
+	By LVDining = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Dining')]");
+	By LVServicesAndAmenities = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Services & Amenities')]");
+	By LVDownloadApp = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Download the App')]");
 	
 	public LVAVisitTab(WebDriver driver) {
 		this.driver=driver;

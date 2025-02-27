@@ -14,14 +14,14 @@ public class DiscoverTab {
 	public WebDriverWait wait;
 	
 	By DiscoverTab = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/descendant::span[contains(text(),'Discover')]/../..");
-	By ExhibitorDirectory = By.xpath("(//a[@href='/exhibitor/exhibitor-directory' and contains(text(),'Exhibitor Directory')])[1]");
-	By AZbrandlisting = By.xpath("//a[@href='/exhibitor' and contains(text(),'A-Z Brand Listing')]");
-	By FloorPlans = By.xpath("(//a[@href='/Market-Map' and contains(text(),'Floor Plans')])[2]");
-	By ExploreAtlantaMarket = By.xpath("//a[@href='/exhibitor/Categories' and contains(text(),'Explore Atlanta Market')]");
-	By ToolsAndInspiration = By.xpath("//a[@href='/News-and-Trends' and contains(text(),'Tools & Inspiration')]");
-	By PlanYourMarket = By.xpath("//a[@href='/Attend/Plan-Your-Market' and contains(text(),'Plan Your Market')]");
-	By WhatsNew = By.xpath("//a[@href='/Market-Info/Whats-New' and contains(text(),'What')]");
-	By Events = By.xpath("//a[@href='/Attend/Events' and contains(text(),'Events')]");
+	By ExhibitorDirectory = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Exhibitor Directory')]");
+	By AZbrandlisting = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'A-Z Brand Listing')]");
+	By FloorPlans = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Floor Plans')]");
+	By ExploreAtlantaMarket = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Explore Atlanta Market')]");
+	By ToolsAndInspiration = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Tools & Inspiration')]");
+	By PlanYourMarket = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Plan Your Market')]");
+	By WhatsNew = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'What')]");
+	By Events = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Events')]");
 
 	public DiscoverTab(WebDriver driver) {
 		this.driver = driver; 			

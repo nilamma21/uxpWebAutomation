@@ -90,6 +90,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
+		utl.waitForPageToLoad();
 		Thread.sleep(8000);
 		//utl.verifyCloseBtnPopup();
 	}
@@ -109,6 +110,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
+		utl.waitForPageToLoad();
 		
 		//Old code for Header Channel Links
 /*		//Click on Atlanta Market 
@@ -322,6 +324,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		gs = new UXPGlobalSearchPage(driver);
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 		
 		try {
@@ -330,7 +333,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 			Thread.sleep(1000);
 			gs.getSearchButtonNew().click();
 			Thread.sleep(5000);
-			String searchterm = gs.getVerifyGlobalSeacrhNewSecond().getText();
+			String searchterm = gs.getVerifyGlobalSeacrhNew().getText();
 			Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput2")));
 			System.out.println("Global Search functionality is working properly.");
 		} catch (Exception e) {
@@ -339,7 +342,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 			Thread.sleep(1000);
 			gs.getSearchButtonNew().click();
 			Thread.sleep(5000);
-			String searchterm = gs.getVerifyGlobalSeacrhNewSecond().getText();
+			String searchterm = gs.getVerifyGlobalSeacrhNew().getText();
 			System.out.println(searchterm);
 			Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput2")));
 			System.out.println("Global Search functionality is working properly.");
@@ -356,6 +359,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(8000);
 		
 	//Search Exhibitor
@@ -373,7 +377,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Click A-Z Brand Listing option under Exhibitor Directory tab
 		edt.getEDAZBrandListing().click();
 		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("directory"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Directory"));
 		System.out.println("A-Z Brand Listing section is displayed properly");
 		
 	//Floor Plans
@@ -403,6 +407,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		met = new AMMarketsAndEventsTab(driver);
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 		
 	//Market Dates And Hours
@@ -431,6 +436,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		vt = new AMVisitTab(driver);
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 		
 	//Search Exhibitor
@@ -448,7 +454,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		//Click A-Z Brand Listing link
 		vt.getamcEAZBrandListing().click();
 		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("directory"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Directory"));
 		System.out.println("A-Z Brand Listing is working properly");
 		
 	//Floor Plans
@@ -489,6 +495,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//utl.verifyCloseBtnPopup();
+		utl.waitForPageToLoad();
 		Thread.sleep(8000);
 		
 	//Exhibit at Americas Mart
@@ -689,6 +696,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+		utl.waitForPageToLoad();
 		Thread.sleep(8000);
 		//	utl.verifyCloseBtnPopup();
 
@@ -866,6 +874,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(8000);
 		
 		//Scroll till footer links
@@ -1245,7 +1254,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

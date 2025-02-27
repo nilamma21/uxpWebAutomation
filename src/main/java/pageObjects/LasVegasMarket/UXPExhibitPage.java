@@ -29,53 +29,54 @@ public class UXPExhibitPage {
 	By exhibitorresourcesprod = By.xpath("//div[@class = 'imc-section']/div[1]/div[5]/div[2]/div[3]/div[1]/a[1]"); // Locator for Exhibitor Resources option in Exhibit menu
 	By applytoexhibit = By.xpath("(//a[contains(text(),'Apply to Exhibit')])[1]");
 	
-	By exhibittabNew = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/div[1]/div[4]"); //Locator for Exhibit tab
-	By visitTabNew = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/div[1]/div[2]"); //Locator for Visit tab
-	By discoverTabNew = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/div[1]/div[3]"); //Locator for Discover tab
-	By sourceYearRoundTabNew = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/div[1]/div[5]"); //Locator for Discover tab
+	By exhibittabNew = By.xpath("(//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Exhibit')]/../..)[2]"); //Locator for Exhibit tab
+	By visitTabNew = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Visit')]/../.."); //Locator for Visit tab
+	By discoverTabNew = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Discover')]/../.."); //Locator for Discover tab
+	By sourceYearRoundTabNew = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Source Year Round')]/../.."); //Locator for Discover tab
 	By exhibitTab = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/div[1]/div[4]"); //Locator for Discover tab
 	By exhibitorDirectoryUnderExhibitorDirectoryTab = By.xpath("(//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[contains(text(),'Exhibitor Directory')])[1]"); //Locator for Discover tab
 	By PopularFiltersUnderExhibitorDirectoryTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//span[contains(text(),'Popular Filters')]"); //Locator for Discover tab
-	By registerUnderVisitTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Visit/Register']"); //Locator for Register
-	By MarketDatesHoursUnderVisitTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Visit/Market-Dates-and-Hours']"); //Locator for Market Dates & Hours
-	By VisitAboutUnderVisitTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Visit/About']"); //Locator for Visit About
-	By MarketPlanUnderVisitTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[contains(text(),'Market Plan')]"); //Locator for Market Plan
-	By TravelUnderVisitTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Visit/Travel']"); //Locator for visit travel
-	By DiningUnderVisitTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Visit/Dining']"); //Locator for Dining
-	By ServicesAmenitiesUnderVisitTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Visit/Services-and-Amenities']"); //Locator for Services & Amenities
-	By FAQsUnderVisitTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Visit/About/FAQs']"); //Locator for FAQs
+	By registerUnderVisitTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Register')]"); //Locator for Register
+	By MarketDatesHoursUnderVisitTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Market Dates & Hours')]"); //Locator for Market Dates & Hours
+	By VisitAboutUnderVisitTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'About Market')]"); //Locator for Visit About
+	By MarketPlanUnderVisitTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Plan Your Market')]"); //Locator for Market Plan
+	By TravelUnderVisitTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Travel')]"); //Locator for visit travel
+	By DiningUnderVisitTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Dining')]"); //Locator for Dining
+	By ServicesAmenitiesUnderVisitTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Services & Amenities')]"); //Locator for Services & Amenities
+	By FAQsUnderVisitTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'FAQs')]"); //Locator for FAQs
 	
-	By ExploreLasVegasMarketUnderDiscoverTab = By.xpath("(//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[contains(text(),'Explore Las Vegas Market')])[1]"); //Locator for FAQs
-	By ToolsAndInspirationUnderDiscoverTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Discover/Tools-and-Inspiration']"); //Locator for FAQs
-	By PlanYourMarketUnderDiscoverTab = By.xpath("(//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Visit/Plan-Your-Market'])[2]"); //Locator for FAQs
-	By WhatsNewUnderDiscoverTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Discover/Whats-New']"); //Locator for FAQs
-	By EventsUnderDiscoverTab = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-xlarge imc-content--display-flex-space-evenly imc-section--padded-left-xlarge imc-section--padded-right-xlarge imc-section--padded-xlarge']/descendant::a[contains(text(),'Events')]"); //Locator for FAQs
-	By ExhibitorDirectoryUnderDiscoverTab = By.xpath("(//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Exhibitor Directory')])[1]"); //Locator for FAQs
+	By ExploreLasVegasMarketUnderDiscoverTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Explore Las Vegas Market')]"); //Locator for FAQs
+	By ToolsAndInspirationUnderDiscoverTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Tools & Inspiration')]"); //Locator for FAQs
+	By PlanYourMarketUnderDiscoverTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Plan Your Market')]"); //Locator for FAQs
+	By WhatsNewUnderDiscoverTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'What')]"); //Locator for FAQs
+	By EventsUnderDiscoverTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Events')]"); //Locator for FAQs
+	By ExhibitorDirectoryUnderDiscoverTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Exhibitor Directory')]"); //Locator for FAQs
 	By ExhibitAtLasVegasMarketUnderExhibitTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Exhibit']"); //Locator for FAQs
 	By ExhibitorResourcesUnderExhibitTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Exhibit/Exhibitor-Resources']"); //Locator for FAQs
-	By YearRoundUndersourceYearRoundTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Year-Round']"); //Locator for FAQs
+	By YearRoundUndersourceYearRoundTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Year Round')]"); //Locator for FAQs
 	By ExhibitorDirectoryUndersourceYearRoundTab = By.xpath("(//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/exhibitor/exhibitor-directory'])[3]"); //Locator for FAQs
 	By ContactUsUndersourceYearRoundTab = By.xpath("//div[@class='desktop-menu imc-content--fixed imc-content--full-width imc-breakpoint-display--hide-tablet']//a[@href='/Contact-Us']"); //Locator for FAQs
 	
-	By exhibitAtLVM = By.xpath("//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Exhibit at Las Vegas Market')]"); //Locator for Exhitbit at LVM
-	By exhibitAtResources = By.xpath("//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Exhibitor Resources')]"); //Locator for Exhitbit at Resources
-	By marketingToolKit = By.xpath("//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Marketing Toolkit')]"); //Locator for Exhitbit at Resources
-	By advertisingAndSponsAndOpprtu = By.xpath("//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Advertising & Sponsorship Opportunities')]"); //Locator for Exhitbit at Resources
-	By alreadyAnExhibitor = By.xpath("//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Already an Exhibitor? Sign In')]"); //Locator for Exhitbit at Resources
+	By exhibitAtLVM = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Exhibit at Las Vegas Market')]"); //Locator for Exhitbit at LVM
+	By exhibitAtResources = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Exhibitor Resources')]"); //Locator for Exhitbit at Resources
+	By marketingToolKit = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Marketing Toolkit')]"); //Locator for Exhitbit at Resources
+	By advertisingAndSponsAndOpprtu = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Advertising & Sponsorship Opportunities')]"); //Locator for Exhitbit at Resources
+	By alreadyAnExhibitor = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Already an Exhibitor? Sign In')]"); //Locator for Exhitbit at Resources
 	
-	By atoZBrandList = By.xpath("(//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'A-Z Brand Listing')])[2]"); //Locator for A - Z Brand Listing
+	By atoZBrandList = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'A-Z Brand Listing')]"); //Locator for A - Z Brand Listing
 	
-	By floorPlans = By.xpath("(//a[@class='imc-content--gamma imc-content--bold imc-link--hover-underline' and contains(text(),'Floor Plans')])[2]"); //Locator for Floor Plans
-	By exhibitorDirectoryUnderSourceYearTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/div[1]/div[2]/a[1]"); //Locator for Floor Plans
+	By floorPlans = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Floor Plans')]"); //Locator for Floor Plans
+	By exhibitorDirectoryUnderSourceYearTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Exhibitor Directory')]"); //Locator for Floor Plans
 	
-	By atoZBrandListUnderSourceYearTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/div[1]/div[2]/a[2]"); //Locator for A - Z Brand Listing
-	By floorPlansUnderSourceYearTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/div[1]/div[2]/a[3]"); //Locator for A - Z Brand Listing
-	By ContactUsUnderSourceYearTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/div[1]/div[3]/a[1]"); //Locator for A - Z Brand Listing
-	
+	By atoZBrandListUnderSourceYearTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'A-Z Brand Listing')]"); //Locator for A - Z Brand Listing
+	By floorPlansUnderSourceYearTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Floor Plans')]"); //Locator for A - Z Brand Listing
+	By ContactUsUnderSourceYearTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Contact Us')]"); //Locator for A - Z Brand Listing
+	By EventUnderVisitTab = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Events')]");
 	
 	public UXPExhibitPage(WebDriver driver) {
 		this.driver = driver; 			
 	}
+	
 	public WebElement getContactUsUnderSourceYearTab() {
 	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	        wait.until(ExpectedConditions.elementToBeClickable(ContactUsUnderSourceYearTab));
@@ -206,7 +207,8 @@ public class UXPExhibitPage {
 		wait.until(ExpectedConditions.elementToBeClickable(exhibitTab));
 		return driver.findElement(exhibitTab);
 	}
-	public WebElement getsourceYearRoundTabNew() {
+	public WebElement getsourceYearRoundTabNew() throws InterruptedException {
+		Thread.sleep(1000);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(sourceYearRoundTabNew));
 		return driver.findElement(sourceYearRoundTabNew);
@@ -216,7 +218,8 @@ public class UXPExhibitPage {
 		wait.until(ExpectedConditions.elementToBeClickable(discoverTabNew));
 		return driver.findElement(discoverTabNew);
 	}
-	public WebElement getvisitTabNew() {
+	public WebElement getvisitTabNew() throws InterruptedException {
+		Thread.sleep(1000);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(visitTabNew));
 		return driver.findElement(visitTabNew);
@@ -363,6 +366,11 @@ public class UXPExhibitPage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(applytoexhibit));
 		return driver.findElement(applytoexhibit);		
+	}
+	public WebElement getEventUnderVisitTab() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventUnderVisitTab));
+		return driver.findElement(EventUnderVisitTab);		
 	}
 
 }

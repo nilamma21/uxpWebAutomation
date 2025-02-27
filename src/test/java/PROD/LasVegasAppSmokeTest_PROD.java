@@ -66,6 +66,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		hd = new UXPHeaderChannelLinksPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(8000);
 		
 		//Old Code
@@ -321,6 +322,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		gs = new UXPGlobalSearchPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 		
 		try {
@@ -354,6 +356,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvaept = new LVAExhibitorAndProductTab(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(4000);
 		
 	//Verify Exhibitor Directory Page
@@ -416,6 +419,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvaat = new LVAAboutTab(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 	
 	//Press Center
@@ -457,6 +461,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		vt = new LVAVisitTab(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 	
 	//Why Attend?
@@ -535,6 +540,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvaet = new LVAExhibitTab(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 		
 	//Why Exhibit
@@ -638,6 +644,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 /*		//Scroll till footer links
 		utl.scrollToElement(fl.getmarketInfoATL());
@@ -805,6 +812,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		atlfo=new ATLAppFooterLinksNavigationPage(driver);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 		//Scroll till footer links
 		utl.scrollToElement(atlfo.getfacebookfootericon());
@@ -992,7 +1000,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

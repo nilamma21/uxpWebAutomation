@@ -13,14 +13,15 @@ public class ATLVisitTab {
 	public WebDriverWait wait;
 	
 	By VisitTab = By.xpath("//div[@class='imc-breakpoint-display--hide-tablet']/descendant::span[contains(text(),'Visit')]/../..");
-	By Register = By.xpath("//a[@href='/Attend/Register' and contains(text(),'Register')]");
-	By MarketDatesAndHours = By.xpath("//a[@href='/Attend/Market-Dates-and-Hours' and contains(text(),'Market Dates & Hours')]");
-	By AboutMarket = By.xpath("//a[@href='/Market-Info/About' and contains(text(),'About Market')]");
-	By Market101 = By.xpath("//a[@href='/Market-Info/Market-101' and contains(text(),'Market 101')]");
-	By MarketPlan = By.xpath("//a[@href='/Attend/Plan-Your-Market' and contains(text(),'Market Plan')]");
-	By Travel = By.xpath("//a[@href='/Attend/Travel' and contains(text(),'Travel')]");
-	By Dining = By.xpath("//a[@href='/Attend/Dining' and contains(text(),'Dining')]");
-	By ServicesAndAmenities = By.xpath("//a[@href='/Attend/Services-and-Amenities' and contains(text(),'Services & Amenities')]");
+	By Register = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Register')]");
+	By MarketDatesAndHours = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Market Dates & Hours')]");
+	By AboutMarket = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'About Market')]");
+	By Market101 = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Market 101')]");
+	By MarketPlan = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Plan Your Market')]");
+	By Travel = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Travel')]");
+	By Dining = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Dining')]");
+	By ServicesAndAmenities = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Services & Amenities')]");
+	By Events = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Events')]");
 	
 	public ATLVisitTab(WebDriver driver) {
 		this.driver = driver; 			
@@ -70,6 +71,11 @@ public class ATLVisitTab {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ServicesAndAmenities));
 		return driver.findElement(ServicesAndAmenities);
+	}
+	public WebElement getEvents() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Events));
+		return driver.findElement(Events);
 	}
 	
 }

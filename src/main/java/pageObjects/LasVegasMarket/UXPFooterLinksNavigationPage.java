@@ -12,31 +12,18 @@ public class UXPFooterLinksNavigationPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By marketInfo = By.xpath("//a[@href='/market-info']"); //Locator for Market information in footer links
 	By marketInfoATL = By.xpath("//a[@href='/Markets']"); //Locator for Market information in footer links
 	By marketInfoAMC = By.xpath("//a[@href='/about']"); //Locator for Market information in footer links AMC
-	By pressCenter = By.xpath("//a[@href='/Market-Info/Press-Center']"); //Locator for Press Center in footer links
 	By pressCenterAMC = By.xpath("//a[@href='/About/Press']"); //Locator for Press Center in footer links
 	By pressCenterATL = By.xpath("//a[@href='/Markets/Press Center']"); //Locator for Press Center in footer links
-	By ourBrandsATL = By.xpath("//a[@href='/exhibitor/directory' and contains(text(),'Our Brands')]"); //Locator for Our brands in footer links ATL
-	By DownloadTheApp = By.xpath("//a[contains(text(),'Download the ANDMORE Markets App')]"); //Locator for Download The App in footer links
 	By ContactUs = By.xpath("(//a[contains(text(),'Contact Us')])[2]"); //Locator for Contact Us in footer links
-	By ContactUsATL = By.xpath("//div[@class='imc-section imc-section--padded']/descendant::a[contains(text(),'Contact Us')]"); //Locator for Contact Us in footer links
 	By Careers = By.xpath("//a[@href='/market-info/careers']"); //Locator for Careers in footer links
-	By CareersATL = By.xpath("//a[contains(text(),'Careers')]"); //Locator for Careers in footer links
 	By PrivacyPolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); // Locator for Privacy Policy in footer links
-	By TermsAndConditions = By.partialLinkText("Terms"); // Locator for Terms and Conditions in footer links
 	By AmericasMart = By.xpath("//a[@href='https://www.americasmart.com']"); //Locator for Americas Mart in footer links
-	By AmericasMart_ATLApp = By.xpath("//a[contains(text(),'AmericasMart')]"); //Locator for Americas Mart in footer links of ATLApp
-	By AmericasMart_ATLAppFooter = By.xpath("(//div[@class='imc-section imc-section--padded']//preceding::a[contains(text(),'AmericasMart')])[1]"); //Locator for Americas Mart in footer links of ATLApp
+	By AmericasMart_ATLApp = By.xpath("//div[@class='section-wrapper imc-section--  imc-section--relative']/descendant::a[contains(text(),'AmericasMart')]"); //Locator for Americas Mart in footer links of ATLApp
 	By lvapplink_ATL = By.xpath("//a[contains(@href,'https://www.lasvegas-apparel.com/')]"); //Locator for Las Vegas Apparel footer link
 	By lvapplink_ATL_Footer = By.xpath("(//a[contains(text(),'Las Vegas Apparel')])[1]"); //Locator for Las Vegas Apparel footer link
-	By lvmlink_ATL = By.xpath("//a[contains(text(),'Las Vegas Market')]"); //Locator for Las Vegas market footer link
 	By lvmlink_ATLM = By.xpath("//a[contains(@href,'https://www.lasvegas-apparel.com/')]"); //Locator for Las Vegas market footer link
-	By lvmlink_ATL_Footer = By.xpath("(//div[@class='imc-section imc-section--padded']//preceding::a[contains(text(),'Las Vegas Apparel')])[1]"); //Locator for Las Vegas market footer link
-	By AtlantaApparel = By.xpath("//div[@class='imc-accordion imc-vr--titan imc-category--heading']/descendant::a[text()='Atlanta Apparel']"); //Locator for Atlanta Apparel in footer links
-	By AtlantaMarket = By.xpath("//div[contains(@class,'imc-accordion imc-vr--titan imc-category--heading')]//a[contains(text(),'Atlanta Market')]"); //Locator for Atlanta Matket in footer links
-	By HighPointMarket = By.xpath("//a[contains(text(),'ANDMORE at High Point Market')]"); //Locator for High Point Market in footer links
 	By lvapplink = By.xpath("(//a[contains(@href,'https://www.lasvegas-apparel.com')])[2]"); //Locator for Las Vegas Apparel footer link
 	By InternationalMarketCenters = By.xpath("//a[contains(text(),'International Market Centers')]"); //Locator for International Market Centers in footer links
 	By JuniperMarket = By.xpath("//a[contains(@href,'https://www.junipermarket.com')]"); //Locator for Juniper Market  in footer links
@@ -55,10 +42,9 @@ public class UXPFooterLinksNavigationPage {
 	By abtatlmktlink = By.xpath("//a[@href='/Market-Info/About-Us']"); //Locator for About Atlanta Market footer link
 	By lvmprivacypolicy = By.xpath("(//a[contains(text(),'Privacy Policy')])[position()=2]"); //Locator for Privacy Policy on LVM Footer
 	By ClosePopUpAmericasmart = By.xpath("//div[@class = ' contact-exit']"); //Locator for Close Pop Up after opening Americas Mart footer link
-	By atlprivacypolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); //Locator for Privacy Policy on LVM Footer
-	By andmore = By.xpath("(//div[contains(@class,'imc-gallery__item imc-gallery__item--minheight imc-content-nav-container--column')]/div/p/a[contains(text(),'ANDMORE')])[3]"); //Locator for ANDMORE in footer links
 	By CasualMarket = By.xpath("(//a[contains(text(),'Casual Market Atlanta')])[2]");
 	By ContactUsLVA = By.xpath("//a[@href='/about/contact-us']");
+	
 	
 /*	By HighPointMarket = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[1]/div[1]/a[1]"); //Locator for High Point Market in footer links
 	By AtlantaMarket = By.xpath("//nav[@class='imc-footer-links imc-content imc-content--invert']/div[1]/div[2]/div[2]/div[1]/a[1]"); //Locator for Atlanta Matket in footer links
@@ -88,12 +74,30 @@ public class UXPFooterLinksNavigationPage {
 	By lvmfooterLinkAbout = By.xpath("//a[@href='/visit/about']"); //Locator for Privacy Policy on LVM Footer
 	By lvmfooterLinkPressCenter = By.xpath("//a[@href='/press-center']"); //Locator for press Center on LVM Footer
 	By lvmfooterLinkOurBrands = By.xpath("//div[@class='imc-rich-text']//a[@href='/exhibitor/directory']"); //Locator for press Center on LVM Footer
-	
 	By lvmfooterLinkPrivacyPolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); //Locator for Privacy Policy on LVM Footer
 	
-	 
 	
-	
+//New Links:
+	By marketInfo = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Market Information')]"); //Locator for Market information in footer links
+	By pressCenter = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Press Center')]"); //Locator for Press Center in footer links
+	By DownloadTheApp = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Download the ANDMORE Markets App')]"); //Locator for Download The App in footer links
+	By ourBrandsATL = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Our Brands')]"); //Locator for Our brands in footer links ATL
+	By ContactUsATL = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Contact Us')]"); //Locator for Contact Us in footer links
+	By CareersATL = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Careers')]"); //Locator for Careers in footer links
+	By ExhibitorLogin = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Exhibitor Login')]");
+	By AmericasMart_ATLAppFooter = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'AmericasMart')]"); //Locator for Americas Mart in footer links of ATLApp
+	By AtlantaApparel = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Atlanta Apparel')]"); //Locator for Atlanta Apparel in footer links
+	By CasualMarketAtlanta = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Casual Market Atlanta')]");
+	By HighPointMarket = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'ANDMORE at High Point Market')]"); //Locator for High Point Market in footer links
+	By lvapplinkNew = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Las Vegas Apparel')]"); //Locator for Las Vegas market footer link
+	By lvmlink_ATL = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Las Vegas Market')]"); //Locator for Las Vegas market footer link
+	By andmore = By.xpath("(//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'ANDMORE')])[3]"); //Locator for ANDMORE in footer links
+	By AtlantaMarket = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Atlanta Market')]"); //Locator for Atlanta Matket in footer links
+
+	By atlprivacypolicy = By.xpath("//a[contains(text(),'Privacy Policy')]"); //Locator for Privacy Policy on LVM Footer
+	By TermsAndConditions = By.partialLinkText("Terms"); // Locator for Terms and Conditions in footer links
+	By EXPloginVerify = By.xpath("//div[@class='card-content-wrapper']/descendant::h1[contains(text(),'Exhibitor Portal Login')]");
+
 	public UXPFooterLinksNavigationPage(WebDriver driver) {
 		this.driver = driver; 			
 	} 
@@ -117,10 +121,10 @@ public class UXPFooterLinksNavigationPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmfooterLinkAbout));
 		return driver.findElement(lvmfooterLinkAbout);
 	}
-	public WebElement getlvmlink_ATL_Footerr() throws InterruptedException {
+	public WebElement getlvapplinkNew() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmlink_ATL_Footer));
-		return driver.findElement(lvmlink_ATL_Footer);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvapplinkNew));
+		return driver.findElement(lvapplinkNew);
 	}
 	
 	public WebElement getlvapplink_ATL_Footer() throws InterruptedException {
@@ -178,6 +182,7 @@ public class UXPFooterLinksNavigationPage {
 	}
 	
 	public WebElement getTermsAndConditions() throws InterruptedException {
+		Thread.sleep(1000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(TermsAndConditions));;
 		return driver.findElement(TermsAndConditions);
@@ -382,14 +387,29 @@ public class UXPFooterLinksNavigationPage {
 	}
 	
 	public WebElement getCasualMarket() throws InterruptedException {
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-	wait.until(ExpectedConditions.visibilityOfElementLocated(CasualMarket));;
-	return driver.findElement(CasualMarket);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(CasualMarket));;
+		return driver.findElement(CasualMarket);
+	}
+	public WebElement getContactUsLVA() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ContactUsLVA));;
+		return driver.findElement(ContactUsLVA);
+	}
+	public WebElement getExhibitorLogin() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ExhibitorLogin));;
+		return driver.findElement(ExhibitorLogin);
+	}
+	public WebElement getCasualMarketAtlanta() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(CasualMarketAtlanta));;
+		return driver.findElement(CasualMarketAtlanta);
+	}
+	public WebElement getEXPloginVerify() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EXPloginVerify));;
+		return driver.findElement(EXPloginVerify);
 	}
 	
-	public WebElement getContactUsLVA() throws InterruptedException {
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-	wait.until(ExpectedConditions.visibilityOfElementLocated(ContactUsLVA));;
-	return driver.findElement(ContactUsLVA);
-	}
 }

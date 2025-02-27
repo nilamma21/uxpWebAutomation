@@ -14,10 +14,10 @@ public class ATLAppExhibitorDirectoryTab {
 	public WebDriverWait wait;
 	
 	By ATLAppExhibitorDirectoryTab = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Exhibitor Directory')]/../..");
-	By EDTExhibitorsAndProducts = By.xpath("(//a[@href='/exhibitor/exhibitor-directory' and contains(text(),'Exhibitors & Products')])[1]");
-	By EDTFloorPlans = By.xpath("(//a[@href='/Market-Map' and contains(text(),'Floor Plans')])[1]");
-	By EDTListOfBrands = By.xpath("(//a[@href='/exhibitor/directory' and contains(text(),'List of Brands')])[1]");
-	By EDTCategories = By.xpath("(//a[@href='/exhibitor/Categories' and contains(text(),'Categories')])[1]");
+	By EDTExhibitorsAndProducts = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Exhibitors & Products')]");
+	By EDTFloorPlans = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Floor Plans')]");
+	By EDTListOfBrands = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'List of Brands')]");
+	By EDTCategories = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Categories')]");
 	
 	
 	public ATLAppExhibitorDirectoryTab(WebDriver driver) {

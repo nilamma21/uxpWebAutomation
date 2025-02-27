@@ -14,11 +14,11 @@ public class LVAExhibitorAndProductTab {
 	public WebDriverWait wait;
 	
 	By LVAExhibitorDirectoryTab = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Exhibitor Directory')]/../..");
-	By LVAExhibitorDirectory = By.xpath("//a[contains(text(),'Exhibitor Directory')]");
+	By LVAExhibitorDirectory = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Exhibitor Directory')]");
 	By LVAListOfBrands = By.xpath("(//a[contains(text(),'List of Brands')])[1]");
-	By LVAOpenShowroom = By.xpath("//a[contains(text(),'Open Showrooms')]");
-	By LVAFloorPlans = By.xpath("//a[contains(text(),'Floor Plans')]");
-	By LVMTrendReport = By.xpath("//a[contains(text(),'Trend Report')]");
+	By LVAOpenShowroom = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Open Showrooms')]");
+	By LVAFloorPlans = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Floor Plans')]");
+	By LVMTrendReport = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Trend Report')]");
 	
 	public LVAExhibitorAndProductTab(WebDriver driver) {
 		this.driver = driver; 			

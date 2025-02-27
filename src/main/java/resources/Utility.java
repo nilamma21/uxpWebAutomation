@@ -1,6 +1,7 @@
 package resources;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -57,9 +58,17 @@ public class Utility extends base {
                 + "var elementTop = arguments[0].getBoundingClientRect().top;"
                 + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
 		((JavascriptExecutor) driver).executeScript(scrollElementIntoMiddle, element);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(200);
 	}
+	
+    public void waitForPageToLoad() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        // Wait until the document readyState is 'complete'
+        wait.until(driver -> js.executeScript("return document.readyState").equals("complete"));
+        Thread.sleep(1000);
+    }
 
 	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 

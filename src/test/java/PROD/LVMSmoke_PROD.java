@@ -5,6 +5,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -61,6 +62,7 @@ public class LVMSmoke_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(10000);
 		lap.getIUnderstandBtn().click();
+		utl.waitForPageToLoad();
 		/*
 		 * Thread.sleep(2000); utl.verifyCloseBtnPopup();
 		 */
@@ -227,15 +229,14 @@ public class LVMSmoke_PROD extends base {
 		Thread.sleep(2000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("Year-Round/LVDC"));
 		driver.get(prop.getProperty("lvmurl"));
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 		// Check EXPO at World Market Center Las Vegas
 		hd.getLasVegas().click();
-		Thread.sleep(2000);
-		Assert.assertTrue(hd.getEXPOatWorldMarketCenterLasVegas().getText()
-				.equalsIgnoreCase("EXPO at World Market Center Las Vegas"));
+		Assert.assertTrue(hd.getEXPOatWorldMarketCenterLasVegas().getText().equalsIgnoreCase("EXPO at World Market Center Las Vegas"));
 		hd.getEXPOatWorldMarketCenterLasVegas().click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
+		System.out.println("Title of page: "+driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("The Expo At World Market Center"));
 		driver.get(prop.getProperty("lvmurl"));
 		Thread.sleep(2000);
@@ -295,55 +296,28 @@ public class LVMSmoke_PROD extends base {
 		// The purpose of this test case to verify:-
 		// UXP-002: To verify the Exhibit menu overview and it's functionality
 
-		lap = new UXPLandingPage(driver);
-		exh = new UXPExhibitPage(driver);
-		exhp = new UXPExhibitorsAndProductsTabPage(driver);
+		ed = new UXPExhibitorDirectoryPage(driver);
 
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
-		exh.getexhibittabNew().click();
-		// URL
-		String urlString = exh.getexhibitAtLVM().getAttribute("href");
-		// Click on Exhibitor Dire
-		exh.getexhibitAtLVM().click();
-		// String bredcumName = exh.getExhibitOpprBrdcrumb().getText();
-		// Assert.assertTrue(urlString.contains());
-		Assert.assertTrue(driver.getCurrentUrl().contains(urlString));
-		Thread.sleep(5000);
-
-		exh.getexhibittabNew().click(); // Click on Popular filters
-		utl.clickAndAssertUrl(exh.getexhibitAtResources());
-		Thread.sleep(5000);
-
-		exh.getexhibittabNew().click();
-		// Click on Marketing Tool Kits
-		utl.clickAndAssertUrl(exh.getmarketingToolKit());
-
-		Thread.sleep(5000);
-		exh.getexhibittabNew().click();
-		// Click on Adversing and Sponcer And Opportunity
-		utl.clickAndAssertUrl(exh.getadvertisingAndSponsAndOpprtu());
-		Thread.sleep(5000);
-		exh.getexhibittabNew().click();
-		// Click on Adversing and Sponcer And Opportunity
-
-		String winHandleBefore = driver.getWindowHandle();
-		Thread.sleep(1000);
-		exh.getalreadyAnExhibitor().click();
-		Thread.sleep(5000);
-		// Switch to new window opened
-		for (String winHandle : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle);
-		}
-		Thread.sleep(5000);
-		String title=driver.getTitle();
-		//utl.clickAndAssertUrl(exh.getalreadyAnExhibitor());
-		Assert.assertTrue(title.contains("Sign In to ANDMORE"));
-		// Close the new window, if that window no more required
-		driver.close();
-		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore);
+		
+	//Search Exhibitors
+		ed.getExhibitorDirectory().click();
+		utl.clickAndAssertUrl(ed.getEDSearchExhibitors());
+		
+	//A-Z Brand Listing
+		ed.getExhibitorDirectory().click();
+		utl.clickAndAssertUrl(ed.getEDAZBrandListing());
+		
+	//Floor Plans
+		ed.getExhibitorDirectory().click();
+		utl.clickAndAssertUrl(ed.getEDFloorPlans());
+		
+	//Popular Filters
+		ed.getExhibitorDirectory().click();
+		utl.clickAndAssertUrl(ed.getEDPopularFilters());
 		
 	}
 
@@ -359,24 +333,44 @@ public class LVMSmoke_PROD extends base {
 
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 
 		Thread.sleep(5000);
+	//Register
 		exh.getvisitTabNew().click();
 		utl.clickAndAssertUrl(exh.getRegisterUnderVisitTab());
+		
+	//Market Dates & Hours
 		exh.getvisitTabNew().click();
 		utl.clickAndAssertUrl(exh.getMarketDatesHoursUnderVisitTab());
+		
+	//About Market
 		exh.getvisitTabNew().click();
 		utl.clickAndAssertUrl(exh.getVisitAboutUnderVisitTab());
+		
+	//Plan Your Market
 		exh.getvisitTabNew().click();
 		utl.clickAndAssertUrl(exh.getMarketPlanUnderVisitTab());
+		
+	//Travel
 		exh.getvisitTabNew().click();
 		utl.clickAndAssertUrl(exh.getTravelUnderVisitTab());
+		
+	//Dining
 		exh.getvisitTabNew().click();
 		utl.clickAndAssertUrl(exh.getDiningUnderVisitTab());
+		
+	//Services & Amenities
 		exh.getvisitTabNew().click();
 		utl.clickAndAssertUrl(exh.getServicesAmenitiesUnderVisitTab());
+		
+	//FAQs
 		exh.getvisitTabNew().click();
 		utl.clickAndAssertUrl(exh.getFAQsUnderVisitTab());
+		
+	//Events
+		exh.getvisitTabNew().click();
+		utl.clickAndAssertUrl(exh.getEventUnderVisitTab());
 
 	}
 
@@ -392,41 +386,46 @@ public class LVMSmoke_PROD extends base {
 
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 
+		
+	//Exhibitor Directory
 		Thread.sleep(5000);
 		exh.getdiscoverTabNew().click();
-		//Exhibitor Directory
 		utl.clickAndAssertUrl(exh.getExhibitorDirectoryUnderDiscoverTab());
+		
+	//A to Z brand list
 		exh.getdiscoverTabNew().click();
 		Thread.sleep(2000);
-		// A to Z brand list
 		utl.clickAndAssertUrl(exh.getatoZBrandList());
 		
+	//Floor plans
 		exh.getdiscoverTabNew().click();
 		Thread.sleep(2000);
-		//Floor plans
 		utl.clickAndAssertUrl(exh.getfloorPlans());
 		
-		
-		
+	//Explore Las Vegas Market
 		exh.getdiscoverTabNew().click();
 		Thread.sleep(2000);
-		//Explore Las Vegas Market
 		utl.clickAndAssertUrl(exh.getExploreLasVegasMarketUnderDiscoverTab());
+		
+	//Tools and Inspiration
 		exh.getdiscoverTabNew().click();
 		Thread.sleep(2000);
-		//Tools and Inspirational
 		utl.clickAndAssertUrl(exh.getToolsAndInspirationUnderDiscoverTab());
+		
+	//Plan Your market
 		exh.getdiscoverTabNew().click();
-		//Plan Your market
 		utl.clickAndAssertUrl(exh.getPlanYourMarketUnderDiscoverTab());
+		
+	//What's New
 		exh.getdiscoverTabNew().click();
 		Thread.sleep(2000);
-		//Whats New
 		utl.clickAndAssertUrl(exh.getWhatsNewUnderDiscoverTab());
+		
+	//Events
 		exh.getdiscoverTabNew().click();
 		Thread.sleep(2000);
-		//Events and Webinar
 		utl.clickAndAssertUrl(exh.getEventsUnderDiscoverTab());
 
 	}
@@ -439,20 +438,53 @@ public class LVMSmoke_PROD extends base {
 		lap = new UXPLandingPage(driver);
 		exh = new UXPExhibitPage(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
-		exh.getexhibitTab().click();
-		utl.clickAndAssertUrl(exh.getExhibitAtLasVegasMarketUnderExhibitTab());
-		exh.getexhibitTab().click();
-		utl.clickAndAssertUrl(exh.getExhibitorResourcesUnderExhibitTab());
-		/*
-		 * exh.getexhibitTab().click();
-		 * utl.clickAndAssertUrl(exh.getToolsAndInspirationUnderDiscoverTab());
-		 */
+		
+	//Exhibit at Las Vegas Market
+		exh.getexhibittabNew().click();
+		String urlString = exh.getexhibitAtLVM().getAttribute("href");
+		// Click on Exhibitor Dire
+		exh.getexhibitAtLVM().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains(urlString));
+		Thread.sleep(5000);
+
+	//Exhibitor Resources
+		exh.getexhibittabNew().click();
+		utl.clickAndAssertUrl(exh.getexhibitAtResources());
+		Thread.sleep(5000);
+
+	//Marketing Toolkit
+		exh.getexhibittabNew().click();
+		// Click on Marketing Tool Kits
+		utl.clickAndAssertUrl(exh.getmarketingToolKit());
+		Thread.sleep(5000);
+
+	//Advertising & Sponsorship Opportunities
+		exh.getexhibittabNew().click();
+		utl.clickAndAssertUrl(exh.getadvertisingAndSponsAndOpprtu());
+		Thread.sleep(5000);
+		
+	//Already an Exhibitor? Sign In
+		exh.getexhibittabNew().click();
+		Thread.sleep(1000);
+		String winHandleBefore = driver.getWindowHandle();
+		exh.getalreadyAnExhibitor().click();
+		Thread.sleep(5000);
+		// Switch to new window opened
+		for (String winHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle);
+		}
+		Thread.sleep(5000);
+		String title=driver.getTitle();
+		Assert.assertTrue(title.contains("Sign In to ANDMORE"));
+		// Close the new window, if that window no more required
+		driver.close();
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);
 	}
 
 	@Test(priority = 06)
@@ -467,16 +499,26 @@ public class LVMSmoke_PROD extends base {
 
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
+		
+	//Year Round
 		exh.getsourceYearRoundTabNew().click();
 		utl.clickAndAssertUrl(exh.getYearRoundUndersourceYearRoundTab());
+		
+	//Exhibitor Directory
 		exh.getsourceYearRoundTabNew().click();
 		utl.clickAndAssertUrl(exh.getexhibitorDirectoryUnderSourceYearTab());
+		
+	//A-Z Brand Listing
 		exh.getsourceYearRoundTabNew().click();
 		utl.clickAndAssertUrl(exh.getatoZBrandListUnderSourceYearTab());
+		
+	//Floor Plans
 		exh.getsourceYearRoundTabNew().click();
 		utl.clickAndAssertUrl(exh.getfloorPlansUnderSourceYearTab());
+		
+	//Contact Us
 		exh.getsourceYearRoundTabNew().click();
 		utl.clickAndAssertUrl(exh.getContactUsUnderSourceYearTab());
 	}
@@ -489,6 +531,7 @@ public class LVMSmoke_PROD extends base {
 		fl = new UXPFooterLinksNavigationPage(driver);
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
@@ -585,6 +628,7 @@ public class LVMSmoke_PROD extends base {
 		gs = new UXPGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		gs.getGlobalSearchTextBoxNew().click();
 		Thread.sleep(5000);
 		try {
@@ -610,6 +654,8 @@ public class LVMSmoke_PROD extends base {
 			System.out.println("Global Search functionality is working properly.");
 		}
 	}
+	
+	
 	@Test(priority= 9) // previous priority= 8
 	public void TS009_LVM_VerifyFooterLinksTest() throws InterruptedException, IOException
 	{
@@ -622,6 +668,7 @@ public class LVMSmoke_PROD extends base {
 		
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		utl.waitForPageToLoad();
 		Thread.sleep(7000);
 		//Scroll till footer links
 	      utl.scrollToElement(fl.getlvmfooterLinkAbout());
@@ -836,12 +883,17 @@ public class LVMSmoke_PROD extends base {
 
 		driver.get(prop.getProperty("lvmurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+		utl.waitForPageToLoad();
 		Thread.sleep(5000);
 		//click on Register Btn
 		utl.clickAndAssertUrl(hd.getRigisterBtn());
 		
-
+	}
+	
+	@AfterClass
+	public void tearDown()
+	{
+		driver.quit();
 	}
 	
 }

@@ -14,14 +14,14 @@ public class ATLAppVisitTabPage {
 	public WebDriverWait wait;
 	
 	By ATLAppVisitTab = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/descendant::span[contains(text(),'Visit')]/../..");
-	By VisitTabRegistration  = By.xpath("//a[@href='/Attend/Registration' and contains(text(),'Registration')]");
-	By VisitTabCompleteShowDates = By.xpath("(//a[@href='/Markets/Complete-Show-Dates' and contains(text(),'Complete Show Dates')])[2]");
-	By VisitTabTravel = By.xpath("//a[@href='/Attend/Travel' and contains(text(),'Travel')]");
-	By VisitTabEventsAndAmenities = By.xpath("(//a[@href='/Attend/Events' and contains(text(),'Events & Amenities')])[2]");
-	By VisitTabDining = By.xpath("//a[@href='/Attend/Dining' and contains(text(),'Dining')]");
-	By VisitTabDownloadTheApp = By.xpath("//a[@href='/Attend/Plan-Your-Market' and contains(text(),'Download the App')]");
-	By VisitTabServicesAtMarket = By.xpath("//a[@href='/Attend/Services-and-Amenities' and contains(text(),'Services at Market')]");
-	By VisitTabFAQs = By.xpath("//a[@href='/Attend/FAQs' and contains(text(),'FAQs')]");
+	By VisitTabRegistration  = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Registration')]");
+	By VisitTabCompleteShowDates = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Complete Show Dates')]");
+	By VisitTabTravel = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Travel')]");
+	By VisitTabEventsAndAmenities = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Events & Amenities')]");
+	By VisitTabDining = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Dining')]");
+	By VisitTabDownloadTheApp = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Download the App')]");
+	By VisitTabServicesAtMarket = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'Services at Market')]");
+	By VisitTabFAQs = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/descendant::a[contains(text(),'FAQs')]");
 	
 	public ATLAppVisitTabPage(WebDriver driver) {
 		this.driver = driver; 			
