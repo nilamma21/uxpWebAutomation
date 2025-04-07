@@ -71,7 +71,7 @@ public class base {
 			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver_102.exe");
 			//WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless"); //To run headless mode uncomment this.
+			//options.addArguments("--headless"); //To run headless mode uncomment this.
 			options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 			driver = new ChromeDriver(options);
 			driver.manage().window().maximize();

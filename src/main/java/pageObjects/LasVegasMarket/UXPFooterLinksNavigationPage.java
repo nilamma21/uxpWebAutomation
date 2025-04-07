@@ -14,7 +14,7 @@ public class UXPFooterLinksNavigationPage {
 
 	By marketInfoATL = By.xpath("//a[@href='/Markets']"); //Locator for Market information in footer links
 	By marketInfoAMC = By.xpath("//a[@href='/about']"); //Locator for Market information in footer links AMC
-	By pressCenterAMC = By.xpath("//a[@href='/About/Press']"); //Locator for Press Center in footer links
+	By pressCenterAMC = By.xpath("//div[@class='section-wrapper imc-section--footer  imc-section--relative']/descendant::a[contains(text(),'Press Center')]"); //Locator for Press Center in footer links
 	By pressCenterATL = By.xpath("//a[@href='/Markets/Press Center']"); //Locator for Press Center in footer links
 	By ContactUs = By.xpath("(//a[contains(text(),'Contact Us')])[2]"); //Locator for Contact Us in footer links
 	By Careers = By.xpath("//a[@href='/market-info/careers']"); //Locator for Careers in footer links
