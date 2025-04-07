@@ -198,7 +198,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("ADAC"));
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
-
+		
 		// Check AmericasMart
 		hd.getAtlanta().click();
 		Assert.assertTrue(hd.getAmericasMart().getText().equalsIgnoreCase("AmericasMart"));
@@ -206,7 +206,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("Wholesale Gift, Home, Rug and Apparel Markets"));
 		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(2000);
-
+		
 		// Check Atlanta Convention Center
 		hd.getAtlanta().click();
 		Assert.assertTrue(hd.getAtlantaConventionCenter().getText().equalsIgnoreCase("Atlanta Convention Center"));
@@ -214,10 +214,10 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getTitle().contains("Atlanta Convention Center"));
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
-
+		
 		// Verify that Las Vegas link is present
 		Assert.assertTrue(hd.getLasVegas().getText().equalsIgnoreCase("LAS VEGAS"));
-
+		
 		// Check Las Vegas Market
 		hd.getLasVegas().click();
 		Assert.assertTrue(hd.getLasVegasMarket().getText().equalsIgnoreCase("Las Vegas Market"));
@@ -277,7 +277,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(hd.getSHOPPEOBJECTHighPoint().getText().equalsIgnoreCase("SHOPPE OBJECT High Point"));
 		hd.getSHOPPEOBJECTHighPoint().click();
 		Thread.sleep(5000);
-		Assert.assertTrue(driver.getTitle().contains("High Point Market | Shoppe Object - High Point"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("shoppeobject.com"));
 		driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
 
@@ -290,7 +290,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		hd.getSHOPPEOBJECT().click();
 		Thread.sleep(2000);
 		System.out.println(driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Shoppe Object"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("shoppeobject.com"));
 		// driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
 	}

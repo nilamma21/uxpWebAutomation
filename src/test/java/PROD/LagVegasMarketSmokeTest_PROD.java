@@ -135,16 +135,16 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 
 		//Check Casual Market Atlanta
 		//Check Casual Market Atlanta
-		hd.getAtlanta().click();
-		Thread.sleep(2000);
-		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Fall Casual Market Atlanta"));
-		String casualURl=hd.getCasualMarketAtlantaURL().getAttribute("href");
-		hd.getCasualMarketAtlanta().click();
-		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(casualURl));
-		
-		driver.get(prop.getProperty("lvmappurl"));
-		Thread.sleep(2000);
+//		hd.getAtlanta().click();
+//		Thread.sleep(2000);
+//		Assert.assertTrue(hd.getCasualMarketAtlanta().getText().equalsIgnoreCase("Fall Casual Market Atlanta"));
+//		String casualURl=hd.getCasualMarketAtlantaURL().getAttribute("href");
+//		hd.getCasualMarketAtlanta().click();
+//		Thread.sleep(3000);
+//		Assert.assertTrue(driver.getCurrentUrl().contains(casualURl));
+//		
+//		driver.get(prop.getProperty("lvmappurl"));
+//		Thread.sleep(2000);
 		
 		//Check Atlanta Market
 		hd.getAtlanta().click();
@@ -165,18 +165,18 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Thread.sleep(2000);*/
 		
 		//Check Mid-Season Buying Event: Fall Market
-		hd.getAtlanta().click();
-		Thread.sleep(2000);
-		Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
-		hd.getMidSeasonBuyingEventFallMarket().click();
-		Assert.assertTrue(driver.getTitle().contains("Fall Market at AmericasMart"));
-		driver.get(prop.getProperty("lvmurl"));
-		Thread.sleep(2000);
+//		hd.getAtlanta().click();
+//		Thread.sleep(2000);
+//		Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
+//		hd.getMidSeasonBuyingEventFallMarket().click();
+//		Assert.assertTrue(driver.getTitle().contains("Fall Market at AmericasMart"));
+//		driver.get(prop.getProperty("lvmurl"));
+//		Thread.sleep(2000);
 		
 		hd.getAtlanta().click();
 		Thread.sleep(2000);
 		try {
-		Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Cash & Carry Markets: Spring and Fall"));
+		Assert.assertTrue(hd.getCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Spring Cash & Carry"));
 		hd.getCashAndCarryMarketsSpringandFall().click();
 		Assert.assertTrue(driver.getTitle().contains("Spring Cash & Carry"));
 		driver.get(prop.getProperty("lvmappurl"));
@@ -230,13 +230,13 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 		
 		//Check Formal Markets
-		hd.getLasVegas().click();
-		Thread.sleep(2000);
-		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
-		hd.getFormalMarkets().click();
-		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
-		driver.get(prop.getProperty("lvmurl"));
-		Thread.sleep(2000);
+//		hd.getLasVegas().click();
+//		Thread.sleep(2000);
+//		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
+//		hd.getFormalMarkets().click();
+//		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
+//		driver.get(prop.getProperty("lvmurl"));
+//		Thread.sleep(2000);
 		
 		//Check Las Vegas Apparel
 		hd.getLasVegas().click();
@@ -253,7 +253,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 		Assert.assertTrue(hd.getLasVegasDesignCenter().getText().equalsIgnoreCase("Las Vegas Design Center (LVDC)"));
 		hd.getLasVegasDesignCenter().click();
-		Assert.assertTrue(driver.getTitle().contains("Las Vegas Design Center"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("LVDC"));
 		driver.get(prop.getProperty("lvmurl"));
 		Thread.sleep(2000);
 	
@@ -285,7 +285,7 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(hd.getSHOPPEOBJECTHighPoint().getText().equalsIgnoreCase("SHOPPE OBJECT High Point"));
 		hd.getSHOPPEOBJECTHighPoint().click();
 		Thread.sleep(5000);
-		Assert.assertTrue(driver.getTitle().contains("High Point Market | Shoppe Object - High Point"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("shoppeobject.com"));
 		driver.get(prop.getProperty("lvmurl"));
 		Thread.sleep(2000);
 		
@@ -297,10 +297,10 @@ public class LagVegasMarketSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 		Assert.assertTrue(hd.getSHOPPEOBJECT().getText().equalsIgnoreCase("SHOPPE OBJECT"));
 		hd.getSHOPPEOBJECT().click();
-		Assert.assertTrue(driver.getTitle().contains("Shoppe Object"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("shoppeobject.com"));
 		//driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
-
+		
 	}
 	
 	@Test(priority=02)

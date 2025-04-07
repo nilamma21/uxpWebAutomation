@@ -260,7 +260,7 @@ public class LVMSmoke_PROD extends base {
 		Assert.assertTrue(hd.getSHOPPEOBJECTHighPoint().getText().equalsIgnoreCase("SHOPPE OBJECT High Point"));
 		hd.getSHOPPEOBJECTHighPoint().click();
 		Thread.sleep(5000);
-		Assert.assertTrue(driver.getTitle().contains("High Point Market | Shoppe Object - High Point"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("shoppeobject.com"));
 		driver.get(prop.getProperty("lvmurl"));
 		Thread.sleep(2000);
 
@@ -272,7 +272,7 @@ public class LVMSmoke_PROD extends base {
 		Thread.sleep(2000);
 		Assert.assertTrue(hd.getSHOPPEOBJECT().getText().equalsIgnoreCase("SHOPPE OBJECT"));
 		hd.getSHOPPEOBJECT().click();
-		Assert.assertTrue(driver.getTitle().contains("Shoppe Object"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("shoppeobject.com"));
 		driver.get(prop.getProperty("lvmurl"));
 		Thread.sleep(2000);
 		

@@ -7,7 +7,7 @@
         <methods>
           <include name="initialize"/>
           <include name="tearDown"/>
-          <include name="TS001_AMC_VerifyAllHeaderChanelLinksTest"/>
+          <include name="TS008_AMC_VerifyFooterLinksTest"/>
         </methods>
       </class> <!-- PROD.AmericasMartSmokeTest_PROD -->
     </classes>
