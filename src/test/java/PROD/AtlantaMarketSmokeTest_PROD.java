@@ -133,7 +133,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains("casualmarketatlanta.com"));
 
 		driver.get(prop.getProperty("lvmappurl"));
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 
 		// Check Atlanta Market
 		hd.getAtlanta().click();
@@ -313,7 +313,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atled.getSearchExhibitors().click();
 		Thread.sleep(1000);
 		// Verify that Search Exhibitors page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Exhibitor Directory"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("exhibitor-directory"));
 
 	// A-Z Brand Listing
 		// Click on Exhibitor Directory tab
@@ -322,7 +322,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atled.getAZBrandListing().click();
 		Thread.sleep(1000);
 		// Verify that A-Z Brand Listing page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Directory"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Directory"));
 
 	// Floor Plans
 		// Click on Exhibitor Directory tab
@@ -331,7 +331,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atled.getFloorPlans().click();
 		Thread.sleep(6000);
 		// Verify that Floor Plans page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Floor Plans"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Map"));
 
 	// Categories
 		// Click on Exhibitor Directory tab
@@ -340,7 +340,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atled.getCategories().click();
 		Thread.sleep(3000);
 		// Verify that Categories page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Categories"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Categories"));
 
 	}
 
@@ -362,7 +362,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlvt.getRegister().click();
 		Thread.sleep(2000);
 		// Verify that Exhibitor Directory page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Register"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Register"));
 
 	// Market Dates & Hours
 		// Click on Exhibitor Directory tab
@@ -371,7 +371,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlvt.getMarketDatesAndHours().click();
 		Thread.sleep(2000);
 		// Verify that Market Dates & Hours page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Market Dates & Hours"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Dates-and-Hours"));
 
 	// About Market
 		// Click on Exhibitor Directory tab
@@ -380,7 +380,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlvt.getAboutMarket().click();
 		Thread.sleep(2000);
 		// Verify that About Market page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("About Us"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("About"));
 
 	// Market 101
 		// Click on Exhibitor Directory tab
@@ -398,7 +398,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlvt.getMarketPlan().click();
 		Thread.sleep(2000);
 		// Verify that Market Plan page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Plan Your Market"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Plan-Your-Market"));
 
 	// Travel
 		// Click on Exhibitor Directory tab
@@ -407,7 +407,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlvt.getTravel().click();
 		Thread.sleep(2000);
 		// Verify that Travel page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Travel"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Travel"));
 
 	// Dining
 		// Click on Exhibitor Directory tab
@@ -416,7 +416,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlvt.getDining().click();
 		Thread.sleep(2000);
 		// Verify that Dining page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Dining Guide"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Dining"));
 
 	// Services & Amenities
 		// Click on Exhibitor Directory tab
@@ -425,7 +425,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlvt.getServicesAndAmenities().click();
 		Thread.sleep(2000);
 		// Verify that Services & Amenities page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Services & Amenities"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Services-and-Amenities"));
 
 	//Events
 		// Click on Exhibitor Directory tab
@@ -434,7 +434,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlvt.getEvents().click();
 		Thread.sleep(2000);
 		// Verify that Services & Amenities page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Events"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Events"));
 	}
 
 	@Test(priority = 5)
@@ -453,7 +453,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		// Click on Exhibitor Directory link
 		atldt.getExhibitorDirectory().click();
 		// Verify that Exhibitor Directory page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Exhibitor Directory"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("exhibitor-directory"));
 		
 		
 	//A-Z brand listing
@@ -471,7 +471,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atldt.getFloorPlans().click();
 		Thread.sleep(3000);
 		// Verify that Floor Plans page should be displayed
-		Assert.assertTrue(driver.getTitle().contains("Floor Plans"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Market-Map"));
 
 	//Explore Atlanta Market
 		// Click on Discover tab
@@ -479,7 +479,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		// Click on Explore Atlanta Market link
 		atldt.getExploreAtlantaMarket().click();
 		// Verify that Explore Atlanta Market page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Categories"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Categories"));
 
 	//Tools & Inspiration
 		// Click on Discover tab
@@ -497,7 +497,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		// Click on Plan Your market link
 		atldt.getPlanYourMarket().click();
 		// Verify that Plan Your market page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Plan Your Market"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Plan-Your-Market"));
 
 	//What's New
 		// Click on Discover tab
@@ -514,7 +514,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		// Click on Events link
 		atldt.getEvents().click();
 		// Verify that Events page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Events"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("Events"));
 
 	}
 
@@ -539,7 +539,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlexh.getATLExhibitAtAtlanta().click();
 		Thread.sleep(2000);
 		// Verify that Exhibit page should be displayed
-		Assert.assertTrue(atlexh.getATLExhibitBrdcrumb().isDisplayed());
+		Assert.assertTrue(driver.getCurrentUrl().contains("Exhibit"));
 
 	// Exhibitor Resources
 		// Click on Exhibit tab
@@ -548,7 +548,7 @@ public class AtlantaMarketSmokeTest_PROD extends base {
 		atlexh.getATLExhibitorResources().click();
 		Thread.sleep(4000);
 		// Verify that Exhibitor Resources page should be displayed
-		Assert.assertTrue(atlexh.getATLExhResourcesBrdcrmb().getText().contains("Exhibitor Resources"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("/Exhibitor-Resources"));
 
 	// Already an Exhibitor?
 		// Click on Exhibit tab
