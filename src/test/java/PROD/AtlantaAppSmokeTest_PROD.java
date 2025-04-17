@@ -142,7 +142,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 			Thread.sleep(1000);
 			gs.getSearchButtonNew().click();
 			Thread.sleep(5000);
-			String searchterm = gs.getVerifyGlobalSeacrhNewSecond().getText();
+			String searchterm = gs.getVerifyGlobalSeacrhNew().getText();
 			Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput2")));
 			System.out.println("Global Search functionality is working properly.");
 		} catch (Exception e) {
@@ -153,7 +153,7 @@ public class AtlantaAppSmokeTest_PROD extends base {
 			Thread.sleep(1000);
 			gs.getSearchButtonNew().click();
 			Thread.sleep(5000);
-			String searchterm = gs.getVerifyGlobalSeacrhNewSecond().getText();
+			String searchterm = gs.getVerifyGlobalSeacrhNew().getText();
 			System.out.println(searchterm);
 			Assert.assertTrue(searchterm.contains(prop.getProperty("globalsearchinput2")));
 			System.out.println("Global Search functionality is working properly.");
@@ -550,7 +550,9 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Thread.sleep(2000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Plan Your Market");
 		driver.get(prop.getProperty("atlappurl"));
-		utl.scrollToElement(fl.getmarketInfoATL());
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		Thread.sleep(500);
 		
 	//Our Brands
 		//Thread.sleep(2000);
@@ -559,8 +561,10 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		//Thread.sleep(1000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/exhibitor/directory"));
 		driver.get(prop.getProperty("atlappurl"));
-		//Thread.sleep(2000);
-		utl.scrollToElement(fl.getmarketInfoATL());
+		Thread.sleep(3000);
+		//utl.scrollToElement(fl.getContactUsATL());
+		utl.scrollToBottom();
+		Thread.sleep(500);
 		
 	//Contact Us
 		// Click Contact Us link and verify results
@@ -579,13 +583,14 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		utl.scrollElementIntoMiddle(fl.getCareersATL());
 		fl.getCareersATL().click();
 		System.out.println(driver.getCurrentUrl());
-		Thread.sleep(1000);
+		
 		Assert.assertTrue(driver.getCurrentUrl().contains("www.andmore.com/our-team"));
 		driver.navigate().back();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		
 	//Exhibitor Login
 		utl.scrollToBottom();
+		Thread.sleep(1000);
 		fl.getExhibitorLogin().click();
 		Thread.sleep(5000);
 		Assert.assertTrue(fl.getEXPloginVerify().getText().contains("Exhibitor Portal Login"));
@@ -593,7 +598,6 @@ public class AtlantaAppSmokeTest_PROD extends base {
 		driver.navigate().back();
 		Thread.sleep(5000);
 		
-	
 	//AmericasMart
 		// Click Americas Mart link and verify results
 		utl.scrollElementIntoMiddle(fl.getAmericasMart_ATLAppFooter());

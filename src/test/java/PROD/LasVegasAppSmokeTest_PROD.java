@@ -297,7 +297,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Assert.assertTrue(hd.getSHOPPEOBJECTHighPoint().getText().equalsIgnoreCase("SHOPPE OBJECT High Point"));
 		hd.getSHOPPEOBJECTHighPoint().click();
 		Thread.sleep(5000);
-		Assert.assertTrue(driver.getTitle().contains("High Point Market | Shoppe Object - High Point"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://shoppeobject.com/"));
 		driver.get(prop.getProperty("lvmappurl"));
 		Thread.sleep(2000);
 		
@@ -309,7 +309,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Thread.sleep(500);
 		Assert.assertTrue(hd.getSHOPPEOBJECT().getText().equalsIgnoreCase("SHOPPE OBJECT"));
 		hd.getSHOPPEOBJECT().click();
-		Assert.assertTrue(driver.getTitle().contains("Shoppe Object"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://shoppeobject.com/"));
 		//driver.get(prop.getProperty("atlmrkturl"));
 		Thread.sleep(2000);
 	}
@@ -641,7 +641,7 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		lvafl = new LVAFooterLinksNavigationPage(driver);
 		utl=new Utility(driver);
 		exhp = new UXPExhibitorsAndProductsTabPage(driver);
-		
+		Thread.sleep(5000);
 		driver.get(prop.getProperty("lvmappurl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.waitForPageToLoad();
@@ -668,29 +668,31 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		Thread.sleep(2000);
 		Assert.assertEquals(exhp.getVerifyBreadcrumb().getText(), "Plan Your Market");
 		driver.get(prop.getProperty("lvmappurl"));
-		utl.scrollToElement(lvafl.marketInfoAMC());
+		Thread.sleep(2000);
+		utl.scrollToElement(lvafl.getContactUsLVA());
 		
 		// Click Contact Us link and verify results
 		lvafl.getContactUsLVA().click();
 		Thread.sleep(2000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("about/contact-us"));
 		driver.get(prop.getProperty("lvmappurl"));
-		utl.scrollToElement(lvafl.marketInfoAMC());
+		Thread.sleep(2000);
+		utl.scrollToElement(lvafl.getCareersATL());
 		
 		// Click Careers link and verify results
 		//String winHandleBefore = driver.getWindowHandle();
 		lvafl.getCareersATL().click();
-	/*	for (String winHandle : driver.getWindowHandles()) {
+		/*for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}*/
 		Assert.assertTrue(driver.getCurrentUrl().contains("www.andmore.com/our-team"));
-/*		driver.close();
+		/*driver.close();
 		driver.switchTo().window(winHandleBefore);*/
 		driver.navigate().back();
-		utl.scrollToElement(lvafl.marketInfoAMC());
+		Thread.sleep(1000);
+		utl.scrollToElement(lvafl.getTermsAndConditions());
 				
 		// Click on Terms & condition link
-		
 		// Switch to new tab
 		String winHandleBefore2 = driver.getWindowHandle();
 		lvafl.getTermsAndConditions().click();
@@ -701,11 +703,10 @@ public class LasVegasAppSmokeTest_PROD extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore2);
 		// Click Privacy Policy and verify results
-		/*driver.get(prop.getProperty("lvmappurl"));
-		utl.scrollToElement(lvafl.marketInfoAMC());*/
+		/*driver.get(prop.getProperty("lvmappurl"));*/
+		utl.scrollToElement(lvafl.getatlprivacypolicy());
 		
 		// Click Privacy Policy link and verify results
-		
 		String winHandleBefore3 = driver.getWindowHandle();
 		lvafl.getatlprivacypolicy().click();
 		for (String winHandle3 : driver.getWindowHandles()) {

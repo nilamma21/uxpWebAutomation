@@ -739,13 +739,19 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
 		System.out.println("Contact us Page open successfully");
 		driver.get(prop.getProperty("ammarturl"));
-		utl.scrollToElement(fl.marketInfoAMC());
-
+		Thread.sleep(3000);
+		//utl.scrollToElement(fl.marketInfoAMC());
+		utl.scrollToBottom();
+		Thread.sleep(500);
+		
 		// Click Careers link and verify results		
 		fl.getCareersATL().click();
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/our-team"));
 		driver.get(prop.getProperty("ammarturl"));
-		utl.scrollToElement(fl.marketInfoAMC());
+		//utl.scrollToElement(fl.marketInfoAMC());
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		Thread.sleep(500);
 		
 		// Click on Terms & conditions link
 		
@@ -804,7 +810,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		for (String winHandle4 : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle4);
 		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("andmorehighpointmarket.com"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("highpointmarketandmore.com"));
 		driver.close();
 		driver.switchTo().window(winHandleBefore4);
 		

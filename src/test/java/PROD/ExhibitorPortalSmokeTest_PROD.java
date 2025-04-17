@@ -298,6 +298,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
+		Thread.sleep(7000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.expotoolkit.com/"));
 		System.out.println("AmericasMart Logistics | Exhibitor Toolkit Page Successfully Opened");
 		driver.close();
@@ -448,7 +449,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 		}
 		//Verify that 'EXP Login' page should be displayed
 		Thread.sleep(5000);
-		Assert.assertTrue(al.getVerifyPermanantSpace().getText().contains("Leasing Contact Form"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("lvm-permanent-application"));
 		System.out.println("Leasing");
 		// Close the new window, if that window no more required
 		driver.close();
@@ -713,7 +714,7 @@ public class ExhibitorPortalSmokeTest_PROD extends base {
 			driver.switchTo().window(winHandle);
 		}
 		Thread.sleep(8000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmorehighpointmarket.com/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("highpointmarketandmore.com"));
 		System.out.println("Atlanta market page is displayed properly.");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
