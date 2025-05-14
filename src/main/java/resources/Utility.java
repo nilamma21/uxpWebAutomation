@@ -2,6 +2,7 @@ package resources;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -110,7 +111,75 @@ public class Utility extends base {
         Thread.sleep(3000); 
         
     }
-
-
+    
+    // Utility method to handle switching between windows/tabs (handles both same window and new tab cases)
+    public void windowHandle(WebElement elementToClick, String expectedTitle) throws InterruptedException {
+        // Store the current window handle (main window)
+        String mainWindowHandle = driver.getWindowHandle();
+        
+        // Get the number of current window handles before clicking
+        Set<String> windowHandlesBeforeClick = driver.getWindowHandles();
+        Thread.sleep(100);
+        // Click on the element (link or button) that opens the new window or stays in the same window
+        elementToClick.click();
+        
+        // Wait for the new window/tab to open if any
+        Set<String> windowHandlesAfterClick = driver.getWindowHandles();
+        
+        // Check if a new window/tab has been opened
+        if (windowHandlesAfterClick.size() > windowHandlesBeforeClick.size()) {
+            // A new window/tab has opened
+            for (String handle : windowHandlesAfterClick) {
+                if (!handle.equals(mainWindowHandle)) {
+                    driver.switchTo().window(handle);
+                    break;
+                }
+            }
+        }
+        
+        // Perform the verification/assertion on the current window (whether it's a new tab or the same window)
+        Assert.assertTrue(driver.getCurrentUrl().contains(expectedTitle), "Expected title is not present.");
+        Thread.sleep(500);
+        // If a new window was opened, close it and switch back to the original window
+        if (windowHandlesAfterClick.size() > windowHandlesBeforeClick.size()) {
+            driver.close(); // Close the new window
+            driver.switchTo().window(mainWindowHandle); // Switch back to the original window
+        }
+    }
+    
+    // Utility method to handle switching between windows/tabs (handles both same window and new tab cases)
+    public void windowHandleTitle(WebElement elementToClick, String expectedTitle) throws InterruptedException {
+        // Store the current window handle (main window)
+        String mainWindowHandle = driver.getWindowHandle();
+        
+        // Get the number of current window handles before clicking
+        Set<String> windowHandlesBeforeClick = driver.getWindowHandles();
+        Thread.sleep(100);
+        // Click on the element (link or button) that opens the new window or stays in the same window
+        elementToClick.click();
+        
+        // Wait for the new window/tab to open if any
+        Set<String> windowHandlesAfterClick = driver.getWindowHandles();
+        
+        // Check if a new window/tab has been opened
+        if (windowHandlesAfterClick.size() > windowHandlesBeforeClick.size()) {
+            // A new window/tab has opened
+            for (String handle : windowHandlesAfterClick) {
+                if (!handle.equals(mainWindowHandle)) {
+                    driver.switchTo().window(handle);
+                    break;
+                }
+            }
+        }
+        
+        // Perform the verification/assertion on the current window (whether it's a new tab or the same window)
+        Assert.assertTrue(driver.getTitle().contains(expectedTitle), "Expected title is not present.");
+        Thread.sleep(500);
+        // If a new window was opened, close it and switch back to the original window
+        if (windowHandlesAfterClick.size() > windowHandlesBeforeClick.size()) {
+            driver.close(); // Close the new window
+            driver.switchTo().window(mainWindowHandle); // Switch back to the original window
+        }
+    }
 	
 }
