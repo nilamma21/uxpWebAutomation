@@ -111,216 +111,84 @@ public class AmericasMartSmokeTest_PROD extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.verifyCloseBtnPopup();
 		utl.waitForPageToLoad();
-		
-		//Old code for Header Channel Links
-/*		//Click on Atlanta Market 
-		hd.getAtlantaMarket().click();
-		//Verify that Atlanta Market Home page should be displayed
-		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Market at AmericasMart"));
-		driver.get(prop.getProperty("ammarturl"));
-		utl.verifyCloseBtnPopup();
-		//Click on Atlanta Apparel 
-		hd.getAtlantaApparel().click();
-		//Verify that Atlanta App Home page should be displayed
-		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Atlanta Apparel at AmericasMart"));
-		driver.get(prop.getProperty("ammarturl"));
-		utl.verifyCloseBtnPopup();
-		//Click on AmericasMart 
-		hd.getAmericasMart().click();
-		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Wholesale Gift, Home, Rug and Apparel Markets"));
-		System.out.println("Americas Mart channel link is working properly.");
-		driver.get(prop.getProperty("ammarturl"));
-		utl.verifyCloseBtnPopup();
-		//Click on High Point Market 
-		hd.getHighPoint().click();
-		Thread.sleep(5000);
-		Assert.assertTrue(driver.getTitle().contains("High Point"));
-		driver.get(prop.getProperty("ammarturl"));
-		utl.verifyCloseBtnPopup();
-		//Click on Las Vegas Market 
-		hd.getLasVegas().click();
-		Assert.assertTrue(driver.getTitle().contains("Las Vegas"));
-		driver.get(prop.getProperty("ammarturl"));
-		utl.verifyCloseBtnPopup();
-		//Click on Las Vegas Apparel
-		atlch.getLasVegasApp().click();
-		Assert.assertTrue(driver.getTitle().contains("Las Vegas Apparel"));
-*/		
-		
-		//New Code for Header Channel Links
 
-		//Verify that Atlanta link is present
+	//Verify that Atlanta link is present
 		Assert.assertTrue(hd.getAtlanta().getText().equalsIgnoreCase("ATLANTA"));
 		
 		//Check Atlanta Apparel
 		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getAtlantaApparel().getText().equalsIgnoreCase("Atlanta Apparel"));
-		hd.getAtlantaApparel().click();
-		Assert.assertTrue(driver.getTitle().contains("Atlanta Apparel"));
-		driver.navigate().back();
-		Thread.sleep(2000);
-
+		utl.windowHandle(hd.getAtlantaApparel(), "https://www.atlanta-apparel.com/");
+		
 		// Check Casual Market Atlanta
 		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getCasualMarketAtlantaURL().getText().equalsIgnoreCase("Casual Market Atlanta"));
-		//String casualURl = hd.getCasualMarketAtlantaURL().getAttribute("href");
-		hd.getCasualMarketAtlantaURL().click();
-		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("casualmarketatlanta.com"));
-
-		driver.get(prop.getProperty("lvmappurl"));
-		Thread.sleep(7000);
+		utl.windowHandle(hd.getCasualMarketAtlantaURL(), "https://casualmarketatlanta.com/");
 
 		// Check Atlanta Market
 		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getAtlantaMarket().getText().equalsIgnoreCase("Atlanta Market"));
-		hd.getAtlantaMarket().click();
-		Assert.assertTrue(driver.getTitle().contains("Atlanta Market"));
-		driver.navigate().back();
-		Thread.sleep(2000);
+		utl.windowHandle(hd.getAtlantaMarket(), "https://www.atlantamarket.com/");
 		
-/*		//Check Formal Markets
+		// Spring/Fall Cash and Carry
 		hd.getAtlanta().click();
-		Thread.sleep(500);
-		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
-		hd.getFormalMarkets().click();
-		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
-		driver.navigate().back();
-		Thread.sleep(2000);
-		*/
-		//Check Mid-Season Buying Event: Fall Market
-		/*
-		 * hd.getAtlanta().click();
-		 * Assert.assertTrue(hd.getMidSeasonBuyingEventFallMarket().getText().
-		 * equalsIgnoreCase("Mid-Season Buying Event: Fall Market"));
-		 * hd.getMidSeasonBuyingEventFallMarket().click();
-		 * Assert.assertTrue(driver.getCurrentUrl().contains("Markets"));
-		 * driver.navigate().back(); Thread.sleep(2000);
-		 */
-		hd.getAtlanta().click();
-		Thread.sleep(1000);
 		try {
-		Assert.assertTrue(hd.getSpringCashAndCarry().getText().equalsIgnoreCase("Spring Cash & Carry"));
-		hd.getSpringCashAndCarry().click();
-		Assert.assertTrue(driver.getTitle().contains("Spring Cash & Carry"));
-		driver.get(prop.getProperty("lvmappurl"));
-		Thread.sleep(2000);
+		utl.windowHandle(hd.getSpringCashAndCarry(), "Spring-Cash-and-Carry");
+		
 		}catch (Exception e) {
-			Assert.assertTrue(hd.getFllCashAndCarryMarketsSpringandFall().getText().equalsIgnoreCase("Spring Cash & Carry"));
-			hd.getFllCashAndCarryMarketsSpringandFall().click();
-			Assert.assertTrue(driver.getTitle().contains("Fall Cash & Carry"));
-			driver.get(prop.getProperty("lvmappurl"));
-			Thread.sleep(2000);
+			utl.windowHandle(hd.getFllCashAndCarryMarketsSpringandFall(), "Fall-Cash-and-Carry");
 		}
 		
 		//Check ADAC
 		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getADAC().getText().equalsIgnoreCase("ADAC"));
-		hd.getADAC().click();
-		Assert.assertTrue(driver.getTitle().contains("ADAC"));
-		driver.navigate().back();
-		Thread.sleep(2000);
+		utl.windowHandle(hd.getADAC(), "https://adacatlanta.com/");
 		
 		//Check AmericasMart
 		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getAmericasMart().getText().equalsIgnoreCase("AmericasMart"));
-		hd.getAmericasMart().click();
-		Assert.assertTrue(driver.getTitle().contains("Wholesale Gift, Home, Rug and Apparel Markets"));
-		driver.get(prop.getProperty("ammarturl"));
-		Thread.sleep(2000);
+		utl.windowHandle(hd.getAmericasMart(), "https://www.americasmart.com/");
 		
 		//Check Atlanta Convention Center
 		hd.getAtlanta().click();
-		Assert.assertTrue(hd.getAtlantaConventionCenter().getText().equalsIgnoreCase("Atlanta Convention Center"));
-		hd.getAtlantaConventionCenter().click();
-		Assert.assertTrue(driver.getTitle().contains("Atlanta Convention Center"));
-		driver.navigate().back();
-		Thread.sleep(2000);
+		utl.windowHandle(hd.getAtlantaConventionCenter(), "https://www.atlconventioncenter.com/");
 		
-		//Verify that Las Vegas link is present
+	//Verify that Las Vegas link is present
 		Assert.assertTrue(hd.getLasVegas().getText().equalsIgnoreCase("LAS VEGAS"));
 		
 		//Check Las Vegas Market
 		hd.getLasVegas().click();
-		Assert.assertTrue(hd.getLasVegasMarket().getText().equalsIgnoreCase("Las Vegas Market"));
-		hd.getLasVegasMarket().click();
-		Assert.assertTrue(driver.getTitle().contains("Las Vegas Market"));
-		driver.navigate().back();
-		Thread.sleep(2000);
-	/*	
-		//Check Formal Markets
-		hd.getLasVegas().click();
-		Assert.assertTrue(hd.getFormalMarkets().getText().equalsIgnoreCase("Formal Markets"));
-		hd.getFormalMarkets().click();
-		Thread.sleep(3000);
-		Assert.assertTrue(driver.getTitle().contains("Formal Markets"));
-		driver.navigate().back();
-		Thread.sleep(500);
-	*/	
+		utl.windowHandle(hd.getLasVegasMarket(), "https://www.lasvegasmarket.com/");
+
 		//Check Las Vegas Apparel
 		hd.getLasVegas().click();
-		Assert.assertTrue(hd.getLasVegasApparel().getText().equalsIgnoreCase("Las Vegas Apparel"));
-		hd.getLasVegasApparel().click();
-		Assert.assertTrue(driver.getTitle().contains("Las Vegas Apparel"));
-		driver.navigate().back();
-		Thread.sleep(2000);
+		utl.windowHandle(hd.getLasVegasApparel(), "https://www.lasvegas-apparel.com/");
 		
 		//Check Las Vegas Design Center (LVDC)
 		hd.getLasVegas().click();
-		Assert.assertTrue(hd.getLasVegasDesignCenter().getText().equalsIgnoreCase("Las Vegas Design Center (LVDC)"));
-		hd.getLasVegasDesignCenter().click();
-		Assert.assertTrue(driver.getTitle().contains("Las Vegas Design Center"));
-		driver.navigate().back();
-		Thread.sleep(2000);
+		utl.windowHandle(hd.getLasVegasDesignCenter(), "https://www.lasvegasmarket.com/Year-Round/LVDC");
 		
 		//Check EXPO at World Market Center Las Vegas
 		hd.getLasVegas().click();
-		Assert.assertTrue(hd.getEXPOatWorldMarketCenterLasVegas().getText().equalsIgnoreCase("EXPO at World Market Center Las Vegas"));
-		hd.getEXPOatWorldMarketCenterLasVegas().click();
-		Assert.assertTrue(driver.getTitle().contains("The Expo At World Market Center"));
-		driver.navigate().back();
-		Thread.sleep(2000);
+		utl.windowHandle(hd.getEXPOatWorldMarketCenterLasVegas(), "https://www.expowmclv.com/");
 		
-		//Verify that High Point link is present
+	//Verify that High Point link is present
 		Assert.assertTrue(hd.getHighPoint().getText().equalsIgnoreCase("HIGH POINT"));
 		
 		//Check ANDMORE at High Point Market
 		hd.getHighPoint().click();
-		Assert.assertTrue(hd.getANDMOREatHighPointMarket().getText().equalsIgnoreCase("ANDMORE at High Point Market"));
-		hd.getANDMOREatHighPointMarket().click();
-		Thread.sleep(4000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("andmorehighpointmarket.com"));
-		driver.navigate().back();
-		Thread.sleep(2000);
+		utl.windowHandle(hd.getANDMOREatHighPointMarket(), "https://www.andmorehighpointmarket.com/");
 		
-		//Check SHOPPE OBJECT High Point
-		hd.getHighPoint().click();
-		Assert.assertTrue(hd.getSHOPPEOBJECTHighPoint().getText().equalsIgnoreCase("SHOPPE OBJECT High Point"));
-		hd.getSHOPPEOBJECTHighPoint().click();
-		Thread.sleep(2000);
-		Assert.assertTrue(driver.getCurrentUrl().contains("shoppeobject.com"));
-		driver.navigate().back();
-		Thread.sleep(2000);
-		
-		//Verify that New York link is present
+	//Verify that New York link is present
 		Assert.assertTrue(hd.getNewYork().getText().equalsIgnoreCase("NEW YORK"));
 		
 		//Check SHOPPE OBJECT
 		hd.getNewYork().click();
-		Assert.assertTrue(hd.getSHOPPEOBJECT().getText().equalsIgnoreCase("SHOPPE OBJECT"));
-		hd.getSHOPPEOBJECT().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("shoppeobject.com"));
-		driver.navigate().back();
-		Thread.sleep(2000);
+		utl.windowHandle(hd.getSHOPPEOBJECT(), "https://shoppeobject.com/");
 	}
 	
-
+	
 	@Test(priority=2)
 	public void TS002_AMC_VerifyGlobalSearchFunctionalityTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//UXP-T63: To verify global search functionality
-
+		
 		gs = new UXPGlobalSearchPage(driver);
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -693,180 +561,100 @@ public class AmericasMartSmokeTest_PROD extends base {
 		utl = new Utility(driver);
 		mi = new UXPMarketInfoPage(driver);
 		fl = new UXPFooterLinksNavigationPage(driver);
-
+		
 		driver.get(prop.getProperty("ammarturl"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		utl.waitForPageToLoad();
 		Thread.sleep(8000);
-		//	utl.verifyCloseBtnPopup();
-
-		utl.scrollToElement(fl.marketInfoAMC());
-
-		//Click Market Info link and verify results
-		fl.marketInfoAMC().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/about"));
-		driver.get(prop.getProperty("ammarturl"));
-		utl.scrollToElement(fl.marketInfoAMC());
-
-		//Click on Press Center
-		fl.getpressCenterAMC().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("/About/Press"));
-		driver.get(prop.getProperty("ammarturl"));
-		utl.scrollToElement(fl.marketInfoAMC());
+		utl.scrollToBottom();
 		
-		// Click Download The App link and verify results
-		// Switch to new tab
-		String winHandleBefore = driver.getWindowHandle();
-		fl.getDownloadTheApp().click();
-		for (String winHandle : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle);
-		}
-		Thread.sleep(2000);
-		Assert.assertEquals(driver.getTitle(), "Plan Your Market");
-		driver.close();
-		driver.switchTo().window(winHandleBefore);
-		//driver.get(prop.getProperty("ammarturl"));
-		//utl.scrollToElement(fl.marketInfoAMC());
-	
-		//Click on Our Brands link
-		fl.getOurBrandsATL().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/exhibitor/directory"));
-		driver.get(prop.getProperty("ammarturl"));
-		utl.scrollToElement(fl.marketInfoAMC());
-
-		// Click Contact Us link and verify results
-		fl.getContactUsATL().click();	
-		Assert.assertEquals(mi.getverifyContactUsATL().getText(), "Contact Us");
-		System.out.println("Contact us Page open successfully");
+		// Market Information
+		utl.windowHandle(fl.getmarketInfo(), "americasmart.com/About");
 		driver.get(prop.getProperty("ammarturl"));
 		Thread.sleep(3000);
-		//utl.scrollToElement(fl.marketInfoAMC());
 		utl.scrollToBottom();
-		Thread.sleep(500);
 		
-		// Click Careers link and verify results		
-		fl.getCareersATL().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/our-team"));
+		//Press Center
+		utl.windowHandle(fl.getpressCenterAMC(), "/About/Press");
 		driver.get(prop.getProperty("ammarturl"));
-		//utl.scrollToElement(fl.marketInfoAMC());
 		Thread.sleep(3000);
 		utl.scrollToBottom();
-		Thread.sleep(500);
 		
-		// Click on Terms & conditions link
-		
-		// Switch to new tab
-		String winHandleBefore7 = driver.getWindowHandle();
-		fl.getTermsAndConditions().click();
-		for (String winHandle7 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle7);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/terms-of-use"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore7);
-		
-		// Click Privacy Policy and verify results
-		
-		// Click Privacy Policy link and verify results
-		
-		String winHandleBefore8 = driver.getWindowHandle();
-		fl.getatlprivacypolicy().click();
-		for (String winHandle8 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle8);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/privacy-policy"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore8);
-		
-		// Click Atlanta Apparel link and verify results
-		
-		// Switch to new tab
-		String winHandleBefore9 = driver.getWindowHandle();
-		fl.getAtlantaApparel().click();
-		for (String winHandle9 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle9);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlanta-apparel.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore9);
-		
-		// Click Atlanta Market link and verify results
-		
-		// Switch to new tab
-		String winHandleBefore1 = driver.getWindowHandle();
-		fl.getAtlantaMarket().click();
-		for (String winHandle1 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle1);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.atlantamarket.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore1);
-
-		// Click on High Point Market link
-		// Switch to new tab
-		String winHandleBefore4 = driver.getWindowHandle();
-		fl.getHighPointMarket().click();
-		Thread.sleep(2000);
-		for (String winHandle4 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle4);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("highpointmarketandmore.com"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore4);
-		
-		// Click on LVA Market link
-		// Switch to new tab
-		/*fl.getlvmlink_ATLM().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
-		driver.get(prop.getProperty("ammarturl"));*/
-		
-		String winHandleBefore5 = driver.getWindowHandle();
-		fl.getlvapplink_ATL().click();
-		for (String winHandle4 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle4);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegas-apparel.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore5);
-
-		// Click on LVM Market link
-		// Switch to new tab
-		String winHandleBefore11 = driver.getWindowHandle();
-		fl.getlvmlink_ATL().click();
-		for (String winHandle11 : driver.getWindowHandles()) {
-			driver.switchTo().window(winHandle11);
-		}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore11);
-		
-		//Click International Market Centers link and verify results
-		//fl.getInternationalMarketCenters().click();//Change for re-branding
-		
-		Thread.sleep(500);
+		//Download the ANDMORE Markets App 
+		utl.windowHandle(fl.getDownloadTheApp(), "Plan-Your-Market");
+		driver.get(prop.getProperty("ammarturl"));
+		Thread.sleep(3000);
 		utl.scrollToBottom();
 		
-		//Switch to new tab
-		String winHandleBefore3 = driver.getWindowHandle();
-		fl.getandmore().click();
-		for(String winHandle3 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle3);}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.andmore.com/"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore3);
-		//utl.scrollToElement(fl.marketInfoAMC());
-
-		//Click Juniper Market Centers link and verify results
-		/*fl.getJuniperMarket().click();
-		//Switch to new tab
-		String winHandleBefore12 = driver.getWindowHandle();
-		for(String winHandle12 : driver.getWindowHandles()){
-			driver.switchTo().window(winHandle12);}
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.junipermarket.com/"));
+		//Our Brands
+		utl.windowHandle(fl.getOurBrandsATL(), "exhibitor-directory");
 		driver.get(prop.getProperty("ammarturl"));
-		driver.close();
-		driver.switchTo().window(winHandleBefore12);
-		utl.scrollToElement(fl.marketInfoAMC());*/
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		
+		//Contact Us
+		utl.windowHandle(fl.getContactUsATL(), "Contact-Us");
+		driver.get(prop.getProperty("ammarturl"));
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		
+		//Careers
+		utl.windowHandle(fl.getCareersATL(), "andmore.com/our-team");
+		driver.get(prop.getProperty("ammarturl"));
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		
+		//Atlanta Apparel
+		utl.windowHandle(fl.getAtlantaApparel(), "atlanta-apparel.com");
+		driver.get(prop.getProperty("ammarturl"));
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		
+		//Atlanta Market
+		utl.windowHandle(fl.getAtlantaMarket(), "atlantamarket.com");
+		driver.get(prop.getProperty("ammarturl"));
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		
+		//Casual Market Atlanta
+		utl.windowHandle(fl.getCasualMarketAtlanta(), "casualmarketatlanta.com");
+		driver.get(prop.getProperty("ammarturl"));
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		
+		//Las Vegas Apparel
+		utl.windowHandle(fl.getlvapplink_ATL(), "lasvegas-apparel.com");
+		driver.get(prop.getProperty("ammarturl"));
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		
+		//Las Vegas Market
+		utl.windowHandle(fl.getlvmlink_ATL(), "https://www.lasvegasmarket.com/");
+		driver.get(prop.getProperty("ammarturl"));
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		
+		//ANDMORE at High Point Market
+		utl.windowHandle(fl.getHighPointMarket(), "andmorehighpointmarket.com");
+		driver.get(prop.getProperty("ammarturl"));
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		
+		//ANDMORE
+		utl.windowHandle(fl.getandmore(), "https://www.andmore.com/");
+		driver.get(prop.getProperty("ammarturl"));
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		
+		//Terms & Conditions
+		utl.windowHandle(fl.getTermsAndConditions(), "terms-of-use");
+		driver.get(prop.getProperty("ammarturl"));
+		Thread.sleep(3000);
+		utl.scrollToBottom();
+		
+		//Privacy Policy
+		utl.windowHandle(fl.getatlprivacypolicy(), "privacy-policy");
+
 	}
 	
 	@Test(priority=9)
@@ -885,7 +673,7 @@ public class AmericasMartSmokeTest_PROD extends base {
 		Thread.sleep(8000);
 		
 		//Scroll till footer links
-		utl.scrollToElement(fl.marketInfoAMC());
+		utl.scrollToElement(fl.getmarketInfo());
 		//Thread.sleep(5000);
 
 		//In app footer click on 'Facebook' icon and verify results
